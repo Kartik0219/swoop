@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Auscare Cleaning | Home &amp; Office Cleaners, Dandenong &amp; South-East Melbourne (concept)</title>
+<meta name="description" content="Domestic and commercial cleaning across Dandenong, Keysborough, Noble Park, Springvale and 30+ south-east suburbs. Regular, one-off, office and carpet steam cleaning. Free quotes.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --blue:#1e88e5; --deep:#0d3b66; --mint:#e3f6f2; --teal:#14b8a6; --ink:#102a43; --sub:#5b7083; --line:#e3eaf2; --soft:#f5f9fc; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Inter, system-ui, sans-serif; color: var(--ink); line-height: 1.55; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  .concept { background: #111; color: #ddd; font-size: 13px; text-align: center; padding: 8px 16px; }
+  .concept b { color: #7cc4ff; }
+  header { background: #fff; border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 10; }
+  header .wrap { display: flex; justify-content: space-between; align-items: center; height: 70px; }
+  .logo { font-weight: 800; font-size: 22px; letter-spacing: -0.02em; color: var(--deep); }
+  .logo span { color: var(--teal); }
+  nav { display: flex; gap: 26px; color: var(--sub); font-size: 15px; font-weight: 500; }
+  .btn { display: inline-flex; justify-content: center; align-items: center; gap: 8px; background: var(--blue); color: #fff; padding: 13px 22px; border-radius: 12px; font-weight: 700; font-size: 15px; white-space: nowrap; border: 0; cursor: pointer; font-family: inherit; }
+  .btn.w { background: #fff; color: var(--deep); border: 1.5px solid var(--line); }
+  .hero { background: linear-gradient(160deg,#e9f5ff 0%,#fff 55%,var(--mint) 100%); }
+  .hero .wrap { display: grid; grid-template-columns: 1.1fr 1fr; gap: 44px; align-items: center; padding: 70px 20px; }
+  .tag { display: inline-block; background: #fff; border: 1px solid var(--line); color: var(--deep); font-weight: 700; font-size: 13px; padding: 6px 12px; border-radius: 20px; }
+  h1 { font-size: 54px; line-height: 1.04; letter-spacing: -0.04em; margin: 16px 0; color: var(--deep); }
+  h1 span { color: var(--teal); }
+  .hero p { color: var(--sub); font-size: 18px; max-width: 520px; }
+  .cta { display: flex; gap: 12px; margin-top: 26px; flex-wrap: wrap; }
+  .q { background: #fff; border-radius: 20px; padding: 26px; box-shadow: 0 24px 50px rgba(13,59,102,.12); }
+  .q h3 { font-size: 21px; color: var(--deep); }
+  .q p { color: var(--sub); font-size: 14px; margin: 4px 0 10px; }
+  .q select, .q input { width: 100%; padding: 12px; margin-top: 8px; border: 1px solid var(--line); border-radius: 10px; background: var(--soft); font: inherit; }
+  .q .row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .q .btn { width: 100%; margin-top: 14px; }
+  section { padding: 76px 0; }
+  .kicker { color: var(--teal); font-weight: 800; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; }
+  h2 { font-size: 38px; letter-spacing: -0.035em; line-height: 1.1; margin-top: 6px; color: var(--deep); }
+  .lead { color: var(--sub); font-size: 17px; margin-top: 10px; max-width: 620px; }
+  .grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; margin-top: 34px; }
+  .g { background: var(--soft); border-radius: 18px; padding: 24px; }
+  .g .ic { font-size: 30px; }
+  .g h3 { font-size: 18px; margin: 12px 0 6px; }
+  .g p { color: var(--sub); font-size: 14.5px; }
+  .freq { background: var(--deep); color: #fff; }
+  .freq .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  .freq h2 { color: #fff; }
+  .freq p { color: #b8cde0; margin-top: 10px; }
+  .opts { display: grid; gap: 12px; }
+  .o { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15); border-radius: 14px; padding: 16px 18px; display: flex; justify-content: space-between; font-weight: 600; }
+  .o span { color: #7ee0d3; font-weight: 500; }
+  .areas { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+  .areas span { border: 1px solid var(--line); border-radius: 30px; padding: 7px 14px; font-size: 14px; background: #fff; }
+  .rev { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 30px; }
+  .r { border: 1px solid var(--line); border-radius: 18px; padding: 24px; }
+  .r .st { color: #f5a623; letter-spacing: 2px; }
+  .r p { margin: 10px 0; font-size: 16px; }
+  .r .n { color: var(--sub); font-size: 13px; font-weight: 600; }
+  .contact { background: var(--mint); }
+  .contact .wrap { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
+  footer { background: var(--ink); color: #8aa0b5; font-size: 14px; padding: 28px 0; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .callbar { display: none; }
+  @media (max-width: 880px) {
+    nav, header .btn { display: none; }
+    .hero .wrap, .freq .wrap { grid-template-columns: 1fr; padding-top: 44px; }
+    h1 { font-size: 40px; } h2 { font-size: 29px; }
+    .grid { grid-template-columns: 1fr 1fr; } .rev { grid-template-columns: 1fr; }
+    section { padding: 54px 0; }
+    .callbar { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 20; }
+    .callbar a { flex: 1; text-align: center; padding: 15px; font-weight: 700; }
+    .callbar a:first-child { background: var(--deep); color: #fff; } .callbar a:last-child { background: var(--blue); color: #fff; }
+    footer { padding-bottom: 80px; }
+  }
+  @media (max-width: 520px) { .grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Auscare Cleaning. This is a design preview, not the live website.</div>
+<header><div class="wrap">
+  <div class="logo">Aus<span>care</span> Cleaning</div>
+  <nav><a href="#services">Services</a><a href="#areas">Areas</a><a href="#reviews">Reviews</a></nav>
+  <a class="btn" href="#quote">Free quote</a>
+</div></header>
+
+<section class="hero" style="padding:0"><div class="wrap">
+  <div>
+    <span class="tag">🧽 Home &amp; office cleaning · South-east Melbourne</span>
+    <h1>Come home to a <span>spotless house.</span></h1>
+    <p>Regular, one-off, office and carpet cleaning across Dandenong, Keysborough, Noble Park, Springvale and 30+ nearby suburbs, using high-quality products. Get a free quote in under a minute.</p>
+    <div class="cta"><a class="btn" href="#quote">Get my free quote</a><a class="btn w" href="tel:0416737880">Call 0416 737 880</a></div>
+  </div>
+  <form class="q" id="quote" onsubmit="event.preventDefault();this.querySelector('.btn').textContent='Thanks! We\'ll send your quote shortly.'">
+    <h3>Free quote in 60 seconds</h3>
+    <p>Tell us a little about your place.</p>
+    <select><option>Regular home clean</option><option>One-off / spring clean</option><option>Office cleaning</option><option>Carpet &amp; upholstery steam clean</option></select>
+    <div class="row"><select><option>1 bedroom</option><option>2 bedrooms</option><option selected>3 bedrooms</option><option>4+ bedrooms</option></select><select><option>Weekly</option><option selected>Fortnightly</option><option>Every 4 weeks</option><option>Just once</option></select></div>
+    <input placeholder="Suburb"><input placeholder="Mobile or email">
+    <button class="btn" type="submit">Get my quote</button>
+  </form>
+</div></section>
+
+<section id="services"><div class="wrap">
+  <div class="kicker">Services</div>
+  <h2>Cleaning that fits your life</h2>
+  <div class="grid">
+    <div class="g"><div class="ic">🏠</div><h3>Regular cleaning</h3><p>Weekly, fortnightly or every four weeks, by a team that remembers how you like it.</p></div>
+    <div class="g"><div class="ic">✨</div><h3>One-off cleans</h3><p>Spring cleans, before guests arrive, or a fresh start.</p></div>
+    <div class="g"><div class="ic">🏢</div><h3>Office cleaning</h3><p>Clean, healthy workspaces for small businesses.</p></div>
+    <div class="g"><div class="ic">🛋️</div><h3>Carpet &amp; upholstery</h3><p>Steam cleaning with fixed prices for carpets, rugs and sofas.</p></div>
+  </div>
+</div></section>
+
+<section class="freq"><div class="wrap">
+  <div><div class="kicker" style="color:#7ee0d3">Regular cleaning</div><h2>Set it and forget it</h2><p>Pick a schedule that suits you. Your cleaners remember how you like things done, so you never have to explain twice.</p></div>
+  <div class="opts">
+    <div class="o">Weekly <span>Always on top of it</span></div>
+    <div class="o">Fortnightly <span>Great balance</span></div>
+    <div class="o">Every 4 weeks <span>A regular deep refresh</span></div>
+  </div>
+</div></section>
+
+<section id="areas"><div class="wrap">
+  <div class="kicker">Areas we clean</div>
+  <h2>Local to the south-east</h2>
+  <div class="areas">
+    <span>Dandenong</span><span>Keysborough</span><span>Noble Park</span><span>Springvale</span><span>Clayton</span><span>Mulgrave</span><span>Glen Waverley</span><span>Mount Waverley</span><span>Oakleigh</span><span>Mentone</span><span>Mordialloc</span><span>Cheltenham</span><span>Chelsea</span><span>Carrum</span><span>Dingley Village</span><span>Wheelers Hill</span><span>+ 20 more</span>
+  </div>
+</div></section>
+
+<section id="reviews" style="padding-top:0"><div class="wrap">
+  <div class="kicker">Reviews</div>
+  <h2>What customers say</h2>
+  <div class="rev">
+    <div class="r"><div class="st">★★★★★</div><p>"Extremely thorough, fast, efficient, and they know exactly what I want."</p><div class="n">Caty, VIC</div></div>
+    <div class="r"><div class="st">★★★★★</div><p>"Friendly attitude and professional manners."</p><div class="n">Rahul, VIC</div></div>
+  </div>
+</div></section>
+
+<section class="contact" style="padding:44px 0"><div class="wrap">
+  <h2 style="font-size:30px">Ready for a cleaner home?</h2>
+  <div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn" href="#quote">Get a free quote</a><a class="btn w" href="tel:0416737880">0416 737 880</a></div>
+</div></section>
+
+<footer><div class="wrap"><div>© 2026 Auscare Cleaning · South-east Melbourne</div><div>Concept design by Swoop Sites</div></div></footer>
+<div class="callbar"><a href="tel:0416737880">📞 Call</a><a href="#quote">Free quote</a></div>
+</body>
+</html>

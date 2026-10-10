@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>GAA Painting | House &amp; Commercial Painters, Keysborough &amp; Melbourne (concept)</title>
+<meta name="description" content="Keysborough-based painters with 15 years' experience. Interior, exterior, commercial and roof painting. Free onsite quote and colour consultation. 100% satisfaction guarantee.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root { --navy:#13294b; --sky:#2f80ed; --sun:#ffc531; --ink:#14213a; --sub:#5d6b80; --line:#e4e9f1; --soft:#f4f7fb; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Inter, system-ui, sans-serif; color: var(--ink); line-height: 1.55; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  .concept { background: #111; color: #ddd; font-size: 13px; text-align: center; padding: 8px 16px; }
+  .concept b { color: var(--sun); }
+  header { background: #fff; border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 10; }
+  header .wrap { display: flex; justify-content: space-between; align-items: center; height: 70px; }
+  .logo { font-weight: 900; font-size: 22px; letter-spacing: -0.03em; display: flex; gap: 8px; align-items: center; }
+  .logo i { width: 12px; height: 30px; border-radius: 4px; background: linear-gradient(var(--sun) 0 33%, var(--sky) 33% 66%, #ef476f 66%); display: inline-block; }
+  nav { display: flex; gap: 26px; font-size: 15px; color: var(--sub); font-weight: 500; }
+  .btn { display: inline-flex; justify-content: center; align-items: center; gap: 8px; background: var(--sun); color: #1b1300; padding: 13px 22px; border-radius: 10px; font-weight: 800; font-size: 15px; white-space: nowrap; border: 0; cursor: pointer; font-family: inherit; }
+  .btn.n { background: var(--navy); color: #fff; }
+  .hero { background: var(--navy); color: #fff; position: relative; overflow: hidden; }
+  .hero::before { content: ""; position: absolute; right: -60px; top: 0; bottom: 0; width: 46%; background: repeating-linear-gradient(100deg, #1d3a66 0 70px, #22447a 70px 140px); clip-path: polygon(18% 0,100% 0,100% 100%,0 100%); }
+  .hero .wrap { position: relative; display: grid; grid-template-columns: 1.15fr 1fr; gap: 40px; align-items: center; padding: 76px 20px; }
+  .badge { display: inline-flex; gap: 8px; align-items: center; background: rgba(255,197,49,.15); color: var(--sun); font-weight: 700; font-size: 13px; padding: 6px 12px; border-radius: 6px; }
+  h1 { font-size: 56px; line-height: 1.03; letter-spacing: -0.04em; font-weight: 900; margin: 16px 0; }
+  h1 span { color: var(--sun); }
+  .hero p { color: #b9c7dc; font-size: 18px; max-width: 520px; }
+  .cta { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
+  .q { background: #fff; color: var(--ink); border-radius: 18px; padding: 26px; box-shadow: 0 30px 60px rgba(0,0,0,.35); }
+  .q h3 { font-size: 21px; }
+  .q p { color: var(--sub); font-size: 14px; margin: 4px 0 12px; }
+  .q select, .q input { width: 100%; padding: 12px; border: 1px solid var(--line); border-radius: 10px; margin-top: 8px; font: inherit; background: var(--soft); }
+  .q .btn { width: 100%; margin-top: 14px; }
+  .perks { background: var(--sun); }
+  .perks .wrap { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; padding: 18px 20px; font-weight: 800; color: #1b1300; font-size: 15px; }
+  section { padding: 78px 0; }
+  .kicker { color: var(--sky); font-weight: 800; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; }
+  h2 { font-size: 38px; letter-spacing: -0.035em; line-height: 1.1; margin-top: 6px; }
+  .lead { color: var(--sub); font-size: 17px; margin-top: 10px; max-width: 620px; }
+  .grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 34px; }
+  .g { border: 1px solid var(--line); border-radius: 16px; padding: 24px; }
+  .g .sw { height: 8px; width: 60px; border-radius: 4px; }
+  .g h3 { font-size: 18px; margin: 14px 0 6px; }
+  .g p { color: var(--sub); font-size: 15px; }
+  .steps { background: var(--soft); }
+  .st { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; margin-top: 30px; }
+  .s { background: #fff; border-radius: 16px; padding: 24px; border: 1px solid var(--line); }
+  .s b { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--navy); color: #fff; }
+  .s h3 { font-size: 17px; margin: 12px 0 4px; }
+  .s p { color: var(--sub); font-size: 14.5px; }
+  .rev { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 30px; }
+  .r { border: 1px solid var(--line); border-radius: 16px; padding: 22px; }
+  .r .stars { color: #f5a623; letter-spacing: 2px; }
+  .r p { margin: 10px 0; }
+  .r .n { color: var(--sub); font-size: 13px; font-weight: 600; }
+  .contact { background: var(--navy); color: #fff; }
+  .contact .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; }
+  .contact h2 { color: #fff; }
+  .contact table { width: 100%; border-collapse: collapse; margin-top: 18px; }
+  .contact td { padding: 12px 0; border-bottom: 1px solid #2a446d; color: #b9c7dc; }
+  .contact td:last-child { text-align: right; color: #fff; font-weight: 600; }
+  footer { background: #0b1a31; color: #8193ad; font-size: 14px; padding: 28px 0; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .callbar { display: none; }
+  @media (max-width: 880px) {
+    nav, header .btn { display: none; }
+    .hero::before { display: none; }
+    .hero .wrap, .contact .wrap { grid-template-columns: 1fr; padding-top: 48px; }
+    h1 { font-size: 40px; } h2 { font-size: 29px; }
+    .grid, .rev { grid-template-columns: 1fr; } .st, .perks .wrap { grid-template-columns: 1fr 1fr; }
+    section { padding: 54px 0; }
+    .callbar { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 20; }
+    .callbar a { flex: 1; text-align: center; padding: 15px; font-weight: 800; }
+    .callbar a:first-child { background: var(--navy); color: #fff; } .callbar a:last-child { background: var(--sun); color: #1b1300; }
+    footer { padding-bottom: 80px; }
+  }
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for GAA Painting. This is a design preview, not the live website.</div>
+<header><div class="wrap">
+  <div class="logo"><i></i>GAA Painting</div>
+  <nav><a href="#services">Services</a><a href="#process">How it works</a><a href="#reviews">Reviews</a></nav>
+  <a class="btn" href="#quote">Free quote</a>
+</div></header>
+
+<section class="hero" style="padding:0"><div class="wrap">
+  <div>
+    <span class="badge">★ 100% satisfaction guarantee</span>
+    <h1>Expert painters. <span>Spotless finish.</span></h1>
+    <p>15 years painting homes and businesses across Melbourne, based right here in Keysborough. Interior, exterior, commercial and roofs, using eco-friendly paints that are safe for your family and pets.</p>
+    <div class="cta"><a class="btn" href="#quote">Get a free quote</a><a class="btn n" href="tel:0421946402" style="border:1.5px solid #3a5a8c">Call 0421 946 402</a></div>
+  </div>
+  <form class="q" id="quote" onsubmit="event.preventDefault();this.querySelector('.btn').textContent='Thanks! We\'ll be in touch to book your free inspection.'">
+    <h3>Free onsite quote</h3>
+    <p>Free inspection, free quote, free colour consultation.</p>
+    <select><option>Interior painting</option><option>Exterior painting</option><option>Whole house</option><option>Commercial / industrial</option><option>Roof painting</option><option>Timber / floor sanding</option></select>
+    <input placeholder="Suburb"><input placeholder="Your name"><input placeholder="Mobile">
+    <button class="btn" type="submit">Book my free quote</button>
+  </form>
+</div></section>
+
+<div class="perks"><div class="wrap"><div>✓ 15 years experience</div><div>✓ Licensed &amp; insured</div><div>✓ Free colour consult</div><div>✓ Eco-friendly paints</div></div></div>
+
+<section id="services"><div class="wrap">
+  <div class="kicker">Services</div>
+  <h2>Every surface, done properly</h2>
+  <div class="grid">
+    <div class="g"><div class="sw" style="background:#2f80ed"></div><h3>Interior painting</h3><p>Walls, ceilings, doors and trims, with careful prep and clean lines.</p></div>
+    <div class="g"><div class="sw" style="background:#ffc531"></div><h3>Exterior painting</h3><p>Weatherboards, render and trims, built to handle Melbourne weather.</p></div>
+    <div class="g"><div class="sw" style="background:#ef476f"></div><h3>Commercial &amp; industrial</h3><p>Offices, shops and warehouses, scheduled around your business.</p></div>
+    <div class="g"><div class="sw" style="background:#06d6a0"></div><h3>Roof painting</h3><p>Tile and tin roofs restored to look like new.</p></div>
+    <div class="g"><div class="sw" style="background:#8d6e63"></div><h3>Timber &amp; floors</h3><p>Wood painting, Scandinavian oil finishes and dust-free sanding and polishing.</p></div>
+    <div class="g"><div class="sw" style="background:#7b61ff"></div><h3>Colour consultation</h3><p>Not sure on colours? Our free consultant helps you choose.</p></div>
+  </div>
+</div></section>
+
+<section class="steps" id="process"><div class="wrap">
+  <div class="kicker">How it works</div>
+  <h2>Simple from quote to final coat</h2>
+  <div class="st">
+    <div class="s"><b>1</b><h3>Free consultation</h3><p>We visit, measure up and talk colours.</p></div>
+    <div class="s"><b>2</b><h3>Surface prep</h3><p>Proper prep for a finish that lasts.</p></div>
+    <div class="s"><b>3</b><h3>Painting</h3><p>Clean, tidy work with quality paints.</p></div>
+    <div class="s"><b>4</b><h3>Final inspection</h3><p>We walk through it with you before we finish.</p></div>
+  </div>
+</div></section>
+
+<section id="reviews"><div class="wrap">
+  <div class="kicker">Google reviews</div>
+  <h2>What our customers say</h2>
+  <div class="rev">
+    <div class="r"><div class="stars">★★★★★</div><p>"Good communication and courteous. Absolutely would recommend and use again."</p><div class="n">Spike R.</div></div>
+    <div class="r"><div class="stars">★★★★★</div><p>"Easy to deal with, cleans up and does a great job."</p><div class="n">Steve M.</div></div>
+    <div class="r"><div class="stars">★★★★★</div><p>"Excellent service, reasonable price."</p><div class="n">Chaminda R.</div></div>
+  </div>
+</div></section>
+
+<section class="contact"><div class="wrap">
+  <div>
+    <div class="kicker" style="color:var(--sun)">Contact</div>
+    <h2>Based in Keysborough, painting all of Melbourne</h2>
+  </div>
+  <table>
+    <tr><td>Monday to Saturday</td><td>7am to 5pm</td></tr>
+    <tr><td>Sunday</td><td>By appointment</td></tr>
+    <tr><td>Phone</td><td><a href="tel:0421946402">0421 946 402</a></td></tr>
+    <tr><td>Address</td><td>11 Brett Dr, Keysborough</td></tr>
+  </table>
+</div></section>
+
+<footer><div class="wrap"><div>© 2026 GAA Painting Pty Ltd · Keysborough VIC 3173</div><div>Concept design by Swoop Sites</div></div></footer>
+<div class="callbar"><a href="tel:0421946402">📞 Call</a><a href="#quote">Free quote</a></div>
+</body>
+</html>
