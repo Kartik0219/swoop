@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Mac Electrics (Aust) | Commercial &amp; Industrial Electrical Contractors, Dandenong (concept)</title>
+<meta name="description" content="Second-generation family electrical contractors, established 1965. Commercial and industrial electrical installation, maintenance and repairs across Melbourne and Dandenong. 14 Maxwell St, Dandenong. Call 0418 393 893.">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --char:#16181c; --char2:#202329; --steel:#2c3038; --volt:#ffd400; --volt2:#ffe766; --ink:#16181c; --sub:#5a606b; --line:#e3e5e9; --bg:#f4f5f7; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { overflow-x: hidden; }
+  body { font-family: 'IBM Plex Sans', system-ui, sans-serif; color: var(--ink); line-height: 1.6; background: #fff; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+  .concept { background: #111; color: #ddd; font-size: 13px; text-align: center; padding: 8px 16px; }
+  .concept b { color: var(--volt); }
+  header { background: var(--char); color: #fff; position: sticky; top: 0; z-index: 10; border-bottom: 3px solid var(--volt); }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 16px; }
+  .logo { display: flex; align-items: center; gap: 10px; }
+  .logo .mk { flex: 0 0 42px; height: 42px; background: var(--volt); display: grid; place-items: center; clip-path: polygon(10% 0,100% 0,90% 100%,0 100%); }
+  .logo b { font-family: Oswald, sans-serif; font-size: 24px; letter-spacing: .04em; text-transform: uppercase; line-height: 1; display: block; }
+  .logo small { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: #9aa1ad; }
+  nav { display: flex; gap: 24px; font-size: 15px; font-weight: 500; color: #b9bfca; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--volt); color: var(--char); font-weight: 700; padding: 14px 22px; border-radius: 4px; font-size: 15px; white-space: nowrap; border: 0; cursor: pointer; font-family: inherit; text-transform: uppercase; letter-spacing: .05em; }
+  .btn.o { background: transparent; color: #fff; border: 2px solid #4a505b; }
+  .btn.d { background: var(--char); color: #fff; }
+  .hero { background: var(--char2); color: #fff; position: relative; overflow: hidden; }
+  .hero::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px); background-size: 40px 40px; }
+  .hero .wrap { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; padding: 70px 20px 80px; position: relative; }
+  .est { display: inline-block; border: 1px solid var(--volt); color: var(--volt); font-family: Oswald, sans-serif; letter-spacing: .2em; font-size: 14px; padding: 5px 12px; text-transform: uppercase; }
+  h1 { font-family: Oswald, sans-serif; font-weight: 700; font-size: 64px; line-height: 1.02; text-transform: uppercase; margin: 18px 0; }
+  h1 span { color: var(--volt); }
+  .hero p { color: #b9bfca; font-size: 18px; max-width: 540px; }
+  .cta { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
+  .board { background: var(--steel); border: 1px solid #3d424c; border-radius: 6px; padding: 22px; position: relative; }
+  .board .head { display: flex; justify-content: space-between; color: #9aa1ad; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; }
+  .breakers { display: grid; grid-template-columns: repeat(6,1fr); gap: 8px; margin: 16px 0; }
+  .breakers div { background: #1a1d22; border-radius: 3px; height: 74px; position: relative; }
+  .breakers div::after { content: ""; position: absolute; left: 30%; right: 30%; top: 14px; height: 24px; background: #e9ecf1; border-radius: 2px; }
+  .breakers div.on::after { top: 36px; background: var(--volt); }
+  .board .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .board .row2 div { background: #1a1d22; border-radius: 4px; padding: 12px; font-size: 13px; color: #b9bfca; }
+  .board .row2 b { display: block; font-family: Oswald, sans-serif; font-size: 22px; color: var(--volt); }
+  .bar { background: var(--volt); color: var(--char); }
+  .bar .wrap { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; padding: 16px 20px; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: .04em; }
+  section { padding: 80px 0; }
+  .kicker { font-family: Oswald, sans-serif; color: #b38f00; font-size: 14px; letter-spacing: .2em; text-transform: uppercase; }
+  h2 { font-family: Oswald, sans-serif; font-weight: 700; font-size: 44px; line-height: 1.06; text-transform: uppercase; margin-top: 6px; }
+  .lead { color: var(--sub); font-size: 17px; margin-top: 10px; max-width: 680px; }
+  .history { background: var(--bg); }
+  .history .wrap { display: grid; grid-template-columns: 1fr 1.1fr; gap: 50px; align-items: center; }
+  .tl { position: relative; padding-left: 28px; }
+  .tl::before { content: ""; position: absolute; left: 7px; top: 6px; bottom: 6px; width: 3px; background: var(--volt); }
+  .ti { position: relative; padding-bottom: 26px; }
+  .ti:last-child { padding-bottom: 0; }
+  .ti::before { content: ""; position: absolute; left: -28px; top: 6px; width: 17px; height: 17px; border-radius: 50%; background: var(--char); border: 3px solid var(--volt); }
+  .ti b { font-family: Oswald, sans-serif; font-size: 30px; line-height: 1; display: block; }
+  .ti p { color: var(--sub); }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 36px; }
+  .col { border: 1px solid var(--line); border-top: 5px solid var(--char); padding: 28px; border-radius: 4px; }
+  .col.y { border-top-color: var(--volt); }
+  .col h3 { font-family: Oswald, sans-serif; font-size: 28px; text-transform: uppercase; }
+  .col p { color: var(--sub); margin-top: 6px; }
+  .col ul { list-style: none; margin-top: 14px; columns: 2; column-gap: 20px; }
+  .col li { padding: 6px 0 6px 22px; position: relative; font-size: 15px; break-inside: avoid; }
+  .col li::before { content: "⚡"; position: absolute; left: 0; font-size: 13px; top: 7px; }
+  .sectors { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+  .sectors span { background: var(--char); color: #fff; padding: 8px 16px; border-radius: 3px; font-size: 14px; font-weight: 600; }
+  .emerg { background: var(--char); color: #fff; }
+  .emerg .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; padding: 44px 20px; }
+  .emerg h2 { font-size: 36px; } .emerg h2 span { color: var(--volt); }
+  .emerg p { color: #b9bfca; margin-top: 6px; max-width: 620px; }
+  .quote .wrap { display: grid; grid-template-columns: 1fr 1.1fr; gap: 44px; }
+  .info { margin-top: 20px; display: grid; gap: 12px; }
+  .info div { border-left: 4px solid var(--volt); padding: 4px 0 4px 16px; }
+  .info small { display: block; color: var(--sub); font-size: 13px; text-transform: uppercase; letter-spacing: .1em; }
+  .info a, .info b { font-weight: 700; font-size: 18px; overflow-wrap: anywhere; }
+  form { background: var(--bg); border: 1px solid var(--line); padding: 30px; border-radius: 6px; }
+  form h3 { font-family: Oswald, sans-serif; font-size: 30px; text-transform: uppercase; }
+  form p.small { color: var(--sub); font-size: 15px; }
+  input, select, textarea { width: 100%; padding: 13px 14px; margin-top: 10px; border: 1px solid #d3d7de; border-radius: 4px; font: inherit; font-size: 16px; background: #fff; }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  form .btn { width: 100%; margin-top: 16px; }
+  .thanks { display: none; text-align: center; padding: 46px 10px; }
+  .thanks b { display: block; font-family: Oswald, sans-serif; font-size: 30px; text-transform: uppercase; margin-bottom: 6px; }
+  footer { background: var(--char); color: #9aa1ad; padding: 30px 0; font-size: 14px; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .callbar { display: none; }
+  @media (max-width: 900px) {
+    nav, header .btn { display: none; }
+    .hero .wrap, .history .wrap, .quote .wrap, .two { grid-template-columns: 1fr; }
+    .hero .wrap { padding: 44px 20px 56px; }
+    h1 { font-size: 46px; } h2 { font-size: 34px; }
+    .bar .wrap { grid-template-columns: 1fr 1fr; }
+    section { padding: 56px 0; }
+    form { padding: 22px 18px; }
+    .callbar { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 20; }
+    .callbar a { flex: 1; text-align: center; padding: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; }
+    .callbar a:first-child { background: var(--char); color: #fff; } .callbar a:last-child { background: var(--volt); color: var(--char); }
+    footer { padding-bottom: 82px; }
+  }
+  @media (max-width: 540px) { .col ul { columns: 1; } .row { grid-template-columns: 1fr; } h1 { font-size: 40px; } .breakers div { height: 56px; } .breakers div.on::after { top: 26px; } }
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Mac Electrics. This is a design preview, not the live website.</div>
+<header><div class="wrap">
+  <div class="logo"><div class="mk"><svg width="22" height="22" viewBox="0 0 24 24" fill="#16181c" aria-hidden="true"><path d="M13.5 2 4 13.5h6.5L9 22l11-12.5h-7z"/></svg></div><div><b>Mac Electrics</b><small>(Aust) · Dandenong</small></div></div>
+  <nav><a href="#history">Our story</a><a href="#services">Services</a><a href="#emergency">24/7 service</a><a href="#quote">Contact</a></nav>
+  <a class="btn" href="#quote">Get a quote</a>
+</div></header>
+
+<section class="hero" style="padding:0"><div class="wrap">
+  <div>
+    <span class="est">Est. 1965 · Family run</span>
+    <h1>Commercial &amp; industrial <span>electrical contractors.</span></h1>
+    <p>A second-generation family business in Dandenong, providing commercial and industrial electrical installation, maintenance and repairs across Melbourne.</p>
+    <div class="cta"><a class="btn" href="#quote">Request a quote</a><a class="btn o" href="tel:0418393893">Call 0418 393 893</a></div>
+  </div>
+  <div class="board" aria-hidden="true">
+    <div class="head"><span>Mac Electrics (Aust)</span><span>Main switchboard</span></div>
+    <div class="breakers"><div class="on"></div><div class="on"></div><div></div><div class="on"></div><div class="on"></div><div class="on"></div></div>
+    <div class="row2"><div><b>1965</b>Business established</div><div><b>40+ yrs</b>Some client relationships</div></div>
+  </div>
+</div></section>
+
+<div class="bar"><div class="wrap">
+  <div>⚡ Commercial</div><div>🏭 Industrial</div><div>🛠️ Maintenance contracts</div><div>🚨 24/7 emergency service</div>
+</div></div>
+
+<section class="history" id="history"><div class="wrap">
+  <div>
+    <div class="kicker">Our story</div>
+    <h2>Two generations of electricians</h2>
+    <p class="lead">We put a high emphasis on client liaison and service, which has let us keep working with clients from both generations. Several of these associations have been maintained for over 40 years.</p>
+    <p class="lead">Insurance and compliance are a high priority, and we can supply certification of that compliance to industry standards.</p>
+  </div>
+  <div class="tl">
+    <div class="ti"><b>1965</b><p>The business is originally established.</p></div>
+    <div class="ti"><b>1990</b><p>Renamed Mac Electrics (Aust) as the next generation of electricians progressively takes over.</p></div>
+    <div class="ti"><b>Today</b><p>Office and workshop at 14 Maxwell Street, Dandenong, serving commercial and industrial clients across Melbourne.</p></div>
+  </div>
+</div></section>
+
+<section id="services"><div class="wrap">
+  <div class="kicker">What we do</div>
+  <h2>Services</h2>
+  <p class="lead">From underground service to switchboard construction, customised solutions to keep your business running smoothly, in Melbourne and around Dandenong. We're readily available to tender for projects of any size.</p>
+  <div class="two">
+    <div class="col y"><h3>Commercial</h3><p>For businesses, government departments, facilities and community organisations.</p>
+      <ul><li>Main switchboards &amp; distribution boards</li><li>Office fit-outs</li><li>Contract maintenance</li><li>Light &amp; power upgrades</li><li>Cat 5 &amp; 6 phone and data</li><li>Exit &amp; emergency lighting</li><li>Consumer mains &amp; sub-mains</li><li>Flood &amp; security lighting</li><li>Lightning &amp; surge protection</li><li>RCD safety switches</li></ul></div>
+    <div class="col"><h3>Industrial</h3><p>Medical sites, factories, warehouses, manufacturing plants and machinery.</p>
+      <ul><li>Industrial electrical maintenance</li><li>Repair &amp; service</li><li>Industrial electrical installation</li><li>New factories, warehouses &amp; offices</li><li>Switchboard upgrades &amp; replacement</li><li>Installation of new machinery</li><li>Rewiring or relocating production areas</li><li>Programmed maintenance</li></ul></div>
+  </div>
+  <div class="sectors"><span>Medical</span><span>Factories</span><span>Warehouses</span><span>Manufacturing plants</span><span>Offices</span><span>Retail</span><span>Government</span><span>Community organisations</span></div>
+</div></section>
+
+<div class="emerg" id="emergency"><div class="wrap">
+  <div><h2>On call <span>24 hours, 7 days</span></h2><p>A comprehensive "on call" breakdown service, with a 24 hour emergency number in case of equipment failure.</p></div>
+  <a class="btn" href="tel:0418393893">📞 0418 393 893</a>
+</div></div>
+
+<section class="quote" id="quote"><div class="wrap">
+  <div>
+    <div class="kicker">Contact</div>
+    <h2>Get a quote</h2>
+    <p class="lead">Questions about our services, or need a quote for your project? Send us the details.</p>
+    <div class="info">
+      <div><small>Mobile</small><a href="tel:0418393893">0418 393 893</a></div>
+      <div><small>Email</small><a href="mailto:admin@macelectricsmelbourne.com.au">admin@macelectricsmelbourne.com.au</a></div>
+      <div><small>Office &amp; workshop</small><b>14 Maxwell Street, Dandenong VIC 3175</b></div>
+    </div>
+  </div>
+  <form onsubmit="event.preventDefault();this.querySelector('.fields').style.display='none';this.querySelector('.thanks').style.display='block'">
+    <div class="fields">
+      <h3>Quick online enquiry</h3>
+      <p class="small">We'll get back to you as soon as we can.</p>
+      <div class="row"><input placeholder="Name" required><input placeholder="Phone" type="tel" required></div>
+      <input placeholder="Email" type="email">
+      <div class="row"><input placeholder="Company (optional)"><select aria-label="Service"><option>Commercial service</option><option>Industrial service</option><option>Maintenance contract</option><option>Breakdown / emergency</option><option>Tender / project</option></select></div>
+      <textarea rows="3" placeholder="Tell us about the job or project"></textarea>
+      <button class="btn" type="submit">Send enquiry</button>
+    </div>
+    <div class="thanks"><b>Thanks, enquiry received</b>We'll be in touch shortly. Urgent? Call 0418 393 893.</div>
+  </form>
+</div></section>
+
+<footer><div class="wrap"><div>© 2026 Mac Electrics (Aust) · 14 Maxwell Street, Dandenong VIC 3175</div><div>Concept design by Swoop Sites</div></div></footer>
+<div class="callbar"><a href="tel:0418393893">📞 Call</a><a href="#quote">Get a quote</a></div>
+</body>
+</html>
