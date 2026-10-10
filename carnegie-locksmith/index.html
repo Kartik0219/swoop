@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Carnegie Locksmith | 24/7 Mobile Locksmith, Carnegie (concept)</title>
+<meta name="description" content="Your friendly neighbourhood locksmiths. 24 hour, 7 day mobile locksmith service for lock-outs, lock changes, lock repairs, emergency entry and commercial security. Call 0402 397 299.">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#0d0f12; --panel:#15181d; --panel2:#1d2128; --brass:#e9b949; --brass2:#f6d98a; --mint:#4fd1a5; --sub:#9aa3b0; --line:#2a2f37; --paper:#f6f5f1; --dsub:#5b6370; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { overflow-x: clip; }
+  body { font-family: Inter, system-ui, sans-serif; background: var(--ink); color: #fff; line-height: 1.6; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+  .concept { background: #000; color: #ddd; font-size: 13px; text-align: center; padding: 8px 16px; border-bottom: 1px solid #222; }
+  .concept b { color: var(--brass); }
+  header { position: sticky; top: 0; z-index: 10; background: rgba(13,15,18,.95); border-bottom: 1px solid var(--line); }
+  header .wrap { display: flex; justify-content: space-between; align-items: center; height: 70px; gap: 14px; }
+  .logo { display: flex; align-items: center; gap: 10px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: .02em; }
+  .logo svg { flex: 0 0 34px; }
+  nav { display: flex; gap: 24px; color: var(--sub); font-weight: 600; font-size: 15px; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--brass); color: var(--ink); font-weight: 800; padding: 14px 22px; border-radius: 12px; font-size: 15px; border: 0; cursor: pointer; font-family: inherit; }
+  .btn.o { background: transparent; color: #fff; border: 1.5px solid #3a404a; }
+  .hero .wrap { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; padding-top: 70px; padding-bottom: 80px; }
+  .live { display: inline-flex; align-items: center; gap: 10px; background: rgba(79,209,165,.1); border: 1px solid rgba(79,209,165,.4); color: var(--mint); font-weight: 700; font-size: 13px; padding: 6px 14px; border-radius: 30px; }
+  .live i { width: 8px; height: 8px; border-radius: 50%; background: var(--mint); box-shadow: 0 0 0 4px rgba(79,209,165,.25); }
+  h1 { font-family: 'Space Grotesk', sans-serif; font-size: 62px; line-height: 1; letter-spacing: -.02em; margin: 18px 0; }
+  h1 span { color: var(--brass); }
+  .hero p { color: var(--sub); font-size: 18px; max-width: 520px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+  .bigcall { display: block; margin-top: 26px; font-family: 'Space Grotesk', sans-serif; font-size: 40px; font-weight: 700; color: #fff; letter-spacing: .01em; }
+  .bigcall small { display: block; font-family: Inter, sans-serif; font-size: 13px; color: var(--sub); letter-spacing: .14em; text-transform: uppercase; font-weight: 700; }
+  .keyart { background: radial-gradient(circle at 50% 40%, #262b33, var(--panel) 70%); border: 1px solid var(--line); border-radius: 24px; padding: 30px; display: grid; place-items: center; min-height: 340px; position: relative; }
+  .keyart svg { width: 100%; max-width: 300px; height: auto; }
+  .clock { position: absolute; top: 18px; right: 18px; background: var(--brass); color: var(--ink); font-family: 'Space Grotesk', sans-serif; font-weight: 700; border-radius: 12px; padding: 8px 14px; text-align: center; line-height: 1.1; }
+  .clock b { font-size: 26px; display: block; }
+  .bar { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--panel); }
+  .bar .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; padding-top: 18px; padding-bottom: 18px; font-weight: 700; font-size: 14px; color: #dfe3e8; }
+  .bar span { color: var(--brass); }
+  section { padding: 80px 0; }
+  .kick { color: var(--brass); font-weight: 800; font-size: 13px; letter-spacing: .16em; text-transform: uppercase; }
+  h2 { font-family: 'Space Grotesk', sans-serif; font-size: 42px; line-height: 1.05; letter-spacing: -.01em; margin-top: 8px; }
+  .lead { color: var(--sub); font-size: 17px; margin-top: 10px; max-width: 640px; }
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 36px; }
+  .side { background: var(--panel); border: 1px solid var(--line); border-radius: 20px; padding: 30px; }
+  .side .tag { display: inline-block; background: var(--panel2); color: var(--brass2); border-radius: 8px; padding: 4px 10px; font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+  .side h3 { font-family: 'Space Grotesk', sans-serif; font-size: 28px; margin: 12px 0 8px; }
+  .side p { color: var(--sub); }
+  .side ul { list-style: none; margin-top: 16px; display: grid; gap: 8px; }
+  .side li { padding-left: 28px; position: relative; font-weight: 600; }
+  .side li::before { content: ""; position: absolute; left: 0; top: 6px; width: 16px; height: 16px; border-radius: 4px; background: var(--brass); clip-path: polygon(14% 52%, 0 66%, 38% 100%, 100% 22%, 86% 8%, 38% 72%); }
+  .locked { background: var(--brass); color: var(--ink); }
+  .locked .wrap { display: grid; grid-template-columns: 1.4fr 1fr; gap: 30px; align-items: center; padding-top: 44px; padding-bottom: 44px; }
+  .locked h2 { font-size: 36px; }
+  .locked p { font-size: 17px; margin-top: 6px; }
+  .locked .btn { background: var(--ink); color: #fff; font-size: 18px; padding: 18px 26px; width: 100%; }
+  .promise { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 34px; }
+  .pr { border-top: 3px solid var(--brass); padding-top: 18px; }
+  .pr h3 { font-family: 'Space Grotesk', sans-serif; font-size: 21px; }
+  .pr p { color: var(--sub); font-size: 15px; margin-top: 4px; }
+  .quote { background: var(--paper); color: var(--ink); }
+  .quote .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .quote .lead { color: var(--dsub); }
+  .quote .kick { color: #9a6f0c; }
+  .ct { margin-top: 22px; display: grid; gap: 12px; }
+  .ct a { display: flex; align-items: center; gap: 12px; background: #fff; border: 1px solid #e3e1da; border-radius: 14px; padding: 16px; font-weight: 700; overflow-wrap: anywhere; }
+  .ct a span { flex: 0 0 auto; font-size: 22px; }
+  form { background: #fff; border: 1px solid #e3e1da; border-radius: 20px; padding: 26px; }
+  form h3 { font-family: 'Space Grotesk', sans-serif; font-size: 26px; }
+  .tabs { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+  .tabs label { flex: 1; min-width: 120px; }
+  .tabs input { display: none; }
+  .tabs span { display: block; text-align: center; padding: 10px; border: 1.5px solid #e3e1da; border-radius: 10px; font-weight: 700; cursor: pointer; font-size: 14px; }
+  .tabs input:checked + span { border-color: var(--ink); background: var(--ink); color: #fff; }
+  form input:not([type=radio]), form select, form textarea { width: 100%; padding: 12px; margin-top: 10px; border: 1px solid #e3e1da; border-radius: 10px; font: inherit; background: var(--paper); }
+  form .btn { width: 100%; margin-top: 14px; }
+  .thanks { display: none; text-align: center; padding: 40px 10px; }
+  .thanks b { display: block; font-family: 'Space Grotesk', sans-serif; font-size: 26px; margin-bottom: 6px; }
+  footer { background: #000; color: #7d8592; font-size: 14px; padding: 28px 0; }
+  footer .wrap { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+  .callbar { display: none; }
+  @media (max-width: 880px) {
+    nav, header .btn { display: none; }
+    .hero .wrap, .split, .locked .wrap, .quote .wrap { grid-template-columns: 1fr; }
+    .hero .wrap { padding-top: 40px; padding-bottom: 50px; }
+    h1 { font-size: 44px; } h2 { font-size: 32px; } .bigcall { font-size: 32px; }
+    .keyart { min-height: 240px; }
+    .bar .wrap { grid-template-columns: 1fr 1fr; }
+    .promise { grid-template-columns: 1fr; }
+    section { padding: 56px 0; }
+    .callbar { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; }
+    .callbar a { flex: 1; text-align: center; padding: 15px; font-weight: 800; }
+    .callbar a:first-child { background: var(--brass); color: var(--ink); }
+    .callbar a:last-child { background: var(--panel2); color: #fff; }
+    footer { padding-bottom: 80px; }
+  }
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Carnegie Locksmith. This is a design preview, not the live website.</div>
+<header><div class="wrap">
+  <div class="logo"><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect x="5" y="14" width="24" height="18" rx="4" fill="#e9b949"/><path d="M10 14V10a7 7 0 0 1 14 0v4" fill="none" stroke="#e9b949" stroke-width="3"/><circle cx="17" cy="22" r="2.6" fill="#0d0f12"/><rect x="16" y="23" width="2" height="5" fill="#0d0f12"/></svg>CARNEGIE LOCKSMITH</div>
+  <nav><a href="#services">Services</a><a href="#promise">Our promise</a><a href="#quote">Quote &amp; booking</a></nav>
+  <a class="btn" href="tel:0402397299">📞 0402 397 299</a>
+</div></header>
+
+<section class="hero" style="padding:0"><div class="wrap">
+  <div>
+    <span class="live"><i></i>24 hours · 7 days · Mobile service</span>
+    <h1>Locked out? <span>We'll come to you.</span></h1>
+    <p>Your friendly neighbourhood locksmiths. Lock-outs, lock changes, lock repairs and emergency entry for homes, plus security advice and installation for businesses.</p>
+    <a class="bigcall" href="tel:0402397299"><small>Call us today</small>0402 397 299</a>
+    <div class="cta"><a class="btn" href="tel:0402397299">📞 Call now</a><a class="btn o" href="#quote">Request a quote</a></div>
+  </div>
+  <div class="keyart">
+    <div class="clock"><b>24/7</b>mobile</div>
+    <svg viewBox="0 0 300 220" aria-hidden="true">
+      <circle cx="80" cy="110" r="58" fill="none" stroke="#e9b949" stroke-width="18"/>
+      <circle cx="80" cy="110" r="18" fill="#15181d" stroke="#e9b949" stroke-width="6"/>
+      <rect x="130" y="100" width="150" height="20" rx="4" fill="#e9b949"/>
+      <path d="M190 120 v22 h14 v-10 h12 v16 h14 v-28 h14 v18 h14 v-18" fill="#e9b949"/>
+      <circle cx="80" cy="110" r="76" fill="none" stroke="#2a2f37" stroke-width="2" stroke-dasharray="4 8"/>
+    </svg>
+  </div>
+</div></section>
+
+<div class="bar"><div class="wrap">
+  <div><span>●</span> 24 hour, 7 day</div><div><span>●</span> Fully mobile</div><div><span>●</span> Residential &amp; commercial</div><div><span>●</span> Book online</div>
+</div></div>
+
+<section id="services"><div class="wrap">
+  <div class="kick">Services</div>
+  <h2>Homes and businesses, sorted</h2>
+  <p class="lead">From small projects to big ones, we've got you covered, and we're always happy to answer your questions.</p>
+  <div class="split">
+    <div class="side">
+      <span class="tag">Residential</span>
+      <h3>Home locksmith</h3>
+      <p>A friendly, reliable and professional locksmith service covering all types of locksmith work.</p>
+      <ul><li>Lock-outs</li><li>Emergency entry</li><li>Lock changes</li><li>Lock repairs</li></ul>
+    </div>
+    <div class="side">
+      <span class="tag">Commercial</span>
+      <h3>Business security</h3>
+      <p>Complete professional advice, service and installation, so your office and business are secured and protected.</p>
+      <ul><li>Professional security advice</li><li>Service</li><li>Installation</li></ul>
+    </div>
+  </div>
+</div></section>
+
+<div class="locked"><div class="wrap">
+  <div><h2>Locked out right now?</h2><p>We know what a locksmith emergency feels like. We're available 24 hours, 7 days a week.</p></div>
+  <a class="btn" href="tel:0402397299">📞 Call 0402 397 299</a>
+</div></div>
+
+<section id="promise"><div class="wrap">
+  <div class="kick">Our promise</div>
+  <h2>Quality first, every job</h2>
+  <div class="promise">
+    <div class="pr"><h3>Best materials</h3><p>We only work with the best materials available.</p></div>
+    <div class="pr"><h3>Realistic timing</h3><p>We never compromise quality for time, and we give you a realistic schedule that fits your day.</p></div>
+    <div class="pr"><h3>Straight answers</h3><p>We help you work out exactly what you need, quickly and efficiently.</p></div>
+  </div>
+</div></section>
+
+<section class="quote" id="quote"><div class="wrap">
+  <div>
+    <div class="kick">Quote &amp; booking</div>
+    <h2>Book a locksmith or get a quote</h2>
+    <p class="lead">For lock-outs and emergencies, please call. For everything else, send a request and we'll get back to you.</p>
+    <div class="ct">
+      <a href="tel:0402397299"><span>📞</span>0402 397 299</a>
+      <a href="mailto:info.carnegielocksmith@gmail.com"><span>✉️</span>info.carnegielocksmith@gmail.com</a>
+    </div>
+  </div>
+  <form onsubmit="event.preventDefault();this.querySelector('.fields').style.display='none';this.querySelector('.thanks').style.display='block'">
+    <div class="fields">
+      <h3>Request a quote</h3>
+      <div class="tabs">
+        <label><input type="radio" name="t" checked><span>🏠 Residential</span></label>
+        <label><input type="radio" name="t"><span>🏢 Commercial</span></label>
+      </div>
+      <select><option>Lock change</option><option>Lock repair</option><option>Lock-out / emergency entry</option><option>Security advice &amp; installation</option><option>Something else</option></select>
+      <input placeholder="Your name" required>
+      <input placeholder="Mobile" type="tel" required>
+      <input placeholder="Suburb">
+      <textarea rows="3" placeholder="Tell us what you need"></textarea>
+      <button class="btn" type="submit">Send request</button>
+    </div>
+    <div class="thanks"><b>Thanks, request received!</b>We'll be in touch soon. Locked out? Call 0402 397 299.</div>
+  </form>
+</div></section>
+
+<footer><div class="wrap"><div>© 2026 Carnegie Locksmith · 24 hour mobile locksmith</div><div>Concept design by Swoop Sites</div></div></footer>
+<div class="callbar"><a href="tel:0402397299">📞 Call now</a><a href="#quote">Get a quote</a></div>
+</body>
+</html>

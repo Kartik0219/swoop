@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Aztek Auto Electrical | Auto Electrician, 4x4 &amp; Caravan, Air-Con, Mentone (concept)</title>
+<meta name="description" content="Auto electrical for cars, 4x4s, caravans and boats in Mentone since 1994. ARC-licensed air-con servicing, diagnostics, towing packages and RedArc installation. 03 9584 1892.">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#0a0d12; --steel:#131820; --steel2:#1b222c; --volt:#00a3ff; --volt2:#7fd0ff; --spark:#ff6a13; --sub:#93a0b2; --line:#252d38; --paper:#f3f5f8; --dsub:#556072; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { overflow-x: clip; }
+  body { font-family: Barlow, system-ui, sans-serif; background: var(--ink); color: #fff; line-height: 1.6; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+  .concept { background: #000; color: #ddd; font-size: 13px; text-align: center; padding: 8px 16px; }
+  .concept b { color: var(--volt2); }
+  header { position: sticky; top: 0; z-index: 10; background: rgba(10,13,18,.96); border-bottom: 1px solid var(--line); }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 70px; gap: 14px; }
+  .logo { display: flex; align-items: center; gap: 10px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 26px; letter-spacing: .02em; line-height: 1; }
+  .logo small { display: block; font-size: 13px; color: var(--volt); letter-spacing: .2em; font-weight: 700; }
+  nav { display: flex; gap: 24px; font-weight: 600; font-size: 15px; color: var(--sub); }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--volt); color: #001726; font-weight: 700; padding: 13px 22px; border-radius: 4px; font-size: 16px; border: 0; cursor: pointer; font-family: inherit; text-transform: uppercase; letter-spacing: .04em; }
+  .btn.s { background: var(--spark); color: #fff; }
+  .btn.o { background: transparent; color: #fff; border: 1.5px solid #3a4452; }
+  .hero { position: relative; overflow: hidden; background: radial-gradient(ellipse at 80% 20%, rgba(0,163,255,.18), transparent 55%), var(--ink); }
+  .hero .wrap { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; padding-top: 70px; padding-bottom: 80px; }
+  .since { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; color: var(--spark); letter-spacing: .22em; font-size: 15px; text-transform: uppercase; }
+  h1 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 76px; line-height: .95; text-transform: uppercase; margin: 14px 0 18px; }
+  h1 span { color: var(--volt); }
+  .hero p { color: var(--sub); font-size: 19px; max-width: 540px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+  .bolt { position: relative; }
+  .bolt svg { width: 100%; height: auto; display: block; max-width: 420px; margin: 0 auto; }
+  .creds { background: var(--steel); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .creds .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; padding-top: 22px; padding-bottom: 22px; }
+  .cr { display: flex; gap: 12px; align-items: center; }
+  .cr b { flex: 0 0 auto; font-family: 'Barlow Condensed', sans-serif; font-size: 18px; background: var(--steel2); border: 1px solid var(--line); color: var(--volt2); padding: 8px 10px; border-radius: 6px; letter-spacing: .06em; }
+  .cr span { font-size: 14px; color: #c9d2de; line-height: 1.35; }
+  section { padding: 80px 0; }
+  .kick { font-family: 'Barlow Condensed', sans-serif; color: var(--spark); font-weight: 700; letter-spacing: .2em; text-transform: uppercase; font-size: 15px; }
+  h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 50px; line-height: 1; text-transform: uppercase; margin-top: 6px; }
+  .lead { color: var(--sub); font-size: 18px; margin-top: 12px; max-width: 660px; }
+  .veh { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 34px; }
+  .vh { background: var(--steel); border: 1px solid var(--line); border-radius: 10px; padding: 22px 18px; text-align: center; }
+  .vh .ic { font-size: 36px; }
+  .vh h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 26px; text-transform: uppercase; margin-top: 4px; }
+  .svcs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 30px; }
+  .sv { background: var(--steel); border: 1px solid var(--line); border-radius: 10px; padding: 24px; border-left: 4px solid var(--volt); }
+  .sv h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 25px; text-transform: uppercase; line-height: 1.1; }
+  .sv p { color: var(--sub); font-size: 15px; margin-top: 6px; }
+  .sv ul { list-style: none; margin-top: 10px; font-size: 14px; color: #c9d2de; display: grid; gap: 4px; }
+  .sv li::before { content: "⚡ "; }
+  .redarc { background: linear-gradient(120deg, #b3140f, #e0251b); }
+  .redarc .wrap { display: grid; grid-template-columns: 1.4fr 1fr; gap: 30px; align-items: center; padding-top: 50px; padding-bottom: 50px; }
+  .redarc p { font-size: 18px; margin-top: 8px; color: #ffe1de; }
+  .redarc .kick { color: #ffd2cc; }
+  .redarc .btn { background: #fff; color: #b3140f; }
+  .tow { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-start; }
+  .tow span { background: rgba(0,0,0,.25); border-radius: 30px; padding: 7px 14px; font-weight: 600; font-size: 14px; }
+  .about .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+  .about p { color: var(--sub); font-size: 17px; margin-top: 12px; }
+  .areas { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+  .areas span { border: 1px solid var(--line); border-radius: 30px; padding: 6px 14px; font-size: 14px; font-weight: 600; color: #c9d2de; }
+  .big { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .big div { background: var(--steel); border: 1px solid var(--line); border-radius: 10px; padding: 22px; }
+  .big b { display: block; font-family: 'Barlow Condensed', sans-serif; font-size: 46px; line-height: 1; color: var(--volt); }
+  .big span { font-size: 14px; color: var(--sub); }
+  .book { background: var(--paper); color: var(--ink); }
+  .book .wrap { display: grid; grid-template-columns: 1fr 1.1fr; gap: 40px; }
+  .book .lead { color: var(--dsub); }
+  .ci { margin-top: 20px; display: grid; gap: 12px; }
+  .ci a, .ci div { display: flex; gap: 12px; align-items: center; background: #fff; border: 1px solid #dde2e9; border-radius: 10px; padding: 15px 16px; font-weight: 700; overflow-wrap: anywhere; }
+  form { background: #fff; border: 1px solid #dde2e9; border-radius: 12px; padding: 26px; }
+  form h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 30px; text-transform: uppercase; }
+  input, select, textarea { width: 100%; padding: 12px; margin-top: 10px; border: 1px solid #dde2e9; border-radius: 8px; font: inherit; background: var(--paper); }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .three { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+  form .btn { width: 100%; margin-top: 14px; }
+  .thanks { display: none; text-align: center; padding: 40px 10px; }
+  .thanks b { display: block; font-family: 'Barlow Condensed', sans-serif; font-size: 30px; text-transform: uppercase; margin-bottom: 6px; }
+  footer { background: #000; color: #7c8899; font-size: 14px; padding: 28px 0; }
+  footer .wrap { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+  .callbar { display: none; }
+  @media (max-width: 880px) {
+    nav, header .btn { display: none; }
+    .hero .wrap, .redarc .wrap, .about .wrap, .book .wrap { grid-template-columns: 1fr; }
+    .hero .wrap { padding-top: 40px; padding-bottom: 50px; }
+    h1 { font-size: 54px; } h2 { font-size: 38px; }
+    .creds .wrap { grid-template-columns: 1fr 1fr; }
+    .veh { grid-template-columns: 1fr 1fr; }
+    .svcs { grid-template-columns: 1fr 1fr; }
+    section { padding: 56px 0; }
+    .bolt svg { max-width: 300px; }
+    .callbar { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; }
+    .callbar a { flex: 1; text-align: center; padding: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
+    .callbar a:first-child { background: var(--volt); color: #001726; }
+    .callbar a:last-child { background: var(--spark); color: #fff; }
+    footer { padding-bottom: 80px; }
+  }
+  @media (max-width: 560px) { .svcs, .two, .creds .wrap { grid-template-columns: 1fr; } .three { grid-template-columns: 1fr 1fr; } h1 { font-size: 46px; } .logo { font-size: 22px; } }
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Aztek Auto Electrical. This is a design preview, not the live website.</div>
+<header><div class="wrap">
+  <div class="logo"><svg width="30" height="36" viewBox="0 0 30 36" aria-hidden="true"><path d="M18 0 L2 20 H13 L10 36 L28 14 H16 Z" fill="#00a3ff"/></svg><div>AZTEK<small>AUTO ELECTRICAL</small></div></div>
+  <nav><a href="#services">Services</a><a href="#redarc">RedArc</a><a href="#about">About</a><a href="#book">Book</a></nav>
+  <a class="btn" href="tel:0395841892">📞 03 9584 1892</a>
+</div></header>
+
+<section class="hero" style="padding:0"><div class="wrap">
+  <div>
+    <div class="since">Mentone · Established 1994</div>
+    <h1>Auto electrical for <span>cars, 4x4s, caravans</span> &amp; boats</h1>
+    <p>Diagnostics, air-con, towing packages, dual batteries and RedArc installs, plus cooling systems, brakes, and EFI, ABS and airbag diagnostics. The one-stop shop for automotive care.</p>
+    <div class="cta"><a class="btn" href="#book">Book a service</a><a class="btn o" href="tel:0395841892">Call 03 9584 1892</a></div>
+  </div>
+  <div class="bolt">
+    <svg viewBox="0 0 400 300" aria-hidden="true">
+      <rect x="70" y="90" width="260" height="170" rx="16" fill="#131820" stroke="#252d38" stroke-width="3"/>
+      <rect x="100" y="66" width="44" height="30" rx="4" fill="#1b222c" stroke="#ff6a13" stroke-width="3"/>
+      <rect x="256" y="66" width="44" height="30" rx="4" fill="#1b222c" stroke="#00a3ff" stroke-width="3"/>
+      <path d="M113 81h18" stroke="#ff6a13" stroke-width="5"/>
+      <path d="M269 81h18M278 72v18" stroke="#00a3ff" stroke-width="5"/>
+      <path d="M215 120 L165 185 H200 L185 240 L245 165 H208 Z" fill="#00a3ff"/>
+      <g stroke="#7fd0ff" stroke-width="3" stroke-linecap="round" opacity=".7"><path d="M40 60l18 14"/><path d="M360 60l-18 14"/><path d="M30 170h24"/><path d="M370 170h-24"/></g>
+    </svg>
+  </div>
+</div></section>
+
+<div class="creds"><div class="wrap">
+  <div class="cr"><b>ARC</b><span>Senior staff ARC licensed for air-con work</span></div>
+  <div class="cr"><b>VACC</b><span>Member of the Victorian Automotive Chamber of Commerce</span></div>
+  <div class="cr"><b>REDARC</b><span>RedArc Network recommended installer</span></div>
+  <div class="cr"><b>100%</b><span>Australian owned and operated</span></div>
+</div></div>
+
+<section id="services"><div class="wrap">
+  <div class="kick">Whatever you drive</div>
+  <h2>We'll have it running at full potential</h2>
+  <div class="veh">
+    <div class="vh"><div class="ic">🚗</div><h3>Cars</h3></div>
+    <div class="vh"><div class="ic">🚙</div><h3>4x4s</h3></div>
+    <div class="vh"><div class="ic">🚐</div><h3>Caravans &amp; campers</h3></div>
+    <div class="vh"><div class="ic">🚤</div><h3>Boats</h3></div>
+  </div>
+  <div class="svcs">
+    <div class="sv"><h3>Diagnostics &amp; inspection</h3><p>Our workshop is equipped for cars, 4x4s, caravans and campers.</p><ul><li>Full vehicle scanning</li><li>Fault finding</li><li>EFI, ABS &amp; airbag diagnostics</li></ul></div>
+    <div class="sv"><h3>Air-con servicing</h3><p>ARC licensed (AU27718) to safely remove, repair and replace.</p><ul><li>System inspection &amp; pressure check</li><li>Evacuate &amp; recharge gases</li><li>Dye test to find leaks</li></ul></div>
+    <div class="sv"><h3>Towing package</h3><p>Everything you need to tow safely.</p><ul><li>RedArc Tow Pro electric brakes</li><li>Anderson plugs</li><li>7-pin &amp; 12-pin sockets</li></ul></div>
+    <div class="sv"><h3>4WD products</h3><p>Set up for your next trip.</p><ul><li>Dual battery systems</li><li>UHF radio &amp; winch installs</li><li>LED driving lights &amp; solar</li></ul></div>
+    <div class="sv"><h3>Caravan &amp; camper</h3><p>Power and lighting for life on the road.</p><ul><li>Interior &amp; exterior lighting</li><li>12V &amp; 240V charging systems</li><li>Electric brakes &amp; reverse cameras</li></ul></div>
+    <div class="sv"><h3>On-site breakdowns &amp; more</h3><p>From lock-outs to breakdowns, we provide on-site breakdown services.</p><ul><li>Starter motors &amp; alternators</li><li>Alarms &amp; immobilisers</li><li>Cooling systems &amp; brakes</li></ul></div>
+  </div>
+</div></section>
+
+<div class="redarc" id="redarc"><div class="wrap">
+  <div>
+    <div class="kick">RedArc Network</div>
+    <h2>Proud RedArc installer</h2>
+    <p>We're a recommended provider and installer of all RedArc products, including the RedArc Tow Pro electric brakes in our towing package.</p>
+  </div>
+  <div class="tow"><span>Recommended provider</span><span>Installer of all RedArc products</span><span>Tow Pro electric brakes</span><a class="btn" href="#book" style="margin-top:8px">Book a RedArc install</a></div>
+</div></div>
+
+<section class="about" id="about"><div class="wrap">
+  <div>
+    <div class="kick">About Aztek</div>
+    <h2>Your local auto electrician since 1994</h2>
+    <p>Aztek Auto Electrical has been looking after drivers in Aspendale, Parkdale, Mentone, Mordialloc, Beaumaris and Black Rock since 1994. In 2012 we moved to a new, larger workshop on Balcombe Road, Mentone. We're 100% Australian owned and operated, and proud to sponsor local clubs, including the Parkdale Vultures Football Club.</p>
+    <div class="areas"><span>Mentone</span><span>Parkdale</span><span>Aspendale</span><span>Mordialloc</span><span>Beaumaris</span><span>Black Rock</span></div>
+  </div>
+  <div class="big">
+    <div><b>1994</b><span>Established</span></div>
+    <div><b>2012</b><span>Moved to our larger Mentone workshop</span></div>
+    <div><b>ARC</b><span>Licensed air-con technicians</span></div>
+    <div><b>VACC</b><span>Member workshop</span></div>
+  </div>
+</div></section>
+
+<section class="book" id="book"><div class="wrap">
+  <div>
+    <div class="kick">Book in</div>
+    <h2>Book a service or get a quote</h2>
+    <p class="lead">Tell us about your vehicle and what's going on, and we'll get back to you with a time and a competitive quote.</p>
+    <div class="ci">
+      <a href="tel:0395841892">📞 03 9584 1892</a>
+      <a href="mailto:enquiries@aztekauto.com.au">✉️ enquiries@aztekauto.com.au</a>
+      <div>📍 36 Balcombe Road, Mentone VIC 3194</div>
+    </div>
+  </div>
+  <form onsubmit="event.preventDefault();this.querySelector('.fields').style.display='none';this.querySelector('.thanks').style.display='block'">
+    <div class="fields">
+      <h3>Booking request</h3>
+      <select><option>Auto electrical fault</option><option>Air-con service</option><option>Diagnostics &amp; inspection</option><option>Towing package</option><option>4WD / dual battery</option><option>Caravan &amp; camper</option><option>RedArc install</option><option>Something else</option></select>
+      <div class="two"><input placeholder="Your name" required><input placeholder="Mobile" type="tel" required></div>
+      <input placeholder="Email" type="email">
+      <div class="three"><input placeholder="Make"><input placeholder="Model"><input placeholder="Year"></div>
+      <textarea rows="3" placeholder="What's happening with the vehicle?"></textarea>
+      <button class="btn s" type="submit">Send booking request</button>
+    </div>
+    <div class="thanks"><b>Thanks, request received!</b>We'll be in touch to confirm. Need us now? Call 03 9584 1892.</div>
+  </form>
+</div></section>
+
+<footer><div class="wrap"><div>© 2026 Aztek Auto Electrical · 36 Balcombe Road, Mentone VIC 3194</div><div>Concept design by Swoop Sites</div></div></footer>
+<div class="callbar"><a href="tel:0395841892">📞 Call</a><a href="#book">Book now</a></div>
+</body>
+</html>

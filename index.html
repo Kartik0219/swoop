@@ -301,6 +301,18 @@
     .mbar{display:none}
     body{padding-bottom:0}
   }
+  .work-card{display:grid;gap:24px;margin-top:26px;background:#fff;border:1px solid rgba(15,34,56,.1);border-radius:20px;padding:22px}
+  .work-shot{border-radius:14px;background:linear-gradient(135deg,#0f2238,#0d9488);color:#fff;min-height:170px;display:flex;flex-direction:column;justify-content:flex-end;padding:18px}
+  .work-shot b{font-size:20px}.work-shot span{opacity:.8;font-size:14px}
+  .work-card h3{margin:0 0 6px}
+  @media(min-width:760px){.work-card{grid-template-columns:1fr 1.2fr;align-items:center}}
+  .cmp-wrap{overflow-x:auto;margin-top:24px;border-radius:16px;border:1px solid rgba(15,34,56,.12);background:#fff}
+  .cmp{width:100%;border-collapse:collapse;font-size:15px;min-width:520px}
+  .cmp th,.cmp td{padding:12px 14px;text-align:left;border-bottom:1px solid rgba(15,34,56,.08);vertical-align:top}
+  .cmp thead th{background:#0f2238;color:#fff;font-size:14px}
+  .cmp thead th:last-child{background:#0d9488}
+  .cmp td:last-child{font-weight:600;color:#0f2238;background:rgba(45,212,191,.08)}
+  .cmp tbody th{font-weight:600;color:#0f2238;width:30%}
 </style>
 </head>
 <body>
@@ -488,6 +500,27 @@
   </div>
 </section>
 
+<!-- RECENT WORK -->
+<section class="alt" id="work">
+  <div class="wrap">
+    <span class="kicker">Recent work</span>
+    <h2>A real website for a real local business</h2>
+    <div class="work-card">
+      <div class="work-shot" aria-hidden="true"><b>gavindefootball.com</b><span>Youth football academy &middot; Melbourne</span></div>
+      <div>
+        <h3>Gavin de Football</h3>
+        <p>Designed, built and launched a website for a youth football academy, built to turn social media traffic into sign-ups.</p>
+        <ul class="feat">
+          <li>Custom domain, DNS and HTTPS set up</li>
+          <li>Mobile-first design</li>
+          <li>Player registration and enquiry forms</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://gavindefootball.com" target="_blank" rel="noopener">Visit the site &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PRICING -->
 <section id="pricing">
   <div class="wrap">
@@ -522,7 +555,7 @@
         <h3>Business</h3>
         <p class="for">A lower upfront cost, with your site looked after every month.</p>
         <div class="amt">$490 <small>build</small></div>
-        <p class="amt-note"><b style="color:var(--ink)">+ Care Plus $179/mo</b> on a 12-month plan</p>
+        <p class="amt-note"><b style="color:var(--ink)">+ Care Plus $129/mo</b>. 6-month minimum, then month-to-month</p>
         <ul class="feat">
           <li>Everything in Starter</li>
           <li>Online booking or quote form</li>
@@ -567,7 +600,7 @@
         </ul>
       </div>
       <div class="care" style="border:2px solid var(--teal)">
-        <div class="top"><h4>Care Plus</h4><span class="p">$179<small>/mo</small></span></div>
+        <div class="top"><h4>Care Plus</h4><span class="p">$129<small>/mo</small></span></div>
         <ul class="feat">
           <li>Everything in Basic</li>
           <li>Monthly security check &amp; report</li>
@@ -599,8 +632,32 @@
 
     <div class="price-notes">
       <span>Prices in AUD.</span>
+      <span><b>See it before you pay:</b> you get a free design first, and you only pay a deposit once you've seen it and you're happy with it.</span>
+      <span><b>No long lock-in:</b> care plans have a 6-month minimum, then they're month-to-month. Cancel any time after that with 30 days' notice.</span>
       <span>Payment: 50% deposit to start, 50% when your site goes live. Care plans are billed monthly from launch.</span>
       <span>Domain registration is in your name and paid directly to the registrar.</span>
+    </div>
+  </div>
+</section>
+
+<!-- DIY vs SWOOP -->
+<section class="cream" id="compare">
+  <div class="wrap">
+    <span class="kicker">Why not just use Wix?</span>
+    <h2>Do it yourself, or have it done for you</h2>
+    <p class="lead">Website builders are great if you have the time. Most business owners don't. Here's the honest difference.</p>
+    <div class="cmp-wrap">
+      <table class="cmp">
+        <thead><tr><th></th><th>Website builder (DIY)</th><th>Swoop Sites</th></tr></thead>
+        <tbody>
+          <tr><th>Who builds it</th><td>You, after hours</td><td>Done for you, words included</td></tr>
+          <tr><th>Who makes changes</th><td>You</td><td>Email me, done</td></tr>
+          <tr><th>Security checks &amp; backups</th><td>Up to you to remember</td><td>Every month, included</td></tr>
+          <tr><th>Email protection (SPF, DKIM, DMARC)</th><td>Not included</td><td>Set up for you</td></tr>
+          <tr><th>Who you talk to</th><td>Support tickets</td><td>Me, a local in Noble Park</td></tr>
+          <tr><th>Monthly cost</th><td>About $30 to $40 a month, plus your time</td><td>$129 a month, none of your time</td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
@@ -614,7 +671,7 @@
     <ol class="steps">
       <li class="hl"><h3>Free homepage mockup <span class="when">Free</span></h3><p>Email me your business name and current website (if you have one). I'll design a homepage mockup so you can see what your new site could look like.</p></li>
       <li><h3>You say yes</h3><p>If you like it, reply "yes". I'll send a short one-page summary with the package, fixed price, timeline and what I'll need from you.</p></li>
-      <li><h3>50% deposit</h3><p>Pay half to get started, by bank transfer.</p></li>
+      <li><h3>50% deposit</h3><p>Only once you've seen the design and you're happy with it. Pay half to get started, by bank transfer.</p></li>
       <li><h3>Send your logo &amp; photos</h3><p>Your logo (if you have one), 5 to 10 photos, and anything you'd like changed from the mockup. No logo or photos? We'll work something out.</p></li>
       <li><h3>Build + private preview</h3><p>I write the words, build the site and send you a private preview link to check on your own phone.</p></li>
       <li><h3>Up to 2 rounds of changes</h3><p>Tell me what you'd like changed, by email. Up to two rounds of changes are included.</p></li>
@@ -664,7 +721,7 @@
       </details>
       <details>
         <summary>What happens if I cancel my care plan?</summary>
-        <div class="ans"><p>You keep your domain and your content. I'll give you your site files and help you move it to hosting of your choice. From then on, hosting, updates, backups and security are up to you.</p><p>The Business package's lower $490 build price comes with a 12-month Care Plus plan. After the 12 months, you can keep going, switch plans or stop.</p></div>
+        <div class="ans"><p>You keep your domain and your content. I'll give you your site files and help you move it to hosting of your choice. From then on, hosting, updates, backups and security are up to you.</p><p>The Business package's lower $490 build price comes with Care Plus for a minimum of 6 months. After that it's month-to-month: keep going, switch plans, or stop with 30 days' notice.</p></div>
       </details>
       <details>
         <summary>How much does hosting cost?</summary>
@@ -697,6 +754,7 @@
         <div><dt>Based in</dt><dd>Noble Park, VIC</dd></div>
         <div><dt>Study</dt><dd>Master of Cybersecurity, La Trobe University<br>Bachelor of IT, RMIT</dd></div>
         <div><dt>Contact</dt><dd><a href="mailto:Kartikp.work@gmail.com">Kartikp.work@gmail.com</a></dd></div>
+        <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/kartikp19" target="_blank" rel="noopener">linkedin.com/in/kartikp19</a></dd></div>
       </dl>
     </div>
     <div class="about-text">
@@ -705,6 +763,7 @@
       <p>I'm a web developer based in Noble Park, with a Master of Cybersecurity from La Trobe University. I build and look after websites for local businesses in south-east Melbourne.</p>
       <p>I started Swoop Sites because so many great local businesses are hard to find online, or are stuck with websites that are slow, outdated or showing "Not secure". Those are fixable problems, and fixing them properly is something I genuinely enjoy.</p>
       <p>I build every site myself and look after it myself. When you email, you get me, not a call centre or a ticket number. I keep things simple, explain them in plain English, and tell you honestly if something isn't worth doing.</p>
+      <p><a href="https://www.linkedin.com/in/kartikp19" target="_blank" rel="noopener">See my background on LinkedIn &rarr;</a></p>
     </div>
   </div>
 </section>

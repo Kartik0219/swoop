@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ormond Tyre &amp; Service Centre | Mechanic, Tyres &amp; Roadworthies, Murrumbeena (concept)</title>
+<meta name="description" content="Family-owned mechanic in Murrumbeena since 1997. Logbook servicing, roadworthy certificates, tyres, wheel alignments and general mechanical repairs. Free replacement cars. Call Adam on 0429 224 831.">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#16181c; --coal:#1f2329; --coal2:#2a2f37; --yel:#ffc629; --red:#d7322b; --sub:#5d6470; --line:#e3e5e9; --bg:#f4f4f2; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { overflow-x: clip; }
+  body { font-family: Inter, system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  .concept { background: #000; color: #ddd; font-size: 13px; text-align: center; padding: 8px 16px; }
+  .concept b { color: var(--yel); }
+  .top { background: var(--yel); color: var(--ink); font-size: 13px; font-weight: 700; }
+  .top .wrap { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; padding-top: 7px; padding-bottom: 7px; }
+  header { background: var(--coal); color: #fff; position: sticky; top: 0; z-index: 10; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 70px; gap: 14px; }
+  .logo { display: flex; align-items: center; gap: 12px; font-family: Oswald, sans-serif; font-weight: 700; font-size: 20px; line-height: 1.05; text-transform: uppercase; }
+  .logo small { display: block; font-family: Inter, sans-serif; font-size: 11px; letter-spacing: .14em; color: var(--yel); font-weight: 700; }
+  .tyre { width: 40px; height: 40px; flex: 0 0 40px; }
+  nav { display: flex; gap: 24px; font-size: 15px; font-weight: 600; color: #c4c9d1; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--yel); color: var(--ink); font-weight: 800; padding: 13px 22px; border-radius: 6px; font-size: 15px; border: 0; cursor: pointer; font-family: inherit; }
+  .btn.o { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,.4); }
+  .btn.d { background: var(--coal); color: #fff; }
+  .hero { background: repeating-linear-gradient(135deg, var(--coal) 0 22px, #22262d 22px 44px); color: #fff; }
+  .hero .wrap { display: grid; grid-template-columns: 1.25fr 1fr; gap: 40px; align-items: center; padding-top: 64px; padding-bottom: 72px; }
+  .pill { display: inline-block; background: var(--red); color: #fff; font-weight: 800; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; padding: 6px 12px; border-radius: 4px; }
+  h1 { font-family: Oswald, sans-serif; font-size: 58px; line-height: 1.02; text-transform: uppercase; margin: 16px 0; }
+  h1 span { color: var(--yel); }
+  .hero p { color: #c4c9d1; font-size: 18px; max-width: 540px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+  .card { background: #fff; color: var(--ink); border-radius: 12px; padding: 24px; box-shadow: 0 24px 50px rgba(0,0,0,.35); border-top: 6px solid var(--yel); }
+  .card h3 { font-family: Oswald, sans-serif; font-size: 22px; text-transform: uppercase; }
+  .card table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 15px; }
+  .card td { padding: 9px 0; border-bottom: 1px solid var(--line); }
+  .card td:last-child { text-align: right; font-weight: 700; }
+  .card .closed { color: var(--red); }
+  .strip { background: var(--yel); }
+  .strip .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; padding-top: 16px; padding-bottom: 16px; font-weight: 800; font-size: 14px; }
+  section { padding: 76px 0; }
+  .kick { color: var(--red); font-weight: 800; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; }
+  h2 { font-family: Oswald, sans-serif; font-size: 40px; line-height: 1.08; text-transform: uppercase; margin-top: 6px; }
+  .lead { color: var(--sub); font-size: 17px; margin-top: 10px; max-width: 680px; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 34px; }
+  .svc { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 24px; position: relative; overflow: hidden; }
+  .svc::after { content: ""; position: absolute; right: -30px; top: -30px; width: 90px; height: 90px; border-radius: 50%; border: 14px solid #f1f2f4; }
+  .svc .ic { font-size: 28px; }
+  .svc h3 { font-size: 19px; font-weight: 800; margin: 10px 0 4px; }
+  .svc p { color: var(--sub); font-size: 15px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+  .chips span { background: #fff; border: 1px solid var(--line); border-radius: 30px; padding: 8px 15px; font-weight: 700; font-size: 14px; }
+  .loan { background: var(--coal); color: #fff; }
+  .loan .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  .loan p { color: #c4c9d1; font-size: 17px; margin-top: 10px; }
+  .loan .kick { color: var(--yel); }
+  .big { font-family: Oswald, sans-serif; font-size: 96px; line-height: 1; color: var(--yel); }
+  .stat { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .stat div { background: var(--coal2); border-radius: 12px; padding: 22px; }
+  .stat b { display: block; font-family: Oswald, sans-serif; font-size: 34px; color: var(--yel); }
+  .quotes { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 30px; }
+  .q { background: #fff; border-left: 5px solid var(--yel); border-radius: 10px; padding: 22px; font-size: 16px; }
+  .q b { display: block; margin-top: 10px; font-size: 14px; }
+  .book { background: #e9eaec; }
+  .book .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
+  .info { margin-top: 18px; font-size: 16px; }
+  .info div { padding: 10px 0; border-bottom: 1px solid #cfd2d7; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  .info div span:last-child { font-weight: 700; text-align: right; }
+  form { background: #fff; border-radius: 14px; padding: 26px; border: 1px solid var(--line); }
+  form h3 { font-family: Oswald, sans-serif; font-size: 24px; text-transform: uppercase; }
+  input, select, textarea { width: 100%; padding: 12px; margin-top: 10px; border: 1px solid var(--line); border-radius: 8px; font: inherit; background: var(--bg); }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  form .btn { width: 100%; margin-top: 14px; }
+  .thanks { display: none; text-align: center; padding: 40px 10px; }
+  .thanks b { display: block; font-family: Oswald, sans-serif; font-size: 26px; text-transform: uppercase; margin-bottom: 6px; }
+  footer { background: var(--ink); color: #9aa1ac; padding: 30px 0; font-size: 14px; }
+  footer .wrap { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+  .callbar { display: none; }
+  @media (max-width: 880px) {
+    nav, header .btn { display: none; }
+    .hero .wrap, .loan .wrap, .book .wrap { grid-template-columns: 1fr; }
+    .hero .wrap { padding-top: 40px; padding-bottom: 50px; }
+    h1 { font-size: 42px; } h2 { font-size: 30px; } .big { font-size: 72px; }
+    .grid { grid-template-columns: 1fr 1fr; }
+    .strip .wrap { grid-template-columns: 1fr 1fr; }
+    .quotes { grid-template-columns: 1fr; }
+    section { padding: 54px 0; }
+    .callbar { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; }
+    .callbar a { flex: 1; text-align: center; padding: 15px; font-weight: 800; }
+    .callbar a:first-child { background: var(--yel); color: var(--ink); }
+    .callbar a:last-child { background: var(--coal); color: #fff; }
+    footer { padding-bottom: 80px; }
+  }
+  @media (max-width: 520px) { .grid, .two { grid-template-columns: 1fr; } .logo { font-size: 17px; } }
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Ormond Tyre &amp; Service Centre. This is a design preview, not the live website.</div>
+<div class="top"><div class="wrap"><span>Mon to Thu 7:30am to 4:30pm · Fri by appointment</span><a href="tel:0429224831">📞 0429 224 831</a></div></div>
+<header><div class="wrap">
+  <div class="logo">
+    <svg class="tyre" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#111" stroke="#ffc629" stroke-width="3"/><circle cx="20" cy="20" r="8" fill="#2a2f37" stroke="#ffc629" stroke-width="2"/><g stroke="#ffc629" stroke-width="2"><path d="M20 4v6M20 30v6M4 20h6M30 20h6"/></g></svg>
+    <div>Ormond Tyre &amp; Service<small>Centre · Murrumbeena</small></div>
+  </div>
+  <nav><a href="#services">Services</a><a href="#about">About</a><a href="#book">Book</a><a href="#contact">Contact</a></nav>
+  <a class="btn" href="tel:0429224831">📞 Call Adam</a>
+</div></header>
+
+<section class="hero" style="padding:0"><div class="wrap">
+  <div>
+    <span class="pill">Since October 1997</span>
+    <h1>Your car is in <span>good hands</span> with us</h1>
+    <p>Logbook servicing, roadworthy certificates, tyres and general mechanical repairs on North Road, Murrumbeena. Still owned and operated by Adam Beitner, and we'll give you a replacement car at no cost while yours is in the workshop.</p>
+    <div class="cta"><a class="btn" href="tel:0429224831">📞 Call 0429 224 831</a><a class="btn o" href="#book">Book a service</a></div>
+  </div>
+  <div class="card">
+    <h3>Workshop hours</h3>
+    <table>
+      <tr><td>Monday to Thursday</td><td>7:30am to 4:30pm</td></tr>
+      <tr><td>Friday</td><td>By appointment</td></tr>
+      <tr><td>Saturday &amp; Sunday</td><td class="closed">Closed</td></tr>
+    </table>
+    <p style="margin-top:14px;font-size:14px;color:var(--sub)">23/993 North Road, Murrumbeena VIC 3163</p>
+  </div>
+</div></section>
+
+<div class="strip"><div class="wrap">
+  <div>✓ Est. October 1997</div><div>✓ Free replacement cars</div><div>✓ Premium &amp; budget tyres</div><div>✓ Roadworthy certificates</div>
+</div></div>
+
+<section id="services"><div class="wrap">
+  <div class="kick">What we do</div>
+  <h2>One-stop automotive repair shop</h2>
+  <p class="lead">From your new car's logbook service to tyres, alignments and roadworthies, it's all done in one workshop.</p>
+  <div class="grid">
+    <div class="svc"><div class="ic">📘</div><h3>Logbook servicing</h3><p>Serviced to the vehicle manufacturer's specifications, so you keep your new car warranty and your car stays safe.</p></div>
+    <div class="svc"><div class="ic">✅</div><h3>Roadworthy certificates</h3><p>For selling a car, re-registering a used vehicle or clearing a Vehicle Defect Notice. Done by a licensed vehicle tester.</p></div>
+    <div class="svc"><div class="ic">🔧</div><h3>General mechanical</h3><p>Simple preventive checks and repairs that extend the life of your car and keep it running safely.</p></div>
+    <div class="svc"><div class="ic">🛞</div><h3>Tyres</h3><p>A range of premium and budget tyre brands to suit all makes and models.</p></div>
+    <div class="svc"><div class="ic">📐</div><h3>Wheel alignments</h3><p>Straight steering and even tyre wear. Pair it with new tyres in the same visit.</p></div>
+    <div class="svc"><div class="ic">🔍</div><h3>Pre-purchase inspections</h3><p>Buying a used car? Have it checked over before you hand over the money.</p></div>
+  </div>
+  <div class="chips"><span>Timing belts</span><span>Fuel injection cleaning</span><span>Steering &amp; suspension</span><span>Auto electrical repairs</span><span>Puncture repairs</span></div>
+</div></section>
+
+<section class="loan" id="about"><div class="wrap">
+  <div>
+    <div class="kick">About us</div>
+    <h2>Same owner, same workshop, since 1997</h2>
+    <p>Ormond Tyre &amp; Service Centre was established in October 1997 and is still owned and operated by Adam Beitner. We try to make your experience as easy as possible, which is why we offer replacement cars at no cost to you, so you can get on with your day hassle free.</p>
+  </div>
+  <div class="stat">
+    <div><b>1997</b>Established</div>
+    <div><b>$0</b>Replacement car</div>
+    <div><b>1</b>Owner, Adam</div>
+    <div><b>Mon–Thu</b>7:30 to 4:30</div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="kick">From our customers</div>
+  <h2>Trusted for decades</h2>
+  <div class="quotes">
+    <div class="q">"Always great service. Honest and a caring owner. Been customers over 20 years. Wouldn't go anywhere else."<b>Judith Lea</b></div>
+    <div class="q">"When you are sick you go to your doctor, and when your car is not functioning at its best you take it to Adam at Ormond Tyre &amp; Service Centre."<b>John Balzan</b></div>
+  </div>
+</div></section>
+
+<section class="book" id="book"><div class="wrap">
+  <div id="contact">
+    <div class="kick">Contact</div>
+    <h2>Book your car in</h2>
+    <p class="lead">Send a request and Adam will call you back to confirm a time. Or just ring, it's quickest.</p>
+    <div class="info">
+      <div><span>Phone</span><span><a href="tel:0429224831">0429 224 831</a></span></div>
+      <div><span>Email</span><span><a href="mailto:ormondservice@gmail.com">ormondservice@gmail.com</a></span></div>
+      <div><span>Address</span><span>23/993 North Road, Murrumbeena VIC 3163</span></div>
+      <div><span>Hours</span><span>Mon–Thu 7:30am–4:30pm, Fri by appointment</span></div>
+    </div>
+  </div>
+  <form onsubmit="event.preventDefault();this.querySelector('.fields').style.display='none';this.querySelector('.thanks').style.display='block'">
+    <div class="fields">
+      <h3>Booking request</h3>
+      <select><option>Logbook service</option><option>Roadworthy certificate</option><option>Tyres</option><option>Wheel alignment</option><option>General mechanical repair</option><option>Pre-purchase inspection</option><option>Something else</option></select>
+      <div class="two"><input placeholder="Your name" required><input placeholder="Mobile" type="tel" required></div>
+      <div class="two"><input placeholder="Car make &amp; model"><input placeholder="Rego (optional)"></div>
+      <textarea rows="3" placeholder="Preferred day, and anything we should know"></textarea>
+      <label style="display:flex;gap:8px;align-items:center;margin-top:10px;font-size:14px"><input type="checkbox" style="width:auto;margin:0"> I'd like a free replacement car</label>
+      <button class="btn d" type="submit">Send booking request</button>
+    </div>
+    <div class="thanks"><b>Thanks, request received!</b>We'll call you to confirm a time. Need it sooner? Call 0429 224 831.</div>
+  </form>
+</div></section>
+
+<footer><div class="wrap"><div>© 2026 Ormond Tyre &amp; Service Centre · 23/993 North Road, Murrumbeena VIC 3163</div><div>Concept design by Swoop Sites</div></div></footer>
+<div class="callbar"><a href="tel:0429224831">📞 Call Adam</a><a href="#book">Book a service</a></div>
+</body>
+</html>
