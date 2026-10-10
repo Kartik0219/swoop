@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Drowell Blinds | Custom Blinds &amp; Awnings, Dandenong South (concept)</title>
+<meta name="description" content="Custom made blinds and awnings from Dandenong South. Roller, blockout, double roller, vertical and roman blinds, panel glides and awnings, with a 5 year warranty.">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#22201d; --char:#2e2a26; --brass:#b88a4a; --brass2:#9c723a; --linen:#f7f3ec; --stone:#e9e2d6; --sub:#6b645b; --line:#e6dfd3; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Manrope, system-ui, sans-serif; color: var(--ink); line-height: 1.6; background: #fff; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  .concept { background: #111; color: #ddd; font-size: 13px; text-align: center; padding: 8px 16px; }
+  .concept b { color: #e2bd85; }
+  .top { background: var(--char); color: #c9bfb1; font-size: 13px; }
+  .top .wrap { display: flex; justify-content: space-between; padding: 8px 20px; gap: 12px; flex-wrap: wrap; }
+  header { background: #fff; border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 10; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 74px; }
+  .logo { font-family: "Cormorant Garamond", serif; font-weight: 700; font-size: 30px; letter-spacing: .02em; line-height: 1; }
+  .logo small { display: block; font-family: Manrope, sans-serif; font-size: 10px; letter-spacing: .32em; color: var(--brass2); font-weight: 800; margin-top: 4px; }
+  nav { display: flex; gap: 28px; font-size: 15px; font-weight: 600; color: #3d3833; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; background: var(--brass); color: #fff; font-weight: 700; padding: 13px 24px; border-radius: 4px; font-size: 15px; white-space: nowrap; border: 0; cursor: pointer; font-family: inherit; letter-spacing: .02em; }
+  .btn.dark { background: var(--char); }
+  .btn.line { background: transparent; color: var(--ink); border: 1.5px solid var(--ink); }
+  .hero { background: var(--linen); padding: 0; overflow: hidden; }
+  .hero .wrap { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center; min-height: 540px; }
+  .eyebrow { color: var(--brass2); font-weight: 800; font-size: 12px; letter-spacing: .22em; text-transform: uppercase; }
+  .hero h1 { font-family: "Cormorant Garamond", serif; font-size: 64px; line-height: 1.02; margin: 16px 0; font-weight: 700; }
+  .hero h1 em { color: var(--brass2); }
+  .hero p { color: var(--sub); font-size: 18px; max-width: 520px; }
+  .cta { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
+  .facts { display: flex; gap: 28px; margin-top: 34px; flex-wrap: wrap; }
+  .facts div b { display: block; font-family: "Cormorant Garamond", serif; font-size: 34px; line-height: 1; }
+  .facts div span { color: var(--sub); font-size: 13px; font-weight: 600; }
+  /* window with blinds, pure CSS */
+  .window { position: relative; height: 440px; border-radius: 6px; background: linear-gradient(180deg,#bfd9ea 0%,#e7f1f6 60%,#cfe2c6 100%); border: 14px solid #fff; box-shadow: 0 30px 60px rgba(46,42,38,.18); overflow: hidden; }
+  .window::before { content: ""; position: absolute; left: 50%; top: 0; bottom: 0; width: 12px; margin-left: -6px; background: #fff; z-index: 2; }
+  .slats { position: absolute; left: 0; right: 0; top: 0; height: 62%; background: repeating-linear-gradient(180deg,#efe7da 0 16px,#d9cdb9 16px 18px); box-shadow: 0 6px 12px rgba(0,0,0,.12); z-index: 1; }
+  .slats::after { content: ""; position: absolute; left: 0; right: 0; bottom: -10px; height: 12px; background: var(--brass); }
+  .sun { position: absolute; right: 40px; bottom: 60px; width: 70px; height: 70px; border-radius: 50%; background: radial-gradient(circle,#ffe8a6,#f7c55c); }
+  section { padding: 84px 0; }
+  .kicker { color: var(--brass2); font-weight: 800; font-size: 12px; letter-spacing: .22em; text-transform: uppercase; }
+  h2 { font-family: "Cormorant Garamond", serif; font-size: 46px; line-height: 1.05; margin-top: 8px; }
+  .lead { color: var(--sub); font-size: 17px; margin-top: 10px; max-width: 640px; }
+  .grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; margin-top: 38px; }
+  .p { background: #fff; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+  .p .sw { height: 130px; }
+  .p .b { padding: 20px; }
+  .p h3 { font-size: 18px; }
+  .p p { color: var(--sub); font-size: 14px; margin-top: 4px; }
+  .sw1 { background: repeating-linear-gradient(90deg,#e9e2d6 0 22px,#d6cbb8 22px 24px); }
+  .sw2 { background: linear-gradient(180deg,#d9cdb9 0 70%,#b88a4a 70% 74%,#f1ece3 74%); }
+  .sw3 { background: linear-gradient(180deg,#2e2a26 0 75%,#b88a4a 75% 79%,#e9e2d6 79%); }
+  .sw4 { background: repeating-linear-gradient(180deg,#efe7da 0 18px,rgba(239,231,218,.45) 18px 30px); background-color: #cfe2ea; }
+  .sw5 { background: repeating-linear-gradient(180deg,#e2d6c2 0 26px,#cdbfa7 26px 30px); }
+  .sw6 { background: linear-gradient(90deg,#efe7da 0 30%,#e2d6c2 30% 32%,#efe7da 32% 64%,#e2d6c2 64% 66%,#efe7da 66%); }
+  .sw7 { background: repeating-linear-gradient(90deg,#2e2a26 0 26px,#b88a4a 26px 52px); clip-path: polygon(0 0,100% 0,92% 100%,8% 100%); }
+  .sw8 { background: repeating-linear-gradient(180deg,#fff 0 10px,#e9e2d6 10px 12px); }
+  .sw9 { background: repeating-linear-gradient(90deg,#d9c6aa 0 14px,#c8b393 14px 28px); }
+  .split { background: var(--char); color: #fff; }
+  .split .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .card { border: 1px solid rgba(255,255,255,.14); border-radius: 6px; padding: 30px; }
+  .card .ic { font-size: 30px; }
+  .card h3 { font-family: "Cormorant Garamond", serif; font-size: 32px; margin-top: 8px; }
+  .card p { color: #cbbfae; margin-top: 6px; }
+  .steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; margin-top: 36px; }
+  .step { background: var(--linen); border-radius: 6px; padding: 26px; }
+  .step .n { font-family: "Cormorant Garamond", serif; font-size: 44px; color: var(--brass); line-height: 1; }
+  .step h3 { margin-top: 6px; }
+  .step p { color: var(--sub); font-size: 15px; margin-top: 4px; }
+  .contact { background: var(--linen); }
+  .contact .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; }
+  .contact table { width: 100%; border-collapse: collapse; margin-top: 18px; }
+  .contact td { padding: 12px 0; border-bottom: 1px solid var(--line); color: var(--sub); }
+  .contact td:last-child { text-align: right; color: var(--ink); font-weight: 700; }
+  .q { background: #fff; border-radius: 6px; padding: 28px; box-shadow: 0 20px 40px rgba(46,42,38,.08); }
+  .q h3 { font-family: "Cormorant Garamond", serif; font-size: 30px; }
+  .q p.small { color: var(--sub); font-size: 14px; }
+  .q input, .q select, .q textarea { width: 100%; padding: 12px; margin-top: 10px; border-radius: 4px; border: 1px solid var(--line); background: var(--linen); font: inherit; color: var(--ink); }
+  .q .row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .q .btn { width: 100%; justify-content: center; margin-top: 14px; }
+  .thanks { display: none; text-align: center; padding: 40px 6px; }
+  .thanks .big { font-size: 44px; }
+  .thanks p { color: var(--sub); margin-top: 6px; }
+  .q.done .fields { display: none; } .q.done .thanks { display: block; }
+  footer { background: #1b1916; color: #8d847a; font-size: 14px; padding: 30px 0; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .callbar { display: none; }
+  @media (max-width: 900px) {
+    nav, header .btn { display: none; }
+    .hero .wrap, .split .wrap, .contact .wrap { grid-template-columns: 1fr; }
+    .hero .wrap { padding-top: 50px; padding-bottom: 50px; min-height: 0; }
+    .window { height: 280px; }
+    .hero h1 { font-size: 44px; }
+    .grid, .steps { grid-template-columns: 1fr 1fr; }
+    section { padding: 56px 0; }
+    h2 { font-size: 36px; }
+    .callbar { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 20; }
+    .callbar a { flex: 1; text-align: center; padding: 15px; font-weight: 700; }
+    .callbar a:first-child { background: var(--char); color: #fff; } .callbar a:last-child { background: var(--brass); color: #fff; }
+    footer { padding-bottom: 80px; }
+  }
+  @media (max-width: 540px) { .grid, .steps, .q .row { grid-template-columns: 1fr; } .hero h1 { font-size: 38px; } }
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Drowell Blinds. This is a design preview, not the live website.</div>
+<div class="top"><div class="wrap"><span>6/21 Johnston Ct, Dandenong South VIC 3175</span><span>Australian owned and operated</span></div></div>
+<header><div class="wrap">
+  <div class="logo">Drowell<small>BLINDS &amp; AWNINGS</small></div>
+  <nav><a href="#products">Blinds</a><a href="#how">How it works</a><a href="#contact">Contact</a></nav>
+  <a class="btn dark" href="tel:1300883202">Call 1300 883 202</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <div class="eyebrow">Custom blinds &amp; awnings · Melbourne</div>
+    <h1>Blinds made to fit <em>your</em> windows, not the other way round.</h1>
+    <p>We measure, make and fit custom blinds and awnings for homes and businesses, with indoor, outdoor and motorised options. Over 20 years in the blinds business, based in Dandenong South.</p>
+    <div class="cta"><a class="btn" href="#quote">Request a free measure &amp; quote</a><a class="btn line" href="tel:1300883202">Call now</a></div>
+    <div class="facts">
+      <div><b>20+</b><span>Years of experience</span></div>
+      <div><b>5 yr</b><span>Warranty</span></div>
+      <div><b>🇦🇺</b><span>Australian owned</span></div>
+    </div>
+  </div>
+  <div class="window" aria-hidden="true"><div class="slats"></div><div class="sun"></div></div>
+</div></section>
+
+<section id="products"><div class="wrap">
+  <div class="kicker">Our range</div>
+  <h2>Find the right blind for every room</h2>
+  <p class="lead">Every blind is made to measure, so it fits properly and looks the part.</p>
+  <div class="grid">
+    <div class="p"><div class="sw sw2"></div><div class="b"><h3>Roller blinds</h3><p>Clean, simple and easy to use.</p></div></div>
+    <div class="p"><div class="sw sw3"></div><div class="b"><h3>Blockout blinds</h3><p>Keep the light out of bedrooms and media rooms.</p></div></div>
+    <div class="p"><div class="sw sw4"></div><div class="b"><h3>Double roller blinds</h3><p>Two blinds in one for day and night.</p></div></div>
+    <div class="p"><div class="sw sw1"></div><div class="b"><h3>Vertical blinds</h3><p>A practical choice for wide windows and doors.</p></div></div>
+    <div class="p"><div class="sw sw5"></div><div class="b"><h3>Roman blinds</h3><p>Soft folds for a classic look.</p></div></div>
+    <div class="p"><div class="sw sw6"></div><div class="b"><h3>Panel glides</h3><p>Sliding panels for large openings.</p></div></div>
+    <div class="p"><div class="sw sw7"></div><div class="b"><h3>Awnings</h3><p>Outdoor shade for windows and outdoor areas.</p></div></div>
+    <div class="p"><div class="sw sw8"></div><div class="b"><h3>Shutters</h3><p>Ask us about shutters for your home.</p></div></div>
+    <div class="p"><div class="sw sw9"></div><div class="b"><h3>Curtains</h3><p>Ask us about curtains to suit your space.</p></div></div>
+  </div>
+</div></section>
+
+<section class="split"><div class="wrap">
+  <div class="card"><div class="ic">🏠</div><h3>Residential</h3><p>Custom blinds, awnings and shades for every room of your home.</p></div>
+  <div class="card"><div class="ic">🏢</div><h3>Commercial</h3><p>Blinds for offices and commercial spaces, with Green Star building requirements in mind.</p></div>
+</div></section>
+
+<section id="how"><div class="wrap">
+  <div class="kicker">How it works</div>
+  <h2>Simple from start to finish</h2>
+  <div class="steps">
+    <div class="step"><div class="n">01</div><h3>Measure &amp; quote</h3><p>We measure your windows and give you a free quote.</p></div>
+    <div class="step"><div class="n">02</div><h3>Made to measure</h3><p>Your blinds are made to fit your exact sizes.</p></div>
+    <div class="step"><div class="n">03</div><h3>Expert installation</h3><p>We fit them for you, backed by a 5 year warranty.</p></div>
+  </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <div>
+    <div class="kicker">Visit or call</div>
+    <h2>6/21 Johnston Ct, Dandenong South</h2>
+    <table>
+      <tr><td>Phone</td><td><a href="tel:1300883202">1300 883 202</a></td></tr>
+      <tr><td>Phone</td><td><a href="tel:0397925044">03 9792 5044</a></td></tr>
+      <tr><td>Hours</td><td>Monday to Friday from 9am</td></tr>
+    </table>
+  </div>
+  <form class="q" id="quote" onsubmit="event.preventDefault();this.classList.add('done')">
+    <div class="fields">
+      <h3>Free measure &amp; quote</h3>
+      <p class="small">Tell us what you're after and we'll call to book a time.</p>
+      <select><option>Roller blinds</option><option>Blockout blinds</option><option>Double roller blinds</option><option>Vertical blinds</option><option>Roman blinds</option><option>Panel glides</option><option>Awnings</option><option>Shutters</option><option>Curtains</option><option>Not sure yet</option></select>
+      <div class="row"><input placeholder="Your name" required><input placeholder="Mobile" type="tel" required></div>
+      <div class="row"><input placeholder="Suburb"><input placeholder="No. of windows"></div>
+      <textarea rows="2" placeholder="Anything else? (rooms, colours, motorised)"></textarea>
+      <button class="btn" type="submit">Request my free quote</button>
+    </div>
+    <div class="thanks"><div class="big">🪟</div><h3>Thanks, request received!</h3><p>We'll call you to book your measure and quote.</p></div>
+  </form>
+</div></section>
+
+<footer><div class="wrap"><div>© 2026 Drowell Blinds · Dandenong South VIC</div><div>Concept design by Swoop Sites</div></div></footer>
+<div class="callbar"><a href="tel:1300883202">📞 Call</a><a href="#quote">Free quote</a></div>
+</body>
+</html>
