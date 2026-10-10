@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Heart to Heart Florists | Same-Day Flower Delivery, Noble Park (concept)</title>
+<meta name="description" content="Family-owned florist in Noble Park since 2000. Bouquets, roses, hatboxes, sympathy and funeral flowers. Order by 1pm for same-day delivery.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --rose:#c2185b; --blush:#fde8ef; --plum:#4a1530; --ink:#2b1a22; --sub:#7a6470; --line:#f1dfe6; --cream:#fffafb; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Inter, system-ui, sans-serif; color: var(--ink); background: var(--cream); line-height: 1.55; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  .concept { background: #111; color: #ddd; font-size: 13px; text-align: center; padding: 8px 16px; }
+  .concept b { color: #ff8fb8; }
+  .ribbon { background: var(--plum); color: #fbd3e2; text-align: center; font-size: 14px; font-weight: 600; padding: 9px 16px; }
+  .ribbon b { color: #fff; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 76px; }
+  .logo { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: var(--plum); }
+  .logo span { color: var(--rose); }
+  nav { display: flex; gap: 24px; font-size: 15px; color: var(--sub); font-weight: 500; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--rose); color: #fff; font-weight: 700; padding: 13px 24px; border-radius: 40px; font-size: 15px; white-space: nowrap; border: 0; font-family: inherit; cursor: pointer; }
+  .btn.o { background: #fff; color: var(--plum); border: 1.5px solid var(--line); }
+  .hero .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; padding: 40px 20px 70px; }
+  .eyebrow { color: var(--rose); font-weight: 700; letter-spacing: .14em; font-size: 13px; text-transform: uppercase; }
+  h1 { font-family: 'Playfair Display', serif; font-size: 58px; line-height: 1.04; color: var(--plum); margin: 14px 0 16px; }
+  h1 em { color: var(--rose); font-style: italic; }
+  .hero p { color: var(--sub); font-size: 18px; max-width: 480px; }
+  .cta { display: flex; gap: 12px; margin-top: 26px; flex-wrap: wrap; }
+  .bloom { aspect-ratio: 4/5; border-radius: 200px 200px 24px 24px; background: radial-gradient(circle at 30% 30%,#ffd1e0 0 12%,transparent 13%), radial-gradient(circle at 65% 40%,#ff9ec0 0 14%,transparent 15%), radial-gradient(circle at 45% 60%,#e64a85 0 15%,transparent 16%), radial-gradient(circle at 70% 70%,#ffc2d6 0 11%,transparent 12%), radial-gradient(circle at 28% 72%,#f77fa8 0 10%,transparent 11%), linear-gradient(180deg,#fbe3eb,#f4c6d6); position: relative; max-width: 440px; width: 100%; margin: 0 auto; box-shadow: 0 30px 60px rgba(74,21,48,.18); }
+  .bloom .tag { position: absolute; bottom: 22px; left: -18px; background: #fff; border-radius: 16px; padding: 12px 16px; box-shadow: 0 12px 30px rgba(0,0,0,.12); font-size: 14px; font-weight: 600; }
+  .bloom .tag b { display: block; font-size: 20px; color: var(--plum); }
+  section { padding: 70px 0; }
+  h2 { font-family: 'Playfair Display', serif; font-size: 40px; color: var(--plum); line-height: 1.1; }
+  .lead { color: var(--sub); font-size: 17px; margin-top: 10px; }
+  .occ { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 24px; }
+  .occ a { background: #fff; border: 1px solid var(--line); border-radius: 30px; padding: 10px 18px; font-weight: 600; font-size: 15px; }
+  .occ a:hover { border-color: var(--rose); color: var(--rose); }
+  .shop { display: grid; grid-template-columns: repeat(4,1fr); gap: 18px; margin-top: 30px; }
+  .p { background: #fff; border-radius: 18px; overflow: hidden; border: 1px solid var(--line); }
+  .p .img { aspect-ratio: 1; }
+  .p .b { padding: 14px 16px 18px; }
+  .p h3 { font-size: 16px; }
+  .p .pr { color: var(--rose); font-weight: 700; margin-top: 2px; }
+  .p .btn { width: 100%; margin-top: 12px; padding: 10px; font-size: 14px; }
+  .i1 { background: radial-gradient(circle at 50% 45%,#ff6f9c 0 22%,#ffb3c9 23% 40%,#fde8ef 41%); }
+  .i2 { background: radial-gradient(circle at 50% 50%,#c2185b 0 26%,#f8bbd0 27% 45%,#fff0f5 46%); }
+  .i3 { background: radial-gradient(circle at 50% 50%,#fff 0 20%,#ffd6e4 21% 38%,#f3e5ea 39%); }
+  .i4 { background: radial-gradient(circle at 50% 50%,#ffb74d 0 18%,#ff8a65 19% 34%,#fff3e0 35%); }
+  .trust { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+  .t { background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 28px; text-align: center; }
+  .t b { display: block; font-family: 'Playfair Display', serif; font-size: 30px; color: var(--rose); }
+  .t span { color: var(--sub); }
+  .sym { background: var(--plum); color: #fbe3ec; border-radius: 26px; padding: 40px; display: grid; grid-template-columns: 1.3fr 1fr; gap: 30px; align-items: center; }
+  .sym h2 { color: #fff; }
+  .sym p { color: #e8bfd0; margin-top: 8px; }
+  .sym ul { list-style: none; display: grid; gap: 8px; }
+  .sym li { background: rgba(255,255,255,.08); border-radius: 12px; padding: 10px 14px; }
+  .visit .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+  .visit table { width: 100%; border-collapse: collapse; margin-top: 16px; }
+  .visit td { padding: 11px 0; border-bottom: 1px solid var(--line); }
+  .visit td:last-child { text-align: right; font-weight: 600; }
+  .map { border-radius: 20px; background: linear-gradient(135deg,#f8dbe5,#efc3d3); min-height: 260px; display: grid; place-items: center; color: var(--plum); font-weight: 600; text-align: center; padding: 20px; }
+  footer { background: var(--ink); color: #bfa8b3; padding: 30px 0; font-size: 14px; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .orderbar { display: none; }
+  @media (max-width: 880px) {
+    nav, header .btn { display: none; }
+    .hero .wrap, .sym, .visit .wrap { grid-template-columns: 1fr; }
+    h1 { font-size: 42px; } h2 { font-size: 30px; }
+    .shop { grid-template-columns: 1fr 1fr; } .trust { grid-template-columns: 1fr; }
+    .sym { padding: 28px; }
+    .orderbar { display: block; position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 20; }
+    .orderbar .btn { width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+    footer { padding-bottom: 90px; }
+  }
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Heart to Heart Florists. This is a design preview, not the live website.</div>
+<div class="ribbon">🌷 <b>Order by 1pm</b> for same-day delivery · Open 7 days</div>
+<header><div class="wrap">
+  <div class="logo">Heart <span>to</span> Heart</div>
+  <nav><a href="#shop">Shop</a><a href="#occasions">Occasions</a><a href="#sympathy">Sympathy</a><a href="#visit">Visit</a></nav>
+  <a class="btn" href="#shop">Send flowers</a>
+</div></header>
+
+<section class="hero" style="padding:0"><div class="wrap">
+  <div>
+    <div class="eyebrow">Noble Park florist · Since 2000</div>
+    <h1>Say it <em>from the heart.</em></h1>
+    <p>Fresh flowers, plants and gifts, arranged by a family-run team with an eye for detail. Order by 1pm and we'll deliver today.</p>
+    <div class="cta"><a class="btn" href="#shop">Shop bouquets</a><a class="btn o" href="tel:0395403657">Call 03 9540 3657</a></div>
+  </div>
+  <div class="bloom"><div class="tag"><b>Same-day</b>delivery, 7 days</div></div>
+</div></section>
+
+<section id="occasions" style="padding-top:20px"><div class="wrap">
+  <h2>Shop by occasion</h2>
+  <div class="occ">
+    <a href="#shop">🎂 Birthday</a><a href="#shop">💞 Anniversary</a><a href="#shop">🌹 Romance</a><a href="#shop">🌼 Get Well</a><a href="#shop">👶 New Baby</a><a href="#shop">🎓 Graduation</a><a href="#sympathy">🕊️ Sympathy</a><a href="#shop">🏢 Corporate &amp; Events</a>
+  </div>
+</div></section>
+
+<section id="shop" style="padding-top:10px"><div class="wrap">
+  <h2>Customer favourites</h2>
+  <p class="lead">Fresh flowers, plants and gifts from our family-run Noble Park shop.</p>
+  <div class="shop">
+    <div class="p"><div class="img i1"></div><div class="b"><h3>Colour Rose Bouquet</h3><div class="pr">$115</div><button class="btn" onclick="this.textContent='Added ✓'">Add to cart</button></div></div>
+    <div class="p"><div class="img i2"></div><div class="b"><h3>Dozen Roses in a Box</h3><div class="pr">$165</div><button class="btn" onclick="this.textContent='Added ✓'">Add to cart</button></div></div>
+    <div class="p"><div class="img i3"></div><div class="b"><h3>Elegant Rose Hatbox</h3><div class="pr">$199</div><button class="btn" onclick="this.textContent='Added ✓'">Add to cart</button></div></div>
+    <div class="p"><div class="img i4"></div><div class="b"><h3>Pretty Vase Posy</h3><div class="pr">$79</div><button class="btn" onclick="this.textContent='Added ✓'">Add to cart</button></div></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="trust">
+    <div class="t"><b>25+ years</b><span>Fresh flowers for the south-east since 2000</span></div>
+    <div class="t"><b>Same day</b><span>Order by 1pm, delivered today</span></div>
+    <div class="t"><b>Guaranteed</b><span>Satisfaction guaranteed on every order</span></div>
+  </div>
+</div></section>
+
+<section id="sympathy" style="padding-top:0"><div class="wrap">
+  <div class="sym">
+    <div><h2>Sympathy &amp; funeral flowers</h2><p>Thoughtful tributes, delivered with care to homes, chapels and funeral services. Call us and we'll help you choose.</p><a class="btn" style="margin-top:20px" href="tel:0395403657">Talk to our florist</a></div>
+    <ul><li>Wreath tributes</li><li>Casket sprays</li><li>Heart tributes</li><li>Flower sheaf sprays</li><li>"Mum" and "Dad" letters</li></ul>
+  </div>
+</div></section>
+
+<section class="visit" id="visit"><div class="wrap">
+  <div>
+    <h2>Visit our shop</h2>
+    <table>
+      <tr><td>Address</td><td>513 Princes Hwy, Noble Park</td></tr>
+      <tr><td>Open</td><td>7 days a week</td></tr>
+      <tr><td>Same-day cut-off</td><td>1pm</td></tr>
+      <tr><td>Phone</td><td><a href="tel:0395403657">03 9540 3657</a></td></tr>
+      <tr><td>Instagram</td><td>@h2hflowers</td></tr>
+    </table>
+  </div>
+  <div class="map">Google Map goes here<br>(live map on the real site)</div>
+</div></section>
+
+<footer><div class="wrap"><div>© 2026 Heart to Heart Florists · Noble Park VIC 3174</div><div>Concept design by Swoop Sites</div></div></footer>
+<div class="orderbar"><a class="btn" href="#shop">🌷 Send flowers today</a></div>
+</body>
+</html>
