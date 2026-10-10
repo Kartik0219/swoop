@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Swoop Sites">
+  <rect width="64" height="64" rx="16" fill="#0f2238"/>
+  <path d="M13 45 C26 48 41 40 50 17" fill="none" stroke="#2dd4bf" stroke-width="7" stroke-linecap="round"/>
+  <path d="M13 32 C20 33 27 30 32 25" fill="none" stroke="#ff7a59" stroke-width="5" stroke-linecap="round"/>
+</svg>

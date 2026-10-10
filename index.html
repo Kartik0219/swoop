@@ -3,194 +3,775 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Swoop Sites | Websites for Local Businesses in Noble Park &amp; South-East Melbourne</title>
-<meta name="description" content="Fast, secure websites for local businesses in Noble Park, Dandenong, Springvale and Keysborough, built and looked after by a local web developer with a Master of Cybersecurity.">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<title>Swoop Sites | Websites &amp; Website Care for Local Businesses in Noble Park &amp; South-East Melbourne</title>
+<meta name="description" content="Fast, secure, mobile-friendly websites and monthly website care for local businesses in Noble Park, Dandenong, Springvale, Keysborough and south-east Melbourne. Free homepage mockup. Fixed prices in AUD.">
+<link rel="canonical" href="https://swoop-sites.pages.dev/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0f2238">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Swoop Sites">
+<meta property="og:title" content="Swoop Sites | Websites &amp; monthly care for local businesses">
+<meta property="og:description" content="Fast, secure websites for local businesses in Noble Park and south-east Melbourne, built and looked after every month by a local developer with a Master of Cybersecurity. Get a free homepage mockup.">
+<meta property="og:url" content="https://swoop-sites.pages.dev/">
+<meta property="og:locale" content="en_AU">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "ProfessionalService"],
+  "name": "Swoop Sites",
+  "description": "Website design, builds and monthly website care (hosting, security checks, backups, updates) for local businesses in south-east Melbourne.",
+  "url": "https://swoop-sites.pages.dev/",
+  "email": "Kartikp.work@gmail.com",
+  "logo": "https://swoop-sites.pages.dev/logo.svg",
+  "image": "https://swoop-sites.pages.dev/logo-mark.svg",
+  "founder": { "@type": "Person", "name": "Kartik Panikar" },
+  "address": { "@type": "PostalAddress", "addressLocality": "Noble Park", "addressRegion": "VIC", "addressCountry": "AU" },
+  "areaServed": [
+    { "@type": "Place", "name": "South-east Melbourne" },
+    { "@type": "City", "name": "Noble Park" },
+    { "@type": "City", "name": "Dandenong" },
+    { "@type": "City", "name": "Springvale" },
+    { "@type": "City", "name": "Keysborough" },
+    { "@type": "City", "name": "Clayton" },
+    { "@type": "City", "name": "Mulgrave" },
+    { "@type": "City", "name": "Narre Warren" },
+    { "@type": "City", "name": "Berwick" },
+    { "@type": "City", "name": "Cranbourne" }
+  ],
+  "currenciesAccepted": "AUD",
+  "knowsAbout": ["Web design", "Website hosting", "Website security", "Email security (SPF, DKIM, DMARC)", "Local SEO"]
+}
+</script>
 <style>
-  :root { --ink:#0b1220; --sub:#5b6474; --line:#e6e9ef; --soft:#f5f7fb; --blue:#2563eb; --blue2:#1d4ed8; --mint:#10b981; }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: Inter, system-ui, sans-serif; color: var(--ink); line-height: 1.6; background: #fff; }
-  a { color: inherit; text-decoration: none; }
-  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
-  header { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
-  header .wrap { display: flex; justify-content: space-between; align-items: center; height: 68px; }
-  .logo { font-weight: 900; font-size: 22px; letter-spacing: -0.03em; display: flex; align-items: center; gap: 8px; }
-  .logo i { width: 26px; height: 26px; border-radius: 8px 8px 8px 2px; background: linear-gradient(135deg,var(--blue),var(--mint)); display: inline-block; }
-  nav { display: flex; gap: 26px; font-size: 15px; color: var(--sub); font-weight: 500; }
-  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--blue); color: #fff; font-weight: 700; padding: 13px 22px; border-radius: 12px; font-size: 15px; white-space: nowrap; border: 0; }
-  .btn.o { background: #fff; color: var(--ink); border: 1.5px solid var(--line); }
-  .hero { background: radial-gradient(circle at 85% 10%, #dbeafe 0, transparent 45%), radial-gradient(circle at 10% 90%, #d1fae5 0, transparent 40%); padding: 90px 0 80px; }
-  .pill { display: inline-block; background: #fff; border: 1px solid var(--line); border-radius: 30px; padding: 6px 14px; font-size: 13px; font-weight: 600; color: var(--sub); }
-  h1 { font-size: 62px; line-height: 1.02; letter-spacing: -0.045em; font-weight: 900; margin: 18px 0; max-width: 860px; }
-  h1 span { background: linear-gradient(90deg,var(--blue),var(--mint)); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .hero p { font-size: 19px; color: var(--sub); max-width: 640px; }
-  .cta { display: flex; gap: 12px; margin-top: 30px; flex-wrap: wrap; }
-  .trust { display: flex; gap: 28px; margin-top: 44px; flex-wrap: wrap; color: var(--sub); font-size: 15px; font-weight: 600; }
-  .trust b { color: var(--ink); }
-  section { padding: 84px 0; }
-  .kicker { color: var(--blue); font-weight: 800; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; }
-  h2 { font-size: 40px; letter-spacing: -0.035em; line-height: 1.1; margin-top: 8px; }
-  .lead { color: var(--sub); font-size: 17px; margin-top: 12px; max-width: 640px; }
-  .grid3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; margin-top: 38px; }
-  .card { border: 1px solid var(--line); border-radius: 18px; padding: 26px; background: #fff; }
-  .card .ic { width: 46px; height: 46px; border-radius: 12px; background: var(--soft); display: grid; place-items: center; font-size: 22px; }
-  .card h3 { font-size: 19px; margin: 14px 0 6px; }
-  .card p { color: var(--sub); font-size: 15.5px; }
-  .work { background: var(--soft); }
-  .case { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center; margin-top: 36px; background: #fff; border: 1px solid var(--line); border-radius: 24px; padding: 34px; }
-  .shot { aspect-ratio: 16/10; border-radius: 16px; background: linear-gradient(135deg,#0f172a,#1e3a8a); position: relative; overflow: hidden; display: grid; place-items: center; color: #fff; text-align: center; padding: 20px; }
-  .shot b { font-size: 26px; letter-spacing: -0.02em; }
-  .shot span { display: block; color: #93c5fd; font-size: 14px; margin-top: 6px; }
-  .case ul { list-style: none; margin-top: 16px; display: grid; gap: 8px; color: var(--sub); }
-  .case li::before { content: "✓ "; color: var(--mint); font-weight: 800; }
-  .price { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; margin-top: 38px; }
-  .p { border: 1px solid var(--line); border-radius: 20px; padding: 30px; display: flex; flex-direction: column; }
-  .p.hot { border: 2px solid var(--blue); position: relative; }
-  .p.hot::before { content: "Most popular"; position: absolute; top: -12px; left: 24px; background: var(--blue); color: #fff; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 20px; }
-  .p h3 { font-size: 20px; }
-  .p .amt { font-size: 40px; font-weight: 900; letter-spacing: -0.04em; margin: 10px 0 2px; }
-  .p .amt small { font-size: 15px; color: var(--sub); font-weight: 600; letter-spacing: 0; }
-  .p .note { color: var(--sub); font-size: 14px; }
-  .p ul { list-style: none; margin: 18px 0 22px; display: grid; gap: 8px; font-size: 15px; }
-  .p li::before { content: "✓ "; color: var(--mint); font-weight: 800; }
-  .p .btn { margin-top: auto; }
-  .care { margin-top: 22px; background: var(--soft); border-radius: 18px; padding: 24px 26px; display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
-  .care div b { display: block; font-size: 17px; }
-  .care div span { color: var(--sub); font-size: 14.5px; }
-  .steps { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; margin-top: 36px; }
-  .s b { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: var(--ink); color: #fff; }
-  .s h3 { font-size: 17px; margin: 12px 0 4px; }
-  .s p { color: var(--sub); font-size: 15px; }
-  .about { background: var(--ink); color: #e5e7eb; }
-  .about .wrap { display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px; align-items: center; }
-  .about h2 { color: #fff; }
-  .about p { color: #aab3c2; margin-top: 12px; font-size: 16.5px; }
-  .badge-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
-  .badge-row span { border: 1px solid #263044; border-radius: 30px; padding: 7px 14px; font-size: 14px; color: #d1d5db; }
-  .avatar { aspect-ratio: 1; max-width: 340px; border-radius: 28px; background: linear-gradient(135deg,#1e3a8a,#065f46); display: grid; place-items: center; font-size: 90px; font-weight: 900; color: rgba(255,255,255,.9); letter-spacing: -0.04em; }
-  .faq { max-width: 800px; margin-top: 30px; }
-  details { border-bottom: 1px solid var(--line); padding: 18px 0; }
-  summary { font-weight: 700; font-size: 17px; cursor: pointer; }
-  details p { color: var(--sub); margin-top: 10px; }
-  .contact { background: linear-gradient(135deg,#eff6ff,#ecfdf5); text-align: center; }
-  .contact p { margin: 12px auto 26px; }
-  footer { padding: 30px 0; color: var(--sub); font-size: 14px; border-top: 1px solid var(--line); }
-  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
-  @media (max-width: 880px) {
-    nav { display: none; }
-    h1 { font-size: 42px; } h2 { font-size: 30px; }
-    .grid3, .price, .care, .about .wrap, .case { grid-template-columns: 1fr; }
-    .steps { grid-template-columns: 1fr 1fr; }
-    section { padding: 60px 0; }
-    .hero { padding: 56px 0; }
-    .case { padding: 22px; }
+  :root{
+    --ink:#0f2238;        /* brand navy */
+    --ink-2:#1b3352;
+    --text:#14202e;
+    --sub:#55627a;
+    --line:#e3e8ef;
+    --paper:#ffffff;
+    --soft:#f4f6f9;
+    --cream:#fbf7f1;
+    --teal:#0d9488;       /* brand teal (text-safe) */
+    --teal-bright:#2dd4bf;/* brand teal (on dark) */
+    --teal-tint:#e6f6f4;
+    --coral:#ff7a59;      /* brand accent */
+    --coral-deep:#c2410c;
+    --coral-tint:#fff0ea;
+    --radius:18px;
+    --shadow:0 1px 2px rgba(15,34,56,.06),0 8px 24px rgba(15,34,56,.06);
+    --head:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+    --body:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{margin:0;font-family:var(--body);color:var(--text);background:var(--paper);line-height:1.6;font-size:16px;overflow-x:hidden}
+  img,svg{max-width:100%}
+  a{color:inherit}
+  h1,h2,h3{font-family:var(--head);line-height:1.1;margin:0;color:var(--ink);letter-spacing:-.02em}
+  h3{font-weight:600}
+  p{margin:0}
+  ul{margin:0;padding:0}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 16px}
+  .skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:10px 14px;border-radius:8px;z-index:100}
+  .skip:focus{left:8px}
+  :focus-visible{outline:3px solid var(--coral);outline-offset:3px;border-radius:6px}
+
+  /* Buttons */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;font-size:15.5px;padding:14px 22px;border-radius:999px;text-decoration:none;border:2px solid transparent;line-height:1.2;text-align:center;transition:transform .15s ease,background .15s ease}
+  .btn:hover{transform:translateY(-1px)}
+  .btn-primary{background:var(--coral);color:#1a0d06}
+  .btn-primary:hover{background:#ff6a45}
+  .btn-dark{background:var(--ink);color:#fff}
+  .btn-ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+  .btn-light{background:#fff;color:var(--ink)}
+  .btn svg{width:18px;height:18px;flex:none}
+
+  /* Header */
+  header.top{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--head);font-weight:800;font-size:21px;color:var(--ink);letter-spacing:-.03em;white-space:nowrap}
+  .brand svg{width:34px;height:34px;flex:none}
+  .brand em{font-style:normal;color:var(--teal)}
+  nav.main{display:none;gap:22px;font-size:15px;font-weight:500;color:var(--sub)}
+  nav.main a{text-decoration:none}
+  nav.main a:hover{color:var(--ink)}
+  header .btn{padding:10px 16px;font-size:14.5px}
+  .hdr-cta{display:none}
+
+  /* Hero */
+  .hero{position:relative;background:var(--ink);color:#dbe4ef;overflow:hidden}
+  .hero::before{content:"";position:absolute;right:-180px;top:-140px;width:520px;height:520px;border-radius:50%;border:56px solid rgba(45,212,191,.10)}
+  .hero::after{content:"";position:absolute;left:-120px;bottom:-200px;width:420px;height:420px;border-radius:50%;border:40px solid rgba(255,122,89,.08)}
+  .hero .wrap{position:relative;z-index:1;display:grid;gap:40px;padding-top:52px;padding-bottom:60px}
+  .tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:6px 14px;font-size:13px;font-weight:600;color:#c9d6e6}
+  .tag i{width:8px;height:8px;border-radius:50%;background:var(--teal-bright);display:inline-block}
+  .hero h1{color:#fff;font-size:clamp(36px,8.4vw,64px);font-weight:800;margin:18px 0 18px;letter-spacing:-.035em}
+  .hero h1 .sw{color:var(--teal-bright);position:relative;white-space:nowrap}
+  .hero h1 .sw svg{position:absolute;left:0;bottom:-.22em;width:100%;height:.35em}
+  .hero .intro{font-size:18px;max-width:600px;color:#c3cfdd}
+  .offer{margin-top:22px;display:flex;gap:12px;align-items:flex-start;background:rgba(255,122,89,.12);border:1px solid rgba(255,122,89,.35);border-radius:14px;padding:14px 16px;max-width:600px;font-size:15.5px;color:#ffe3d8}
+  .offer b{color:#fff}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+  .hero .btn-ghost{color:#fff;border-color:rgba(255,255,255,.5)}
+  .hero-facts{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:28px;font-size:14px;color:#9fb0c6}
+  .hero-facts span::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--coral);margin-right:8px;vertical-align:middle}
+
+  /* Care panel visual */
+  .panel{background:#fff;color:var(--text);border-radius:22px;padding:20px;box-shadow:0 30px 60px rgba(0,0,0,.25);max-width:440px;width:100%;justify-self:center}
+  .panel-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+  .panel-head b{font-family:var(--head);font-size:18px;color:var(--ink)}
+  .panel-head small{font-size:12px;color:var(--sub);display:block}
+  .pill-ok{font-size:12px;font-weight:700;background:var(--teal-tint);color:#0b6b62;border-radius:999px;padding:4px 10px;white-space:nowrap}
+  .checks{list-style:none;margin-top:6px}
+  .checks li{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 0;border-bottom:1px dashed var(--line);font-size:14.5px}
+  .checks li:last-child{border-bottom:0}
+  .checks .st{display:inline-flex;align-items:center;gap:6px;font-weight:600;color:#0b6b62;font-size:13px;white-space:nowrap}
+  .checks .st::before{content:"";width:16px;height:16px;border-radius:50%;background:var(--teal) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.2l2.3 2.3 4.7-5' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat}
+  .panel-foot{margin-top:12px;font-size:12.5px;color:var(--sub)}
+
+  /* Sections */
+  section{padding:68px 0}
+  .kicker{display:inline-block;font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:10px}
+  h2{font-size:clamp(28px,6vw,44px);font-weight:800}
+  .lead{color:var(--sub);font-size:17.5px;margin-top:14px;max-width:680px}
+  .alt{background:var(--soft)}
+  .cream{background:var(--cream)}
+
+  /* Who it's for */
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;list-style:none}
+  .chips li{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 16px;font-size:15px;box-shadow:var(--shadow)}
+  .chips li b{display:block;font-family:var(--head);font-size:17px;color:var(--ink)}
+  .chips li span{color:var(--sub);font-size:13.5px}
+
+  /* Problems */
+  .grid{display:grid;gap:16px;margin-top:32px}
+  .prob{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;position:relative}
+  .prob .n{font-family:var(--head);font-weight:800;font-size:14px;color:var(--coral-deep);background:var(--coral-tint);border-radius:8px;padding:3px 9px;display:inline-block}
+  .prob h3{font-size:20px;margin:12px 0 8px}
+  .prob p{color:var(--sub);font-size:15.5px}
+  .prob .fix{margin-top:12px;font-size:14.5px;color:var(--text);border-top:1px solid var(--line);padding-top:12px}
+  .prob .fix b{color:var(--teal)}
+
+  /* Included */
+  .incl{list-style:none;display:grid;gap:12px;margin-top:30px}
+  .incl li{display:flex;gap:14px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px}
+  .tick{flex:none;width:28px;height:28px;border-radius:9px;background:var(--teal-tint);display:grid;place-items:center}
+  .tick svg{width:16px;height:16px}
+  .incl b{display:block;color:var(--ink);font-size:16.5px}
+  .incl span{color:var(--sub);font-size:15px}
+
+  /* Security */
+  .sec{background:var(--ink);color:#c9d5e3}
+  .sec h2{color:#fff}
+  .sec .kicker{color:var(--teal-bright)}
+  .sec .lead{color:#a9b8cb}
+  .sec-grid{display:grid;gap:14px;margin-top:30px}
+  .sec-card{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);border-radius:var(--radius);padding:20px}
+  .sec-card h3{color:#fff;font-size:19px;margin-bottom:6px}
+  .sec-card p{font-size:15px;color:#a9b8cb}
+  .sec-card .plan{display:inline-block;margin-top:10px;font-size:12.5px;font-weight:700;color:var(--teal-bright);letter-spacing:.02em}
+  .honest{margin-top:22px;font-size:14.5px;color:#93a4ba;max-width:760px}
+
+  /* Pricing */
+  .founding{display:flex;gap:14px;align-items:flex-start;margin-top:26px;background:var(--coral-tint);border:1px dashed var(--coral);border-radius:16px;padding:16px 18px;font-size:15.5px}
+  .founding b{color:var(--ink)}
+  .founding .badge{flex:none;font-family:var(--head);font-weight:800;color:#fff;background:var(--coral-deep);border-radius:10px;padding:6px 10px;font-size:15px}
+  .plans{display:grid;gap:18px;margin-top:28px;align-items:stretch}
+  .plan-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px 22px;display:flex;flex-direction:column;position:relative}
+  .plan-card.pop{border:2px solid var(--ink);box-shadow:0 18px 40px rgba(15,34,56,.12)}
+  .plan-card .flag{position:absolute;top:-13px;left:22px;background:var(--coral);color:#1a0d06;font-weight:800;font-size:12.5px;padding:4px 12px;border-radius:999px;letter-spacing:.02em}
+  .plan-card h3{font-size:24px;font-weight:800}
+  .plan-card .for{color:var(--sub);font-size:14.5px;margin-top:4px}
+  .amt{font-family:var(--head);font-weight:800;font-size:44px;color:var(--ink);letter-spacing:-.03em;margin-top:16px;line-height:1}
+  .amt small{font-family:var(--body);font-size:15px;font-weight:600;color:var(--sub);letter-spacing:0}
+  .amt-note{font-size:14px;color:var(--sub);margin-top:8px}
+  .feat{list-style:none;margin:18px 0 22px;display:grid;gap:9px;font-size:15px}
+  .feat li{padding-left:26px;position:relative}
+  .feat li::before{content:"";position:absolute;left:0;top:4px;width:16px;height:16px;border-radius:5px;background:var(--teal-tint) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.2l2.3 2.3 4.7-5' fill='none' stroke='%230d9488' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat}
+  .plan-card .btn{margin-top:auto}
+  .sub-h{font-size:24px;font-weight:800;margin-top:52px}
+  .care-grid{display:grid;gap:14px;margin-top:18px}
+  .care{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px}
+  .care .top{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .care h4{margin:0;font-family:var(--head);font-size:19px;color:var(--ink)}
+  .care .p{font-family:var(--head);font-weight:800;font-size:24px;color:var(--ink)}
+  .care .p small{font-family:var(--body);font-size:13px;color:var(--sub);font-weight:600}
+  .care .feat{margin:12px 0 0;font-size:14.5px}
+  .fixup{margin-top:18px;display:grid;gap:16px;background:var(--ink);color:#c9d5e3;border-radius:22px;padding:24px 22px}
+  .fixup h3{color:#fff;font-size:22px;font-weight:800}
+  .fixup p{font-size:15.5px;margin-top:8px}
+  .fixup .amt{color:#fff;font-size:34px}
+  .fixup .amt small{color:#a9b8cb}
+  .price-notes{margin-top:18px;font-size:14px;color:var(--sub);display:grid;gap:4px}
+
+  /* Steps */
+  .steps{list-style:none;margin-top:32px;display:grid;gap:0;counter-reset:s;position:relative}
+  .steps li{position:relative;padding:0 0 26px 58px;counter-increment:s}
+  .steps li::before{content:counter(s);position:absolute;left:0;top:0;width:40px;height:40px;border-radius:12px;background:var(--ink);color:#fff;font-family:var(--head);font-weight:800;display:grid;place-items:center;font-size:17px}
+  .steps li::after{content:"";position:absolute;left:19px;top:44px;bottom:4px;width:2px;background:linear-gradient(var(--line),var(--line))}
+  .steps li:last-child::after{display:none}
+  .steps li.hl::before{background:var(--coral);color:#1a0d06}
+  .steps h3{font-size:19px;padding-top:8px}
+  .steps p{color:var(--sub);font-size:15.5px;margin-top:4px}
+  .steps .when{display:inline-block;font-size:12px;font-weight:700;color:var(--teal);background:var(--teal-tint);border-radius:999px;padding:2px 9px;margin-left:6px;vertical-align:middle;font-family:var(--body)}
+  .email-box{margin-top:12px;display:grid;gap:14px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px}
+  .email-box h3{font-size:21px}
+  .email-box p{color:var(--sub);font-size:15.5px}
+
+  /* About */
+  .about-grid{display:grid;gap:30px;align-items:center}
+  .about-card{background:var(--ink);border-radius:26px;padding:28px;color:#c9d5e3;max-width:420px;width:100%}
+  .about-card .mono{width:84px;height:84px;border-radius:22px;background:linear-gradient(140deg,var(--teal) 0%,var(--ink-2) 100%);display:grid;place-items:center;font-family:var(--head);font-weight:800;font-size:34px;color:#fff;letter-spacing:-.03em}
+  .about-card h3{color:#fff;font-size:24px;margin-top:16px}
+  .about-card dl{margin:16px 0 0;display:grid;gap:10px;font-size:14.5px}
+  .about-card dt{color:#8ea1b8;font-size:12px;text-transform:uppercase;letter-spacing:.1em;font-weight:700}
+  .about-card dd{margin:2px 0 0;color:#fff}
+  .about-text p{color:var(--sub);font-size:17px;margin-top:14px}
+  .about-text p:first-of-type{margin-top:16px}
+
+  /* FAQ */
+  .faq{margin-top:28px;max-width:860px;border-top:1px solid var(--line)}
+  details{border-bottom:1px solid var(--line)}
+  summary{list-style:none;cursor:pointer;padding:18px 40px 18px 0;font-weight:700;font-size:17px;color:var(--ink);position:relative}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";position:absolute;right:4px;top:13px;font-size:26px;font-weight:400;color:var(--teal);line-height:1.2}
+  details[open] summary::after{content:"\2013"}
+  details .ans{padding:0 0 20px;color:var(--sub);font-size:16px;max-width:760px}
+  details .ans p+p{margin-top:10px}
+
+  /* Contact */
+  .contact{background:linear-gradient(160deg,var(--teal-tint) 0%,var(--cream) 70%)}
+  .contact-grid{display:grid;gap:26px}
+  .contact-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:var(--shadow)}
+  .contact-card h3{font-size:20px}
+  .contact-card .mail{display:inline-block;margin-top:8px;font-family:var(--head);font-weight:800;font-size:clamp(19px,5.2vw,26px);color:var(--ink);word-break:break-all;text-decoration-color:var(--coral);text-underline-offset:5px}
+  .contact-card ol{margin:14px 0 18px;padding-left:20px;color:var(--sub);font-size:15.5px;display:grid;gap:6px}
+  .areas{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+  .areas li{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:14px}
+  .areas li.home{background:var(--ink);color:#fff;border-color:var(--ink);font-weight:600}
+
+  /* Footer */
+  footer{background:#0a1828;color:#9fb0c6;padding:44px 0 30px;font-size:14.5px}
+  footer .wrap{display:grid;gap:24px}
+  footer .brand{color:#fff}
+  footer .brand em{color:var(--teal-bright)}
+  footer nav{display:flex;flex-wrap:wrap;gap:10px 20px}
+  footer nav a{text-decoration:none;color:#c9d5e3}
+  footer nav a:hover{color:#fff;text-decoration:underline}
+  footer .legal{border-top:1px solid rgba(255,255,255,.1);padding-top:18px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;font-size:13.5px}
+  footer a.mail{color:#fff}
+
+  /* Sticky mobile bar */
+  .mbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;gap:10px;align-items:center;justify-content:space-between;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(15,34,56,.97);border-top:1px solid rgba(255,255,255,.1)}
+  .mbar span{color:#c9d5e3;font-size:13.5px;line-height:1.3}
+  .mbar span b{color:#fff;display:block;font-size:14.5px}
+  .mbar .btn{padding:11px 18px;font-size:15px;flex:none}
+  body{padding-bottom:72px}
+
+  /* Larger screens */
+  @media (min-width:640px){
+    .wrap{padding:0 24px}
+    .grid{grid-template-columns:1fr 1fr}
+    .incl{grid-template-columns:1fr 1fr}
+    .sec-grid{grid-template-columns:1fr 1fr}
+    .care-grid{grid-template-columns:1fr 1fr 1fr}
+    .hdr-cta{display:inline-flex}
+  }
+  @media (min-width:900px){
+    nav.main{display:flex}
+    section{padding:96px 0}
+    .hero .wrap{grid-template-columns:1.25fr .9fr;align-items:center;padding-top:84px;padding-bottom:96px}
+    .grid{grid-template-columns:repeat(3,1fr)}
+    .incl{grid-template-columns:repeat(3,1fr)}
+    .sec-grid{grid-template-columns:repeat(3,1fr)}
+    .plans{grid-template-columns:repeat(3,1fr)}
+    .plan-card.pop{transform:translateY(-10px)}
+    .fixup{grid-template-columns:1.6fr 1fr;align-items:center}
+    .steps{grid-template-columns:1fr 1fr;column-gap:40px}
+    .two{display:grid;grid-template-columns:1.3fr .9fr;gap:48px;align-items:start}
+    .about-grid{grid-template-columns:.8fr 1.2fr;gap:56px}
+    .contact-grid{grid-template-columns:1.1fr .9fr;align-items:start}
+    footer .wrap{grid-template-columns:1.2fr 1fr}
+    .mbar{display:none}
+    body{padding-bottom:0}
   }
 </style>
 </head>
 <body>
-<header><div class="wrap">
-  <div class="logo"><i></i>Swoop Sites</div>
-  <nav><a href="#work">Work</a><a href="#pricing">Pricing</a><a href="#how">How it works</a><a href="#about">About</a></nav>
-  <a class="btn" href="mailto:Kartikp.work@gmail.com?subject=Website%20enquiry">Get a free mockup</a>
-</div></header>
+<a class="skip" href="#main">Skip to content</a>
 
-<section class="hero"><div class="wrap">
-  <span class="pill">📍 Noble Park · Dandenong · Springvale · Keysborough</span>
-  <h1>Websites that bring local businesses <span>more customers.</span></h1>
-  <p>Fast, secure, mobile-friendly websites for local businesses, built by a local web developer with a Master of Cybersecurity and looked after every month so you never have to think about it.</p>
-  <div class="cta"><a class="btn" href="mailto:Kartikp.work@gmail.com?subject=Free%20website%20mockup">Get a free homepage mockup</a><a class="btn o" href="#pricing">See pricing</a></div>
-  <div class="trust"><div>⚡ <b>Fast</b> on every phone</div><div>🔒 <b>Secure</b> by design</div><div>🛠️ <b>Looked after</b> every month</div><div>🤝 <b>Local</b>, real person, email anytime</div></div>
-</div></section>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="mark" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="16" fill="#0f2238"/>
+    <path d="M13 45 C26 48 41 40 50 17" fill="none" stroke="#2dd4bf" stroke-width="7" stroke-linecap="round"/>
+    <path d="M13 32 C20 33 27 30 32 25" fill="none" stroke="#ff7a59" stroke-width="5" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="ok" viewBox="0 0 16 16"><path d="M3.5 8.4l3 3 6-6.6" fill="none" stroke="#0d9488" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="mail" viewBox="0 0 24 24"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h15A1.5 1.5 0 0 1 21 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5z M3.5 6.5l8.5 6.5 8.5-6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+</svg>
 
-<section><div class="wrap">
-  <div class="kicker">Why Swoop Sites</div>
-  <h2>Everything a small business website should be</h2>
-  <div class="grid3">
-    <div class="card"><div class="ic">📱</div><h3>Built for phones first</h3><p>Most of your customers find you on their phone. Big "Call" and "Book" buttons, fast loading, easy to read.</p></div>
-    <div class="card"><div class="ic">🔒</div><h3>Security built in</h3><p>HTTPS, daily backups, updates and email protection (SPF, DKIM, DMARC) set up properly from day one.</p></div>
-    <div class="card"><div class="ic">📅</div><h3>Bookings &amp; quotes online</h3><p>Booking requests, quote forms and payments, so customers can reach you even when you're busy.</p></div>
-    <div class="card"><div class="ic">🔎</div><h3>Found on Google</h3><p>Proper page titles, descriptions and a Google Business Profile set up so locals can find you.</p></div>
-    <div class="card"><div class="ic">✍️</div><h3>We write the words</h3><p>No homework for you. We write clear, friendly copy based on what makes your business great.</p></div>
-    <div class="card"><div class="ic">💬</div><h3>Changes by email</h3><p>Need a price or photo updated? Just email it through. Small changes are included in every care plan.</p></div>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Swoop Sites, home">
+      <svg aria-hidden="true"><use href="#mark"/></svg>
+      <span>Swoop <em>Sites</em></span>
+    </a>
+    <nav class="main" aria-label="Main">
+      <a href="#problems">What we fix</a>
+      <a href="#included">What's included</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#how">How it works</a>
+      <a href="#faq">FAQ</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="btn btn-dark hdr-cta" href="mailto:Kartikp.work@gmail.com?subject=Free%20homepage%20mockup%20request">Get a free mockup</a>
   </div>
-</div></section>
+</header>
 
-<section class="work" id="work"><div class="wrap">
-  <div class="kicker">Recent work</div>
-  <h2>A real website for a real local business</h2>
-  <div class="case">
-    <div class="shot"><div><b>gavindefootball.com</b><span>Youth football academy · Melbourne</span></div></div>
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" id="top" style="padding:0">
+  <div class="wrap">
     <div>
-      <h3 style="font-size:24px">Gavin de Football</h3>
-      <p class="lead" style="margin-top:6px">Designed, built and launched a website for a youth football academy, built to turn social media traffic into sign-ups.</p>
-      <ul><li>Custom domain, DNS and SSL set up</li><li>Mobile-first design</li><li>Player registration and enquiry pipeline</li></ul>
-      <a class="btn o" style="margin-top:20px" href="https://gavindefootball.com" target="_blank" rel="noopener">Visit the site →</a>
+      <span class="tag"><i></i>Noble Park &middot; Dandenong &middot; Springvale &middot; Keysborough &amp; around</span>
+      <h1>Websites that work as hard as <span class="sw">you do.<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 15 C60 4 140 2 197 9" fill="none" stroke="#ff7a59" stroke-width="5" stroke-linecap="round"/></svg></span></h1>
+      <p class="intro">Swoop Sites builds fast, secure, mobile-friendly websites for local businesses in Noble Park and south-east Melbourne, then looks after them every month. Hosting, security checks, backups, updates and small changes, all handled by email, so you can get on with running your business.</p>
+      <div class="offer">
+        <span aria-hidden="true" style="font-family:var(--head);font-weight:800;color:var(--coral)">FREE</span>
+        <span><b>See it before you pay anything.</b> I'll design a homepage mockup for your business for free. No obligation, no pressure, and you can say no.</span>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="mailto:Kartikp.work@gmail.com?subject=Free%20homepage%20mockup%20request&amp;body=Hi%20Kartik%2C%0A%0ABusiness%20name%3A%20%0ACurrent%20website%20(if%20any)%3A%20%0AWhat%20we%20do%3A%20%0A%0AThanks!">
+          <svg aria-hidden="true"><use href="#mail"/></svg>Get a free mockup
+        </a>
+        <a class="btn btn-ghost" href="#pricing">See pricing</a>
+      </div>
+      <div class="hero-facts">
+        <span>Fixed prices in AUD</span>
+        <span>Live in about 2 weeks</span>
+        <span>You own your domain</span>
+        <span>Everything by email</span>
+      </div>
+    </div>
+
+    <aside class="panel" aria-label="Example of what a monthly care check covers">
+      <div class="panel-head">
+        <div><b>Monthly care check</b><small>Example of what gets checked each month</small></div>
+        <span class="pill-ok">All good</span>
+      </div>
+      <ul class="checks">
+        <li>HTTPS certificate valid<span class="st">Checked</span></li>
+        <li>Backup taken &amp; stored<span class="st">Done</span></li>
+        <li>Software &amp; plugins updated<span class="st">Done</span></li>
+        <li>Site up &amp; loading fast<span class="st">Monitored</span></li>
+        <li>Contact &amp; booking forms<span class="st">Tested</span></li>
+        <li>Email protection (SPF/DKIM/DMARC)<span class="st">Checked</span></li>
+      </ul>
+      <p class="panel-foot">What's included depends on your care plan. See <a href="#care">care plans</a>.</p>
+    </aside>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section id="who">
+  <div class="wrap">
+    <span class="kicker">Who it's for</span>
+    <h2>Made for local businesses that are busy doing the actual work</h2>
+    <p class="lead">If customers find you on their phone, call you, book with you or ask for a quote, a good website makes that easier. I work with small, owner-run businesses across south-east Melbourne, including:</p>
+    <ul class="chips">
+      <li><b>Trades</b><span>Plumbers, electricians, builders, landscapers, cleaners</span></li>
+      <li><b>Auto</b><span>Mechanics, tyres, detailing, panel beaters</span></li>
+      <li><b>Cafes &amp; food</b><span>Cafes, restaurants, takeaway, bakeries, caterers</span></li>
+      <li><b>Beauty</b><span>Hair, barbers, nails, brows, beauty salons</span></li>
+      <li><b>Health clinics</b><span>Physio, chiro, dental, massage, allied health</span></li>
+      <li><b>Retail</b><span>Local shops, grocers, gift and specialty stores</span></li>
+      <li><b>Professional services</b><span>Accountants, bookkeepers, tutors, consultants</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- PROBLEMS -->
+<section class="alt" id="problems">
+  <div class="wrap">
+    <span class="kicker">The problems we fix</span>
+    <h2>Does your website have any of these?</h2>
+    <p class="lead">Most small business websites aren't bad on purpose. They were built years ago and nobody has had time to look after them. Here's what I see most often, and what I do about it.</p>
+    <div class="grid">
+      <article class="prob">
+        <span class="n">01</span>
+        <h3>Not mobile friendly</h3>
+        <p>Tiny text, buttons you can't tap, pages you have to pinch and zoom. Most local searches happen on a phone, and people leave quickly if a site is hard to use.</p>
+        <p class="fix"><b>Fix:</b> a mobile-first design with big, clear call and enquiry buttons.</p>
+      </article>
+      <article class="prob">
+        <span class="n">02</span>
+        <h3>"Not secure" warning</h3>
+        <p>Without HTTPS, browsers show "Not secure" next to your address. It puts customers off, and any form they fill in isn't encrypted.</p>
+        <p class="fix"><b>Fix:</b> HTTPS set up and checked, so the padlock shows and data is encrypted.</p>
+      </article>
+      <article class="prob">
+        <span class="n">03</span>
+        <h3>Outdated or hacked</h3>
+        <p>Old software and plugins that never get updated are a common way sites get broken into, filled with spam or redirected somewhere dodgy.</p>
+        <p class="fix"><b>Fix:</b> a clean rebuild or clean-up, then regular updates and backups.</p>
+      </article>
+      <article class="prob">
+        <span class="n">04</span>
+        <h3>Broken forms &amp; links</h3>
+        <p>A contact form that quietly stopped sending, or links that go nowhere. You might be missing enquiries and never know it.</p>
+        <p class="fix"><b>Fix:</b> forms that are tested and deliver to your inbox, and links that work.</p>
+      </article>
+      <article class="prob">
+        <span class="n">05</span>
+        <h3>Slow pages</h3>
+        <p>Huge images and heavy themes make pages crawl, especially on mobile data. People give up before your page even loads.</p>
+        <p class="fix"><b>Fix:</b> lightweight pages, compressed images and fast hosting.</p>
+      </article>
+      <article class="prob">
+        <span class="n">06</span>
+        <h3>Not showing on Google</h3>
+        <p>Missing page titles and descriptions, no Search Console, no link to your Google Business Profile. Google has a harder time understanding what you do and where.</p>
+        <p class="fix"><b>Fix:</b> the Google basics done properly on every page.</p>
+      </article>
+      <article class="prob">
+        <span class="n">07</span>
+        <h3>No online booking or quotes</h3>
+        <p>If the only way to reach you is to call during business hours, you miss people who are browsing at night or on the weekend.</p>
+        <p class="fix"><b>Fix:</b> a simple booking request or quote form that sends straight to you.</p>
+      </article>
     </div>
   </div>
-</div></section>
+</section>
 
-<section id="pricing"><div class="wrap">
-  <div class="kicker">Pricing</div>
-  <h2>Simple, fixed prices. No surprises.</h2>
-  <p class="lead">Every price is fixed and agreed upfront. Prices in AUD.</p>
-  <div class="price">
-    <div class="p"><h3>Starter</h3><div class="amt">$990</div><div class="note">One-off build</div>
-      <ul><li>3 to 5 page mobile-first site</li><li>Domain, HTTPS &amp; email setup</li><li>Contact / enquiry form</li><li>Google Business Profile setup</li></ul>
-      <a class="btn o" href="mailto:Kartikp.work@gmail.com?subject=Starter%20website">Get started</a></div>
-    <div class="p hot"><h3>Business</h3><div class="amt">$490 <small>+ care plan</small></div><div class="note">With a 12-month Care Plus plan</div>
-      <ul><li>Everything in Starter</li><li>Online booking or quote form</li><li>Monthly security report</li><li>Edits included every month</li></ul>
-      <a class="btn" href="mailto:Kartikp.work@gmail.com?subject=Business%20website">Most popular</a></div>
-    <div class="p"><h3>Pro</h3><div class="amt">$1,990</div><div class="note">One-off build</div>
-      <ul><li>Everything in Business</li><li>Online payments (Stripe)</li><li>Registrations, menus or shop</li><li>Up to 10 pages</li></ul>
-      <a class="btn o" href="mailto:Kartikp.work@gmail.com?subject=Pro%20website">Get started</a></div>
+<!-- INCLUDED -->
+<section id="included">
+  <div class="wrap">
+    <span class="kicker">What's included</span>
+    <h2>Every Swoop Sites website comes with</h2>
+    <p class="lead">No matter which package you choose, these come as standard. I also write the words for you, based on what you tell me about your business.</p>
+    <ul class="incl">
+      <li><span class="tick"><svg aria-hidden="true"><use href="#ok"/></svg></span><div><b>Mobile-first design</b><span>Designed for phones first, then scaled up so it also looks great on tablets and computers.</span></div></li>
+      <li><span class="tick"><svg aria-hidden="true"><use href="#ok"/></svg></span><div><b>Fast hosting</b><span>Lightweight pages on fast, modern hosting so your site loads quickly.</span></div></li>
+      <li><span class="tick"><svg aria-hidden="true"><use href="#ok"/></svg></span><div><b>HTTPS (the padlock)</b><span>Set up from day one, so browsers never show "Not secure".</span></div></li>
+      <li><span class="tick"><svg aria-hidden="true"><use href="#ok"/></svg></span><div><b>Contact, booking or quote forms</b><span>The right form for your business, tested to make sure enquiries reach your inbox.</span></div></li>
+      <li><span class="tick"><svg aria-hidden="true"><use href="#ok"/></svg></span><div><b>Google basics</b><span>Page titles and descriptions, Google Search Console set up, and a link to your Google Business Profile.</span></div></li>
+      <li><span class="tick"><svg aria-hidden="true"><use href="#ok"/></svg></span><div><b>Click-to-call</b><span>One tap on a phone and they're calling you. Same for email and directions.</span></div></li>
+      <li><span class="tick"><svg aria-hidden="true"><use href="#ok"/></svg></span><div><b>Simple analytics</b><span>See how many people visit and which pages they look at.</span></div></li>
+      <li><span class="tick"><svg aria-hidden="true"><use href="#ok"/></svg></span><div><b>You own your domain</b><span>Your domain is registered in your name. Your content and your site are yours.</span></div></li>
+      <li><span class="tick"><svg aria-hidden="true"><use href="#ok"/></svg></span><div><b>Words written for you</b><span>Clear, friendly copy. No homework, just answer a few questions by email.</span></div></li>
+    </ul>
   </div>
-  <div class="care">
-    <div><b>Care Basic · $99/mo</b><span>Hosting, HTTPS, daily backups, updates, uptime monitoring, 30 min of edits</span></div>
-    <div><b>Care Plus · $179/mo</b><span>Basic + monthly security report, email protection, 1 hour of edits</span></div>
-    <div><b>Care Pro · $249/mo</b><span>Plus + bookings/payments managed, priority support</span></div>
+</section>
+
+<!-- SECURITY -->
+<section class="sec" id="security">
+  <div class="wrap">
+    <span class="kicker">Security, looked after</span>
+    <h2>Built by someone who studied cybersecurity</h2>
+    <p class="lead">I hold a Master of Cybersecurity from La Trobe University. That doesn't make any website unbreakable, but it does mean security is part of how every site is set up and looked after, not an afterthought.</p>
+    <div class="sec-grid">
+      <div class="sec-card"><h3>Monthly security checks</h3><p>A regular look over your site: HTTPS, software versions, forms and anything unusual, with a short plain-English report.</p><span class="plan">Care Plus &amp; Care Pro</span></div>
+      <div class="sec-card"><h3>Email protection</h3><p>SPF, DKIM and DMARC set up for your domain. These help stop scammers sending fake emails pretending to be you, and help your real emails land in inboxes.</p><span class="plan">Care Plus &amp; Care Pro</span></div>
+      <div class="sec-card"><h3>Backups</h3><p>Daily backups, so if something goes wrong your site can be restored.</p><span class="plan">All care plans</span></div>
+      <div class="sec-card"><h3>Updates</h3><p>Software kept up to date, which closes off many of the common ways small sites get broken into.</p><span class="plan">All care plans</span></div>
+      <div class="sec-card"><h3>Uptime monitoring</h3><p>Your site is monitored, so if it goes down I find out and can start fixing it, often before you notice.</p><span class="plan">All care plans</span></div>
+      <div class="sec-card"><h3>HTTPS, always</h3><p>Every site gets HTTPS from day one, and it's kept valid as part of care.</p><span class="plan">Every site</span></div>
+    </div>
+    <p class="honest">To be upfront: no one can promise a site will never have a problem. What I can promise is that the basics are done properly, checked regularly, and that you'll hear from me if something needs attention.</p>
   </div>
-</div></section>
+</section>
 
-<section class="work" id="how"><div class="wrap">
-  <div class="kicker">How it works</div>
-  <h2>From first email to live site in about 2 weeks</h2>
-  <div class="steps">
-    <div class="s"><b>1</b><h3>Free mockup</h3><p>We design a homepage concept for your business. Free, no obligation.</p></div>
-    <div class="s"><b>2</b><h3>Agree the plan</h3><p>Pick a package. Fixed price, agreed in writing.</p></div>
-    <div class="s"><b>3</b><h3>We build it</h3><p>We write, design and build. You check it on your phone.</p></div>
-    <div class="s"><b>4</b><h3>Go live &amp; relax</h3><p>We launch it and look after it every month.</p></div>
+<!-- PRICING -->
+<section id="pricing">
+  <div class="wrap">
+    <span class="kicker">Packages &amp; pricing</span>
+    <h2>Simple, fixed prices. No surprises.</h2>
+    <p class="lead">Every price is fixed and agreed in writing before any work starts. Pick a one-off build, or a lower build price with monthly care. Prices in AUD.</p>
+
+    <div class="founding">
+      <span class="badge">20% off</span>
+      <span><b>Founding client offer:</b> the first 3 clients get 20% off the build price, in exchange for an honest Google review (and permission to show your site as an example) once you're happy with it.</span>
+    </div>
+
+    <div class="plans">
+      <article class="plan-card">
+        <h3>Starter</h3>
+        <p class="for">A solid, simple site to get you found and contacted.</p>
+        <div class="amt">$990 <small>one-off</small></div>
+        <p class="amt-note">Pay once. Add a care plan any time if you'd like hosting and upkeep handled.</p>
+        <ul class="feat">
+          <li>3 to 5 page, mobile-first website</li>
+          <li>Domain, HTTPS and email setup</li>
+          <li>Contact / enquiry form</li>
+          <li>Google Business Profile setup</li>
+          <li>Google basics &amp; click-to-call</li>
+          <li>Words written for you</li>
+        </ul>
+        <a class="btn btn-ghost" href="mailto:Kartikp.work@gmail.com?subject=Starter%20website%20enquiry">Ask about Starter</a>
+      </article>
+
+      <article class="plan-card pop">
+        <span class="flag">Most popular</span>
+        <h3>Business</h3>
+        <p class="for">A lower upfront cost, with your site looked after every month.</p>
+        <div class="amt">$490 <small>build</small></div>
+        <p class="amt-note"><b style="color:var(--ink)">+ Care Plus $179/mo</b> on a 12-month plan</p>
+        <ul class="feat">
+          <li>Everything in Starter</li>
+          <li>Online booking or quote form</li>
+          <li>Hosting, HTTPS, daily backups &amp; updates</li>
+          <li>Uptime monitoring</li>
+          <li>Monthly security check &amp; report</li>
+          <li>Email protection (SPF, DKIM, DMARC)</li>
+          <li>Up to 1 hour of edits every month</li>
+        </ul>
+        <a class="btn btn-primary" href="mailto:Kartikp.work@gmail.com?subject=Business%20package%20enquiry">Ask about Business</a>
+      </article>
+
+      <article class="plan-card">
+        <h3>Pro</h3>
+        <p class="for">For businesses that take payments, registrations or orders online.</p>
+        <div class="amt">$1,990 <small>one-off</small></div>
+        <p class="amt-note">Pay once. Add a care plan any time.</p>
+        <ul class="feat">
+          <li>All Business site features</li>
+          <li>Online payments (Stripe)</li>
+          <li>Registrations, menus or a small shop</li>
+          <li>Up to 10 pages</li>
+          <li>Booking or quote forms</li>
+          <li>Words written for you</li>
+        </ul>
+        <a class="btn btn-ghost" href="mailto:Kartikp.work@gmail.com?subject=Pro%20website%20enquiry">Ask about Pro</a>
+      </article>
+    </div>
+
+    <h3 class="sub-h" id="care">Monthly care plans</h3>
+    <p class="lead" style="margin-top:8px">Care plans keep your site online, secure and up to date, and cover small changes you email through. Billed monthly from the day your site goes live.</p>
+    <div class="care-grid">
+      <div class="care">
+        <div class="top"><h4>Care Basic</h4><span class="p">$99<small>/mo</small></span></div>
+        <ul class="feat">
+          <li>Hosting</li>
+          <li>HTTPS kept valid</li>
+          <li>Daily backups</li>
+          <li>Software updates</li>
+          <li>Uptime monitoring</li>
+          <li>Up to 30 minutes of edits a month</li>
+        </ul>
+      </div>
+      <div class="care" style="border:2px solid var(--teal)">
+        <div class="top"><h4>Care Plus</h4><span class="p">$179<small>/mo</small></span></div>
+        <ul class="feat">
+          <li>Everything in Basic</li>
+          <li>Monthly security check &amp; report</li>
+          <li>Email protection (SPF, DKIM, DMARC)</li>
+          <li>Up to 1 hour of edits a month</li>
+        </ul>
+      </div>
+      <div class="care">
+        <div class="top"><h4>Care Pro</h4><span class="p">$249<small>/mo</small></span></div>
+        <ul class="feat">
+          <li>Everything in Plus</li>
+          <li>Bookings &amp; payments managed for you</li>
+          <li>Priority support</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fixup">
+      <div>
+        <h3>Already have a website? Fix it up instead.</h3>
+        <p>Not every site needs a rebuild. For a fixed price I'll fix the urgent problems, like setting up HTTPS, updating old software, and repairing broken forms and links. Then I look after it on Care Basic so it stays that way. If you later decide on a full new site, the $290 comes off the build price.</p>
+      </div>
+      <div>
+        <div class="amt">$290 <small>fix-up</small></div>
+        <p class="amt-note" style="color:#a9b8cb">+ $99/mo care to keep it secure &amp; updated</p>
+        <a class="btn btn-light" style="margin-top:16px" href="mailto:Kartikp.work@gmail.com?subject=Website%20fix-up%20enquiry&amp;body=Hi%20Kartik%2C%0A%0AOur%20current%20website%20is%3A%20%0A%0AThanks!">Send me your site link</a>
+      </div>
+    </div>
+
+    <div class="price-notes">
+      <span>Prices in AUD.</span>
+      <span>Payment: 50% deposit to start, 50% when your site goes live. Care plans are billed monthly from launch.</span>
+      <span>Domain registration is in your name and paid directly to the registrar.</span>
+    </div>
   </div>
-</div></section>
+</section>
 
-<section class="about" id="about"><div class="wrap">
-  <div class="avatar">KP</div>
-  <div>
-    <div class="kicker" style="color:#6ee7b7">About</div>
-    <h2>Hi, I'm Kartik</h2>
-    <p>I'm a web developer from Noble Park with a Master of Cybersecurity from La Trobe University. I started Swoop Sites because so many great local businesses are hard to find online, or have websites that are slow, outdated or not secure.</p>
-    <p>I build every site myself, keep it secure, and I'm always one email away.</p>
-    <div class="badge-row"><span>Master of Cybersecurity, La Trobe</span><span>Bachelor of IT, RMIT</span><span>Based in Noble Park</span></div>
+<!-- HOW IT WORKS -->
+<section class="cream" id="how">
+  <div class="wrap">
+    <span class="kicker">How it works</span>
+    <h2>From first email to live website in about 2 weeks</h2>
+    <p class="lead">A clear, step-by-step process. You always know what's happening next, and you never pay for anything you haven't seen.</p>
+    <ol class="steps">
+      <li class="hl"><h3>Free homepage mockup <span class="when">Free</span></h3><p>Email me your business name and current website (if you have one). I'll design a homepage mockup so you can see what your new site could look like.</p></li>
+      <li><h3>You say yes</h3><p>If you like it, reply "yes". I'll send a short one-page summary with the package, fixed price, timeline and what I'll need from you.</p></li>
+      <li><h3>50% deposit</h3><p>Pay half to get started, by bank transfer.</p></li>
+      <li><h3>Send your logo &amp; photos</h3><p>Your logo (if you have one), 5 to 10 photos, and anything you'd like changed from the mockup. No logo or photos? We'll work something out.</p></li>
+      <li><h3>Build + private preview</h3><p>I write the words, build the site and send you a private preview link to check on your own phone.</p></li>
+      <li><h3>Up to 2 rounds of changes</h3><p>Tell me what you'd like changed, by email. Up to two rounds of changes are included.</p></li>
+      <li><h3>Go live on your domain</h3><p>I connect your domain, set up HTTPS and email protection, and your site goes live.</p></li>
+      <li><h3>Final 50%</h3><p>The second half is due once your site is live and you're happy with it.</p></li>
+      <li class="hl"><h3>Monthly care</h3><p>On a care plan, I keep it hosted, backed up, updated and secure, and make the changes you email through.</p></li>
+    </ol>
+
+    <div class="email-box">
+      <div>
+        <h3>Everything by email. No long meetings.</h3>
+        <p>You don't need to sit through calls or learn anything technical. Send things when it suits you, and I'll reply with clear next steps. Prefer to talk it through? A quick call is fine too, just ask.</p>
+      </div>
+      <div><a class="btn btn-dark" href="mailto:Kartikp.work@gmail.com?subject=Question%20about%20a%20website">Email a question</a></div>
+    </div>
   </div>
-</div></section>
+</section>
 
-<section><div class="wrap">
-  <div class="kicker">FAQ</div>
-  <h2>Questions people ask</h2>
-  <div class="faq">
-    <details><summary>Do I own my website and domain?</summary><p>Yes. Your domain is registered in your name and your content is yours.</p></details>
-    <details><summary>What's included in a care plan?</summary><p>Hosting, HTTPS, daily backups, software updates, uptime monitoring and a set amount of edits each month. Higher plans add a monthly security report and email protection.</p></details>
-    <details><summary>Do I have to get on calls?</summary><p>No. Everything can be done by email, at your own pace. If you'd prefer a quick chat, that's fine too.</p></details>
-    <details><summary>How long does it take?</summary><p>Most sites go live in 1 to 2 weeks once we have your details.</p></details>
-    <details><summary>Can you fix my existing website instead?</summary><p>Often, yes. Send us the link and we'll tell you honestly whether it's worth fixing or rebuilding.</p></details>
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap two">
+    <div>
+      <span class="kicker">FAQ</span>
+      <h2>Questions people ask</h2>
+      <p class="lead">Can't see your question? Email it to me and I'll answer it in plain English.</p>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Do I own my domain and my website?</summary>
+        <div class="ans"><p>Yes. Your domain is registered in your name and stays yours. The words, photos and content on your site are yours too. If you ever leave, I'll hand everything over.</p></div>
+      </details>
+      <details>
+        <summary>I already have a website. Can you work with it?</summary>
+        <div class="ans"><p>Often, yes. Send me the link and I'll tell you honestly whether it's worth fixing or better to rebuild. The fix-up option is $290 plus $99/mo care, and if you later go for a full rebuild the $290 comes off the build price.</p></div>
+      </details>
+      <details>
+        <summary>How long does it take?</summary>
+        <div class="ans"><p>About 2 weeks from when you say yes, as long as I have your logo, photos and feedback in reasonable time. Bigger Pro sites can take a little longer, and I'll tell you upfront.</p></div>
+      </details>
+      <details>
+        <summary>What do you need from me?</summary>
+        <div class="ans"><p>Your logo (if you have one), 5 to 10 photos of your work, shop or team, a few answers about your business, and access to your domain so I can connect it. I write the words. Everything else is handled by me.</p></div>
+      </details>
+      <details>
+        <summary>Can I edit the website myself?</summary>
+        <div class="ans"><p>Most clients prefer to just email changes through. Care plans include monthly edit time (30 minutes on Basic, 1 hour on Plus and Pro). If you'd like to edit some things yourself, mention it at the start and we'll talk through the options.</p></div>
+      </details>
+      <details>
+        <summary>What happens if I cancel my care plan?</summary>
+        <div class="ans"><p>You keep your domain and your content. I'll give you your site files and help you move it to hosting of your choice. From then on, hosting, updates, backups and security are up to you.</p><p>The Business package's lower $490 build price comes with a 12-month Care Plus plan. After the 12 months, you can keep going, switch plans or stop.</p></div>
+      </details>
+      <details>
+        <summary>How much does hosting cost?</summary>
+        <div class="ans"><p>On any care plan, hosting is included. With a one-off Starter or Pro build and no care plan, you look after hosting yourself (I can point you to good options). Either way, your domain name renews yearly and is paid directly to the registrar in your name.</p></div>
+      </details>
+      <details>
+        <summary>Will I be number one on Google?</summary>
+        <div class="ans"><p>No one can honestly guarantee Google rankings, and you should be wary of anyone who does. What I do is get the basics right: page titles and descriptions, a fast mobile site, Google Search Console, and a link to your Google Business Profile. That gives Google what it needs to understand what you do and where.</p></div>
+      </details>
+      <details>
+        <summary>How do I pay?</summary>
+        <div class="ans"><p>50% deposit to start and 50% when your site goes live, by bank transfer. Care plans are billed monthly from launch. All prices are fixed and agreed in writing first.</p></div>
+      </details>
+      <details>
+        <summary>What areas do you cover?</summary>
+        <div class="ans"><p>I'm based in Noble Park and work with businesses across south-east Melbourne, including Dandenong, Springvale, Keysborough, Clayton, Mulgrave, Narre Warren, Berwick and Cranbourne. Because everything can be done by email, I can help businesses further away too.</p></div>
+      </details>
+    </div>
   </div>
-</div></section>
+</section>
 
-<section class="contact"><div class="wrap">
-  <h2>Want to see what your site could look like?</h2>
-  <p class="lead">Email your business name and current website (if you have one), and we'll send you a free homepage mockup.</p>
-  <a class="btn" href="mailto:Kartikp.work@gmail.com?subject=Free%20website%20mockup">Kartikp.work@gmail.com</a>
-</div></section>
+<!-- ABOUT -->
+<section class="alt" id="about">
+  <div class="wrap about-grid">
+    <div class="about-card">
+      <div class="mono" aria-hidden="true">KP</div>
+      <h3>Kartik Panikar</h3>
+      <dl>
+        <div><dt>Role</dt><dd>Founder, web developer</dd></div>
+        <div><dt>Based in</dt><dd>Noble Park, VIC</dd></div>
+        <div><dt>Study</dt><dd>Master of Cybersecurity, La Trobe University<br>Bachelor of IT, RMIT</dd></div>
+        <div><dt>Contact</dt><dd><a href="mailto:Kartikp.work@gmail.com">Kartikp.work@gmail.com</a></dd></div>
+      </dl>
+    </div>
+    <div class="about-text">
+      <span class="kicker">About</span>
+      <h2>Hi, I'm Kartik</h2>
+      <p>I'm a web developer based in Noble Park, with a Master of Cybersecurity from La Trobe University. I build and look after websites for local businesses in south-east Melbourne.</p>
+      <p>I started Swoop Sites because so many great local businesses are hard to find online, or are stuck with websites that are slow, outdated or showing "Not secure". Those are fixable problems, and fixing them properly is something I genuinely enjoy.</p>
+      <p>I build every site myself and look after it myself. When you email, you get me, not a call centre or a ticket number. I keep things simple, explain them in plain English, and tell you honestly if something isn't worth doing.</p>
+    </div>
+  </div>
+</section>
 
-<footer><div class="wrap"><div>© 2026 Swoop Sites · Noble Park, VIC</div><div>Fast, secure websites for local businesses</div></div></footer>
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="kicker">Get in touch</span>
+      <h2>Want to see what your website could look like?</h2>
+      <p class="lead">Ask for a free homepage mockup. It costs nothing, and you're under no obligation.</p>
+      <h3 style="font-size:18px;margin-top:30px">Service area</h3>
+      <ul class="areas" aria-label="Suburbs served">
+        <li class="home">Noble Park</li><li>Noble Park North</li><li>Dandenong</li><li>Springvale</li><li>Keysborough</li><li>Clayton</li><li>Mulgrave</li><li>Wheelers Hill</li><li>Rowville</li><li>Doveton</li><li>Hallam</li><li>Endeavour Hills</li><li>Narre Warren</li><li>Berwick</li><li>Cranbourne</li><li>Dingley Village</li><li>Oakleigh</li><li>Glen Waverley</li><li>and nearby</li>
+      </ul>
+    </div>
+    <div class="contact-card">
+      <h3>Email me</h3>
+      <a class="mail" href="mailto:Kartikp.work@gmail.com?subject=Free%20homepage%20mockup%20request">Kartikp.work@gmail.com</a>
+      <ol>
+        <li>Your business name</li>
+        <li>Your current website, if you have one</li>
+        <li>What you do and the suburb you're in</li>
+      </ol>
+      <a class="btn btn-primary" style="width:100%" href="mailto:Kartikp.work@gmail.com?subject=Free%20homepage%20mockup%20request&amp;body=Hi%20Kartik%2C%0A%0ABusiness%20name%3A%20%0ACurrent%20website%20(if%20any)%3A%20%0AWhat%20we%20do%20%2F%20suburb%3A%20%0A%0AThanks!">
+        <svg aria-hidden="true"><use href="#mail"/></svg>Get a free mockup
+      </a>
+      <p style="margin-top:14px;font-size:14px;color:var(--sub)">Noble Park, VIC &middot; I reply by email, usually within a day.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="brand" href="#top" aria-label="Swoop Sites, back to top">
+        <svg aria-hidden="true"><use href="#mark"/></svg>
+        <span>Swoop <em>Sites</em></span>
+      </a>
+      <p style="margin-top:12px;max-width:380px">Fast, secure websites and monthly website care for local businesses in Noble Park and south-east Melbourne.</p>
+      <p style="margin-top:10px"><a class="mail" href="mailto:Kartikp.work@gmail.com">Kartikp.work@gmail.com</a></p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="#problems">What we fix</a>
+      <a href="#included">What's included</a>
+      <a href="#security">Security</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#care">Care plans</a>
+      <a href="#how">How it works</a>
+      <a href="#faq">FAQ</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="legal" style="grid-column:1/-1">
+      <span>&copy; 2026 Swoop Sites &middot; Noble Park, VIC</span>
+      <span>Prices in AUD</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mbar" role="region" aria-label="Quick contact">
+  <span><b>Free homepage mockup</b>No obligation</span>
+  <a class="btn btn-primary" href="mailto:Kartikp.work@gmail.com?subject=Free%20homepage%20mockup%20request">
+    <svg aria-hidden="true"><use href="#mail"/></svg>Email us
+  </a>
+</div>
 </body>
 </html>
