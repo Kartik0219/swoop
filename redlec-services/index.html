@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Redlec Services | Electrician in Blackburn &amp; Melbourne's East (concept)</title>
+<meta name="description" content="Domestic, commercial and industrial electrical contractors based in Blackburn. Rewiring, switchboards, solar, security, safety switches and cabling. 12 month workmanship warranty. Call 0438 220 075.">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root { --red:#e0301e; --red2:#b8200f; --yellow:#ffd60a; --ink:#1a1a1a; --sub:#5a5a5a; --line:#ececec; --bg:#fafafa; --dark:#1a1a1a; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { overflow-x: hidden; }
+  body { font-family: Inter, system-ui, sans-serif; color: var(--ink); line-height: 1.6; background: #fff; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+  .concept { background: #000; color: #ddd; font-size: 13px; text-align: center; padding: 8px 16px; }
+  .concept b { color: var(--yellow); }
+  .top { background: var(--yellow); font-weight: 600; font-size: 14px; text-align: center; padding: 8px 16px; }
+  .top a { text-decoration: underline; font-weight: 700; }
+  header { background: #fff; position: sticky; top: 0; z-index: 10; border-bottom: 1px solid var(--line); }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 16px; }
+  .logo { font-family: Outfit, sans-serif; font-weight: 800; font-size: 30px; color: var(--red); font-style: italic; letter-spacing: -.02em; line-height: 1; position: relative; }
+  .logo small { display: block; font-style: normal; font-size: 11px; letter-spacing: .3em; color: var(--ink); font-weight: 600; text-align: right; margin-top: 2px; }
+  nav { display: flex; gap: 24px; font-weight: 500; font-size: 15px; color: var(--sub); }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--red); color: #fff; font-family: Outfit, sans-serif; font-weight: 700; padding: 13px 22px; border-radius: 10px; font-size: 16px; border: 0; cursor: pointer; white-space: nowrap; }
+  .btn.y { background: var(--yellow); color: var(--ink); }
+  .btn.o { background: #fff; color: var(--ink); border: 2px solid var(--ink); }
+  .hero { position: relative; overflow: hidden; background: #fff; }
+  .hero::after { content: ""; position: absolute; right: -120px; top: -60px; width: 620px; height: 620px; background: var(--red); transform: rotate(14deg); border-radius: 40px; z-index: 0; }
+  .hero .wrap { position: relative; z-index: 1; display: grid; grid-template-columns: 1.1fr 1fr; gap: 30px; align-items: center; padding: 64px 20px 76px; }
+  .tag { display: inline-flex; gap: 6px; flex-wrap: wrap; }
+  .tag span { background: var(--ink); color: #fff; font-family: Outfit, sans-serif; font-weight: 600; font-size: 12px; letter-spacing: .14em; padding: 5px 10px; border-radius: 4px; }
+  h1 { font-family: Outfit, sans-serif; font-size: 56px; line-height: 1.02; letter-spacing: -.02em; margin: 18px 0; }
+  h1 span { color: var(--red); }
+  .hero p { color: var(--sub); font-size: 18px; max-width: 500px; }
+  .cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; }
+  .badge { background: #fff; border-radius: 22px; padding: 26px; box-shadow: 0 30px 60px rgba(0,0,0,.25); max-width: 380px; justify-self: center; width: 100%; }
+  .badge svg { width: 100%; height: auto; display: block; }
+  .badge .row { display: flex; justify-content: space-between; gap: 10px; margin-top: 16px; font-weight: 600; font-size: 14px; }
+  .badge .row b { font-family: Outfit, sans-serif; font-size: 22px; color: var(--red); display: block; }
+  section { padding: 76px 0; }
+  .kicker { color: var(--red); font-weight: 700; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; }
+  h2 { font-family: Outfit, sans-serif; font-size: 40px; line-height: 1.08; margin-top: 6px; letter-spacing: -.01em; }
+  .lead { color: var(--sub); font-size: 17px; margin-top: 10px; max-width: 640px; }
+  .svc { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; margin-top: 32px; }
+  .s { border: 1px solid var(--line); border-radius: 14px; padding: 20px; background: var(--bg); transition: .2s; }
+  .s:hover { border-color: var(--red); }
+  .s .ic { font-size: 26px; }
+  .s h3 { font-family: Outfit, sans-serif; font-size: 17px; margin-top: 8px; line-height: 1.25; }
+  .feat { background: var(--dark); color: #fff; }
+  .feat .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .fcard { background: #262626; border-radius: 18px; padding: 28px; border-top: 5px solid var(--yellow); }
+  .fcard.r { border-top-color: var(--red); }
+  .fcard h3 { font-family: Outfit, sans-serif; font-size: 26px; }
+  .fcard p { color: #c6c6c6; margin-top: 8px; }
+  .fcard ul { margin: 12px 0 0 18px; color: #e2e2e2; }
+  .diff { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; margin-top: 30px; }
+  .d { padding: 22px; border-radius: 14px; background: #fff4f2; }
+  .d b { font-family: Outfit, sans-serif; font-size: 19px; display: block; color: var(--red2); }
+  .d span { color: var(--sub); font-size: 15px; }
+  .warranty { margin-top: 30px; display: flex; gap: 18px; align-items: center; background: var(--yellow); border-radius: 18px; padding: 24px 26px; }
+  .warranty .big { font-family: Outfit, sans-serif; font-weight: 800; font-size: 46px; line-height: 1; }
+  .warranty p { font-weight: 500; }
+  .areas { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+  .areas span { border: 1px solid var(--line); border-radius: 30px; padding: 6px 14px; font-size: 14px; font-weight: 500; background: #fff; }
+  .areas span.hl { background: var(--red); color: #fff; border-color: var(--red); }
+  .contact { background: var(--bg); }
+  .contact .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .contact table { width: 100%; border-collapse: collapse; margin-top: 18px; font-size: 15px; }
+  .contact td { padding: 11px 0; border-bottom: 1px solid #e0e0e0; vertical-align: top; }
+  .contact td:last-child { text-align: right; font-weight: 600; }
+  form { background: #fff; border-radius: 18px; padding: 26px; border: 1px solid var(--line); }
+  input, select, textarea { width: 100%; padding: 12px; margin-top: 10px; border: 1px solid #ddd; border-radius: 10px; font: inherit; background: var(--bg); }
+  form .btn { width: 100%; margin-top: 14px; }
+  .thanks { display: none; text-align: center; padding: 40px 10px; }
+  .thanks b { display: block; font-family: Outfit, sans-serif; font-size: 24px; margin-bottom: 6px; }
+  footer { background: var(--dark); color: #a8a8a8; padding: 28px 0; font-size: 14px; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .callbar { display: none; }
+  @media (max-width: 900px) {
+    nav, header .btn { display: none; }
+    .hero::after { width: 420px; height: 420px; right: -200px; top: auto; bottom: -140px; }
+    .hero .wrap, .feat .wrap, .contact .wrap { grid-template-columns: 1fr; }
+    .hero .wrap { padding: 40px 20px 56px; }
+    h1 { font-size: 40px; } h2 { font-size: 30px; }
+    .svc { grid-template-columns: 1fr 1fr; }
+    .diff { grid-template-columns: 1fr 1fr; }
+    section { padding: 54px 0; }
+    .callbar { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 20; }
+    .callbar a { flex: 1; text-align: center; padding: 15px; font-family: Outfit, sans-serif; font-weight: 700; }
+    .callbar a:first-child { background: var(--red); color: #fff; } .callbar a:last-child { background: var(--yellow); color: var(--ink); }
+    footer { padding-bottom: 84px; }
+  }
+  @media (max-width: 480px) { .diff { grid-template-columns: 1fr; } h1 { font-size: 35px; } .warranty { flex-direction: column; align-items: flex-start; } }
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Redlec Services. This is a design preview, not the live website.</div>
+<div class="top">⚡ 24 hour, 7 day emergency call-out. <a href="tel:0438220075">Call 0438 220 075</a></div>
+<header><div class="wrap">
+  <div class="logo">Redlec<small>SERVICES</small></div>
+  <nav><a href="#services">Services</a><a href="#solar">Solar &amp; rewiring</a><a href="#difference">Why Redlec</a><a href="#contact">Contact</a></nav>
+  <a class="btn" href="tel:0438220075">📞 0438 220 075</a>
+</div></header>
+
+<section class="hero" style="padding:0"><div class="wrap">
+  <div>
+    <div class="tag"><span>DOMESTIC</span><span>COMMERCIAL</span><span>INDUSTRIAL</span></div>
+    <h1>Blackburn's electricians, <span>for over 15 years.</span></h1>
+    <p>Redlec Services supplies electrical services to businesses and households across Melbourne's eastern suburbs. A team of qualified electricians and apprentices who attend to even the smallest details.</p>
+    <div class="cta"><a class="btn" href="tel:0438220075">📞 Call 0438 220 075</a><a class="btn o" href="#contact">Request a quote</a></div>
+  </div>
+  <div class="badge" aria-hidden="true">
+    <svg viewBox="0 0 320 180">
+      <rect x="10" y="10" width="300" height="160" rx="14" fill="#1a1a1a"/>
+      <g fill="#333"><rect x="30" y="34" width="34" height="56" rx="4"/><rect x="72" y="34" width="34" height="56" rx="4"/><rect x="114" y="34" width="34" height="56" rx="4"/><rect x="156" y="34" width="34" height="56" rx="4"/><rect x="198" y="34" width="34" height="56" rx="4"/><rect x="240" y="34" width="50" height="56" rx="4"/></g>
+      <g fill="#ffd60a"><rect x="41" y="42" width="12" height="18" rx="2"/><rect x="83" y="42" width="12" height="18" rx="2"/><rect x="125" y="42" width="12" height="18" rx="2"/><rect x="167" y="42" width="12" height="18" rx="2"/><rect x="209" y="42" width="12" height="18" rx="2"/></g>
+      <rect x="252" y="42" width="26" height="18" rx="2" fill="#e0301e"/>
+      <g stroke="#e0301e" stroke-width="4" fill="none" stroke-linecap="round"><path d="M47 90 V130 H100"/><path d="M131 90 V140 H200"/><path d="M265 90 V130 H230"/></g>
+      <path d="M160 108 l-12 22 h12 l-6 20 l20 -28 h-12 l6 -14 z" fill="#ffd60a"/>
+    </svg>
+    <div class="row"><div><b>15+ yrs</b>experience</div><div><b>12 mth</b>warranty</div><div><b>24/7</b>emergency</div></div>
+  </div>
+</div></section>
+
+<section id="services"><div class="wrap">
+  <div class="kicker">Services we offer</div>
+  <h2>We can assist with all electrical matters</h2>
+  <p class="lead">From a single smoke alarm to a full house rewire.</p>
+  <div class="svc">
+    <div class="s"><div class="ic">🏠</div><h3>Rewiring, repairs &amp; renovations</h3></div>
+    <div class="s"><div class="ic">🔥</div><h3>Heating installations &amp; repairs</h3></div>
+    <div class="s"><div class="ic">☀️</div><h3>Solar systems</h3></div>
+    <div class="s"><div class="ic">🚨</div><h3>Security lights &amp; alarms</h3></div>
+    <div class="s"><div class="ic">♨️</div><h3>Hot water repairs</h3></div>
+    <div class="s"><div class="ic">🔍</div><h3>Safety inspections</h3></div>
+    <div class="s"><div class="ic">🔔</div><h3>Smoke alarms</h3></div>
+    <div class="s"><div class="ic">📞</div><h3>Phone &amp; broadband cabling</h3></div>
+    <div class="s"><div class="ic">🎛️</div><h3>Switchboard upgrades &amp; repairs</h3></div>
+    <div class="s"><div class="ic">🛡️</div><h3>Safety switch installations</h3></div>
+    <div class="s"><div class="ic">🍳</div><h3>Stove, oven &amp; hotplate installs</h3></div>
+    <div class="s"><div class="ic">💻</div><h3>Computer cabling</h3></div>
+  </div>
+</div></section>
+
+<section class="feat" id="solar"><div class="wrap">
+  <div class="fcard">
+    <h3>☀️ Solar systems</h3>
+    <p>We're fully certified to install photovoltaic (PV) solar panels, for homes and commercial buildings. Clean Energy Council accredited. We can also advise on grants and financing options.</p>
+  </div>
+  <div class="fcard r">
+    <h3>🏠 Rewiring</h3>
+    <p>If your house is more than 30 years old it might need rewiring. We can rewire a standard home in around a week, and you'll have power after work hours. Ask about our dust-free wall chasing.</p>
+    <ul><li>Mains and switchboard upgrade</li><li>Earthing system upgrade</li><li>New power outlets, switches and light fittings</li><li>Removal of all old wiring and fittings</li></ul>
+  </div>
+</div></section>
+
+<section id="difference"><div class="wrap">
+  <div class="kicker">Notice the difference</div>
+  <h2>Why customers choose Redlec</h2>
+  <div class="diff">
+    <div class="d"><b>Punctuality</b><span>We make every effort to be on time, and if we're going to be late, we'll always call.</span></div>
+    <div class="d"><b>Respect &amp; tidiness</b><span>We treat your property with care, work neatly and clean up afterwards.</span></div>
+    <div class="d"><b>Efficiency</b><span>We aim to do the job right the first time.</span></div>
+    <div class="d"><b>Emergencies</b><span>A 24 hour, 7 day emergency call-out service.</span></div>
+  </div>
+  <div class="warranty"><div class="big">12</div><p><b>Month workmanship warranty.</b> We guarantee our workmanship for 12 months, and pass on manufacturer's warranties for any parts we supply and install.</p></div>
+  <div class="kicker" style="margin-top:44px">Locations serviced</div>
+  <div class="areas"><span class="hl">Blackburn</span><span>Box Hill</span><span>Vermont</span><span>Vermont South</span><span>Mitcham</span><span>Forest Hill</span><span>Doncaster</span><span>Donvale</span><span>Templestowe</span><span>Balwyn</span><span>Camberwell</span><span>Canterbury</span><span>Surrey Hills</span><span>Mont Albert</span><span>Ashwood</span><span>Bennettswood</span><span>Heathmont</span><span>Bayswater</span><span>Boronia</span><span>Wantirna</span><span>Ferntree Gully</span><span>Knoxfield</span><span>Rowville</span><span>Scoresby</span><span>Mulgrave</span><span>Wheelers Hill</span><span>Malvern</span><span>Park Orchards</span><span>Warrandyte</span><span>Warranwood</span><span>Upwey-Tecoma</span></div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <div>
+    <div class="kicker">Contact</div>
+    <h2>Talk to an electrician</h2>
+    <table>
+      <tr><td>Phone</td><td><a href="tel:0438220075">0438 220 075</a></td></tr>
+      <tr><td>Email</td><td><a href="mailto:info@redlecservices.com.au">info@redlecservices.com.au</a></td></tr>
+      <tr><td>Based in</td><td>Blackburn VIC 3130</td></tr>
+      <tr><td>Emergencies</td><td>24 hours, 7 days</td></tr>
+    </table>
+  </div>
+  <form onsubmit="event.preventDefault();this.querySelector('.fields').style.display='none';this.querySelector('.thanks').style.display='block'">
+    <div class="fields">
+      <h3 style="font-family:Outfit,sans-serif;font-size:22px">Request a quote</h3>
+      <select><option>Rewiring / renovation</option><option>Switchboard upgrade</option><option>Solar system</option><option>Security lights / alarms</option><option>Smoke alarms</option><option>Safety inspection</option><option>Phone / data cabling</option><option>Something else</option></select>
+      <input placeholder="Your name" required><input placeholder="Mobile" type="tel" required>
+      <input placeholder="Suburb">
+      <textarea rows="3" placeholder="Tell us about the job"></textarea>
+      <button class="btn" type="submit">Send request</button>
+    </div>
+    <div class="thanks"><b>Thanks, request received!</b>We'll be in touch shortly. For emergencies, call 0438 220 075.</div>
+  </form>
+</div></section>
+
+<footer><div class="wrap"><div>© 2026 Redlec Services · Electrical contractors · Blackburn VIC 3130</div><div>Concept design by Swoop Sites</div></div></footer>
+<div class="callbar"><a href="tel:0438220075">📞 Call</a><a href="#contact">Get a quote</a></div>
+</body>
+</html>

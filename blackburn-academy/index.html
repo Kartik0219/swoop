@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>The Blackburn Academy | Music Lessons in Blackburn: Drums, Piano, Vocals, Guitar (concept)</title>
+<meta name="description" content="One on one music lessons in Blackburn: drums, piano, vocals, guitar, bass, violin, saxophone, clarinet and more. 30 minute lessons $44. Practice rooms for hire. Call 0402 552 216.">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root { --plum:#2b1640; --plum2:#3d2059; --gold:#f2b134; --coral:#ff6b5a; --cream:#fdf8ef; --ink:#2b1640; --sub:#6a5a78; --line:#ece3d4; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { overflow-x: hidden; }
+  body { font-family: 'DM Sans', system-ui, sans-serif; color: var(--ink); line-height: 1.6; background: var(--cream); }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  .concept { background: #111; color: #ddd; font-size: 13px; text-align: center; padding: 8px 16px; }
+  .concept b { color: var(--gold); }
+  header { background: var(--plum); color: #fff; position: sticky; top: 0; z-index: 10; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 70px; gap: 16px; }
+  .logo { font-family: 'DM Serif Display', serif; font-size: 24px; line-height: 1; }
+  .logo small { display: block; font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom: 3px; }
+  nav { display: flex; gap: 24px; font-weight: 500; font-size: 15px; color: #d7c8e6; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--gold); color: var(--plum); font-weight: 700; padding: 13px 22px; border-radius: 40px; font-size: 15px; border: 0; cursor: pointer; font-family: inherit; white-space: nowrap; }
+  .btn.o { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,.35); }
+  .btn.p { background: var(--plum); color: #fff; }
+  .hero { background: var(--plum); color: #fff; position: relative; overflow: hidden; }
+  .hero .wrap { display: grid; grid-template-columns: 1.15fr 1fr; gap: 40px; align-items: center; padding: 60px 20px 80px; position: relative; }
+  .chip { display: inline-block; background: rgba(242,177,52,.15); color: var(--gold); border: 1px solid rgba(242,177,52,.4); border-radius: 30px; padding: 6px 14px; font-size: 13px; font-weight: 700; }
+  h1 { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 60px; line-height: 1.02; margin: 18px 0; }
+  h1 em { color: var(--gold); }
+  .hero p { color: #d7c8e6; font-size: 18px; max-width: 520px; }
+  .cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; }
+  .price { margin-top: 22px; font-size: 15px; color: #d7c8e6; } .price b { color: #fff; font-size: 22px; font-family: 'DM Serif Display', serif; font-weight: 400; }
+  .keys { position: relative; }
+  .keys svg { width: 100%; height: auto; display: block; }
+  .wave { display: block; width: 100%; height: 60px; background: var(--cream); clip-path: ellipse(70% 100% at 50% 100%); margin-top: -60px; position: relative; }
+  section { padding: 76px 0; }
+  .kicker { color: var(--coral); font-weight: 700; font-size: 13px; letter-spacing: .16em; text-transform: uppercase; }
+  h2 { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 42px; line-height: 1.08; margin-top: 6px; }
+  .lead { color: var(--sub); font-size: 17px; margin-top: 10px; max-width: 660px; }
+  .inst { display: grid; grid-template-columns: repeat(5,1fr); gap: 14px; margin-top: 32px; }
+  .i { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 20px 14px; text-align: center; }
+  .i .ic { font-size: 34px; }
+  .i h3 { font-size: 16px; font-weight: 700; margin-top: 6px; }
+  .i span { font-size: 13px; color: var(--sub); }
+  .how { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 28px; }
+  .h { background: var(--plum2); color: #fff; border-radius: 18px; padding: 24px; }
+  .h b { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 22px; display: block; color: var(--gold); }
+  .h span { color: #d7c8e6; font-size: 15px; }
+  .teach { background: #fff; }
+  .tgrid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 30px; }
+  .tg { border: 1px solid var(--line); border-radius: 18px; padding: 22px; background: var(--cream); }
+  .tg h3 { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 22px; }
+  .tg ul { list-style: none; margin-top: 8px; }
+  .tg li { padding: 5px 0; border-bottom: 1px dashed var(--line); font-size: 15px; }
+  .tg li:last-child { border: 0; }
+  .tg li small { color: var(--sub); }
+  .owner { margin-top: 26px; display: flex; gap: 18px; align-items: center; background: var(--plum); color: #fff; border-radius: 18px; padding: 22px 24px; }
+  .owner .av { width: 64px; height: 64px; flex: 0 0 64px; border-radius: 50%; background: var(--gold); color: var(--plum); display: grid; place-items: center; font-family: 'DM Serif Display', serif; font-size: 24px; }
+  .owner p { color: #d7c8e6; font-size: 15px; }
+  .prices .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+  .ptable { background: #fff; border-radius: 18px; border: 1px solid var(--line); overflow: hidden; }
+  .ptable div { display: flex; justify-content: space-between; padding: 14px 22px; border-bottom: 1px solid var(--line); font-weight: 500; }
+  .ptable div:last-child { border: 0; }
+  .ptable div b { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 20px; color: var(--coral); }
+  .rooms { background: var(--gold); border-radius: 18px; padding: 26px; margin-top: 16px; }
+  .rooms h3 { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 26px; }
+  .perk { margin-top: 16px; font-size: 15px; color: var(--sub); }
+  .quotes { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 30px; }
+  .q { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 24px; }
+  .q p { font-size: 16px; }
+  .q p::before { content: "“"; font-family: 'DM Serif Display', serif; font-size: 44px; line-height: 0; color: var(--gold); vertical-align: -18px; margin-right: 4px; }
+  .q span { display: block; margin-top: 12px; font-weight: 700; font-size: 14px; color: var(--sub); }
+  .book { background: var(--plum); color: #fff; }
+  .book .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .book .kicker { color: var(--gold); }
+  .book table { width: 100%; border-collapse: collapse; margin-top: 18px; font-size: 15px; }
+  .book td { padding: 11px 0; border-bottom: 1px solid rgba(255,255,255,.15); vertical-align: top; color: #d7c8e6; }
+  .book td:last-child { text-align: right; font-weight: 700; color: #fff; }
+  form { background: #fff; color: var(--ink); border-radius: 20px; padding: 26px; }
+  input, select, textarea { width: 100%; padding: 12px 14px; margin-top: 10px; border: 1px solid var(--line); border-radius: 12px; font: inherit; background: var(--cream); }
+  form .btn { width: 100%; margin-top: 14px; }
+  .thanks { display: none; text-align: center; padding: 40px 10px; }
+  .thanks b { display: block; font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 26px; margin-bottom: 6px; }
+  footer { background: #1d0e2c; color: #a996bb; padding: 28px 0; font-size: 14px; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .callbar { display: none; }
+  @media (max-width: 900px) {
+    nav, header .btn { display: none; }
+    .hero .wrap, .prices .wrap, .book .wrap { grid-template-columns: 1fr; }
+    .hero .wrap { padding: 40px 20px 70px; }
+    h1 { font-size: 44px; } h2 { font-size: 32px; }
+    .inst { grid-template-columns: repeat(3,1fr); }
+    .how, .tgrid, .quotes { grid-template-columns: 1fr; }
+    section { padding: 54px 0; }
+    .keys { max-width: 360px; }
+    .callbar { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 20; }
+    .callbar a { flex: 1; text-align: center; padding: 15px; font-weight: 700; }
+    .callbar a:first-child { background: var(--plum); color: #fff; } .callbar a:last-child { background: var(--gold); color: var(--plum); }
+    footer { padding-bottom: 84px; }
+  }
+  @media (max-width: 480px) { .inst { grid-template-columns: 1fr 1fr; } h1 { font-size: 38px; } .owner { flex-direction: column; align-items: flex-start; } }
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for The Blackburn Academy. This is a design preview, not the live website.</div>
+<header><div class="wrap">
+  <div class="logo"><small>The</small>Blackburn Academy</div>
+  <nav><a href="#lessons">Lessons</a><a href="#teachers">Teachers</a><a href="#prices">Prices</a><a href="#book">Contact</a></nav>
+  <a class="btn" href="#book">Book a lesson</a>
+</div></header>
+
+<section class="hero" style="padding:0"><div class="wrap">
+  <div>
+    <span class="chip">🎵 Music lessons in the heart of Blackburn</span>
+    <h1>Find your <em>inner musician.</em></h1>
+    <p>One on one lessons in drums, piano, vocals, guitar, bass, violin, saxophone, clarinet and more, with highly experienced teachers. Beginner, intermediate and advanced. In person or online.</p>
+    <div class="cta"><a class="btn" href="#book">Book a lesson</a><a class="btn o" href="tel:0402552216">📞 0402 552 216</a></div>
+    <div class="price">30 minute lessons from <b>$44</b></div>
+  </div>
+  <div class="keys" aria-hidden="true">
+    <svg viewBox="0 0 420 300">
+      <circle cx="300" cy="90" r="70" fill="#3d2059"/>
+      <circle cx="300" cy="90" r="46" fill="none" stroke="#f2b134" stroke-width="6"/>
+      <ellipse cx="300" cy="90" rx="70" ry="18" fill="none" stroke="#ff6b5a" stroke-width="3"/>
+      <path d="M300 160 V230" stroke="#d7c8e6" stroke-width="4"/><path d="M270 240 L300 230 L330 240" stroke="#d7c8e6" stroke-width="4" fill="none"/>
+      <rect x="20" y="170" width="250" height="110" rx="10" fill="#fff"/>
+      <g stroke="#d9cfe3" stroke-width="2"><path d="M51 170 V280"/><path d="M82 170 V280"/><path d="M113 170 V280"/><path d="M144 170 V280"/><path d="M175 170 V280"/><path d="M206 170 V280"/><path d="M237 170 V280"/></g>
+      <g fill="#2b1640"><rect x="40" y="170" width="20" height="64" rx="3"/><rect x="71" y="170" width="20" height="64" rx="3"/><rect x="133" y="170" width="20" height="64" rx="3"/><rect x="164" y="170" width="20" height="64" rx="3"/><rect x="195" y="170" width="20" height="64" rx="3"/></g>
+      <g fill="#f2b134"><circle cx="70" cy="60" r="9"/><path d="M78 60 V14 L112 6 V48" stroke="#f2b134" stroke-width="5" fill="none"/><circle cx="104" cy="50" r="9"/></g>
+      <g fill="#ff6b5a"><circle cx="180" cy="110" r="7"/><path d="M186 110 V76" stroke="#ff6b5a" stroke-width="4"/></g>
+    </svg>
+  </div>
+</div></section>
+<div class="wave"></div>
+
+<section id="lessons" style="padding-top:30px"><div class="wrap">
+  <div class="kicker">Lessons</div>
+  <h2>What would you like to play?</h2>
+  <p class="lead">All lessons are available one on one, in our studios or online via Skype, FaceTime and Zoom. Now in conjunction with A Major Music Academy vocal specialists.</p>
+  <div class="inst">
+    <div class="i"><div class="ic">🥁</div><h3>Drums</h3><span>30 mins · $44</span></div>
+    <div class="i"><div class="ic">🎹</div><h3>Piano</h3><span>30 mins · $44</span></div>
+    <div class="i"><div class="ic">🎤</div><h3>Vocals</h3><span>30 mins · $44</span></div>
+    <div class="i"><div class="ic">🎸</div><h3>Guitar</h3><span>30 mins · $44</span></div>
+    <div class="i"><div class="ic">🎸</div><h3>Bass guitar</h3><span>30 mins · $44</span></div>
+    <div class="i"><div class="ic">🎻</div><h3>Violin</h3><span>30 mins · $44</span></div>
+    <div class="i"><div class="ic">🎷</div><h3>Saxophone</h3><span>30 mins · $44</span></div>
+    <div class="i"><div class="ic">🎶</div><h3>Clarinet</h3><span>30 mins · $44</span></div>
+    <div class="i"><div class="ic">🪘</div><h3>Percussion</h3><span>30 mins · $44</span></div>
+    <div class="i"><div class="ic">🎼</div><h3>Music theory</h3><span>with our vocal teachers</span></div>
+  </div>
+  <div class="how">
+    <div class="h"><b>All levels</b><span>Beginner, intermediate and advanced students welcome.</span></div>
+    <div class="h"><b>A convenient time</b><span>Lessons booked at a time that suits you.</span></div>
+    <div class="h"><b>Treated rooms</b><span>Extra noise reduction, so you can project like you would on stage.</span></div>
+  </div>
+</div></section>
+
+<section class="teach" id="teachers"><div class="wrap">
+  <div class="kicker">Our teachers</div>
+  <h2>Highly experienced and educated</h2>
+  <div class="tgrid">
+    <div class="tg"><h3>🥁 Drums</h3><ul><li>Asier Elias Azpiri</li><li>Caleb Sankey</li><li>Daniel Brates</li><li>James Caddie</li><li>Scott Barton</li><li>Greg Limberis</li><li>Paul Gatt <small>(online lessons only)</small></li></ul></div>
+    <div class="tg"><h3>🎹 Piano</h3><ul><li>Nick Aston</li><li>Suzy Zong</li><li>Jiaqi Sun</li><li>Kaykay Lai</li><li>Roxanne Viggiano</li></ul></div>
+    <div class="tg"><h3>🎤 Vocals &amp; theory</h3><ul><li>Isaac Stott</li><li>Jess Arandall</li><li>Karina Lehman</li></ul></div>
+    <div class="tg"><h3>🎸 Guitar &amp; bass</h3><ul><li>Damien Dixon</li></ul></div>
+    <div class="tg"><h3>🎻 Violin</h3><ul><li>Jeremy Qi</li><li>Kieron Fenner</li></ul></div>
+    <div class="tg"><h3>🎷 Brass &amp; woodwind</h3><ul><li>Nick Aston <small>(saxophone)</small></li></ul></div>
+  </div>
+  <div class="owner"><div class="av">PG</div><div><b>Paul Gatt, owner and drum teacher</b><p>A respected Australian drummer with years of recording and touring credits, and a former colleague and student at Drumtek.</p></div></div>
+</div></section>
+
+<section class="prices" id="prices"><div class="wrap">
+  <div>
+    <div class="kicker">Price list</div>
+    <h2>Simple, flat pricing</h2>
+    <p class="lead">Every instrument is the same price for a 30 minute lesson.</p>
+    <p class="perk">🎁 All students receive discounts at 5 Star Music Ringwood and Billy Hyde Music Nunawading. Ask your teacher.</p>
+  </div>
+  <div>
+    <div class="ptable">
+      <div>Vocals · 30 mins<b>$44</b></div><div>Drums · 30 mins<b>$44</b></div><div>Guitar or bass · 30 mins<b>$44</b></div><div>Piano · 30 mins<b>$44</b></div><div>Saxophone, clarinet or violin · 30 mins<b>$44</b></div>
+    </div>
+    <div class="rooms"><h3>Practice rooms for hire</h3><p>For teachers (with their own students), students, working musicians or anyone needing a teaching or practice space. <b>$25 per hour, capped at $90.</b> Some rooms can include instrument hire.</p></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="kicker">What families say</div>
+  <h2>Kind words from our students</h2>
+  <div class="quotes">
+    <div class="q"><p>Great place and more importantly great teachers that make you want to practice!</p><span>Greg L'Shea</span></div>
+    <div class="q"><p>Perfect location and comfortable environment. Excellent place which is filled with kind and outstanding music teachers.</p><span>Vivian Han</span></div>
+    <div class="q"><p>The teachers here are extremely accommodating, passionate and professional. I have loved every minute of it!</p><span>Sarah DeVries</span></div>
+  </div>
+</div></section>
+
+<section class="book" id="book"><div class="wrap">
+  <div>
+    <div class="kicker">Contact</div>
+    <h2>Book a lesson today</h2>
+    <table>
+      <tr><td>Phone</td><td><a href="tel:0402552216">0402 552 216</a></td></tr>
+      <tr><td>Email</td><td><a href="mailto:theblackburnacademy@gmail.com">theblackburnacademy@gmail.com</a></td></tr>
+      <tr><td>Studio</td><td>161 Whitehorse Road, Blackburn VIC 3130</td></tr>
+      <tr><td>Nearby</td><td>Box Hill, Nunawading, Vermont, Mitcham, Forest Hill, Doncaster, Burwood</td></tr>
+    </table>
+  </div>
+  <form onsubmit="event.preventDefault();this.querySelector('.fields').style.display='none';this.querySelector('.thanks').style.display='block'">
+    <div class="fields">
+      <h3 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:26px">Book a lesson</h3>
+      <select><option>Drums</option><option>Piano</option><option>Vocals</option><option>Guitar</option><option>Bass guitar</option><option>Violin</option><option>Saxophone</option><option>Clarinet</option><option>Percussion</option><option>Practice room hire</option></select>
+      <select><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select>
+      <select><option>In the studio</option><option>Online (Zoom, Skype or FaceTime)</option></select>
+      <input placeholder="Student name" required><input placeholder="Parent / contact phone" type="tel" required>
+      <textarea rows="2" placeholder="Preferred days and times"></textarea>
+      <button class="btn p" type="submit">Request my lesson</button>
+    </div>
+    <div class="thanks"><b>Thanks, request received!</b>We'll be in touch shortly to confirm a time. You can also call 0402 552 216.</div>
+  </form>
+</div></section>
+
+<footer><div class="wrap"><div>© 2026 The Blackburn Academy · 161 Whitehorse Road, Blackburn VIC 3130</div><div>Concept design by Swoop Sites</div></div></footer>
+<div class="callbar"><a href="tel:0402552216">📞 Call</a><a href="#book">Book a lesson</a></div>
+</body>
+</html>
