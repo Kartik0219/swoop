@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Boronia Car Care | European car specialists &amp; mechanic in Boronia (concept)</title>
+<meta name="description" content="Family owned mechanic in Boronia since 2006. European servicing and repairs specialists, logbook servicing, roadworthy certificates, brakes, LPG, A/C and more. Pick up and drop off plus loan cars. 286 Boronia Rd, Boronia.">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --navy:#192551; --navy2:#0f1838; --yellow:#fef202; --amber:#f5c400; --ink:#141a2e; --sub:#5a6278; --line:#e3e6ee; --bg:#f5f6f9; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { overflow-x: hidden; }
+  body { font-family: Inter, system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  .concept { background: #111; color: #ddd; font-size: 13px; text-align: center; padding: 8px 16px; }
+  .concept b { color: var(--yellow); }
+  header { background: var(--navy2); color: #fff; position: sticky; top: 0; z-index: 10; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 16px; }
+  .logo { font-family: Oswald, sans-serif; font-weight: 700; font-size: 24px; letter-spacing: .02em; text-transform: uppercase; display: flex; align-items: center; gap: 10px; line-height: 1; }
+  .logo .badge { background: var(--yellow); color: var(--navy2); width: 40px; height: 40px; border-radius: 8px; display: grid; place-items: center; flex: 0 0 40px; }
+  .logo span { color: var(--yellow); }
+  nav { display: flex; gap: 26px; font-size: 15px; font-weight: 500; color: #c6cce0; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--yellow); color: var(--navy2); font-weight: 700; padding: 13px 22px; border-radius: 6px; font-size: 15px; border: 0; cursor: pointer; font-family: inherit; text-transform: uppercase; letter-spacing: .04em; }
+  .btn.o { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,.35); }
+  .hero { background: linear-gradient(115deg,var(--navy2) 0,var(--navy) 55%,#24356f 100%); color: #fff; position: relative; overflow: hidden; }
+  .hero::after { content: ""; position: absolute; right: -120px; top: 0; bottom: 0; width: 420px; background: repeating-linear-gradient(-55deg, rgba(254,242,2,.08) 0 18px, transparent 18px 36px); }
+  .hero .wrap { position: relative; z-index: 1; display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; padding: 70px 20px 78px; }
+  .tag { display: inline-block; background: var(--yellow); color: var(--navy2); font-weight: 700; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; padding: 6px 12px; border-radius: 4px; }
+  h1 { font-family: Oswald, sans-serif; font-weight: 700; font-size: 60px; line-height: 1.02; text-transform: uppercase; margin: 18px 0; }
+  h1 span { color: var(--yellow); }
+  .hero p { color: #cfd5e8; font-size: 18px; max-width: 540px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+  .perks { display: grid; gap: 12px; }
+  .perk { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14); border-radius: 12px; padding: 18px 20px; display: flex; gap: 14px; align-items: center; }
+  .perk .e { font-size: 28px; }
+  .perk b { display: block; font-family: Oswald, sans-serif; font-size: 20px; letter-spacing: .02em; text-transform: uppercase; }
+  .perk small { color: #b9c1da; font-size: 14px; }
+  .yellowbar { background: var(--yellow); color: var(--navy2); }
+  .yellowbar .wrap { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; padding: 16px 20px; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: .03em; }
+  section { padding: 76px 0; }
+  .kicker { font-weight: 700; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--navy); }
+  .kicker::before { content: ""; display: inline-block; width: 26px; height: 4px; background: var(--yellow); vertical-align: middle; margin-right: 10px; }
+  h2 { font-family: Oswald, sans-serif; font-weight: 700; font-size: 42px; line-height: 1.08; text-transform: uppercase; margin-top: 8px; }
+  .lead { color: var(--sub); font-size: 17px; margin-top: 10px; max-width: 640px; }
+  .svc { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; margin-top: 32px; }
+  .s { background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--yellow); border-radius: 8px; padding: 18px; font-weight: 600; display: flex; gap: 12px; align-items: center; }
+  .s .e { font-size: 22px; }
+  .euro { background: var(--navy2); color: #fff; }
+  .euro .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  .euro p { color: #c6cce0; font-size: 17px; margin-top: 12px; }
+  .euro .kicker { color: var(--yellow); }
+  .stat { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .stat div { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 12px; padding: 22px; }
+  .stat b { display: block; font-family: Oswald, sans-serif; font-size: 40px; color: var(--yellow); line-height: 1.05; }
+  .stat small { color: #c6cce0; font-size: 14px; }
+  .about .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .about p { color: var(--sub); margin-top: 12px; }
+  .book { background: #fff; }
+  .book .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .info { margin-top: 20px; display: grid; gap: 10px; }
+  .info div { border: 1px solid var(--line); border-radius: 10px; padding: 14px 18px; background: var(--bg); }
+  .info small { display: block; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--sub); }
+  form { background: var(--navy2); color: #fff; border-radius: 16px; padding: 26px; }
+  form h3 { font-family: Oswald, sans-serif; font-size: 26px; text-transform: uppercase; }
+  input, select, textarea { width: 100%; padding: 12px 14px; margin-top: 10px; border: 1px solid #33406b; border-radius: 8px; font: inherit; background: #1b2650; color: #fff; }
+  input::placeholder, textarea::placeholder { color: #9aa4c4; }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .check { display: flex; gap: 10px; align-items: center; margin-top: 12px; font-size: 14px; color: #c6cce0; }
+  .check input { width: auto; margin: 0; }
+  form .btn { width: 100%; margin-top: 16px; }
+  .thanks { display: none; text-align: center; padding: 40px 10px; }
+  .thanks b { display: block; font-family: Oswald, sans-serif; font-size: 28px; color: var(--yellow); text-transform: uppercase; margin-bottom: 6px; }
+  footer { background: #0a1029; color: #8f98b5; padding: 30px 0; font-size: 14px; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .callbar { display: none; }
+  @media (max-width: 880px) {
+    nav, header .btn { display: none; }
+    .hero .wrap, .euro .wrap, .about .wrap, .book .wrap { grid-template-columns: 1fr; }
+    .hero .wrap { padding: 44px 20px 56px; }
+    h1 { font-size: 42px; } h2 { font-size: 32px; }
+    .svc { grid-template-columns: 1fr 1fr; }
+    .yellowbar .wrap { grid-template-columns: 1fr 1fr; font-size: 13px; }
+    section { padding: 54px 0; }
+    .callbar { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 20; }
+    .callbar a { flex: 1; text-align: center; padding: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
+    .callbar a:first-child { background: var(--navy2); color: #fff; } .callbar a:last-child { background: var(--yellow); color: var(--navy2); }
+    footer { padding-bottom: 80px; }
+  }
+  @media (max-width: 420px) { .svc, .row { grid-template-columns: 1fr; } h1 { font-size: 38px; } }
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Boronia Car Care. This is a design preview, not the live website.</div>
+<header><div class="wrap">
+  <div class="logo"><div class="badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0f1838" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></div><div>Boronia <span>Car Care</span></div></div>
+  <nav><a href="#services">Services</a><a href="#european">European specialists</a><a href="#about">About</a><a href="#book">Contact</a></nav>
+  <a class="btn" href="#book">Book a service</a>
+</div></header>
+
+<section class="hero" style="padding:0"><div class="wrap">
+  <div>
+    <span class="tag">Family owned · Since 2006</span>
+    <h1>Boronia's <span>European car</span> specialists.</h1>
+    <p>We repair all makes and models, and we specialise in European servicing and repairs, including the problems other mechanics struggle with.</p>
+    <div class="cta"><a class="btn" href="#book">Book a service</a><a class="btn o" href="tel:+61397610032">Call (03) 9761 0032</a></div>
+  </div>
+  <div class="perks">
+    <div class="perk"><span class="e">🚗</span><div><b>Pick up &amp; drop off</b><small>Available in the local area</small></div></div>
+    <div class="perk"><span class="e">🔑</span><div><b>Loan cars</b><small>Available for booking</small></div></div>
+    <div class="perk"><span class="e">🛠️</span><div><b>70+ years combined</b><small>Experience across our team</small></div></div>
+  </div>
+</div></section>
+
+<div class="yellowbar"><div class="wrap">
+  <div>✔ Logbook servicing</div><div>✔ Roadworthy certificates</div><div>✔ Latest scan tools</div><div>✔ Licence AU43215</div>
+</div></div>
+
+<section id="services"><div class="wrap">
+  <div class="kicker">Our services</div>
+  <h2>A full workshop on Boronia Road</h2>
+  <p class="lead">Serving Boronia, Bayswater, Wantirna, Ferntree Gully, Knoxfield and anywhere else in Melbourne.</p>
+  <div class="svc">
+    <div class="s"><span class="e">📘</span>Logbook servicing (without voiding your warranty)</div>
+    <div class="s"><span class="e">📋</span>Roadworthy certificates</div>
+    <div class="s"><span class="e">🛑</span>Brake repairs</div>
+    <div class="s"><span class="e">⛽</span>LPG installation &amp; repairs</div>
+    <div class="s"><span class="e">🔧</span>Steering &amp; suspension</div>
+    <div class="s"><span class="e">💨</span>Exhaust repairs</div>
+    <div class="s"><span class="e">❄️</span>Air conditioning repairs</div>
+    <div class="s"><span class="e">⚙️</span>Engine repairs</div>
+    <div class="s"><span class="e">🌡️</span>Radiator repairs</div>
+    <div class="s"><span class="e">🔋</span>Auto electrical</div>
+    <div class="s"><span class="e">🛞</span>Tyres from major brands</div>
+    <div class="s"><span class="e">🚙</span>All makes &amp; models</div>
+  </div>
+</div></section>
+
+<section class="euro" id="european"><div class="wrap">
+  <div>
+    <div class="kicker">European specialists</div>
+    <h2>The right tools for European cars</h2>
+    <p>Our staff are equipped with the latest scan tools and all the equipment they need to provide the highest quality repair work and customer service possible.</p>
+    <a class="btn" style="margin-top:22px" href="#book">Book your European service</a>
+  </div>
+  <div class="stat">
+    <div><b>2006</b><small>Established by Ron Kelaita</small></div>
+    <div><b>70+</b><small>Years of combined experience</small></div>
+    <div><b>25+</b><small>Years in the industry for Ron</small></div>
+    <div><b>Local</b><small>Family owned and operated</small></div>
+  </div>
+</div></section>
+
+<section class="about" id="about"><div class="wrap">
+  <div>
+    <div class="kicker">About us</div>
+    <h2>Ron, Rommel and the team</h2>
+  </div>
+  <div>
+    <p>Originally established in 2006 by Ron Kelaita, Boronia Car Care has been providing automotive repairs to our customers ever since. Ron has been in the industry for over 25 years, and works alongside his brother Rommel and one other mechanic.</p>
+    <p>Rommel is also a qualified panelbeater. We don't provide panelbeating services, but if you need some advice or have questions, we're happy to help.</p>
+  </div>
+</div></section>
+
+<section class="book" id="book"><div class="wrap">
+  <div>
+    <div class="kicker">Contact</div>
+    <h2>Book your car in</h2>
+    <div class="info">
+      <div><small>Address</small>286 Boronia Rd, Boronia VIC 3155</div>
+      <div><small>Phone</small><a href="tel:+61397610032"><b>(03) 9761 0032</b></a></div>
+      <div><small>Email</small><a href="mailto:boroniacarcare@bigpond.com.au">boroniacarcare@bigpond.com.au</a></div>
+      <div><small>Hours</small>Monday to Friday, 8:00am – 5:00pm</div>
+    </div>
+  </div>
+  <form onsubmit="event.preventDefault();this.querySelector('.fields').style.display='none';this.querySelector('.thanks').style.display='block'">
+    <div class="fields">
+      <h3>Book a service</h3>
+      <select><option>Logbook service</option><option>Roadworthy certificate</option><option>Brakes</option><option>Air conditioning</option><option>LPG</option><option>Steering &amp; suspension</option><option>Something else</option></select>
+      <div class="row"><input placeholder="Your name" required><input placeholder="Mobile" type="tel" required></div>
+      <div class="row"><input placeholder="Car make &amp; model"><input placeholder="Rego (optional)"></div>
+      <textarea rows="3" placeholder="What's going on with the car? (optional)"></textarea>
+      <label class="check"><input type="checkbox"> I'd like a loan car</label>
+      <label class="check"><input type="checkbox"> I'd like pick up &amp; drop off</label>
+      <button class="btn" type="submit">Request booking</button>
+    </div>
+    <div class="thanks"><b>Booking request received</b>We'll give you a call to lock in a time.</div>
+  </form>
+</div></section>
+
+<footer><div class="wrap"><div>Boronia Car Care · 286 Boronia Rd, Boronia VIC 3155 · Licence No. AU43215</div><div>Concept design by Swoop Sites</div></div></footer>
+<div class="callbar"><a href="tel:+61397610032">📞 Call</a><a href="#book">Book</a></div>
+</body>
+</html>

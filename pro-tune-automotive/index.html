@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Pro Tune Automotive Services | Mechanic in Ferntree Gully (concept)</title>
+<meta name="description" content="Ferntree Gully mechanic with over 15 years of experience. Logbook servicing, roadworthy inspections, brakes, suspension, EFI tuning and performance work. Free local pick up and delivery and a courtesy car. 1/7 Davis Street, Ferntree Gully.">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --char:#16181c; --char2:#202329; --steel:#2c3038; --red:#e3262f; --red2:#b81b23; --chalk:#f3f4f6; --ink:#16181c; --sub:#646a75; --line:#e2e4e8; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { overflow-x: hidden; }
+  body { font-family: Barlow, system-ui, sans-serif; color: var(--ink); background: var(--chalk); line-height: 1.6; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  .concept { background: #111; color: #ddd; font-size: 13px; text-align: center; padding: 8px 16px; }
+  .concept b { color: #ff7b81; }
+  header { background: var(--char); color: #fff; position: sticky; top: 0; z-index: 10; border-bottom: 3px solid var(--red); }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 70px; gap: 16px; }
+  .logo { font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: 28px; text-transform: uppercase; letter-spacing: .02em; line-height: 1; font-style: italic; }
+  .logo span { color: var(--red); }
+  .logo small { display: block; font-style: normal; font-family: Barlow, sans-serif; font-weight: 600; font-size: 11px; letter-spacing: .22em; color: #9aa0ab; margin-top: 3px; }
+  nav { display: flex; gap: 26px; font-weight: 600; color: #b8bdc7; font-size: 15px; text-transform: uppercase; letter-spacing: .06em; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--red); color: #fff; font-weight: 700; padding: 13px 24px; font-size: 15px; border: 0; cursor: pointer; font-family: inherit; text-transform: uppercase; letter-spacing: .06em; clip-path: polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%); }
+  .btn.o { background: #fff; color: var(--char); }
+  .hero { background: linear-gradient(100deg,var(--char) 0,var(--char2) 55%,var(--steel) 100%); color: #fff; position: relative; overflow: hidden; }
+  .hero .speed { position: absolute; inset: 0; background: repeating-linear-gradient(100deg, transparent 0 60px, rgba(255,255,255,.025) 60px 62px); }
+  .hero .wrap { position: relative; display: grid; grid-template-columns: 1.25fr 1fr; gap: 40px; align-items: center; padding: 72px 20px 82px; }
+  .tag { display: inline-block; border-left: 4px solid var(--red); padding-left: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .14em; font-size: 13px; color: #c9cdd4; }
+  h1 { font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: 72px; line-height: .95; text-transform: uppercase; margin: 18px 0; }
+  h1 span { color: var(--red); }
+  .hero p { color: #c3c8d0; font-size: 18px; max-width: 540px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+  .gauge { background: var(--steel); border: 1px solid #3a3f49; border-radius: 16px; padding: 26px; }
+  .gauge svg { display: block; margin: 0 auto; width: 100%; max-width: 260px; height: auto; }
+  .gauge .row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 16px; }
+  .gauge .row div { background: var(--char); border-radius: 10px; padding: 12px; text-align: center; font-weight: 600; font-size: 14px; color: #c3c8d0; }
+  .gauge .row b { display: block; font-family: "Barlow Condensed", sans-serif; font-size: 22px; color: #fff; text-transform: uppercase; }
+  .redbar { background: var(--red); color: #fff; }
+  .redbar .wrap { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; padding: 16px 20px; font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 20px; text-transform: uppercase; letter-spacing: .03em; }
+  section { padding: 76px 0; }
+  .kicker { color: var(--red); font-weight: 700; font-size: 13px; letter-spacing: .18em; text-transform: uppercase; }
+  h2 { font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: 48px; line-height: 1; text-transform: uppercase; margin-top: 8px; }
+  .lead { color: var(--sub); font-size: 17px; margin-top: 12px; max-width: 640px; }
+  .feat { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 32px; }
+  .ft { background: #fff; border: 1px solid var(--line); border-top: 4px solid var(--red); padding: 24px; }
+  .ft .e { font-size: 30px; }
+  .ft h3 { font-family: "Barlow Condensed", sans-serif; font-size: 26px; text-transform: uppercase; margin: 8px 0 4px; }
+  .ft p { color: var(--sub); font-size: 15px; }
+  .svc-sec { background: var(--char); color: #fff; }
+  .svc-sec .lead { color: #aab0ba; }
+  .svc { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; margin-top: 30px; }
+  .s { background: var(--char2); border: 1px solid #30343c; padding: 16px 18px; font-weight: 600; display: flex; gap: 10px; align-items: center; }
+  .s::before { content: ""; width: 8px; height: 8px; background: var(--red); flex: 0 0 8px; transform: skewX(-15deg); }
+  .owner .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  .owner p { color: var(--sub); margin-top: 12px; font-size: 17px; }
+  .plate { background: #fff; border: 1px solid var(--line); padding: 30px; text-align: center; }
+  .plate b { display: block; font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: 96px; color: var(--red); line-height: 1; }
+  .plate span { font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--sub); }
+  .book { background: #fff; }
+  .book .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .info { margin-top: 20px; display: grid; gap: 10px; }
+  .info div { border-left: 4px solid var(--red); background: var(--chalk); padding: 14px 18px; }
+  .info small { display: block; font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--sub); }
+  form { background: var(--char); color: #fff; padding: 28px; }
+  form h3 { font-family: "Barlow Condensed", sans-serif; font-size: 30px; text-transform: uppercase; }
+  input, select, textarea { width: 100%; padding: 12px 14px; margin-top: 10px; border: 1px solid #3a3f49; border-radius: 4px; font: inherit; background: var(--char2); color: #fff; }
+  input::placeholder, textarea::placeholder { color: #8d939e; }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .check { display: flex; gap: 10px; align-items: center; margin-top: 12px; font-size: 15px; color: #c3c8d0; }
+  .check input { width: auto; margin: 0; }
+  form .btn { width: 100%; margin-top: 16px; }
+  .small { font-size: 13px; color: #8d939e; margin-top: 10px; }
+  .thanks { display: none; text-align: center; padding: 40px 10px; }
+  .thanks b { display: block; font-family: "Barlow Condensed", sans-serif; font-size: 32px; text-transform: uppercase; color: #fff; margin-bottom: 6px; }
+  footer { background: #0d0e10; color: #8d939e; padding: 30px 0; font-size: 14px; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .callbar { display: none; }
+  @media (max-width: 880px) {
+    nav, header .btn { display: none; }
+    .hero .wrap, .owner .wrap, .book .wrap { grid-template-columns: 1fr; }
+    .hero .wrap { padding: 44px 20px 56px; }
+    h1 { font-size: 52px; } h2 { font-size: 38px; }
+    .feat { grid-template-columns: 1fr; }
+    .svc { grid-template-columns: 1fr 1fr; }
+    .redbar .wrap { grid-template-columns: 1fr; gap: 2px; font-size: 18px; }
+    section { padding: 54px 0; }
+    .callbar { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 20; }
+    .callbar a { flex: 1; text-align: center; padding: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }
+    .callbar a:first-child { background: var(--char); color: #fff; } .callbar a:last-child { background: var(--red); color: #fff; }
+    footer { padding-bottom: 80px; }
+  }
+  @media (max-width: 420px) { h1 { font-size: 46px; } .svc, .row { grid-template-columns: 1fr; } .plate b { font-size: 76px; } }
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Pro Tune Automotive Services. This is a design preview, not the live website.</div>
+<header><div class="wrap">
+  <div class="logo">Pro <span>Tune</span><small>Automotive Services</small></div>
+  <nav><a href="#why">Why Pro Tune</a><a href="#services">Services</a><a href="#about">About</a><a href="#book">Contact</a></nav>
+  <a class="btn" href="#book">Book a service</a>
+</div></header>
+
+<section class="hero" style="padding:0"><div class="speed"></div><div class="wrap">
+  <div>
+    <span class="tag">Ferntree Gully mechanic</span>
+    <h1>We treat your car like <span>our own.</span></h1>
+    <p>Over 15 years of experience. All makes and models, from family cars through to high performance vehicles. No job too big or too small.</p>
+    <div class="cta"><a class="btn" href="#book">Book a service</a><a class="btn o" href="tel:+61397580522">Call 03 9758 0522</a></div>
+  </div>
+  <div class="gauge">
+    <svg viewBox="0 0 200 120" aria-hidden="true"><path d="M20 110a80 80 0 0 1 160 0" fill="none" stroke="#3a3f49" stroke-width="14" stroke-linecap="round"/><path d="M20 110a80 80 0 0 1 128-64" fill="none" stroke="#e3262f" stroke-width="14" stroke-linecap="round"/><line x1="100" y1="110" x2="146" y2="58" stroke="#fff" stroke-width="5" stroke-linecap="round"/><circle cx="100" cy="110" r="10" fill="#fff"/></svg>
+    <div class="row"><div><b>Free</b>Local pick up &amp; delivery*</div><div><b>Courtesy</b>Car available*</div></div>
+  </div>
+</div></section>
+
+<div class="redbar"><div class="wrap"><div>Logbook servicing</div><div>Roadworthy inspections</div><div>All makes &amp; models</div></div></div>
+
+<section id="why"><div class="wrap">
+  <div class="kicker">Why Pro Tune</div>
+  <h2>Service that fits around you</h2>
+  <p class="lead">We make getting your car serviced as convenient as possible.</p>
+  <div class="feat">
+    <div class="ft"><div class="e">🚚</div><h3>Free pick up &amp; delivery</h3><p>Free local pick up and delivery, to make our service as convenient as possible.*</p></div>
+    <div class="ft"><div class="e">🔑</div><h3>Courtesy car</h3><p>You're never left without a vehicle. Bookings are essential for the courtesy car.</p></div>
+    <div class="ft"><div class="e">📋</div><h3>Quotes you understand</h3><p>Detailed repair information and a quote that you can understand.</p></div>
+  </div>
+  <p class="lead" style="font-size:13px">*Conditions apply.</p>
+</div></section>
+
+<section class="svc-sec" id="services"><div class="wrap">
+  <div class="kicker">Our services</div>
+  <h2>One stop service centre</h2>
+  <p class="lead">Logbook servicing using original manufacturer parts, so you maintain your factory warranty, plus a full range of repairs.</p>
+  <div class="svc">
+    <div class="s">Logbook servicing</div><div class="s">Roadworthy certificates</div><div class="s">Diagnostics</div><div class="s">Brake repairs</div>
+    <div class="s">Suspension &amp; steering</div><div class="s">Wheel alignments</div><div class="s">Cooling system repairs</div><div class="s">Exhaust repairs &amp; fitting</div>
+    <div class="s">EFI tuning &amp; repairs</div><div class="s">Performance modifications</div><div class="s">Transmission repairs</div><div class="s">Engine reconditioning</div>
+    <div class="s">Minor panel repairs</div><div class="s">Tyres</div><div class="s">Batteries</div><div class="s">Air conditioning service</div>
+  </div>
+</div></section>
+
+<section class="owner" id="about"><div class="wrap">
+  <div>
+    <div class="kicker">About us</div>
+    <h2>Owner-operated by Trent</h2>
+    <p>Owner and operator Trent has over 15 years of experience and loves maintaining his own pride and joy. He applies the same precision and attention to detail to every customer's car.</p>
+    <p>Drop in and have a chat with our friendly team at 1/7 Davis Street, Ferntree Gully.</p>
+  </div>
+  <div class="plate"><b>15+</b><span>Years of experience</span></div>
+</div></section>
+
+<section class="book" id="book"><div class="wrap">
+  <div>
+    <div class="kicker">Contact</div>
+    <h2>Book your car in</h2>
+    <div class="info">
+      <div><small>Find us</small>1/7 Davis Street, Ferntree Gully VIC 3156</div>
+      <div><small>Call us</small><a href="tel:+61397580522"><b>03 9758 0522</b></a></div>
+      <div><small>Email us</small><a href="mailto:protuneauto@optusnet.com.au">protuneauto@optusnet.com.au</a></div>
+    </div>
+  </div>
+  <form onsubmit="event.preventDefault();this.querySelector('.fields').style.display='none';this.querySelector('.thanks').style.display='block'">
+    <div class="fields">
+      <h3>Book a service</h3>
+      <select><option>Logbook service</option><option>Roadworthy inspection</option><option>Brakes</option><option>Suspension &amp; steering</option><option>EFI tuning</option><option>Performance work</option><option>Something else</option></select>
+      <div class="row"><input placeholder="Your name" required><input placeholder="Mobile" type="tel" required></div>
+      <div class="row"><input placeholder="Car make &amp; model"><input placeholder="Preferred day"></div>
+      <textarea rows="3" placeholder="Tell us about the job (optional)"></textarea>
+      <label class="check"><input type="checkbox"> I'd like free local pick up &amp; delivery</label>
+      <label class="check"><input type="checkbox"> I'd like the courtesy car (subject to availability)</label>
+      <button class="btn" type="submit">Request booking</button>
+      <p class="small">We'll call you to confirm a time.</p>
+    </div>
+    <div class="thanks"><b>Request received</b>We'll be in touch to confirm your booking.</div>
+  </form>
+</div></section>
+
+<footer><div class="wrap"><div>Pro Tune Automotive Services · 1/7 Davis Street, Ferntree Gully VIC 3156</div><div>Concept design by Swoop Sites</div></div></footer>
+<div class="callbar"><a href="tel:+61397580522">📞 Call</a><a href="#book">Book</a></div>
+</body>
+</html>
