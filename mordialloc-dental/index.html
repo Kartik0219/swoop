@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Mordialloc Dental Group | Family Dentist on Main Street, Mordialloc (concept)</title>
+<meta name="description" content="Family-owned dental practice run by sisters Dr Danielle and Dr Miriam Matthews. 2/481 Main Street, Mordialloc, next to the station. New patients welcome.">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --navy:#16324f; --navy2:#0d2238; --sea:#3a9e95; --foam:#e3f3f0; --sand:#f7f1e8; --sand2:#ecdfcb; --ink:#14212e; --sub:#5d6b78; --line:#e6e1d8; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', system-ui, sans-serif; color: var(--ink); line-height: 1.6; background: #fffdf9; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  .concept { background: #111; color: #ddd; font-size: 13px; text-align: center; padding: 8px 16px; }
+  .concept b { color: #7fd8cf; }
+  .strip { background: var(--navy); color: #c6d6e6; font-size: 14px; }
+  .strip .wrap { display: flex; justify-content: space-between; gap: 10px; padding: 8px 20px; flex-wrap: wrap; }
+  .strip b { color: #fff; }
+  header { background: #fffdf9; border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 10; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 74px; }
+  .logo { font-family: 'DM Serif Display', serif; font-size: 24px; color: var(--navy); line-height: 1; }
+  .logo span { display: block; font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--sea); font-weight: 700; margin-top: 4px; }
+  nav { display: flex; gap: 26px; font-size: 15px; color: var(--sub); font-weight: 500; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--sea); color: #fff; font-weight: 700; padding: 13px 22px; border-radius: 40px; font-size: 15px; white-space: nowrap; border: 0; cursor: pointer; font-family: inherit; }
+  .btn.o { background: transparent; color: var(--navy); border: 1.5px solid var(--sand2); }
+  .btn.d { background: var(--navy); }
+  .hero .wrap { display: grid; grid-template-columns: 1.1fr 1fr; gap: 50px; align-items: center; padding: 64px 20px 76px; }
+  .eyebrow { color: var(--sea); font-weight: 700; letter-spacing: .14em; font-size: 13px; text-transform: uppercase; }
+  h1 { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 58px; line-height: 1.04; color: var(--navy); margin: 14px 0 18px; }
+  h1 em { color: var(--sea); }
+  .hero p { color: var(--sub); font-size: 18px; max-width: 500px; }
+  .cta { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
+  .bay { aspect-ratio: 1/1; max-width: 440px; width: 100%; margin: 0 auto; border-radius: 50% 50% 28px 28px; background: linear-gradient(180deg,#f9e3c3 0%,#f5d2a6 32%,#8fcfc6 33%,#3a9e95 62%,#16324f 100%); position: relative; overflow: hidden; box-shadow: 0 30px 60px rgba(22,50,79,.2); }
+  .bay::before { content: ""; position: absolute; width: 90px; height: 90px; border-radius: 50%; background: #fff6e4; top: 14%; left: 50%; transform: translateX(-50%); box-shadow: 0 0 60px #fff3d6; }
+  .bay::after { content: ""; position: absolute; left: -10%; right: -10%; top: 46%; height: 30px; border-radius: 50%; border-top: 3px solid rgba(255,255,255,.4); }
+  .bay .tag { position: absolute; left: 18px; bottom: 18px; background: #fff; border-radius: 16px; padding: 12px 16px; font-size: 14px; font-weight: 600; }
+  .bay .tag b { display: block; font-size: 18px; color: var(--navy); }
+  section { padding: 76px 0; }
+  h2 { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 42px; color: var(--navy); line-height: 1.1; margin-top: 6px; }
+  .lead { color: var(--sub); font-size: 17px; margin-top: 10px; max-width: 640px; }
+  .quote { background: var(--sand); }
+  .quote .wrap { text-align: center; max-width: 820px; }
+  .quote blockquote { font-family: 'DM Serif Display', serif; font-size: 30px; line-height: 1.3; color: var(--navy); }
+  .quote cite { display: block; margin-top: 16px; font-style: normal; color: var(--sea); font-weight: 700; }
+  .cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; margin-top: 32px; }
+  .c { background: #fff; border: 1px solid var(--line); border-radius: 22px; padding: 28px; }
+  .c .ic { width: 48px; height: 48px; border-radius: 14px; background: var(--foam); display: grid; place-items: center; font-size: 24px; }
+  .c h3 { font-size: 19px; margin: 14px 0 8px; color: var(--navy); }
+  .c ul { list-style: none; color: var(--sub); font-size: 15px; display: grid; gap: 4px; }
+  .c li::before { content: "· "; color: var(--sea); font-weight: 800; }
+  .kids { background: var(--navy); color: #fff; border-radius: 28px; padding: 44px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 30px; align-items: center; }
+  .kids h2 { color: #fff; }
+  .kids p { color: #c6d6e6; margin-top: 10px; font-size: 17px; }
+  .kids ul { list-style: none; display: grid; gap: 10px; }
+  .kids li { background: rgba(255,255,255,.08); border-radius: 12px; padding: 12px 16px; }
+  .sisters { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  .duo { display: flex; gap: 16px; }
+  .d { flex: 1; background: var(--foam); border-radius: 22px; padding: 26px; text-align: center; }
+  .d .av { width: 84px; height: 84px; border-radius: 50%; margin: 0 auto 12px; background: linear-gradient(135deg,#fff,#bfe5df); display: grid; place-items: center; font-family: 'DM Serif Display', serif; font-size: 28px; color: var(--navy); }
+  .d b { display: block; color: var(--navy); }
+  .d span { color: var(--sub); font-size: 14px; }
+  .visit { background: var(--sand); }
+  .visit .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
+  .visit table { width: 100%; border-collapse: collapse; margin-top: 18px; }
+  .visit td { padding: 10px 0; border-bottom: 1px solid var(--sand2); }
+  .visit td:last-child { text-align: right; font-weight: 600; }
+  form { background: #fff; border-radius: 22px; padding: 28px; border: 1px solid var(--line); }
+  form input, form select, form textarea { width: 100%; padding: 12px; margin-top: 10px; border: 1px solid var(--line); border-radius: 10px; font: inherit; background: #fffdf9; }
+  form .btn { width: 100%; margin-top: 14px; }
+  .thanks { display: none; text-align: center; padding: 40px 10px; }
+  .thanks b { display: block; font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 28px; color: var(--navy); margin-bottom: 6px; }
+  footer { background: var(--navy2); color: #8ea3b8; padding: 30px 0; font-size: 14px; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .callbar { display: none; }
+  @media (max-width: 880px) {
+    nav, header .btn { display: none; }
+    .hero .wrap, .kids, .sisters, .visit .wrap { grid-template-columns: 1fr; }
+    .hero .wrap { padding-top: 36px; }
+    h1 { font-size: 42px; } h2 { font-size: 32px; }
+    .cards { grid-template-columns: 1fr; }
+    .quote blockquote { font-size: 23px; }
+    .kids { padding: 28px; }
+    section { padding: 54px 0; }
+    .callbar { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 20; }
+    .callbar a { flex: 1; text-align: center; padding: 15px; font-weight: 700; }
+    .callbar a:first-child { background: var(--navy); color: #fff; } .callbar a:last-child { background: var(--sea); color: #fff; }
+    footer { padding-bottom: 80px; }
+  }
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Mordialloc Dental Group. This is a design preview, not the live website.</div>
+<div class="strip"><div class="wrap"><div>📍 2/481 Main Street, Mordialloc · <b>next to Mordialloc Station</b></div><div>📞 <a href="tel:0395803323"><b>(03) 9580 3323</b></a></div></div></div>
+<header><div class="wrap">
+  <div class="logo">Mordialloc Dental<span>Group · Family owned</span></div>
+  <nav><a href="#services">Services</a><a href="#kids">Children</a><a href="#story">Our story</a><a href="#visit">Visit</a></nav>
+  <a class="btn" href="#visit">Request an appointment</a>
+</div></header>
+
+<section class="hero" style="padding:0"><div class="wrap">
+  <div>
+    <div class="eyebrow">Bayside family dentists · 20+ years</div>
+    <h1>Friendly dental care, <em>right on Main Street.</em></h1>
+    <p>A family-owned practice run by sisters Dr Danielle and Dr Miriam Matthews. We care for families and individuals of all ages, and we always welcome new patients.</p>
+    <div class="cta"><a class="btn" href="#visit">Request an appointment</a><a class="btn o" href="tel:0395803323">Call (03) 9580 3323</a></div>
+  </div>
+  <div class="bay"><div class="tag"><b>Late nights</b>Wed &amp; Thu until 7pm</div></div>
+</div></section>
+
+<section class="quote"><div class="wrap">
+  <blockquote>"Our aim is to provide you with information and options so that together we can find the dental treatment that best suits your individual needs."</blockquote>
+  <cite>Dr Danielle Matthews &amp; Dr Miriam Matthews</cite>
+</div></section>
+
+<section id="services"><div class="wrap">
+  <div class="eyebrow">Services</div>
+  <h2>Care for every stage of life</h2>
+  <p class="lead">General, cosmetic and preventive dentistry in one friendly practice. For anything more specialised, we work with a number of excellent local dental specialists.</p>
+  <div class="cards">
+    <div class="c"><div class="ic">🦷</div><h3>General dentistry</h3><ul><li>Tooth-coloured fillings</li><li>Root canal (endodontics)</li><li>Crowns &amp; bridges</li><li>Dentures, full and partial</li><li>TMJ / jaw joint pain</li><li>Tooth erosion and wear</li></ul></div>
+    <div class="c"><div class="ic">✨</div><h3>Cosmetic dentistry</h3><ul><li>Veneers</li><li>Tooth whitening</li><li>Tooth-coloured restorations</li><li>Implant restoration</li></ul></div>
+    <div class="c"><div class="ic">🛡️</div><h3>Preventive care</h3><ul><li>Oral hygiene</li><li>Periodontal (gum) care</li><li>Fissure sealants</li><li>Sports mouthguards</li><li>Grinding splints</li></ul></div>
+  </div>
+</div></section>
+
+<section id="kids" style="padding-top:0"><div class="wrap">
+  <div class="kids">
+    <div><div class="eyebrow" style="color:#8fdcd3">Children's dentistry</div><h2>Good habits start early</h2><p>We encourage children's check-ups from 12 months. We explain each step in words your child understands, pause whenever they need a break, and give plenty of praise along the way.</p><a class="btn" style="margin-top:20px" href="#visit">Book a family check-up</a></div>
+    <ul><li>Dental exam and tooth count</li><li>Initial orthodontic assessment</li><li>Clean, polish and fluoride</li><li>Fissure sealants where needed</li></ul>
+  </div>
+</div></section>
+
+<section id="story"><div class="wrap sisters">
+  <div>
+    <div class="eyebrow">Our story</div>
+    <h2>Two sisters, one local practice</h2>
+    <p class="lead">For over 20 years, Mordialloc Dental Group has looked after the Bayside community. Run by sisters Dr Danielle and Dr Miriam Matthews with a fantastic support team, we aim to make every visit pleasant, informative and relaxed.</p>
+  </div>
+  <div class="duo">
+    <div class="d"><div class="av">DM</div><b>Dr Danielle Matthews</b><span>Dentist</span></div>
+    <div class="d"><div class="av">MM</div><b>Dr Miriam Matthews</b><span>Dentist</span></div>
+  </div>
+</div></section>
+
+<section class="visit" id="visit"><div class="wrap">
+  <div>
+    <div class="eyebrow">Visit us</div>
+    <h2>2/481 Main Street, Mordialloc</h2>
+    <p class="lead">On the railway side of Main Street, in the professional suites of the Bayview Real Estate building. Right next to Mordialloc Station.</p>
+    <table>
+      <tr><td>Monday</td><td>8.00am to 4.30pm</td></tr>
+      <tr><td>Tuesday</td><td>8.00am to 5.30pm</td></tr>
+      <tr><td>Wednesday</td><td>8.00am to 7.00pm</td></tr>
+      <tr><td>Thursday</td><td>8.30am to 7.00pm</td></tr>
+      <tr><td>Friday</td><td>8.30am to 5.00pm</td></tr>
+      <tr><td>Phone</td><td><a href="tel:0395803323">(03) 9580 3323</a></td></tr>
+    </table>
+  </div>
+  <form onsubmit="event.preventDefault();this.querySelector('.fields').style.display='none';this.querySelector('.thanks').style.display='block'">
+    <div class="fields">
+      <h3 style="font-size:22px;color:var(--navy)">Request an appointment</h3>
+      <select><option>Check-up &amp; clean</option><option>Children's check-up</option><option>Fillings, crowns or root canal</option><option>Whitening or veneers</option><option>Dentures</option><option>Something else</option></select>
+      <input placeholder="Your name" required><input placeholder="Mobile" type="tel" required>
+      <select><option>Any day</option><option>Monday</option><option>Tuesday</option><option>Wednesday (late)</option><option>Thursday (late)</option><option>Friday</option></select>
+      <label style="display:flex;gap:8px;align-items:center;margin-top:12px;font-size:14px;color:var(--sub)"><input type="checkbox" style="width:auto;margin:0"> I'm a new patient</label>
+      <button class="btn d" type="submit">Send request</button>
+    </div>
+    <div class="thanks"><b>Thank you!</b>We'll call you shortly to confirm your appointment.</div>
+  </form>
+</div></section>
+
+<footer><div class="wrap"><div>© 2026 Mordialloc Dental Group · Mordialloc VIC 3195</div><div>Concept design by Swoop Sites</div></div></footer>
+<div class="callbar"><a href="tel:0395803323">📞 Call</a><a href="#visit">Book online</a></div>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Nikos Cakes Oakleigh | Custom Cakes, Cafe &amp; Greek Sweets since 1987 (concept)</title>
+<meta name="description" content="Award-winning custom cakes, a bustling cafe and over 90 sweet varieties on Portman Street, Oakleigh. Open 365 days a year. Wedding, birthday, christening and novelty cakes.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --aegean:#1f4e8c; --aegean2:#163a69; --gold:#c49a4a; --cream:#fbf6ee; --cream2:#f3e9d8; --choc:#3b2418; --ink:#2a1f19; --sub:#7a6a5d; --line:#eadfcd; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Jost, system-ui, sans-serif; color: var(--ink); background: var(--cream); line-height: 1.6; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  .concept { background: #111; color: #ddd; font-size: 13px; text-align: center; padding: 8px 16px; }
+  .concept b { color: #f0cf8a; }
+  .ribbon { background: var(--aegean); color: #d6e3f5; text-align: center; font-size: 14px; font-weight: 500; padding: 9px 16px; letter-spacing: .02em; }
+  .ribbon b { color: #fff; }
+  header { background: var(--cream); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 10; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 78px; }
+  .logo { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 700; color: var(--aegean2); line-height: 1; }
+  .logo span { display: block; font-family: Jost, sans-serif; font-size: 11px; letter-spacing: .3em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-top: 2px; }
+  nav { display: flex; gap: 26px; font-size: 15px; color: var(--sub); font-weight: 500; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--aegean); color: #fff; font-weight: 600; padding: 13px 24px; border-radius: 4px; font-size: 15px; white-space: nowrap; border: 0; cursor: pointer; font-family: inherit; letter-spacing: .02em; }
+  .btn.o { background: transparent; color: var(--choc); border: 1.5px solid var(--choc); }
+  .btn.g { background: var(--gold); color: var(--choc); }
+  .hero .wrap { display: grid; grid-template-columns: 1.05fr 1fr; gap: 44px; align-items: center; padding: 56px 20px 76px; }
+  .eyebrow { color: var(--gold); font-weight: 600; letter-spacing: .2em; font-size: 13px; text-transform: uppercase; }
+  h1 { font-family: 'Cormorant Garamond', serif; font-size: 66px; line-height: 1; color: var(--choc); margin: 14px 0 18px; font-weight: 700; }
+  h1 em { color: var(--aegean); }
+  .hero p { color: var(--sub); font-size: 18px; max-width: 500px; }
+  .cta { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
+  .cake { position: relative; max-width: 420px; width: 100%; margin: 0 auto; aspect-ratio: 4/5; border-radius: 220px 220px 10px 10px; background: radial-gradient(circle at 50% 18%,#fff 0 6%,transparent 7%), linear-gradient(180deg,#f6e3c6 0%,#fbf1e2 100%); box-shadow: 0 30px 60px rgba(59,36,24,.15); overflow: hidden; }
+  .tier { position: absolute; left: 50%; transform: translateX(-50%); border-radius: 10px 10px 4px 4px; background: linear-gradient(180deg,#fff 0 18%,#f7ead6 19% 100%); box-shadow: inset 0 -6px 0 rgba(196,154,74,.35); }
+  .t1 { width: 70%; height: 22%; bottom: 10%; } .t2 { width: 52%; height: 19%; bottom: 32%; } .t3 { width: 34%; height: 16%; bottom: 51%; }
+  .tier::after { content: ""; position: absolute; left: 0; right: 0; top: 40%; height: 6px; background: var(--aegean); opacity: .8; }
+  .plate { position: absolute; left: 12%; right: 12%; bottom: 7%; height: 4%; background: var(--gold); border-radius: 4px; }
+  .cake .tag { position: absolute; right: 14px; top: 60px; background: var(--choc); color: #f3e3c5; border-radius: 8px; padding: 10px 14px; font-size: 13px; }
+  .cake .tag b { display: block; font-family: 'Cormorant Garamond', serif; font-size: 22px; color: #fff; }
+  section { padding: 76px 0; }
+  h2 { font-family: 'Cormorant Garamond', serif; font-size: 46px; color: var(--choc); line-height: 1.05; font-weight: 700; }
+  .lead { color: var(--sub); font-size: 17px; margin-top: 10px; max-width: 640px; }
+  .stats { background: var(--choc); color: #e9d9c0; }
+  .stats .wrap { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; padding: 28px 20px; text-align: center; }
+  .stats b { display: block; font-family: 'Cormorant Garamond', serif; font-size: 34px; color: var(--gold); line-height: 1.1; }
+  .stats span { font-size: 14px; }
+  .occ { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; margin-top: 32px; }
+  .o { background: #fff; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+  .o .img { aspect-ratio: 4/3; display: grid; place-items: center; font-size: 46px; }
+  .o .b { padding: 14px 16px 18px; }
+  .o h3 { font-family: 'Cormorant Garamond', serif; font-size: 23px; color: var(--choc); }
+  .o p { color: var(--sub); font-size: 14px; }
+  .c1 { background: linear-gradient(135deg,#fde7ef,#f6c9d8); } .c2 { background: linear-gradient(135deg,#fff,#efe3cf); } .c3 { background: linear-gradient(135deg,#e5eefb,#c7d8f2); } .c4 { background: linear-gradient(135deg,#fff3d6,#f2d9a2); }
+  .c5 { background: linear-gradient(135deg,#e9f5ea,#cbe5cd); } .c6 { background: linear-gradient(135deg,#f3e6db,#e0c6ae); } .c7 { background: linear-gradient(135deg,#efe6fb,#d6c6f0); } .c8 { background: linear-gradient(135deg,#fbe3d3,#f1c4a5); }
+  .cafe { background: var(--aegean); color: #fff; }
+  .cafe .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; }
+  .cafe h2 { color: #fff; }
+  .cafe p { color: #cfdcf0; font-size: 17px; margin-top: 10px; }
+  .cafe ul { list-style: none; display: grid; gap: 10px; }
+  .cafe li { background: rgba(255,255,255,.1); border-left: 3px solid var(--gold); border-radius: 6px; padding: 12px 16px; }
+  .awards { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  .venues { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+  .venues span { border: 1px solid var(--line); background: #fff; border-radius: 30px; padding: 8px 16px; font-size: 14px; font-weight: 500; }
+  .badge { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 30px; text-align: center; }
+  .badge b { display: block; font-family: 'Cormorant Garamond', serif; font-size: 40px; color: var(--aegean); line-height: 1.1; }
+  .badge .stars { color: var(--gold); font-size: 22px; letter-spacing: 3px; }
+  .enq { background: var(--cream2); }
+  .enq .wrap { display: grid; grid-template-columns: 1fr 1.1fr; gap: 36px; }
+  .enq table { width: 100%; border-collapse: collapse; margin-top: 18px; }
+  .enq td { padding: 10px 0; border-bottom: 1px solid #e2d3bb; }
+  .enq td:last-child { text-align: right; font-weight: 600; }
+  form { background: #fff; border-radius: 12px; padding: 26px; border: 1px solid var(--line); }
+  form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  form input, form select, form textarea { width: 100%; padding: 12px; margin-top: 10px; border: 1px solid var(--line); border-radius: 8px; font: inherit; background: var(--cream); }
+  form .btn { width: 100%; margin-top: 14px; }
+  .thanks { display: none; text-align: center; padding: 40px 10px; }
+  .thanks b { display: block; font-family: 'Cormorant Garamond', serif; font-size: 32px; color: var(--choc); margin-bottom: 6px; }
+  footer { background: var(--choc); color: #bfa992; padding: 30px 0; font-size: 14px; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .orderbar { display: none; }
+  @media (max-width: 880px) {
+    nav, header .btn { display: none; }
+    .hero .wrap, .cafe .wrap, .awards, .enq .wrap { grid-template-columns: 1fr; }
+    .hero .wrap { padding-top: 36px; }
+    h1 { font-size: 48px; } h2 { font-size: 36px; }
+    .occ { grid-template-columns: 1fr 1fr; } .stats .wrap { grid-template-columns: 1fr 1fr; gap: 18px; }
+    section { padding: 54px 0; }
+    .orderbar { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 20; }
+    .orderbar a { flex: 1; text-align: center; padding: 15px; font-weight: 600; }
+    .orderbar a:first-child { background: var(--choc); color: #fff; } .orderbar a:last-child { background: var(--aegean); color: #fff; }
+    footer { padding-bottom: 80px; }
+  }
+  @media (max-width: 480px) { form .row { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Nikos Cakes. This is a design preview, not the live website.</div>
+<div class="ribbon">☕ <b>Open 365 days a year</b> · Mon to Sat from 6am, Sun from 7am, until late</div>
+<header><div class="wrap">
+  <div class="logo">Nikos<span>Cakes · Oakleigh</span></div>
+  <nav><a href="#cakes">Cakes</a><a href="#cafe">Cafe</a><a href="#story">Our story</a><a href="#enquire">Visit</a></nav>
+  <a class="btn" href="#enquire">Order a cake</a>
+</div></header>
+
+<section class="hero" style="padding:0"><div class="wrap">
+  <div>
+    <div class="eyebrow">Oakleigh · Since 1987</div>
+    <h1>For a <em>sweeter</em> life.</h1>
+    <p>Award-winning custom cakes, a bustling Greek cafe and over 90 sweet varieties on Portman Street. If you can dream it, our team can bring it to life.</p>
+    <div class="cta"><a class="btn" href="#enquire">Start a cake enquiry</a><a class="btn o" href="tel:0395696338">Call 03 9569 6338</a></div>
+  </div>
+  <div class="cake"><div class="plate"></div><div class="tier t1"></div><div class="tier t2"></div><div class="tier t3"></div><div class="tag"><b>90+ cakes</b>on display upstairs</div></div>
+</div></section>
+
+<div class="stats"><div class="wrap">
+  <div><b>Since 1987</b><span>Family-owned in Oakleigh</span></div>
+  <div><b>4.2 ★</b><span>on Google (1,976 reviews)</span></div>
+  <div><b>ABIA</b><span>Winner &amp; finalist, Cake Design</span></div>
+  <div><b>365 days</b><span>Open every day of the year</span></div>
+</div></div>
+
+<section id="cakes"><div class="wrap">
+  <h2>Cakes for every occasion</h2>
+  <p class="lead">Browse our showroom above the cafe, or tell us your idea and our designers, pastry chefs and decorators will create it for you.</p>
+  <div class="occ">
+    <a class="o" href="#enquire"><div class="img c1">🎂</div><div class="b"><h3>Birthday</h3><p>Big or small, any theme.</p></div></a>
+    <a class="o" href="#enquire"><div class="img c2">💍</div><div class="b"><h3>Wedding</h3><p>Designer wedding cakes.</p></div></a>
+    <a class="o" href="#enquire"><div class="img c3">🕊️</div><div class="b"><h3>Christening &amp; Communion</h3><p>For your family's big day.</p></div></a>
+    <a class="o" href="#enquire"><div class="img c4">🥂</div><div class="b"><h3>Engagement</h3><p>Celebrate in style.</p></div></a>
+    <a class="o" href="#enquire"><div class="img c5">🍼</div><div class="b"><h3>Baby Shower &amp; Gender Reveal</h3><p>Sweet surprises.</p></div></a>
+    <a class="o" href="#enquire"><div class="img c6">🌸</div><div class="b"><h3>Bridal Shower &amp; Kitchen Tea</h3><p>Pretty and personal.</p></div></a>
+    <a class="o" href="#enquire"><div class="img c7">🦄</div><div class="b"><h3>Novelty</h3><p>Fun, bold and creative.</p></div></a>
+    <a class="o" href="#enquire"><div class="img c8">🍮</div><div class="b"><h3>Croquembouche &amp; Naked Cakes</h3><p>Classic showstoppers.</p></div></a>
+  </div>
+</div></section>
+
+<section class="cafe" id="cafe"><div class="wrap">
+  <div><div class="eyebrow">The cafe</div><h2>Greek coffee culture, Oakleigh style</h2><p>Breakfast, lunch, great coffee and more than 90 sweet varieties, on the corner of Portman Street and Oakleigh's Eaton Mall. Eat in, or grab a box on your way through.</p><a class="btn g" style="margin-top:22px" href="#enquire">Find us</a></div>
+  <ul><li>☕ Coffee, from morning until late</li><li>🍳 Breakfast and lunch menu</li><li>🍰 More than 90 sweet varieties</li><li>🍷 Fully licensed</li><li>🪑 Indoor and outdoor seating</li></ul>
+</div></section>
+
+<section id="story"><div class="wrap awards">
+  <div>
+    <div class="eyebrow">Our story</div>
+    <h2>A family affair since 1987</h2>
+    <p class="lead">Founded by Nick and Tass Poupouzas as a single shopfront on Portman Street, Nikos has grown into a favourite Oakleigh meeting place, and the family are still at the heart of it today. We've delivered cakes to some of Melbourne's best-known venues, including:</p>
+    <div class="venues"><span>Crown</span><span>Park Hyatt</span><span>Grand Hyatt</span><span>Sofitel</span><span>Leonda by the Yarra</span><span>The Carousel</span></div>
+  </div>
+  <div class="badge"><div class="stars">★★★★☆</div><b>4.2 on Google</b><span style="color:var(--sub)">from 1,976 reviews</span><p style="margin-top:14px;color:var(--sub)">Multiple-time winner and finalist at the Australian Bridal Industry Awards (ABIA) for Cake Design.</p></div>
+</div></section>
+
+<section class="enq" id="enquire"><div class="wrap">
+  <div>
+    <div class="eyebrow">Visit us</div>
+    <h2>25 to 27 Portman Street, Oakleigh</h2>
+    <table>
+      <tr><td>Monday to Saturday</td><td>6am until late</td></tr>
+      <tr><td>Sunday</td><td>7am until late</td></tr>
+      <tr><td>Phone</td><td><a href="tel:0395696338">03 9569 6338</a></td></tr>
+      <tr><td>Email</td><td><a href="mailto:oakleigh@nikoscakes.com.au">oakleigh@nikoscakes.com.au</a></td></tr>
+      <tr><td>Cake delivery</td><td>Available on request</td></tr>
+    </table>
+    <p style="margin-top:16px;color:var(--sub);font-size:15px">Also visit Nikos Fairfield at 254 Wingrove Street, Fairfield.</p>
+  </div>
+  <form onsubmit="event.preventDefault();this.querySelector('.fields').style.display='none';this.querySelector('.thanks').style.display='block'">
+    <div class="fields">
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:30px;color:var(--choc)">Cake enquiry</h3>
+      <div class="row"><input placeholder="Your name" required><input placeholder="Phone" type="tel" required></div>
+      <div class="row"><select><option>Birthday</option><option>Wedding</option><option>Engagement</option><option>Christening</option><option>Other occasion</option></select><input type="date"></div>
+      <div class="row"><input placeholder="Number of guests (approx)"><select><option>Pick up in Oakleigh</option><option>Pick up in Fairfield</option><option>Delivery (on request)</option></select></div>
+      <textarea rows="3" placeholder="Tell us about your dream cake (theme, flavours, colours)"></textarea>
+      <button class="btn" type="submit">Send enquiry</button>
+    </div>
+    <div class="thanks"><b>Thank you!</b>Our cake team will be in touch soon to talk through your design.</div>
+  </form>
+</div></section>
+
+<footer><div class="wrap"><div>© 2026 Nikos Cakes · Oakleigh VIC 3166</div><div>Concept design by Swoop Sites</div></div></footer>
+<div class="orderbar"><a href="tel:0395696338">📞 Call</a><a href="#enquire">🎂 Order a cake</a></div>
+</body>
+</html>

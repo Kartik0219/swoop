@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>All In 1 Driving School | Auto &amp; Manual Driving Lessons, Dandenong &amp; Cranbourne (concept)</title>
+<meta name="description" content="Automatic and manual driving lessons across Dandenong, Cranbourne, Frankston, Berwick and the south-east. Pick up and drop off, drive test packages and clear prices. Call 0439 242 887.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --yel:#ffd60a; --yel2:#ffe766; --blk:#111214; --road:#2a2d31; --red:#e5383b; --ink:#141518; --sub:#5f636b; --line:#e8e8e3; --soft:#fafaf5; --grn:#1fa45b; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Poppins, system-ui, sans-serif; color: var(--ink); line-height: 1.55; background:#fff; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  .concept { background: #111; color: #ddd; font-size: 13px; text-align: center; padding: 8px 16px; }
+  .concept b { color: var(--yel); }
+  header { background: #fff; border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 10; }
+  header .wrap { display: flex; justify-content: space-between; align-items: center; height: 70px; }
+  .logo { font-weight: 800; font-size: 20px; letter-spacing: -0.02em; display: flex; gap: 10px; align-items: center; }
+  .logo i { width: 34px; height: 34px; background: var(--yel); border: 2.5px solid var(--blk); border-radius: 6px; display: grid; place-items: center; font-style: normal; font-weight: 800; font-size: 20px; color: var(--blk); }
+  nav { display: flex; gap: 26px; font-size: 15px; color: var(--sub); font-weight: 500; }
+  .btn { display: inline-flex; justify-content: center; align-items: center; gap: 8px; background: var(--yel); color: var(--blk); padding: 13px 22px; border-radius: 12px; font-weight: 700; font-size: 15px; white-space: nowrap; border: 0; cursor: pointer; font-family: inherit; }
+  .btn.k { background: var(--blk); color: #fff; }
+  .btn.o { background: transparent; color: #fff; border: 1.5px solid #4a4e55; }
+  .hero { background: var(--road); color: #fff; position: relative; overflow: hidden; }
+  .hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 10px; background: repeating-linear-gradient(90deg, var(--yel) 0 60px, transparent 60px 110px); }
+  .hero .wrap { position: relative; display: grid; grid-template-columns: 1.1fr 1fr; gap: 44px; align-items: center; padding: 72px 20px 84px; }
+  .badge { display: inline-flex; gap: 8px; align-items: center; background: rgba(255,214,10,.14); color: var(--yel); font-weight: 600; font-size: 13px; padding: 6px 12px; border-radius: 6px; }
+  h1 { font-size: 54px; line-height: 1.05; letter-spacing: -0.035em; font-weight: 800; margin: 16px 0; }
+  h1 span { color: var(--yel); }
+  .hero p { color: #c4c7cc; font-size: 18px; max-width: 520px; }
+  .cta { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
+  .rating { margin-top: 22px; color: #c4c7cc; font-size: 14px; } .rating b { color: var(--yel); letter-spacing: 2px; }
+  .q { background: #fff; color: var(--ink); border-radius: 18px; padding: 26px; box-shadow: 0 30px 60px rgba(0,0,0,.4); }
+  .q h3 { font-size: 21px; }
+  .q p { color: var(--sub); font-size: 14px; margin: 4px 0 12px; }
+  .seg { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .seg label { border: 1.5px solid var(--line); border-radius: 12px; padding: 10px; text-align: center; font-weight: 600; font-size: 14px; cursor: pointer; }
+  .seg input { display: none; }
+  .seg label:has(input:checked) { border-color: var(--blk); background: var(--yel2); }
+  .q select, .q > input { width: 100%; padding: 12px; border: 1px solid var(--line); border-radius: 12px; margin-top: 8px; font: inherit; background: var(--soft); }
+  .q .btn { width: 100%; margin-top: 14px; }
+  .perks { background: var(--yel); }
+  .perks .wrap { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; padding: 18px 20px; font-weight: 700; color: var(--blk); font-size: 15px; }
+  section { padding: 78px 0; }
+  .kicker { color: #b08d00; font-weight: 700; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; }
+  h2 { font-size: 38px; letter-spacing: -0.03em; line-height: 1.1; margin-top: 6px; }
+  .lead { color: var(--sub); font-size: 17px; margin-top: 10px; max-width: 640px; }
+  .ptabs { display: flex; gap: 8px; margin-top: 26px; flex-wrap: wrap; }
+  .ptabs button { font: inherit; font-weight: 600; font-size: 14px; border: 1.5px solid var(--line); background: #fff; border-radius: 999px; padding: 9px 16px; cursor: pointer; }
+  .ptabs button.on { background: var(--blk); color: #fff; border-color: var(--blk); }
+  .plist { display: none; grid-template-columns: repeat(4,1fr); gap: 14px; margin-top: 20px; }
+  .plist.on { display: grid; }
+  .p { border: 1.5px solid var(--line); border-radius: 16px; padding: 22px; position: relative; }
+  .p.pop { border-color: var(--blk); box-shadow: 6px 6px 0 var(--yel); }
+  .p .tag { position: absolute; top: -11px; left: 18px; background: var(--red); color: #fff; font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 999px; }
+  .p h3 { font-size: 15px; font-weight: 600; color: var(--sub); }
+  .p .amt { font-size: 36px; font-weight: 800; letter-spacing: -0.03em; margin: 4px 0 12px; }
+  .p a { display: block; text-align: center; background: var(--soft); border: 1px solid var(--line); border-radius: 10px; padding: 9px; font-weight: 600; font-size: 14px; }
+  .p.pop a { background: var(--yel); border-color: var(--yel); }
+  .why { background: var(--soft); }
+  .grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 30px; }
+  .g { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 24px; }
+  .g .ic { font-size: 26px; }
+  .g h3 { font-size: 17px; margin: 10px 0 4px; }
+  .g p { color: var(--sub); font-size: 14.5px; }
+  .road { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 30px; }
+  .step { border-left: 6px solid var(--yel); padding: 6px 0 6px 18px; }
+  .step b { font-size: 13px; color: var(--sub); letter-spacing: .1em; }
+  .step h3 { font-size: 18px; margin: 2px 0 4px; }
+  .step p { color: var(--sub); font-size: 15px; }
+  .rev { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 30px; }
+  .r { border: 1px solid var(--line); border-radius: 16px; padding: 22px; }
+  .r .stars { color: #f5a623; letter-spacing: 2px; }
+  .r p { margin: 10px 0; }
+  .r .n { color: var(--sub); font-size: 13px; font-weight: 600; }
+  .areas { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+  .areas span { border: 1.5px solid var(--line); border-radius: 999px; padding: 7px 14px; font-size: 14px; font-weight: 500; }
+  .contact { background: var(--blk); color: #fff; }
+  .contact .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; }
+  .contact table { width: 100%; border-collapse: collapse; }
+  .contact td { padding: 12px 0; border-bottom: 1px solid #2c2f34; color: #a9adb4; }
+  .contact td:last-child { text-align: right; color: #fff; font-weight: 600; }
+  footer { background: #0a0a0b; color: #80848b; font-size: 14px; padding: 28px 0; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .callbar { display: none; }
+  @media (max-width: 880px) {
+    nav, header .btn { display: none; }
+    .hero .wrap, .contact .wrap { grid-template-columns: 1fr; padding-top: 48px; }
+    h1 { font-size: 39px; } h2 { font-size: 29px; }
+    .grid, .rev, .road { grid-template-columns: 1fr; } .plist.on, .perks .wrap { grid-template-columns: 1fr 1fr; }
+    section { padding: 54px 0; }
+    .callbar { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 20; }
+    .callbar a { flex: 1; text-align: center; padding: 15px; font-weight: 700; }
+    .callbar a:first-child { background: var(--blk); color: #fff; } .callbar a:last-child { background: var(--yel); color: var(--blk); }
+    footer { padding-bottom: 80px; }
+  }
+  @media (max-width: 420px) { .plist.on { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for All In 1 Driving School. This is a design preview, not the live website.</div>
+<header><div class="wrap">
+  <div class="logo"><i>L</i>All In 1 Driving School</div>
+  <nav><a href="#prices">Prices</a><a href="#why">Why us</a><a href="#reviews">Reviews</a><a href="#areas">Areas</a></nav>
+  <a class="btn" href="#book">Book a lesson</a>
+</div></header>
+
+<section class="hero" style="padding:0"><div class="wrap">
+  <div>
+    <span class="badge">🚗 Auto &amp; manual lessons · South-east Melbourne</span>
+    <h1>Pass your test <span>with confidence.</span></h1>
+    <p>Friendly, patient instructors for first-timers, adults and drivers with a lapsed licence. We pick you up and drop you off, and tailor every lesson to you.</p>
+    <div class="cta"><a class="btn" href="#book">Book a lesson</a><a class="btn o" href="tel:0439242887">Call 0439 242 887</a></div>
+    <div class="rating"><b>★★★★★</b> 5.0 on Google (23 reviews)</div>
+  </div>
+  <form class="q" id="book" onsubmit="event.preventDefault();this.querySelector('.btn').textContent='Thanks! We\'ll call you to confirm a time.'">
+    <h3>Book a lesson</h3>
+    <p>Pick what you need and we'll pair you with an instructor.</p>
+    <div class="seg"><label><input type="radio" name="tx" checked>Automatic</label><label><input type="radio" name="tx">Manual</label></div>
+    <select><option>60 min lesson</option><option>90 min lesson</option><option>1 hr lesson + drive test</option><option>5 x 60 min lessons</option><option>10 x 60 min lessons</option><option>Drive test package</option><option>Not sure, help me choose</option></select>
+    <input placeholder="Pick-up suburb"><input placeholder="Your name"><input placeholder="Mobile">
+    <button class="btn k" type="submit">Request my booking</button>
+  </form>
+</div></section>
+
+<div class="perks"><div class="wrap"><div>✓ Pick up &amp; drop off</div><div>✓ Auto &amp; manual</div><div>✓ Flexible times</div><div>✓ Drive test packages</div></div></div>
+
+<section id="prices"><div class="wrap">
+  <div class="kicker">Lesson prices</div>
+  <h2>Clear prices, no surprises</h2>
+  <div class="ptabs">
+    <button class="on" onclick="sw(this,'a')">Automatic</button>
+    <button onclick="sw(this,'m')">Manual</button>
+    <button onclick="sw(this,'t')">Test packages</button>
+  </div>
+  <div class="plist on" id="p-a">
+    <div class="p"><h3>Single lesson · 60 min</h3><div class="amt">$60</div><a href="#book">Book</a></div>
+    <div class="p"><h3>Single lesson · 90 min</h3><div class="amt">$85</div><a href="#book">Book</a></div>
+    <div class="p pop"><span class="tag">Popular</span><h3>5 x 60 min lessons</h3><div class="amt">$285</div><a href="#book">Book</a></div>
+    <div class="p"><h3>10 x 60 min lessons</h3><div class="amt">$530</div><a href="#book">Book</a></div>
+  </div>
+  <div class="plist" id="p-m">
+    <div class="p"><h3>Manual · 60 min</h3><div class="amt">$70</div><a href="#book">Book</a></div>
+    <div class="p"><h3>Manual · 90 min</h3><div class="amt">$95</div><a href="#book">Book</a></div>
+    <div class="p pop"><span class="tag">Popular</span><h3>Manual · 5 x 1 hr</h3><div class="amt">$330</div><a href="#book">Book</a></div>
+    <div class="p"><h3>Manual · 1 hr lesson + test</h3><div class="amt">$250</div><a href="#book">Book</a></div>
+  </div>
+  <div class="plist" id="p-t">
+    <div class="p"><h3>Drive test (auto)</h3><div class="amt">$150</div><a href="#book">Book</a></div>
+    <div class="p pop"><span class="tag">Popular</span><h3>1 hr lesson + drive test</h3><div class="amt">$200</div><a href="#book">Book</a></div>
+    <div class="p"><h3>3 x 1 hr lessons + test</h3><div class="amt">$300</div><a href="#book">Book</a></div>
+    <div class="p"><h3>5 x 1 hr lessons + test</h3><div class="amt">$400</div><a href="#book">Book</a></div>
+  </div>
+  <p class="lead" style="font-size:14px">Prices taken from the current website's pricing table. One clear price list, everywhere on the site.</p>
+</div></section>
+
+<section class="why" id="why"><div class="wrap">
+  <div class="kicker">Why choose us</div>
+  <h2>Learning made easy</h2>
+  <div class="grid">
+    <div class="g"><div class="ic">🛡️</div><h3>Safety first</h3><p>Safety always tops our priority list, so you're in safe hands behind the wheel.</p></div>
+    <div class="g"><div class="ic">👨‍🏫</div><h3>Experienced instructors</h3><p>Skilled, competent instructors with years of experience, calm and clear.</p></div>
+    <div class="g"><div class="ic">🕒</div><h3>Flexible timing</h3><p>Lessons that fit around work, school and everything else.</p></div>
+    <div class="g"><div class="ic">💰</div><h3>Affordable fees</h3><p>Quality lessons at fair, clearly listed prices.</p></div>
+    <div class="g"><div class="ic">🎥</div><h3>Video classes</h3><p>Online video classes too, if you can't make it in person.</p></div>
+    <div class="g"><div class="ic">📋</div><h3>Licence help</h3><p>We help you with the steps to get your licence quickly.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="kicker">Your road to a licence</div>
+  <h2>Three simple steps</h2>
+  <div class="road">
+    <div class="step"><b>STEP 1</b><h3>Driving basics</h3><p>Core skills with a qualified instructor, at your pace.</p></div>
+    <div class="step"><b>STEP 2</b><h3>Real roads</h3><p>City streets, highways, expressways and parallel parking.</p></div>
+    <div class="step"><b>STEP 3</b><h3>Test preparation</h3><p>Test route practice and use of the car on test day.</p></div>
+  </div>
+</div></section>
+
+<section id="reviews" style="padding-top:0"><div class="wrap">
+  <div class="kicker">Reviews</div>
+  <h2>Students who passed</h2>
+  <div class="rev">
+    <div class="r"><div class="stars">★★★★★</div><p>"I have passed on first attempt (manual car), my instructor was very supportive kept me calm and relaxed."</p><div class="n">Munier</div></div>
+    <div class="r"><div class="stars">★★★★★</div><p>"Great driving school, my instructor was nice and calm gave me nice clear instructions. I had 1 lesson before test and passed."</p><div class="n">Matt Law</div></div>
+    <div class="r"><div class="stars">★★★★★</div><p>"The instruction were very clear made it very easy to understand, which helped me clear my drive test on the first attempt."</p><div class="n">Sahil</div></div>
+  </div>
+</div></section>
+
+<section class="why" id="areas"><div class="wrap">
+  <div class="kicker">Areas we serve</div>
+  <h2>Lessons across the south-east</h2>
+  <div class="areas"><span>Dandenong</span><span>Cranbourne</span><span>Noble Park</span><span>Keysborough</span><span>Springvale South</span><span>Hallam</span><span>Doveton</span><span>Endeavour Hills</span><span>Narre Warren</span><span>Narre Warren South</span><span>Berwick</span><span>Beaconsfield</span><span>Officer</span><span>Pakenham</span><span>Clyde</span><span>Lyndhurst</span><span>Lynbrook</span><span>Hampton Park</span><span>Frankston</span><span>Seaford</span><span>Carrum Downs</span><span>Sandhurst</span><span>Heatherton</span><span>Mulgrave</span><span>Rowville</span></div>
+</div></section>
+
+<section class="contact"><div class="wrap">
+  <div>
+    <div class="kicker" style="color:var(--yel)">Contact</div>
+    <h2>Ready to get on the road?</h2>
+  </div>
+  <table>
+    <tr><td>Phone</td><td><a href="tel:0439242887">0439 242 887</a></td></tr>
+    <tr><td>Email</td><td><a href="mailto:info.allin1drivingschool@gmail.com">info.allin1drivingschool@gmail.com</a></td></tr>
+    <tr><td>Address</td><td>8 Lily Place, Cranbourne VIC 3977</td></tr>
+    <tr><td>Lessons</td><td>Automatic &amp; manual</td></tr>
+  </table>
+</div></section>
+
+<footer><div class="wrap"><div>© 2026 All In 1 Driving School · Cranbourne VIC 3977</div><div>Concept design by Swoop Sites</div></div></footer>
+<div class="callbar"><a href="tel:0439242887">📞 Call</a><a href="#book">Book a lesson</a></div>
+<script>
+function sw(b,id){document.querySelectorAll('.ptabs button').forEach(x=>x.classList.remove('on'));b.classList.add('on');document.querySelectorAll('.plist').forEach(x=>x.classList.remove('on'));document.getElementById('p-'+id).classList.add('on');}
+</script>
+</body>
+</html>
