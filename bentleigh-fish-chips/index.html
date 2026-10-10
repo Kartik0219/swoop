@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Bentleigh Fish &amp; Chips | Fish, Burgers &amp; Souvlaki, Centre Rd Bentleigh East (concept)</title>
+<meta name="description" content="Fish and chips, burgers, souvlaki, seafood and milkshakes at 737 Centre Rd, Bentleigh East. Open 7 days, 11am to 9pm. Order online for pickup.">
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --sea:#0c4a8c; --sea2:#08325f; --sky:#dcecfb; --yolk:#ffc93c; --red:#e23d28; --ink:#14243a; --sub:#56657a; --line:#e5e0d2; --paper:#fffdf6; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Work Sans', system-ui, sans-serif; color: var(--ink); line-height: 1.6; background: var(--paper); }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  .concept { background: #111; color: #ddd; font-size: 13px; text-align: center; padding: 8px 16px; }
+  .concept b { color: var(--yolk); }
+  header { background: var(--sea); color: #fff; position: sticky; top: 0; z-index: 10; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 70px; gap: 16px; }
+  .logo { font-family: 'Bowlby One', sans-serif; font-size: 22px; line-height: 1; }
+  .logo span { color: var(--yolk); }
+  .logo small { display: block; font-family: 'Work Sans', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: #a9c8ec; margin-top: 3px; }
+  nav { display: flex; gap: 24px; font-size: 15px; color: #cfe0f5; font-weight: 600; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--yolk); color: var(--ink); font-weight: 800; padding: 13px 22px; border-radius: 999px; font-size: 15px; white-space: nowrap; border: 0; cursor: pointer; font-family: inherit; box-shadow: 0 3px 0 #c99a1a; }
+  .btn.r { background: var(--red); color: #fff; box-shadow: 0 3px 0 #a32616; }
+  .btn.o { background: #fff; color: var(--sea); box-shadow: none; border: 2px solid var(--sea); }
+  .hero { background: var(--sea); color: #fff; position: relative; overflow: hidden; }
+  .hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 40px; background: radial-gradient(circle at 20px 0, transparent 20px, var(--paper) 21px) repeat-x; background-size: 40px 40px; }
+  .hero .wrap { display: grid; grid-template-columns: 1.15fr 1fr; gap: 40px; align-items: center; padding: 56px 20px 90px; }
+  .tag { display: inline-block; background: var(--yolk); color: var(--ink); font-weight: 800; font-size: 13px; padding: 6px 14px; border-radius: 999px; transform: rotate(-2deg); }
+  h1 { font-family: 'Bowlby One', sans-serif; font-size: 58px; line-height: 1.02; margin: 18px 0; }
+  h1 span { color: var(--yolk); }
+  .hero p { color: #cfe0f5; font-size: 18px; max-width: 520px; }
+  .cta { display: flex; gap: 12px; margin-top: 26px; flex-wrap: wrap; }
+  .rating { margin-top: 20px; font-weight: 700; } .rating .s { color: var(--yolk); letter-spacing: 1px; }
+  .cone { position: relative; height: 360px; }
+  .cone .paper { position: absolute; left: 50%; bottom: 10px; transform: translateX(-50%); width: 0; height: 0; border-left: 120px solid transparent; border-right: 120px solid transparent; border-top: 230px solid #f3ead2; filter: drop-shadow(0 20px 30px rgba(0,0,0,.3)); }
+  .cone .chips { position: absolute; left: 50%; top: 40px; transform: translateX(-50%); width: 260px; height: 110px; }
+  .cone .chips i { position: absolute; bottom: 0; width: 22px; border-radius: 6px; background: linear-gradient(90deg,#f6c453,#ffdf86); box-shadow: inset -3px 0 0 #e0a92f; }
+  .cone .sticker { position: absolute; right: 0; top: 10px; width: 120px; height: 120px; border-radius: 50%; background: var(--red); color: #fff; display: grid; place-items: center; text-align: center; font-family: 'Bowlby One', sans-serif; font-size: 18px; line-height: 1.05; transform: rotate(10deg); box-shadow: 0 10px 20px rgba(0,0,0,.25); }
+  .strip { background: var(--paper); }
+  .strip .wrap { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; padding: 10px 20px 0; }
+  .strip div { background: #fff; border: 2px dashed var(--line); border-radius: 14px; padding: 14px; font-weight: 700; font-size: 15px; text-align: center; }
+  section { padding: 70px 0; }
+  .kicker { color: var(--red); font-weight: 800; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; }
+  h2 { font-family: 'Bowlby One', sans-serif; font-size: 38px; line-height: 1.08; margin-top: 6px; color: var(--sea2); }
+  .lead { color: var(--sub); font-size: 17px; margin-top: 10px; max-width: 640px; }
+  .menu { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; margin-top: 30px; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 22px; }
+  .card h3 { font-family: 'Bowlby One', sans-serif; font-size: 20px; color: var(--sea); display: flex; align-items: center; gap: 8px; }
+  .card ul { list-style: none; margin-top: 12px; }
+  .card li { display: flex; justify-content: space-between; gap: 10px; padding: 7px 0; border-bottom: 1px dotted #d8d2c2; font-size: 15px; }
+  .card li b { white-space: nowrap; }
+  .card small { display: block; color: var(--sub); font-size: 13px; }
+  .packs { background: var(--sky); }
+  .pgrid { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; margin-top: 28px; }
+  .p { background: #fff; border-radius: 18px; padding: 20px; border: 2px solid #b9d6f3; position: relative; }
+  .p .pr { position: absolute; right: 14px; top: 14px; background: var(--yolk); border-radius: 999px; padding: 3px 10px; font-weight: 800; font-size: 14px; }
+  .p h3 { font-size: 17px; font-weight: 800; margin-top: 26px; }
+  .p p { color: var(--sub); font-size: 14px; }
+  .cats { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+  .cats span { background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; font-weight: 600; font-size: 14px; }
+  .order { background: var(--sea2); color: #fff; }
+  .order .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
+  .order h2 { color: #fff; }
+  .order .kicker { color: var(--yolk); }
+  .order form { background: #fff; color: var(--ink); border-radius: 20px; padding: 26px; }
+  .order input, .order select, .order textarea { width: 100%; padding: 12px; margin-top: 10px; border: 1px solid var(--line); border-radius: 12px; font: inherit; background: var(--paper); }
+  .order .btn { width: 100%; margin-top: 14px; }
+  .order table { width: 100%; border-collapse: collapse; margin-top: 18px; font-size: 15px; }
+  .order td { padding: 9px 0; border-bottom: 1px solid rgba(255,255,255,.15); color: #d5e3f3; }
+  .order td:last-child { text-align: right; font-weight: 700; color: #fff; }
+  .thanks { display: none; text-align: center; padding: 40px 10px; }
+  .thanks b { display: block; font-family: 'Bowlby One', sans-serif; font-size: 24px; color: var(--sea); margin-bottom: 6px; }
+  footer { background: var(--ink); color: #94a3b8; padding: 30px 0; font-size: 14px; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .callbar { display: none; }
+  @media (max-width: 880px) {
+    nav, header .btn { display: none; }
+    .hero .wrap, .order .wrap { grid-template-columns: 1fr; }
+    .hero .wrap { padding-top: 36px; }
+    h1 { font-size: 42px; } h2 { font-size: 30px; }
+    .menu { grid-template-columns: 1fr 1fr; } .pgrid { grid-template-columns: 1fr 1fr; }
+    .strip .wrap { grid-template-columns: 1fr 1fr; }
+    section { padding: 52px 0; }
+    .cone { height: 300px; }
+    .callbar { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 20; }
+    .callbar a { flex: 1; text-align: center; padding: 15px; font-weight: 800; }
+    .callbar a:first-child { background: var(--sea2); color: #fff; } .callbar a:last-child { background: var(--yolk); color: var(--ink); }
+    footer { padding-bottom: 80px; }
+  }
+  @media (max-width: 560px) { .menu, .pgrid { grid-template-columns: 1fr; } .cone .sticker { width: 96px; height: 96px; font-size: 15px; } }
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Bentleigh Fish &amp; Chips. This is a design preview, not the live website.</div>
+<header><div class="wrap">
+  <div class="logo">Bentleigh <span>Fish &amp; Chips</span><small>737 Centre Rd · Bentleigh East</small></div>
+  <nav><a href="#menu">Menu</a><a href="#packs">Meal packs</a><a href="#order">Order &amp; hours</a></nav>
+  <a class="btn" href="#order">Order online</a>
+</div></header>
+
+<section class="hero" style="padding:0"><div class="wrap">
+  <div>
+    <span class="tag">🐟 Open 7 days · 11am to 9pm</span>
+    <h1>Fish &amp; chips, right here on <span>Centre Rd.</span></h1>
+    <p>Flake, whiting, barramundi and salmon, plus burgers, souvlaki, seafood and milkshakes. Order online for pickup, or give us a call.</p>
+    <div class="cta"><a class="btn" href="#order">Order online</a><a class="btn o" href="tel:0450172228">Call 0450 172 228</a></div>
+    <div class="rating"><span class="s">★★★★☆</span> 4.4 on Google (112 reviews)</div>
+  </div>
+  <div class="cone" aria-hidden="true">
+    <div class="chips"><i style="left:30px;height:80px;transform:rotate(-14deg)"></i><i style="left:62px;height:100px;transform:rotate(-6deg)"></i><i style="left:94px;height:90px;transform:rotate(-2deg)"></i><i style="left:126px;height:110px"></i><i style="left:158px;height:95px;transform:rotate(4deg)"></i><i style="left:190px;height:84px;transform:rotate(10deg)"></i><i style="left:110px;height:70px;transform:rotate(18deg)"></i></div>
+    <div class="paper"></div>
+    <div class="sticker">LUNCH<br>SPECIALS<br><span style="font-size:13px">11am–4pm</span></div>
+  </div>
+</div></section>
+
+<div class="strip"><div class="wrap">
+  <div>🛍️ Order online for pickup</div><div>🕚 Open 7 days</div><div>🍔 Burgers &amp; souvlaki</div><div>🥤 Milkshakes</div>
+</div></div>
+
+<section id="menu"><div class="wrap">
+  <div class="kicker">Menu favourites</div>
+  <h2>What's frying today</h2>
+  <p class="lead">A taste of the menu. Prices from our online menu and may change, so check when you order.</p>
+  <div class="menu">
+    <div class="card"><h3>🐟 Fish</h3><ul>
+      <li><span>Flathead</span><b>$8.50</b></li><li><span>Whiting</span><b>$9.00</b></li><li><span>Blue Grenadier</span><b>$9.50</b></li><li><span>Flake</span><b>$10.00</b></li><li><span>Barramundi</span><b>$12.00</b></li><li><span>Salmon</span><b>$15.00</b></li></ul></div>
+    <div class="card"><h3>🍔 Burgers</h3><ul>
+      <li><span>Plain Burger</span><b>$10.00</b></li><li><span>Fish Burger<small>Grilled fish, lettuce, tomato, tartare, cheese</small></span><b>$10.00</b></li><li><span>Chicken Schnitzel Burger</span><b>$10.00</b></li><li><span>The Lot</span><b>$14.00</b></li><li><span>Monster Burger<small>Double pattie, double cheese, double bacon</small></span><b>$18.00</b></li></ul></div>
+    <div class="card"><h3>🥙 Souvlaki &amp; more</h3><ul>
+      <li><span>Chicken Souvlaki</span><b>$13.00</b></li><li><span>Lamb Souvlaki</span><b>$14.00</b></li><li><span>Mixed Souvlaki</span><b>$16.00</b></li><li><span>Chips &amp; Gravy</span><b>$9.00</b></li><li><span>Milkshakes</span><b>$8.00</b></li><li><span>Mars Bar in Batter</span><b>$5.00</b></li></ul></div>
+  </div>
+  <div class="cats"><span>Fish</span><span>Chips</span><span>Seafood</span><span>Burgers</span><span>Sandwiches</span><span>Souvlaki</span><span>Loaded hot dogs</span><span>Salads</span><span>Snacks</span><span>Desserts</span><span>Milkshakes</span><span>Drinks</span><span>Lunch specials 11am–4pm</span></div>
+</div></section>
+
+<section class="packs" id="packs"><div class="wrap">
+  <div class="kicker">Meal packs</div>
+  <h2>Feed the whole crew</h2>
+  <div class="pgrid">
+    <div class="p"><span class="pr">$10.99</span><h3>Fish of the day &amp; small chips</h3><p>Pack 8</p></div>
+    <div class="p"><span class="pr">$16.00</span><h3>Burger Deal</h3><p>Lot burger, small chips, can of drink</p></div>
+    <div class="p"><span class="pr">$32.00</span><h3>Dinner for 2</h3><p>2 fish, 2 dim sims, 2 potato cakes, min chips</p></div>
+    <div class="p"><span class="pr">$60.00</span><h3>Family Pack for 4</h3><p>4 fish, 4 dim sims, 4 potato cakes, chips, lemon, 1.25L drink</p></div>
+  </div>
+</div></section>
+
+<section class="order" id="order"><div class="wrap">
+  <div>
+    <div class="kicker">Order &amp; hours</div>
+    <h2>737 Centre Rd, Bentleigh East</h2>
+    <table>
+      <tr><td>Monday to Sunday</td><td>11am to 9pm</td></tr>
+      <tr><td>Lunch specials</td><td>11am to 4pm</td></tr>
+      <tr><td>Phone</td><td><a href="tel:0450172228">0450 172 228</a></td></tr>
+      <tr><td>Email</td><td><a href="mailto:bentleighfishnchips@gmail.com">bentleighfishnchips@gmail.com</a></td></tr>
+    </table>
+  </div>
+  <form onsubmit="event.preventDefault();this.querySelector('.fields').style.display='none';this.querySelector('.thanks').style.display='block'">
+    <div class="fields">
+      <h3 style="font-family:'Bowlby One',sans-serif;font-size:22px;color:var(--sea)">Quick pickup order</h3>
+      <select><option>Family Pack for 4</option><option>Dinner for 2</option><option>Fish of the day &amp; small chips</option><option>Burger Deal</option><option>Something else (add below)</option></select>
+      <input placeholder="Your name" required><input placeholder="Mobile" type="tel" required>
+      <select><option>Pickup ASAP</option><option>Pickup in 30 minutes</option><option>Pickup in 1 hour</option></select>
+      <textarea rows="3" placeholder="Anything else? (e.g. extra chips, grilled not battered)"></textarea>
+      <button class="btn r" type="submit">Place order</button>
+    </div>
+    <div class="thanks"><b>Order received! 🍟</b>We'll text you when it's ready to pick up.</div>
+  </form>
+</div></section>
+
+<footer><div class="wrap"><div>© 2026 Bentleigh Fish &amp; Chips · 737 Centre Rd, Bentleigh East VIC 3165</div><div>Concept design by Swoop Sites</div></div></footer>
+<div class="callbar"><a href="tel:0450172228">📞 Call</a><a href="#order">Order online</a></div>
+</body>
+</html>

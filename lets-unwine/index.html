@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Let's Unwine Berwick | Independent Bottle Shop, High St Berwick (concept)</title>
+<meta name="description" content="Independent, family-owned bottle shop on High St, Berwick. Wine, beer, cider and spirits, the Regular Dozen Club, Froth Squad Beer Club, customised labelling, fundraising and wholesale.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root { --wine:#5e1428; --wine2:#3d0b19; --rose:#f6e7e3; --gold:#c9a45c; --ink:#26141a; --sub:#6d5960; --line:#ecdcd8; --bg:#fbf7f4; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', system-ui, sans-serif; color: var(--ink); line-height: 1.6; background: var(--bg); }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  .concept { background: #111; color: #ddd; font-size: 13px; text-align: center; padding: 8px 16px; }
+  .concept b { color: var(--gold); }
+  header { background: var(--bg); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 10; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 74px; gap: 16px; }
+  .logo { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 24px; color: var(--wine); line-height: 1; }
+  .logo em { color: var(--gold); }
+  .logo small { display: block; font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: .22em; text-transform: uppercase; color: var(--sub); font-weight: 700; margin-top: 4px; }
+  nav { display: flex; gap: 24px; font-size: 15px; color: var(--sub); font-weight: 500; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--wine); color: #fff; font-weight: 700; padding: 13px 24px; border-radius: 2px; font-size: 15px; white-space: nowrap; border: 0; cursor: pointer; font-family: inherit; letter-spacing: .02em; }
+  .btn.g { background: var(--gold); color: var(--wine2); }
+  .btn.o { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.45); }
+  .hero { background: radial-gradient(circle at 80% 30%, #8a2440 0, transparent 50%), linear-gradient(135deg,var(--wine2),var(--wine)); color: #fff; }
+  .hero .wrap { display: grid; grid-template-columns: 1.15fr 1fr; gap: 40px; align-items: center; padding: 70px 20px 80px; }
+  .eyebrow { font-size: 13px; letter-spacing: .24em; text-transform: uppercase; color: var(--gold); font-weight: 700; }
+  h1 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 58px; line-height: 1.04; margin: 16px 0; }
+  h1 em { color: var(--gold); font-style: italic; }
+  .hero p { color: #ead3d9; font-size: 18px; max-width: 520px; }
+  .cta { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
+  .rating { margin-top: 22px; color: #ead3d9; font-size: 15px; } .rating .s { color: var(--gold); letter-spacing: 1px; } .rating b { color: #fff; }
+  .bottles { position: relative; height: 380px; display: flex; align-items: flex-end; justify-content: center; gap: 18px; }
+  .bt { position: relative; width: 70px; border-radius: 16px 16px 8px 8px; box-shadow: 0 20px 40px rgba(0,0,0,.35); }
+  .bt::before { content: ""; position: absolute; left: 50%; transform: translateX(-50%); top: -70px; width: 22px; height: 76px; border-radius: 6px 6px 0 0; background: inherit; }
+  .bt::after { content: ""; position: absolute; left: 8px; right: 8px; top: 40%; height: 70px; background: #f5ecd9; border-radius: 3px; }
+  .b1 { height: 220px; background: linear-gradient(90deg,#1d0710,#3a0d1c 60%,#1d0710); }
+  .b2 { height: 250px; background: linear-gradient(90deg,#5b6b2a,#8a9a46 60%,#5b6b2a); }
+  .b3 { height: 200px; width: 62px; background: linear-gradient(90deg,#7a4a16,#b8792c 60%,#7a4a16); }
+  .bottles .glass { position: absolute; right: 6%; bottom: 0; font-size: 70px; }
+  .bar { background: var(--wine2); color: #ead3d9; border-top: 1px solid rgba(255,255,255,.08); }
+  .bar .wrap { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; padding: 16px 20px; font-size: 14px; font-weight: 500; text-align: center; letter-spacing: .04em; }
+  .bar i { color: var(--gold); font-style: normal; }
+  section { padding: 80px 0; }
+  .kicker { color: var(--gold); font-weight: 700; font-size: 13px; letter-spacing: .2em; text-transform: uppercase; }
+  h2 { font-family: 'Playfair Display', serif; font-size: 40px; line-height: 1.1; margin-top: 6px; color: var(--wine2); }
+  .lead { color: var(--sub); font-size: 17px; margin-top: 10px; max-width: 640px; }
+  .cats { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; margin-top: 34px; }
+  .c { border-radius: 4px; padding: 28px 22px; min-height: 180px; display: flex; flex-direction: column; justify-content: flex-end; color: #fff; position: relative; overflow: hidden; }
+  .c .em { position: absolute; right: 14px; top: 10px; font-size: 44px; opacity: .9; }
+  .c h3 { font-family: 'Playfair Display', serif; font-size: 22px; }
+  .c p { font-size: 14px; opacity: .85; }
+  .c1 { background: linear-gradient(160deg,#8a2440,#4a0f20); } .c2 { background: linear-gradient(160deg,#c8b26a,#8e7a35); } .c3 { background: linear-gradient(160deg,#c9852b,#7c4a10); } .c4 { background: linear-gradient(160deg,#4b3a5c,#231a2e); }
+  .clubs { background: var(--rose); }
+  .cgrid { display: grid; grid-template-columns: repeat(2,1fr); gap: 18px; margin-top: 30px; }
+  .club { background: #fff; border: 1px solid var(--line); padding: 30px; border-radius: 4px; }
+  .club h3 { font-family: 'Playfair Display', serif; font-size: 26px; color: var(--wine); }
+  .club p { color: var(--sub); margin-top: 6px; }
+  .extras { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 30px; }
+  .x { border-top: 2px solid var(--gold); padding-top: 16px; }
+  .x h3 { font-family: 'Playfair Display', serif; font-size: 21px; color: var(--wine2); }
+  .x p { color: var(--sub); font-size: 15px; margin-top: 4px; }
+  .story { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  .story blockquote { font-family: 'Playfair Display', serif; font-style: italic; font-size: 30px; color: var(--wine); line-height: 1.25; border-left: 3px solid var(--gold); padding-left: 22px; }
+  .visit { background: var(--wine2); color: #fff; }
+  .visit .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
+  .visit h2 { color: #fff; }
+  .visit form { background: #fff; color: var(--ink); border-radius: 4px; padding: 26px; }
+  .visit input, .visit select, .visit textarea { width: 100%; padding: 12px; margin-top: 10px; border: 1px solid var(--line); border-radius: 2px; font: inherit; background: var(--bg); }
+  .visit .btn { width: 100%; margin-top: 14px; }
+  .visit table { width: 100%; border-collapse: collapse; margin-top: 18px; font-size: 15px; }
+  .visit td { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,.15); color: #ead3d9; }
+  .visit td:last-child { text-align: right; font-weight: 700; color: #fff; }
+  .thanks { display: none; text-align: center; padding: 40px 10px; }
+  .thanks b { display: block; font-family: 'Playfair Display', serif; font-size: 26px; color: var(--wine); margin-bottom: 6px; }
+  .legal { background: #f1e8e4; color: var(--sub); font-size: 13px; padding: 18px 0; }
+  footer { background: var(--ink); color: #b49ea5; padding: 30px 0; font-size: 14px; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .callbar { display: none; }
+  @media (max-width: 880px) {
+    nav, header .btn { display: none; }
+    .hero .wrap, .visit .wrap, .story { grid-template-columns: 1fr; }
+    .hero .wrap { padding-top: 44px; }
+    h1 { font-size: 42px; } h2 { font-size: 31px; }
+    .cats { grid-template-columns: 1fr 1fr; } .cgrid, .extras { grid-template-columns: 1fr; }
+    .bar .wrap { grid-template-columns: 1fr 1fr; }
+    section { padding: 56px 0; }
+    .bottles { height: 300px; } .story blockquote { font-size: 24px; }
+    .callbar { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 20; }
+    .callbar a { flex: 1; text-align: center; padding: 15px; font-weight: 700; }
+    .callbar a:first-child { background: var(--ink); color: #fff; } .callbar a:last-child { background: var(--wine); color: #fff; }
+    footer { padding-bottom: 80px; }
+  }
+  @media (max-width: 480px) { .cats { grid-template-columns: 1fr; } .bt { width: 56px; } }
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Let's Unwine Berwick. This is a design preview, not the live website.</div>
+<header><div class="wrap">
+  <div class="logo">Let's <em>Unwine</em><small>Berwick · Independent bottle shop</small></div>
+  <nav><a href="#shop">Shop</a><a href="#clubs">Clubs</a><a href="#extras">Labels &amp; fundraising</a><a href="#visit">Visit us</a></nav>
+  <a class="btn" href="#shop">Shop online</a>
+</div></header>
+
+<section class="hero" style="padding:0"><div class="wrap">
+  <div>
+    <div class="eyebrow">Wine · Beer · Spirits · Cider</div>
+    <h1>Your local, <em>independent</em> bottle shop in Berwick.</h1>
+    <p>Family owned and operated on High Street. Our love for wine, beer, cider and spirits drives who we are and what we do. Every. Single. Day.</p>
+    <div class="cta"><a class="btn g" href="#shop">Shop online</a><a class="btn o" href="#visit">Visit the store</a></div>
+    <div class="rating"><span class="s">★★★★★</span> <b>4.6 on Google (51 reviews)</b></div>
+  </div>
+  <div class="bottles" aria-hidden="true"><div class="bt b1"></div><div class="bt b2"></div><div class="bt b3"></div><div class="glass">🍷</div></div>
+</div></section>
+
+<div class="bar"><div class="wrap">
+  <div><i>✦</i> Independent &amp; family owned</div><div><i>✦</i> Shop online</div><div><i>✦</i> Retail &amp; wholesale</div><div><i>✦</i> Free membership</div>
+</div></div>
+
+<section id="shop"><div class="wrap">
+  <div class="kicker">Shop the range</div>
+  <h2>Something for every occasion</h2>
+  <p class="lead">Browse online, or drop in and ask us for a recommendation. Gift vouchers available too.</p>
+  <div class="cats">
+    <a class="c c1" href="#visit"><span class="em">🍷</span><h3>Red &amp; Rosé</h3><p>Shop wines →</p></a>
+    <a class="c c2" href="#visit"><span class="em">🥂</span><h3>Sparkling &amp; White</h3><p>Shop wines →</p></a>
+    <a class="c c3" href="#visit"><span class="em">🍺</span><h3>Beer &amp; Cider</h3><p>Shop beer →</p></a>
+    <a class="c c4" href="#visit"><span class="em">🥃</span><h3>Spirits</h3><p>Shop spirits →</p></a>
+  </div>
+</div></section>
+
+<section class="clubs" id="clubs"><div class="wrap">
+  <div class="kicker">Membership</div>
+  <h2>Join the club</h2>
+  <p class="lead">Become a member today, it's free.</p>
+  <div class="cgrid">
+    <div class="club"><h3>🍇 Regular Dozen Club</h3><p>For wine lovers who like a regular dozen. Ask in store or send us a message to find out how it works.</p><a class="btn" style="margin-top:16px" href="#visit">Find out more</a></div>
+    <div class="club"><h3>🍻 Froth Squad Beer Club</h3><p>For beer lovers. Ask in store or send us a message to find out how it works.</p><a class="btn" style="margin-top:16px" href="#visit">Find out more</a></div>
+  </div>
+</div></section>
+
+<section id="extras"><div class="wrap">
+  <div class="kicker">More than a bottle shop</div>
+  <h2>Labels, fundraisers &amp; wholesale</h2>
+  <div class="extras">
+    <div class="x"><h3>Customised labelling</h3><p>Ask us about customised labels for your next occasion.</p></div>
+    <div class="x"><h3>Fundraising concepts</h3><p>Ask us about our fundraising concepts.</p></div>
+    <div class="x"><h3>Wholesale enquiries</h3><p>Retail and wholesale enquiries welcome.</p></div>
+  </div>
+  <div class="story" style="margin-top:60px">
+    <blockquote>"What started out as a hobby has now become our passion, and we're delighted to share it with you."</blockquote>
+    <p style="color:var(--sub);font-size:17px">Let's Unwine Berwick has become a well-known independent liquor store in Berwick. We're proud to have produced years of happy customers, and we look forward to continuing for years to come.</p>
+  </div>
+</div></section>
+
+<section class="visit" id="visit"><div class="wrap">
+  <div>
+    <div class="kicker">Visit us</div>
+    <h2>65 High St, Berwick</h2>
+    <table>
+      <tr><td>Monday</td><td>10am to 6pm</td></tr>
+      <tr><td>Tuesday to Saturday</td><td>9am to 8pm</td></tr>
+      <tr><td>Sunday</td><td>Call for today's hours</td></tr>
+      <tr><td>Phone</td><td><a href="tel:0397694777">(03) 9769 4777</a></td></tr>
+      <tr><td>Email</td><td><a href="mailto:info@letsunwine.com.au">info@letsunwine.com.au</a></td></tr>
+    </table>
+  </div>
+  <form onsubmit="event.preventDefault();this.querySelector('.fields').style.display='none';this.querySelector('.thanks').style.display='block'">
+    <div class="fields">
+      <h3 style="font-family:'Playfair Display',serif;font-size:24px;color:var(--wine)">Send us an enquiry</h3>
+      <select><option>Join the Regular Dozen Club</option><option>Join the Froth Squad Beer Club</option><option>Customised labelling</option><option>Fundraising</option><option>Wholesale enquiry</option><option>Something else</option></select>
+      <input placeholder="Your name" required><input placeholder="Email or mobile" required>
+      <textarea rows="3" placeholder="Tell us a little about what you're after"></textarea>
+      <label style="display:flex;gap:8px;align-items:center;margin-top:10px;font-size:14px;color:var(--sub)"><input type="checkbox" required style="width:auto;margin:0"> I'm 18 or over</label>
+      <button class="btn" type="submit">Send enquiry</button>
+    </div>
+    <div class="thanks"><b>Cheers, we've got it! 🍷</b>We'll be in touch soon.</div>
+  </form>
+</div></section>
+
+<div class="legal"><div class="wrap">Warning: it is an offence to sell or supply liquor to a person under the age of 18 years, and for a person under the age of 18 years to purchase, or attempt to purchase, liquor. Liquor Licence 32056659 (Packaged Liquor Licence).</div></div>
+<footer><div class="wrap"><div>© 2026 Let's Unwine Berwick · 65 High St, Berwick VIC 3806</div><div>Concept design by Swoop Sites</div></div></footer>
+<div class="callbar"><a href="tel:0397694777">📞 Call</a><a href="#shop">Shop online</a></div>
+</body>
+</html>
