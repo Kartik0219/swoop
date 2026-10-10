@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Auto Miraj | Toyota Specialist Mechanic, Noble Park (concept)</title>
+<meta name="description" content="Family-owned Toyota specialist in Noble Park. Logbook servicing, roadworthy certificates, brakes, suspension and auto electrics, for less than dealer prices.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --navy:#0b1b2e; --navy2:#13263d; --amber:#ffb020; --ink:#1b2430; --sub:#5b6573; --line:#e6e9ee; --soft:#f5f7fa; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Inter, system-ui, sans-serif; color: var(--ink); background: #fff; line-height: 1.55; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  .concept { background: #111; color: #ddd; font-size: 13px; text-align: center; padding: 8px 16px; }
+  .concept b { color: var(--amber); }
+  header { background: var(--navy); color: #fff; position: sticky; top: 0; z-index: 10; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 16px; }
+  .logo { font-weight: 800; font-size: 22px; letter-spacing: -0.02em; }
+  .logo span { color: var(--amber); }
+  nav { display: flex; gap: 26px; font-size: 15px; color: #c8d1dc; }
+  nav a:hover { color: #fff; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; background: var(--amber); color: #1a1200; font-weight: 700; padding: 12px 20px; border-radius: 10px; font-size: 15px; white-space: nowrap; }
+  .btn.ghost { background: transparent; color: #fff; border: 1.5px solid #3a4d66; }
+  .hero { background: radial-gradient(circle at 85% 20%, #1d3a5c 0%, var(--navy) 55%); color: #fff; padding: 84px 0 96px; }
+  .hero .wrap { display: grid; grid-template-columns: 1.2fr 1fr; gap: 48px; align-items: center; }
+  .eyebrow { color: var(--amber); font-weight: 700; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; }
+  .hero h1 { font-size: 52px; line-height: 1.05; letter-spacing: -0.035em; font-weight: 800; margin: 14px 0 18px; }
+  .hero h1 span { color: var(--amber); }
+  .hero p { color: #b9c4d2; font-size: 18px; max-width: 520px; }
+  .hero .cta { display: flex; gap: 12px; margin-top: 30px; flex-wrap: wrap; }
+  .card-book { background: #fff; color: var(--ink); border-radius: 18px; padding: 26px; box-shadow: 0 30px 60px rgba(0,0,0,.35); }
+  .card-book h3 { font-size: 20px; margin-bottom: 4px; }
+  .card-book .small { color: var(--sub); font-size: 14px; margin-bottom: 16px; }
+  .card-book label { display: block; font-size: 13px; font-weight: 600; margin: 10px 0 4px; }
+  .card-book input, .card-book select { width: 100%; padding: 11px 12px; border: 1px solid var(--line); border-radius: 9px; font: inherit; font-size: 15px; background: var(--soft); }
+  .card-book .btn { width: 100%; justify-content: center; margin-top: 16px; }
+  .trust { background: var(--navy2); color: #dbe3ec; }
+  .trust .wrap { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; padding: 18px 20px; font-size: 14px; font-weight: 600; }
+  .trust div { display: flex; align-items: center; gap: 10px; }
+  .trust i { font-style: normal; color: var(--amber); font-size: 18px; }
+  section { padding: 80px 0; }
+  h2 { font-size: 36px; letter-spacing: -0.03em; line-height: 1.1; }
+  .lead { color: var(--sub); font-size: 17px; margin-top: 10px; max-width: 620px; }
+  .grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; margin-top: 36px; }
+  .svc { border: 1px solid var(--line); border-radius: 16px; padding: 24px; transition: .2s; }
+  .svc:hover { border-color: var(--amber); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(11,27,46,.08); }
+  .svc .ic { width: 44px; height: 44px; border-radius: 12px; background: #fff4dc; display: grid; place-items: center; font-size: 22px; }
+  .svc h3 { font-size: 18px; margin: 14px 0 6px; }
+  .svc p { color: var(--sub); font-size: 15px; }
+  .price { display: inline-block; margin-top: 10px; font-size: 13px; font-weight: 700; color: #8a5a00; background: #fff4dc; padding: 3px 10px; border-radius: 20px; }
+  .why { background: var(--soft); }
+  .why .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+  .checks { display: grid; gap: 14px; margin-top: 26px; }
+  .checks div { display: flex; gap: 12px; font-size: 16px; }
+  .checks b { color: #13a05f; }
+  .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .stat { background: #fff; border-radius: 16px; padding: 26px; border: 1px solid var(--line); }
+  .stat .n { font-size: 30px; font-weight: 800; color: var(--navy); letter-spacing: -0.02em; }
+  .stat .l { color: var(--sub); font-size: 14px; margin-top: 4px; }
+  .visit .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .map { border-radius: 18px; background: linear-gradient(135deg,#dfe6ee,#c9d4e0); min-height: 300px; display: grid; place-items: center; color: #4a5a6e; font-weight: 600; text-align: center; padding: 20px; }
+  table { width: 100%; border-collapse: collapse; margin-top: 18px; font-size: 16px; }
+  td { padding: 10px 0; border-bottom: 1px solid var(--line); }
+  td:last-child { text-align: right; font-weight: 600; }
+  .cta-band { background: var(--amber); }
+  .cta-band .wrap { display: flex; justify-content: space-between; align-items: center; padding: 40px 20px; gap: 20px; }
+  .cta-band h2 { font-size: 30px; color: #1a1200; }
+  .cta-band .btn { background: var(--navy); color: #fff; }
+  footer { background: var(--navy); color: #8d9bad; font-size: 14px; padding: 36px 0; }
+  footer .wrap { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+  .callbar { display: none; }
+  @media (max-width: 860px) {
+    nav { display: none; }
+    .hero { padding: 48px 0 56px; }
+    .hero .wrap, .why .wrap, .visit .wrap { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 38px; }
+    .trust .wrap { grid-template-columns: 1fr 1fr; }
+    .grid { grid-template-columns: 1fr; }
+    h2 { font-size: 28px; }
+    section { padding: 56px 0; }
+    .cta-band .wrap { flex-direction: column; align-items: flex-start; }
+    header .btn { display: none; }
+    .callbar { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 20; }
+    .callbar a { flex: 1; text-align: center; padding: 15px; font-weight: 700; }
+    .callbar a:first-child { background: var(--navy); color: #fff; }
+    .callbar a:last-child { background: var(--amber); color: #1a1200; }
+    footer { padding-bottom: 80px; }
+  }
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Auto Miraj. This is a design preview, not the live website.</div>
+
+<header><div class="wrap">
+  <div class="logo">Auto<span>Miraj</span></div>
+  <nav><a href="#services">Services</a><a href="#why">Why us</a><a href="#visit">Hours &amp; location</a></nav>
+  <a class="btn" href="#book">Book a service</a>
+</div></header>
+
+<section class="hero" style="padding-top:84px"><div class="wrap">
+  <div>
+    <div class="eyebrow">Noble Park · Toyota specialist</div>
+    <h1>Dealer-quality Toyota servicing, <span>for less.</span></h1>
+    <p>Family-owned and 100% Australian operated. Logbook servicing, roadworthies, brakes, suspension and auto electrics for every make, with Toyota as our speciality.</p>
+    <div class="cta">
+      <a class="btn" href="#book">Book online</a>
+      <a class="btn ghost" href="tel:0426987009">Call 0426 987 009</a>
+    </div>
+  </div>
+  <form class="card-book" id="book" onsubmit="event.preventDefault();this.querySelector('.btn').textContent='Request sent! We\'ll confirm by SMS.'">
+    <h3>Book a service</h3>
+    <div class="small">Pick a time, and we'll confirm by SMS.</div>
+    <label>Service</label>
+    <select><option>Logbook service</option><option>Roadworthy certificate</option><option>Brakes &amp; clutch</option><option>Suspension &amp; steering</option><option>Auto electrical / A/C</option><option>Free safety check</option></select>
+    <label>Car (make &amp; model)</label><input placeholder="e.g. Toyota Corolla 2018">
+    <label>Preferred day</label><input type="date">
+    <label>Mobile</label><input placeholder="04xx xxx xxx">
+    <button class="btn" type="submit">Request booking</button>
+  </form>
+</div></section>
+
+<div class="trust"><div class="wrap">
+  <div><i>✓</i> VACC accredited</div>
+  <div><i>✓</i> VicRoads roadworthies</div>
+  <div><i>✓</i> Family-owned, Noble Park</div>
+  <div><i>✓</i> Free safety checks</div>
+</div></div>
+
+<section id="services"><div class="wrap">
+  <div class="eyebrow">What we do</div>
+  <h2>Everything your car needs, under one roof</h2>
+  <p class="lead">From a quick safety check to a full engine repair. We explain every job in plain English before we start.</p>
+  <div class="grid">
+    <div class="svc"><div class="ic">📘</div><h3>Logbook servicing</h3><p>We stamp your manufacturer's logbook, so your new-car warranty stays valid.</p></div>
+    <div class="svc"><div class="ic">📋</div><h3>Roadworthy certificates</h3><p>Full RWC inspection: tyres, steering, suspension, brakes, lights, windscreen, belts and body.</p></div>
+    <div class="svc"><div class="ic">🛞</div><h3>Brakes &amp; suspension</h3><p>Brake repairs, shocks, 4x4 and lowered suspension, plus same-day leaf spring resets.</p></div>
+    <div class="svc"><div class="ic">⚡</div><h3>Auto electrical &amp; A/C</h3><p>EFI, air conditioning, starters, alternators, dual-battery systems, and breakdown call-outs.</p></div>
+    <div class="svc"><div class="ic">🔧</div><h3>Mechanical repairs</h3><p>Clutch, fuel pumps, diffs, belts and hoses, cooling, exhaust and transmission.</p></div>
+    <div class="svc"><div class="ic">🔍</div><h3>Free safety check</h3><p>No obligation. We check the essentials and give you a full report.</p><span class="price">FREE</span></div>
+  </div>
+</div></section>
+
+<section class="why" id="why"><div class="wrap">
+  <div>
+    <div class="eyebrow">Why Auto Miraj</div>
+    <h2>The local mechanic you can actually trust</h2>
+    <div class="checks">
+      <div><b>✓</b> Toyota specialist repairs for less than main-dealer prices</div>
+      <div><b>✓</b> A full diagnosis report, explained to you before we start</div>
+      <div><b>✓</b> Disposable seat covers and floor mats at every service</div>
+      <div><b>✓</b> Service packages tailored to your car and budget</div>
+      <div><b>✓</b> VACC accredited and VicRoads approved</div>
+    </div>
+  </div>
+  <div class="stat-grid">
+    <div class="stat"><div class="n">Toyota</div><div class="l">Independent specialist</div></div>
+    <div class="stat"><div class="n">6 days</div><div class="l">Open Mon to Sat, Sundays by appointment</div></div>
+    <div class="stat"><div class="n">Same day</div><div class="l">Leaf spring resets &amp; repairs</div></div>
+    <div class="stat"><div class="n">$0</div><div class="l">Safety check, no obligation</div></div>
+  </div>
+</div></section>
+
+<section class="visit" id="visit"><div class="wrap">
+  <div>
+    <div class="eyebrow">Visit us</div>
+    <h2>10 / 401-403 Princes Hwy, Noble Park</h2>
+    <table>
+      <tr><td>Monday to Saturday</td><td>9am to 5pm</td></tr>
+      <tr><td>Sunday</td><td>By appointment</td></tr>
+      <tr><td>Mobile</td><td><a href="tel:0426987009">0426 987 009</a></td></tr>
+      <tr><td>Phone</td><td><a href="tel:0385213099">(03) 8521 3099</a></td></tr>
+    </table>
+  </div>
+  <div class="map">Google Map goes here<br>(live map embedded on the real site)</div>
+</div></section>
+
+<div class="cta-band"><div class="wrap">
+  <h2>Car due for a service? Book in 30 seconds.</h2>
+  <a class="btn" href="#book">Book online</a>
+</div></div>
+
+<footer><div class="wrap">
+  <div>© 2026 Auto Miraj · Noble Park VIC 3174</div>
+  <div>Concept design by Swoop Sites</div>
+</div></footer>
+
+<div class="callbar"><a href="tel:0426987009">📞 Call</a><a href="#book">Book online</a></div>
+</body>
+</html>

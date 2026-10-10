@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Taste of Home | Homemade Indian Tiffin Delivered, Keysborough &amp; SE Melbourne (concept)</title>
+<meta name="description" content="Fresh, homemade Indian veg and non-veg tiffin delivered hot to your door across Keysborough, Springvale, Noble Park, Dandenong, Clayton and SE Melbourne.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --saffron:#e8740c; --deep:#7a2e0e; --cream:#fff8ef; --ink:#2a1a12; --sub:#7a6658; --line:#f0e2d2; --green:#2f7d4f; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Inter, system-ui, sans-serif; color: var(--ink); background: var(--cream); line-height: 1.55; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+  .concept { background: #111; color: #ddd; font-size: 13px; text-align: center; padding: 8px 16px; }
+  .concept b { color: #ffb36b; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+  .logo { font-family: Fraunces, serif; font-weight: 800; font-size: 26px; color: var(--deep); }
+  .logo span { color: var(--saffron); }
+  nav { display: flex; gap: 24px; font-size: 15px; font-weight: 500; color: var(--sub); }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--saffron); color: #fff; font-weight: 700; padding: 13px 24px; border-radius: 40px; font-size: 15px; white-space: nowrap; border: 0; cursor: pointer; font-family: inherit; }
+  .btn.alt { background: #fff; color: var(--deep); border: 1.5px solid var(--line); }
+  .hero .wrap { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center; padding: 50px 20px 70px; }
+  .pill { display: inline-block; background: #fde7d1; color: var(--deep); font-weight: 700; font-size: 13px; padding: 6px 14px; border-radius: 30px; }
+  h1 { font-family: Fraunces, serif; font-size: 58px; line-height: 1.02; letter-spacing: -0.02em; font-weight: 800; margin: 16px 0; color: var(--deep); }
+  h1 span { color: var(--saffron); }
+  .hero p { font-size: 18px; color: var(--sub); max-width: 500px; }
+  .cta { display: flex; gap: 12px; margin-top: 26px; flex-wrap: wrap; }
+  .plate { aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle at 35% 30%,#ffd7a8 0%,#f39c4a 35%,#c4561a 70%,#7a2e0e 100%); position: relative; box-shadow: 0 40px 80px rgba(122,46,14,.3); max-width: 440px; margin: 0 auto; width: 100%; }
+  .plate::before { content: ""; position: absolute; inset: 9%; border-radius: 50%; border: 3px dashed rgba(255,255,255,.35); }
+  .plate .badge { position: absolute; background: #fff; border-radius: 16px; padding: 12px 16px; box-shadow: 0 10px 30px rgba(0,0,0,.15); font-size: 14px; font-weight: 600; }
+  .plate .badge b { display: block; font-size: 18px; color: var(--deep); }
+  .b1 { left: -6%; top: 14%; } .b2 { right: -4%; bottom: 16%; }
+  section { padding: 70px 0; }
+  h2 { font-family: Fraunces, serif; font-size: 40px; color: var(--deep); line-height: 1.1; }
+  .lead { color: var(--sub); font-size: 17px; margin-top: 10px; max-width: 600px; }
+  .steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; margin-top: 34px; }
+  .step { background: #fff; border-radius: 20px; padding: 26px; border: 1px solid var(--line); }
+  .step .n { width: 40px; height: 40px; border-radius: 50%; background: var(--saffron); color: #fff; display: grid; place-items: center; font-weight: 800; }
+  .step h3 { margin: 14px 0 6px; font-size: 19px; }
+  .step p { color: var(--sub); font-size: 15px; }
+  .menu { background: #fff; }
+  .tiffins { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 34px; }
+  .t { border-radius: 22px; padding: 30px; border: 1px solid var(--line); background: var(--cream); }
+  .t .tag { font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+  .t.veg .tag { color: var(--green); } .t.nv .tag { color: #b3261e; }
+  .t h3 { font-family: Fraunces, serif; font-size: 26px; color: var(--deep); margin: 8px 0; }
+  .t ul { list-style: none; color: var(--sub); }
+  .t li { padding: 6px 0; border-bottom: 1px dashed var(--line); }
+  .t .btn { margin-top: 18px; }
+  .note { margin-top: 18px; font-size: 14px; color: var(--sub); text-align: center; }
+  .check { background: var(--deep); color: #fff; border-radius: 26px; padding: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; }
+  .check h2 { color: #fff; }
+  .check p { color: #f3d3bd; margin-top: 8px; }
+  .check form { display: flex; gap: 10px; }
+  .check input { flex: 1; padding: 14px 18px; border-radius: 40px; border: 0; font: inherit; font-size: 16px; }
+  #result { margin-top: 12px; font-weight: 600; min-height: 24px; }
+  .areas { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+  .areas span { background: #fff; border: 1px solid var(--line); border-radius: 30px; padding: 6px 14px; font-size: 14px; }
+  .promise { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; margin-top: 30px; }
+  .promise div { text-align: center; padding: 20px; }
+  .promise b { display: block; font-family: Fraunces, serif; font-size: 22px; color: var(--deep); margin: 8px 0 4px; }
+  .promise i { font-style: normal; font-size: 32px; }
+  footer { background: var(--ink); color: #b9a798; padding: 34px 0; font-size: 14px; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .orderbar { display: none; }
+  @media (max-width: 880px) {
+    nav { display: none; }
+    .hero .wrap, .check, .tiffins { grid-template-columns: 1fr; }
+    h1 { font-size: 42px; } h2 { font-size: 30px; }
+    .steps, .promise { grid-template-columns: 1fr; }
+    .check { padding: 28px; }
+    .check form { flex-direction: column; }
+    .orderbar { display: block; position: fixed; bottom: 12px; left: 12px; right: 12px; z-index: 20; }
+    .orderbar .btn { width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+    footer { padding-bottom: 90px; }
+  }
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Taste of Home. This is a design preview, not the live website.</div>
+
+<header><div class="wrap">
+  <div class="logo">Taste <span>of</span> Home</div>
+  <nav><a href="#how">How it works</a><a href="#menu">Tiffins</a><a href="#areas">Delivery areas</a></nav>
+  <a class="btn" href="#menu">Order tonight</a>
+</div></header>
+
+<section class="hero" style="padding:0"><div class="wrap">
+  <div>
+    <span class="pill">🍛 Fresh tonight · Delivered hot</span>
+    <h1>Homemade Indian tiffin, <span>delivered to your door.</span></h1>
+    <p>Veg and non-veg meals cooked fresh every day by chefs who cook the way your family does. The menu changes daily, and we never repeat a dish in a week.</p>
+    <div class="cta"><a class="btn" href="#menu">See tonight's tiffin</a><a class="btn alt" href="#areas">Do you deliver to me?</a></div>
+  </div>
+  <div class="plate">
+    <div class="badge b1"><b>Mon to Fri</b>Dinner delivery</div>
+    <div class="badge b2"><b>40+ suburbs</b>across SE Melbourne</div>
+  </div>
+</div></section>
+
+<section id="how"><div class="wrap">
+  <h2>Dinner sorted in 3 steps</h2>
+  <p class="lead">No cooking, no washing up, and no week of repeated leftovers.</p>
+  <div class="steps">
+    <div class="step"><div class="n">1</div><h3>Check your postcode</h3><p>We deliver across Keysborough, Springvale, Noble Park, Dandenong, Clayton and 35+ more suburbs.</p></div>
+    <div class="step"><div class="n">2</div><h3>Pick veg or non-veg</h3><p>Order online for tonight or set up a regular tiffin. Pickup from Keysborough also available from 3pm.</p></div>
+    <div class="step"><div class="n">3</div><h3>Eat like you're home</h3><p>Your tiffin arrives hot at dinner time, Monday to Friday. Lunch pickup on request.</p></div>
+  </div>
+</div></section>
+
+<section class="menu" id="menu"><div class="wrap">
+  <h2>Choose your tiffin</h2>
+  <p class="lead">A different menu every day. Here's an example of what a tiffin looks like.</p>
+  <div class="tiffins">
+    <div class="t veg"><div class="tag">● Vegetarian</div><h3>North Indian veg tiffin</h3>
+      <ul><li>Seasonal sabzi of the day</li><li>Dal, cooked slow</li><li>Fresh rotis</li><li>Rice, salad &amp; pickle</li></ul>
+      <button class="btn" onclick="this.textContent='Added for tonight ✓'">Order veg tiffin</button></div>
+    <div class="t nv"><div class="tag">● Non-vegetarian</div><h3>South Indian non-veg thali</h3>
+      <ul><li>Chicken or meat curry of the day</li><li>Sambar or rasam</li><li>Rice &amp; accompaniments</li><li>Pickle &amp; papad</li></ul>
+      <button class="btn" onclick="this.textContent='Added for tonight ✓'">Order non-veg thali</button></div>
+  </div>
+  <p class="note">Prices and today's exact dishes are shown here on the live site, updated daily.</p>
+</div></section>
+
+<section id="areas"><div class="wrap">
+  <div class="check">
+    <div><h2>Do we deliver to you?</h2><p>Type your postcode to check instantly.</p></div>
+    <div>
+      <form onsubmit="event.preventDefault();const p=this.pc.value.trim();const ok=['3173','3171','3174','3175','3168','3169','3166','3167','3170','3150','3975','3977','3148','3149','3800','3172','3976','3125','3165','3145','3163','3151','3978','3152','3131','3133','3806','3178','3805'];document.getElementById('result').textContent=ok.includes(p)?'Yes! We deliver to '+p+'. Order now for tonight's dinner.':'Not yet, sorry. Pickup from Keysborough is available from 3pm.'">
+        <input name="pc" placeholder="Your postcode, e.g. 3174" inputmode="numeric" maxlength="4">
+        <button class="btn" type="submit">Check</button>
+      </form>
+      <div id="result"></div>
+    </div>
+  </div>
+  <div class="areas">
+    <span>Keysborough</span><span>Springvale</span><span>Noble Park</span><span>Dandenong</span><span>Clayton</span><span>Oakleigh</span><span>Mulgrave</span><span>Wheelers Hill</span><span>Glen Waverley</span><span>Mount Waverley</span><span>Cranbourne</span><span>Narre Warren</span><span>Berwick</span><span>Rowville</span><span>+ more</span>
+  </div>
+</div></section>
+
+<section style="padding-top:20px"><div class="wrap">
+  <div class="promise">
+    <div><i>👩‍🍳</i><b>Cooked fresh</b>Every dish, every day, in a professional kitchen.</div>
+    <div><i>🔁</i><b>Never boring</b>A new menu daily, no repeats in a week.</div>
+    <div><i>✅</i><b>Health &amp; hygiene</b>We never compromise on either.</div>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><div>© 2026 Taste of Home · Keysborough VIC</div><div>Concept design by Swoop Sites</div></div></footer>
+<div class="orderbar"><a class="btn" href="#menu">🍛 Order tonight's tiffin</a></div>
+</body>
+</html>

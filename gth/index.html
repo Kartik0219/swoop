@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>GTH Automotive Repairs | Mechanic &amp; Roadworthy Certificates, Dandenong (concept)</title>
+<meta name="description" content="Dandenong mechanic for logbook servicing, roadworthy certificates from $150, brakes, suspension and pre-purchase inspections from $99.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root { --red:#e0251b; --red2:#b71c14; --ink:#141414; --sub:#5d5d63; --line:#e8e8ec; --soft:#f6f6f8; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Inter, system-ui, sans-serif; color: var(--ink); line-height: 1.55; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  .concept { background: #111; color: #ddd; font-size: 13px; text-align: center; padding: 8px 16px; }
+  .concept b { color: #ff6a5f; }
+  .top { background: var(--ink); color: #bbb; font-size: 13px; }
+  .top .wrap { display: flex; justify-content: space-between; padding: 8px 20px; gap: 12px; flex-wrap: wrap; }
+  header { background: #fff; border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 10; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 70px; }
+  .logo { font-weight: 900; font-size: 24px; letter-spacing: -0.03em; }
+  .logo span { color: var(--red); }
+  .logo small { display: block; font-size: 10px; letter-spacing: .25em; color: var(--sub); font-weight: 700; margin-top: -4px; }
+  nav { display: flex; gap: 26px; font-size: 15px; font-weight: 500; color: #333; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; background: var(--red); color: #fff; font-weight: 700; padding: 13px 22px; border-radius: 8px; font-size: 15px; white-space: nowrap; }
+  .btn.dark { background: var(--ink); }
+  .btn.line { background: #fff; color: var(--ink); border: 1.5px solid #ccc; }
+  .hero { background: linear-gradient(110deg,#141414 0%,#141414 55%,#2a0d0b 100%); color: #fff; padding: 80px 0; position: relative; overflow: hidden; }
+  .hero::after { content: ""; position: absolute; right: -120px; top: -80px; width: 520px; height: 520px; border-radius: 50%; border: 60px solid rgba(224,37,27,.18); }
+  .hero .wrap { position: relative; z-index: 1; }
+  .tag { display: inline-block; background: rgba(224,37,27,.15); color: #ff7a70; font-weight: 700; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; padding: 6px 12px; border-radius: 6px; }
+  .hero h1 { font-size: 58px; line-height: 1.02; letter-spacing: -0.04em; font-weight: 900; margin: 18px 0; max-width: 720px; }
+  .hero h1 span { color: var(--red); }
+  .hero p { color: #b8b8be; font-size: 18px; max-width: 560px; }
+  .cta { display: flex; gap: 12px; margin-top: 30px; flex-wrap: wrap; }
+  .prices { display: flex; gap: 14px; margin-top: 40px; flex-wrap: wrap; }
+  .pc { background: #fff; color: var(--ink); border-radius: 14px; padding: 18px 22px; min-width: 220px; }
+  .pc .l { font-size: 13px; color: var(--sub); font-weight: 600; }
+  .pc .p { font-size: 30px; font-weight: 900; letter-spacing: -0.03em; }
+  .pc .p small { font-size: 14px; color: var(--sub); font-weight: 600; }
+  section { padding: 80px 0; }
+  .kicker { color: var(--red); font-weight: 800; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; }
+  h2 { font-size: 38px; letter-spacing: -0.035em; line-height: 1.08; margin-top: 8px; }
+  .lead { color: var(--sub); font-size: 17px; margin-top: 10px; max-width: 640px; }
+  .svc-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; margin-top: 36px; }
+  .s { background: var(--soft); border-radius: 14px; padding: 22px; border-left: 4px solid var(--red); }
+  .s h3 { font-size: 16px; }
+  .s p { color: var(--sub); font-size: 14px; margin-top: 6px; }
+  .makes { background: var(--soft); padding: 40px 0; }
+  .makes .wrap { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; justify-content: center; color: #77777d; font-weight: 800; font-size: 17px; letter-spacing: .02em; }
+  .makes .wrap span:first-child { color: var(--ink); font-size: 14px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; width: 100%; text-align: center; }
+  .rev { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; margin-top: 34px; }
+  .r { border: 1px solid var(--line); border-radius: 14px; padding: 22px; }
+  .r .st { color: #f5a623; letter-spacing: 2px; }
+  .r p { margin: 10px 0 12px; font-size: 15px; }
+  .r .n { font-size: 13px; color: var(--sub); font-weight: 600; }
+  .info { background: var(--ink); color: #fff; }
+  .info .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .info h2 { color: #fff; }
+  .info table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+  .info td { padding: 12px 0; border-bottom: 1px solid #2c2c2e; color: #c9c9ce; }
+  .info td:last-child { text-align: right; color: #fff; font-weight: 600; }
+  .book { background: #1e1e20; border-radius: 16px; padding: 26px; }
+  .book h3 { font-size: 20px; }
+  .book input, .book select { width: 100%; padding: 12px; margin-top: 10px; border-radius: 8px; border: 1px solid #3a3a3e; background: #141414; color: #fff; font: inherit; }
+  .book .btn { width: 100%; justify-content: center; margin-top: 14px; }
+  .lic { font-size: 13px; color: #8a8a90; margin-top: 18px; }
+  footer { background: #0c0c0c; color: #77777d; font-size: 14px; padding: 30px 0; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .callbar { display: none; }
+  @media (max-width: 900px) {
+    nav, header .btn { display: none; }
+    .hero h1 { font-size: 40px; }
+    .svc-grid, .rev { grid-template-columns: 1fr 1fr; }
+    .info .wrap { grid-template-columns: 1fr; }
+    section { padding: 56px 0; }
+    h2 { font-size: 29px; }
+    .callbar { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 20; }
+    .callbar a { flex: 1; text-align: center; padding: 15px; font-weight: 700; }
+    .callbar a:first-child { background: var(--ink); color: #fff; } .callbar a:last-child { background: var(--red); color: #fff; }
+    footer { padding-bottom: 80px; }
+  }
+  @media (max-width: 540px) { .svc-grid, .rev { grid-template-columns: 1fr; } .pc { min-width: 0; flex: 1; } }
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for GTH Automotive Repairs. This is a design preview, not the live website.</div>
+<div class="top"><div class="wrap"><span>3/198 Princes Hwy, Dandenong VIC 3175</span><span>Mon to Fri 8am to 5pm · Sat 8am to 12pm</span></div></div>
+<header><div class="wrap">
+  <div class="logo">GTH<span>.</span><small>AUTOMOTIVE REPAIRS</small></div>
+  <nav><a href="#services">Services</a><a href="#reviews">Reviews</a><a href="#book">Book</a></nav>
+  <a class="btn" href="tel:0397922196">Call (03) 9792 2196</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div class="tag">Dandenong's one-stop car shop</div>
+  <h1>Quality repairs. <span>Fast turnaround.</span></h1>
+  <p>Logbook servicing, roadworthies, brakes, suspension and diagnostics for all makes, from your friendly local mechanic on Princes Hwy.</p>
+  <div class="cta"><a class="btn" href="#book">Book a service</a><a class="btn line" href="tel:0397922196">Call now</a></div>
+  <div class="prices">
+    <div class="pc"><div class="l">Roadworthy certificate</div><div class="p"><small>from</small> $150</div></div>
+    <div class="pc"><div class="l">Pre-purchase inspection</div><div class="p"><small>from</small> $99</div></div>
+  </div>
+</div></section>
+
+<section id="services"><div class="wrap">
+  <div class="kicker">Services</div>
+  <h2>Everything your car needs</h2>
+  <p class="lead">One shop for servicing, repairs and roadworthies, so you don't have to drive all over Dandenong.</p>
+  <div class="svc-grid">
+    <div class="s"><h3>Logbook servicing</h3><p>Keep your new-car warranty valid.</p></div>
+    <div class="s"><h3>Roadworthy certificates</h3><p>VicRoads RWC from $150.</p></div>
+    <div class="s"><h3>Brakes &amp; clutch</h3><p>With in-house disc machining.</p></div>
+    <div class="s"><h3>Suspension</h3><p>Specialist repair &amp; replacement.</p></div>
+    <div class="s"><h3>Computer diagnostics</h3><p>Find the fault fast.</p></div>
+    <div class="s"><h3>Air-con regas</h3><p>Licensed refrigerant handling.</p></div>
+    <div class="s"><h3>Tyres &amp; alignment</h3><p>Balancing and wheel alignments.</p></div>
+    <div class="s"><h3>Mobile mechanic</h3><p>We can come to you.</p></div>
+  </div>
+</div></section>
+
+<div class="makes"><div class="wrap">
+  <span>We service all makes, including</span>
+  <b>TOYOTA</b><b>FORD</b><b>HOLDEN</b><b>NISSAN</b><b>MITSUBISHI</b><b>VW</b><b>AUDI</b><b>BMW</b><b>MERCEDES</b><b>LAND ROVER</b>
+</div></div>
+
+<section id="reviews"><div class="wrap">
+  <div class="kicker">What customers say</div>
+  <h2>Locals keep coming back</h2>
+  <div class="rev">
+    <div class="r"><div class="st">★★★★★</div><p>"Very professional and will not go anywhere else."</p><div class="n">Daniel T.</div></div>
+    <div class="r"><div class="st">★★★★★</div><p>"Very professional and very helpful with any questions I had."</p><div class="n">Alexander T.</div></div>
+    <div class="r"><div class="st">★★★★★</div><p>"They genuinely look after the customer and keep them informed."</p><div class="n">Piet H.</div></div>
+    <div class="r"><div class="st">★★★★★</div><p>"We wouldn't go anywhere else!"</p><div class="n">Nicole K.</div></div>
+  </div>
+</div></section>
+
+<section class="info" id="book"><div class="wrap">
+  <div>
+    <div class="kicker">Visit us</div>
+    <h2>3/198 Princes Hwy, Dandenong</h2>
+    <table>
+      <tr><td>Monday to Friday</td><td>8am to 5pm</td></tr>
+      <tr><td>Saturday</td><td>8am to 12pm</td></tr>
+      <tr><td>Sunday</td><td>Closed</td></tr>
+      <tr><td>Phone</td><td><a href="tel:0397922196">(03) 9792 2196</a></td></tr>
+    </table>
+    <div class="lic">Refrigerant Trading Authorisation AU42233</div>
+  </div>
+  <form class="book" onsubmit="event.preventDefault();this.querySelector('.btn').textContent='Thanks! We\'ll call to confirm.'">
+    <h3>Book online in 30 seconds</h3>
+    <select><option>Logbook service</option><option>Roadworthy certificate ($150)</option><option>Pre-purchase inspection ($99)</option><option>Brakes / clutch</option><option>Something else</option></select>
+    <input placeholder="Your name"><input placeholder="Mobile"><input placeholder="Car make, model, year"><input type="date">
+    <button class="btn" type="submit">Request booking</button>
+  </form>
+</div></section>
+
+<footer><div class="wrap"><div>© 2026 GTH Automotive Repairs · Dandenong VIC</div><div>Concept design by Swoop Sites</div></div></footer>
+<div class="callbar"><a href="tel:0397922196">📞 Call</a><a href="#book">Book online</a></div>
+</body>
+</html>
