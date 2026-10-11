@@ -279,6 +279,23 @@
   .sec-card h3{font-size:22px;font-weight:600;color:#f5f5f7}
   .sec-card p{font-size:16px;color:var(--sub-d);margin-top:8px;line-height:1.45}
   .sec-card .plan{display:inline-block;margin-top:16px;font-size:12px;font-weight:600;color:#e8e8ed;background:#2c2c2e;border-radius:999px;padding:4px 11px}
+  .check{margin-top:16px;text-align:left;border-radius:var(--r);padding:32px 26px;background:radial-gradient(120% 90% at 100% 0%,rgba(45,212,191,.2),transparent 60%),var(--tile-d)}
+  .check-top{display:grid;gap:28px}
+  .check .tagf{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;color:#1a0d06;background:var(--coral);border-radius:999px;padding:3px 9px}
+  .check h3{font-size:clamp(26px,3.2vw,36px);font-weight:700;letter-spacing:-.025em;color:#f5f5f7;margin-top:14px}
+  .check p{font-size:17px;color:var(--sub-d);margin-top:12px;line-height:1.5;max-width:640px}
+  .chk-list{list-style:none;display:grid;gap:10px;margin-top:20px}
+  .chk-list li,.fixup .tune li{display:flex;gap:10px;align-items:flex-start;font-size:16px;color:#e8e8ed;line-height:1.4}
+  .chk-list li::before,.fixup .tune li::before{content:"";width:18px;height:18px;flex:none;margin-top:1px;border-radius:50%;background:var(--teal-b) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.2l2.3 2.3 4.7-5' fill='none' stroke='%23000' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat}
+  .check-cta p{font-size:15px;color:#a1a1a6;margin-top:12px}
+  .chk-sub{font-size:19px;font-weight:600;color:#f5f5f7;margin-top:36px;padding-top:28px;border-top:1px solid var(--line-d);letter-spacing:-.015em}
+  .fix-opts{list-style:none;display:grid;gap:12px;margin-top:18px}
+  .fix-opts li{background:#2c2c2e;border-radius:20px;padding:20px 20px 22px;display:flex;flex-direction:column}
+  .fix-opts li.inc{box-shadow:inset 0 0 0 1.5px var(--teal-b)}
+  .fix-opts b{font-size:17px;font-weight:600;color:#f5f5f7}
+  .fix-opts .fp{font-size:34px;font-weight:700;letter-spacing:-.03em;color:#f5f5f7;margin-top:6px;line-height:1.1}
+  .fix-opts .fp small{font-size:14px;font-weight:500;color:#a1a1a6;letter-spacing:-.01em;margin-left:4px}
+  .fix-opts span:last-child{font-size:15px;color:var(--sub-d);margin-top:8px;line-height:1.4}
   .honest{margin:48px auto 0;max-width:760px;font-size:17px;color:#a1a1a6;text-align:center;line-height:1.5}
   .honest b{color:#f5f5f7;font-weight:600}
 
@@ -320,7 +337,7 @@
   .care-row{display:grid;grid-template-columns:1fr;gap:16px;margin-top:40px}
   .care{background:var(--light);border-radius:var(--r);padding:28px 24px;text-align:center}
   .care.plus{background:#fff;box-shadow:0 0 0 2px var(--teal)}
-  .care h4{font-size:22px;font-weight:600}
+  .care h3{font-size:22px;font-weight:600}
   .care .p{font-size:40px;font-weight:700;letter-spacing:-.03em;margin-top:8px}
   .care .p small{font-size:15px;color:var(--sub);font-weight:500;letter-spacing:-.01em}
   .care ul{list-style:none;margin-top:18px;padding-top:18px;border-top:1px solid var(--line);display:grid;gap:10px;font-size:15.5px}
@@ -334,11 +351,23 @@
   .fixup .price small{font-size:15px;color:#a1a1a6;font-weight:500;letter-spacing:-.01em;margin-left:4px}
   .fixup .pn{color:#a1a1a6;font-size:15px;margin-top:10px}
   .fixup .pill{margin-top:20px}
+  .fixup .tune{list-style:none;display:grid;gap:10px;margin-top:18px}
+  .fixup .tune li{font-size:17px}
+  .fixup .pn+.pn{margin-top:6px}
   .promise{margin-top:72px;text-align:center}
   .promise .h-m{max-width:720px;margin:0 auto}
   .notes{text-align:left;list-style:none;display:grid;gap:0;margin:40px auto 0;max-width:820px;border-top:1px solid var(--line)}
   .notes li{display:grid;gap:4px;padding:18px 0;border-bottom:1px solid var(--line);font-size:16px;color:var(--sub);line-height:1.45}
   .notes li b{color:var(--ink);font-weight:600}
+
+  /* DIY resources teaser */
+  .diy{display:grid;gap:16px;margin-top:48px;list-style:none}
+  .diy li{background:var(--light);border-radius:var(--r);padding:28px 26px;display:flex;flex-direction:column;align-items:flex-start}
+  .diy h3{font-size:24px;font-weight:600;letter-spacing:-.02em}
+  .diy p{font-size:16px;color:var(--sub);margin-top:8px;line-height:1.45}
+  .diy .from{font-size:15px;font-weight:600;color:var(--ink);margin-top:14px}
+  .diy .more{margin-top:auto;padding-top:18px}
+  .diy-note{text-align:center;margin-top:28px;font-size:15px;color:var(--sub)}
 
   /* DIY table */
   .cmp-wrap{margin-top:48px;border-radius:var(--r);background:#fff;overflow:hidden}
@@ -480,6 +509,10 @@
     .col.pop{background:#fff;border-left:0;box-shadow:0 10px 30px rgba(0,0,0,.08)}
     .col.pop+.col{border-left:0}
     .care-row{grid-template-columns:repeat(3,1fr)}
+    .check{padding:48px}
+    .check-top{grid-template-columns:1.5fr 1fr;gap:48px;align-items:center}
+    .fix-opts{grid-template-columns:repeat(3,1fr)}
+    .diy{grid-template-columns:1fr 1fr}
     .fixup{grid-template-columns:1.5fr 1fr;align-items:center;padding:56px}
     .gal-track{padding-left:max(24px,calc((100vw - var(--wrap))/2 + 24px));padding-right:max(24px,calc((100vw - var(--wrap))/2 + 24px));scroll-padding:0 max(24px,calc((100vw - var(--wrap))/2 + 24px))}
     .gal-ctrl{max-width:var(--wrap);margin-left:auto;margin-right:auto;padding:0 24px}
@@ -521,6 +554,7 @@
       <a href="#security">Security</a>
       <a href="#work">Work</a>
       <a href="#care">Care plans</a>
+      <a href="/resources/">Resources</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -552,6 +586,7 @@
     <a href="#how">How it works</a>
     <a href="#faq">FAQ</a>
     <a href="#about">About</a>
+    <a href="/resources/">Free &amp; DIY resources</a>
   </nav>
 </header>
 
@@ -764,6 +799,31 @@
       <div class="sec-card rv d1"><svg class="si" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22h7l4-10 6 18 5-12 3 4h7"/></svg><h3>Uptime monitoring</h3><p>Your site is monitored, so if it goes down I find out and can start fixing it, often before you notice.</p><span class="plan">All care plans</span></div>
       <div class="sec-card rv d2"><svg class="si" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="18" width="22" height="16" rx="4"/><path d="M14 18v-4a6 6 0 0 1 12 0v4"/></svg><h3>HTTPS, always</h3><p>Every site gets HTTPS from day one, and it's kept valid as part of care.</p><span class="plan">Every site</span></div>
     </div>
+    <div class="check rv" id="security-check">
+      <div class="check-top">
+        <div>
+          <span class="tagf">FREE</span>
+          <h3 id="check-h">Free website &amp; email <span class="grad">security check.</span></h3>
+          <p>Send me your website address and I'll check your website and email security from the outside, using public information only. Nothing intrusive: no logins, no attacks, nothing that touches how your site runs. You get a short plain-English summary by email.</p>
+          <ul class="chk-list" aria-label="What the free check looks at">
+            <li>HTTPS and certificate</li>
+            <li>Email protection (SPF, DKIM, DMARC)</li>
+            <li>Outdated software that's visible from outside</li>
+            <li>Basic website security settings (security headers)</li>
+          </ul>
+        </div>
+        <div class="check-cta">
+          <a class="pill pill-fill" href="mailto:Kartikp.work@gmail.com?subject=Free%20security%20check&amp;body=My%20website%20is%3A%20"><svg aria-hidden="true"><use href="#mail"/></svg>Get a free security check</a>
+          <p>No obligation. The fixes below are optional.</p>
+        </div>
+      </div>
+      <h4 class="chk-sub">If anything needs fixing, you choose:</h4>
+      <ul class="fix-opts">
+        <li><b>Email security fix</b><span class="fp">$149<small>one-off</small></span><span>SPF, DKIM and DMARC set up for your domain.</span></li>
+        <li><b>Full fix</b><span class="fp">$249<small>one-off</small></span><span>The email security fix, plus the website issues found in your check. Bigger jobs are quoted first.</span></li>
+        <li class="inc"><b>Included with Care Plus</b><span class="fp">$129<small>/mo</small></span><span>Fixes done, then checked every month as part of your care plan.</span></li>
+      </ul>
+    </div>
     <p class="honest rv"><b>To be upfront:</b> no one can promise a site will never have a problem. What I can promise is that the basics are done properly, checked regularly, and that you'll hear from me if something needs attention.</p>
   </div>
 </section>
@@ -866,7 +926,7 @@
     </div>
     <div class="care-row">
       <div class="care rv">
-        <h4>Care Basic</h4>
+        <h3>Care Basic</h3>
         <div class="p">$99<small>/mo</small></div>
         <ul>
           <li>Hosting</li>
@@ -878,7 +938,7 @@
         </ul>
       </div>
       <div class="care plus rv d1">
-        <h4>Care Plus</h4>
+        <h3>Care Plus</h3>
         <div class="p">$129<small>/mo</small></div>
         <ul>
           <li>Everything in Basic</li>
@@ -888,7 +948,7 @@
         </ul>
       </div>
       <div class="care rv d2">
-        <h4>Care Pro</h4>
+        <h3>Care Pro</h3>
         <div class="p">$249<small>/mo</small></div>
         <ul>
           <li>Everything in Plus</li>
@@ -898,15 +958,25 @@
       </div>
     </div>
 
-    <div class="fixup rv">
+    <div class="fixup rv" id="tune-up">
       <div>
-        <h3>Already have a website? <span class="grad">Fix it up instead.</span></h3>
-        <p>Not every site needs a rebuild. For a fixed price I'll fix the urgent problems, like setting up HTTPS, updating old software, and repairing broken forms and links. Then I look after it on Care Basic so it stays that way. If you later decide on a full new site, the $290 comes off the build price.</p>
+        <h3>Happy with your current site? <span class="grad">Give it a tune-up.</span></h3>
+        <p>Not every site needs a rebuild. For a fixed price I'll tidy up the site you already have:</p>
+        <ul class="tune">
+          <li>Faster loading pages</li>
+          <li>Phone layout fixes</li>
+          <li>HTTPS padlock set up, with a redirect from http://</li>
+          <li>Footer and contact details updated</li>
+          <li>Contact form checked to make sure it works</li>
+          <li>Your Google speed score, before and after</li>
+        </ul>
+        <p>Then I look after it on Care Basic so it stays that way. If you later decide on a full new site, the $199 comes off the build price.</p>
       </div>
       <div>
-        <div class="price">$290<small>fix-up</small></div>
-        <p class="pn">+ $99/mo care to keep it secure &amp; updated</p>
-        <a class="pill pill-white" href="mailto:Kartikp.work@gmail.com?subject=Website%20fix-up%20enquiry&amp;body=Hi%20Kartik%2C%0A%0AOur%20current%20website%20is%3A%20%0A%0AThanks!">Send me your site link</a>
+        <div class="price">$199<small>tune-up</small></div>
+        <p class="pn">One-off. + $99/mo care to keep it secure &amp; updated</p>
+        <p class="pn">For small sites. Bigger jobs are quoted first, before any work starts.</p>
+        <a class="pill pill-white" href="mailto:Kartikp.work@gmail.com?subject=Website%20tune-up%20enquiry&amp;body=Hi%20Kartik%2C%0A%0AOur%20current%20website%20is%3A%20%0A%0AThanks!">Send me your site link</a>
       </div>
     </div>
 
@@ -944,6 +1014,22 @@
         </tbody>
       </table>
     </div>
+  </div>
+</section>
+
+<!-- FREE & DIY RESOURCES -->
+<section class="sec w" id="resources" aria-labelledby="res-h">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow rv">Free &amp; DIY resources</span>
+      <h2 class="h-l rv d1" id="res-h">Rather do it <span class="grad">yourself?</span></h2>
+      <p class="lede rv d2">If you have the time, these will help you do it properly. Plain English, made for Australian small businesses.</p>
+    </div>
+    <ul class="diy">
+      <li class="rv"><h3>Website &amp; email security checklist</h3><p>Tick-box checks for your website, email and domain, plus what to do if you're hacked. A 15-page PDF.</p><span class="from">A$19 &middot; free 3-page sample</span><a class="more" href="/resources/#checklist">See the checklist</a></li>
+      <li class="rv d1"><h3>Website templates</h3><p>Ready-made websites for trades, cafes, health clinics and salons. Edit the words, add your photos and publish for free.</p><span class="from">A$29 each &middot; all 4 for A$79</span><a class="more" href="/resources/#templates">See the templates</a></li>
+    </ul>
+    <p class="diy-note rv"><a class="more" href="/resources/">All free &amp; DIY resources</a></p>
   </div>
 </section>
 
@@ -996,7 +1082,7 @@
       </details>
       <details>
         <summary>I already have a website. Can you work with it?</summary>
-        <div class="ans"><p>Often, yes. Send me the link and I'll tell you honestly whether it's worth fixing or better to rebuild. The fix-up option is $290 plus $99/mo care, and if you later go for a full rebuild the $290 comes off the build price.</p></div>
+        <div class="ans"><p>Often, yes. Send me the link and I'll tell you honestly whether it's worth fixing or better to rebuild. The website tune-up is $199 one-off plus $99/mo care (for small sites; bigger jobs are quoted first), and if you later go for a full rebuild the $199 comes off the build price.</p></div>
       </details>
       <details>
         <summary>How long does it take?</summary>
@@ -1102,7 +1188,7 @@
       </nav>
       <nav aria-label="Footer: pricing">
         <h4>Pricing</h4>
-        <ul><li><a href="#pricing">Packages</a></li><li><a href="#care">Care plans</a></li><li><a href="#compare">DIY vs Swoop</a></li></ul>
+        <ul><li><a href="#pricing">Packages</a></li><li><a href="#care">Care plans</a></li><li><a href="#compare">DIY vs Swoop</a></li><li><a href="#tune-up">Website tune-up</a></li><li><a href="#security-check">Free security check</a></li><li><a href="/resources/">Free &amp; DIY resources</a></li></ul>
       </nav>
       <nav aria-label="Footer: about">
         <h4>About</h4>
