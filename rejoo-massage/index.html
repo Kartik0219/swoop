@@ -66,6 +66,10 @@
     footer { padding-bottom: 90px; }
   }
 </style>
+<style id="a11y-fixes">
+/* accessibility: contrast adjustments (WCAG AA) */
+div.wrap > div.voucher > div > p.lead {color:#646057 !important}
+</style>
 </head>
 <body>
 <div class="concept">Free concept by <b>Swoop Sites</b> for Rejoo Massage Therapy. This is a design preview, not the live website.</div>
@@ -120,9 +124,9 @@
   </div>
   <form class="book" id="book" onsubmit="event.preventDefault();this.querySelector('.btn').textContent='Request sent! We\'ll confirm by SMS.'">
     <h3 style="font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600">Book your massage</h3>
-    <select><option>Relaxation massage</option><option>Deep tissue massage</option><option>Remedial massage</option></select>
-    <select><option>60 minutes or longer (includes free gift)</option><option>Shorter session</option></select>
-    <input type="date"><input placeholder="Your name"><input placeholder="Mobile">
+    <select aria-label="Service needed"><option>Relaxation massage</option><option>Deep tissue massage</option><option>Remedial massage</option></select>
+    <select aria-label="Session length"><option>60 minutes or longer (includes free gift)</option><option>Shorter session</option></select>
+    <input type="date" aria-label="Preferred date"><input placeholder="Your name"><input placeholder="Mobile">
     <button class="btn" type="submit">Request booking</button>
   </form>
 </div></section>

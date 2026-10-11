@@ -109,6 +109,10 @@
   }
   @media (max-width: 440px) { .feat { grid-template-columns: 1fr; } }
 </style>
+<style id="a11y-fixes">
+/* accessibility: contrast adjustments (WCAG AA) */
+body > section#prices > div.wrap > div.kicker {color:#1d6ad0 !important}
+</style>
 </head>
 <body>
 <div class="concept">Free concept by <b>Swoop Sites</b> for Bayside Brazilian Jiu-Jitsu. This is a design preview, not the live website.</div>
@@ -127,10 +131,10 @@
     <div class="rating"><b>★★★★★</b> 5.0 on Google (162 reviews)</div>
   </div>
   <form class="q" id="trial" onsubmit="event.preventDefault();this.querySelector('.btn').textContent='See you on the mats! We\'ll be in touch.'">
-    <h3>Free trial class</h3>
+    <h3 role="heading" aria-level="2">Free trial class</h3>
     <p>No experience needed. We can lend you a gi for your first class.</p>
     <div class="seg"><label><input type="radio" name="w" checked>For me</label><label><input type="radio" name="w">For my child</label></div>
-    <select><option>Gi class</option><option>No Gi class</option><option>Kids class (ages 4 to 15)</option><option>Not sure yet</option></select>
+    <select aria-label="Service needed"><option>Gi class</option><option>No Gi class</option><option>Kids class (ages 4 to 15)</option><option>Not sure yet</option></select>
     <input placeholder="Your name"><input placeholder="Mobile or email">
     <button class="btn" type="submit">Book my free class</button>
     <small>Or just arrive 10 minutes early to any class.</small>

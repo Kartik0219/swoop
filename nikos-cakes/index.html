@@ -93,6 +93,15 @@
   }
   @media (max-width: 480px) { form .row { grid-template-columns: 1fr; } }
 </style>
+<style id="a11y-fixes">
+/* accessibility: contrast adjustments (WCAG AA) */
+header > div.wrap > div.logo > span {color:#86672c !important}
+section.hero > div.wrap > div > div.eyebrow {color:#86672c !important}
+section#cafe > div.wrap > div > div.eyebrow {color:#dbc18f !important}
+section#story > div.wrap > div > div.eyebrow {color:#86672c !important}
+section#enquire > div.wrap > div > div.eyebrow {color:#7f6129 !important}
+section#enquire > div.wrap > div > p[style="margin-top:16px;color:var(--sub);font-size:15px"] {color:#716256 !important}
+</style>
 </head>
 <body>
 <div class="concept">Free concept by <b>Swoop Sites</b> for Nikos Cakes. This is a design preview, not the live website.</div>
@@ -167,8 +176,8 @@
     <div class="fields">
       <h3 style="font-family:'Cormorant Garamond',serif;font-size:30px;color:var(--choc)">Cake enquiry</h3>
       <div class="row"><input placeholder="Your name" required><input placeholder="Phone" type="tel" required></div>
-      <div class="row"><select><option>Birthday</option><option>Wedding</option><option>Engagement</option><option>Christening</option><option>Other occasion</option></select><input type="date"></div>
-      <div class="row"><input placeholder="Number of guests (approx)"><select><option>Pick up in Oakleigh</option><option>Pick up in Fairfield</option><option>Delivery (on request)</option></select></div>
+      <div class="row"><select aria-label="Occasion"><option>Birthday</option><option>Wedding</option><option>Engagement</option><option>Christening</option><option>Other occasion</option></select><input type="date" aria-label="Preferred date"></div>
+      <div class="row"><input placeholder="Number of guests (approx)"><select aria-label="Pickup or delivery"><option>Pick up in Oakleigh</option><option>Pick up in Fairfield</option><option>Delivery (on request)</option></select></div>
       <textarea rows="3" placeholder="Tell us about your dream cake (theme, flavours, colours)"></textarea>
       <button class="btn" type="submit">Send enquiry</button>
     </div>

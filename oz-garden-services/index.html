@@ -96,6 +96,16 @@
   }
   @media (max-width: 540px) { .svc-grid, .q .row { grid-template-columns: 1fr; } .hero h1 { font-size: 36px; } }
 </style>
+<style id="a11y-fixes">
+/* accessibility: contrast adjustments (WCAG AA) */
+div.wrap > div > div.cta > a.btn[href="#quote"] {background-color:#a75f2f !important}
+div.wrap > form#quote > div.fields > button.btn {background-color:#a75f2f !important}
+body > section#services > div.wrap > div.kicker {color:#a75f2f !important}
+body > section#reviews > div.wrap > div.kicker {color:#a75f2f !important}
+section#contact > div.wrap > div > div.kicker {color:#a75f2f !important}
+section#contact > div.wrap > div.big-cta > a.btn[href="#quote"] {background-color:#a75f2f !important}
+body > div.callbar > a[href="#quote"] {background-color:#a75f2f !important}
+</style>
 </head>
 <body>
 <div class="concept">Free concept by <b>Swoop Sites</b> for Oz Garden Services. This is a design preview, not the live website.</div>
@@ -115,9 +125,9 @@
   </div>
   <form class="q" id="quote" onsubmit="event.preventDefault();this.classList.add('done')">
     <div class="fields">
-      <h3>Free on-site visit &amp; quote</h3>
+      <h3 role="heading" aria-level="2">Free on-site visit &amp; quote</h3>
       <p class="small">Tell us about your project and we'll call to arrange a time.</p>
-      <select><option>Landscaping</option><option>Retaining wall</option><option>Paving</option><option>Decking</option><option>Natural grass</option><option>Artificial grass</option><option>Concreting</option><option>Pergola</option><option>Not sure yet</option></select>
+      <select aria-label="Service needed"><option>Landscaping</option><option>Retaining wall</option><option>Paving</option><option>Decking</option><option>Natural grass</option><option>Artificial grass</option><option>Concreting</option><option>Pergola</option><option>Not sure yet</option></select>
       <div class="row"><input placeholder="Your name" required><input placeholder="Mobile" type="tel" required></div>
       <input placeholder="Suburb">
       <textarea rows="2" placeholder="What would you like done?"></textarea>

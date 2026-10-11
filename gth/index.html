@@ -83,6 +83,12 @@
   }
   @media (max-width: 540px) { .svc-grid, .rev { grid-template-columns: 1fr; } .pc { min-width: 0; flex: 1; } }
 </style>
+<style id="a11y-fixes">
+/* accessibility: contrast adjustments (WCAG AA) */
+body > div.makes > div.wrap > b {color:#6d6d73 !important}
+section#book > div.wrap > div > div.kicker {color:#e84941 !important}
+body > footer > div.wrap > div {color:#7c7c82 !important}
+</style>
 </head>
 <body>
 <div class="concept">Free concept by <b>Swoop Sites</b> for GTH Automotive Repairs. This is a design preview, not the live website.</div>
@@ -150,8 +156,8 @@
   </div>
   <form class="book" onsubmit="event.preventDefault();this.querySelector('.btn').textContent='Thanks! We\'ll call to confirm.'">
     <h3>Book online in 30 seconds</h3>
-    <select><option>Logbook service</option><option>Roadworthy certificate ($150)</option><option>Pre-purchase inspection ($99)</option><option>Brakes / clutch</option><option>Something else</option></select>
-    <input placeholder="Your name"><input placeholder="Mobile"><input placeholder="Car make, model, year"><input type="date">
+    <select aria-label="Service needed"><option>Logbook service</option><option>Roadworthy certificate ($150)</option><option>Pre-purchase inspection ($99)</option><option>Brakes / clutch</option><option>Something else</option></select>
+    <input placeholder="Your name"><input placeholder="Mobile"><input placeholder="Car make, model, year"><input type="date" aria-label="Preferred date">
     <button class="btn" type="submit">Request booking</button>
   </form>
 </div></section>

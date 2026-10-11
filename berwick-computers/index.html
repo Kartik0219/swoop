@@ -90,6 +90,15 @@
   }
   @media (max-width: 480px) { .grid { grid-template-columns: 1fr; } }
 </style>
+<style id="a11y-fixes">
+/* accessibility: contrast adjustments (WCAG AA) */
+div.wrap > div > div.cta > a.btn[href="#book"] {background-color:#1068ff !important}
+body > section#services > div.wrap > div.kicker {color:#1068ff !important}
+body > section#how > div.wrap > div.kicker {color:#015eff !important}
+section#screens > div.wrap > div > div.kicker {color:#1068ff !important}
+div.wrap > form > div.fields > button.btn {background-color:#1068ff !important}
+body > div.callbar > a[href="#book"] {background-color:#1068ff !important}
+</style>
 </head>
 <body>
 <div class="concept">Free concept by <b>Swoop Sites</b> for Berwick Computers. This is a design preview, not the live website.</div>
@@ -172,10 +181,10 @@
   <form onsubmit="event.preventDefault();this.querySelector('.fields').style.display='none';this.querySelector('.thanks').style.display='block'">
     <div class="fields">
       <h3 style="font-size:20px">Book a pick-up</h3>
-      <select><option>Laptop screen repair</option><option>Slow computer / SSD upgrade</option><option>Virus or malware</option><option>Data recovery / backup</option><option>New computer setup</option><option>Remote assist</option><option>Something else</option></select>
+      <select aria-label="Service needed"><option>Laptop screen repair</option><option>Slow computer / SSD upgrade</option><option>Virus or malware</option><option>Data recovery / backup</option><option>New computer setup</option><option>Remote assist</option><option>Something else</option></select>
       <input placeholder="Your name" required><input placeholder="Mobile" type="tel" required>
       <input placeholder="Suburb">
-      <select><option>Any time</option><option>Early morning</option><option>Evening</option></select>
+      <select aria-label="Preferred day or time"><option>Any time</option><option>Early morning</option><option>Evening</option></select>
       <textarea rows="3" placeholder="What's the problem? Laptop make/model helps (optional)"></textarea>
       <button class="btn" type="submit">Request pick-up</button>
     </div>

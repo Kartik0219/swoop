@@ -105,6 +105,18 @@
   }
   @media (max-width: 540px) { .grid, .steps, .q .row { grid-template-columns: 1fr; } .hero h1 { font-size: 38px; } }
 </style>
+<style id="a11y-fixes">
+/* accessibility: contrast adjustments (WCAG AA) */
+header > div.wrap > div.logo > small {color:#916a36 !important}
+section.hero > div.wrap > div > div.eyebrow {color:#896433 !important}
+div.wrap > div > div.cta > a.btn[href="#quote"] {background-color:#916c39 !important}
+body > section#products > div.wrap > div.kicker {color:#916a36 !important}
+body > section#how > div.wrap > div.kicker {color:#916a36 !important}
+div.wrap > div.steps > div.step > div.n {color:#ab7f43 !important}
+section#contact > div.wrap > div > div.kicker {color:#896433 !important}
+div.wrap > form#quote > div.fields > button.btn {background-color:#916c39 !important}
+body > div.callbar > a[href="#quote"] {background-color:#916c39 !important}
+</style>
 </head>
 <body>
 <div class="concept">Free concept by <b>Swoop Sites</b> for Drowell Blinds. This is a design preview, not the live website.</div>
@@ -176,7 +188,7 @@
     <div class="fields">
       <h3>Free measure &amp; quote</h3>
       <p class="small">Tell us what you're after and we'll call to book a time.</p>
-      <select><option>Roller blinds</option><option>Blockout blinds</option><option>Double roller blinds</option><option>Vertical blinds</option><option>Roman blinds</option><option>Panel glides</option><option>Awnings</option><option>Shutters</option><option>Curtains</option><option>Not sure yet</option></select>
+      <select aria-label="Service needed"><option>Roller blinds</option><option>Blockout blinds</option><option>Double roller blinds</option><option>Vertical blinds</option><option>Roman blinds</option><option>Panel glides</option><option>Awnings</option><option>Shutters</option><option>Curtains</option><option>Not sure yet</option></select>
       <div class="row"><input placeholder="Your name" required><input placeholder="Mobile" type="tel" required></div>
       <div class="row"><input placeholder="Suburb"><input placeholder="No. of windows"></div>
       <textarea rows="2" placeholder="Anything else? (rooms, colours, motorised)"></textarea>

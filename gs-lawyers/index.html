@@ -78,6 +78,12 @@
   }
   @media (max-width: 560px) { .areas { grid-template-columns: 1fr; } }
 </style>
+<style id="a11y-fixes">
+/* accessibility: contrast adjustments (WCAG AA) */
+section.hero > div.wrap > div.cta > a.btn.g[href="#contact"] {background-color:#896d41 !important}
+section#firm > div.wrap > div > div.kicker {color:#85683c !important}
+body > div.callbar > a[href="#contact"] {background-color:#896d41 !important}
+</style>
 </head>
 <body>
 <div class="concept">Free concept by <b>Swoop Sites</b> for G &amp; S Lawyers. This is a design preview, not the live website.</div>
@@ -138,7 +144,7 @@
   <form onsubmit="event.preventDefault();this.querySelector('.fields').style.display='none';this.querySelector('.thanks').style.display='block'">
     <div class="fields">
       <h3 style="font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--navy)">Make an enquiry</h3>
-      <select><option>Conveyancing</option><option>Business &amp; commercial law</option><option>Property matter</option><option>Wills &amp; estates</option><option>Debt collection</option><option>Litigation</option><option>Other</option></select>
+      <select aria-label="Service needed"><option>Conveyancing</option><option>Business &amp; commercial law</option><option>Property matter</option><option>Wills &amp; estates</option><option>Debt collection</option><option>Litigation</option><option>Other</option></select>
       <input placeholder="Your name" required><input placeholder="Phone" type="tel" required><input placeholder="Email" type="email">
       <textarea rows="4" placeholder="Briefly, how can we help?"></textarea>
       <button class="btn" type="submit">Send enquiry</button>

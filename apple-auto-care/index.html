@@ -82,6 +82,16 @@
     footer { padding-bottom: 80px; }
   }
 </style>
+<style id="a11y-fixes">
+/* accessibility: contrast adjustments (WCAG AA) */
+div.wrap > div > div.cta > a.btn[href="#quote"] {background-color:#1a8347 !important}
+section.hero > div.wrap > form#quote > button.btn {background-color:#1a8347 !important}
+div.save > div.wrap > div > p {background-color:#177740 !important}
+div.save > div.wrap > div.big > small {background-color:#177740 !important}
+body > section#services > div.wrap > div.kicker {color:#1a8347 !important}
+body > section#reviews > div.wrap > div.kicker {color:#1a8347 !important}
+body > div.callbar > a[href="#quote"] {background-color:#1a8347 !important}
+</style>
 </head>
 <body>
 <div class="concept">Free concept by <b>Swoop Sites</b> for Apple Auto Care. This is a design preview, not the live website.</div>
@@ -99,9 +109,9 @@
     <div class="cta"><a class="btn" href="#quote">Get a free quote</a><a class="btn w" href="tel:0434270005">Text or call 0434 270 005</a></div>
   </div>
   <form class="quote" id="quote" onsubmit="event.preventDefault();this.querySelector('.btn').textContent='Thanks! We\'ll text you a quote.'">
-    <h3>Get a quote in 1 minute</h3>
+    <h3 role="heading" aria-level="2">Get a quote in 1 minute</h3>
     <p class="s">Tell us what's wrong and we'll get back to you with a price.</p>
-    <select><option>Service / oil change</option><option>Roadworthy certificate</option><option>New tyres / puncture</option><option>Battery</option><option>Air-con regas</option><option>Taxi / Uber service</option><option>Panel &amp; paint</option><option>Something else</option></select>
+    <select aria-label="Service needed"><option>Service / oil change</option><option>Roadworthy certificate</option><option>New tyres / puncture</option><option>Battery</option><option>Air-con regas</option><option>Taxi / Uber service</option><option>Panel &amp; paint</option><option>Something else</option></select>
     <input placeholder="Car make, model, year"><input placeholder="Mobile">
     <textarea rows="2" placeholder="What's happening with your car?"></textarea>
     <button class="btn" type="submit">Request my quote</button>

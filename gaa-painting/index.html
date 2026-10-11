@@ -79,6 +79,12 @@
     footer { padding-bottom: 80px; }
   }
 </style>
+<style id="a11y-fixes">
+/* accessibility: contrast adjustments (WCAG AA) */
+body > section#services > div.wrap > div.kicker {color:#146de5 !important}
+body > section#process > div.wrap > div.kicker {color:#1368db !important}
+body > section#reviews > div.wrap > div.kicker {color:#146de5 !important}
+</style>
 </head>
 <body>
 <div class="concept">Free concept by <b>Swoop Sites</b> for GAA Painting. This is a design preview, not the live website.</div>
@@ -96,9 +102,9 @@
     <div class="cta"><a class="btn" href="#quote">Get a free quote</a><a class="btn n" href="tel:0421946402" style="border:1.5px solid #3a5a8c">Call 0421 946 402</a></div>
   </div>
   <form class="q" id="quote" onsubmit="event.preventDefault();this.querySelector('.btn').textContent='Thanks! We\'ll be in touch to book your free inspection.'">
-    <h3>Free onsite quote</h3>
+    <h3 role="heading" aria-level="2">Free onsite quote</h3>
     <p>Free inspection, free quote, free colour consultation.</p>
-    <select><option>Interior painting</option><option>Exterior painting</option><option>Whole house</option><option>Commercial / industrial</option><option>Roof painting</option><option>Timber / floor sanding</option></select>
+    <select aria-label="Service needed"><option>Interior painting</option><option>Exterior painting</option><option>Whole house</option><option>Commercial / industrial</option><option>Roof painting</option><option>Timber / floor sanding</option></select>
     <input placeholder="Suburb"><input placeholder="Your name"><input placeholder="Mobile">
     <button class="btn" type="submit">Book my free quote</button>
   </form>

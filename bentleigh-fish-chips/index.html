@@ -91,6 +91,12 @@
   }
   @media (max-width: 560px) { .menu, .pgrid { grid-template-columns: 1fr; } .cone .sticker { width: 96px; height: 96px; font-size: 15px; } }
 </style>
+<style id="a11y-fixes">
+/* accessibility: contrast adjustments (WCAG AA) */
+body > section#menu > div.wrap > div.kicker {color:#d4311d !important}
+body > section#packs > div.wrap > div.kicker {color:#c22d1a !important}
+div.wrap > form > div.fields > button.btn.r {background-color:#d8321d !important}
+</style>
 </head>
 <body>
 <div class="concept">Free concept by <b>Swoop Sites</b> for Bentleigh Fish &amp; Chips. This is a design preview, not the live website.</div>
@@ -159,9 +165,9 @@
   <form onsubmit="event.preventDefault();this.querySelector('.fields').style.display='none';this.querySelector('.thanks').style.display='block'">
     <div class="fields">
       <h3 style="font-family:'Bowlby One',sans-serif;font-size:22px;color:var(--sea)">Quick pickup order</h3>
-      <select><option>Family Pack for 4</option><option>Dinner for 2</option><option>Fish of the day &amp; small chips</option><option>Burger Deal</option><option>Something else (add below)</option></select>
+      <select aria-label="What would you like to order"><option>Family Pack for 4</option><option>Dinner for 2</option><option>Fish of the day &amp; small chips</option><option>Burger Deal</option><option>Something else (add below)</option></select>
       <input placeholder="Your name" required><input placeholder="Mobile" type="tel" required>
-      <select><option>Pickup ASAP</option><option>Pickup in 30 minutes</option><option>Pickup in 1 hour</option></select>
+      <select aria-label="Pickup time"><option>Pickup ASAP</option><option>Pickup in 30 minutes</option><option>Pickup in 1 hour</option></select>
       <textarea rows="3" placeholder="Anything else? (e.g. extra chips, grilled not battered)"></textarea>
       <button class="btn r" type="submit">Place order</button>
     </div>

@@ -84,6 +84,12 @@
     footer { padding-bottom: 80px; }
   }
 </style>
+<style id="a11y-fixes">
+/* accessibility: contrast adjustments (WCAG AA) */
+section#hydro > div.wrap > div > div.kicker[style="color:#9ff0f5"] {color:#eefcfd !important}
+section#hydro > div.wrap > div > p {background-color:#0d6f78 !important}
+section#hydro > div.wrap > ul > li {background-color:#267d85 !important}
+</style>
 </head>
 <body>
 <div class="concept">Free concept by <b>Swoop Sites</b> for Southern Rehab &amp; Sports Physiotherapy Centre. This is a design preview, not the live website.</div>
@@ -148,8 +154,8 @@
   </div>
   <form onsubmit="event.preventDefault();this.querySelector('.btn').textContent='Request sent! We\'ll call to confirm.'">
     <h3 style="font-size:20px">Book an appointment</h3>
-    <select><option>Physiotherapy</option><option>Hydrotherapy</option><option>Remedial massage</option><option>Post-operative rehab</option><option>WorkCover / TAC claim</option></select>
-    <input placeholder="Your name"><input placeholder="Mobile"><input type="date">
+    <select aria-label="Service needed"><option>Physiotherapy</option><option>Hydrotherapy</option><option>Remedial massage</option><option>Post-operative rehab</option><option>WorkCover / TAC claim</option></select>
+    <input placeholder="Your name"><input placeholder="Mobile"><input type="date" aria-label="Preferred date">
     <button class="btn" type="submit">Request appointment</button>
   </form>
 </div></section>

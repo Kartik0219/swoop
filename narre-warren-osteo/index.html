@@ -88,6 +88,14 @@
   }
   @media (max-width: 480px) { .grid { grid-template-columns: 1fr; } }
 </style>
+<style id="a11y-fixes">
+/* accessibility: contrast adjustments (WCAG AA) */
+header > div.wrap > div.logo > span {color:#b6512b !important}
+body > section#services > div.wrap > div.kicker {color:#b6512b !important}
+section#about > div.wrap > div > div.kicker {color:#ae4d29 !important}
+section#fees > div.wrap > div > div.kicker {color:#b6512b !important}
+section#book > div.wrap > div > div.kicker {color:#aa4b28 !important}
+</style>
 </head>
 <body>
 <div class="concept">Free concept by <b>Swoop Sites</b> for Narre Warren Osteopathy. This is a design preview, not the live website.</div>
@@ -168,10 +176,10 @@
   <form onsubmit="event.preventDefault();this.querySelector('.fields').style.display='none';this.querySelector('.thanks').style.display='block'">
     <div class="fields">
       <h3 style="font-size:20px">Request an appointment</h3>
-      <select><option>Initial consultation (45 min)</option><option>Follow-up consultation (30 min)</option><option>Long appointment (45 min)</option><option>WorkCover / TAC</option></select>
+      <select aria-label="Service needed"><option>Initial consultation (45 min)</option><option>Follow-up consultation (30 min)</option><option>Long appointment (45 min)</option><option>WorkCover / TAC</option></select>
       <input placeholder="First name" required><input placeholder="Last name" required>
       <input placeholder="Mobile" type="tel" required>
-      <select><option>Any time</option><option>Morning</option><option>Afternoon</option></select>
+      <select aria-label="Preferred day or time"><option>Any time</option><option>Morning</option><option>Afternoon</option></select>
       <textarea rows="3" placeholder="Anything we should know? (optional)"></textarea>
       <button class="btn" type="submit">Request appointment</button>
       <p class="note">We'll contact you to confirm a time. Prefer to book yourself? Online booking would sit here too.</p>

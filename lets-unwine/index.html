@@ -95,6 +95,13 @@
   }
   @media (max-width: 480px) { .cats { grid-template-columns: 1fr; } .bt { width: 56px; } }
 </style>
+<style id="a11y-fixes">
+/* accessibility: contrast adjustments (WCAG AA) */
+header > div.wrap > div.logo > em {color:#aa8438 !important}
+body > section#shop > div.wrap > div.kicker {color:#88692d !important}
+body > section#clubs > div.wrap > div.kicker {color:#7c6029 !important}
+body > section#extras > div.wrap > div.kicker {color:#88692d !important}
+</style>
 </head>
 <body>
 <div class="concept">Free concept by <b>Swoop Sites</b> for Let's Unwine Berwick. This is a design preview, not the live website.</div>
@@ -170,7 +177,7 @@
   <form onsubmit="event.preventDefault();this.querySelector('.fields').style.display='none';this.querySelector('.thanks').style.display='block'">
     <div class="fields">
       <h3 style="font-family:'Playfair Display',serif;font-size:24px;color:var(--wine)">Send us an enquiry</h3>
-      <select><option>Join the Regular Dozen Club</option><option>Join the Froth Squad Beer Club</option><option>Customised labelling</option><option>Fundraising</option><option>Wholesale enquiry</option><option>Something else</option></select>
+      <select aria-label="What are you interested in"><option>Join the Regular Dozen Club</option><option>Join the Froth Squad Beer Club</option><option>Customised labelling</option><option>Fundraising</option><option>Wholesale enquiry</option><option>Something else</option></select>
       <input placeholder="Your name" required><input placeholder="Email or mobile" required>
       <textarea rows="3" placeholder="Tell us a little about what you're after"></textarea>
       <label style="display:flex;gap:8px;align-items:center;margin-top:10px;font-size:14px;color:var(--sub)"><input type="checkbox" required style="width:auto;margin:0"> I'm 18 or over</label>

@@ -98,6 +98,15 @@
   }
   @media (max-width: 420px) { .plist.on { grid-template-columns: 1fr; } }
 </style>
+<style id="a11y-fixes">
+/* accessibility: contrast adjustments (WCAG AA) */
+body > section#prices > div.wrap > div.kicker {color:#8c7000 !important}
+div.wrap > div#p-a > div.p > span.tag {background-color:#e11d21 !important}
+body > section#why > div.wrap > div.kicker {color:#876c00 !important}
+body > section > div.wrap > div.kicker {color:#8c7000 !important}
+body > section#reviews > div.wrap > div.kicker {color:#8c7000 !important}
+body > section#areas > div.wrap > div.kicker {color:#876c00 !important}
+</style>
 </head>
 <body>
 <div class="concept">Free concept by <b>Swoop Sites</b> for All In 1 Driving School. This is a design preview, not the live website.</div>
@@ -116,10 +125,10 @@
     <div class="rating"><b>★★★★★</b> 5.0 on Google (23 reviews)</div>
   </div>
   <form class="q" id="book" onsubmit="event.preventDefault();this.querySelector('.btn').textContent='Thanks! We\'ll call you to confirm a time.'">
-    <h3>Book a lesson</h3>
+    <h3 role="heading" aria-level="2">Book a lesson</h3>
     <p>Pick what you need and we'll pair you with an instructor.</p>
     <div class="seg"><label><input type="radio" name="tx" checked>Automatic</label><label><input type="radio" name="tx">Manual</label></div>
-    <select><option>60 min lesson</option><option>90 min lesson</option><option>1 hr lesson + drive test</option><option>5 x 60 min lessons</option><option>10 x 60 min lessons</option><option>Drive test package</option><option>Not sure, help me choose</option></select>
+    <select aria-label="Service needed"><option>60 min lesson</option><option>90 min lesson</option><option>1 hr lesson + drive test</option><option>5 x 60 min lessons</option><option>10 x 60 min lessons</option><option>Drive test package</option><option>Not sure, help me choose</option></select>
     <input placeholder="Pick-up suburb"><input placeholder="Your name"><input placeholder="Mobile">
     <button class="btn k" type="submit">Request my booking</button>
   </form>

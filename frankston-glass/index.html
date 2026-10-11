@@ -87,6 +87,12 @@
   }
   @media (max-width: 520px) { .grid { grid-template-columns: 1fr; } }
 </style>
+<style id="a11y-fixes">
+/* accessibility: contrast adjustments (WCAG AA) */
+body > section#services > div.wrap > div.kicker {color:#1875a3 !important}
+body > section#areas > div.wrap > div.kicker {color:#1875a3 !important}
+section#quote > div.wrap > div > div.kicker {color:#166c95 !important}
+</style>
 </head>
 <body>
 <div class="concept">Free concept by <b>Swoop Sites</b> for Frankston Glass. This is a design preview, not the live website.</div>
@@ -165,7 +171,7 @@
   <form onsubmit="event.preventDefault();this.querySelector('.fields').style.display='none';this.querySelector('.thanks').style.display='block'">
     <div class="fields">
       <h3 style="font-size:20px;font-weight:800">Request a quote</h3>
-      <select><option>Broken window</option><option>Emergency repair</option><option>Insurance job</option><option>Glass cut to size</option><option>Splashback</option><option>Mirror</option><option>Safety glass</option></select>
+      <select aria-label="Service needed"><option>Broken window</option><option>Emergency repair</option><option>Insurance job</option><option>Glass cut to size</option><option>Splashback</option><option>Mirror</option><option>Safety glass</option></select>
       <input placeholder="Your name" required><input placeholder="Mobile" type="tel" required>
       <input placeholder="Suburb">
       <textarea rows="3" placeholder="What needs fixing? Rough size helps."></textarea>

@@ -76,6 +76,17 @@
   }
   @media (max-width: 520px) { .grid { grid-template-columns: 1fr; } }
 </style>
+<style id="a11y-fixes">
+/* accessibility: contrast adjustments (WCAG AA) */
+header > div.wrap > div.logo > span {color:#12a191 !important}
+div.wrap > div > div.cta > a.btn[href="#quote"] {background-color:#1775c8 !important}
+section.hero > div.wrap > form#quote > button.btn {background-color:#1775c8 !important}
+body > section#services > div.wrap > div.kicker {color:#0e8174 !important}
+body > section#areas > div.wrap > div.kicker {color:#0e8174 !important}
+body > section#reviews > div.wrap > div.kicker {color:#0e8174 !important}
+section.contact > div.wrap > div > a.btn[href="#quote"] {background-color:#1775c8 !important}
+body > div.callbar > a[href="#quote"] {background-color:#1775c8 !important}
+</style>
 </head>
 <body>
 <div class="concept">Free concept by <b>Swoop Sites</b> for Auscare Cleaning. This is a design preview, not the live website.</div>
@@ -93,10 +104,10 @@
     <div class="cta"><a class="btn" href="#quote">Get my free quote</a><a class="btn w" href="tel:0416737880">Call 0416 737 880</a></div>
   </div>
   <form class="q" id="quote" onsubmit="event.preventDefault();this.querySelector('.btn').textContent='Thanks! We\'ll send your quote shortly.'">
-    <h3>Free quote in 60 seconds</h3>
+    <h3 role="heading" aria-level="2">Free quote in 60 seconds</h3>
     <p>Tell us a little about your place.</p>
-    <select><option>Regular home clean</option><option>One-off / spring clean</option><option>Office cleaning</option><option>Carpet &amp; upholstery steam clean</option></select>
-    <div class="row"><select><option>1 bedroom</option><option>2 bedrooms</option><option selected>3 bedrooms</option><option>4+ bedrooms</option></select><select><option>Weekly</option><option selected>Fortnightly</option><option>Every 4 weeks</option><option>Just once</option></select></div>
+    <select aria-label="Service needed"><option>Regular home clean</option><option>One-off / spring clean</option><option>Office cleaning</option><option>Carpet &amp; upholstery steam clean</option></select>
+    <div class="row"><select aria-label="Number of bedrooms"><option>1 bedroom</option><option>2 bedrooms</option><option selected>3 bedrooms</option><option>4+ bedrooms</option></select><select aria-label="How often"><option>Weekly</option><option selected>Fortnightly</option><option>Every 4 weeks</option><option>Just once</option></select></div>
     <input placeholder="Suburb"><input placeholder="Mobile or email">
     <button class="btn" type="submit">Get my quote</button>
   </form>

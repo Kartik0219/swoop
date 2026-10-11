@@ -84,6 +84,11 @@
     footer { padding-bottom: 80px; }
   }
 </style>
+<style id="a11y-fixes">
+/* accessibility: contrast adjustments (WCAG AA) */
+div.stats > div.wrap > div > span {background-color:#ca241c !important}
+body > section#why > div.wrap > div.kicker {color:#e54a43 !important}
+</style>
 </head>
 <body>
 <div class="concept">Free concept by <b>Swoop Sites</b> for Dandenong Brake &amp; Clutch. This is a design preview, not the live website.</div>
@@ -145,7 +150,7 @@
   <form onsubmit="event.preventDefault();this.querySelector('.fields').style.display='none';this.querySelector('.thanks').style.display='block'">
     <div class="fields">
       <h3 style="font-family:Oswald,sans-serif;font-size:26px;text-transform:uppercase">Get a quote</h3>
-      <select><option>Brakes</option><option>Clutch</option><option>Parts only</option><option>Something else</option></select>
+      <select aria-label="Service needed"><option>Brakes</option><option>Clutch</option><option>Parts only</option><option>Something else</option></select>
       <input placeholder="Your name" required><input placeholder="Phone" type="tel" required>
       <input placeholder="Vehicle make, model &amp; year">
       <textarea rows="3" placeholder="What's happening with the car? (optional)"></textarea>

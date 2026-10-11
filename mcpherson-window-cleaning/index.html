@@ -102,6 +102,18 @@
   }
   @media (max-width: 480px) { .grid, .iso { grid-template-columns: 1fr; } }
 </style>
+<style id="a11y-fixes">
+/* accessibility: contrast adjustments (WCAG AA) */
+div.wrap > div > div.cta > a.btn[href="#quote"] {background-color:#0a79aa !important}
+form#quote > div.tabs > label > span {color:#0a72a1 !important}
+section.hero > div.wrap > form#quote > button.btn {background-color:#0a79aa !important}
+body > section#services > div.wrap > div.kicker {color:#0a79aa !important}
+body > section#services > div.wrap > div.kicker[style="margin-top:56px"] {color:#0a79aa !important}
+section#safety > div.wrap > div > div.kicker {color:#0a75a6 !important}
+body > section#reviews > div.wrap > div.kicker {color:#0a79aa !important}
+div.wrap > div.rev > div.r > div.org {color:#0a79aa !important}
+body > div.callbar > a[href="#quote"] {background-color:#0a79aa !important}
+</style>
 </head>
 <body>
 <div class="concept">Free concept by <b>Swoop Sites</b> for McPherson Window Cleaning. This is a design preview, not the live website.</div>
@@ -120,10 +132,10 @@
     <div class="rating"><b>★★★★★</b> 4.6 on Google (30 reviews)</div>
   </div>
   <form class="q" id="quote" onsubmit="event.preventDefault();this.querySelector('.btn').textContent='Thanks! We\'ll contact you shortly.'">
-    <h3>Quick quote</h3>
+    <h3 role="heading" aria-level="2">Quick quote</h3>
     <p>Tell us a little about the job.</p>
     <div class="tabs"><label><input type="radio" name="t" checked><span>🏠 My home</span></label><label><input type="radio" name="t"><span>🏢 A business</span></label></div>
-    <select><option>Window cleaning</option><option>High rise window cleaning</option><option>Gutter cleaning</option><option>Pressure cleaning</option><option>Height safety</option><option>Building maintenance</option></select>
+    <select aria-label="Service needed"><option>Window cleaning</option><option>High rise window cleaning</option><option>Gutter cleaning</option><option>Pressure cleaning</option><option>Height safety</option><option>Building maintenance</option></select>
     <input placeholder="Suburb"><input placeholder="Your name"><input placeholder="Phone or email">
     <button class="btn" type="submit">Request my quote</button>
   </form>

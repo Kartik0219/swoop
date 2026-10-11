@@ -92,6 +92,13 @@
   }
   @media (max-width: 480px) { .why { grid-template-columns: 1fr; } .top .wrap { justify-content: center; } }
 </style>
+<style id="a11y-fixes">
+/* accessibility: contrast adjustments (WCAG AA) */
+body > section#services > div.wrap > div.kicker {color:#976b00 !important}
+section#about > div.wrap > div > div.kicker {color:#8c6400 !important}
+div.wrap > div.tl > div > b {color:#b07d00 !important}
+section#quote > div.wrap > div > div.kicker {color:#976b00 !important}
+</style>
 </head>
 <body>
 <div class="concept">Free concept by <b>Swoop Sites</b> for Neumann Motors. This is a design preview, not the live website.</div>
@@ -173,7 +180,7 @@
   <form onsubmit="event.preventDefault();this.querySelector('.fields').style.display='none';this.querySelector('.thanks').style.display='block'">
     <div class="fields">
       <h3 style="font-size:21px">Request a quote</h3>
-      <select><option>Logbook service</option><option>Roadworthy certificate</option><option>General service / repair</option><option>Fleet servicing</option><option>Aircon regas</option><option>Brakes / clutch</option><option>Pre-purchase inspection</option></select>
+      <select aria-label="Service needed"><option>Logbook service</option><option>Roadworthy certificate</option><option>General service / repair</option><option>Fleet servicing</option><option>Aircon regas</option><option>Brakes / clutch</option><option>Pre-purchase inspection</option></select>
       <input placeholder="Your name" required><input placeholder="Mobile" type="tel" required>
       <input placeholder="Car make, model &amp; year">
       <textarea rows="3" placeholder="What does the car need? (optional)"></textarea>

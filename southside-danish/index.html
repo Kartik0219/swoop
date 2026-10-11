@@ -93,6 +93,10 @@
   }
   @media (max-width: 480px) { .cols { grid-template-columns: 1fr; } }
 </style>
+<style id="a11y-fixes">
+/* accessibility: contrast adjustments (WCAG AA) */
+section#visit > div.wrap > div > div.kicker {color:#f4e9d8 !important}
+</style>
 </head>
 <body>
 <div class="concept">Free concept by <b>Swoop Sites</b> for Southside Danish. This is a design preview, not the live website.</div>
@@ -170,7 +174,7 @@
   <form onsubmit="event.preventDefault();this.querySelector('.fields').style.display='none';this.querySelector('.thanks').style.display='block'">
     <div class="fields">
       <h3 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:26px">Book a viewing or ask about a piece</h3>
-      <select><option>Showroom visit</option><option>FaceTime viewing</option><option>Order / question about a piece</option><option>Trade enquiry</option></select>
+      <select aria-label="Type of appointment"><option>Showroom visit</option><option>FaceTime viewing</option><option>Order / question about a piece</option><option>Trade enquiry</option></select>
       <input placeholder="Your name" required><input placeholder="Email" type="email" required><input placeholder="Mobile" type="tel">
       <textarea rows="3" placeholder="Which piece are you interested in? Preferred day and time?"></textarea>
       <button class="btn t" type="submit">Send enquiry</button>

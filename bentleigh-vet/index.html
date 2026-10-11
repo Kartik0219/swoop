@@ -95,6 +95,17 @@
   }
   @media (max-width: 520px) { .grid, .team { grid-template-columns: 1fr; } }
 </style>
+<style id="a11y-fixes">
+/* accessibility: contrast adjustments (WCAG AA) */
+div.wrap > div.logo > div > small {color:#d53511 !important}
+div.wrap > div > div.cta > a.btn[href="#book"] {background-color:#d53511 !important}
+body > section#services > div.wrap > div.kicker {color:#d03410 !important}
+body > section#team > div.wrap > div.kicker {color:#d53511 !important}
+div.team > div.m > div > div.role {color:#d03410 !important}
+section#book > div.wrap > div > div.kicker {color:#c73110 !important}
+div.wrap > form > div.fields > button.btn {background-color:#d53511 !important}
+body > div.callbar > a[href="#book"] {background-color:#d53511 !important}
+</style>
 </head>
 <body>
 <div class="concept">Free concept by <b>Swoop Sites</b> for Bentleigh Veterinary Clinic. This is a design preview, not the live website.</div>
@@ -172,10 +183,10 @@
   <form onsubmit="event.preventDefault();this.querySelector('.fields').style.display='none';this.querySelector('.thanks').style.display='block'">
     <div class="fields">
       <h3 style="font-family:Fredoka,sans-serif;font-size:22px">Request a consultation</h3>
-      <select><option>Consultation</option><option>Free puppy / kitten health check</option><option>Puppy school</option><option>Dentistry</option><option>Osteopathy</option><option>Something else</option></select>
+      <select aria-label="Service needed"><option>Consultation</option><option>Free puppy / kitten health check</option><option>Puppy school</option><option>Dentistry</option><option>Osteopathy</option><option>Something else</option></select>
       <input placeholder="Your name" required><input placeholder="Mobile" type="tel" required>
       <input placeholder="Pet's name and type (e.g. Max, dog)">
-      <select><option>Any time</option><option>Morning</option><option>Afternoon</option><option>Evening (until 7pm)</option><option>Saturday morning</option></select>
+      <select aria-label="Preferred day or time"><option>Any time</option><option>Morning</option><option>Afternoon</option><option>Evening (until 7pm)</option><option>Saturday morning</option></select>
       <textarea rows="3" placeholder="Anything we should know? (optional)"></textarea>
       <button class="btn" type="submit">Request appointment</button>
     </div>

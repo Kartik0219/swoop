@@ -90,6 +90,15 @@
   }
   @media (max-width: 480px) { .grid { grid-template-columns: 1fr; } .m { flex-direction: column; } }
 </style>
+<style id="a11y-fixes">
+/* accessibility: contrast adjustments (WCAG AA) */
+header > div.wrap > div.logo > span {color:#a95d33 !important}
+body > section#services > div.wrap > div.kicker {color:#a95d33 !important}
+body > section#first > div.wrap > div.kicker {color:#9d572f !important}
+body > section#team > div.wrap > div.kicker {color:#a95d33 !important}
+div.team > div.m > div > div.role {color:#ad5f34 !important}
+section#book > div.wrap > div > div.kicker {color:#99542e !important}
+</style>
 </head>
 <body>
 <div class="concept">Free concept by <b>Swoop Sites</b> for Dingley Chiropractic. This is a design preview, not the live website.</div>
@@ -163,9 +172,9 @@
   <form onsubmit="event.preventDefault();this.querySelector('.fields').style.display='none';this.querySelector('.thanks').style.display='block'">
     <div class="fields">
       <h3 style="font-size:20px">Request an appointment</h3>
-      <select><option>Chiropractic</option><option>Acupuncture / dry needling</option><option>Remedial massage</option><option>Myotherapy</option><option>WorkCover / TAC / DVA</option></select>
+      <select aria-label="Service needed"><option>Chiropractic</option><option>Acupuncture / dry needling</option><option>Remedial massage</option><option>Myotherapy</option><option>WorkCover / TAC / DVA</option></select>
       <input placeholder="Your name" required><input placeholder="Mobile" type="tel" required>
-      <select><option>Any time</option><option>Morning</option><option>Afternoon</option><option>Evening</option><option>Saturday morning</option></select>
+      <select aria-label="Preferred day or time"><option>Any time</option><option>Morning</option><option>Afternoon</option><option>Evening</option><option>Saturday morning</option></select>
       <textarea rows="3" placeholder="Anything we should know? (optional)"></textarea>
       <button class="btn" type="submit">Request appointment</button>
     </div>

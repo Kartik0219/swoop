@@ -100,6 +100,10 @@
   }
   @media (max-width: 480px) { .grid { grid-template-columns: 1fr; } }
 </style>
+<style id="a11y-fixes">
+/* accessibility: contrast adjustments (WCAG AA) */
+section.hero > div.wrap > div.smile > div.tag2 {background-color:#0e806e !important}
+</style>
 </head>
 <body>
 <div class="concept">Free concept by <b>Swoop Sites</b> for Springvale Dental Clinic. This is a design preview, not the live website.</div>
@@ -190,8 +194,8 @@
   <form id="f" onsubmit="event.preventDefault();this.querySelector('.fields').style.display='none';this.querySelector('.thanks').style.display='block'">
     <div class="fields">
       <h3 style="font-size:20px">Request an appointment</h3>
-      <select><option>New patient check-up</option><option>Scale &amp; clean</option><option>Dental emergency</option><option>Implants or dentures</option><option>Wisdom teeth</option><option>Invisalign or whitening</option><option>Child dental (CDBS)</option></select>
-      <input placeholder="Your name" required><input placeholder="Mobile" type="tel" required><input type="date">
+      <select aria-label="Service needed"><option>New patient check-up</option><option>Scale &amp; clean</option><option>Dental emergency</option><option>Implants or dentures</option><option>Wisdom teeth</option><option>Invisalign or whitening</option><option>Child dental (CDBS)</option></select>
+      <input placeholder="Your name" required><input placeholder="Mobile" type="tel" required><input type="date" aria-label="Preferred date">
       <button class="btn" type="submit">Request appointment</button>
     </div>
     <div class="thanks"><b>Thanks, request received!</b>Our team will call you to confirm a time.</div>

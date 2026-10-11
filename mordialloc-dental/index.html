@@ -89,6 +89,18 @@
     footer { padding-bottom: 80px; }
   }
 </style>
+<style id="a11y-fixes">
+/* accessibility: contrast adjustments (WCAG AA) */
+header > div.wrap > div.logo > span {color:#2e7c75 !important}
+section.hero > div.wrap > div > div.eyebrow {color:#2e7c75 !important}
+div.wrap > div > div.cta > a.btn[href="#visit"] {background-color:#2e7c75 !important}
+body > section.quote > div.wrap > cite {color:#2b756e !important}
+body > section#services > div.wrap > div.eyebrow {color:#2e7c75 !important}
+div.wrap > div.kids > div > a.btn[href="#visit"][style="margin-top:20px"] {background-color:#2e7c75 !important}
+section#story > div.wrap > div > div.eyebrow {color:#2e7c75 !important}
+section#visit > div.wrap > div > div.eyebrow {color:#2b756e !important}
+body > div.callbar > a[href="#visit"] {background-color:#2e7c75 !important}
+</style>
 </head>
 <body>
 <div class="concept">Free concept by <b>Swoop Sites</b> for Mordialloc Dental Group. This is a design preview, not the live website.</div>
@@ -161,9 +173,9 @@
   <form onsubmit="event.preventDefault();this.querySelector('.fields').style.display='none';this.querySelector('.thanks').style.display='block'">
     <div class="fields">
       <h3 style="font-size:22px;color:var(--navy)">Request an appointment</h3>
-      <select><option>Check-up &amp; clean</option><option>Children's check-up</option><option>Fillings, crowns or root canal</option><option>Whitening or veneers</option><option>Dentures</option><option>Something else</option></select>
+      <select aria-label="Service needed"><option>Check-up &amp; clean</option><option>Children's check-up</option><option>Fillings, crowns or root canal</option><option>Whitening or veneers</option><option>Dentures</option><option>Something else</option></select>
       <input placeholder="Your name" required><input placeholder="Mobile" type="tel" required>
-      <select><option>Any day</option><option>Monday</option><option>Tuesday</option><option>Wednesday (late)</option><option>Thursday (late)</option><option>Friday</option></select>
+      <select aria-label="Preferred day or time"><option>Any day</option><option>Monday</option><option>Tuesday</option><option>Wednesday (late)</option><option>Thursday (late)</option><option>Friday</option></select>
       <label style="display:flex;gap:8px;align-items:center;margin-top:12px;font-size:14px;color:var(--sub)"><input type="checkbox" style="width:auto;margin:0"> I'm a new patient</label>
       <button class="btn d" type="submit">Send request</button>
     </div>

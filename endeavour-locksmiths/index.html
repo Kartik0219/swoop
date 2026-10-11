@@ -86,6 +86,13 @@
     footer { padding-bottom: 80px; }
   }
 </style>
+<style id="a11y-fixes">
+/* accessibility: contrast adjustments (WCAG AA) */
+body > section#services > div.wrap > div.kicker {color:#8e6c10 !important}
+body > section#prices > div.wrap > div.kicker {color:#89690f !important}
+body > section#areas > div.wrap > div.kicker {color:#8e6c10 !important}
+section#contact > div.wrap > div > div.kicker {color:#89690f !important}
+</style>
 </head>
 <body>
 <div class="concept">Free concept by <b>Swoop Sites</b> for Endeavour Locksmiths. This is a design preview, not the live website.</div>
@@ -105,9 +112,9 @@
     <div class="trust"><span><b>★ 4.4</b> on Google (65 reviews)</span><span><b>MLAA</b> members</span><span><b>24/7</b> emergency</span></div>
   </div>
   <form class="q" id="quote" onsubmit="event.preventDefault();this.querySelector('.btn').textContent='Thanks! We\'ll get back to you shortly.'">
-    <h3>Quick quote</h3>
+    <h3 role="heading" aria-level="2">Quick quote</h3>
     <p>Not urgent? Send us the details and we'll get back to you.</p>
-    <select><option>House lockout / door opening</option><option>Car keys / car lockout</option><option>Rekey or replace locks</option><option>Master key system</option><option>Safe opening</option><option>Alarm, CCTV or intercom</option><option>Something else</option></select>
+    <select aria-label="Service needed"><option>House lockout / door opening</option><option>Car keys / car lockout</option><option>Rekey or replace locks</option><option>Master key system</option><option>Safe opening</option><option>Alarm, CCTV or intercom</option><option>Something else</option></select>
     <input placeholder="Suburb"><input placeholder="Your name"><input placeholder="Mobile">
     <button class="btn" type="submit">Send my request</button>
     <div class="or">Locked out right now? <a href="tel:0397965651">Call us instead</a></div>

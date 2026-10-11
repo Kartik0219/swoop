@@ -97,6 +97,11 @@
     footer { padding-bottom: 80px; }
   }
 </style>
+<style id="a11y-fixes">
+/* accessibility: contrast adjustments (WCAG AA) */
+div.wrap > div > div.colours > div[style="background:#8a8d8f"] {color:#212121 !important}
+div.wrap > div > div.colours > div[style="background:#a39b8b"] {color:#303030 !important}
+</style>
 </head>
 <body>
 <div class="concept">Free concept by <b>Swoop Sites</b> for Big Apple Roofing. This is a design preview, not the live website.</div>
@@ -115,9 +120,9 @@
     <div class="rating"><b>★★★★★</b> 4.5 on Google (54 reviews)</div>
   </div>
   <form class="q" id="quote" onsubmit="event.preventDefault();this.querySelector('.btn').textContent='Thanks! Rob will be in touch to book your free inspection.'">
-    <h3>Free roof inspection &amp; estimate</h3>
+    <h3 role="heading" aria-level="2">Free roof inspection &amp; estimate</h3>
     <p>Tell us what's going on and we'll come and take a look.</p>
-    <select><option>Roof restoration</option><option>Roof repair / leak</option><option>Re-roofing / roof replacement</option><option>New Colorbond roof</option><option>Gutter repair or replacement</option><option>Not sure, need advice</option></select>
+    <select aria-label="Service needed"><option>Roof restoration</option><option>Roof repair / leak</option><option>Re-roofing / roof replacement</option><option>New Colorbond roof</option><option>Gutter repair or replacement</option><option>Not sure, need advice</option></select>
     <input placeholder="Suburb"><input placeholder="Your name"><input placeholder="Mobile">
     <button class="btn" type="submit">Book my free inspection</button>
   </form>

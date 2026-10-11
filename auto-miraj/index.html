@@ -89,6 +89,12 @@
     footer { padding-bottom: 80px; }
   }
 </style>
+<style id="a11y-fixes">
+/* accessibility: contrast adjustments (WCAG AA) */
+body > section#services > div.wrap > div.eyebrow {color:#9f6700 !important}
+section#why > div.wrap > div > div.eyebrow {color:#956000 !important}
+section#visit > div.wrap > div > div.eyebrow {color:#9f6700 !important}
+</style>
 </head>
 <body>
 <div class="concept">Free concept by <b>Swoop Sites</b> for Auto Miraj. This is a design preview, not the live website.</div>
@@ -110,12 +116,12 @@
     </div>
   </div>
   <form class="card-book" id="book" onsubmit="event.preventDefault();this.querySelector('.btn').textContent='Request sent! We\'ll confirm by SMS.'">
-    <h3>Book a service</h3>
+    <h3 role="heading" aria-level="2">Book a service</h3>
     <div class="small">Pick a time, and we'll confirm by SMS.</div>
     <label>Service</label>
-    <select><option>Logbook service</option><option>Roadworthy certificate</option><option>Brakes &amp; clutch</option><option>Suspension &amp; steering</option><option>Auto electrical / A/C</option><option>Free safety check</option></select>
+    <select aria-label="Service needed"><option>Logbook service</option><option>Roadworthy certificate</option><option>Brakes &amp; clutch</option><option>Suspension &amp; steering</option><option>Auto electrical / A/C</option><option>Free safety check</option></select>
     <label>Car (make &amp; model)</label><input placeholder="e.g. Toyota Corolla 2018">
-    <label>Preferred day</label><input type="date">
+    <label>Preferred day</label><input type="date" aria-label="Preferred date">
     <label>Mobile</label><input placeholder="04xx xxx xxx">
     <button class="btn" type="submit">Request booking</button>
   </form>
