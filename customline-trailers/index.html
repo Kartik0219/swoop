@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Customline Trailers | Custom Trailer Manufacturer, Lalor VIC (concept)</title>
+<meta name="description" content="Custom trailers built in Lalor since 2009. Tilt, rampless bike, rollback car, camper, machinery, tipper and stock trailers, ute bodies, tiny home chassis and trailer repairs. Call 0488 950 598.">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#141414; --steel:#22262b; --steel2:#2f343a; --red:#e3120b; --red2:#ff3b30; --mute:#5b6168; --line:#e3e5e8; --bg:#f4f4f2; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { overflow-x: clip; }
+  body { font-family: Inter, system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+  .concept { background: #000; color: #ddd; font-size: 13px; text-align: center; padding: 8px 16px; }
+  .concept b { color: #fff; }
+  header { background: var(--steel); color: #fff; position: sticky; top: 0; z-index: 10; border-bottom: 4px solid var(--red); }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 70px; gap: 16px; }
+  .logo { font-family: Oswald, sans-serif; font-weight: 700; font-size: 24px; letter-spacing: .02em; text-transform: uppercase; line-height: 1; }
+  .logo em { font-style: normal; color: var(--red2); }
+  .logo small { display: block; font-family: Inter, sans-serif; font-size: 10px; letter-spacing: .25em; color: #9aa1a8; margin-top: 4px; font-weight: 600; }
+  nav { display: flex; gap: 26px; font-weight: 600; font-size: 14px; color: #c9ced3; text-transform: uppercase; letter-spacing: .06em; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--red); color: #fff; font-weight: 700; padding: 14px 22px; font-size: 15px; border: 0; cursor: pointer; font-family: inherit; clip-path: polygon(0 0, 100% 0, 100% 72%, 92% 100%, 0 100%); white-space: nowrap; }
+  .btn.ghost { background: transparent; border: 2px solid rgba(255,255,255,.4); clip-path: none; }
+  .hero { background: linear-gradient(115deg, var(--steel) 0 58%, var(--steel2) 58% 100%); color: #fff; position: relative; overflow: hidden; }
+  .hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 14px; background: repeating-linear-gradient(-45deg, var(--red) 0 18px, #111 18px 36px); }
+  .hero .wrap { display: grid; grid-template-columns: 1.1fr 1fr; gap: 30px; align-items: center; padding: 64px 20px 84px; }
+  .eyebrow { font-family: Oswald, sans-serif; text-transform: uppercase; letter-spacing: .2em; color: var(--red2); font-size: 14px; font-weight: 600; }
+  h1 { font-family: Oswald, sans-serif; text-transform: uppercase; font-size: 60px; line-height: 1; margin: 14px 0 18px; letter-spacing: .01em; }
+  h1 span { color: var(--red2); }
+  .hero p { color: #c9ced3; font-size: 18px; max-width: 520px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+  .addr { margin-top: 22px; font-size: 14px; color: #9aa1a8; }
+  .addr b { color: #fff; }
+  .trailer { width: 100%; height: auto; display: block; }
+  .stats { background: #fff; border-bottom: 1px solid var(--line); }
+  .stats .wrap { display: grid; grid-template-columns: repeat(4, 1fr); }
+  .stats div { padding: 22px 16px; border-right: 1px solid var(--line); }
+  .stats div:last-child { border-right: 0; }
+  .stats b { display: block; font-family: Oswald, sans-serif; font-size: 26px; text-transform: uppercase; color: var(--red); line-height: 1.1; }
+  .stats span { font-size: 14px; color: var(--mute); font-weight: 600; }
+  section { padding: 76px 0; }
+  .kicker { font-family: Oswald, sans-serif; text-transform: uppercase; letter-spacing: .18em; color: var(--red); font-size: 14px; font-weight: 600; }
+  h2 { font-family: Oswald, sans-serif; text-transform: uppercase; font-size: 40px; line-height: 1.05; margin-top: 6px; }
+  .lead { color: var(--mute); font-size: 17px; margin-top: 12px; max-width: 680px; }
+  .range { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 34px; }
+  .t { background: #fff; border: 1px solid var(--line); padding: 20px; position: relative; transition: transform .15s; }
+  .t:hover { transform: translateY(-3px); }
+  .t::before { content: ""; position: absolute; top: 0; left: 0; width: 40px; height: 4px; background: var(--red); }
+  .t .ic { font-size: 26px; }
+  .t h3 { font-family: Oswald, sans-serif; text-transform: uppercase; font-size: 19px; margin: 8px 0 4px; letter-spacing: .02em; }
+  .t p { font-size: 14px; color: var(--mute); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px; }
+  .chips span { background: var(--steel); color: #fff; font-size: 13px; font-weight: 600; padding: 7px 13px; }
+  .dark { background: var(--steel); color: #fff; }
+  .dark .lead { color: #c9ced3; }
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  .checks { display: grid; gap: 12px; }
+  .checks div { background: rgba(255,255,255,.05); border-left: 4px solid var(--red); padding: 16px 18px; }
+  .checks b { display: block; font-size: 16px; }
+  .checks span { color: #c9ced3; font-size: 14px; }
+  .states { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+  .states span { border: 1px solid rgba(255,255,255,.3); padding: 6px 12px; font-size: 13px; font-weight: 600; }
+  .quote { background: #fff; }
+  .quote .split { align-items: start; }
+  form { background: var(--bg); border: 1px solid var(--line); padding: 26px; border-top: 5px solid var(--red); }
+  form h3 { font-family: Oswald, sans-serif; text-transform: uppercase; font-size: 24px; }
+  label { display: block; font-size: 13px; font-weight: 700; margin-top: 12px; }
+  input, select, textarea { width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #cfd3d7; font: inherit; background: #fff; }
+  form .btn { width: 100%; margin-top: 16px; }
+  .thanks { display: none; padding: 30px 6px; text-align: center; }
+  .thanks b { display: block; font-family: Oswald, sans-serif; text-transform: uppercase; font-size: 26px; color: var(--red); }
+  .info { margin-top: 22px; display: grid; gap: 12px; }
+  .info div { display: flex; gap: 12px; align-items: flex-start; font-size: 16px; }
+  .info i { font-style: normal; font-size: 20px; }
+  .info small { display: block; color: var(--mute); font-size: 13px; }
+  footer { background: #111; color: #9aa1a8; font-size: 14px; padding: 30px 0; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; }
+  .callbar { display: none; }
+  @media (max-width: 900px) {
+    nav, header .btn { display: none; }
+    .hero { background: var(--steel); }
+    .hero .wrap, .split { grid-template-columns: 1fr; }
+    .hero .wrap { padding: 40px 20px 70px; }
+    h1 { font-size: 44px; } h2 { font-size: 32px; }
+    .range { grid-template-columns: 1fr 1fr; }
+    .stats .wrap { grid-template-columns: 1fr 1fr; }
+    .stats div:nth-child(2) { border-right: 0; }
+    .stats div { border-bottom: 1px solid var(--line); }
+    section { padding: 54px 0; }
+    .callbar { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; }
+    .callbar a { flex: 1; text-align: center; padding: 15px 8px; font-weight: 700; }
+    .callbar a:first-child { background: #111; color: #fff; } .callbar a:last-child { background: var(--red); color: #fff; }
+    footer { padding-bottom: 84px; }
+  }
+  @media (max-width: 520px) { .range { grid-template-columns: 1fr; } h1 { font-size: 38px; } }
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Customline Trailers. This is a design preview, not the live website.</div>
+<header><div class="wrap">
+  <div class="logo">Custom<em>line</em> Trailers<small>Lalor · Victoria</small></div>
+  <nav><a href="#range">Trailers</a><a href="#repairs">Repairs</a><a href="#about">About</a><a href="#quote">Contact</a></nav>
+  <a class="btn" href="#quote">Get a quote</a>
+</div></header>
+
+<section class="hero" style="padding:0"><div class="wrap">
+  <div>
+    <div class="eyebrow">Custom trailer manufacturer · Since 2009</div>
+    <h1>Built to <span>your spec.</span> Built in Lalor.</h1>
+    <p>Custom and standard trailers made from Australian steel and built to Australian Design Rules (ADR). Tell us what you need to tow and we'll build it.</p>
+    <div class="cta"><a class="btn" href="#quote">Get a free quote</a><a class="btn ghost" href="tel:+61488950598">📞 0488 950 598</a></div>
+    <div class="addr">Workshop: <b>442 High St, Lalor VIC 3075</b></div>
+  </div>
+  <svg class="trailer" viewBox="0 0 520 300" aria-hidden="true">
+    <rect x="70" y="120" width="330" height="80" fill="#3a4047" stroke="#7d858d" stroke-width="3"/>
+    <g stroke="#7d858d" stroke-width="2"><line x1="120" y1="120" x2="120" y2="200"/><line x1="180" y1="120" x2="180" y2="200"/><line x1="240" y1="120" x2="240" y2="200"/><line x1="300" y1="120" x2="300" y2="200"/><line x1="360" y1="120" x2="360" y2="200"/></g>
+    <rect x="60" y="196" width="350" height="14" fill="#e3120b"/>
+    <path d="M410 203 L490 214" stroke="#c9ced3" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="496" cy="215" r="10" fill="#c9ced3"/>
+    <circle cx="200" cy="228" r="34" fill="#111" stroke="#555" stroke-width="6"/><circle cx="200" cy="228" r="12" fill="#9aa1a8"/>
+    <circle cx="282" cy="228" r="34" fill="#111" stroke="#555" stroke-width="6"/><circle cx="282" cy="228" r="12" fill="#9aa1a8"/>
+    <path d="M150 196 Q 200 160 250 196 M232 196 Q 282 160 332 196" fill="none" stroke="#e3120b" stroke-width="5"/>
+    <rect x="66" y="128" width="16" height="10" fill="#ff3b30"/><rect x="66" y="144" width="16" height="10" fill="#ffb627"/>
+    <line x1="20" y1="266" x2="510" y2="266" stroke="#4a5058" stroke-width="3" stroke-dasharray="22 14"/>
+  </svg>
+</div></section>
+
+<div class="stats"><div class="wrap">
+  <div><b>Since 2009</b><span>Building custom trailers</span></div>
+  <div><b>Aussie steel</b><span>Premium Australian steel</span></div>
+  <div><b>ADR</b><span>Built to Australian Design Rules</span></div>
+  <div><b>5 states</b><span>VIC, NSW, SA, QLD and WA</span></div>
+</div></div>
+
+<section id="range"><div class="wrap">
+  <div class="kicker">The range</div>
+  <h2>Custom trailers for every job</h2>
+  <p class="lead">For tradespeople, farmers, councils, schools, businesses and personal use. Start from one of our popular builds or bring your own design.</p>
+  <div class="range">
+    <div class="t"><div class="ic">🚗</div><h3>Tilt trailers</h3><p>Easy loading for cars, machinery and equipment.</p></div>
+    <div class="t"><div class="ic">🏍️</div><h3>Bike trailers</h3><p>Rampless, custom and enclosed bike trailers.</p></div>
+    <div class="t"><div class="ic">🛻</div><h3>Car trailers</h3><p>Rollback car trailers and custom car carriers.</p></div>
+    <div class="t"><div class="ic">⛺</div><h3>Camper trailers</h3><p>Built around how you like to travel.</p></div>
+    <div class="t"><div class="ic">🚜</div><h3>Machinery & plant</h3><p>Custom machinery, plant and turn table trailers.</p></div>
+    <div class="t"><div class="ic">⛏️</div><h3>Hydraulic tippers</h3><p>Hydraulic tipper trailers for heavy loads.</p></div>
+    <div class="t"><div class="ic">🐑</div><h3>Stock trailers</h3><p>Stock trailers for farm and rural work.</p></div>
+    <div class="t"><div class="ic">🏠</div><h3>Tiny home chassis</h3><p>Chassis built for tiny home builds.</p></div>
+  </div>
+  <div class="chips"><span>Box trailers</span><span>Cage trailers</span><span>Tandem trailers</span><span>Tri axle</span><span>Tradesman trailers</span><span>Lawn mowing trailers</span><span>Enclosed trailers</span><span>Luggage trailers</span><span>Flat top trailers</span><span>Brick laying trailers</span><span>Fencing trailers</span><span>Wheelie bin trailers</span><span>Ute bodies</span></div>
+</div></section>
+
+<section class="dark" id="repairs"><div class="wrap split">
+  <div>
+    <div class="kicker">Repairs & after-sales</div>
+    <h2>We look after it after delivery, too</h2>
+    <p class="lead">Trailer repairs, maintenance and ongoing support whenever you need it, from our Lalor workshop.</p>
+    <div class="states"><span>Victoria</span><span>New South Wales</span><span>South Australia</span><span>Queensland</span><span>Western Australia</span></div>
+  </div>
+  <div class="checks" id="about">
+    <div><b>Custom-built to your needs</b><span>Tailored to your purpose, style and requirements.</span></div>
+    <div><b>Premium quality materials</b><span>Durable, high-grade materials for long-lasting strength.</span></div>
+    <div><b>Engineered for safety</b><span>Built to comply with Australian Design Rules.</span></div>
+    <div><b>Local support</b><span>Service, maintenance and repairs from Lalor.</span></div>
+  </div>
+</div></section>
+
+<section class="quote" id="quote"><div class="wrap split">
+  <div>
+    <div class="kicker">Get a quote</div>
+    <h2>Tell us what you need to tow</h2>
+    <p class="lead">Need help with trailer specifications or pricing? Send the details and we'll get back to you.</p>
+    <div class="info">
+      <div><i>📍</i><div>442 High St, Lalor VIC 3075<small>Workshop</small></div></div>
+      <div><i>📞</i><div><a href="tel:+61488950598">0488 950 598</a><small>Phone</small></div></div>
+      <div><i>✉️</i><div><a href="mailto:customlinetrailers@gmail.com">customlinetrailers@gmail.com</a><small>Email</small></div></div>
+    </div>
+  </div>
+  <form onsubmit="event.preventDefault();this.querySelector('.fields').style.display='none';this.querySelector('.thanks').style.display='block'">
+    <div class="fields">
+      <h3>Request a quote</h3>
+      <label>Trailer type<select><option>Custom build</option><option>Tilt trailer</option><option>Bike trailer</option><option>Car trailer</option><option>Camper trailer</option><option>Machinery / plant trailer</option><option>Hydraulic tipper</option><option>Box / cage / tandem</option><option>Tiny home chassis</option><option>Ute body</option><option>Repairs</option></select></label>
+      <label>Your name<input required></label>
+      <label>Phone<input type="tel" required></label>
+      <label>What will you be carrying? Size, axles, extras<textarea rows="4"></textarea></label>
+      <button class="btn" type="submit">Send quote request</button>
+    </div>
+    <div class="thanks"><b>Thanks, request received!</b>We'll be in touch shortly. Prefer to talk? Call 0488 950 598.</div>
+  </form>
+</div></section>
+
+<footer><div class="wrap"><div>© 2026 Customline Trailers · 442 High St, Lalor VIC 3075</div><div>Concept design by Swoop Sites</div></div></footer>
+<div class="callbar"><a href="tel:+61488950598">📞 Call</a><a href="#quote">Get a quote</a></div>
+</body>
+</html>

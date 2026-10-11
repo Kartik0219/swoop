@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Heidelberg Veterinary Clinic | Family Vet, Heidelberg Heights (concept)</title>
+<meta name="description" content="Heidelberg Veterinary Clinic: family owned and run, caring for local pets for over 30 years. 19 Southern Road, Heidelberg Heights. Call (03) 9457 3583 or book online.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --green:#1f6b5c; --green2:#174f45; --mint:#e4f2ec; --sun:#f4b942; --peach:#fbe9dc; --ink:#1d2b29; --sub:#5a6b68; --line:#dce8e3; --bg:#fbfaf6; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { overflow-x: clip; }
+  body { font-family: Nunito, system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  .concept { background: #000; color: #ddd; font-size: 13px; text-align: center; padding: 8px 16px; }
+  .concept b { color: #fff; }
+  .top { background: var(--green2); color: #cfe6dd; font-size: 14px; }
+  .top .wrap { display: flex; justify-content: space-between; gap: 12px; padding: 8px 20px; flex-wrap: wrap; }
+  header { background: #fff; position: sticky; top: 0; z-index: 10; box-shadow: 0 2px 0 var(--line); }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 74px; gap: 16px; }
+  .logo { display: flex; gap: 10px; align-items: center; }
+  .logo svg { width: 42px; height: 42px; flex: 0 0 42px; }
+  .logo b { font-family: Fraunces, serif; font-size: 21px; line-height: 1.05; display: block; color: var(--green2); }
+  .logo small { font-size: 12px; color: var(--sub); font-weight: 700; }
+  nav { display: flex; gap: 24px; font-weight: 700; font-size: 15px; color: var(--sub); }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--sun); color: var(--ink); font-weight: 800; padding: 14px 24px; border-radius: 14px; font-size: 16px; border: 0; cursor: pointer; font-family: inherit; white-space: nowrap; box-shadow: 0 4px 0 #d39a22; }
+  .btn.g { background: var(--green); color: #fff; box-shadow: 0 4px 0 var(--green2); }
+  .btn.w { background: #fff; color: var(--green2); box-shadow: 0 4px 0 var(--line); }
+  .hero { background: var(--mint); position: relative; overflow: hidden; }
+  .hero .wrap { display: grid; grid-template-columns: 1.1fr .9fr; gap: 36px; align-items: center; padding: 64px 20px 76px; }
+  .pill { display: inline-flex; gap: 8px; align-items: center; background: #fff; border-radius: 30px; padding: 7px 14px; font-weight: 800; font-size: 14px; color: var(--green); }
+  h1 { font-family: Fraunces, serif; font-size: 58px; line-height: 1.04; margin: 18px 0; color: var(--green2); }
+  h1 span { color: var(--green); background: linear-gradient(transparent 62%, rgba(244,185,66,.55) 62%); }
+  .hero p { font-size: 18px; color: var(--sub); max-width: 520px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+  .blob { background: #fff; border-radius: 46% 54% 42% 58% / 52% 44% 56% 48%; aspect-ratio: 1; display: grid; place-items: center; position: relative; max-width: 420px; width: 100%; justify-self: center; box-shadow: 0 24px 50px rgba(31,107,92,.15); }
+  .blob svg { width: 62%; height: auto; }
+  .blob .open { position: absolute; left: 0; bottom: 8%; background: var(--green2); color: #fff; border-radius: 16px; padding: 12px 16px; font-size: 14px; font-weight: 700; }
+  .blob .open b { display: block; color: var(--sun); font-size: 13px; text-transform: uppercase; letter-spacing: .08em; }
+  .paws { position: absolute; right: 4%; top: 10%; opacity: .14; font-size: 70px; transform: rotate(18deg); }
+  section { padding: 78px 0; }
+  .kicker { font-weight: 800; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--green); }
+  h2 { font-family: Fraunces, serif; font-size: 40px; line-height: 1.1; margin-top: 6px; color: var(--green2); }
+  .lead { color: var(--sub); font-size: 17px; margin-top: 10px; max-width: 640px; }
+  .svc { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 34px; }
+  .s { background: #fff; border: 2px solid var(--line); border-radius: 18px; padding: 20px 14px; text-align: center; font-weight: 800; }
+  .s .ic { font-size: 30px; display: block; margin-bottom: 6px; }
+  .pets { background: var(--peach); }
+  .pets .wrap { display: grid; grid-template-columns: 1fr 1.2fr; gap: 36px; align-items: center; }
+  .animals { display: flex; flex-wrap: wrap; gap: 12px; }
+  .animals span { background: #fff; border-radius: 40px; padding: 12px 20px; font-weight: 800; font-size: 16px; }
+  .family { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: center; }
+  .big { background: var(--green); color: #fff; border-radius: 26px; padding: 36px; }
+  .big b { font-family: Fraunces, serif; font-size: 72px; line-height: 1; color: var(--sun); display: block; }
+  .big p { font-size: 18px; margin-top: 8px; }
+  .visit { background: #fff; }
+  .visit .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: start; }
+  .hours { margin-top: 18px; display: grid; gap: 10px; }
+  .hours div { display: flex; justify-content: space-between; gap: 12px; background: var(--mint); border-radius: 14px; padding: 14px 18px; font-weight: 700; }
+  .hours div.c { background: #f1f1ee; color: var(--sub); }
+  .addr { margin-top: 18px; font-size: 16px; display: grid; gap: 6px; }
+  .addr a { color: var(--green); font-weight: 800; }
+  form { background: var(--bg); border: 2px solid var(--line); border-radius: 22px; padding: 28px; }
+  form h3 { font-family: Fraunces, serif; font-size: 28px; color: var(--green2); }
+  form p.s { color: var(--sub); font-size: 14px; }
+  input, select, textarea { width: 100%; margin-top: 12px; padding: 13px; border: 2px solid var(--line); border-radius: 12px; font: inherit; background: #fff; }
+  form .btn { width: 100%; margin-top: 16px; }
+  .thanks { display: none; text-align: center; padding: 36px 6px; }
+  .thanks b { display: block; font-family: Fraunces, serif; font-size: 30px; color: var(--green); }
+  footer { background: var(--green2); color: #b8d4ca; font-size: 14px; padding: 30px 0; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; }
+  .callbar { display: none; }
+  @media (max-width: 900px) {
+    nav, header .btn, .top { display: none; }
+    .hero .wrap, .pets .wrap, .family, .visit .wrap { grid-template-columns: 1fr; }
+    .hero .wrap { padding: 40px 20px 56px; }
+    .blob { max-width: 300px; }
+    h1 { font-size: 42px; } h2 { font-size: 32px; }
+    .svc { grid-template-columns: 1fr 1fr; }
+    section { padding: 56px 0; }
+    .callbar { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; }
+    .callbar a { flex: 1; text-align: center; padding: 15px 8px; font-weight: 800; }
+    .callbar a:first-child { background: var(--green2); color: #fff; } .callbar a:last-child { background: var(--sun); color: var(--ink); }
+    footer { padding-bottom: 84px; }
+  }
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Heidelberg Veterinary Clinic. This is a design preview, not the live website.</div>
+<div class="top"><div class="wrap"><span>📍 19 Southern Road, Heidelberg Heights VIC 3081</span><span>Mon–Fri 8:30am–6pm · Sat 8:30am–12pm · <a href="tel:+61394573583"><b>(03) 9457 3583</b></a></span></div></div>
+<header><div class="wrap">
+  <div class="logo"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24" fill="#1f6b5c"/><g fill="#f4b942"><ellipse cx="24" cy="30" rx="8" ry="7"/><ellipse cx="14" cy="21" rx="3.4" ry="4.4"/><ellipse cx="34" cy="21" rx="3.4" ry="4.4"/><ellipse cx="19.5" cy="14.5" rx="3.2" ry="4.2"/><ellipse cx="28.5" cy="14.5" rx="3.2" ry="4.2"/></g></svg><div><b>Heidelberg Veterinary Clinic</b><small>Family owned &amp; run</small></div></div>
+  <nav><a href="#services">Services</a><a href="#pets">Pets we see</a><a href="#visit">Hours &amp; contact</a></nav>
+  <a class="btn" href="#book">Book online</a>
+</div></header>
+
+<section class="hero" style="padding:0"><div class="wrap">
+  <div>
+    <span class="pill">🐾 Caring for local pets for over 30 years</span>
+    <h1>Let us look after <span>your best friend.</span></h1>
+    <p>A family owned and run practice in Heidelberg Heights, providing a full range of veterinary clinic and hospital services to Heidelberg and surrounding suburbs.</p>
+    <div class="cta"><a class="btn" href="#book">📅 Book online</a><a class="btn w" href="tel:+61394573583">📞 (03) 9457 3583</a></div>
+  </div>
+  <div class="blob">
+    <span class="paws" aria-hidden="true">🐾</span>
+    <svg viewBox="0 0 200 200" aria-hidden="true">
+      <path d="M48 70 L60 30 L84 58 Z" fill="#c98a4b"/><path d="M152 70 L140 30 L116 58 Z" fill="#c98a4b"/>
+      <ellipse cx="100" cy="104" rx="62" ry="56" fill="#e3a764"/>
+      <ellipse cx="100" cy="128" rx="34" ry="26" fill="#fbe9dc"/>
+      <circle cx="78" cy="96" r="7" fill="#1d2b29"/><circle cx="122" cy="96" r="7" fill="#1d2b29"/>
+      <circle cx="80" cy="94" r="2" fill="#fff"/><circle cx="124" cy="94" r="2" fill="#fff"/>
+      <ellipse cx="100" cy="118" rx="9" ry="6" fill="#1d2b29"/>
+      <path d="M100 124 Q 100 136 90 138 M100 124 Q 100 136 110 138" stroke="#1d2b29" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <rect x="66" y="152" width="68" height="12" rx="6" fill="#1f6b5c"/><circle cx="100" cy="170" r="9" fill="#f4b942"/>
+    </svg>
+    <div class="open"><b>Weekday hours</b>Mon–Fri 8:30am – 6:00pm</div>
+  </div>
+</div></section>
+
+<section id="services"><div class="wrap">
+  <div class="kicker">Our services</div>
+  <h2>Everything under one roof</h2>
+  <p class="lead">We're committed to recommending and providing the best care for your pet.</p>
+  <div class="svc">
+    <div class="s"><span class="ic">💉</span>Vaccinations</div>
+    <div class="s"><span class="ic">🩺</span>Internal medicine</div>
+    <div class="s"><span class="ic">✂️</span>Desexing</div>
+    <div class="s"><span class="ic">🏥</span>Routine surgery</div>
+    <div class="s"><span class="ic">🦴</span>Orthopaedic surgery</div>
+    <div class="s"><span class="ic">📟</span>Microchipping</div>
+    <div class="s"><span class="ic">🦷</span>Dentistry</div>
+    <div class="s"><span class="ic">🔬</span>Pathology</div>
+    <div class="s"><span class="ic">🩻</span>Digital x-rays</div>
+    <div class="s"><span class="ic">📡</span>Ultrasound</div>
+  </div>
+</div></section>
+
+<section class="pets" id="pets"><div class="wrap">
+  <div>
+    <div class="kicker">We care for all small animals</div>
+    <h2>Big or small, furry or whiskery</h2>
+  </div>
+  <div class="animals"><span>🐶 Dogs</span><span>🐱 Cats</span><span>🐰 Rabbits</span><span>🐹 Guinea pigs</span><span>🐭 Rats &amp; mice</span><span>🐾 Other small animals</span></div>
+</div></section>
+
+<section><div class="wrap family">
+  <div class="big"><b>30+</b><p>years caring for local pets and their families in Heidelberg Heights.</p></div>
+  <div>
+    <div class="kicker">About us</div>
+    <h2>Family owned. Family run.</h2>
+    <p class="lead">Heidelberg Veterinary Clinic has cared for local pets and their families for over 30 years. We're a family owned and run practice that's committed to providing the very best care to your best friend.</p>
+  </div>
+</div></section>
+
+<section class="visit" id="visit"><div class="wrap">
+  <div>
+    <div class="kicker">Hours &amp; contact</div>
+    <h2>Come and see us</h2>
+    <div class="hours">
+      <div><span>Monday – Friday</span><span>8:30am – 6:00pm</span></div>
+      <div><span>Saturday</span><span>8:30am – 12:00pm</span></div>
+      <div class="c"><span>Sunday &amp; public holidays</span><span>Closed</span></div>
+    </div>
+    <div class="addr">
+      <div>📍 19 Southern Road, Heidelberg Heights VIC 3081</div>
+      <div>📞 <a href="tel:+61394573583">(03) 9457 3583</a></div>
+      <div>✉️ <a href="mailto:info@heidelbergvet.com.au">info@heidelbergvet.com.au</a></div>
+    </div>
+  </div>
+  <form id="book" onsubmit="event.preventDefault();this.querySelector('.fields').style.display='none';this.querySelector('.thanks').style.display='block'">
+    <div class="fields">
+      <h3>Request an appointment</h3>
+      <p class="s">Tell us about your pet and we'll confirm a time. For anything urgent, please call us.</p>
+      <input placeholder="Your name" required>
+      <input placeholder="Phone" type="tel" required>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><input placeholder="Pet's name"><select><option>Dog</option><option>Cat</option><option>Rabbit</option><option>Guinea pig</option><option>Rat / mouse</option><option>Other</option></select></div>
+      <select><option>Vaccination</option><option>Check-up / consult</option><option>Desexing</option><option>Microchipping</option><option>Dentistry</option><option>Other</option></select>
+      <textarea rows="3" placeholder="Reason for visit"></textarea>
+      <button class="btn g" type="submit">Request appointment</button>
+    </div>
+    <div class="thanks"><b>Thanks!</b>We've got your request and will be in touch to confirm. Urgent? Call (03) 9457 3583.</div>
+  </form>
+</div></section>
+
+<footer><div class="wrap"><div>© 2026 Heidelberg Veterinary Clinic · 19 Southern Road, Heidelberg Heights VIC 3081</div><div>Concept design by Swoop Sites</div></div></footer>
+<div class="callbar"><a href="tel:+61394573583">📞 Call</a><a href="#book">Book online</a></div>
+</body>
+</html>

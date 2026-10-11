@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Sunbury Auto &amp; Tyre Service | Tyres, Wheel Alignment &amp; Logbook Servicing, Sunbury (concept)</title>
+<meta name="description" content="Sunbury Auto &amp; Tyre Service, 3/18-20 McDougall Rd, Sunbury. Tyres, wheel alignment and balancing, logbook services, brakes, clutches, 4WD and EFI. Cars, vans, 4WDs, buses and small trucks. Call (03) 8746 8966.">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root { --black:#121212; --black2:#1e1e1e; --red:#d7262e; --red2:#ef3b43; --grey:#f1f1f1; --ink:#121212; --sub:#5f5f5f; --line:#e2e2e2; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { overflow-x: clip; }
+  body { font-family: Roboto, system-ui, sans-serif; color: var(--ink); background: #fff; line-height: 1.6; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+  .concept { background: #000; color: #ddd; font-size: 13px; text-align: center; padding: 8px 16px; }
+  .concept b { color: #fff; }
+  .top { background: var(--red); color: #fff; font-size: 14px; font-weight: 500; }
+  .top .wrap { display: flex; justify-content: space-between; gap: 12px; padding: 8px 20px; flex-wrap: wrap; }
+  header { background: var(--black); color: #fff; position: sticky; top: 0; z-index: 10; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 16px; }
+  .logo { display: flex; align-items: center; gap: 10px; }
+  .logo .tyre { width: 42px; height: 42px; border-radius: 50%; background: repeating-conic-gradient(#333 0 12deg, #111 12deg 24deg); display: grid; place-items: center; flex: 0 0 42px; }
+  .logo .tyre::after { content: ""; width: 16px; height: 16px; border-radius: 50%; background: #bbb; border: 3px solid var(--red); }
+  .logo b { font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: .03em; line-height: .9; display: block; font-weight: 400; }
+  .logo small { font-size: 11px; color: #aaa; letter-spacing: .12em; text-transform: uppercase; }
+  nav { display: flex; gap: 24px; font-weight: 500; font-size: 15px; color: #cfcfcf; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--red); color: #fff; font-weight: 700; padding: 14px 24px; border-radius: 4px; font-size: 16px; border: 0; cursor: pointer; font-family: inherit; white-space: nowrap; text-transform: uppercase; letter-spacing: .04em; }
+  .btn.o { background: transparent; border: 2px solid rgba(255,255,255,.35); }
+  .btn.k { background: var(--black); }
+  .hero { background: var(--black); color: #fff; position: relative; overflow: hidden; }
+  .tread { position: absolute; right: -60px; top: 0; bottom: 0; width: 300px; background: repeating-linear-gradient(135deg, #1b1b1b 0 22px, #0d0d0d 22px 30px), #111; opacity: .9; clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%); }
+  .hero .wrap { position: relative; display: grid; grid-template-columns: 1.2fr .8fr; gap: 36px; align-items: center; padding: 70px 20px 80px; }
+  .eyebrow { color: var(--red2); font-weight: 900; letter-spacing: .18em; text-transform: uppercase; font-size: 14px; }
+  h1 { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: 92px; line-height: .9; margin: 14px 0 18px; letter-spacing: .01em; }
+  h1 span { color: var(--red2); }
+  .hero p { color: #c9c9c9; font-size: 18px; max-width: 540px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+  .wheel { justify-self: center; width: 100%; max-width: 320px; aspect-ratio: 1; border-radius: 50%; background: repeating-conic-gradient(#2a2a2a 0 8deg, #151515 8deg 16deg); display: grid; place-items: center; box-shadow: 0 30px 60px rgba(0,0,0,.5); position: relative; z-index: 1; }
+  .wheel::before { content: ""; width: 62%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, #e9e9e9 0 16%, #9a9a9a 17% 20%, #d0d0d0 21% 100%); grid-area: 1/1; box-shadow: inset 0 0 0 8px #8c8c8c; }
+  .wheel::after { content: ""; grid-area: 1/1; width: 62%; aspect-ratio: 1; border-radius: 50%; background: repeating-conic-gradient(transparent 0 26deg, #8c8c8c 26deg 34deg, transparent 34deg 72deg); mask: radial-gradient(circle, transparent 0 22%, #000 23% 88%, transparent 89%); -webkit-mask: radial-gradient(circle, transparent 0 22%, #000 23% 88%, transparent 89%); }
+  .badges { background: var(--grey); }
+  .badges .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+  .badges div { padding: 22px 16px; text-align: center; border-right: 1px solid var(--line); }
+  .badges div:last-child { border-right: 0; }
+  .badges b { display: block; font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: 30px; line-height: 1; color: var(--red); }
+  .badges span { font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: .04em; }
+  section { padding: 76px 0; }
+  .kicker { font-weight: 900; font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--red); }
+  h2 { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: 56px; line-height: .95; margin-top: 6px; }
+  .lead { color: var(--sub); font-size: 17px; margin-top: 12px; max-width: 660px; }
+  .feature { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 34px; }
+  .f { background: var(--black); color: #fff; border-radius: 8px; padding: 28px; position: relative; overflow: hidden; }
+  .f::after { content: ""; position: absolute; right: -30px; bottom: -30px; width: 110px; height: 110px; border-radius: 50%; border: 14px solid rgba(215,38,46,.35); }
+  .f .ic { font-size: 30px; }
+  .f h3 { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: 34px; line-height: 1; margin: 10px 0 6px; }
+  .f p { color: #bdbdbd; font-size: 15px; }
+  .more { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 16px; }
+  .m { border: 1px solid var(--line); border-radius: 8px; padding: 18px; font-weight: 700; display: flex; gap: 10px; align-items: center; }
+  .m i { font-style: normal; font-size: 22px; }
+  .honest { background: var(--grey); }
+  .honest .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  .vehicles { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+  .vehicles span { background: #fff; border: 1px solid var(--line); border-radius: 30px; padding: 8px 16px; font-weight: 700; }
+  .promise { background: var(--red); color: #fff; border-radius: 8px; padding: 32px; }
+  .promise h3 { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: 40px; line-height: 1; }
+  .promise p { margin-top: 10px; color: #ffe1e2; }
+  .book .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+  .hrs { margin-top: 20px; background: var(--black); color: #fff; border-radius: 8px; padding: 22px; }
+  .hrs b { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: 32px; display: block; line-height: 1; }
+  .hrs span { color: #bdbdbd; }
+  .det { margin-top: 16px; display: grid; gap: 8px; }
+  .det a { color: var(--red); font-weight: 700; }
+  form { background: #fff; border: 1px solid var(--line); border-top: 6px solid var(--red); border-radius: 8px; padding: 28px; }
+  form h3 { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: 38px; line-height: 1; }
+  input, select, textarea { width: 100%; margin-top: 12px; padding: 13px; border: 1px solid var(--line); border-radius: 4px; font: inherit; background: var(--grey); }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  form .btn { width: 100%; margin-top: 16px; }
+  .thanks { display: none; text-align: center; padding: 36px 6px; }
+  .thanks b { display: block; font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: 40px; color: var(--red); }
+  footer { background: var(--black); color: #9d9d9d; font-size: 14px; padding: 30px 0; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; }
+  .callbar { display: none; }
+  @media (max-width: 900px) {
+    nav, header .btn, .top { display: none; }
+    .hero .wrap, .honest .wrap, .book .wrap { grid-template-columns: 1fr; }
+    .hero .wrap { padding: 42px 20px 56px; }
+    .wheel { max-width: 220px; }
+    .tread { display: none; }
+    h1 { font-size: 64px; } h2 { font-size: 44px; }
+    .feature { grid-template-columns: 1fr; }
+    .more, .badges .wrap { grid-template-columns: 1fr 1fr; }
+    .badges div:nth-child(2) { border-right: 0; }
+    .badges div { border-bottom: 1px solid var(--line); }
+    section { padding: 56px 0; }
+    .callbar { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; }
+    .callbar a { flex: 1; text-align: center; padding: 15px 8px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
+    .callbar a:first-child { background: var(--black); color: #fff; } .callbar a:last-child { background: var(--red); color: #fff; }
+    footer { padding-bottom: 84px; }
+  }
+  @media (max-width: 420px) { h1 { font-size: 56px; } .two { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Sunbury Auto &amp; Tyre Service. This is a design preview, not the live website.</div>
+<div class="top"><div class="wrap"><span>📍 3/18-20 McDougall Rd, Sunbury VIC 3429</span><span>Mon–Fri 8am–5pm · <a href="tel:+61387468966"><b>(03) 8746 8966</b></a></span></div></div>
+<header><div class="wrap">
+  <div class="logo"><span class="tyre"></span><div><b>Sunbury Auto &amp; Tyre</b><small>Service centre</small></div></div>
+  <nav><a href="#services">Services</a><a href="#about">About</a><a href="#book">Contact</a></nav>
+  <a class="btn" href="#book">Book a service</a>
+</div></header>
+
+<section class="hero" style="padding:0"><div class="tread"></div><div class="wrap">
+  <div>
+    <div class="eyebrow">Tyres · Alignments · Servicing</div>
+    <h1>Back on the road, <span>without the upsell.</span></h1>
+    <p>Tyres, wheel alignment and balancing, logbook servicing and mechanical repairs in Sunbury. We only do the repairs and replacements your vehicle actually needs.</p>
+    <div class="cta"><a class="btn" href="#book">Book a service</a><a class="btn o" href="tel:+61387468966">📞 (03) 8746 8966</a></div>
+  </div>
+  <div class="wheel" aria-hidden="true"></div>
+</div></section>
+
+<div class="badges"><div class="wrap">
+  <div><b>10+ years</b><span>Experience</span></div>
+  <div><b>Insurance</b><span>Claim help</span></div>
+  <div><b>Genuine</b><span>Body parts</span></div>
+  <div><b>Fleet</b><span>Maintenance</span></div>
+</div></div>
+
+<section id="services"><div class="wrap">
+  <div class="kicker">Our services</div>
+  <h2>Tyres first. Everything else, too.</h2>
+  <p class="lead">Minor and major mechanical repairs, tyre repairs and replacements, wheel balancing and alignment, logbook servicing and much more.</p>
+  <div class="feature">
+    <div class="f"><div class="ic">🛞</div><h3>Tyres</h3><p>Tyre repairs and replacements at our Sunbury tyre shop.</p></div>
+    <div class="f"><div class="ic">📐</div><h3>Wheel alignment &amp; balancing</h3><p>Wheel aligning and wheel balancing to keep you driving straight.</p></div>
+    <div class="f"><div class="ic">📘</div><h3>Logbook services</h3><p>Logbook servicing at our Sunbury workshop.</p></div>
+  </div>
+  <div class="more">
+    <div class="m"><i>🔧</i>All mechanical repairs</div>
+    <div class="m"><i>🛑</i>Brakes</div>
+    <div class="m"><i>⚙️</i>Clutches</div>
+    <div class="m"><i>🚙</i>Suspension</div>
+    <div class="m"><i>🏔️</i>4WD services</div>
+    <div class="m"><i>💡</i>EFI services</div>
+    <div class="m"><i>🚌</i>Small trucks &amp; buses</div>
+    <div class="m"><i>🚜</i>Machinery</div>
+  </div>
+</div></section>
+
+<section class="honest" id="about"><div class="wrap">
+  <div>
+    <div class="kicker">About us</div>
+    <h2>Honest work from a qualified team</h2>
+    <p class="lead">Our well-knit team of technicians is qualified and competent in maintaining the different systems and parts of a wide range of vehicles.</p>
+    <div class="vehicles"><span>Cars</span><span>Vans</span><span>4WDs</span><span>Buses</span><span>Small trucks</span><span>Machinery</span></div>
+  </div>
+  <div class="promise"><h3>No forced upsells</h3><p>We conduct business ethically. We focus only on the repairs and replacements that are absolutely necessary to get your vehicle back on the road.</p></div>
+</div></section>
+
+<section class="book" id="book"><div class="wrap">
+  <div>
+    <div class="kicker">Book a service</div>
+    <h2>Come and see us</h2>
+    <div class="hrs"><b>Mon – Fri · 8am – 5pm</b><span>3/18-20 McDougall Rd, Sunbury VIC 3429</span></div>
+    <div class="det">
+      <div>📞 <a href="tel:+61387468966">(03) 8746 8966</a></div>
+      <div>✉️ <a href="mailto:sunburyautotyreservice@outlook.com.au">sunburyautotyreservice@outlook.com.au</a></div>
+    </div>
+  </div>
+  <form onsubmit="event.preventDefault();this.querySelector('.fields').style.display='none';this.querySelector('.thanks').style.display='block'">
+    <div class="fields">
+      <h3>Request a booking</h3>
+      <div class="two"><input placeholder="Your name" required><input placeholder="Phone" type="tel" required></div>
+      <div class="two"><input placeholder="Make &amp; model"><input placeholder="Rego"></div>
+      <select><option>Tyres</option><option>Wheel alignment / balancing</option><option>Logbook service</option><option>Brakes</option><option>Clutch</option><option>Suspension</option><option>4WD service</option><option>EFI</option><option>Other repair</option></select>
+      <textarea rows="3" placeholder="Preferred day, tyre size, or anything else we should know"></textarea>
+      <button class="btn" type="submit">Request booking</button>
+    </div>
+    <div class="thanks"><b>Thanks, request received!</b>We'll call you to confirm a time. Or call us on (03) 8746 8966.</div>
+  </form>
+</div></section>
+
+<footer><div class="wrap"><div>© 2026 Sunbury Auto &amp; Tyre Service · 3/18-20 McDougall Rd, Sunbury VIC 3429</div><div>Concept design by Swoop Sites</div></div></footer>
+<div class="callbar"><a href="tel:+61387468966">📞 Call</a><a href="#book">Book a service</a></div>
+</body>
+</html>

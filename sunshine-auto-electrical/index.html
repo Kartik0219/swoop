@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Sunshine Auto Electrical | Auto Electrician, Sunshine VIC (concept)</title>
+<meta name="description" content="Sunshine Auto Electrical, 59 Wright St, Sunshine. Alternators, batteries, starter motors, wiring repairs, air conditioning and diagnostics for cars, caravans, trailers and trucks. Shop and mobile. Call 03 9311 2637.">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#0d1117; --bg2:#161c25; --bg3:#1e2633; --volt:#ffd400; --volt2:#ffe766; --blue:#38bdf8; --txt:#e8edf3; --sub:#97a3b4; --line:#2a3443; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { overflow-x: clip; }
+  body { font-family: Inter, system-ui, sans-serif; color: var(--txt); background: var(--bg); line-height: 1.6; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+  .concept { background: #000; color: #ddd; font-size: 13px; text-align: center; padding: 8px 16px; border-bottom: 1px solid #222; }
+  .concept b { color: #fff; }
+  header { background: rgba(13,17,23,.92); backdrop-filter: blur(8px); position: sticky; top: 0; z-index: 10; border-bottom: 1px solid var(--line); }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 70px; gap: 16px; }
+  .logo { display: flex; align-items: center; gap: 10px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 19px; line-height: 1.05; }
+  .logo .bolt { width: 38px; height: 38px; border-radius: 10px; background: var(--volt); display: grid; place-items: center; flex: 0 0 38px; }
+  .logo small { display: block; font-family: Inter, sans-serif; font-size: 11px; color: var(--sub); font-weight: 500; }
+  nav { display: flex; gap: 24px; font-weight: 600; font-size: 14px; color: var(--sub); }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--volt); color: #111; font-weight: 700; padding: 14px 24px; border-radius: 10px; font-size: 16px; border: 0; cursor: pointer; font-family: inherit; white-space: nowrap; }
+  .btn.o { background: transparent; color: var(--txt); border: 1.5px solid var(--line); }
+  .hero { position: relative; overflow: hidden; background: radial-gradient(ellipse at 85% 10%, rgba(255,212,0,.16), transparent 50%), radial-gradient(ellipse at 10% 90%, rgba(56,189,248,.12), transparent 50%), var(--bg); }
+  .grid-bg { position: absolute; inset: 0; background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 44px 44px; opacity: .35; mask-image: linear-gradient(180deg, #000, transparent 85%); -webkit-mask-image: linear-gradient(180deg, #000, transparent 85%); }
+  .hero .wrap { position: relative; display: grid; grid-template-columns: 1.15fr .85fr; gap: 36px; align-items: center; padding: 72px 20px 84px; }
+  .live { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line); background: var(--bg2); padding: 6px 14px; border-radius: 30px; font-size: 13px; font-weight: 600; color: var(--volt2); }
+  .live i { width: 8px; height: 8px; border-radius: 50%; background: var(--volt); box-shadow: 0 0 12px var(--volt); }
+  h1 { font-family: 'Space Grotesk', sans-serif; font-size: 62px; line-height: 1.02; letter-spacing: -.02em; margin: 18px 0; }
+  h1 span { color: var(--volt); }
+  .hero p { color: var(--sub); font-size: 18px; max-width: 540px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+  .bigcall { display: block; margin-top: 24px; font-family: 'Space Grotesk', sans-serif; font-size: 34px; font-weight: 700; color: var(--volt); }
+  .bigcall small { display: block; font-family: Inter, sans-serif; font-size: 13px; color: var(--sub); font-weight: 500; }
+  .panel { background: var(--bg2); border: 1px solid var(--line); border-radius: 18px; padding: 22px; }
+  .panel h3 { font-family: 'Space Grotesk', sans-serif; font-size: 18px; display: flex; justify-content: space-between; }
+  .panel h3 span { color: var(--volt); font-size: 13px; }
+  .meter { margin-top: 16px; display: grid; gap: 12px; }
+  .meter div { display: grid; grid-template-columns: 110px 1fr; align-items: center; gap: 12px; font-size: 14px; color: var(--sub); }
+  .meter b { height: 2px; width: 100%; border-radius: 6px; background: linear-gradient(90deg, var(--volt), var(--volt2)); box-shadow: 0 0 14px rgba(255,212,0,.35); }
+  .panel .lic { margin-top: 18px; border-top: 1px dashed var(--line); padding-top: 14px; font-size: 13px; color: var(--sub); }
+  .panel .lic b { color: var(--txt); font-family: 'Space Grotesk', sans-serif; font-size: 18px; display: block; }
+  section { padding: 78px 0; }
+  .kicker { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--volt); }
+  h2 { font-family: 'Space Grotesk', sans-serif; font-size: 42px; line-height: 1.08; letter-spacing: -.01em; margin-top: 6px; }
+  .lead { color: var(--sub); font-size: 17px; margin-top: 12px; max-width: 660px; }
+  .svc { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 34px; }
+  .s { background: var(--bg2); border: 1px solid var(--line); border-radius: 16px; padding: 24px; transition: border-color .15s; }
+  .s:hover { border-color: var(--volt); }
+  .s .ic { width: 46px; height: 46px; border-radius: 12px; background: rgba(255,212,0,.12); display: grid; place-items: center; font-size: 22px; }
+  .s h3 { font-family: 'Space Grotesk', sans-serif; font-size: 20px; margin: 14px 0 4px; }
+  .s p { color: var(--sub); font-size: 15px; }
+  .veh { background: var(--bg2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .veh .wrap { display: grid; grid-template-columns: 1fr 1.2fr; gap: 36px; align-items: center; }
+  .chips { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .chips div { background: var(--bg3); border: 1px solid var(--line); border-radius: 14px; padding: 18px; font-weight: 700; font-size: 17px; }
+  .chips span { font-size: 26px; display: block; }
+  .modes { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 34px; }
+  .m { border-radius: 18px; padding: 28px; border: 1px solid var(--line); background: var(--bg2); }
+  .m.y { background: var(--volt); color: #111; border-color: var(--volt); }
+  .m.y p { color: #3a3300; }
+  .m h3 { font-family: 'Space Grotesk', sans-serif; font-size: 26px; }
+  .m p { color: var(--sub); margin-top: 6px; }
+  .refer { margin-top: 16px; border: 1px dashed var(--volt); border-radius: 16px; padding: 18px 22px; color: var(--volt2); font-weight: 600; }
+  .contact .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+  table { width: 100%; border-collapse: collapse; margin-top: 18px; font-size: 15px; }
+  td { padding: 10px 0; border-bottom: 1px solid var(--line); }
+  td:last-child { text-align: right; font-weight: 600; }
+  .det { margin-top: 18px; display: grid; gap: 8px; color: var(--sub); }
+  .det a { color: var(--volt); font-weight: 700; }
+  form { background: var(--bg2); border: 1px solid var(--line); border-radius: 18px; padding: 28px; }
+  form h3 { font-family: 'Space Grotesk', sans-serif; font-size: 26px; }
+  input, select, textarea { width: 100%; margin-top: 12px; padding: 13px; border: 1px solid var(--line); border-radius: 10px; font: inherit; background: var(--bg); color: var(--txt); }
+  input::placeholder, textarea::placeholder { color: #6b7789; }
+  form .btn { width: 100%; margin-top: 16px; }
+  .thanks { display: none; text-align: center; padding: 36px 6px; }
+  .thanks b { display: block; font-family: 'Space Grotesk', sans-serif; font-size: 28px; color: var(--volt); }
+  footer { border-top: 1px solid var(--line); color: var(--sub); font-size: 14px; padding: 30px 0; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; }
+  .callbar { display: none; }
+  @media (max-width: 900px) {
+    nav, header .btn { display: none; }
+    .hero .wrap, .veh .wrap, .contact .wrap { grid-template-columns: 1fr; }
+    .hero .wrap { padding: 42px 20px 56px; }
+    h1 { font-size: 44px; } h2 { font-size: 32px; }
+    .svc { grid-template-columns: 1fr 1fr; }
+    .modes { grid-template-columns: 1fr; }
+    section { padding: 56px 0; }
+    .callbar { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; }
+    .callbar a { flex: 1; text-align: center; padding: 15px 8px; font-weight: 700; }
+    .callbar a:first-child { background: var(--volt); color: #111; } .callbar a:last-child { background: var(--bg3); color: #fff; }
+    footer { padding-bottom: 84px; }
+  }
+  @media (max-width: 520px) { .svc { grid-template-columns: 1fr; } h1 { font-size: 40px; } .meter div { grid-template-columns: 90px 1fr; } }
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Sunshine Auto Electrical. This is a design preview, not the live website.</div>
+<header><div class="wrap">
+  <div class="logo"><span class="bolt"><svg width="18" height="22" viewBox="0 0 18 22" aria-hidden="true"><path d="M11 0 L0 13 H8 L6 22 L18 8 H10 Z" fill="#111"/></svg></span><div>Sunshine Auto Electrical<small>59 Wright St, Sunshine</small></div></div>
+  <nav><a href="#services">Services</a><a href="#vehicles">Vehicles</a><a href="#contact">Contact</a></nav>
+  <a class="btn" href="tel:+61393112637">📞 03 9311 2637</a>
+</div></header>
+
+<section class="hero" style="padding:0"><div class="grid-bg"></div><div class="wrap">
+  <div>
+    <span class="live"><i></i>Shop &amp; mobile auto electricians</span>
+    <h1>Auto electrical issues, <span>fixed fast.</span></h1>
+    <p>Your local auto electricians in Sunshine. Air conditioning, alternators, batteries, starter motors, wiring and diagnostics, for all makes and models of cars, caravans, trailers and trucks.</p>
+    <div class="cta"><a class="btn" href="tel:+61393112637">📞 Call now</a><a class="btn o" href="#contact">Book an appointment</a></div>
+    <a class="bigcall" href="tel:+61393112637"><small>Tap to call · Mon–Sat 9:00–5:00</small>03 9311 2637</a>
+  </div>
+  <div class="panel">
+    <h3>What we work on <span>⚡</span></h3>
+    <div class="meter">
+      <div>Alternators<b></b></div>
+      <div>Batteries<b></b></div>
+      <div>Starter motors<b></b></div>
+      <div>Air con<b></b></div>
+      <div>Wiring<b></b></div>
+    </div>
+    <div class="lic">Licensed by the Australian Refrigeration Council<b>ARC licence AU52943</b></div>
+  </div>
+</div></section>
+
+<section id="services"><div class="wrap">
+  <div class="kicker">Services</div>
+  <h2>Everything electrical, in one stop</h2>
+  <p class="lead">Most jobs are done within the same day, so get in touch as soon as you can.</p>
+  <div class="svc">
+    <div class="s"><div class="ic">❄️</div><h3>Air conditioning</h3><p>Air conditioning service and evac, by an ARC licensed workshop.</p></div>
+    <div class="s"><div class="ic">🔋</div><h3>Batteries</h3><p>Battery testing and replacement.</p></div>
+    <div class="s"><div class="ic">⚙️</div><h3>Alternators</h3><p>Alternator repairs and replacement.</p></div>
+    <div class="s"><div class="ic">🔑</div><h3>Starter motors</h3><p>Starter motor repairs and replacement.</p></div>
+    <div class="s"><div class="ic">🧵</div><h3>Wiring repairs</h3><p>Fault finding and wiring repairs.</p></div>
+    <div class="s"><div class="ic">💻</div><h3>Diagnostics</h3><p>Computer and engine diagnostics.</p></div>
+  </div>
+</div></section>
+
+<section class="veh" id="vehicles"><div class="wrap">
+  <div>
+    <div class="kicker">All makes &amp; models</div>
+    <h2>Cars, caravans, trailers, even trucks</h2>
+    <p class="lead">Local and experienced auto electricians for all vehicle makes and models.</p>
+  </div>
+  <div class="chips"><div><span>🚗</span>Cars</div><div><span>🚐</span>Caravans</div><div><span>🛞</span>Trailers</div><div><span>🚚</span>Trucks</div></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="kicker">How we help</div>
+  <h2>Come to us, or we come to you</h2>
+  <div class="modes">
+    <div class="m y"><h3>🏪 In the shop</h3><p>Bring your vehicle to 59 Wright St, Sunshine, Monday to Saturday, 9:00 to 5:00.</p></div>
+    <div class="m"><h3>🚐 Mobile service</h3><p>Mobile auto electricians for quality repairs. Call us to arrange, and call us for emergencies.</p></div>
+  </div>
+  <div class="refer">🎁 Refer a friend or family member and get up to 20% rewards. Ask us how.</div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <div>
+    <div class="kicker">Contact</div>
+    <h2>Get on the road ASAP</h2>
+    <table>
+      <tr><td>Monday – Saturday</td><td>9:00 – 5:00</td></tr>
+      <tr><td>Sunday</td><td>Closed</td></tr>
+    </table>
+    <div class="det">
+      <div>📞 <a href="tel:+61393112637">03 9311 2637</a></div>
+      <div>✉️ <a href="mailto:sunshineautoelectrical@gmail.com">sunshineautoelectrical@gmail.com</a></div>
+      <div>📍 59 Wright St, Sunshine VIC 3020</div>
+    </div>
+  </div>
+  <form onsubmit="event.preventDefault();this.querySelector('.fields').style.display='none';this.querySelector('.thanks').style.display='block'">
+    <div class="fields">
+      <h3>Book an appointment</h3>
+      <input placeholder="Your name" required>
+      <input placeholder="Phone" type="tel" required>
+      <input placeholder="Vehicle (make, model, or caravan / trailer / truck)">
+      <select><option>Air conditioning</option><option>Battery</option><option>Alternator</option><option>Starter motor</option><option>Wiring repair</option><option>Diagnostics</option><option>Mobile call-out</option><option>Other</option></select>
+      <textarea rows="3" placeholder="What's happening with the vehicle?"></textarea>
+      <button class="btn" type="submit">Request appointment</button>
+    </div>
+    <div class="thanks"><b>Thanks, we've got it!</b>We'll call you back to confirm. In a hurry? Call 03 9311 2637.</div>
+  </form>
+</div></section>
+
+<footer><div class="wrap"><div>© 2026 Sunshine Auto Electrical · 59 Wright St, Sunshine VIC 3020 · ARC licence AU52943</div><div>Concept design by Swoop Sites</div></div></footer>
+<div class="callbar"><a href="tel:+61393112637">📞 Call</a><a href="#contact">Book</a></div>
+</body>
+</html>

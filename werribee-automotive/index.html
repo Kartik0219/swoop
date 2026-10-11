@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Werribee Automotive | Car Servicing, Roadworthies &amp; Boat Repairs, Werribee (concept)</title>
+<meta name="description" content="Werribee Automotive (formerly G &amp; L Allison Automotive): family owned mechanic in Werribee. Logbook servicing, roadworthy certificates, brakes, clutches and ski boat engine repairs. Call (03) 9741 6211.">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --navy:#0e1f33; --navy2:#16304d; --orange:#f26a1b; --orange2:#ff8a3d; --ink:#0e1f33; --sub:#566476; --line:#dfe4ea; --bg:#f3f5f8; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { overflow-x: clip; }
+  body { font-family: Barlow, system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+  .concept { background: #000; color: #ddd; font-size: 13px; text-align: center; padding: 8px 16px; }
+  .concept b { color: #fff; }
+  header { background: #fff; position: sticky; top: 0; z-index: 10; border-bottom: 1px solid var(--line); }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 16px; }
+  .logo { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 28px; text-transform: uppercase; line-height: .95; color: var(--navy); }
+  .logo span { color: var(--orange); }
+  .logo small { display: block; font-family: Barlow, sans-serif; font-weight: 600; font-size: 11px; letter-spacing: .1em; color: var(--sub); text-transform: none; }
+  nav { display: flex; gap: 24px; font-weight: 600; font-size: 15px; color: var(--sub); }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--orange); color: #fff; font-weight: 700; padding: 14px 24px; border-radius: 8px; font-size: 16px; border: 0; cursor: pointer; font-family: inherit; white-space: nowrap; }
+  .btn.w { background: #fff; color: var(--navy); }
+  .btn.n { background: var(--navy); }
+  .hero { background: var(--navy); color: #fff; position: relative; overflow: hidden; }
+  .hero::before { content: ""; position: absolute; right: -120px; top: -120px; width: 520px; height: 520px; border-radius: 50%; border: 60px solid rgba(242,106,27,.12); }
+  .hero .wrap { position: relative; display: grid; grid-template-columns: 1.2fr .8fr; gap: 36px; align-items: center; padding: 70px 20px 80px; }
+  .badge { display: inline-flex; gap: 8px; align-items: center; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.18); padding: 6px 14px; border-radius: 30px; font-weight: 600; font-size: 14px; }
+  h1 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; text-transform: uppercase; font-size: 68px; line-height: .95; margin: 18px 0; }
+  h1 span { color: var(--orange2); }
+  .hero p { color: #b9c5d4; font-size: 18px; max-width: 540px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+  .card { background: #fff; color: var(--ink); border-radius: 16px; padding: 26px; box-shadow: 0 24px 50px rgba(0,0,0,.3); }
+  .card h3 { font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; font-size: 24px; }
+  .card ul { list-style: none; margin-top: 12px; display: grid; gap: 10px; }
+  .card li { display: flex; gap: 10px; align-items: center; font-weight: 600; }
+  .card li i { font-style: normal; width: 28px; height: 28px; border-radius: 50%; background: #fff1e8; color: var(--orange); display: grid; place-items: center; font-size: 14px; flex: 0 0 28px; }
+  .card .btn { width: 100%; margin-top: 18px; }
+  .strip { background: var(--orange); color: #fff; }
+  .strip .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; padding: 18px 20px; font-weight: 700; font-size: 15px; }
+  section { padding: 76px 0; }
+  .kicker { font-weight: 700; font-size: 13px; letter-spacing: .16em; text-transform: uppercase; color: var(--orange); }
+  h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; text-transform: uppercase; font-size: 46px; line-height: 1; margin-top: 6px; }
+  .lead { color: var(--sub); font-size: 17px; margin-top: 12px; max-width: 660px; }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 34px; }
+  .g { background: #fff; border-radius: 14px; padding: 24px; border: 1px solid var(--line); }
+  .g.big { grid-column: span 2; background: var(--navy2); color: #fff; border: 0; }
+  .g.big p { color: #b9c5d4; }
+  .g .ic { font-size: 30px; }
+  .g h3 { font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; font-size: 24px; margin: 8px 0 4px; }
+  .g p { color: var(--sub); font-size: 15px; }
+  .also { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+  .also span { background: #fff; border: 1px solid var(--line); border-radius: 30px; padding: 7px 14px; font-weight: 600; font-size: 14px; }
+  .why { background: #fff; }
+  .why .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  .pts { display: grid; gap: 14px; }
+  .pt { display: flex; gap: 14px; }
+  .pt b { flex: 0 0 44px; height: 44px; border-radius: 12px; background: var(--bg); display: grid; place-items: center; font-size: 20px; }
+  .pt h3 { font-size: 18px; }
+  .pt p { color: var(--sub); font-size: 15px; }
+  .story { background: var(--navy); color: #fff; border-radius: 20px; padding: 34px; }
+  .story .kicker { color: var(--orange2); }
+  .story h2 { font-size: 40px; }
+  .story p { color: #b9c5d4; margin-top: 12px; }
+  .story .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
+  .story .facts div { background: rgba(255,255,255,.06); border-radius: 12px; padding: 14px; }
+  .story .facts b { display: block; font-family: 'Barlow Condensed', sans-serif; font-size: 30px; color: var(--orange2); line-height: 1; }
+  .book .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+  .contact { margin-top: 20px; display: grid; gap: 12px; }
+  .contact div { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; font-weight: 600; }
+  .contact small { display: block; color: var(--sub); font-weight: 400; font-size: 13px; }
+  form { background: #fff; border: 1px solid var(--line); border-top: 5px solid var(--orange); border-radius: 14px; padding: 28px; }
+  form h3 { font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; font-size: 28px; }
+  input, select, textarea { width: 100%; margin-top: 12px; padding: 13px; border: 1px solid var(--line); border-radius: 10px; font: inherit; background: var(--bg); }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  form .btn { width: 100%; margin-top: 16px; }
+  .thanks { display: none; text-align: center; padding: 36px 6px; }
+  .thanks b { display: block; font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; font-size: 30px; color: var(--orange); }
+  footer { background: var(--navy); color: #8d9bb0; font-size: 14px; padding: 30px 0; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; }
+  .callbar { display: none; }
+  @media (max-width: 900px) {
+    nav, header .btn { display: none; }
+    .hero .wrap, .why .wrap, .book .wrap { grid-template-columns: 1fr; }
+    .hero .wrap { padding: 42px 20px 56px; }
+    h1 { font-size: 50px; } h2 { font-size: 36px; }
+    .grid { grid-template-columns: 1fr 1fr; }
+    .strip .wrap { grid-template-columns: 1fr 1fr; }
+    section { padding: 56px 0; }
+    .callbar { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; }
+    .callbar a { flex: 1; text-align: center; padding: 15px 8px; font-weight: 700; }
+    .callbar a:first-child { background: var(--navy); color: #fff; } .callbar a:last-child { background: var(--orange); color: #fff; }
+    footer { padding-bottom: 84px; }
+  }
+  @media (max-width: 520px) { .grid { grid-template-columns: 1fr; } .g.big { grid-column: auto; } h1 { font-size: 44px; } .two { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Werribee Automotive. This is a design preview, not the live website.</div>
+<header><div class="wrap">
+  <div class="logo">Werribee <span>Automotive</span><small>Formerly G &amp; L Allison Automotive</small></div>
+  <nav><a href="#services">Services</a><a href="#why">Why us</a><a href="#book">Contact</a></nav>
+  <a class="btn" href="#book">Book a service</a>
+</div></header>
+
+<section class="hero" style="padding:0"><div class="wrap">
+  <div>
+    <span class="badge">🔧 Family owned · VACC accredited workshop</span>
+    <h1>One stop for <span>quality auto repairs</span> in Werribee</h1>
+    <p>Logbook servicing, roadworthy certificates, mechanical repairs and ski boat engines, from a family owned team with over 35 years of combined experience.</p>
+    <div class="cta"><a class="btn" href="#book">Book a service</a><a class="btn w" href="tel:+61397416211">📞 (03) 9741 6211</a></div>
+  </div>
+  <div class="card">
+    <h3>Book in today</h3>
+    <ul>
+      <li><i>✓</i>Logbook servicing</li>
+      <li><i>✓</i>Roadworthy certificates</li>
+      <li><i>✓</i>Brakes &amp; clutches</li>
+      <li><i>✓</i>Ski boat engines &amp; repairs</li>
+    </ul>
+    <a class="btn n" href="#book">Book a service</a>
+  </div>
+</div></section>
+
+<div class="strip"><div class="wrap">
+  <div>✓ VACC accredited workshop</div><div>✓ VicRoads licensed vehicle tester</div><div>✓ 35+ years combined experience</div><div>✓ Free no-obligation quotes</div>
+</div></div>
+
+<section id="services"><div class="wrap">
+  <div class="kicker">Our services</div>
+  <h2>Cars and boats</h2>
+  <p class="lead">From your regular service to the tricky faults, all at 1/61-65 Russell Street, Werribee.</p>
+  <div class="grid">
+    <div class="g big"><div class="ic">📘</div><h3>Logbook servicing</h3><p>Servicing to your vehicle's logbook: exactly what should be serviced, and when, according to the manufacturer.</p></div>
+    <div class="g"><div class="ic">✅</div><h3>Roadworthy certificates</h3><p>Generally required in Victoria when a vehicle is sold or re-registered.</p></div>
+    <div class="g"><div class="ic">🚤</div><h3>Boat repairs</h3><p>Ski boat engines and repairs.</p></div>
+    <div class="g"><div class="ic">🛠️</div><h3>Mechanical repairs</h3><p>Mechanical and auto electrical servicing and repairs, transmission and fuel injection.</p></div>
+    <div class="g"><div class="ic">🛑</div><h3>Brakes &amp; clutches</h3><p>Brake and clutch repairs.</p></div>
+    <div class="g"><div class="ic">💻</div><h3>Diagnostics</h3><p>Computer diagnostics and testing, with the diagnosis explained to you.</p></div>
+    <div class="g"><div class="ic">⚙️</div><h3>Engines &amp; tuning</h3><p>EFI servicing, tuning and reco engines.</p></div>
+  </div>
+  <div class="also"><span>Car servicing</span><span>Discount tyres</span><span>Batteries</span><span>Body painting</span></div>
+</div></section>
+
+<section class="why" id="why"><div class="wrap">
+  <div>
+    <div class="kicker">You can count on us</div>
+    <h2>Treated with respect, explained in plain English</h2>
+    <div class="pts" style="margin-top:24px">
+      <div class="pt"><b>🎓</b><div><h3>A trained team</h3><p>We keep our team trained on current models, so you get the correct diagnosis and the correct repair.</p></div></div>
+      <div class="pt"><b>🧼</b><div><h3>Clean cabin, every time</h3><p>Disposable floor mats and seat covers at every service.</p></div></div>
+      <div class="pt"><b>📋</b><div><h3>Full report</h3><p>A full diagnosis report, explained to you.</p></div></div>
+    </div>
+  </div>
+  <div class="story">
+    <div class="kicker">Our story</div>
+    <h2>Family owned, local to Werribee</h2>
+    <p>Werribee Automotive, formerly G &amp; L Allison Automotive, is a family owned business. Together our team has over 35 years of experience in the automotive industry.</p>
+    <div class="facts"><div><b>35+</b>years combined experience</div><div><b>VACC</b>accredited workshop</div></div>
+  </div>
+</div></section>
+
+<section class="book" id="book"><div class="wrap">
+  <div>
+    <div class="kicker">Book a service</div>
+    <h2>Free, no-obligation quotes</h2>
+    <p class="lead">Call us today on (03) 9741 6211, or send a booking request and we'll call you back.</p>
+    <div class="contact">
+      <div><a href="tel:+61397416211">(03) 9741 6211</a><small>Phone</small></div>
+      <div><a href="mailto:werribeeauto@gmail.com">werribeeauto@gmail.com</a><small>Email</small></div>
+      <div>1/61-65 Russell Street, Werribee VIC 3030<small>Workshop</small></div>
+    </div>
+  </div>
+  <form onsubmit="event.preventDefault();this.querySelector('.fields').style.display='none';this.querySelector('.thanks').style.display='block'">
+    <div class="fields">
+      <h3>Request a booking</h3>
+      <div class="two"><input placeholder="Your name" required><input placeholder="Phone" type="tel" required></div>
+      <div class="two"><input placeholder="Make &amp; model"><input placeholder="Rego"></div>
+      <select><option>Logbook service</option><option>Roadworthy certificate</option><option>Mechanical repair</option><option>Brakes / clutch</option><option>Boat engine / repair</option><option>Diagnostics</option><option>Other</option></select>
+      <textarea rows="3" placeholder="Preferred day, and anything we should know"></textarea>
+      <button class="btn" type="submit">Request booking</button>
+    </div>
+    <div class="thanks"><b>Thanks, request received!</b>We'll call you to confirm a time. Or call us now on (03) 9741 6211.</div>
+  </form>
+</div></section>
+
+<footer><div class="wrap"><div>© 2026 Werribee Automotive · 1/61-65 Russell Street, Werribee VIC 3030</div><div>Concept design by Swoop Sites</div></div></footer>
+<div class="callbar"><a href="tel:+61397416211">📞 Call</a><a href="#book">Book a service</a></div>
+</body>
+</html>
