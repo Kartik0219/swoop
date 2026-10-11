@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Eltham Podiatry | Podiatrist, 660 Main Road Eltham &amp; Footscray (concept)</title>
+<meta name="description" content="Eltham Podiatry, established 1994. Family foot care in Eltham and Footscray. DVA Gold Card and Medicare EPC bulk billed (GP referral required), concession rates available. Call 03 9439 3290.">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,600;0,700;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --olive:#3d5a40; --olive2:#5b7f5e; --gum:#dfe8d8; --gum2:#f2f6ee; --ochre:#c98a3b; --ink:#22301f; --sub:#5f6b5b; --line:#d7e0d1; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { overflow-x: clip; }
+  body { font-family: 'Work Sans', system-ui, sans-serif; color: var(--ink); line-height: 1.65; background: #fcfdfa; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+  .concept { background: #000; color: #e5e5e5; font-size: 13px; text-align: center; padding: 8px 16px; }
+  .concept b { color: #e6b877; }
+  header { background: #fff; border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 10; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 74px; }
+  .logo { font-family: Spectral, serif; font-weight: 700; font-size: 24px; color: var(--olive); line-height: 1.05; }
+  .logo small { display: block; font-family: 'Work Sans', sans-serif; font-size: 12px; font-weight: 600; color: var(--ochre); letter-spacing: .12em; text-transform: uppercase; }
+  nav { display: flex; gap: 22px; font-weight: 500; color: var(--sub); }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--olive); color: #fff; font-weight: 700; padding: 13px 22px; border-radius: 8px; border: 0; font: inherit; font-weight: 700; cursor: pointer; white-space: nowrap; }
+  .btn.oc { background: var(--ochre); color: #fff; }
+  .btn.o { background: transparent; border: 1.5px solid var(--olive); color: var(--olive); }
+  .hero { background: var(--gum2); }
+  .hero .wrap { display: grid; grid-template-columns: 1.2fr 1fr; gap: 44px; align-items: center; padding: 62px 20px 70px; }
+  .kick { color: var(--ochre); font-weight: 700; letter-spacing: .14em; text-transform: uppercase; font-size: 13px; }
+  h1 { font-family: Spectral, serif; font-weight: 700; font-size: 54px; line-height: 1.05; color: var(--olive); margin: 14px 0 16px; }
+  h1 i { font-weight: 500; color: var(--ochre); }
+  .hero p { font-size: 18px; color: var(--sub); max-width: 520px; }
+  .cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+  .bb { background: #fff; border: 1px solid var(--line); border-radius: 22px; padding: 26px; }
+  .bb h3 { font-family: Spectral, serif; font-size: 24px; color: var(--olive); }
+  .bb ul { list-style: none; margin-top: 10px; }
+  .bb li { padding: 10px 0; border-bottom: 1px solid var(--line); display: flex; gap: 10px; }
+  .bb li:last-child { border: 0; }
+  .bb li b { color: var(--olive2); }
+  .bb .n { font-size: 13px; color: var(--sub); margin-top: 8px; }
+  .clinics { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 30px; }
+  .clinic { border-radius: 22px; padding: 28px; background: var(--olive); color: #fff; }
+  .clinic.f { background: var(--ochre); }
+  .clinic h3 { font-family: Spectral, serif; font-size: 28px; }
+  .clinic p { opacity: .9; margin: 6px 0 16px; }
+  .clinic .btn { background: #fff; color: var(--ink); }
+  section { padding: 76px 0; }
+  h2 { font-family: Spectral, serif; font-size: 40px; line-height: 1.1; color: var(--olive); margin-top: 6px; }
+  .lead { color: var(--sub); font-size: 17px; max-width: 640px; margin-top: 10px; }
+  .svc { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 28px; }
+  .svc div { background: var(--gum2); border-left: 4px solid var(--olive2); border-radius: 0 14px 14px 0; padding: 16px 18px; font-weight: 600; }
+  .about { background: var(--gum); }
+  .about .wrap { display: grid; grid-template-columns: 1fr 1.3fr; gap: 44px; align-items: center; }
+  .since { font-family: Spectral, serif; font-size: 110px; line-height: 1; color: var(--olive); }
+  .since small { display: block; font-family: 'Work Sans', sans-serif; font-size: 15px; color: var(--sub); letter-spacing: .1em; text-transform: uppercase; }
+  .about p { color: var(--sub); margin-top: 10px; }
+  .book .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .hrs { background: var(--gum2); border-radius: 18px; padding: 22px; margin-top: 18px; }
+  form { background: #fff; border: 1px solid var(--line); border-radius: 22px; padding: 28px; }
+  form h3 { font-family: Spectral, serif; font-size: 26px; color: var(--olive); }
+  input, select, textarea { width: 100%; padding: 13px; margin-top: 10px; border: 1px solid var(--line); border-radius: 8px; font: inherit; background: #fcfdfa; }
+  form .btn { width: 100%; margin-top: 14px; }
+  .thanks { display: none; text-align: center; padding: 40px 10px; }
+  .thanks b { display: block; font-family: Spectral, serif; font-size: 26px; color: var(--olive); }
+  footer { background: var(--ink); color: #a8b4a3; font-size: 14px; padding: 30px 0; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .callbar { display: none; }
+  @media (max-width: 880px) {
+    nav, header .btn { display: none; }
+    .hero .wrap, .about .wrap, .book .wrap, .clinics { grid-template-columns: 1fr; }
+    .hero .wrap { padding-top: 38px; }
+    h1 { font-size: 38px; } h2 { font-size: 30px; }
+    .svc { grid-template-columns: 1fr; }
+    .since { font-size: 80px; }
+    section { padding: 54px 0; }
+    .callbar { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 20; }
+    .callbar a { flex: 1; text-align: center; padding: 15px; font-weight: 700; }
+    .callbar a:first-child { background: var(--ochre); color: #fff; } .callbar a:last-child { background: var(--olive); color: #fff; }
+    footer { padding-bottom: 84px; }
+  }
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Eltham Podiatry. This is a design preview, not the live website.</div>
+<header><div class="wrap">
+  <div class="logo">Eltham Podiatry<small>Eltham · Footscray · est. 1994</small></div>
+  <nav><a href="#services">Services</a><a href="#fees">Fees &amp; bulk billing</a><a href="#about">About</a><a href="#book">Contact</a></nav>
+  <a class="btn" href="#book">Book an appointment</a>
+</div></header>
+
+<section class="hero" style="padding:0"><div class="wrap">
+  <div>
+    <div class="kick">Family foot care since 1994</div>
+    <h1>For all of your family's <i>foot care needs.</i></h1>
+    <p>Problems with your feet or legs? Care based on over 20 years of experience, at affordable costs, using up-to-date techniques. Our team takes care to listen and understand your needs.</p>
+    <div class="cta"><a class="btn oc" href="#book">Book an appointment</a><a class="btn o" href="tel:0394393290">📞 03 9439 3290</a></div>
+  </div>
+  <div class="bb" id="fees">
+    <h3>Fees &amp; bulk billing</h3>
+    <ul>
+      <li><b>✓</b>Veterans' Affairs (Gold Card): bulk billed*</li>
+      <li><b>✓</b>Medicare (EPC plan): bulk billed*</li>
+      <li><b>✓</b>Concession rates for pensioners and Health Care Card holders</li>
+      <li><b>✓</b>TAC &amp; WorkCover</li>
+    </ul>
+    <p class="n">* Initial GP referral required.</p>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="kick">Two locations</div>
+  <h2>Choose your clinic</h2>
+  <div class="clinics">
+    <div class="clinic"><h3>Eltham</h3><p>660 Main Road, Eltham VIC 3095<br>Ph: 03 9439 3290</p><a class="btn" href="tel:0394393290">📞 Call Eltham</a></div>
+    <div class="clinic f"><h3>West Footscray</h3><p>5 Stanlake Street, Footscray VIC 3011<br>Ph: 03 9318 5233</p><a class="btn" href="tel:0393185233">📞 Call Footscray</a></div>
+  </div>
+</div></section>
+
+<section id="services" style="padding-top:0"><div class="wrap">
+  <div class="kick">What we do</div>
+  <h2>Podiatry services</h2>
+  <div class="svc">
+    <div>General podiatry</div><div>Children's podiatry</div><div>Sports &amp; overuse injuries</div>
+    <div>Orthotic prescriptions</div><div>Diabetic &amp; arthritic foot care</div><div>Nail surgery</div>
+    <div>Gait &amp; biomechanical assessments</div><div>Knee, hip or lower back problems</div><div>Footwear advice</div>
+  </div>
+</div></section>
+
+<section class="about" id="about"><div class="wrap">
+  <div class="since">1994<small>Established in Eltham</small></div>
+  <div>
+    <div class="kick">About us</div>
+    <h2>George Cotsanis, principal podiatrist</h2>
+    <p>Eltham Podiatry was established in 1994 and is operated by our principal podiatrist, George Cotsanis, who has over 20 years of clinical experience.</p>
+    <p>As a member of the Australian Podiatry Association, George is committed to continuing professional development.</p>
+  </div>
+</div></section>
+
+<section class="book" id="book"><div class="wrap">
+  <div>
+    <div class="kick">Contact</div>
+    <h2>Book an appointment</h2>
+    <div class="hrs">
+      <b>Reception is available</b><br>Monday – Friday, 9.00am – 5.00pm<br><span style="color:var(--sub);font-size:14px">(answering machine during the lunch hour)</span>
+    </div>
+    <p class="lead">Eltham <a href="tel:0394393290"><b>03 9439 3290</b></a> · Footscray <a href="tel:0393185233"><b>03 9318 5233</b></a><br>Email <a href="mailto:gcotsanis@elthampodiatry.com.au" style="word-break:break-all">gcotsanis@elthampodiatry.com.au</a></p>
+  </div>
+  <form onsubmit="event.preventDefault();this.querySelector('.fields').style.display='none';this.querySelector('.thanks').style.display='block'">
+    <div class="fields">
+      <h3>Request an appointment</h3>
+      <input placeholder="Your name" required>
+      <input placeholder="Phone" type="tel" required>
+      <select><option>Eltham clinic</option><option>Footscray clinic</option></select>
+      <select><option>Private patient</option><option>DVA Gold Card</option><option>Medicare EPC (GP referral)</option><option>Concession</option><option>TAC / WorkCover</option></select>
+      <textarea rows="3" placeholder="Anything we should know? (optional)"></textarea>
+      <button class="btn" type="submit">Request appointment</button>
+    </div>
+    <div class="thanks"><b>Thank you!</b>Our reception will call you to confirm a time.</div>
+  </form>
+</div></section>
+
+<footer><div class="wrap"><div>© 2026 Eltham Podiatry · 660 Main Road, Eltham VIC 3095</div><div>Concept design by Swoop Sites</div></div></footer>
+<div class="callbar"><a href="tel:0394393290">📞 Call</a><a href="#book">Book</a></div>
+</body>
+</html>

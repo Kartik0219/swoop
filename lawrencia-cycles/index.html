@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Lawrencia Cycles | Family-owned bike shop since 1938, Glenferrie Road Hawthorn (concept)</title>
+<meta name="description" content="Lawrencia Cycles, est. 1938 and family owned. Kids, road, gravel, mountain, hybrid, electric and folding bikes, with 12 months free servicing on all new bikes. 756 Glenferrie Road, Hawthorn. (03) 9818 2850.">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --green:#123d2e; --green2:#1c5a43; --cream:#f5efe2; --red:#d9442b; --gold:#e8b44a; --ink:#16231d; --sub:#5f6b64; --line:#e2d9c6; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { overflow-x: clip; }
+  body { font-family: Inter, system-ui, sans-serif; color: var(--ink); line-height: 1.6; background: var(--cream); }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+  .concept { background: #000; color: #e5e5e5; font-size: 13px; text-align: center; padding: 8px 16px; }
+  .concept b { color: var(--gold); }
+  .ticker { background: var(--red); color: #fff; font-weight: 800; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; }
+  .ticker .wrap { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px 28px; padding: 9px 20px; text-align: center; }
+  header { background: var(--green); color: #fff; position: sticky; top: 0; z-index: 10; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 76px; }
+  .logo { font-family: 'Bebas Neue', sans-serif; font-size: 34px; letter-spacing: .04em; line-height: .9; }
+  .logo span { display: block; font-family: Inter, sans-serif; font-size: 11px; letter-spacing: .24em; color: var(--gold); font-weight: 700; margin-top: 4px; }
+  nav { display: flex; gap: 22px; font-weight: 600; font-size: 15px; color: #cfe0d7; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--gold); color: var(--ink); font-weight: 800; padding: 13px 22px; border-radius: 6px; border: 0; font: inherit; font-weight: 800; cursor: pointer; white-space: nowrap; }
+  .btn.r { background: var(--red); color: #fff; }
+  .btn.o { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,.4); }
+  .hero { background: var(--green); color: #fff; position: relative; overflow: hidden; }
+  .hero .wrap { display: grid; grid-template-columns: 1.1fr 1fr; gap: 30px; align-items: center; padding: 56px 20px 70px; }
+  .est { display: inline-flex; align-items: center; gap: 10px; border: 2px solid var(--gold); color: var(--gold); padding: 6px 14px; border-radius: 4px; font-weight: 800; letter-spacing: .14em; font-size: 13px; text-transform: uppercase; }
+  h1 { font-family: 'Bebas Neue', sans-serif; font-size: 96px; line-height: .9; letter-spacing: .01em; margin: 18px 0 16px; }
+  h1 span { color: var(--gold); }
+  .hero p { color: #cfe0d7; font-size: 18px; max-width: 520px; }
+  .cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; }
+  .bike { width: 100%; max-width: 480px; justify-self: center; }
+  .badge { position: absolute; right: 24px; top: 24px; width: 120px; height: 120px; border-radius: 50%; background: var(--red); color: #fff; display: grid; place-items: center; text-align: center; font-family: 'Bebas Neue', sans-serif; font-size: 22px; line-height: 1; transform: rotate(-10deg); box-shadow: 0 10px 24px rgba(0,0,0,.25); }
+  .badge b { display: block; font-size: 40px; }
+  section { padding: 78px 0; }
+  .kicker { color: var(--red); font-weight: 800; letter-spacing: .16em; text-transform: uppercase; font-size: 13px; }
+  h2 { font-family: 'Bebas Neue', sans-serif; font-size: 56px; line-height: .95; color: var(--green); margin-top: 6px; letter-spacing: .01em; }
+  .lead { color: var(--sub); font-size: 17px; max-width: 660px; margin-top: 10px; }
+  .cats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 30px; }
+  .cat { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 22px 18px; position: relative; overflow: hidden; }
+  .cat i { font-style: normal; font-size: 34px; }
+  .cat h3 { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: var(--green); letter-spacing: .02em; margin-top: 6px; }
+  .cat p { color: var(--sub); font-size: 14px; }
+  .cat::after { content: "→"; position: absolute; right: 16px; top: 16px; color: var(--red); font-weight: 800; }
+  .free { background: var(--gold); }
+  .free .wrap { display: grid; grid-template-columns: auto 1fr auto; gap: 30px; align-items: center; }
+  .free .n { font-family: 'Bebas Neue', sans-serif; font-size: 130px; line-height: .8; color: var(--green); }
+  .free h2 { margin: 0; }
+  .free p { font-size: 17px; color: #3b2f13; margin-top: 6px; max-width: 520px; }
+  .story .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+  .timeline { border-left: 3px solid var(--green); padding-left: 22px; }
+  .timeline div { position: relative; padding: 10px 0 18px; }
+  .timeline div::before { content: ""; position: absolute; left: -31px; top: 16px; width: 15px; height: 15px; border-radius: 50%; background: var(--red); border: 3px solid var(--cream); }
+  .timeline b { font-family: 'Bebas Neue', sans-serif; font-size: 30px; color: var(--green); display: block; line-height: 1; }
+  .timeline span { color: var(--sub); }
+  .visit { background: var(--green); color: #fff; }
+  .visit h2 { color: #fff; }
+  .visit .kicker { color: var(--gold); }
+  .visit .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .hrs { margin-top: 18px; }
+  .hrs div { display: flex; justify-content: space-between; gap: 12px; padding: 11px 0; border-bottom: 1px solid rgba(255,255,255,.15); }
+  .hrs b { color: var(--gold); }
+  form { background: var(--cream); color: var(--ink); border-radius: 10px; padding: 28px; }
+  form h3 { font-family: 'Bebas Neue', sans-serif; font-size: 36px; color: var(--green); letter-spacing: .02em; }
+  .tabs { display: flex; gap: 8px; margin-top: 8px; }
+  .tabs label { flex: 1; text-align: center; border: 2px solid var(--line); border-radius: 6px; padding: 10px; font-weight: 700; cursor: pointer; background: #fff; }
+  .tabs input { display: none; }
+  .tabs input:checked + span { color: var(--red); }
+  input, select, textarea { width: 100%; padding: 13px; margin-top: 10px; border: 1px solid var(--line); border-radius: 6px; font: inherit; background: #fff; }
+  form .btn { width: 100%; margin-top: 14px; }
+  .thanks { display: none; padding: 40px 10px; text-align: center; }
+  .thanks b { display: block; font-family: 'Bebas Neue', sans-serif; font-size: 36px; color: var(--green); }
+  footer { background: #0c2a1f; color: #9fb8ad; font-size: 14px; padding: 30px 0; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .callbar { display: none; }
+  @media (max-width: 880px) {
+    nav, header .btn { display: none; }
+    .hero .wrap, .story .wrap, .visit .wrap { grid-template-columns: 1fr; }
+    .hero .wrap { padding-top: 36px; }
+    h1 { font-size: 64px; } h2 { font-size: 44px; }
+    .cats { grid-template-columns: 1fr 1fr; }
+    .free .wrap { grid-template-columns: 1fr; gap: 10px; }
+    .free .n { font-size: 96px; }
+    .badge { width: 92px; height: 92px; font-size: 17px; right: 14px; top: 14px; } .badge b { font-size: 30px; }
+    section { padding: 56px 0; }
+    .callbar { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 20; }
+    .callbar a { flex: 1; text-align: center; padding: 15px; font-weight: 800; }
+    .callbar a:first-child { background: var(--gold); color: var(--ink); } .callbar a:last-child { background: var(--red); color: #fff; }
+    footer { padding-bottom: 84px; }
+  }
+  @media (max-width: 420px) { .cats { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Lawrencia Cycles. This is a design preview, not the live website.</div>
+<div class="ticker"><div class="wrap"><span>12 month free servicing on all new bikes</span><span>Australia wide shipping*</span><span>Family owned since 1938</span></div></div>
+<header><div class="wrap">
+  <div class="logo">Lawrencia Cycles<span>EST. 1938 · HAWTHORN</span></div>
+  <nav><a href="#bikes">Bikes</a><a href="#service">Servicing</a><a href="#story">Our story</a><a href="#visit">Visit</a></nav>
+  <a class="btn" href="#visit">Book a service</a>
+</div></header>
+
+<section class="hero" style="padding:0"><div class="wrap">
+  <div>
+    <span class="est">🚲 Family owned · est. 1938</span>
+    <h1>Glenferrie Road's bike shop <span>since 1938</span></h1>
+    <p>Over 200 of the latest models on our showroom floor, ready to view, test ride and take home. Racing, commuting or riding with the kids, we'll help you find the right bike and make sure it fits.</p>
+    <div class="cta"><a class="btn" href="#bikes">Shop bikes</a><a class="btn o" href="#visit">Book a service</a></div>
+  </div>
+  <div style="position:relative">
+    <svg class="bike" viewBox="0 0 480 300" aria-hidden="true">
+      <g fill="none" stroke="#f5efe2" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="110" cy="200" r="78"/><circle cx="370" cy="200" r="78"/>
+        <path d="M110 200 L200 90 L330 90 L370 200 M200 90 L250 200 L330 90 M110 200 L250 200"/>
+        <path d="M185 70 L225 70" /><path d="M318 60 L345 60 L330 90"/>
+      </g>
+      <g stroke="#e8b44a" stroke-width="3"><circle cx="110" cy="200" r="60" fill="none" stroke-dasharray="4 10"/><circle cx="370" cy="200" r="60" fill="none" stroke-dasharray="4 10"/></g>
+      <circle cx="250" cy="200" r="16" fill="#d9442b"/>
+    </svg>
+    <div class="badge"><div><b>12</b>MONTHS<br>FREE SERVICE</div></div>
+  </div>
+</div></section>
+
+<section id="bikes"><div class="wrap">
+  <div class="kicker">Shop by ride</div>
+  <h2>Bikes for every reason to ride</h2>
+  <p class="lead">Internationally renowned brands such as Giant and Liv, plus many other well known brands and some Australian-only classics.</p>
+  <div class="cats">
+    <div class="cat"><i>🧒</i><h3>Kids bikes</h3><p>Balance bikes to 26" bikes</p></div>
+    <div class="cat"><i>🚴</i><h3>Road bikes</h3><p>Race, aero and endurance</p></div>
+    <div class="cat"><i>🪨</i><h3>Gravel</h3><p>Gravel and cyclocross</p></div>
+    <div class="cat"><i>⛰️</i><h3>Mountain</h3><p>Dual suspension and hardtail</p></div>
+    <div class="cat"><i>⚡</i><h3>Electric</h3><p>Electric bikes and e-bike racks</p></div>
+    <div class="cat"><i>🏙️</i><h3>Hybrids</h3><p>Flat bar, suspension, cruisers</p></div>
+    <div class="cat"><i>📦</i><h3>Folding</h3><p>Folding bikes</p></div>
+    <div class="cat"><i>🚗</i><h3>Car racks</h3><p>Hitch, tow ball, trunk and e-bike racks</p></div>
+  </div>
+</div></section>
+
+<section class="free" id="service"><div class="wrap">
+  <div class="n">12</div>
+  <div>
+    <h2>Months of free servicing</h2>
+    <p>Every new bike purchased from Lawrencia Cycles comes with 12 months of free servicing, to help make sure your bike gives you years of enjoyment.</p>
+  </div>
+  <a class="btn r" href="#visit">Book a service</a>
+</div></section>
+
+<section class="story" id="story"><div class="wrap">
+  <div>
+    <div class="kicker">Our story</div>
+    <h2>We've learnt a thing or two since 1938</h2>
+    <p class="lead">Lawrencia Cycles has been operating since 1938, and we know our role doesn't begin and end at the time of purchase. Our experienced staff will help you choose your next bike and make sure it's properly assembled and the correct fit.</p>
+  </div>
+  <div class="timeline">
+    <div><b>1938</b><span>Lawrencia Cycles opens its doors</span></div>
+    <div><b>Family owned</b><span>Still family owned today</span></div>
+    <div><b>200+ models</b><span>On our showroom floor, in a range of sizes</span></div>
+    <div><b>Today</b><span>Australia wide shipping* online</span></div>
+  </div>
+</div></section>
+
+<section class="visit" id="visit"><div class="wrap">
+  <div>
+    <div class="kicker">Visit the shop</div>
+    <h2>756 Glenferrie Road, Hawthorn</h2>
+    <div class="hrs">
+      <div><span>Monday – Friday</span><b>9am – 5:30pm</b></div>
+      <div><span>Saturday</span><b>9am – 5pm</b></div>
+      <div><span>Sunday</span><b>10am – 4pm</b></div>
+      <div><span>Phone</span><b><a href="tel:0398182850">(03) 9818 2850</a></b></div>
+      <div><span>Email</span><b><a href="mailto:hello@lawrenciacycles.com.au">hello@lawrenciacycles.com.au</a></b></div>
+    </div>
+  </div>
+  <form onsubmit="event.preventDefault();this.querySelector('.fields').style.display='none';this.querySelector('.thanks').style.display='block'">
+    <div class="fields">
+      <h3>Drop us a message</h3>
+      <div class="tabs">
+        <label><input type="radio" name="t" checked><span>Book a service</span></label>
+        <label><input type="radio" name="t"><span>General enquiry</span></label>
+      </div>
+      <input placeholder="Your name" required>
+      <input placeholder="Mobile" type="tel" required>
+      <input placeholder="Email" type="email">
+      <input placeholder="Bike (brand / model)">
+      <textarea rows="3" placeholder="What does it need, or what can we help with?"></textarea>
+      <button class="btn r" type="submit">Send message</button>
+    </div>
+    <div class="thanks"><b>Thanks, message sent!</b>We'll get back to you shortly. Need us now? Call (03) 9818 2850.</div>
+  </form>
+</div></section>
+
+<footer><div class="wrap"><div>© 2026 Lawrencia Cycles Pty Ltd · 756 Glenferrie Road, Hawthorn VIC 3122</div><div>Concept design by Swoop Sites</div></div></footer>
+<div class="callbar"><a href="tel:0398182850">📞 Call</a><a href="#visit">Book a service</a></div>
+</body>
+</html>

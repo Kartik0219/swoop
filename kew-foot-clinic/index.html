@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Kew Foot Clinic | Podiatrist, 66 Harp Road Kew (concept)</title>
+<meta name="description" content="Kew Foot Clinic, a 20 year old podiatry business at 66 Harp Road, Kew. General foot care, orthotics, diabetes care, children's feet, fungal nail testing and the MAT. Call (03) 9857 0524.">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Libre+Baskerville:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root { --blue:#24486b; --blue2:#356a9a; --sage:#e7efe9; --sage2:#a9c3b3; --peach:#f3b48b; --ink:#1d2b38; --sub:#5e6c78; --line:#dde6ea; --bg:#fbfcfb; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { overflow-x: clip; }
+  body { font-family: Manrope, system-ui, sans-serif; color: var(--ink); line-height: 1.65; background: var(--bg); }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+  .concept { background: #000; color: #e5e5e5; font-size: 13px; text-align: center; padding: 8px 16px; }
+  .concept b { color: var(--peach); }
+  header { background: #fff; border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 10; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 76px; }
+  .logo { font-family: 'Libre Baskerville', serif; font-weight: 700; font-size: 22px; color: var(--blue); line-height: 1.1; }
+  .logo small { display: block; font-family: Manrope, sans-serif; font-size: 12px; font-weight: 700; color: var(--sub); letter-spacing: .08em; }
+  nav { display: flex; gap: 24px; font-weight: 600; font-size: 15px; color: var(--sub); }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--blue); color: #fff; font-weight: 800; padding: 13px 22px; border-radius: 10px; border: 0; font: inherit; font-weight: 800; cursor: pointer; white-space: nowrap; }
+  .btn.p { background: var(--peach); color: #3a1d08; }
+  .btn.o { background: transparent; border: 1.5px solid var(--blue); color: var(--blue); }
+  .hero .wrap { display: grid; grid-template-columns: 1.15fr 1fr; gap: 46px; align-items: center; padding: 64px 20px 72px; }
+  .label { font-weight: 800; color: var(--blue2); letter-spacing: .14em; text-transform: uppercase; font-size: 13px; }
+  h1 { font-family: 'Libre Baskerville', serif; font-weight: 700; font-size: 50px; line-height: 1.12; color: var(--blue); margin: 14px 0 18px; }
+  h1 i { font-weight: 400; color: var(--blue2); }
+  .hero p { font-size: 18px; color: var(--sub); max-width: 520px; }
+  .cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; }
+  .phones { margin-top: 18px; font-size: 15px; color: var(--sub); }
+  .phones a { color: var(--blue); font-weight: 800; }
+  .feet { background: var(--sage); border-radius: 30px; padding: 30px; position: relative; min-height: 360px; display: grid; place-items: center; }
+  .feet svg { width: 72%; max-width: 280px; }
+  .feet .yrs { position: absolute; left: -14px; bottom: 26px; background: #fff; border-radius: 16px; padding: 14px 18px; box-shadow: 0 16px 30px rgba(36,72,107,.12); }
+  .feet .yrs b { font-family: 'Libre Baskerville', serif; font-size: 30px; color: var(--blue); display: block; line-height: 1; }
+  .feet .park { position: absolute; right: 16px; top: 16px; background: var(--blue); color: #fff; border-radius: 12px; padding: 8px 12px; font-size: 13px; font-weight: 700; }
+  section { padding: 76px 0; }
+  h2 { font-family: 'Libre Baskerville', serif; font-size: 36px; line-height: 1.15; color: var(--blue); margin-top: 6px; }
+  .lead { color: var(--sub); font-size: 17px; max-width: 640px; margin-top: 10px; }
+  .svc { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 30px; }
+  .svc div { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 24px; }
+  .svc i { font-style: normal; font-size: 28px; }
+  .svc h3 { font-size: 18px; margin: 8px 0 4px; color: var(--blue); }
+  .svc p { color: var(--sub); font-size: 15px; }
+  .conds { background: var(--blue); color: #fff; }
+  .conds h2 { color: #fff; }
+  .conds .label { color: var(--peach); }
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+  .chips span { border: 1px solid rgba(255,255,255,.3); border-radius: 30px; padding: 8px 16px; font-weight: 600; font-size: 15px; }
+  .about .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; }
+  .about p { color: var(--sub); margin-top: 12px; }
+  .rooms { background: var(--sage); border-radius: 22px; padding: 26px; }
+  .rooms h3 { font-family: 'Libre Baskerville', serif; color: var(--blue); font-size: 22px; }
+  .book { background: var(--sage); }
+  .book .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  table { width: 100%; border-collapse: collapse; margin-top: 18px; font-size: 15px; }
+  td { padding: 9px 0; border-bottom: 1px solid var(--sage2); }
+  td:last-child { text-align: right; font-weight: 700; color: var(--blue); }
+  form { background: #fff; border-radius: 22px; padding: 28px; border: 1px solid var(--line); }
+  form h3 { font-family: 'Libre Baskerville', serif; color: var(--blue); font-size: 24px; }
+  input, select, textarea { width: 100%; padding: 13px; margin-top: 10px; border: 1px solid var(--line); border-radius: 10px; font: inherit; background: var(--bg); }
+  form .btn { width: 100%; margin-top: 14px; }
+  .thanks { display: none; text-align: center; padding: 40px 10px; }
+  .thanks b { display: block; font-family: 'Libre Baskerville', serif; font-size: 24px; color: var(--blue); margin-bottom: 6px; }
+  footer { background: var(--ink); color: #9eadba; font-size: 14px; padding: 30px 0; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .callbar { display: none; }
+  @media (max-width: 880px) {
+    nav, header .btn { display: none; }
+    .hero .wrap, .about .wrap, .book .wrap { grid-template-columns: 1fr; }
+    .hero .wrap { padding-top: 38px; }
+    h1 { font-size: 36px; } h2 { font-size: 28px; }
+    .svc { grid-template-columns: 1fr; }
+    .feet { min-height: 280px; }
+    .feet .yrs { left: 12px; }
+    section { padding: 54px 0; }
+    .callbar { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 20; }
+    .callbar a { flex: 1; text-align: center; padding: 15px; font-weight: 800; }
+    .callbar a:first-child { background: var(--peach); color: #3a1d08; } .callbar a:last-child { background: var(--blue); color: #fff; }
+    footer { padding-bottom: 84px; }
+  }
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Kew Foot Clinic. This is a design preview, not the live website.</div>
+<header><div class="wrap">
+  <div class="logo">Kew Foot Clinic<small>PODIATRY · 66 HARP ROAD, KEW</small></div>
+  <nav><a href="#services">Services</a><a href="#conditions">Conditions</a><a href="#about">About</a><a href="#book">Contact</a></nav>
+  <a class="btn" href="#book">Book an appointment</a>
+</div></header>
+
+<section class="hero" style="padding:0"><div class="wrap">
+  <div>
+    <div class="label">Podiatry for Kew, Hawthorn &amp; Camberwell</div>
+    <h1>Foot care for every age, <i>from tiny feet to well-travelled ones.</i></h1>
+    <p>From general foot care, like cutting toenails and removing corns and callouses, through to biomechanical care of the feet and lower limbs and orthotics.</p>
+    <div class="cta"><a class="btn p" href="#book">Book an appointment</a><a class="btn o" href="tel:0398570524">📞 (03) 9857 0524</a></div>
+    <div class="phones">Phone <a href="tel:0398570524">(03) 9857 0524</a> · Mobile <a href="tel:0466827948">0466 827 948</a></div>
+  </div>
+  <div class="feet">
+    <svg viewBox="0 0 200 220" aria-hidden="true"><g fill="#fff" stroke="#24486b" stroke-width="3"><path d="M60 200 C30 200 26 160 32 120 C38 80 40 60 58 52 C78 44 90 70 88 110 C86 150 92 200 60 200Z"/><path d="M140 200 C170 200 174 160 168 120 C162 80 160 60 142 52 C122 44 110 70 112 110 C114 150 108 200 140 200Z"/></g><g fill="#f3b48b"><circle cx="48" cy="38" r="9"/><circle cx="64" cy="32" r="7"/><circle cx="78" cy="34" r="6"/><circle cx="90" cy="40" r="5"/><circle cx="152" cy="38" r="9"/><circle cx="136" cy="32" r="7"/><circle cx="122" cy="34" r="6"/><circle cx="110" cy="40" r="5"/></g></svg>
+    <div class="yrs"><b>20 years</b>in Kew</div>
+    <div class="park">🅿️ 11 car spaces + 1 disabled</div>
+  </div>
+</div></section>
+
+<section id="services"><div class="wrap">
+  <div class="label">Services</div>
+  <h2>How we can help</h2>
+  <div class="svc">
+    <div><i>🦶</i><h3>General foot care</h3><p>Cutting toenails and removing corns and callouses.</p></div>
+    <div><i>👟</i><h3>Orthotics</h3><p>We prescribe orthotics and see them as an art form.</p></div>
+    <div><i>🩺</i><h3>Diabetes care</h3><p>Foot care for people living with diabetes.</p></div>
+    <div><i>🧒</i><h3>Children's feet</h3><p>Care for children's foot problems, from the very young up.</p></div>
+    <div><i>🔬</i><h3>Fungal nail testing</h3><p>The latest test kit for toenail fungus.</p></div>
+    <div><i>📏</i><h3>MAT assessment</h3><p>The Movement Assessment Tool, developed to clinically assess risks.</p></div>
+  </div>
+</div></section>
+
+<section class="conds" id="conditions"><div class="wrap">
+  <div class="label">Common conditions</div>
+  <h2>Foot, lower limb and back pain</h2>
+  <div class="chips"><span>Aching feet</span><span>Back pain</span><span>Ball of foot pain</span><span>Blister prevention</span><span>Bunions</span><span>Callus &amp; corns</span><span>Flat feet</span><span>Heel pain</span><span>Knee pain</span><span>Nail problems</span><span>Plantar fasciitis</span><span>Shin pain</span><span>Skin conditions</span><span>Stress fractures</span><span>Warts</span><span>Cam walkers</span></div>
+</div></section>
+
+<section class="about" id="about"><div class="wrap">
+  <div>
+    <div class="label">About us</div>
+    <h2>A friendly local team</h2>
+    <p>Kew Foot Clinic is a 20 year old business based in Kew. We look after patients of all ages, from the very young to the elderly, and we're passionate about educating patients on preventing foot and lower limb joint problems.</p>
+    <p>Our team has worked together for nearly 10 years. Narelle has 20 years of podiatry experience and graduated from La Trobe University, Melbourne.</p>
+  </div>
+  <div class="rooms">
+    <h3>Rooms for rent</h3>
+    <p style="color:var(--sub);margin-top:8px">Three light-filled consulting rooms available to rent at 66 Harp Road. Call us to find out more.</p>
+    <a class="btn" style="margin-top:16px" href="tel:0398570524">Ask about the rooms</a>
+  </div>
+</div></section>
+
+<section class="book" id="book"><div class="wrap">
+  <div>
+    <div class="label">Contact</div>
+    <h2>Clinic hours</h2>
+    <table>
+      <tr><td>Monday – Friday</td><td>8:30am – 5:00pm</td></tr>
+      <tr><td>Saturday</td><td>8:30am – 3:00pm</td></tr>
+      <tr><td>Sunday</td><td>Closed</td></tr>
+      <tr><td>Address</td><td>66 Harp Road, Kew VIC 3101</td></tr>
+      <tr><td>Phone</td><td><a href="tel:0398570524">(03) 9857 0524</a></td></tr>
+      <tr><td>Mobile</td><td><a href="tel:0466827948">0466 827 948</a></td></tr>
+      <tr><td>Email</td><td><a href="mailto:admin@kewfootclinic.com.au">admin@kewfootclinic.com.au</a></td></tr>
+    </table>
+  </div>
+  <form onsubmit="event.preventDefault();this.querySelector('.fields').style.display='none';this.querySelector('.thanks').style.display='block'">
+    <div class="fields">
+      <h3>Request an appointment</h3>
+      <input placeholder="Your name" required>
+      <input placeholder="Mobile" type="tel" required>
+      <select><option>General foot care</option><option>Orthotics</option><option>Diabetes foot care</option><option>Children's feet</option><option>Fungal nail testing</option><option>Something else</option></select>
+      <select><option>Weekday</option><option>Saturday</option></select>
+      <textarea rows="3" placeholder="Anything we should know? (optional)"></textarea>
+      <button class="btn" type="submit">Request appointment</button>
+    </div>
+    <div class="thanks"><b>Thanks, request received!</b>We'll call you to confirm a time.</div>
+  </form>
+</div></section>
+
+<footer><div class="wrap"><div>© 2026 Kew Foot Clinic · 66 Harp Road, Kew VIC 3101</div><div>Concept design by Swoop Sites</div></div></footer>
+<div class="callbar"><a href="tel:0398570524">📞 Call</a><a href="#book">Book an appointment</a></div>
+</body>
+</html>

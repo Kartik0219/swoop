@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Richmond Veterinary Clinic | Vet, 259 Church Street Richmond (concept)</title>
+<meta name="description" content="Richmond Veterinary Clinic, 259 Church Street, Richmond. Consultations, surgery, dentistry, X-ray and ultrasound, pathology, microchipping and puppy school. Open Mon–Fri 8am–7pm, Sat 8am–3pm. Book online or call (03) 9428 2220.">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --green:#1f6f50; --green2:#2a8a64; --leaf:#e3f2ea; --sun:#ffc94a; --cream:#fffaf0; --ink:#183328; --sub:#567067; --line:#dbe9e1; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { overflow-x: clip; }
+  body { font-family: Nunito, system-ui, sans-serif; color: var(--ink); line-height: 1.6; background: var(--cream); }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+  .concept { background: #000; color: #e5e5e5; font-size: 13px; text-align: center; padding: 8px 16px; }
+  .concept b { color: var(--sun); }
+  .notice { background: var(--sun); color: var(--ink); text-align: center; font-weight: 800; font-size: 14px; padding: 9px 16px; }
+  header { background: #fff; position: sticky; top: 0; z-index: 10; box-shadow: 0 2px 0 var(--line); }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 74px; }
+  .logo { display: flex; align-items: center; gap: 10px; font-family: 'Baloo 2', sans-serif; font-weight: 800; font-size: 22px; color: var(--green); line-height: 1; }
+  .logo small { display: block; font-family: Nunito, sans-serif; font-weight: 700; font-size: 12px; color: var(--sub); margin-top: 3px; }
+  .paw { width: 42px; height: 42px; border-radius: 50%; background: var(--green); display: grid; place-items: center; font-size: 22px; flex: 0 0 42px; }
+  nav { display: flex; gap: 22px; font-weight: 700; color: var(--sub); }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--green); color: #fff; font-weight: 800; padding: 13px 22px; border-radius: 999px; border: 0; font: inherit; font-weight: 800; cursor: pointer; white-space: nowrap; }
+  .btn.y { background: var(--sun); color: var(--ink); }
+  .btn.o { background: #fff; color: var(--green); border: 2px solid var(--green); }
+  .hero .wrap { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center; padding: 60px 20px 70px; }
+  h1 { font-family: 'Baloo 2', sans-serif; font-weight: 800; font-size: 62px; line-height: .98; color: var(--green); margin: 14px 0 16px; }
+  h1 span { background: linear-gradient(transparent 60%, var(--sun) 60%); }
+  .hero p { font-size: 18px; color: var(--sub); max-width: 500px; }
+  .tag { display: inline-block; background: var(--leaf); color: var(--green); font-weight: 800; padding: 6px 14px; border-radius: 999px; font-size: 14px; }
+  .cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+  .blob { position: relative; aspect-ratio: 1 / 1; max-width: 420px; width: 100%; justify-self: center; }
+  .blob .b1 { position: absolute; inset: 0; background: var(--green2); border-radius: 46% 54% 42% 58% / 52% 44% 56% 48%; }
+  .blob .b2 { position: absolute; inset: 14%; background: var(--leaf); border-radius: 55% 45% 50% 50% / 45% 55% 45% 55%; display: grid; place-items: center; font-size: 120px; }
+  .blob .hrs { position: absolute; right: -6px; bottom: 6%; background: #fff; border-radius: 18px; padding: 12px 16px; box-shadow: 0 14px 30px rgba(0,0,0,.12); font-size: 14px; }
+  .blob .hrs b { display: block; color: var(--green); }
+  section { padding: 76px 0; }
+  .kicker { color: var(--green2); font-weight: 800; letter-spacing: .14em; text-transform: uppercase; font-size: 13px; }
+  h2 { font-family: 'Baloo 2', sans-serif; font-weight: 800; font-size: 42px; line-height: 1.05; color: var(--green); margin-top: 4px; }
+  .lead { color: var(--sub); font-size: 17px; max-width: 640px; margin-top: 10px; }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 30px; }
+  .sv { background: #fff; border: 2px solid var(--line); border-radius: 22px; padding: 22px; }
+  .sv i { font-style: normal; font-size: 32px; }
+  .sv h3 { font-family: 'Baloo 2', sans-serif; font-size: 21px; color: var(--green); margin-top: 6px; }
+  .diff { background: var(--green); color: #fff; }
+  .diff h2 { color: #fff; }
+  .diff .kicker { color: var(--sun); }
+  .dl { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 28px; }
+  .dl div { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.2); border-radius: 18px; padding: 18px; font-weight: 700; }
+  .visit .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
+  .box { background: #fff; border: 2px solid var(--line); border-radius: 22px; padding: 24px; margin-top: 16px; }
+  .row { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px dashed var(--line); }
+  .row:last-child { border: 0; }
+  .row b { color: var(--green); }
+  .after { background: #fff4d6; border: 2px solid #ffe08a; border-radius: 22px; padding: 22px; margin-top: 16px; }
+  .after a { font-weight: 800; color: var(--green); }
+  form { background: #fff; border: 2px solid var(--line); border-radius: 26px; padding: 28px; }
+  form h3 { font-family: 'Baloo 2', sans-serif; font-size: 28px; color: var(--green); }
+  input, select, textarea { width: 100%; padding: 13px 14px; margin-top: 10px; border: 2px solid var(--line); border-radius: 14px; font: inherit; background: var(--cream); }
+  form .btn { width: 100%; margin-top: 14px; }
+  .thanks { display: none; padding: 40px 10px; text-align: center; }
+  .thanks b { display: block; font-family: 'Baloo 2', sans-serif; font-size: 28px; color: var(--green); }
+  footer { background: var(--ink); color: #9fb7ad; font-size: 14px; padding: 30px 0; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .callbar { display: none; }
+  @media (max-width: 880px) {
+    nav, header .btn { display: none; }
+    .hero .wrap, .visit .wrap { grid-template-columns: 1fr; }
+    .hero .wrap { padding-top: 36px; }
+    h1 { font-size: 44px; } h2 { font-size: 32px; }
+    .grid { grid-template-columns: 1fr 1fr; }
+    .dl { grid-template-columns: 1fr; }
+    .blob { max-width: 300px; }
+    .blob .b2 { font-size: 86px; }
+    .blob .hrs { right: 0; }
+    section { padding: 54px 0; }
+    .callbar { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 20; }
+    .callbar a { flex: 1; text-align: center; padding: 15px; font-weight: 800; }
+    .callbar a:first-child { background: var(--sun); color: var(--ink); } .callbar a:last-child { background: var(--green); color: #fff; }
+    footer { padding-bottom: 84px; }
+  }
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Richmond Veterinary Clinic. This is a design preview, not the live website.</div>
+<div class="notice">🐾 Online booking now available. <a href="#book" style="text-decoration:underline">Book a visit</a></div>
+<header><div class="wrap">
+  <div class="logo"><span class="paw">🐾</span><div>Richmond Vet<small>259 Church Street, Richmond</small></div></div>
+  <nav><a href="#services">Services</a><a href="#visit">Hours</a><a href="#visit">After hours</a><a href="#book">Contact</a></nav>
+  <a class="btn" href="#book">Book online</a>
+</div></header>
+
+<section class="hero" style="padding:0"><div class="wrap">
+  <div>
+    <span class="tag">Caring for all kinds</span>
+    <h1>Your local vet on <span>Church Street</span></h1>
+    <p>Richmond Vet Clinic aims to provide the highest level of veterinary care to our community, with a complete range of services tailored to each patient, in a friendly, welcoming environment.</p>
+    <div class="cta"><a class="btn" href="#book">Book online</a><a class="btn o" href="tel:0394282220">📞 (03) 9428 2220</a></div>
+  </div>
+  <div class="blob" aria-hidden="true"><div class="b1"></div><div class="b2">🐶</div><div class="hrs"><b>Opening hours</b>Mon–Fri 8am–7pm · Sat 8am–3pm</div></div>
+</div></section>
+
+<section id="services" style="background:#fff"><div class="wrap">
+  <div class="kicker">What we do</div>
+  <h2>Services</h2>
+  <p class="lead">A complete range of services under one roof in Richmond.</p>
+  <div class="grid">
+    <div class="sv"><i>🩺</i><h3>Medical consultations</h3></div>
+    <div class="sv"><i>🔬</i><h3>X-ray &amp; ultrasound</h3></div>
+    <div class="sv"><i>🏥</i><h3>Surgery</h3></div>
+    <div class="sv"><i>🦷</i><h3>Dentistry</h3></div>
+    <div class="sv"><i>🧪</i><h3>Pathology</h3></div>
+    <div class="sv"><i>🐕</i><h3>Puppy preschool</h3></div>
+    <div class="sv"><i>📟</i><h3>Microchipping</h3></div>
+    <div class="sv"><i>🛍️</i><h3>Products</h3></div>
+  </div>
+</div></section>
+
+<section class="diff"><div class="wrap">
+  <div class="kicker">The Richmond Vet difference</div>
+  <h2>A compassionate, knowledgeable team</h2>
+  <div class="dl">
+    <div>🏘️ We care for the Richmond community</div>
+    <div>👪 We foster a family environment within our staff</div>
+    <div>😊 We offer exceptional, friendly service</div>
+    <div>⭐ We provide a high level of care &amp; competency</div>
+    <div>💚 We are a compassionate, knowledgeable team</div>
+    <div>🚀 We endeavour to go above and beyond for patients and clients</div>
+  </div>
+</div></section>
+
+<section class="visit" id="visit"><div class="wrap">
+  <div>
+    <div class="kicker">Visit us</div>
+    <h2>Opening hours</h2>
+    <div class="box">
+      <div class="row"><span>Monday – Friday</span><b>8am – 7pm</b></div>
+      <div class="row"><span>Saturday</span><b>8am – 3pm</b></div>
+      <div class="row"><span>Address</span><b>259 Church Street, Richmond VIC 3121</b></div>
+      <div class="row"><span>Phone</span><b><a href="tel:0394282220">(03) 9428 2220</a></b></div>
+      <div class="row"><span>Email</span><b><a href="mailto:info@richmondvetclinic.com.au" style="word-break:break-all">info@richmondvetclinic.com.au</a></b></div>
+    </div>
+    <p style="color:var(--sub);font-size:14px;margin-top:10px">While we endeavour to respond to emails promptly, please call us if your enquiry is urgent.</p>
+  </div>
+  <div>
+    <div class="kicker">After hours</div>
+    <h2>When we're closed</h2>
+    <div class="after">
+      Please contact <b>Advanced Vetcare</b>:<br>
+      Kew <a href="tel:0390203555">9020 3555</a> · Kensington <a href="tel:0390920400">9092 0400</a><br><br>
+      or <b>CARE</b> on <a href="tel:0394176417">9417 6417</a>
+    </div>
+  </div>
+</div></section>
+
+<section id="book" style="background:var(--leaf)"><div class="wrap" style="max-width:640px">
+  <form onsubmit="event.preventDefault();this.querySelector('.fields').style.display='none';this.querySelector('.thanks').style.display='block'">
+    <div class="fields">
+      <h3>Book a visit</h3>
+      <input placeholder="Your name" required>
+      <input placeholder="Mobile" type="tel" required>
+      <input placeholder="Pet's name and type (e.g. Milo, dog)">
+      <select><option>Consultation</option><option>Check-up</option><option>Dentistry</option><option>Microchipping</option><option>Puppy school</option><option>Something else</option></select>
+      <textarea rows="3" placeholder="What's the visit for?"></textarea>
+      <button class="btn" type="submit">Request booking</button>
+      <p style="font-size:13px;color:var(--sub);margin-top:10px">Urgent? Please call (03) 9428 2220.</p>
+    </div>
+    <div class="thanks"><b>Thanks, request received!</b>We'll be in touch to confirm your appointment.</div>
+  </form>
+</div></section>
+
+<footer><div class="wrap"><div>© 2026 Richmond Veterinary Clinic · 259 Church Street, Richmond VIC 3121</div><div>Concept design by Swoop Sites</div></div></footer>
+<div class="callbar"><a href="tel:0394282220">📞 Call</a><a href="#book">Book online</a></div>
+</body>
+</html>

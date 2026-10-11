@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Moacs 8.8 | Diamond Creek Café, Main Hurstbridge Rd (concept)</title>
+<meta name="description" content="Moacs 8.8, Diamond Creek Café. Coffee, hearty breakfasts, lunch, gourmet pies and sausage rolls (including vegan options) and sweet treats. Unit 11/72 Main Hurstbridge Rd, Diamond Creek. 0484 080 716.">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=DM+Serif+Display&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root { --espresso:#2e1d15; --mocha:#5a3a2a; --crema:#f4e7d3; --cream:#fbf5ec; --terra:#c8553d; --sage:#8a9a5b; --ink:#2a1c14; --sub:#6e5c50; --line:#e8d9c3; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { overflow-x: clip; }
+  body { font-family: 'DM Sans', system-ui, sans-serif; color: var(--ink); line-height: 1.6; background: var(--cream); }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+  .concept { background: #000; color: #e5e5e5; font-size: 13px; text-align: center; padding: 8px 16px; }
+  .concept b { color: #f0b27a; }
+  header { background: var(--cream); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 10; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 72px; }
+  .logo { font-family: 'DM Serif Display', serif; font-size: 28px; color: var(--espresso); line-height: 1; }
+  .logo small { display: block; font-family: Caveat, cursive; font-size: 19px; color: var(--terra); }
+  nav { display: flex; gap: 22px; font-weight: 500; color: var(--sub); }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--terra); color: #fff; font-weight: 700; padding: 13px 22px; border-radius: 40px; border: 0; font: inherit; font-weight: 700; cursor: pointer; white-space: nowrap; }
+  .btn.e { background: var(--espresso); }
+  .btn.o { background: transparent; color: var(--espresso); border: 2px solid var(--espresso); }
+  .hero { background: var(--espresso); color: var(--crema); position: relative; overflow: hidden; }
+  .hero .wrap { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; padding: 64px 20px 72px; }
+  .script { font-family: Caveat, cursive; font-size: 30px; color: #f0b27a; }
+  h1 { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 64px; line-height: 1; margin: 8px 0 18px; color: #fff; }
+  .hero p { font-size: 18px; color: #e3d3bd; max-width: 520px; }
+  .cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; }
+  .cta .btn.o { color: var(--crema); border-color: rgba(244,231,211,.5); }
+  .cup { position: relative; width: 100%; max-width: 360px; aspect-ratio: 1 / 1; justify-self: center; }
+  .cup .saucer { position: absolute; left: 4%; right: 4%; bottom: 10%; height: 16%; border-radius: 50%; background: var(--crema); }
+  .cup .body { position: absolute; left: 18%; right: 26%; top: 28%; bottom: 18%; background: #fff; border-radius: 0 0 46% 46%; }
+  .cup .handle { position: absolute; right: 12%; top: 38%; width: 22%; height: 26%; border: 14px solid #fff; border-left: 0; border-radius: 0 50% 50% 0; }
+  .cup .coffee { position: absolute; left: 18%; right: 26%; top: 26%; height: 9%; border-radius: 50%; background: radial-gradient(circle, #e9c39b 0 30%, #a86b3c 31% 100%); border: 6px solid #fff; }
+  .cup .steam { position: absolute; top: 2%; left: 34%; font-family: Caveat, cursive; color: #f0b27a; font-size: 28px; transform: rotate(-8deg); }
+  section { padding: 76px 0; }
+  .kick { font-family: Caveat, cursive; font-size: 28px; color: var(--terra); }
+  h2 { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 44px; line-height: 1.05; color: var(--espresso); }
+  .lead { color: var(--sub); font-size: 17px; max-width: 640px; margin-top: 10px; }
+  .story .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 46px; align-items: center; }
+  .polaroid { background: #fff; padding: 16px 16px 50px; box-shadow: 0 18px 40px rgba(46,29,21,.15); transform: rotate(-3deg); max-width: 340px; justify-self: center; position: relative; }
+  .polaroid .ph { aspect-ratio: 1 / 1; background: linear-gradient(135deg, #f0b27a, var(--terra) 60%, var(--mocha)); display: grid; place-items: center; font-size: 90px; }
+  .polaroid span { position: absolute; left: 0; right: 0; bottom: 12px; text-align: center; font-family: Caveat, cursive; font-size: 24px; color: var(--mocha); }
+  .menu { background: var(--crema); }
+  .mgrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 30px; }
+  .mcard { background: var(--cream); border: 1px dashed var(--mocha); border-radius: 18px; padding: 24px; }
+  .mcard h3 { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 28px; color: var(--espresso); display: flex; align-items: center; gap: 10px; }
+  .mcard p { color: var(--sub); margin-top: 6px; }
+  .mcard ul { list-style: none; margin-top: 10px; }
+  .mcard li { padding: 6px 0; border-bottom: 1px dotted var(--line); font-weight: 500; }
+  .mcard li:last-child { border: 0; }
+  .reviews { text-align: center; }
+  .slot { margin: 26px auto 0; max-width: 720px; border: 2px dashed var(--terra); border-radius: 18px; padding: 30px 22px; color: var(--sub); background: #fff; }
+  .slot b { display: block; font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 24px; color: var(--espresso); margin-bottom: 6px; }
+  .visit { background: var(--espresso); color: var(--crema); }
+  .visit h2 { color: #fff; }
+  .visit .kick { color: #f0b27a; }
+  .visit .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .vlist div { padding: 13px 0; border-bottom: 1px solid rgba(244,231,211,.18); display: flex; gap: 14px; }
+  .vlist b { min-width: 76px; color: #f0b27a; }
+  form { background: var(--cream); color: var(--ink); border-radius: 20px; padding: 28px; }
+  form h3 { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 30px; color: var(--espresso); }
+  input, select, textarea { width: 100%; padding: 13px; margin-top: 10px; border: 1px solid var(--line); border-radius: 12px; font: inherit; background: #fff; }
+  form .btn { width: 100%; margin-top: 14px; }
+  .thanks { display: none; text-align: center; padding: 40px 10px; }
+  .thanks b { display: block; font-family: Caveat, cursive; font-size: 36px; color: var(--terra); }
+  footer { background: #1d120c; color: #b29d88; font-size: 14px; padding: 30px 0; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .callbar { display: none; }
+  @media (max-width: 880px) {
+    nav, header .btn { display: none; }
+    .hero .wrap, .story .wrap, .visit .wrap { grid-template-columns: 1fr; }
+    .hero .wrap { padding-top: 38px; }
+    h1 { font-size: 46px; } h2 { font-size: 34px; }
+    .cup { max-width: 240px; }
+    .mgrid { grid-template-columns: 1fr; }
+    section { padding: 54px 0; }
+    .callbar { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 20; }
+    .callbar a { flex: 1; text-align: center; padding: 15px; font-weight: 700; }
+    .callbar a:first-child { background: var(--terra); color: #fff; } .callbar a:last-child { background: var(--espresso); color: #fff; }
+    footer { padding-bottom: 84px; }
+  }
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Moacs 8.8 (Diamond Creek Café). This is a design preview, not the live website.</div>
+<header><div class="wrap">
+  <div class="logo">Moacs 8.8<small>Diamond Creek Café</small></div>
+  <nav><a href="#story">Our story</a><a href="#menu">Menu</a><a href="#visit">Visit</a></nav>
+  <a class="btn" href="#visit">Enquire</a>
+</div></header>
+
+<section class="hero" style="padding:0"><div class="wrap">
+  <div>
+    <div class="script">Tasty · Nutritious · Savory</div>
+    <h1>Home of the Mother of All Coffees.</h1>
+    <p>A cosy local café in Diamond Creek with delicious food and the finest coffee. Whether it's a hearty breakfast, a fulfilling lunch or a sweet treat, we've got something for every craving.</p>
+    <div class="cta"><a class="btn" href="#menu">View our menu</a><a class="btn o" href="tel:0484080716">📞 0484 080 716</a></div>
+  </div>
+  <div class="cup" aria-hidden="true"><div class="saucer"></div><div class="body"></div><div class="handle"></div><div class="coffee"></div><div class="steam">~ ~ ~</div></div>
+</div></section>
+
+<section class="story" id="story"><div class="wrap">
+  <div class="polaroid" aria-hidden="true"><div class="ph">☕</div><span>Moacs 8.8</span></div>
+  <div>
+    <div class="kick">Our story</div>
+    <h2>Family-run, with plenty of practice</h2>
+    <p class="lead">Stephen and Nancy, plus family and team, are all passionate about serving great food and coffee in a comfortable and cosy local café setting. Stephen's passion for food developed across many years, and six kids to feed ensured plenty of practice.</p>
+    <p class="lead">Today the team serves a hearty menu of breakfast, brunch, lunch and treats for all locals to enjoy.</p>
+  </div>
+</div></section>
+
+<section class="menu" id="menu"><div class="wrap">
+  <div class="kick">We serve</div>
+  <h2>Our menu</h2>
+  <div class="mgrid">
+    <div class="mcard"><h3>☕ Coffee</h3><p>Our baristas are dedicated to crafting the perfect cup.</p><ul><li>Hot drinks</li><li>Donuts or shakes</li></ul></div>
+    <div class="mcard"><h3>🍳 Breakfast</h3><p>Classic favourites like bacon and eggs, served in a roll, sandwich or focaccia.</p><ul><li>Focaccia</li><li>Veggie focaccia</li><li>"Everything"</li></ul></div>
+    <div class="mcard"><h3>🥧 Pies &amp; sausage rolls</h3><p>Gourmet pies and sausage rolls in a variety of flavours, including options for vegan customers.</p></div>
+    <div class="mcard"><h3>🍰 Sweet treats</h3><p>Something to satisfy every sweet tooth.</p><ul><li>Cheesecake &amp; cookies</li></ul></div>
+  </div>
+</div></section>
+
+<section class="reviews"><div class="wrap">
+  <div class="kick">What locals say</div>
+  <h2>Kind words from our regulars</h2>
+  <div class="slot"><b>Your real customer reviews go here</b>In the full site, this spot shows genuine reviews from your customers, in place of the placeholder text on the current page.</div>
+</div></section>
+
+<section class="visit" id="visit"><div class="wrap">
+  <div>
+    <div class="kick">Come &amp; visit us</div>
+    <h2>Join us for a cuppa</h2>
+    <div class="vlist" style="margin-top:18px">
+      <div><b>Find us</b><span>Unit 11/72 Main Hurstbridge Rd, Diamond Creek VIC 3089</span></div>
+      <div><b>Phone</b><a href="tel:0484080716">0484 080 716</a></div>
+      <div><b>Email</b><a href="mailto:moacs8.8@outlook.com.au">moacs8.8@outlook.com.au</a></div>
+    </div>
+    <a class="btn" style="margin-top:20px" href="https://www.google.com/maps/search/?api=1&amp;query=11%2F72+Main+Hurstbridge+Rd+Diamond+Creek+VIC+3089" target="_blank" rel="noopener">📍 Get directions</a>
+  </div>
+  <form onsubmit="event.preventDefault();this.querySelector('.fields').style.display='none';this.querySelector('.thanks').style.display='block'">
+    <div class="fields">
+      <h3>Send us a message</h3>
+      <input placeholder="Your name" required>
+      <input placeholder="Phone" type="tel" required>
+      <select><option>General enquiry</option><option>Feedback</option></select>
+      <textarea rows="3" placeholder="Your message"></textarea>
+      <button class="btn" type="submit">Send</button>
+    </div>
+    <div class="thanks"><b>Thanks!</b>We'll get back to you soon. See you for a coffee.</div>
+  </form>
+</div></section>
+
+<footer><div class="wrap"><div>© 2026 Diamond Creek Café · Moacs 8.8 · Unit 11/72 Main Hurstbridge Rd, Diamond Creek</div><div>Concept design by Swoop Sites</div></div></footer>
+<div class="callbar"><a href="tel:0484080716">📞 Call</a><a href="#visit">Enquire</a></div>
+</body>
+</html>

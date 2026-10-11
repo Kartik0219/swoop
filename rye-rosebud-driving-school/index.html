@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Rye-Rosebud Driving School | Driving lessons, Mornington Peninsula (concept)</title>
+<meta name="description" content="Rye-Rosebud Driving School, established 1979. Manual and automatic dual-controlled cars, male and female driver trainers, Seaford to Portsea and across to Hastings. 45 min lesson $60, one hour $75. Call 0418 170 422.">
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --yellow:#ffd60a; --yellow2:#fff3b0; --black:#111; --road:#2b2d31; --red:#e63946; --ink:#141414; --sub:#5c5c5c; --line:#ebe6d2; --bg:#fffdf5; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { overflow-x: clip; }
+  body { font-family: Lexend, system-ui, sans-serif; color: var(--ink); line-height: 1.6; background: var(--bg); }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+  .concept { background: #000; color: #e5e5e5; font-size: 13px; text-align: center; padding: 8px 16px; }
+  .concept b { color: var(--yellow); }
+  header { background: var(--yellow); position: sticky; top: 0; z-index: 10; border-bottom: 3px solid var(--black); }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 72px; }
+  .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 19px; line-height: 1.05; }
+  .logo small { display: block; font-weight: 500; font-size: 12px; }
+  .lp { width: 42px; height: 42px; flex: 0 0 42px; background: #fff; border: 3px solid var(--black); border-radius: 6px; display: grid; place-items: center; font-weight: 800; font-size: 24px; }
+  nav { display: flex; gap: 22px; font-weight: 500; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--black); color: #fff; font-weight: 700; padding: 13px 22px; border-radius: 12px; border: 0; font: inherit; font-weight: 700; cursor: pointer; white-space: nowrap; }
+  .btn.y { background: var(--yellow); color: var(--black); }
+  .btn.o { background: transparent; color: var(--black); border: 2px solid var(--black); }
+  .hero { background: var(--yellow); }
+  .hero .wrap { display: grid; grid-template-columns: 1.15fr 1fr; gap: 36px; align-items: center; padding: 54px 20px 64px; }
+  .tag { display: inline-block; background: var(--black); color: var(--yellow); font-weight: 700; padding: 6px 14px; border-radius: 30px; font-size: 14px; }
+  h1 { font-size: 60px; line-height: 1; font-weight: 800; letter-spacing: -.03em; margin: 16px 0; }
+  .hero p { font-size: 18px; max-width: 520px; }
+  .cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+  .road { position: relative; background: var(--road); border-radius: 24px; height: 340px; overflow: hidden; }
+  .road .lane { position: absolute; left: 50%; top: -20px; bottom: -20px; width: 10px; transform: translateX(-50%); background: repeating-linear-gradient(180deg, #fff 0 34px, transparent 34px 64px); }
+  .road .plate { position: absolute; left: 50%; top: 40%; transform: translate(-50%,-50%) rotate(-6deg); width: 150px; height: 150px; background: var(--yellow); border: 6px solid var(--black); border-radius: 14px; display: grid; place-items: center; font-size: 110px; font-weight: 800; line-height: 1; box-shadow: 0 20px 40px rgba(0,0,0,.4); }
+  .road .since { position: absolute; left: 16px; bottom: 16px; background: #fff; border-radius: 12px; padding: 10px 14px; font-size: 14px; }
+  .road .since b { display: block; font-size: 22px; }
+  section { padding: 76px 0; }
+  .kicker { color: var(--red); font-weight: 700; letter-spacing: .14em; text-transform: uppercase; font-size: 13px; }
+  h2 { font-size: 40px; font-weight: 800; letter-spacing: -.02em; line-height: 1.1; margin-top: 6px; }
+  .lead { color: var(--sub); font-size: 17px; max-width: 640px; margin-top: 10px; }
+  .prices { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 30px; }
+  .price { background: #fff; border: 3px solid var(--black); border-radius: 20px; padding: 26px; }
+  .price.hl { background: var(--yellow); }
+  .price .t { font-weight: 700; }
+  .price .p { font-size: 54px; font-weight: 800; letter-spacing: -.03em; line-height: 1.1; margin: 6px 0; }
+  .price p { color: var(--sub); font-size: 15px; }
+  .price.hl p { color: var(--ink); }
+  .why { background: var(--black); color: #fff; }
+  .why .kicker { color: var(--yellow); }
+  .feats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 30px; }
+  .feats div { background: #1d1d1d; border: 1px solid #333; border-radius: 18px; padding: 22px; }
+  .feats i { font-style: normal; font-size: 28px; }
+  .feats h3 { font-size: 18px; margin: 8px 0 4px; color: var(--yellow); }
+  .feats p { color: #c9c9c9; font-size: 15px; }
+  .area { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+  .area span { background: var(--yellow2); border: 2px solid var(--black); border-radius: 30px; padding: 7px 16px; font-weight: 700; font-size: 14px; }
+  .faq { display: grid; gap: 12px; margin-top: 26px; }
+  details { background: #fff; border: 2px solid var(--line); border-radius: 14px; padding: 16px 18px; }
+  summary { font-weight: 700; cursor: pointer; }
+  details p { color: var(--sub); margin-top: 8px; }
+  .book { background: var(--yellow2); }
+  .book .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+  form { background: #fff; border: 3px solid var(--black); border-radius: 22px; padding: 28px; }
+  form h3 { font-size: 26px; font-weight: 800; }
+  label.f { display: block; font-weight: 700; font-size: 14px; margin-top: 14px; }
+  input, select { width: 100%; padding: 13px; margin-top: 6px; border: 2px solid var(--line); border-radius: 12px; font: inherit; background: var(--bg); }
+  form .btn { width: 100%; margin-top: 18px; }
+  .privacy { font-size: 13px; color: var(--sub); margin-top: 10px; }
+  .thanks { display: none; padding: 40px 10px; text-align: center; }
+  .thanks b { display: block; font-size: 26px; font-weight: 800; margin-bottom: 6px; }
+  footer { background: var(--black); color: #aaa; font-size: 14px; padding: 30px 0; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .callbar { display: none; }
+  @media (max-width: 880px) {
+    nav, header .btn { display: none; }
+    .hero .wrap, .book .wrap { grid-template-columns: 1fr; }
+    .hero .wrap { padding-top: 34px; }
+    h1 { font-size: 42px; } h2 { font-size: 30px; }
+    .road { height: 260px; }
+    .road .plate { width: 116px; height: 116px; font-size: 84px; }
+    .prices, .feats { grid-template-columns: 1fr; }
+    section { padding: 54px 0; }
+    .callbar { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 20; }
+    .callbar a { flex: 1; text-align: center; padding: 15px; font-weight: 700; }
+    .callbar a:first-child { background: var(--black); color: #fff; } .callbar a:last-child { background: var(--yellow); color: var(--black); border-top: 2px solid var(--black); }
+    footer { padding-bottom: 84px; }
+  }
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Rye-Rosebud Driving School. This is a design preview, not the live website.</div>
+<header><div class="wrap">
+  <div class="logo"><span class="lp">L</span><div>Rye-Rosebud Driving School<small>Mornington Peninsula · since 1979</small></div></div>
+  <nav><a href="#prices">Prices</a><a href="#why">Why us</a><a href="#faq">FAQ</a><a href="#book">Book</a></nav>
+  <a class="btn" href="tel:0418170422">📞 0418 170 422</a>
+</div></header>
+
+<section class="hero" style="padding:0"><div class="wrap">
+  <div>
+    <span class="tag">7 days a week · manual &amp; automatic</span>
+    <h1>Learn to drive on the Peninsula.</h1>
+    <p>One of the largest driving schools servicing the Mornington Peninsula, covering Seaford to Portsea and across to Hastings. Start and finish your lesson at home, school or work.</p>
+    <div class="cta"><a class="btn" href="#book">Book a lesson</a><a class="btn o" href="tel:0418170422">📞 0418 170 422</a></div>
+  </div>
+  <div class="road" aria-hidden="true"><div class="lane"></div><div class="plate">L</div><div class="since"><b>Est. 1979</b>Peninsula driving lessons</div></div>
+</div></section>
+
+<section id="prices"><div class="wrap">
+  <div class="kicker">Lesson prices</div>
+  <h2>Simple, upfront pricing</h2>
+  <div class="prices">
+    <div class="price"><div class="t">45 minute lesson</div><div class="p">$60</div><p>Manual or automatic, 7 days a week.</p></div>
+    <div class="price hl"><div class="t">One hour lesson</div><div class="p">$75</div><p>Manual or automatic, 7 days a week.</p></div>
+    <div class="price"><div class="t">Gift vouchers &amp; packages</div><div class="p">🎁</div><p>Gift vouchers for any occasion, plus special package deals. Call us for details.</p></div>
+  </div>
+</div></section>
+
+<section class="why" id="why"><div class="wrap">
+  <div class="kicker">Why learn with us</div>
+  <h2>Qualified trainers, safe cars</h2>
+  <div class="feats">
+    <div><i>🚗</i><h3>Manual &amp; automatic</h3><p>A variety of 7 modern vehicles, all fully insured.</p></div>
+    <div><i>🦶</i><h3>Dual controls</h3><p>Every car has dual control pedal systems for your safety.</p></div>
+    <div><i>👩‍🏫</i><h3>Male &amp; female trainers</h3><p>All hold Certificate III in Motor Vehicle Driver Trainer, plus Certificate IV in Training and Assessment.</p></div>
+    <div><i>📅</i><h3>7 days a week</h3><p>From early morning to early evening.</p></div>
+    <div><i>📝</i><h3>Free VicRoads test booking</h3><p>We organise your VicRoads test booking at no charge.</p></div>
+    <div><i>🏫</i><h3>In local schools</h3><p>We deliver Driver Education Programs in many Peninsula secondary schools.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="kicker">Where we teach</div>
+  <h2>Seaford to Portsea, across to Hastings</h2>
+  <p class="lead">Incorporating Dromana Driving School and Mornington Peninsula Driving School.</p>
+  <div class="area"><span>Seaford</span><span>Dromana</span><span>Rosebud</span><span>Rye</span><span>Portsea</span><span>Hastings</span></div>
+</div></section>
+
+<section id="faq" style="padding-top:0"><div class="wrap">
+  <div class="kicker">FAQ</div>
+  <h2>Good to know</h2>
+  <div class="faq">
+    <details open><summary>Manual or automatic licence?</summary><p>It's your choice, but with an automatic probationary licence that's the only type of car you can drive until your probation ends, unless you re-sit the test in a manual.</p></details>
+    <details><summary>How many lessons will I need?</summary><p>There's no set minimum or maximum. Your driver trainer will give you an assessment of how many you need after your first lesson.</p></details>
+    <details><summary>Do I have to drive on busy roads in my first lesson?</summary><p>Your instructor will be patient and can start you on quiet streets. Every lesson is adjusted to your level.</p></details>
+  </div>
+</div></section>
+
+<section class="book" id="book"><div class="wrap">
+  <div>
+    <div class="kicker">Bookings</div>
+    <h2>Book a lesson</h2>
+    <p class="lead">Leave your name, number and preferred day, and we'll call you to lock in a time. Or just ring us on <a href="tel:0418170422"><b>0418 170 422</b></a>.</p>
+    <p class="lead" style="margin-top:14px">Email: <a href="mailto:info@ryerosebuddrivingschool.com.au" style="word-break:break-all">info@ryerosebuddrivingschool.com.au</a></p>
+  </div>
+  <form onsubmit="event.preventDefault();this.querySelector('.fields').style.display='none';this.querySelector('.thanks').style.display='block'">
+    <div class="fields">
+      <h3>Request a call back</h3>
+      <label class="f">Name<input required autocomplete="name"></label>
+      <label class="f">Phone<input type="tel" required autocomplete="tel"></label>
+      <label class="f">Preferred day<select><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option><option>Sunday</option></select></label>
+      <button class="btn" type="submit">Request booking</button>
+      <p class="privacy">🔒 We only ask for what we need to call you back. No licence or permit details online.</p>
+    </div>
+    <div class="thanks"><b>Thanks! 🚗</b>We'll call you shortly to book your lesson.</div>
+  </form>
+</div></section>
+
+<footer><div class="wrap"><div>© 2026 Rye-Rosebud Driving School · Mornington Peninsula</div><div>Concept design by Swoop Sites</div></div></footer>
+<div class="callbar"><a href="tel:0418170422">📞 Call</a><a href="#book">Book a lesson</a></div>
+</body>
+</html>

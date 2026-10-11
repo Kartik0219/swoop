@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Life Chiropractic Port Melbourne | Chiropractor, 377 Bay St (concept)</title>
+<meta name="description" content="Gentle and effective chiropractic care for Port Melbourne and South Melbourne since 1999. 377 Bay St, Port Melbourne. Open Tue, Thu and Sat. Call (03) 9646 1414.">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;800&family=Lora:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+<style>
+  :root { --sea:#11416b; --sea2:#1b5e93; --sand:#f6efe4; --sand2:#ecdfca; --sun:#f4a259; --ink:#132a3e; --sub:#5a6b7b; --line:#e4d8c4; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { overflow-x: clip; }
+  body { font-family: Outfit, system-ui, sans-serif; color: var(--ink); line-height: 1.6; background: var(--sand); }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+  .concept { background: #000; color: #e5e5e5; font-size: 13px; text-align: center; padding: 8px 16px; }
+  .concept b { color: var(--sun); }
+  header { position: sticky; top: 0; z-index: 10; background: rgba(246,239,228,.95); backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); }
+  header .wrap { height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .logo { font-weight: 800; font-size: 20px; letter-spacing: -.01em; color: var(--sea); line-height: 1.05; }
+  .logo span { display: block; font-weight: 500; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--sun); }
+  nav { display: flex; gap: 24px; color: var(--sub); font-weight: 500; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--sun); color: #2b1600; font-weight: 800; padding: 14px 24px; border-radius: 14px; border: 0; font: inherit; font-weight: 800; cursor: pointer; white-space: nowrap; }
+  .btn.s { background: var(--sea); color: #fff; }
+  .btn.o { background: transparent; border: 1.5px solid var(--sea); color: var(--sea); }
+  .hero { position: relative; overflow: hidden; }
+  .hero .wrap { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; padding: 70px 20px 90px; }
+  .since { font-family: Lora, serif; font-style: italic; color: var(--sea2); font-size: 20px; }
+  h1 { font-size: 60px; line-height: 1; font-weight: 800; letter-spacing: -.03em; color: var(--sea); margin: 12px 0 18px; }
+  h1 span { color: var(--sun); }
+  .hero p { font-size: 18px; color: var(--sub); max-width: 520px; }
+  .cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; }
+  .spine { position: relative; height: 380px; border-radius: 200px 200px 24px 24px; background: linear-gradient(180deg, var(--sea2), var(--sea)); overflow: hidden; }
+  .spine .v { position: absolute; left: 50%; transform: translateX(-50%); width: 64px; height: 22px; border-radius: 12px; background: rgba(255,255,255,.85); }
+  .spine .waves { position: absolute; left: 0; right: 0; bottom: 0; height: 110px; }
+  .award { position: absolute; left: 18px; bottom: 18px; right: 18px; background: #fff; border-radius: 16px; padding: 14px 16px; font-size: 14px; color: var(--sub); }
+  .award b { display: block; color: var(--sea); font-size: 16px; }
+  .hours { background: var(--sea); color: #fff; }
+  .hours .wrap { display: grid; grid-template-columns: auto 1fr 1fr 1fr; gap: 14px; align-items: center; padding: 22px 20px; }
+  .hours .h { font-weight: 800; color: var(--sun); text-transform: uppercase; letter-spacing: .14em; font-size: 13px; }
+  .hours .d { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.18); border-radius: 14px; padding: 12px 16px; }
+  .hours .d b { display: block; font-size: 18px; }
+  section { padding: 80px 0; }
+  .kicker { color: var(--sun); font-weight: 800; letter-spacing: .16em; text-transform: uppercase; font-size: 13px; }
+  h2 { font-size: 40px; line-height: 1.08; color: var(--sea); font-weight: 800; letter-spacing: -.02em; margin-top: 6px; }
+  .lead { color: var(--sub); font-size: 17px; max-width: 640px; margin-top: 12px; }
+  .ages { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 32px; }
+  .ages div { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 20px 14px; text-align: center; font-weight: 600; }
+  .ages i { display: block; font-style: normal; font-size: 30px; margin-bottom: 6px; }
+  .story { background: #fff; }
+  .story .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; }
+  .quote { font-family: Lora, serif; font-style: italic; font-size: 26px; line-height: 1.35; color: var(--sea); border-left: 4px solid var(--sun); padding-left: 20px; }
+  .note { margin-top: 18px; color: var(--sub); font-size: 15px; }
+  .doc { display: flex; gap: 18px; align-items: center; background: var(--sand); border-radius: 20px; padding: 22px; margin-top: 18px; }
+  .doc .a { width: 72px; height: 72px; flex: 0 0 72px; border-radius: 50%; background: var(--sea); color: #fff; display: grid; place-items: center; font-weight: 800; font-size: 26px; }
+  .visit .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .vcard { background: #fff; border-radius: 22px; padding: 26px; border: 1px solid var(--line); }
+  .vcard div { display: flex; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .vcard div:last-child { border: 0; }
+  .vcard b { color: var(--sea); }
+  form { background: var(--sea); color: #fff; border-radius: 22px; padding: 28px; }
+  form h3 { font-size: 24px; }
+  input, select, textarea { width: 100%; padding: 13px; margin-top: 10px; border-radius: 12px; border: 0; font: inherit; }
+  form .btn { width: 100%; margin-top: 14px; }
+  .thanks { display: none; padding: 40px 10px; text-align: center; }
+  .thanks b { display: block; font-size: 24px; margin-bottom: 6px; color: var(--sun); }
+  footer { background: var(--ink); color: #9fb0c0; font-size: 14px; padding: 30px 0; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .callbar { display: none; }
+  @media (max-width: 880px) {
+    nav, header .btn { display: none; }
+    .hero .wrap, .story .wrap, .visit .wrap { grid-template-columns: 1fr; }
+    .hero .wrap { padding: 40px 20px 56px; }
+    h1 { font-size: 42px; } h2 { font-size: 30px; }
+    .spine { height: 300px; }
+    .hours .wrap { grid-template-columns: 1fr; }
+    .ages { grid-template-columns: 1fr 1fr; }
+    section { padding: 56px 0; }
+    .quote { font-size: 21px; }
+    .callbar { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 20; }
+    .callbar a { flex: 1; text-align: center; padding: 15px; font-weight: 800; }
+    .callbar a:first-child { background: var(--sea); color: #fff; } .callbar a:last-child { background: var(--sun); color: #2b1600; }
+    footer { padding-bottom: 84px; }
+  }
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Life Chiropractic Port Melbourne. This is a design preview, not the live website.</div>
+<header><div class="wrap">
+  <div class="logo">Life Chiropractic<span>Port Melbourne</span></div>
+  <nav><a href="#about">About</a><a href="#hours">Hours</a><a href="#visit">Find us</a></nav>
+  <a class="btn" href="#visit">Book Now</a>
+</div></header>
+
+<section class="hero" style="padding:0"><div class="wrap">
+  <div>
+    <div class="since">Caring for Port &amp; South Melbourne since 1999</div>
+    <h1>Gentle, effective <span>chiropractic</span> care on Bay St.</h1>
+    <p>Our chiropractors are trained in a range of specific techniques for people of all ages and stages of life, from pregnancy to birth, infancy, school and beyond.</p>
+    <div class="cta"><a class="btn" href="#visit">Book Now</a><a class="btn o" href="tel:0396461414">📞 (03) 9646 1414</a></div>
+  </div>
+  <div class="spine" aria-hidden="true">
+    <div class="v" style="top:40px;width:40px"></div><div class="v" style="top:72px;width:46px"></div><div class="v" style="top:104px;width:52px"></div><div class="v" style="top:136px;width:58px"></div><div class="v" style="top:168px;width:62px"></div><div class="v" style="top:200px;width:66px"></div>
+    <svg class="waves" viewBox="0 0 400 110" preserveAspectRatio="none"><path d="M0 40 Q50 20 100 40 T200 40 T300 40 T400 40 V110 H0Z" fill="rgba(244,162,89,.35)"/><path d="M0 64 Q50 44 100 64 T200 64 T300 64 T400 64 V110 H0Z" fill="rgba(246,239,228,.5)"/></svg>
+    <div class="award"><b>🏆 Victorian &amp; Australian Chiropractor of the Year</b>Proud to have received both awards</div>
+  </div>
+</div></section>
+
+<div class="hours" id="hours"><div class="wrap">
+  <div class="h">Opening hours</div>
+  <div class="d"><b>Tuesday</b>8:00am – 6:00pm</div>
+  <div class="d"><b>Thursday</b>8:00am – 6:00pm</div>
+  <div class="d"><b>Saturday</b>8:00am – 11:00am</div>
+</div></div>
+
+<section id="about"><div class="wrap">
+  <div class="kicker">Who we care for</div>
+  <h2>All ages and stages of life</h2>
+  <p class="lead">Gentle and effective chiropractic care for the whole family, delivered in the heart of Port Melbourne.</p>
+  <div class="ages">
+    <div><i>🤰</i>Pregnancy</div>
+    <div><i>👶</i>Birth &amp; infancy</div>
+    <div><i>🎒</i>School age</div>
+
+    <div><i>🌿</i>And beyond</div>
+  </div>
+</div></section>
+
+<section class="story"><div class="wrap">
+  <div>
+    <div class="kicker">Our story</div>
+    <h2>Over 25 years in the neighbourhood</h2>
+    <p class="lead">Our practice has been delivering gentle and effective chiropractic care to the Port Melbourne and South Melbourne communities since 1999.</p>
+    <div class="doc"><div class="a">S</div><div><b style="color:var(--sea);font-size:18px">Dr Shaun</b><br><span style="color:var(--sub)">Chiropractor, Life Chiropractic Port Melbourne</span></div></div>
+  </div>
+  <div>
+    <p class="quote">We're proud to say we've received both the Victorian and Australian Chiropractor of the Year awards.</p>
+    <p class="note">Health practitioners in Australia can't share patient testimonials, so instead of reviews we'd love you to come in and meet our chiropractors.</p>
+  </div>
+</div></section>
+
+<section class="visit" id="visit"><div class="wrap">
+  <div>
+    <div class="kicker">Come visit</div>
+    <h2>377 Bay St, Port Melbourne</h2>
+    <div class="vcard" style="margin-top:22px">
+      <div><span>Address</span><b>377 Bay St, Port Melbourne 3207</b></div>
+      <div><span>Phone</span><b><a href="tel:0396461414">(03) 9646 1414</a></b></div>
+      <div><span>Email</span><b><a href="mailto:info@lifechiropracticportmelbourne.com.au" style="word-break:break-all">info@lifechiropracticportmelbourne.com.au</a></b></div>
+      <div><span>Tue &amp; Thu</span><b>8am – 6pm</b></div>
+      <div><span>Sat</span><b>8am – 11am</b></div>
+    </div>
+  </div>
+  <form onsubmit="event.preventDefault();this.querySelector('.fields').style.display='none';this.querySelector('.thanks').style.display='block'">
+    <div class="fields">
+      <h3>Book an appointment</h3>
+      <input placeholder="Your name" required>
+      <input placeholder="Mobile" type="tel" required>
+      <select><option>Tuesday</option><option>Thursday</option><option>Saturday morning</option></select>
+      <select><option>New patient</option><option>Existing patient</option></select>
+      <textarea rows="3" placeholder="Anything we should know? (optional)"></textarea>
+      <button class="btn" type="submit">Request booking</button>
+    </div>
+    <div class="thanks"><b>Thanks, request received!</b>We'll call you to confirm your appointment time.</div>
+  </form>
+</div></section>
+
+<footer><div class="wrap"><div>© 2026 Life Chiropractic Port Melbourne · 377 Bay St, Port Melbourne 3207</div><div>Concept design by Swoop Sites</div></div></footer>
+<div class="callbar"><a href="tel:0396461414">📞 Call</a><a href="#visit">Book Now</a></div>
+</body>
+</html>
