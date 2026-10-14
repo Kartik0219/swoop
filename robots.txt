@@ -6,4 +6,4 @@ Allow: /logo.svg
 Allow: /favicon.svg
 Disallow: /
 
-Sitemap: https://swoop-sites.pages.dev/sitemap.xml
+Sitemap: https://swoopsites.com/sitemap.xml
