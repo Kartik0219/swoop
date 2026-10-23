@@ -4,6 +4,9 @@ Allow: /index.html
 Allow: /resources/
 Allow: /logo.svg
 Allow: /favicon.svg
+Allow: /og-image.jpg
+Allow: /assets/
+Disallow: /assets/ba/
 Disallow: /
 
 Sitemap: https://swoopsites.com/sitemap.xml
