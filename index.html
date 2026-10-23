@@ -226,6 +226,17 @@
   #hero3d{position:absolute;left:50%;top:-40px;width:min(1100px,100vw);height:calc(100% + 80px);transform:translateX(-50%);pointer-events:none;opacity:0;transition:opacity 1.2s ease}
   #hero3d.on{opacity:1}
   .stage .phone,.stage .care-card{z-index:1}
+  /* Full 3D: padlock (security), dot wave (contact), card tilt, 3D reveal */
+  .lock3d,.wave3d{display:none}
+  .gl3d .lock3d{display:block;width:min(620px,100%);height:340px;margin:-30px auto 0;opacity:0;transition:opacity 1.2s ease}
+  .gl3d #security .shield{display:none}
+  .wave3d{position:absolute;left:0;bottom:0;width:100%;height:55%;pointer-events:none;opacity:0;transition:opacity 1.4s ease}
+  .gl3d .wave3d{display:block}
+  .lock3d.on{opacity:1}.wave3d.on{opacity:.55}
+  .contact{position:relative;overflow:hidden}
+  .contact .wrap{z-index:1}
+  .tilt{transition:rotate .35s cubic-bezier(.2,.7,.2,1),scale .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s;will-change:rotate}
+  .tilt.hov{scale:1.02;box-shadow:0 30px 60px rgba(0,0,0,.25)}
 
   /* Stats */
   .stats{display:grid;gap:56px;margin-top:64px;text-align:center}
@@ -466,7 +477,7 @@
   body{padding-bottom:70px}
 
   /* Reveal */
-  .js .rv{opacity:0;transform:translateY(32px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+  .js .rv{opacity:0;transform:perspective(900px) translateY(40px) rotateX(14deg);transform-origin:50% 100%;transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
   .js .rv.in{opacity:1;transform:none}
   .js .rv.d1{transition-delay:.08s}.js .rv.d2{transition-delay:.16s}.js .rv.d3{transition-delay:.24s}
 
@@ -618,7 +629,7 @@
     <p class="offer rv d3"><span class="tagf" aria-hidden="true">FREE</span><span><b>See it before you pay anything.</b> I'll design a homepage mockup for your business for free. No obligation, no pressure, and you can say no.</span></p>
 
     <div class="stage">
-      <canvas id="hero3d" aria-hidden="true"></canvas>
+      <canvas id="hero3d" data-scene="shield" aria-hidden="true"></canvas>
       <div class="phone rv" role="img" aria-label="Illustration of a mobile-first local business website on a phone, with HTTPS padlock, booking and call buttons">
         <div class="scr">
           <span class="island"></span>
@@ -793,6 +804,7 @@
 <!-- SECURITY -->
 <section class="sec d night" id="security" aria-labelledby="sec-h">
   <div class="wrap center">
+    <canvas class="lock3d" data-scene="lock" aria-hidden="true"></canvas>
     <svg class="shield rv" viewBox="0 0 120 136" aria-hidden="true">
       <defs><linearGradient id="sg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2dd4bf"/><stop offset="1" stop-color="#ff7a59"/></linearGradient></defs>
       <path d="M60 4 L110 22 V64 C110 98 88 120 60 132 C32 120 10 98 10 64 V22 Z" fill="none" stroke="url(#sg)" stroke-width="5" stroke-linejoin="round"/>
@@ -800,7 +812,7 @@
     </svg>
     <span class="eyebrow rv">Security, looked after</span>
     <h2 class="h-l rv d1" id="sec-h">Built by someone who studied <span class="grad">cybersecurity.</span></h2>
-    <p class="lede rv d2">I hold a <b>Master of Cybersecurity from La Trobe University.</b> That doesn't make any website unbreakable, but it does mean security is part of how every site is set up and looked after, not an afterthought.</p>
+    <p class="lede rv d2">I'm finishing a <b>Master of Cybersecurity at La Trobe University</b> (November 2026). That doesn't make any website unbreakable, but it does mean security is part of how every site is set up and looked after, not an afterthought.</p>
 
     <div class="sec-grid">
       <div class="sec-card rv"><svg class="si" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="28" height="28" rx="7"/><path d="M13 21l5 5 9-11"/></svg><h3>Monthly security checks</h3><p>A regular look over your site: HTTPS, software versions, forms and anything unusual, with a short plain-English report.</p><span class="plan">Care Plus &amp; Care Pro</span></div>
@@ -1132,7 +1144,7 @@
     <div class="about-text">
       <span class="eyebrow rv">About</span>
       <h2 class="h-l rv d1" id="about-h">Hi, I'm <span class="grad">Kartik.</span></h2>
-      <p class="rv d1">I'm a web developer based in Noble Park, with a <b>Master of Cybersecurity from La Trobe University.</b> I build and look after websites for local businesses in south-east Melbourne.</p>
+      <p class="rv d1">I'm a web developer based in Noble Park, finishing a <b>Master of Cybersecurity at La Trobe University.</b> I build and look after websites for local businesses in south-east Melbourne.</p>
       <p class="rv d2">I started Swoop Sites because so many great local businesses are hard to find online, or are stuck with websites that are slow, outdated or showing "Not secure". Those are fixable problems, and fixing them properly is something I genuinely enjoy.</p>
       <p class="rv d2">I build every site myself and look after it myself. <b>When you email, you get me,</b> not a call centre or a ticket number. I keep things simple, explain them in plain English, and tell you honestly if something isn't worth doing.</p>
       <p class="rv d3"><a class="more" href="https://www.linkedin.com/in/kartikp19" target="_blank" rel="noopener">See my background on LinkedIn</a></p>
@@ -1142,6 +1154,7 @@
 
 <!-- CONTACT -->
 <section class="sec d contact" id="contact" aria-labelledby="contact-h">
+  <canvas class="wave3d" data-scene="wave" aria-hidden="true"></canvas>
   <div class="glow" aria-hidden="true" style="position:absolute;left:50%;top:40%;width:900px;height:900px;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(45,212,191,.16),transparent 70%);pointer-events:none"></div>
   <div class="wrap center" style="position:relative">
     <span class="eyebrow rv">Get in touch</span>
@@ -1257,9 +1270,24 @@
     var conn=navigator.connection, lite=conn&&(conn.saveData||/2g/.test(conn.effectiveType||''));
     var gl=(function(){ try{ var c=d.createElement('canvas'); return !!(c.getContext('webgl2')||c.getContext('webgl')); }catch(e){ return false; } })();
     if(gl&&!lite){
-      var go=function(){ import('/assets/hero3d.js').catch(function(){}); };
+      root.classList.add('gl3d');
+      var go=function(){ import('/assets/site3d.js').catch(function(){}); };
       window.addEventListener('load',function(){ ('requestIdleCallback' in window)?requestIdleCallback(go,{timeout:2500}):setTimeout(go,1200); });
     }
+  }
+  /* 3D card tilt on mouse/trackpad devices */
+  if(!reduce&&window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+    d.querySelectorAll('.tile,.sec-card,.col,.step,.care-card,.about-card,.check,.fixup,.incl li,.who-grid li').forEach(function(el){
+      el.classList.add('tilt');
+      if(el.parentNode&&!el.parentNode.style.perspective) el.parentNode.style.perspective='1000px';
+      el.addEventListener('pointermove',function(e){
+        var r=el.getBoundingClientRect(), x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+        var a=Math.min(1,Math.sqrt(x*x+y*y)*2)*6;
+        el.style.rotate=(-y).toFixed(3)+' '+x.toFixed(3)+' 0 '+a.toFixed(2)+'deg';
+        el.classList.add('hov');
+      });
+      el.addEventListener('pointerleave',function(){ el.style.rotate=''; el.classList.remove('hov'); });
+    });
   }
   /* Carousel */
   var track=d.getElementById('steps');
