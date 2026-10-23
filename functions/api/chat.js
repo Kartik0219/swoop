@@ -2,7 +2,7 @@
 // POST { messages: [{ role: "user"|"assistant", content }] } -> { reply }
 import { saveLead } from "./contact.js";
 
-const MODEL = "@cf/meta/llama-3.1-8b-instruct";
+const MODEL = "@cf/meta/llama-3.1-8b-instruct-fp8";
 const hits = new Map();
 
 const FACTS = `
@@ -48,8 +48,8 @@ export async function onRequestPost({ request, env }) {
     const out = await env.AI.run(MODEL, { messages: [{ role: "system", content: SYSTEM }, ...history], max_tokens: 280, temperature: 0.3 });
     const reply = (out && out.response ? out.response : "").trim() || "Sorry, I'm not sure. Kartik can help: kartikp.work@gmail.com.";
     return json({ reply, saved: !!contact });
-  } catch (e) {
-    return json({ reply: "The assistant had a hiccup. Please email kartikp.work@gmail.com and Kartik will reply.", debug: String(e).slice(0, 300) }, 502);
+  } catch {
+    return json({ reply: "The assistant had a hiccup. Please email kartikp.work@gmail.com and Kartik will reply." }, 502);
   }
 }
 
