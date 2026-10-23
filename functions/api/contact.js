@@ -1,4 +1,4 @@
-// Contact form: saves each enquiry to the LEADS KV namespace (key lead:<time>:<id>), checked daily.
+// Contact form: saves each enquiry to the LEADS KV namespace (key lead:<time>:<id>) and emails Kartik.
 // POST form fields: name, business, website, contact, message, company (honeypot)
 
 const hits = new Map();
@@ -37,6 +37,10 @@ export async function saveLead(env, lead) {
   if (!env.LEADS) return false;
   const key = `lead:${lead.at}:${crypto.randomUUID().slice(0, 8)}`;
   await env.LEADS.put(key, JSON.stringify(lead), { expirationTtl: 60 * 60 * 24 * 365 });
+  // Email Kartik through the private swoop-mailer Worker; the lead is already saved if this fails
+  if (env.MAILER) {
+    try { await env.MAILER.fetch("https://mailer/", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(lead) }); } catch { /* best effort */ }
+  }
   return true;
 }
 
