@@ -218,7 +218,14 @@
   .care-card li span::before{content:"";width:12px;height:12px;border-radius:50%;background:var(--teal-b) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.2l2.3 2.3 4.7-5' fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat}
   .care-card .ft{font-size:11.5px;color:#86868b;margin-top:8px}
   .care-card .ft a{color:var(--teal-b)}
-  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+  @keyframes float{0%,100%{translate:0 0}50%{translate:0 -10px}}
+  /* 3D hero: tilting phone + WebGL shield (assets/hero3d.js) */
+  .stage{perspective:1100px}
+  .phone{transform-style:preserve-3d;transition:rotate .25s ease-out;will-change:rotate}
+  .phone .scr::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(60% 40% at var(--gx,30%) var(--gy,20%),rgba(255,255,255,.28),transparent 70%);mix-blend-mode:soft-light}
+  #hero3d{position:absolute;left:50%;top:-40px;width:min(1100px,100vw);height:calc(100% + 80px);transform:translateX(-50%);pointer-events:none;opacity:0;transition:opacity 1.2s ease}
+  #hero3d.on{opacity:1}
+  .stage .phone,.stage .care-card{z-index:1}
 
   /* Stats */
   .stats{display:grid;gap:56px;margin-top:64px;text-align:center}
@@ -467,6 +474,7 @@
     html{scroll-behavior:auto}
     .gal-track{scroll-behavior:auto}
     .phone{animation:none}
+    #hero3d{display:none}
     .js .rv{opacity:1;transform:none;transition:none}
     *{transition-duration:.01ms!important}
   }
@@ -610,6 +618,7 @@
     <p class="offer rv d3"><span class="tagf" aria-hidden="true">FREE</span><span><b>See it before you pay anything.</b> I'll design a homepage mockup for your business for free. No obligation, no pressure, and you can say no.</span></p>
 
     <div class="stage">
+      <canvas id="hero3d" aria-hidden="true"></canvas>
       <div class="phone rv" role="img" aria-label="Illustration of a mobile-first local business website on a phone, with HTTPS padlock, booking and call buttons">
         <div class="scr">
           <span class="island"></span>
@@ -1218,6 +1227,39 @@
       menu.classList.toggle('open',!open);
     });
     menu.addEventListener('click',function(e){ if(e.target.tagName==='A'){ tg.click(); } });
+  }
+  /* 3D hero: phone tilts toward the pointer, shield scene loads after the page is idle */
+  var ph=d.querySelector('.hero .phone');
+  if(ph&&!reduce){
+    var px=0,py=0,qx=0,qy=0,on=false;
+    function tilt(){
+      qx+=(px-qx)*.12; qy+=(py-qy)*.12;
+      var a=Math.min(1,Math.sqrt(qx*qx+qy*qy))*14;
+      ph.style.rotate=(-qy).toFixed(3)+' '+qx.toFixed(3)+' 0 '+a.toFixed(2)+'deg';
+      ph.style.setProperty('--gx',(50+qx*45)+'%'); ph.style.setProperty('--gy',(30+qy*40)+'%');
+      if(Math.abs(px-qx)+Math.abs(py-qy)>.002){ requestAnimationFrame(tilt); } else { on=false; }
+    }
+    function kick(){ if(!on){ on=true; requestAnimationFrame(tilt); } }
+    window.addEventListener('pointermove',function(e){
+      if(e.pointerType==='touch') return;
+      var r=ph.getBoundingClientRect();
+      px=Math.max(-1,Math.min(1,(e.clientX-(r.left+r.width/2))/(window.innerWidth/2)));
+      py=Math.max(-1,Math.min(1,(e.clientY-(r.top+r.height/2))/(window.innerHeight/2)));
+      kick();
+    },{passive:true});
+    window.addEventListener('scroll',function(){
+      if(window.matchMedia('(hover:none)').matches){
+        var r=ph.getBoundingClientRect();
+        py=Math.max(-1,Math.min(1,(r.top+r.height/2-window.innerHeight/2)/window.innerHeight))*.8; px=py*.4;
+        kick();
+      }
+    },{passive:true});
+    var conn=navigator.connection, lite=conn&&(conn.saveData||/2g/.test(conn.effectiveType||''));
+    var gl=(function(){ try{ var c=d.createElement('canvas'); return !!(c.getContext('webgl2')||c.getContext('webgl')); }catch(e){ return false; } })();
+    if(gl&&!lite){
+      var go=function(){ import('/assets/hero3d.js').catch(function(){}); };
+      window.addEventListener('load',function(){ ('requestIdleCallback' in window)?requestIdleCallback(go,{timeout:2500}):setTimeout(go,1200); });
+    }
   }
   /* Carousel */
   var track=d.getElementById('steps');
