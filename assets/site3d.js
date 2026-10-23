@@ -268,7 +268,7 @@ function magpie(scene, camera) {
     resize() {
       halfH = Math.tan(THREE.MathUtils.degToRad(camera.fov / 2)) * camera.position.z;
       halfW = halfH * camera.aspect;
-      bird.scale.setScalar(halfW < 4 ? 0.38 : 0.55);
+      bird.scale.setScalar(halfW < 4 ? 0.24 : 0.55);
     },
     update(t) {
       const max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
@@ -277,7 +277,7 @@ function magpie(scene, camera) {
       // Mostly hold near an edge, then sweep across: smoothstep of a sine keeps it at the sides
       const s = Math.sin(p * Math.PI * 7 + 0.6);
       const side = Math.sign(s) * Math.pow(Math.abs(s), 0.35);
-      const x = side * (halfW - 1.1);
+      const x = side * (halfW - (halfW < 4 ? 0.5 : 1.1));
       const y = halfH * 0.66 + Math.sin(t * 1.3) * 0.15 - Math.min(1.2, Math.abs(speed) * 0.01);
       const vx = x - bird.position.x;
       bird.position.x += vx * 0.08; bird.position.y += (y - bird.position.y) * 0.08;
