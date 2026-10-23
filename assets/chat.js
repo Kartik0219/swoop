@@ -6,7 +6,7 @@ panel.setAttribute('role', 'dialog');
 panel.setAttribute('aria-label', 'Swoop Sites assistant');
 panel.innerHTML = `
   <div class="cp-hd">
-    <div><b>Swoop Sites assistant</b><small>AI assistant &middot; Kartik replies by email</small></div>
+    <div><b>Swoop Sites assistant</b><small>AI assistant &middot; <a href="/privacy/" style="color:#c7d2d8">privacy</a></small></div>
     <button type="button" class="cp-x" aria-label="Close chat">&times;</button>
   </div>
   <div class="cp-log" aria-live="polite"></div>
@@ -31,7 +31,7 @@ function add(role, text) {
   return p;
 }
 
-add('assistant', "Hi! I'm the Swoop Sites AI assistant. Ask me about prices, how it works, or getting a free homepage mockup.");
+add('assistant', "Hi! I'm the Swoop Sites AI assistant. Ask me about prices, how it works, or getting a free homepage mockup. Please don't share sensitive info here.");
 
 function open() {
   panel.classList.add('open');
