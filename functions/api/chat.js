@@ -48,8 +48,8 @@ export async function onRequestPost({ request, env }) {
     const out = await env.AI.run(MODEL, { messages: [{ role: "system", content: SYSTEM }, ...history], max_tokens: 280, temperature: 0.3 });
     const reply = (out && out.response ? out.response : "").trim() || "Sorry, I'm not sure. Kartik can help: kartikp.work@gmail.com.";
     return json({ reply, saved: !!contact });
-  } catch {
-    return json({ reply: "The assistant had a hiccup. Please email kartikp.work@gmail.com and Kartik will reply." }, 502);
+  } catch (e) {
+    return json({ reply: "The assistant had a hiccup. Please email kartikp.work@gmail.com and Kartik will reply.", debug: String(e).slice(0, 300) }, 502);
   }
 }
 
