@@ -278,7 +278,7 @@ function magpie(scene, camera) {
       const s = Math.sin(p * Math.PI * 7 + 0.6);
       const side = Math.sign(s) * Math.pow(Math.abs(s), 0.35);
       const x = side * (halfW - 1.1);
-      const y = halfH * 0.45 + Math.sin(t * 1.3) * 0.15 - Math.min(1.2, Math.abs(speed) * 0.01);
+      const y = halfH * 0.66 + Math.sin(t * 1.3) * 0.15 - Math.min(1.2, Math.abs(speed) * 0.01);
       const vx = x - bird.position.x;
       bird.position.x += vx * 0.08; bird.position.y += (y - bird.position.y) * 0.08;
       if (Math.abs(vx) > 0.05) dir = vx > 0 ? 1 : -1;
