@@ -11,7 +11,7 @@ window.addEventListener('pointermove', (e) => {
   ptr.y = (e.clientY / window.innerHeight) * 2 - 1;
 }, { passive: true });
 
-const SCENES = { shield, lock, wave };
+const SCENES = { shield, lock, wave, magpie };
 
 document.querySelectorAll('canvas[data-scene]').forEach((cv) => {
   const make = SCENES[cv.dataset.scene];
@@ -218,6 +218,76 @@ function wave(scene, camera) {
       }
       attr.needsUpdate = true;
       pts.rotation.y = m.x * 0.08;
+    }
+  };
+}
+
+/* Mascot: a low-poly magpie that swoops from side to side as the page scrolls.
+   Lives on a fixed, click-through canvas; it glides near the edges and only crosses the middle quickly. */
+function magpie(scene, camera) {
+  camera.position.set(0, 0, 12);
+  scene.add(new THREE.HemisphereLight(0xffffff, 0x223344, 1.3));
+  const sun = new THREE.DirectionalLight(0xffffff, 1.4); sun.position.set(3, 5, 6); scene.add(sun);
+  const rim = new THREE.PointLight(TEAL, 25, 20); rim.position.set(-3, 1, 4); scene.add(rim);
+
+  const black = new THREE.MeshStandardMaterial({ color: 0x111418, roughness: 0.45, metalness: 0.1, flatShading: true });
+  const white = new THREE.MeshStandardMaterial({ color: 0xf2f4f5, roughness: 0.6, flatShading: true });
+  const sheen = new THREE.MeshStandardMaterial({ color: 0x0d4f5c, roughness: 0.35, metalness: 0.3, flatShading: true });
+  const beakMat = new THREE.MeshStandardMaterial({ color: 0x8a949c, roughness: 0.4, flatShading: true });
+
+  const bird = new THREE.Group();
+  const body = new THREE.Mesh(new THREE.IcosahedronGeometry(0.5, 1), black); body.scale.set(1.5, 0.75, 0.8); bird.add(body);
+  const belly = new THREE.Mesh(new THREE.IcosahedronGeometry(0.42, 1), white); belly.scale.set(1.05, 0.55, 0.7); belly.position.set(-0.05, -0.12, 0); bird.add(belly);
+  const head = new THREE.Mesh(new THREE.IcosahedronGeometry(0.3, 1), black); head.position.set(0.72, 0.2, 0); bird.add(head);
+  const nape = new THREE.Mesh(new THREE.IcosahedronGeometry(0.22, 0), white); nape.scale.set(0.8, 0.6, 1.1); nape.position.set(0.45, 0.3, 0); bird.add(nape);
+  const beak = new THREE.Mesh(new THREE.ConeGeometry(0.09, 0.38, 6), beakMat); beak.rotation.z = -Math.PI / 2; beak.position.set(1.08, 0.16, 0); bird.add(beak);
+  const eyeMat = new THREE.MeshStandardMaterial({ color: CORAL, emissive: CORAL, emissiveIntensity: 0.6 });
+  [0.13, -0.13].forEach((z) => { const e = new THREE.Mesh(new THREE.SphereGeometry(0.04, 8, 8), eyeMat); e.position.set(0.86, 0.27, z); bird.add(e); });
+  const tail = new THREE.Mesh(new THREE.BoxGeometry(0.75, 0.05, 0.32), black); tail.position.set(-0.95, 0.02, 0); tail.rotation.z = 0.15; bird.add(tail);
+  const tailTip = new THREE.Mesh(new THREE.BoxGeometry(0.2, 0.06, 0.34), white); tailTip.position.set(-1.25, 0.06, 0); tailTip.rotation.z = 0.15; bird.add(tailTip);
+
+  // Wings: a black inner panel with a white shoulder patch, hinged at the body
+  function wing(side) {
+    const pivot = new THREE.Group(); pivot.position.set(0.05, 0.12, 0.3 * side);
+    const shape = new THREE.Shape();
+    shape.moveTo(0.35, 0); shape.lineTo(-0.45, 0); shape.lineTo(-0.85, 1.25); shape.lineTo(0.05, 1.05); shape.lineTo(0.35, 0);
+    const g = new THREE.ExtrudeGeometry(shape, { depth: 0.05, bevelEnabled: false });
+    const w = new THREE.Mesh(g, black); w.rotation.x = side * Math.PI / 2; pivot.add(w);
+    const patch = new THREE.Mesh(new THREE.BoxGeometry(0.42, 0.06, 0.32), white); patch.position.set(0, 0.01, 0.28 * side); pivot.add(patch);
+    const tipG = new THREE.ExtrudeGeometry((() => { const t = new THREE.Shape(); t.moveTo(-0.6, 0.9); t.lineTo(-0.85, 1.25); t.lineTo(0.05, 1.05); t.lineTo(-0.1, 0.85); return t; })(), { depth: 0.055, bevelEnabled: false });
+    const tip = new THREE.Mesh(tipG, sheen); tip.rotation.x = side * Math.PI / 2; pivot.add(tip);
+    bird.add(pivot);
+    return pivot;
+  }
+  const wingL = wing(1), wingR = wing(-1);
+  bird.scale.setScalar(0.55);
+  scene.add(bird);
+
+  let halfW = 6, halfH = 4, lastY = window.scrollY, speed = 0, dir = 1;
+  return {
+    resize() {
+      halfH = Math.tan(THREE.MathUtils.degToRad(camera.fov / 2)) * camera.position.z;
+      halfW = halfH * camera.aspect;
+      bird.scale.setScalar(halfW < 4 ? 0.38 : 0.55);
+    },
+    update(t) {
+      const max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+      const p = window.scrollY / max;
+      speed += (window.scrollY - lastY - speed) * 0.15; lastY = window.scrollY;
+      // Mostly hold near an edge, then sweep across: smoothstep of a sine keeps it at the sides
+      const s = Math.sin(p * Math.PI * 7 + 0.6);
+      const side = Math.sign(s) * Math.pow(Math.abs(s), 0.35);
+      const x = side * (halfW - 1.1);
+      const y = halfH * 0.45 + Math.sin(t * 1.3) * 0.15 - Math.min(1.2, Math.abs(speed) * 0.01);
+      const vx = x - bird.position.x;
+      bird.position.x += vx * 0.08; bird.position.y += (y - bird.position.y) * 0.08;
+      if (Math.abs(vx) > 0.05) dir = vx > 0 ? 1 : -1;
+      bird.rotation.y += ((dir > 0 ? 0 : Math.PI) - bird.rotation.y) * 0.1;
+      bird.rotation.x = THREE.MathUtils.clamp(vx * 0.4, -0.5, 0.5) * dir;
+      bird.rotation.z = THREE.MathUtils.clamp(-speed * 0.004, -0.3, 0.3);
+      const flap = Math.abs(vx) > 0.15 || Math.abs(speed) > 2 ? 9 : 3.2;
+      const a = Math.sin(t * flap) * (flap > 5 ? 0.75 : 0.35);
+      wingL.rotation.x = a; wingR.rotation.x = -a;
     }
   };
 }

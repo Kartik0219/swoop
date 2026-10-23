@@ -226,6 +226,70 @@
   #hero3d{position:absolute;left:50%;top:-40px;width:min(1100px,100vw);height:calc(100% + 80px);transform:translateX(-50%);pointer-events:none;opacity:0;transition:opacity 1.2s ease}
   #hero3d.on{opacity:1}
   .stage .phone,.stage .care-card{z-index:1}
+  /* Upgrades (Oct 2026): photo, free check, contact form, chat, magpie, before/after */
+  .about-card .photo{width:112px;height:112px;border-radius:28px;object-fit:cover;display:block;box-shadow:0 10px 30px rgba(15,34,56,.18)}
+  .fcheck{text-align:center}
+  .fc-form{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:620px;margin:32px auto 0}
+  .fc-form input{flex:1 1 260px;min-width:0;font:inherit;font-size:17px;padding:14px 18px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink)}
+  .fc-form input:focus{outline:2px solid #0d9488;outline-offset:2px}
+  .fc-form button{flex:none}
+  .fc-note{margin-top:12px;font-size:13px;color:var(--sub)}
+  .fc-out{max-width:720px;margin:28px auto 0;text-align:left}
+  .fc-score{display:flex;align-items:center;gap:16px;justify-content:center;margin-bottom:18px}
+  .fc-score b{font-size:44px;letter-spacing:-.03em}
+  .fc-list{list-style:none;display:grid;gap:10px;padding:0}
+  .fc-list li{display:flex;gap:12px;align-items:flex-start;background:#fff;border-radius:16px;padding:14px 16px}
+  .fc-list i{flex:none;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-weight:700;color:#fff;font-size:14px}
+  .fc-list .ok i{background:#0d9488}.fc-list .no i{background:#e2562f}
+  .fc-list span{font-size:15px;color:var(--sub)}.fc-list span b{display:block;color:var(--ink);font-size:16px}
+  .fc-cta{text-align:center;margin-top:20px}
+  .cform{max-width:620px;margin:40px auto 0;text-align:left;display:grid;gap:12px;position:relative;z-index:1}
+  .cform .row{display:grid;gap:12px}
+  .cform label{font-size:13px;color:#a1a1a6;display:block;margin-bottom:6px}
+  .cform input,.cform textarea{width:100%;font:inherit;font-size:16px;padding:13px 16px;border-radius:14px;border:1px solid #3a3a3c;background:rgba(28,28,30,.8);color:#f5f5f7}
+  .cform input:focus,.cform textarea:focus{outline:2px solid #2dd4bf;outline-offset:1px;border-color:transparent}
+  .cform textarea{min-height:110px;resize:vertical}
+  .cform .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+  .cform .send-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+  .cform .msg{font-size:15px;color:#a1a1a6}
+  .cform .msg.ok{color:#2dd4bf}.cform .msg.err{color:#ff9a7f}
+  .or-email{margin-top:30px;color:#a1a1a6;font-size:15px}
+  .ba-wrap{margin-top:64px}
+  .ba-wrap h3{text-align:center;font-size:24px;letter-spacing:-.02em}
+  .ba-wrap>p{text-align:center;color:var(--sub);margin-top:8px;font-size:15px}
+  .ba-grid{display:grid;gap:24px;margin-top:28px;justify-content:center}
+  .ba-grid figure{margin:0}
+  .ba{position:relative;width:min(340px,86vw);aspect-ratio:780/1100;border-radius:22px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.18);user-select:none;touch-action:pan-y;--x:50%}
+  .ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;pointer-events:none}
+  .ba .after{clip-path:inset(0 0 0 var(--x))}
+  .ba .handle{position:absolute;top:0;bottom:0;left:var(--x);width:3px;margin-left:-1.5px;background:#fff;box-shadow:0 0 0 1px rgba(0,0,0,.15);pointer-events:none}
+  .ba .handle::after{content:"\2194";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:40px;height:40px;border-radius:50%;background:#fff;color:#0f2238;display:grid;place-items:center;font-size:18px;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+  .ba input[type=range]{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0;z-index:2}
+  .ba input[type=range]:focus-visible~.handle::after{outline:3px solid #2dd4bf}
+  .ba .tag{position:absolute;top:12px;font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;background:rgba(0,0,0,.65);color:#fff;pointer-events:none}
+  .ba .tag.l{left:12px}.ba .tag.r{right:12px;background:#0d9488}
+  .ba-cap{text-align:center;font-size:14px;color:var(--sub);margin-top:10px}
+  #chat-bubble{position:fixed;right:16px;bottom:calc(84px + env(safe-area-inset-bottom));z-index:80;width:58px;height:58px;border-radius:50%;border:0;cursor:pointer;background:linear-gradient(140deg,#0d9488,#0f2238 75%,#ff7a59 150%);color:#fff;box-shadow:0 12px 30px rgba(0,0,0,.35);display:grid;place-items:center}
+  #chat-bubble svg{width:26px;height:26px}
+  #chat-panel{position:fixed;right:16px;bottom:calc(152px + env(safe-area-inset-bottom));z-index:81;width:min(370px,calc(100vw - 32px));height:min(480px,calc(100vh - 220px));display:none;flex-direction:column;border-radius:22px;overflow:hidden;background:#1c1c1e;color:#f5f5f7;box-shadow:0 30px 70px rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.1)}
+  #chat-panel.open{display:flex}
+  .cp-hd{display:flex;justify-content:space-between;align-items:flex-start;padding:16px 18px;background:linear-gradient(140deg,#0f2238,#0d9488 140%)}
+  .cp-hd small{display:block;font-size:12px;color:#c7d2d8;margin-top:2px}
+  .cp-x{background:none;border:0;color:#fff;font-size:26px;line-height:1;cursor:pointer}
+  .cp-log{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:8px}
+  .cp-m{max-width:85%;padding:10px 13px;border-radius:16px;font-size:15px;line-height:1.4}
+  .cp-m.ai{background:#2c2c2e;align-self:flex-start;border-bottom-left-radius:4px}
+  .cp-m.me{background:#0d9488;align-self:flex-end;border-bottom-right-radius:4px}
+  .cp-m.typing{opacity:.6}
+  .cp-f{display:flex;gap:8px;padding:12px;border-top:1px solid #2c2c2e}
+  .cp-f input{flex:1;min-width:0;font:inherit;font-size:16px;padding:11px 14px;border-radius:999px;border:1px solid #3a3a3c;background:#111;color:#f5f5f7}
+  .cp-f button{width:44px;border-radius:50%;border:0;background:#ff7a59;color:#fff;font-size:18px;cursor:pointer}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .magpie3d{display:none}
+  .gl3d .magpie3d{display:block;position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none;z-index:60;opacity:0;transition:opacity 1.2s ease}
+  .gl3d .magpie3d.on{opacity:1}
+  @media (min-width:640px){.cform .row{grid-template-columns:1fr 1fr}.ba-grid{grid-template-columns:repeat(2,auto)}}
+  @media (min-width:834px){#chat-bubble{right:24px;bottom:24px}#chat-panel{right:24px;bottom:96px}}
   /* Full 3D: padlock (security), dot wave (contact), card tilt, 3D reveal */
   .lock3d,.wave3d{display:none}
   .gl3d .lock3d{display:block;width:min(620px,100%);height:340px;margin:-30px auto 0;opacity:0;transition:opacity 1.2s ease}
@@ -671,6 +735,22 @@
   </div>
 </section>
 
+<!-- FREE CHECK -->
+<section class="sec w fcheck" id="free-check" aria-labelledby="fc-h">
+  <div class="wrap">
+    <span class="eyebrow rv">Free website check</span>
+    <h2 class="h-l rv d1" id="fc-h">Is your website <span class="grad">secure and fast?</span></h2>
+    <p class="lede rv d2">Type in your website and get an instant, plain-English check of its security, phone setup and speed. Free, and no email needed.</p>
+    <form class="fc-form rv d2" id="fc-form" novalidate>
+      <label class="sr" for="fc-url">Your website address</label>
+      <input id="fc-url" name="url" type="text" inputmode="url" autocomplete="url" placeholder="yourbusiness.com.au" required>
+      <button class="pill pill-fill" type="submit">Check my site</button>
+    </form>
+    <p class="fc-note rv">A quick, read-only look at your public homepage. Nothing is changed or stored.</p>
+    <div class="fc-out" id="fc-out" aria-live="polite"></div>
+  </div>
+</section>
+
 <!-- STATS -->
 <section class="sec l" id="glance" aria-labelledby="glance-h">
   <div class="wrap center">
@@ -874,6 +954,24 @@
         <a class="more" href="https://gavindefootball.com" target="_blank" rel="noopener">Visit the site<span class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)"> (opens in a new tab)</span></a>
       </div>
     </div>
+    <div class="ba-wrap">
+      <h3 class="rv">Before and after</h3>
+      <p class="rv">Drag the slider to compare. These are free mockups I made for local businesses; their old sites are blurred for privacy.</p>
+      <div class="ba-grid">
+        <figure class="rv"><div class="ba">
+          <img src="/assets/ba/heart-to-heart-before.webp" alt="A local florist's old website (blurred)" loading="lazy" width="780" height="1100">
+          <img class="after" src="/assets/ba/heart-to-heart-after.webp" alt="Swoop Sites homepage mockup for a local florist" loading="lazy" width="780" height="1100">
+          <input type="range" min="0" max="100" value="50" aria-label="Compare before and after for a local florist">
+          <span class="handle" aria-hidden="true"></span><span class="tag l">Before</span><span class="tag r">Mockup</span>
+        </div><figcaption class="ba-cap">Example redesign mockup &middot; local florist</figcaption></figure>
+        <figure class="rv d1"><div class="ba">
+          <img src="/assets/ba/apple-auto-care-before.webp" alt="A local mechanic's old website (blurred)" loading="lazy" width="780" height="1100">
+          <img class="after" src="/assets/ba/apple-auto-care-after.webp" alt="Swoop Sites homepage mockup for a local mechanic" loading="lazy" width="780" height="1100">
+          <input type="range" min="0" max="100" value="50" aria-label="Compare before and after for a local mechanic">
+          <span class="handle" aria-hidden="true"></span><span class="tag l">Before</span><span class="tag r">Mockup</span>
+        </div><figcaption class="ba-cap">Example redesign mockup &middot; local mechanic</figcaption></figure>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -990,7 +1088,7 @@
       <p class="h-m rv">See it before you pay. <span class="grad">Then decide.</span></p>
       <ul class="notes">
         <li class="rv"><b>See it before you pay</b><span>You get a free design first, and you only pay a deposit once you've seen it and you're happy with it.</span></li>
-        <li class="rv"><b>No long lock-in</b><span>Care plans have a 6-month minimum, then they're month-to-month. Cancel any time after that with 30 days' notice.</span></li>
+        <li class="rv"><b>No long lock-in</b><span>Care plans are month-to-month. Cancel any time with 30 days' notice.</span></li>
         <li class="rv"><b>Payment</b><span>50% deposit to start, 50% when your site goes live, by bank transfer. Care plans are billed monthly from launch.</span></li>
         <li class="rv"><b>Your domain</b><span>Domain registration is in your name and paid directly to the registrar.</span></li>
         <li class="rv"><b>Currency</b><span>Prices in AUD.</span></li>
@@ -1131,7 +1229,7 @@
 <section class="sec l" id="about" aria-labelledby="about-h">
   <div class="wrap about">
     <div class="about-card rv">
-      <div class="mono" aria-hidden="true">KP</div>
+      <img class="photo" src="/assets/kartik.jpg" alt="Kartik Panikar, founder of Swoop Sites" width="112" height="112" loading="lazy" decoding="async">
       <h3>Kartik Panikar</h3>
       <dl>
         <div><dt>Role</dt><dd>Founder, web developer</dd></div>
@@ -1167,6 +1265,20 @@
       <li>Your current website, if you have one</li>
       <li>What you do and the suburb you're in</li>
     </ol>
+    <form class="cform rv" id="cform" action="/api/contact" method="post">
+      <div class="row">
+        <div><label for="cf-name">Your name</label><input id="cf-name" name="name" autocomplete="name" required maxlength="80"></div>
+        <div><label for="cf-biz">Business name</label><input id="cf-biz" name="business" autocomplete="organization" maxlength="120"></div>
+      </div>
+      <div class="row">
+        <div><label for="cf-web">Current website (if any)</label><input id="cf-web" name="website" inputmode="url" maxlength="200" placeholder="yourbusiness.com.au"></div>
+        <div><label for="cf-contact">Email or phone</label><input id="cf-contact" name="contact" required maxlength="120"></div>
+      </div>
+      <div><label for="cf-msg">What do you do, and which suburb?</label><textarea id="cf-msg" name="message" maxlength="2000"></textarea></div>
+      <div class="hp" aria-hidden="true"><label for="cf-company">Company</label><input id="cf-company" name="company" tabindex="-1" autocomplete="off"></div>
+      <div class="send-row"><button class="pill pill-fill" type="submit">Get my free mockup</button><span class="msg" id="cf-msg-out" role="status"></span></div>
+    </form>
+    <p class="or-email rv">Prefer email? Send the same details to the address above.</p>
     <div class="ctas rv">
       <a class="pill pill-fill" href="mailto:Kartikp.work@gmail.com?subject=Free%20homepage%20mockup%20request&amp;body=Hi%20Kartik%2C%0A%0ABusiness%20name%3A%20%0ACurrent%20website%20(if%20any)%3A%20%0AWhat%20we%20do%20%2F%20suburb%3A%20%0A%0AThanks!"><svg aria-hidden="true"><use href="#mail"/></svg>Get a free mockup</a>
     </div>
@@ -1213,6 +1325,8 @@
   </div>
 </footer>
 
+<canvas class="magpie3d" data-scene="magpie" aria-hidden="true"></canvas>
+<button id="chat-bubble" type="button" aria-label="Chat with the Swoop Sites assistant" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg></button>
 <div class="mbar" role="region" aria-label="Quick contact">
   <span><b>Free homepage mockup</b>No obligation</span>
   <a class="pill pill-fill" href="mailto:Kartikp.work@gmail.com?subject=Free%20homepage%20mockup%20request"><svg aria-hidden="true"><use href="#mail"/></svg>Email us</a>
@@ -1289,6 +1403,54 @@
       el.addEventListener('pointerleave',function(){ el.style.rotate=''; el.classList.remove('hov'); });
     });
   }
+  /* Free website check */
+  var fcf=d.getElementById('fc-form'), fco=d.getElementById('fc-out');
+  function esc(t){ return String(t).replace(/[&<>"']/g,function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+  if(fcf){
+    fcf.addEventListener('submit',function(e){
+      e.preventDefault();
+      var url=d.getElementById('fc-url').value.trim(), btn=fcf.querySelector('button');
+      if(!url){ fco.innerHTML='<p class="fc-note">Type your website address first.</p>'; return; }
+      btn.disabled=true; btn.textContent='Checking...'; fco.innerHTML='<p class="fc-note">Checking '+esc(url)+' (takes a few seconds)...</p>';
+      fetch('/api/check',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({url:url})})
+        .then(function(r){ return r.json(); })
+        .then(function(r){
+          if(r.error){ fco.innerHTML='<p class="fc-note">'+esc(r.error)+'</p>'; return; }
+          var h='<div class="fc-score"><b>'+r.score+'/'+r.total+'</b><span>checks passed for <b>'+esc(r.host)+'</b></span></div><ul class="fc-list">';
+          r.checks.forEach(function(c){ h+='<li class="'+(c.pass?'ok':'no')+'"><i aria-hidden="true">'+(c.pass?'&#10003;':'!')+'</i><span><b>'+esc(c.label)+(c.pass?'':' (needs work)')+'</b>'+esc(c.detail)+'</span></li>'; });
+          h+='</ul><p class="fc-cta">'+(r.score<r.total?'<a class="pill pill-fill" href="#contact">Want me to fix these? Get a free mockup</a>':'Looking good! Want a fresh design anyway? <a class="more" href="#contact">Get a free mockup</a>')+'</p>';
+          fco.innerHTML=h;
+        })
+        .catch(function(){ fco.innerHTML='<p class="fc-note">The check couldn\'t run just now. Please try again in a minute.</p>'; })
+        .then(function(){ btn.disabled=false; btn.textContent='Check my site'; });
+    });
+  }
+  /* Contact form */
+  var cf=d.getElementById('cform');
+  if(cf){
+    cf.addEventListener('submit',function(e){
+      e.preventDefault();
+      var out=d.getElementById('cf-msg-out'), btn=cf.querySelector('button[type=submit]');
+      if(!cf.checkValidity()){ out.className='msg err'; out.textContent='Please add your name and an email or phone number.'; return; }
+      btn.disabled=true; out.className='msg'; out.textContent='Sending...';
+      fetch('/api/contact',{method:'POST',body:new FormData(cf)})
+        .then(function(r){ return r.json(); })
+        .then(function(r){
+          if(r.ok){ cf.reset(); out.className='msg ok'; out.textContent="Thanks! I'll reply by email, usually within a day."; }
+          else { out.className='msg err'; out.textContent=r.error||'Something went wrong. Please email instead.'; }
+        })
+        .catch(function(){ out.className='msg err'; out.textContent="Couldn't send. Please email Kartikp.work@gmail.com."; })
+        .then(function(){ btn.disabled=false; });
+    });
+  }
+  /* Before/after sliders */
+  d.querySelectorAll('.ba').forEach(function(b){
+    var r=b.querySelector('input[type=range]');
+    r.addEventListener('input',function(){ b.style.setProperty('--x',r.value+'%'); });
+  });
+  /* Chat: load the panel on first click */
+  var cb=d.getElementById('chat-bubble');
+  if(cb){ cb.addEventListener('click',function(){ import('/assets/chat.js').catch(function(){ location.href='#contact'; }); },{once:true}); }
   /* Carousel */
   var track=d.getElementById('steps');
   if(track){
