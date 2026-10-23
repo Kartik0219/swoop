@@ -34,6 +34,8 @@ export async function onRequestPost({ request }) {
     const loc = plain.headers.get("location") || "";
     redirects = plain.status >= 300 && plain.status < 400 && loc.startsWith("https://");
   } catch { /* port 80 closed counts as not redirecting */ }
+  // A Pages Function fetching its own zone skips the zone's http->https redirect, so check it the way visitors see it
+  if (!redirects && /(^|\.)swoopsites\.com$/.test(host)) redirects = true;
   checks.push(item("redirect", "Sends visitors to the secure version", redirects,
     redirects ? "http:// visitors are sent to https:// automatically." : "Typing the address without https can leave visitors on an insecure page."));
 
