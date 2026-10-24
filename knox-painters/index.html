@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Knox Painters | Painters and Decorators, Upper Ferntree Gully (concept)</title>
+<meta name="description" content="Concept homepage for Knox Painters: qualified painters and decorators in Upper Ferntree Gully with over 35 years experience. Interior, exterior, commercial and wallpaper hanging. Free quotes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Barlow:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Colours taken from the house in Knox Painters' own photo: sage trim, cream weatherboard, deep green. */
+  --bg: #b4c1ae;          /* sage field */
+  --paper: #e9e9e5;       /* the colour card */
+  --ink: #1d221e;
+  --muted: #3c463e;
+  --accent: #2c3a2b;      /* deep green: the one action colour */
+  --accent-ink: #e9e9e5;
+  --field-2: #d8c5b8;     /* blush, for the services chapter */
+  --field-4: #2c3620;     /* olive close */
+  --field-4-ink: #ece8dc;
+  --step-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+  --step-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+  --step-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
+  --step-head: clamp(2.5rem, 1.2rem + 5vw, 5.5rem);
+  --step-h3: clamp(2.25rem, 1.6rem + 2vw, 3rem);
+  --m: clamp(16px, 2.2vw, 28px);   /* the one pair of page margins */
+  --ease: cubic-bezier(.16, 1, .3, 1);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { margin: 0; background: var(--field-4); color: var(--ink); font: 400 var(--step-body)/1.5 Barlow, system-ui, sans-serif; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-underline-offset: 3px; }
+::selection { background: var(--accent); color: var(--accent-ink); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+h1, h2, h3 { font-family: "Barlow Condensed", "Arial Narrow", sans-serif; font-weight: 700; letter-spacing: -0.02em; line-height: 0.9; margin: 0; text-wrap: balance; }
+p { margin: 0; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 22px; background: var(--accent); color: var(--accent-ink);
+  font: 500 var(--step-body)/1 Barlow, sans-serif; text-decoration: none; border: 0; border-radius: 0; cursor: pointer;
+  transition: transform .25s var(--ease), background-color .25s var(--ease); }
+.btn:hover { background: #1c261c; transform: translateY(-2px); }
+.btn:active { transform: translateY(0) scale(.98); }
+
+/* Concept banner: always first, never hidden */
+.concept { background: #111; color: #ddd; font-size: var(--step-small); text-align: center; padding: 9px var(--m); position: relative; z-index: 5; }
+.concept b { color: #fff; }
+
+/* The page slides away to uncover the footer (curtain) */
+main { position: relative; z-index: 2; background: var(--bg); }
+
+/* ---------- Top row on the field ---------- */
+.top { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 16px; padding: 22px var(--m) 0; }
+.mark { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font: 700 var(--step-lead)/1 "Barlow Condensed", sans-serif; letter-spacing: -0.01em; }
+.mark svg { width: 34px; height: 34px; }
+.top nav { display: flex; gap: 28px; }
+.top nav a { text-decoration: none; font-weight: 500; }
+.top nav a:hover { text-decoration: underline; }
+.top .btn { justify-self: end; }
+
+/* ---------- Hero: the colour card, cropped by the fold ---------- */
+.hero { padding-top: clamp(40px, 7vh, 96px); overflow: hidden; }
+.card { --r: 26px; position: relative; width: min(640px, calc(100% - 2 * var(--m))); margin: 0 auto; background: var(--paper);
+  padding: clamp(28px, 4.2vw, 56px) clamp(22px, 4.2vw, 56px) 64px; text-align: center;
+}
+.card .bite { position: absolute; width: calc(var(--r) * 2); height: calc(var(--r) * 2); border-radius: 50%; background: var(--bg); }
+.card .bite.tl { top: calc(var(--r) * -1); left: calc(var(--r) * -1); } .card .bite.tr { top: calc(var(--r) * -1); right: calc(var(--r) * -1); }
+.card h1 { font-size: clamp(4.25rem, 15vw, 9.5rem); text-transform: uppercase; line-height: 0.86; }
+.card h1 span { display: block; }
+.card h1 span:first-child { transform: translateX(-7%); }
+.card h1 span:last-child { transform: translateX(6%); }
+.card .what { margin: 36px auto 0; max-width: 30ch; font-size: var(--step-lead); line-height: 1.3; }
+.facts { list-style: none; margin: 26px 0 0; padding: 0; display: flex; flex-direction: column; align-items: center; gap: 10px; font-size: var(--step-body); }
+.facts li + li::before { content: ""; display: block; width: 10px; height: 10px; background: var(--accent); transform: rotate(45deg); margin: 0 auto 10px; }
+.calls { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 30px; }
+.calls a { min-width: 220px; }
+.calls .btn.alt { background: var(--bg); color: var(--ink); }
+.calls .btn.alt:hover { background: var(--ink); color: var(--paper); }
+
+/* the live thing: repaint the house */
+.hero-grid { display: grid; grid-template-columns: minmax(0, 620px) minmax(0, 480px); gap: clamp(32px, 4vw, 64px); justify-content: center; align-items: start; padding: 0 var(--m); }
+.hero-grid .card { width: auto; margin: 0; }
+.paint { text-align: left; background: var(--paper); padding: 40px 32px 36px; margin-top: 120px; }
+@media (max-width: 1100px) { .hero-grid { grid-template-columns: minmax(0, 640px); } .paint { margin-top: 12px; } }
+.paint h2 { font-size: var(--step-h3); text-transform: uppercase; }
+.paint > p { margin: 14px 0 0; max-width: 40ch; }
+.house { margin: 28px 0 0; background: #dfe6e8; }
+.house svg { display: block; width: 100%; height: auto; }
+.house svg * { transition: fill .6s var(--ease); }
+.chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 10px; }
+.chips input { position: absolute; opacity: 0; pointer-events: none; }
+.chip { display: block; cursor: pointer; background: #fff; padding: 0 0 10px; transition: transform .3s var(--ease); }
+.chip:hover { transform: translateY(-3px); }
+.chip i { display: grid; grid-template-rows: 2fr 1fr 1fr; height: 76px; margin-bottom: 8px; }
+.chip i b { display: block; }
+.chip span { display: block; padding: 0 10px; font-size: var(--step-small); font-weight: 500; line-height: 1.25; }
+.chips input:checked + .chip { background: var(--ink); color: var(--paper); }
+.chips input:focus-visible + .chip { outline: 3px solid var(--accent); outline-offset: 3px; }
+.plate { margin: 40px 0 0; }
+.plate figcaption, .note { font-size: var(--step-small); }
+.plate img { width: 100%; }
+.plate figcaption { margin-top: 10px; font-size: var(--step-small); color: var(--muted); text-align: center; }
+.quote-cta { margin-top: 26px; }
+.quote-cta .btn { width: 100%; }
+
+/* scheme colours (no script needed: the radio + :has() repaints it) */
+.paint { --roof: #6d8b7d; --wall: #e9d8ad; --trim: #6b8273; --lace: #9b3b34; --awn: #e8e6df; }
+.paint:has(#s2:checked) { --roof: #3f4447; --wall: #dcdcd6; --trim: #2f3437; --lace: #f4f2ec; --awn: #2f3437; }
+.paint:has(#s3:checked) { --roof: #7b2f2a; --wall: #c4a77c; --trim: #3e5a45; --lace: #f1e7cf; --awn: #3e5a45; }
+.paint:has(#s4:checked) { --roof: #8a9399; --wall: #f5f3ee; --trim: #1f3b57; --lace: #1f3b57; --awn: #f5f3ee; }
+
+/* ---------- Services: giant word, filled bars ---------- */
+.services { background: var(--field-2); padding: 200px var(--m); container-type: inline-size; }
+.services .col { max-width: 640px; margin: 0 auto; container-type: inline-size; }
+.services h2 { font-size: 27.5cqw; text-transform: uppercase; line-height: 0.8; letter-spacing: -0.03em; }
+.services .lede { margin: 26px 0 30px; font-size: var(--step-lead); line-height: 1.35; }
+.tool { margin: 48px 0 0; }
+.tool img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.bars { display: flex; flex-direction: column; gap: 6px; }
+.bars details { background: #e8d9cf; }
+.bars summary { list-style: none; display: flex; justify-content: space-between; align-items: center; min-height: 58px; padding: 0 18px; cursor: pointer; font-weight: 500; transition: background-color .2s; }
+.bars summary::-webkit-details-marker { display: none; }
+.bars summary::after { content: "+"; font: 700 1.6rem/1 "Barlow Condensed", sans-serif; transition: transform .3s var(--ease); }
+.bars details[open] summary::after { transform: rotate(45deg); }
+.bars summary:hover { background: #efe3da; }
+.bars .panel { padding: 4px 18px 22px; }
+.bars ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.bars li { display: flex; justify-content: space-between; gap: 16px; }
+.bars li a { font-weight: 500; white-space: nowrap; }
+
+/* ---------- Work: one big picture, two details ---------- */
+.work { background: var(--bg); padding: 160px var(--m) 200px; }
+.work h2 { font-size: var(--step-head); text-transform: uppercase; max-width: 1240px; margin: 0 auto 40px; }
+.work-grid { max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: auto auto; gap: 16px; }
+.work-grid figure { margin: 0; }
+.work-grid .big { grid-row: span 2; }
+.work-grid img { width: 100%; height: 100%; object-fit: cover; }
+.work-grid .big img { aspect-ratio: 16 / 9; }
+.work-grid figure:not(.big) img { aspect-ratio: 4 / 3; }
+.work-grid figcaption { margin-top: 8px; font-size: var(--step-small); }
+@media (max-width: 760px) { .work { padding: 120px var(--m); } .work-grid { grid-template-columns: 1fr 1fr; } .work-grid .big { grid-column: 1 / -1; grid-row: auto; } }
+
+/* ---------- Showcase: the forest, and the slips ---------- */
+.slips-section { position: relative; height: 96svh; min-height: 720px; overflow: hidden; color: var(--paper); background: #26301f; }
+.slips-section > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform: scale(1.06); }
+.slips-copy { position: relative; z-index: 1; isolation: isolate; margin-left: 18%; width: min(620px, calc(100% - 18% - var(--m))); padding: 120px 0 0; }
+.slips-copy::before { content: ""; position: absolute; inset: 80px -32px -40px; background: rgba(18, 22, 16, .62); z-index: -1; }
+.slips-copy h2 { font-size: var(--step-head); text-transform: uppercase; }
+.slips-copy p { margin-top: 22px; font-size: var(--step-lead); line-height: 1.3; }
+.slips { z-index: 1; position: absolute; left: var(--m); right: var(--m); bottom: 0; display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; align-items: end; }
+.slip { position: relative; z-index: 1; background: var(--paper); color: var(--ink); padding: 18px 16px; font-size: var(--step-body); line-height: 1.4; }
+.slip:nth-child(1) { height: 34svh; } .slip:nth-child(2) { height: 42svh; transform: rotate(-1.5deg); } .slip:nth-child(3) { height: 28svh; }
+.slip:nth-child(4) { height: 44svh; } .slip:nth-child(5) { height: 31svh; transform: rotate(1.2deg); } .slip:nth-child(6) { height: 38svh; }
+.slip strong { display: block; font: 700 var(--step-lead)/1 "Barlow Condensed", sans-serif; text-transform: uppercase; }
+.slip .tear { display: block; margin: 12px 0; border-top: 5px dotted #9ba39c; }
+
+/* ---------- About: a letter on a sheet with a tear-off strip ---------- */
+.about { padding: 200px var(--m); background: var(--bg); }
+.sheet { max-width: 640px; margin: 0 auto; background: var(--paper); padding: 60px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+.sheet .who { display: flex; align-items: center; gap: 14px; }
+.sheet .who span { width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; font: 700 1.125rem/1 "Barlow Condensed", sans-serif; }
+.sheet h2 { font-size: var(--step-h3); text-transform: uppercase; }
+.sheet .letter { margin-top: 28px; display: flex; flex-direction: column; gap: 1.2em; line-height: 1.55; }
+.sheet mark { background: #dbe4cf; color: inherit; padding: 0 .15em; }
+.sheet .sign { margin-top: 30px; font-style: italic; font-size: var(--step-lead); }
+.sheet .role { font-size: var(--step-small); color: var(--muted); }
+.stub { max-width: 640px; margin: 0 auto; background: var(--paper); display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; min-height: 72px; padding: 14px 60px;
+  border-top: 6px dotted var(--bg); }
+.stub a.mail { font-weight: 500; }
+
+/* ---------- Contact: a card on a photograph of the place ---------- */
+.contact { position: relative; min-height: 100svh; background: #222; }
+.contact > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 30% 50%; filter: grayscale(1) contrast(1.05); }
+.contact .inner { position: relative; display: flex; justify-content: flex-end; padding: 60px var(--m) 120px; }
+.visit { width: 420px; background: var(--paper); padding: 32px 32px 0; align-self: flex-start; }
+.visit h2 { font-size: var(--step-h3); text-transform: uppercase; }
+.visit > p { margin-top: 12px; }
+.visit dl { margin: 20px 0 0; display: grid; grid-template-columns: auto 1fr; gap: 8px 16px; }
+.visit dt { font-weight: 500; }
+.visit dd { margin: 0; text-align: right; font-variant-numeric: tabular-nums; }
+.visit form { margin-top: 22px; display: grid; gap: 12px; }
+.visit label { display: grid; gap: 4px; font-size: var(--step-small); font-weight: 500; }
+.visit input, .visit select, .visit textarea { font: inherit; font-size: 1rem; color: var(--ink); background: #fff; border: 1px solid #8e978f; border-radius: 0; padding: 10px 12px; width: 100%; }
+.visit textarea { min-height: 84px; resize: vertical; }
+.visit .btn { width: calc(100% + 64px); margin: 12px -32px 0; min-height: 56px; }
+.visit .note { font-size: var(--step-small); color: var(--muted); }
+.contact figcaption { position: absolute; left: var(--m); bottom: 24px; color: #e9e9e5; font-size: var(--step-small); background: rgba(0,0,0,.55); padding: 6px 10px; }
+
+/* ---------- Footer: the back of the card, uncovered by the curtain ---------- */
+footer { position: relative; background: var(--field-4); color: var(--field-4-ink); padding: 72px var(--m) 32px; }
+.back { max-width: 1120px; margin: 0 auto; background: var(--paper); color: var(--ink); padding: 64px clamp(24px, 5vw, 64px) 28px; position: relative; }
+.back .edge { position: absolute; left: 0; right: 0; top: -1px; width: 100%; height: 26px; display: block; }
+.back .halves { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+.back h2 { font-size: var(--step-h3); text-transform: uppercase; }
+.back .msg { margin-top: 16px; max-width: 34ch; }
+.back address { font-style: normal; display: flex; flex-direction: column; gap: 12px; }
+.back .stamp { position: absolute; top: 40px; right: clamp(24px, 5vw, 64px); width: 88px; background: var(--paper); padding: 6px; }
+.back .stamp img { aspect-ratio: 3 / 4; object-fit: cover; }
+.back .right { padding-top: 120px; }
+.imprint { margin-top: 64px; text-align: center; font-size: var(--step-small); display: flex; flex-direction: column; gap: 8px; }
+.imprint .credits a { color: inherit; }
+
+/* ---------- Motion: entrances, staggered; content is visible without script ---------- */
+.js [data-in] { opacity: 0; transform: translateY(24px); transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: calc(var(--i, 0) * 75ms); }
+.js [data-in].on { opacity: 1; transform: none; }
+.card > :not(.bite) { animation: rise 1s var(--ease) both; }
+.card > :nth-child(4) { animation-delay: .08s; } .card > :nth-child(5) { animation-delay: .16s; } .card > :nth-child(6) { animation-delay: .24s; }
+@keyframes rise { from { opacity: 0; transform: translateY(24px); } }
+.slips-section > img { animation: drift 24s ease-in-out infinite alternate; }
+@keyframes drift { to { transform: scale(1.14) translate(-1.5%, -1%); } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js [data-in] { opacity: 1; transform: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* ---------- Phone: its own composition ---------- */
+@media (max-width: 760px) {
+  .top { grid-template-columns: 1fr auto; padding-top: 14px; }
+  .top nav { display: none; }
+  .hero { padding-top: 40px; }
+  .hero-grid { padding: 0 12px; }
+  .card { --r: 18px; }
+  .paint { padding: 32px 20px; }
+  .card h1 { font-size: 25vw; }
+  .card h1 span:first-child, .card h1 span:last-child { transform: none; }
+  .calls a { min-width: 0; width: 100%; }
+  .chips { grid-template-columns: repeat(2, 1fr); }
+  .services { padding: 120px var(--m); }
+  .slips-section { height: auto; min-height: 100svh; padding-bottom: 0; }
+  .slips-copy { margin: 0 var(--m); width: auto; padding-top: 72px; }
+  .slips-copy::before { inset: 48px -16px -24px; }
+  .slips-copy p { font-size: 1.375rem; }
+  .slips { position: relative; left: 0; right: 0; margin-top: 64px; padding: 0 var(--m) 0; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .slip:nth-child(n) { height: auto; min-height: 0; transform: none; }
+  .about { padding: 120px 0; }
+  .sheet { padding: 40px 24px; }
+  .stub { padding: 14px 24px; }
+  .stub .btn { width: 100%; }
+  .contact { min-height: 0; }
+  .contact > img { position: relative; height: 70svh; }
+  .contact .inner { display: block; margin-top: -80px; padding: 0 var(--m) 80px; }
+  .visit { width: auto; position: static; }
+  .contact { display: flex; flex-direction: column; }
+  .contact figure { order: 3; margin: 0; padding: 0 var(--m) 40px; }
+  .contact figcaption { position: static; background: none; }
+  footer { position: relative; }
+  .back { padding-top: 56px; }
+  .back .halves { grid-template-columns: 1fr; gap: 36px; }
+  .back .right { padding-top: 0; }
+  .back .stamp { width: 64px; top: 34px; }
+  .back .halves > div:first-child { padding-right: 76px; }
+}
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Knox Painters. This is a design preview, not the live website.</div>
+<main>
+  <header class="top">
+    <a class="mark" href="#top" aria-label="Knox Painters, home">
+      <svg viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" fill="#2c3a2b"/><path d="M8 26V8h4v7l7-7h5l-8 8 8 10h-5l-6-7-1 1v6z" fill="#e9e9e5"/></svg>
+      Knox Painters
+    </a>
+    <nav aria-label="Main">
+      <a href="#services">Services</a><a href="#work">Work</a><a href="#colours">Colours</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn" href="#contact">Free quote</a>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="hero-grid">
+    <div class="card"><span class="bite tl" aria-hidden="true"></span><span class="bite tr" aria-hidden="true"></span>
+      <h1><span>Knox</span><span>Painters</span></h1>
+      <p class="what">Painters and decorators in Upper Ferntree Gully, for homes, shops and factories across Melbourne.</p>
+      <ul class="facts">
+        <li>Over 35 years experience</li>
+        <li>Interior, exterior and wallpaper hanging</li>
+        <li>Free quotes</li>
+      </ul>
+      <div class="calls">
+        <a class="btn" href="tel:0407557590">Call Ross 0407 557 590</a>
+        <a class="btn alt" href="tel:0411140079">Call Brandon 0411 140 079</a>
+      </div>
+    </div>
+
+      <div class="paint" id="colours">
+        <h2>Try a colour scheme</h2>
+        <p>Tap a card to repaint the house. Bring the one you like to your free quote.</p>
+        <div class="house" aria-hidden="true">
+          <svg viewBox="0 0 600 380" role="img">
+            <rect width="600" height="380" fill="#dfe6e8"/>
+            <rect x="0" y="330" width="600" height="50" fill="#9aa88f"/>
+            <!-- main gable -->
+            <polygon points="70,170 230,60 390,170" style="fill:var(--roof)"/>
+            <polygon points="100,170 230,82 360,170" style="fill:var(--wall)"/>
+            <path d="M230 86 L150 170 M230 86 L310 170 M230 86 V170" stroke="var(--trim)" stroke-width="7" style="stroke:var(--trim)"/>
+            <path d="M92 172 q9 10 18 0 q9 10 18 0 q9 10 18 0 q9 10 18 0 q9 10 18 0 q9 10 18 0 q9 10 18 0 q9 10 18 0 q9 10 18 0 q9 10 18 0 q9 10 18 0 q9 10 18 0 q9 10 18 0 q9 10 18 0 q9 10 18 0 V166 H92 Z" style="fill:var(--lace)"/>
+            <rect x="96" y="182" width="268" height="148" style="fill:var(--wall)"/>
+            <g style="stroke:var(--trim)" stroke-opacity=".35" stroke-width="2"><path d="M96 200H364M96 218H364M96 236H364M96 254H364M96 272H364M96 290H364M96 308H364"/></g>
+            <!-- window + striped awning -->
+            <rect x="134" y="236" width="136" height="80" style="fill:var(--trim)"/>
+            <rect x="142" y="244" width="120" height="64" fill="#cfdde2"/>
+            <path d="M202 244V308" stroke="#fff" stroke-width="4"/>
+            <polygon points="124,206 280,206 292,240 112,240" style="fill:var(--awn)"/>
+            <g style="fill:var(--trim)"><polygon points="136,206 150,206 156,240 132,240"/><polygon points="172,206 186,206 188,240 172,240"/><polygon points="208,206 222,206 222,240 208,240"/><polygon points="244,206 258,206 262,240 248,240"/></g>
+            <!-- verandah gable with sunburst -->
+            <polygon points="372,190 486,110 600,190" style="fill:var(--roof)"/>
+            <polygon points="396,190 486,128 576,190" style="fill:var(--wall)"/>
+            <g style="fill:var(--lace)"><path d="M486 184 L436 184 A50 50 0 0 1 536 184 Z" fill-opacity=".25"/><path d="M486 184 L440 170 L444 160 Z M486 184 L452 146 L460 140 Z M486 184 L470 132 L480 130 Z M486 184 L492 130 L502 132 Z M486 184 L512 140 L520 146 Z M486 184 L528 160 L532 170 Z"/></g>
+            <rect x="380" y="190" width="212" height="14" style="fill:var(--trim)"/>
+            <g style="fill:var(--lace)"><circle cx="394" cy="211" r="4"/><circle cx="414" cy="211" r="4"/><circle cx="434" cy="211" r="4"/><circle cx="454" cy="211" r="4"/><circle cx="474" cy="211" r="4"/><circle cx="494" cy="211" r="4"/><circle cx="514" cy="211" r="4"/><circle cx="534" cy="211" r="4"/><circle cx="554" cy="211" r="4"/><circle cx="574" cy="211" r="4"/></g>
+            <rect x="384" y="204" width="10" height="126" style="fill:var(--trim)"/><rect x="578" y="204" width="10" height="126" style="fill:var(--trim)"/>
+            <!-- fence -->
+            <g fill="none" stroke="#f4f4f0" stroke-width="3"><path d="M0 352 q15 -22 30 0 q15 -22 30 0 q15 -22 30 0 q15 -22 30 0 q15 -22 30 0 q15 -22 30 0 q15 -22 30 0 q15 -22 30 0 q15 -22 30 0 q15 -22 30 0 q15 -22 30 0 q15 -22 30 0 q15 -22 30 0 q15 -22 30 0 q15 -22 30 0 q15 -22 30 0 q15 -22 30 0 q15 -22 30 0 q15 -22 30 0 q15 -22 30 0"/></g>
+            <rect x="0" y="352" width="600" height="6" fill="#58705f"/>
+          </svg>
+        </div>
+        <div class="chips" role="radiogroup" aria-label="Colour schemes">
+          <input type="radio" name="scheme" id="s1" value="Cream, sage and red (as in the photo)" checked>
+          <label class="chip" for="s1"><i><b style="background:#e9d8ad"></b><b style="background:#6b8273"></b><b style="background:#9b3b34"></b></i><span>Cream, sage and red</span></label>
+          <input type="radio" name="scheme" id="s2" value="Pale grey and charcoal">
+          <label class="chip" for="s2"><i><b style="background:#dcdcd6"></b><b style="background:#2f3437"></b><b style="background:#f4f2ec"></b></i><span>Pale grey and charcoal</span></label>
+          <input type="radio" name="scheme" id="s3" value="Federation buff and green">
+          <label class="chip" for="s3"><i><b style="background:#c4a77c"></b><b style="background:#3e5a45"></b><b style="background:#7b2f2a"></b></i><span>Federation buff and green</span></label>
+          <input type="radio" name="scheme" id="s4" value="White and navy">
+          <label class="chip" for="s4"><i><b style="background:#f5f3ee"></b><b style="background:#1f3b57"></b><b style="background:#8a9399"></b></i><span>White and navy</span></label>
+        </div>
+        <p class="quote-cta"><a class="btn" href="#contact" id="take-scheme">Get a free quote with this scheme</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services" aria-labelledby="services-h">
+    <div class="col">
+      <h2 id="services-h" data-in>Services</h2>
+      <p class="lede" data-in style="--i:1">Qualified painters and decorators for interior and exterior work, homes and businesses. Every quote is free.</p>
+      <div class="bars" data-in style="--i:2">
+        <details open><summary>Interior painting</summary><div class="panel"><ul>
+          <li><span>Homes, rooms and whole-house repaints</span><a href="#contact" data-job="Interior painting">Free quote</a></li>
+        </ul></div></details>
+        <details><summary>Exterior painting</summary><div class="panel"><ul>
+          <li><span>Weatherboard, render, trims and fascias</span><a href="#contact" data-job="Exterior painting">Free quote</a></li>
+        </ul></div></details>
+        <details><summary>Renovations</summary><div class="panel"><ul>
+          <li><span>Painting as part of a renovation</span><a href="#contact" data-job="Renovation">Free quote</a></li>
+        </ul></div></details>
+        <details><summary>Shops and offices</summary><div class="panel"><ul>
+          <li><span>Commercial interiors and shopfronts</span><a href="#contact" data-job="Shop or office">Free quote</a></li>
+        </ul></div></details>
+        <details><summary>Factories</summary><div class="panel"><ul>
+          <li><span>Large commercial and industrial jobs</span><a href="#contact" data-job="Factory">Free quote</a></li>
+        </ul></div></details>
+        <details><summary>Wallpaper hanging</summary><div class="panel"><ul>
+          <li><span>Hanging wallpaper in homes and businesses</span><a href="#contact" data-job="Wallpaper hanging">Free quote</a></li>
+        </ul></div></details>
+      </div>
+      <figure class="tool" data-in style="--i:3"><img src="img/brush.jpg" width="1400" height="933" alt="A house painter's brush with a plum handle on a wooden table" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <section class="work" id="work" aria-labelledby="work-h">
+    <h2 id="work-h" data-in>Our work</h2>
+    <div class="work-grid">
+      <figure class="big" data-in style="--i:1"><img src="img/house.jpg" width="1000" height="560" alt="Weatherboard house with a sage-green roof, cream walls, a red scalloped fascia and a sunburst gable over the carport" loading="lazy"><figcaption>Cream weatherboard, sage trim and red lace</figcaption></figure>
+      <figure data-in style="--i:2"><img src="img/detail-gable.jpg" width="260" height="240" alt="Close-up of the sunburst gable and lacework over the carport" loading="lazy"><figcaption>Sunburst gable</figcaption></figure>
+      <figure data-in style="--i:3"><img src="img/detail-awning.jpg" width="290" height="160" alt="Close-up of the striped window awning under the scalloped fascia" loading="lazy"><figcaption>Awning and scalloped fascia</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="slips-section" aria-labelledby="slips-h">
+    <img src="img/forest.jpg" width="1600" height="2133" alt="Tall mountain ash and tree ferns in the Dandenong Ranges" loading="lazy">
+    <div class="slips-copy">
+      <h2 id="slips-h" data-in>Big jobs. Small jobs.</h2>
+      <p data-in style="--i:1">We are big enough for those large jobs yet small enough to care.</p>
+      <p data-in style="--i:2">Ross, Diana and Brandon Brown, from Upper Ferntree Gully at the foot of the Dandenongs.</p>
+    </div>
+    <div class="slips">
+      <div class="slip" data-in><strong>Free quotes</strong><span class="tear" aria-hidden="true"></span>Take advantage of our expertise when making decisions about painting and decorating.</div>
+      <div class="slip" data-in style="--i:1"><strong>35+ years</strong><span class="tear" aria-hidden="true"></span>Qualified painters and decorators with over 35 years experience.</div>
+      <div class="slip" data-in style="--i:2"><strong>Master Painters</strong><span class="tear" aria-hidden="true"></span>Registered member of Master Painters Australia.</div>
+      <div class="slip" data-in style="--i:3"><strong>Fully insured</strong><span class="tear" aria-hidden="true"></span>Fully insured for liability protection.</div>
+      <div class="slip" data-in style="--i:4"><strong>Inside and out</strong><span class="tear" aria-hidden="true"></span>Interior and exterior painting, renovations and wallpaper hanging.</div>
+      <div class="slip" data-in style="--i:5"><strong>Homes to factories</strong><span class="tear" aria-hidden="true"></span>Residential, commercial, shops, factories and offices.</div>
+    </div>
+  </section>
+
+  <section class="about" id="about" aria-labelledby="about-h">
+    <div class="sheet" data-in>
+      <div class="who"><span aria-hidden="true">RB</span><h2 id="about-h">From Ross</h2></div>
+      <div class="letter">
+        <p>Knox Painters is Diana and me, Ross Brown, with Brandon Brown on the tools as well. You can call either of us.</p>
+        <p>We've been painting and decorating for <mark>over 35 years</mark>: inside and outside, houses, shops, offices and factories, plus wallpaper hanging.</p>
+        <p>We're a registered member of Master Painters Australia and fully insured for liability protection.</p>
+        <p>Quotes are always free. Give me or Brandon a call, or send an email, and we'll come and have a look.</p>
+      </div>
+      <p class="sign">Ross Brown</p>
+      <p class="role">Knox Painters, Upper Ferntree Gully</p>
+    </div>
+    <div class="stub" data-in style="--i:1">
+      <a class="mail" href="mailto:rossbrown@knoxpainters.com.au">rossbrown@knoxpainters.com.au</a>
+      <a class="btn" href="#contact">Free quote</a>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-h">
+    <img src="img/station-1956.jpg" width="1920" height="1114" alt="Upper Ferntree Gully railway station, narrow gauge side, around 1956" loading="lazy">
+    <figure><figcaption>Upper Ferntree Gully station, about 1956</figcaption></figure>
+    <div class="inner">
+      <div class="visit">
+        <h2 id="contact-h">Free quote</h2>
+        <p>Based in Upper Ferntree Gully, painting across Melbourne.</p>
+        <dl>
+          <dt>Ross</dt><dd><a href="tel:0407557590">0407 557 590</a></dd>
+          <dt>Brandon</dt><dd><a href="tel:0411140079">0411 140 079</a></dd>
+          <dt>Email</dt><dd><a href="mailto:rossbrown@knoxpainters.com.au">rossbrown@knoxpainters.com.au</a></dd>
+        </dl>
+        <form id="quote" action="mailto:rossbrown@knoxpainters.com.au" method="get" enctype="text/plain">
+          <label>Your name<input name="name" autocomplete="name" required></label>
+          <label>Phone<input name="phone" type="tel" autocomplete="tel" required></label>
+          <label>Suburb<input name="suburb" autocomplete="address-level2"></label>
+          <label>Job
+            <select name="job" id="job">
+              <option>Interior painting</option><option>Exterior painting</option><option>Renovation</option>
+              <option>Shop or office</option><option>Factory</option><option>Wallpaper hanging</option>
+            </select>
+          </label>
+          <label>Tell us about the job<textarea name="message" id="message"></textarea></label>
+          <p class="note">This opens your email app with the details filled in. Nothing is stored on this page.</p>
+          <button class="btn" type="submit">Send my free quote request</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer aria-labelledby="foot-h">
+  <div class="back" data-in><svg class="edge" viewBox="0 0 1200 26" preserveAspectRatio="none" aria-hidden="true"><path fill="#2c3620" d="M0 0H1200V0 A50 26 0 0 1 1100 0 A50 26 0 0 1 1000 0 A50 26 0 0 1 900 0 A50 26 0 0 1 800 0 A50 26 0 0 1 700 0 A50 26 0 0 1 600 0 A50 26 0 0 1 500 0 A50 26 0 0 1 400 0 A50 26 0 0 1 300 0 A50 26 0 0 1 200 0 A50 26 0 0 1 100 0 A50 26 0 0 1 0 0 Z"/></svg>
+    <div class="stamp"><img src="img/house-stamp.jpg" width="300" height="400" alt="" loading="lazy"></div>
+    <div class="halves">
+      <div>
+        <h2 id="foot-h">Knox Painters</h2>
+        <p class="msg">Painters and decorators with over 35 years experience. Free quotes for homes, shops, offices and factories.</p>
+      </div>
+      <address class="right">
+        <a href="tel:0407557590">Ross Brown 0407 557 590</a>
+        <a href="tel:0411140079">Brandon Brown 0411 140 079</a>
+        <a href="mailto:rossbrown@knoxpainters.com.au">rossbrown@knoxpainters.com.au</a>
+        <span>Upper Ferntree Gully VIC 3156</span>
+      </address>
+    </div>
+    <div class="imprint">
+      <p>© 2026 Knox Painters. Concept design by <a href="https://swoopsites.com/">Swoop Sites</a>, Melbourne.</p>
+      <p class="credits">Pictures: <a href="https://commons.wikimedia.org/w/index.php?curid=17772747">“Paint brush”</a> by Chenspec, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=69505091">“1000 Steps, Kokoda Track Memorial Walk, Dandenong Ranges National Park”</a> by Kacey Chong, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=182844264">“Upper Ferntree Gully station, narrow gauge side, c.1956”</a> by Frank Stamford, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>; via Wikimedia Commons.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.documentElement.classList.add('js');
+// entrances, once, as each part arrives
+const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+document.querySelectorAll('[data-in]').forEach((el) => io.observe(el));
+// carry the chosen scheme and job into the quote form
+const job = document.getElementById('job'), msg = document.getElementById('message');
+document.getElementById('take-scheme').addEventListener('click', () => {
+  const s = document.querySelector('input[name=scheme]:checked');
+  if (s && !msg.value) msg.value = 'I like the "' + s.value + '" colour scheme. ';
+});
+document.querySelectorAll('[data-job]').forEach((a) => a.addEventListener('click', () => { job.value = a.dataset.job; }));
+// build a tidy email instead of a raw form post
+document.getElementById('quote').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const f = new FormData(e.target);
+  const body = `Name: ${f.get('name')}\nPhone: ${f.get('phone')}\nSuburb: ${f.get('suburb')}\nJob: ${f.get('job')}\n\n${f.get('message')}`;
+  location.href = 'mailto:rossbrown@knoxpainters.com.au?subject=' + encodeURIComponent('Free quote request: ' + f.get('job')) + '&body=' + encodeURIComponent(body);
+});
+</script>
+</body>
+</html>
