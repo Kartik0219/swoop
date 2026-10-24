@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Mount Medical Centre | Bulk Billing GP Clinic, Wantirna (concept)</title>
+<meta name="description" content="Concept homepage for Mount Medical Centre: a bulk billing family GP clinic at Mountain Highway and Stud Road, Wantirna. Open 7 days. Book online or call (03) 8682 8891.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Colours from the clinic's own world: the slate-blue building, its white trim, the gold Bulk Billing Practice sign, the garden beds. */
+  --ground: #13213d;
+  --paper: #f2f4f7;
+  --navy: #1d2c50;
+  --blue: #3b5998;
+  --gold: #f5c84c;
+  --sky: #d3e2f4;
+  --mint: #c3e4c9;
+  --accent: #f5c84c;
+  --accent-ink: #13213d;
+  --step-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+  --step-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+  --step-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
+  --step-head: clamp(2.5rem, 1.2rem + 5vw, 5.5rem);
+  --step-h2: clamp(2.25rem, 1.4rem + 3vw, 3.75rem);
+  --m: clamp(16px, 2.2vw, 32px);
+  --ease: cubic-bezier(.16, 1, .3, 1);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { margin: 0; background: var(--ground); color: var(--navy); font: 400 var(--step-body)/1.4 Chivo, system-ui, sans-serif; letter-spacing: -0.01em; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-underline-offset: 3px; }
+::selection { background: var(--gold); color: var(--ground); }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+h1, h2, h3 { font-weight: 900; text-transform: uppercase; letter-spacing: -0.05em; line-height: 0.88; margin: 0; text-wrap: balance; }
+p { margin: 0; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 22px; background: var(--accent); color: var(--accent-ink);
+  font: 700 var(--step-body)/1 Chivo, sans-serif; text-decoration: none; border: 0; cursor: pointer; transition: transform .25s var(--ease), background-color .25s; }
+.btn:hover { background: #ffd866; transform: translateY(-2px); }
+.btn:active { transform: none; }
+.btn[hidden] { display: none; }
+.btn.dark { background: var(--navy); color: var(--paper); }
+.btn.dark:hover { background: var(--ground); }
+
+.concept { background: #111; color: #ddd; font-size: var(--step-small); text-align: center; padding: 9px var(--m); }
+.concept b { color: #fff; }
+
+/* ---------- Hero: the waterline ---------- */
+.hero { --seam: 52%; position: relative; height: min(100svh, 860px); min-height: 640px; overflow: hidden; background: var(--blue); }
+.hero::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: var(--seam); background: var(--paper); }
+.hero .bar { position: absolute; z-index: 3; top: 0; left: 0; right: 0; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 24px var(--m); }
+.mark { font-weight: 900; text-transform: uppercase; letter-spacing: -0.04em; text-decoration: none; font-size: var(--step-lead); line-height: 1; }
+.bar .acts { display: flex; gap: 8px; }
+.bar .call { display: none; }
+.hero .hl1 { position: absolute; left: 0; right: 0; top: calc(var(--seam) - 1.36em); margin: 0; text-align: center; font-weight: 900; text-transform: uppercase; letter-spacing: -0.05em; line-height: .88; font-size: clamp(72px, 9.4vw, 148px); }
+.hero .hl1 span { display: block; overflow: hidden; padding-bottom: .02em; }
+.hero .hl1 span i { display: block; font-style: normal; animation: lift .9s var(--ease) both; }
+.hero .hl1 span + span i { animation-delay: .11s; }
+@keyframes lift { from { transform: translateY(105%); } }
+.hero .h1-wrap { position: absolute; inset: 0; }
+.hero .top { color: var(--navy); }
+.hero .under { color: var(--gold); }
+.hero .clip-top { position: absolute; inset: 0; clip-path: inset(0 0 calc(100% - var(--seam)) 0); }
+.hero .clip-under { position: absolute; inset: 0; clip-path: inset(var(--seam) 0 0 0); }
+.hero .hero-photo { position: absolute; left: 0; right: 0; top: var(--seam); bottom: 0; z-index: 0; }
+.hero .hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
+.hero .hero-photo::after { content: ""; position: absolute; inset: 0; background: rgba(28, 42, 84, .74); }
+.hero .h1-wrap, .hero .hl1 { z-index: 1; }
+.hero .foot { position: absolute; z-index: 2; left: var(--m); right: var(--m); top: calc(var(--seam) + clamp(110px, 10vw, 160px)); text-align: center; color: var(--paper); animation: fade .8s .5s var(--ease) both; }
+.hero .foot p { font-size: var(--step-lead); line-height: 1.3; max-width: 46ch; margin: 0 auto; }
+.hero .now { margin-top: 14px; font-weight: 700; }
+.hero .now b { color: var(--gold); }
+@keyframes fade { from { opacity: 0; transform: translateY(12px); } }
+
+/* ---------- What we do: four cards dealt into a fan ---------- */
+.fan { position: relative; height: 250svh; background: var(--ground); color: var(--paper); }
+.fan .stage { position: sticky; top: 0; height: 100svh; overflow: hidden; padding: 72px var(--m) 0; }
+.fan h2 { font-size: var(--step-h2); }
+.fan .stage > p { margin-top: 14px; max-width: 44ch; }
+.cards { position: absolute; left: 50%; top: 58%; width: 1090px; height: 400px; transform: translate(-50%, -50%); }
+.card { position: absolute; top: 0; width: 340px; height: 400px; padding: 28px; color: var(--ground); display: flex; flex-direction: column; justify-content: space-between; will-change: transform; }
+.card h3 { font-size: 2rem; width: 210px; }
+.card img { width: 200px; aspect-ratio: 4 / 3; object-fit: cover; }
+.card p { width: 210px; font-size: 1rem; line-height: 1.35; }
+.card:nth-child(1) { background: var(--gold); left: 0; transform: rotate(-3deg); }
+.card:nth-child(2) { background: var(--sky); left: 250px; transform: rotate(2deg); }
+.card:nth-child(3) { background: var(--mint); left: 500px; transform: rotate(-2deg); }
+.card:nth-child(4) { background: var(--paper); left: 750px; transform: rotate(3deg); }
+
+/* ---------- About: their own words, highlighted ---------- */
+.about { background: var(--paper); padding: 140px var(--m); }
+.about h2 { font-size: var(--step-h2); margin-bottom: 40px; }
+.statement { columns: 2; column-gap: 32px; font-size: clamp(1.375rem, 1rem + 1.1vw, 2rem); line-height: 1.18; text-align: left; color: #33415f; }
+.statement strong { color: var(--navy); }
+.hl { color: var(--navy); padding: 0 .1em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl.g { background: var(--gold); } .hl.s { background: var(--sky); } .hl.m { background: var(--mint); }
+.statement a.hl { display: inline; background: var(--navy); color: var(--paper); text-decoration: none; }
+.statement a.hl:hover { background: var(--blue); }
+
+/* ---------- Bulk billing: the gold chapter ---------- */
+.billing { background: var(--gold); color: var(--ground); padding: 140px var(--m); min-height: 90svh; display: grid; grid-template-columns: repeat(12, 1fr); gap: 32px; align-content: center; }
+.billing h2 { grid-column: 1 / -1; font-size: clamp(3rem, 1rem + 7vw, 8.5rem); }
+.billing .intro { grid-column: 1 / 6; font-size: var(--step-lead); line-height: 1.3; }
+.billing .lists { grid-column: 6 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.billing h3 { font-size: 1.5rem; margin-bottom: 14px; letter-spacing: -0.03em; }
+.billing ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.billing li { background: #f8d878; padding: 12px 14px; }
+.billing .small { grid-column: 6 / -1; font-size: var(--step-small); }
+
+/* ---------- Who can I see: tabs and bands ---------- */
+.who { background: var(--sky); padding: 140px var(--m); }
+.who .head { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; }
+.who h2 { font-size: var(--step-h2); }
+.who h2 span { display: block; color: var(--blue); }
+.who .body { display: grid; grid-template-columns: 190px 1fr; gap: 40px; margin-top: 56px; }
+.tabs { display: flex; flex-direction: column; gap: 6px; }
+.tabs button { all: unset; box-sizing: border-box; width: 190px; min-height: 64px; padding: 10px 16px; background: #bfd3ec; cursor: pointer; display: flex; flex-direction: column; justify-content: center; transition: background-color .2s; }
+.tabs button b { font-weight: 700; }
+.tabs button span { font-size: var(--step-small); }
+.tabs button:hover { background: #adc6e6; }
+.tabs button[aria-selected="true"] { background: var(--navy); color: var(--paper); }
+.tabs button:focus-visible { outline: 3px solid var(--navy); outline-offset: 2px; }
+.bands { display: flex; flex-direction: column; gap: 4px; }
+.band { display: grid; grid-template-columns: 56px 1fr auto; align-items: center; gap: 20px; min-height: 96px; padding: 12px 20px; background: #e6eefa; }
+.band:nth-child(even) { background: #dbe6f6; }
+.band img, .band .ini { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; }
+.band .ini { display: grid; place-items: center; background: var(--navy); color: var(--paper); font-weight: 900; }
+.band b { display: block; font-size: 1.125rem; }
+.band small { display: block; font-size: var(--step-small); margin-top: 3px; color: #33415f; }
+.band em { font-style: normal; font-size: var(--step-small); text-align: right; max-width: 30ch; }
+.panel[hidden] { display: none; }
+.panel h3 { font-size: 1.5rem; letter-spacing: -0.03em; margin: 0 0 14px; }
+.panel .more { margin-top: 20px; display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+.panel .more img { width: min(100%, 520px); aspect-ratio: 16 / 9; object-fit: cover; }
+
+/* ---------- Find us: photo strip and a three-cell bar ---------- */
+.find { background: var(--mint); color: var(--ground); padding: 48px 0 120px; overflow: hidden; }
+.strip { display: flex; gap: 8px; width: max-content; animation: drift 60s linear infinite; }
+.strip img { height: 150px; width: auto; object-fit: cover; }
+.strip img.sq { width: 150px; } .strip img.tall { width: 112px; } .strip img.wide { width: 225px; }
+@keyframes drift { to { transform: translateX(-50%); } }
+.find .in { padding: 0 var(--m); }
+.find h2 { font-size: var(--step-h2); margin-top: 72px; }
+.cells { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 40px; }
+.cells a { min-height: 96px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 12px; background: #d6eedb; text-decoration: none; font-size: var(--step-lead); font-weight: 700; transition: background-color .2s; }
+.cells a span { font-size: var(--step-small); font-weight: 400; margin-top: 4px; }
+.cells a:hover { background: #e6f6e9; }
+.cells a.go { background: var(--ground); color: var(--paper); }
+.cells a.go:hover { background: var(--navy); }
+.hours { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 48px; }
+.hours h3 { font-size: 1.5rem; letter-spacing: -0.03em; margin-bottom: 12px; }
+.hours dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 8px 16px; }
+.hours dd { margin: 0; text-align: right; font-variant-numeric: tabular-nums; }
+.hours p + p { margin-top: 8px; }
+
+/* ---------- Footer: name first ---------- */
+footer { background: var(--ground); color: var(--paper); padding: 64px var(--m) 32px; overflow: hidden; }
+.bigname { font-weight: 900; text-transform: uppercase; letter-spacing: -0.05em; line-height: .86; font-size: clamp(3rem, 12.1vw, 12.1rem); white-space: nowrap; }
+.foot-row { display: grid; grid-template-columns: repeat(12, 1fr); gap: 32px; margin-top: 72px; }
+.places { grid-column: 1 / 6; display: flex; flex-direction: column; gap: 10px; }
+.places a { color: var(--gold); font-size: clamp(1.375rem, 1rem + 1vw, 2rem); font-weight: 700; text-decoration: none; }
+.places a:hover { text-decoration: underline; }
+.links { grid-column: 7 / -1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-content: start; }
+.links a { display: block; padding: 4px 0; }
+.legal { margin-top: 96px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: var(--step-small); }
+
+/* ---------- Motion around the signature ---------- */
+.js [data-in] { opacity: 0; transform: translateY(24px); transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: calc(var(--i, 0) * 75ms); }
+.js [data-in].on { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js [data-in] { opacity: 1; transform: none; }
+  .fan { height: auto; } .fan .stage { position: relative; height: auto; min-height: 100svh; }
+}
+
+/* ---------- Phone ---------- */
+@media (max-width: 760px) {
+  .hero { --seam: 46%; min-height: 560px; }
+  .hero .hl1 { font-size: 11vw; }
+  .bar .book { display: none; } .bar .call { display: inline-flex; }
+  .hero .foot { text-align: left; top: calc(var(--seam) + 15vw); }
+  .hero .foot p { font-size: 1.125rem; margin: 0; }
+  .hero .foot .btn { margin-top: 14px; width: 100%; }
+  .fan { height: auto; }
+  .fan .stage { position: relative; height: auto; padding: 96px var(--m); }
+  .cards { position: static; transform: none; width: auto; height: auto; display: flex; flex-direction: column; gap: 16px; margin-top: 40px; }
+  .card { position: relative; left: auto !important; width: auto; height: auto; gap: 20px; transform: none !important; }
+  .card h3, .card p { width: auto; }
+  .card img { width: 100%; }
+  .about, .billing, .who { padding: 96px var(--m); }
+  .statement { columns: 1; text-align: left; font-size: 1.25rem; line-height: 1.25; }
+  .billing { grid-template-columns: 1fr; }
+  .billing .intro, .billing .lists, .billing .small { grid-column: 1; }
+  .billing .lists { grid-template-columns: 1fr; }
+  .who .head .btn { width: 100%; }
+  .who .body { grid-template-columns: 1fr; gap: 20px; }
+  .tabs { flex-direction: row; flex-wrap: wrap; }
+  .tabs button { width: calc(50% - 3px); min-height: 56px; }
+  .band { grid-template-columns: 48px 1fr; }
+  .band img, .band .ini { width: 48px; height: 48px; }
+  .band em { grid-column: 2; text-align: left; }
+  .strip img { height: 110px; } .strip img.sq { width: 110px; } .strip img.tall { width: 82px; } .strip img.wide { width: 165px; }
+  .cells { grid-template-columns: 1fr; } .cells a { min-height: 64px; }
+  .hours { grid-template-columns: 1fr; }
+  .places, .links { grid-column: 1 / -1; }
+  .links { grid-template-columns: 1fr 1fr; }
+  .bigname { font-size: 12vw; }
+}
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Mount Medical Centre. This is a design preview, not the live website.</div>
+
+<header class="hero" id="top">
+  <div class="bar">
+    <a class="mark" href="#top">Mount Medical Centre</a>
+    <div class="acts">
+      <a class="btn call" href="tel:0386828891">Call</a>
+      <a class="btn book" href="https://www.hotdoc.com.au/medical-centres/wantirna-VIC-3152/mount-medical-centre/doctors">Book online</a>
+    </div>
+  </div>
+  <div class="h1-wrap">
+    <div class="clip-top"><h1 class="hl1 top"><span><i>Mount Medical</i></span><span><i>Centre</i></span></h1></div>
+    <div class="clip-under" aria-hidden="true"><p class="hl1 under"><span><i>Mount Medical</i></span><span><i>Centre</i></span></p></div>
+  </div>
+  <div class="hero-photo"><img src="img/building.jpg" width="1200" height="900" alt="Mount Medical Centre building on the corner of Mountain Highway and Stud Road" fetchpriority="high"></div>
+  <div class="foot">
+    <p>A bulk billing family GP clinic on the corner of Mountain Highway and Stud Road, Wantirna. Open 7 days.</p>
+    <p class="now" id="now">Monday to Friday 8:30am to 6:15pm. Saturday and Sunday 9:00am to 1:00pm.</p>
+    <a class="btn" href="https://www.hotdoc.com.au/medical-centres/wantirna-VIC-3152/mount-medical-centre/doctors" hidden id="hero-book">Book online</a>
+  </div>
+</header>
+
+<main>
+  <section class="fan" aria-labelledby="fan-h">
+    <div class="stage">
+      <h2 id="fan-h">What we do</h2>
+      <p>Family medicine, men's and women's health and preventative care, with specialists, a dietitian and pathology in the same building.</p>
+      <div class="cards">
+        <article class="card"><h3>Children</h3><img src="img/treatment-room-2.jpg" width="1200" height="900" alt="Treatment room with a navy examination bed" loading="lazy"><p>All immunisations, free vaccinations on the Victorian schedule, and well baby checks at 6 weeks.</p></article>
+        <article class="card"><h3>Skin checks</h3><img src="img/treatment-room.jpg" width="1200" height="900" alt="Treatment room with an adjustable bed and an examination lamp" loading="lazy"><p>All our GPs are trained to detect skin cancer, including with a high power dermatoscope.</p></article>
+        <article class="card"><h3>Care plans</h3><img src="img/consult-room.jpg" width="1200" height="900" alt="Consultation room with a desk, chair and examination bed" loading="lazy"><p>GP management and mental health plans, with Medicare subsidised allied health and psychology visits.</p></article>
+        <article class="card"><h3>Pathology</h3><img src="img/waiting-room.jpg" width="1200" height="900" alt="The clinic's bright waiting room with rows of blue chairs" loading="lazy"><p>Onsite pathology by Australian Clinical Labs: Monday, Wednesday and Friday, 8:30am to 1:00pm.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" aria-labelledby="about-h">
+    <h2 id="about-h" data-in>About the clinic</h2>
+    <p class="statement" data-in style="--i:1">
+      <strong>Mount Medical Centre</strong> is a medical practice orientated towards family medicine, men's and women's health and preventative medicine. You'll find us at the <span class="hl g">Stud Road and Mountain Highway intersection</span> in Wantirna, with <span class="hl s">ample parking</span> and <span class="hl m">disabled access</span>. Alongside our GPs we offer specialist and allied health services and <span class="hl s">onsite pathology</span>. All routine childhood vaccinations are available, and travel vaccination information is available on request. If you need an <span class="hl m">interpreter</span>, let us know when you book. Our doctors may visit regular patients at home if they are too ill to come in, depending on availability. After hours and on public holidays, call the <span class="hl g">Doctor Doctor locum service on 13 26 60</span>.
+      <a class="hl" href="https://www.hotdoc.com.au/medical-centres/wantirna-VIC-3152/mount-medical-centre/doctors">Book an appointment online.</a>
+    </p>
+  </section>
+
+  <section class="billing" id="fees" aria-labelledby="bill-h">
+    <h2 id="bill-h" data-in>Bulk billing</h2>
+    <p class="intro" data-in style="--i:1">We are a Medicare Bulk Billing Practice. Eligible GP services are bulk billed. For anything else, our reception team can tell you the fee before you book.</p>
+    <div class="lists" data-in style="--i:2">
+      <div><h3>Bulk billed</h3><ul><li>GP consultations</li><li>Chronic condition management plans and reviews</li><li>Mental health treatment plans</li><li>Health assessments</li></ul></div>
+      <div><h3>Fees may apply</h3><ul><li>Procedures like skin excisions</li><li>Diagnostic services like ECG and pathology</li><li>Allied health and other non-GP services</li><li>Patients without a Medicare number</li></ul></div>
+    </div>
+    <p class="small" data-in style="--i:3">Please cancel at least two hours before your appointment if you can't make it. Workcover, TAC and commercial driver medicals are billed privately.</p>
+  </section>
+
+  <section class="who" id="doctors" aria-labelledby="who-h">
+    <div class="head">
+      <h2 id="who-h"><span>Who can</span> I see?</h2>
+      <a class="btn dark" href="https://www.hotdoc.com.au/medical-centres/wantirna-VIC-3152/mount-medical-centre/doctors">Book on HotDoc</a>
+    </div>
+    <div class="body">
+      <div class="tabs" role="tablist" aria-label="Choose what you need">
+        <button role="tab" aria-selected="true" aria-controls="p-skin" id="t-skin"><b>Skin</b><span>checks and procedures</span></button>
+        <button role="tab" aria-selected="false" aria-controls="p-women" id="t-women"><b>Women's health</b><span>and family planning</span></button>
+        <button role="tab" aria-selected="false" aria-controls="p-kids" id="t-kids"><b>Children</b><span>and teenagers</span></button>
+        <button role="tab" aria-selected="false" aria-controls="p-mind" id="t-mind"><b>Mental health</b><span>plans and support</span></button>
+        <button role="tab" aria-selected="false" aria-controls="p-chronic" id="t-chronic"><b>Ongoing conditions</b><span>care plans</span></button>
+        <button role="tab" aria-selected="false" aria-controls="p-travel" id="t-travel"><b>Travel</b><span>vaccines and advice</span></button>
+        <button role="tab" aria-selected="false" aria-controls="p-food" id="t-food"><b>Food and weight</b><span>diet and nutrition</span></button>
+        <button role="tab" aria-selected="false" aria-controls="p-spec" id="t-spec"><b>Specialists</b><span>by referral</span></button>
+      </div>
+      <div>
+        <div class="panel" role="tabpanel" id="p-skin" aria-labelledby="t-skin"><h3>Skin</h3><div class="bands">
+          <div class="band"><img src="img/dr-fung.jpg" width="160" height="160" alt="Dr Rainbow Fung" loading="lazy"><div><b>Dr Rainbow Fung</b><small>GP · Master of Medicine (skin cancer), FRACGP, MBBS</small></div><em>Skin cancer checks, biopsies and excisions, skin conditions, acne</em></div>
+          <div class="band"><img src="img/dr-hewavitharana.jpg" width="160" height="160" alt="Dr Sanjeeva Hewavitharana" loading="lazy"><div><b>Dr Sanjeeva Hewavitharana</b><small>GP · MSc, MBBS, FRACGP</small></div><em>Dermatology, skin biopsies, additional training in skin cancer</em></div>
+        </div><div class="more"><img src="img/consult-room.jpg" width="1200" height="900" alt="One of the clinic's consultation rooms" loading="lazy"><a class="btn dark" href="https://www.hotdoc.com.au/medical-centres/wantirna-VIC-3152/mount-medical-centre/doctors">See times on HotDoc</a></div></div>
+        <div class="panel" role="tabpanel" id="p-women" aria-labelledby="t-women"><h3>Women's health</h3><div class="bands">
+          <div class="band"><img src="img/dr-wijesena.jpg" width="160" height="160" alt="Dr Pubudu Wijesena" loading="lazy"><div><b>Dr Pubudu Wijesena</b><small>GP · MD, FRACGP</small></div><em>Women's health, family planning, Implanon, IUD insertion and removal</em></div>
+          <div class="band"><img src="img/dr-fung.jpg" width="160" height="160" alt="Dr Rainbow Fung" loading="lazy"><div><b>Dr Rainbow Fung</b><small>GP · FRACGP, MBBS</small></div><em>Women's health, Implanon, IUD insertion and removal, iron infusion</em></div>
+          <div class="band"><span class="ini" aria-hidden="true">SB</span><div><b>Dr Saman A Baduge</b><small>GP · MBBS, FRACGP</small></div><em>Women's health</em></div>
+        </div><div class="more"><img src="img/consult-room.jpg" width="1200" height="900" alt="One of the clinic's consultation rooms" loading="lazy"><a class="btn dark" href="https://www.hotdoc.com.au/medical-centres/wantirna-VIC-3152/mount-medical-centre/doctors">See times on HotDoc</a></div></div>
+        <div class="panel" role="tabpanel" id="p-kids" aria-labelledby="t-kids"><h3>Children</h3><div class="bands">
+          <div class="band"><img src="img/dr-wijesena.jpg" width="160" height="160" alt="Dr Pubudu Wijesena" loading="lazy"><div><b>Dr Pubudu Wijesena</b><small>GP · MD, FRACGP</small></div><em>Children's health</em></div>
+          <div class="band"><span class="ini" aria-hidden="true">SB</span><div><b>Dr Saman A Baduge</b><small>GP · MBBS, FRACGP</small></div><em>Children's health</em></div>
+          <div class="band"><img src="img/dr-hewavitharana.jpg" width="160" height="160" alt="Dr Sanjeeva Hewavitharana" loading="lazy"><div><b>Dr Sanjeeva Hewavitharana</b><small>GP · MSc, MBBS, FRACGP</small></div><em>Child health, adolescent health</em></div>
+          <div class="band"><img src="img/dr-ranaweera.jpg" width="160" height="160" alt="Dr Jeevani Ranaweera" loading="lazy"><div><b>Dr Jeevani Ranaweera</b><small>Paediatrician · MBBS, MD Paediatrics, FRACP</small></div><em>Acute and chronic paediatric conditions, developmental problems</em></div>
+        </div><div class="more"><img src="img/consult-room.jpg" width="1200" height="900" alt="One of the clinic's consultation rooms" loading="lazy"><a class="btn dark" href="https://www.hotdoc.com.au/medical-centres/wantirna-VIC-3152/mount-medical-centre/doctors">See times on HotDoc</a></div></div>
+        <div class="panel" role="tabpanel" id="p-mind" aria-labelledby="t-mind"><h3>Mental health</h3><div class="bands">
+          <div class="band"><img src="img/dr-hewavitharana.jpg" width="160" height="160" alt="Dr Sanjeeva Hewavitharana" loading="lazy"><div><b>Dr Sanjeeva Hewavitharana</b><small>GP · MSc, MBBS, FRACGP</small></div><em>Mental health, with additional training in mental health</em></div>
+          <div class="band"><span class="ini" aria-hidden="true">GP</span><div><b>Any of our GPs</b><small>Mental health treatment plans</small></div><em>Up to 10 Medicare subsidised psychology visits a year for eligible patients</em></div>
+        </div><div class="more"><img src="img/consult-room.jpg" width="1200" height="900" alt="One of the clinic's consultation rooms" loading="lazy"><a class="btn dark" href="https://www.hotdoc.com.au/medical-centres/wantirna-VIC-3152/mount-medical-centre/doctors">See times on HotDoc</a></div></div>
+        <div class="panel" role="tabpanel" id="p-chronic" aria-labelledby="t-chronic"><h3>Ongoing conditions</h3><div class="bands">
+          <div class="band"><span class="ini" aria-hidden="true">SB</span><div><b>Dr Saman A Baduge</b><small>GP · MBBS, FRACGP</small></div><em>Chronic disease management, geriatric health</em></div>
+          <div class="band"><img src="img/dr-wijesena.jpg" width="160" height="160" alt="Dr Pubudu Wijesena" loading="lazy"><div><b>Dr Pubudu Wijesena</b><small>GP · MD, FRACGP</small></div><em>Chronic disease management</em></div>
+          <div class="band"><img src="img/dr-hewavitharana.jpg" width="160" height="160" alt="Dr Sanjeeva Hewavitharana" loading="lazy"><div><b>Dr Sanjeeva Hewavitharana</b><small>GP · MSc, MBBS, FRACGP</small></div><em>Chronic disease management</em></div>
+        </div><div class="more"><img src="img/consult-room.jpg" width="1200" height="900" alt="One of the clinic's consultation rooms" loading="lazy"><a class="btn dark" href="https://www.hotdoc.com.au/medical-centres/wantirna-VIC-3152/mount-medical-centre/doctors">See times on HotDoc</a></div></div>
+        <div class="panel" role="tabpanel" id="p-travel" aria-labelledby="t-travel"><h3>Travel</h3><div class="bands">
+          <div class="band"><span class="ini" aria-hidden="true">SB</span><div><b>Dr Saman A Baduge</b><small>GP · MBBS, FRACGP</small></div><em>Travel medicine</em></div>
+          <div class="band"><img src="img/dr-wijesena.jpg" width="160" height="160" alt="Dr Pubudu Wijesena" loading="lazy"><div><b>Dr Pubudu Wijesena</b><small>GP · MD, FRACGP</small></div><em>Travel medicine</em></div>
+          <div class="band"><span class="ini" aria-hidden="true">GP</span><div><b>At the clinic</b><small>Travel vaccines</small></div><em>Yellow fever, Hep A and B, typhoid, JE, meningococcal and more</em></div>
+        </div><div class="more"><img src="img/consult-room.jpg" width="1200" height="900" alt="One of the clinic's consultation rooms" loading="lazy"><a class="btn dark" href="https://www.hotdoc.com.au/medical-centres/wantirna-VIC-3152/mount-medical-centre/doctors">See times on HotDoc</a></div></div>
+        <div class="panel" role="tabpanel" id="p-food" aria-labelledby="t-food"><h3>Food and weight</h3><div class="bands">
+          <div class="band"><img src="img/joc-young.jpg" width="160" height="160" alt="Jocelynne Young" loading="lazy"><div><b>Jocelynne Young</b><small>Dietitian · Accredited Practising Dietitian</small></div><em>Diabetes, heart and gut health, weight management</em></div>
+          <div class="band"><img src="img/dr-fung.jpg" width="160" height="160" alt="Dr Rainbow Fung" loading="lazy"><div><b>Dr Rainbow Fung</b><small>GP · FRACGP, MBBS</small></div><em>Weight management</em></div>
+        </div><div class="more"><img src="img/consult-room.jpg" width="1200" height="900" alt="One of the clinic's consultation rooms" loading="lazy"><a class="btn dark" href="https://www.hotdoc.com.au/medical-centres/wantirna-VIC-3152/mount-medical-centre/doctors">See times on HotDoc</a></div></div>
+        <div class="panel" role="tabpanel" id="p-spec" aria-labelledby="t-spec"><h3>Specialists</h3><div class="bands">
+          <div class="band"><img src="img/dr-ranaweera.jpg" width="160" height="160" alt="Dr Jeevani Ranaweera" loading="lazy"><div><b>Dr Jeevani Ranaweera</b><small>Paediatrician · MBBS, MD Paediatrics, FRACP</small></div><em>Children's acute, chronic and developmental problems</em></div>
+          <div class="band"><img src="img/dr-punchihewa.jpg" width="160" height="160" alt="Dr Saman Punchihewa" loading="lazy"><div><b>Dr Saman Punchihewa</b><small>Neurologist · MBBS, FRACP</small></div><em>Clinical neurophysiology, nerve conduction studies</em></div>
+          <div class="band"><img src="img/dr-ponnam-palam.jpg" width="160" height="160" alt="Dr Myran Ponnam-Palam" loading="lazy"><div><b>Dr Myran Ponnam-Palam</b><small>Gynaecology and fertility · MBBS, FRANZCOG</small></div><em>Gynaecology, fertility and IVF</em></div>
+        </div><div class="more"><img src="img/consult-room.jpg" width="1200" height="900" alt="One of the clinic's consultation rooms" loading="lazy"><a class="btn dark" href="https://www.hotdoc.com.au/medical-centres/wantirna-VIC-3152/mount-medical-centre/doctors">See times on HotDoc</a></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="find" id="contact" aria-labelledby="find-h">
+    <div class="strip" aria-hidden="true">
+      <img class="wide" src="img/building.jpg" width="1200" height="900" alt="" loading="lazy"><img class="sq" src="img/waiting-room.jpg" width="1200" height="900" alt="" loading="lazy"><img class="tall" src="img/treatment-room.jpg" width="1200" height="900" alt="" loading="lazy"><img class="wide" src="img/building-corner.jpg" width="1200" height="900" alt="" loading="lazy"><img class="sq" src="img/consult-room.jpg" width="1200" height="900" alt="" loading="lazy"><img class="tall" src="img/treatment-room-2.jpg" width="1200" height="900" alt="" loading="lazy">
+      <img class="wide" src="img/building.jpg" width="1200" height="900" alt="" loading="lazy"><img class="sq" src="img/waiting-room.jpg" width="1200" height="900" alt="" loading="lazy"><img class="tall" src="img/treatment-room.jpg" width="1200" height="900" alt="" loading="lazy"><img class="wide" src="img/building-corner.jpg" width="1200" height="900" alt="" loading="lazy"><img class="sq" src="img/consult-room.jpg" width="1200" height="900" alt="" loading="lazy"><img class="tall" src="img/treatment-room-2.jpg" width="1200" height="900" alt="" loading="lazy">
+    </div>
+    <div class="in">
+      <h2 id="find-h" data-in>Find us</h2>
+      <div class="cells" data-in style="--i:1">
+        <a href="https://www.google.com/maps/search/?api=1&query=506+Mountain+Hwy+Wantirna+VIC">506 Mountain Hwy<span>Wantirna VIC, corner of Stud Road. Directions</span></a>
+        <a href="tel:0386828891">(03) 8682 8891<span>Tap to call reception</span></a>
+        <a class="go" href="https://www.hotdoc.com.au/medical-centres/wantirna-VIC-3152/mount-medical-centre/doctors">Book online<span>On HotDoc, any time</span></a>
+      </div>
+      <div class="hours" data-in style="--i:2">
+        <div><h3>Opening hours</h3><dl><dt>Monday to Friday</dt><dd>8:30am to 6:15pm</dd><dt>Saturday</dt><dd>9:00am to 1:00pm</dd><dt>Sunday</dt><dd>9:00am to 1:00pm</dd><dt>Public holidays</dt><dd>Closed</dd></dl></div>
+        <div><h3>Pathology</h3><dl><dt>Monday</dt><dd>8:30am to 1:00pm</dd><dt>Wednesday</dt><dd>8:30am to 1:00pm</dd><dt>Friday</dt><dd>8:30am to 1:00pm</dd></dl></div>
+        <div><h3>After hours</h3><p>Call the Doctor Doctor locum service on <a href="tel:132660">13 26 60</a>.</p><p>We take phone bookings. Walk-ins are seen subject to availability.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p class="bigname" aria-hidden="true">Mount Medical</p>
+  <div class="foot-row">
+    <div class="places">
+      <a href="tel:0386828891">(03) 8682 8891</a>
+      <a href="mailto:info@mountmc.com.au">info@mountmc.com.au</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=506+Mountain+Hwy+Wantirna+VIC">506 Mountain Hwy, Wantirna VIC</a>
+    </div>
+    <nav class="links" aria-label="Footer">
+      <div><a href="#fees">Bulk billing</a><a href="#doctors">Our doctors</a></div>
+      <div><a href="#contact">Hours</a><a href="#contact">Pathology</a></div>
+      <div><a href="https://www.hotdoc.com.au/medical-centres/wantirna-VIC-3152/mount-medical-centre/doctors">Book online</a><a href="#top">Back to top</a></div>
+    </nav>
+  </div>
+  <div class="legal"><p>© 2026 Mount Medical Centre. In an emergency call 000.</p><p>Concept design by <a href="https://swoopsites.com/">Swoop Sites</a>, Melbourne.</p></div>
+</footer>
+
+<script>
+document.documentElement.classList.add('js');
+const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+document.querySelectorAll('[data-in]').forEach((el) => io.observe(el));
+
+// Open now? Worked out from the clinic's published hours, in Melbourne time.
+(() => {
+  const el = document.getElementById('now'); if (!el) return;
+  const parts = Object.fromEntries(new Intl.DateTimeFormat('en-AU', { timeZone: 'Australia/Melbourne', weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }).formatToParts(new Date()).map((p) => [p.type, p.value]));
+  const day = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(parts.weekday);
+  const mins = (+parts.hour) * 60 + (+parts.minute);
+  const hours = (d) => (d === 0 || d === 6) ? [540, 780] : [510, 1095];
+  const fmt = (m) => { const h = Math.floor(m / 60), mm = m % 60; return `${h % 12 || 12}${mm ? ':' + String(mm).padStart(2, '0') : ''}${h < 12 ? 'am' : 'pm'}`; };
+  const [o, c] = hours(day);
+  const names = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  if (mins >= o && mins < c) el.innerHTML = `<b>Open now</b>, until ${fmt(c)} today (closed public holidays).`;
+  else {
+    const next = mins < o ? day : (day + 1) % 7;
+    el.innerHTML = `<b>Closed now.</b> Opens ${fmt(hours(next)[0])} ${next === day ? 'today' : names[next]}. After hours: 13 26 60.`;
+  }
+  document.getElementById('hero-book').hidden = !matchMedia('(max-width: 760px)').matches;
+})();
+
+// Who can I see? tabs
+const tabs = [...document.querySelectorAll('[role=tab]')];
+const show = (t) => { tabs.forEach((x) => { const on = x === t; x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1; document.getElementById(x.getAttribute('aria-controls')).hidden = !on; }); };
+tabs.forEach((t, i) => {
+  t.addEventListener('click', () => show(t));
+  t.addEventListener('keydown', (e) => { const d = { ArrowDown: 1, ArrowRight: 1, ArrowUp: -1, ArrowLeft: -1 }[e.key]; if (d) { e.preventDefault(); const n = tabs[(i + d + tabs.length) % tabs.length]; show(n); n.focus(); } });
+});
+show(tabs[0]);
+
+// The fan: each quarter of the scroll deals the next card from below
+(() => {
+  const fan = document.querySelector('.fan'), cards = [...document.querySelectorAll('.card')];
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const rot = [-3, 2, -2, 3];
+  const tick = () => {
+    if (matchMedia('(max-width: 760px)').matches) { cards.forEach((c) => (c.style.transform = '')); return; }
+    const r = fan.getBoundingClientRect(), span = fan.offsetHeight - innerHeight;
+    const p = Math.min(1, Math.max(0, -r.top / span));
+    cards.forEach((c, i) => {
+      const local = i === 0 ? 1 : Math.min(1, Math.max(0, p * 3.4 - (i - 1)));
+      const e = 1 - Math.pow(1 - local, 3);
+      c.style.transform = `translateY(${(1 - e) * 110}vh) rotate(${rot[i] * e}deg)`;
+    });
+  };
+  addEventListener('scroll', tick, { passive: true }); addEventListener('resize', tick); tick();
+})();
+</script>
+</body>
+</html>
