@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Centre of Wellbeing | Massage, Chiropractic &amp; Counselling, Knoxfield (concept)</title>
+<meta name="description" content="Concept homepage for Centre of Wellbeing, 77 Anne Rd Knoxfield: remedial and sports massage, chiropractic and counselling. Price list, Book Now and HICAPS on the spot.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* The blue of the spine in their own logo is the one accent; the green of its swoosh tints one field. */
+  --bg: #f6f7f5;
+  --surface: #eceeeb;
+  --ink: #0d1420;
+  --muted: #4a5260;
+  --accent: #1f4f9c;
+  --accent-ink: #ffffff;
+  --deep: #0f2747;
+  --deep-ink: #eef2f8;
+  --pale-blue: #dce5f2;
+  --pale-green: #e1eedd;
+  --step-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+  --step-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+  --step-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
+  --step-head: clamp(2rem, 1.3rem + 3.2vw, 4rem);
+  --step-display: clamp(3.25rem, 1rem + 5.4vw, 5.5rem);
+  --m: clamp(16px, 4vw, 64px);
+  --ease: cubic-bezier(.16, 1, .3, 1);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 var(--step-body)/1.5 Jost, system-ui, sans-serif; overflow-x: hidden; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-underline-offset: 3px; }
+::selection { background: var(--accent); color: var(--accent-ink); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+h1, h2, h3 { font-weight: 700; letter-spacing: -0.03em; line-height: 0.95; margin: 0; text-wrap: balance; }
+p { margin: 0; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 28px; border-radius: 999px; border: 0;
+  background: var(--accent); color: var(--accent-ink); font: 500 var(--step-body)/1 Jost, sans-serif; text-decoration: none; cursor: pointer;
+  transition: transform .25s var(--ease), background-color .25s var(--ease); }
+.btn:hover { background: #163d7a; transform: translateY(-2px); }
+.btn:active { transform: scale(.98); }
+.btn.light { background: var(--accent-ink); color: var(--accent); }
+.btn.light:hover { background: var(--pale-blue); }
+/* the vertebra: one dot, at every scale */
+.dot { display: inline-block; width: .55em; height: .55em; border-radius: 50%; background: var(--accent); flex: none; }
+
+.concept { background: #111; color: #ddd; font-size: var(--step-small); text-align: center; padding: 9px 16px; position: relative; z-index: 5; }
+.concept b { color: #fff; }
+
+/* ---------- Hero: the spine, enormous ---------- */
+.hero { position: relative; min-height: calc(100svh - 38px); overflow: hidden; }
+.top { position: relative; z-index: 2; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px var(--m); }
+.mark { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 700; font-size: var(--step-lead); letter-spacing: -0.02em; }
+.top nav { display: flex; gap: 28px; align-items: center; }
+.top nav a { text-decoration: none; font-weight: 500; color: var(--ink); }
+.top nav a:hover { color: var(--accent); }
+.top nav .btn { background: var(--accent-ink); color: var(--accent); }
+.top nav .btn:hover { background: var(--pale-blue); }
+.disc { position: absolute; z-index: 0; width: 120vh; height: 120vh; border-radius: 50%; background: var(--accent); left: 78%; top: 55%; transform: translate(-50%, -50%); }
+.spine { position: absolute; z-index: 1; left: 84%; top: 0; bottom: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2.2vh; }
+.spine i { display: block; border-radius: 50%; background: var(--accent-ink); }
+.orb { position: absolute; z-index: 1; margin: 0; width: min(46vh, 440px); aspect-ratio: 1; border-radius: 50%; overflow: hidden; left: 50%; top: 52%; border: 10px solid var(--bg); }
+.orb img { width: 100%; height: 100%; object-fit: cover; }
+.hero-copy { position: relative; z-index: 2; padding: 12vh var(--m) 80px; max-width: 44%; }
+.hero h1 { font-size: var(--step-display); text-transform: uppercase; }
+.hero .lede { margin-top: 32px; font-size: var(--step-lead); line-height: 1.35; max-width: 30ch; }
+.hero .actions { margin-top: 36px; display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; }
+.hero .tel { font-weight: 500; font-size: var(--step-lead); text-decoration: none; }
+.hero .tel:hover { text-decoration: underline; }
+.hero .rebate { margin-top: 28px; display: flex; gap: 10px; align-items: center; max-width: 36ch; }
+
+/* ---------- Prices: two fields, and the live price finder ---------- */
+.prices { display: grid; grid-template-columns: 7fr 5fr; }
+.field { min-height: 90svh; padding: 56px var(--m) 48px; display: flex; flex-direction: column; }
+.field.massage { background: var(--deep); color: var(--deep-ink); }
+.field.care { background: var(--pale-green); color: var(--ink); }
+.field h2 { font-size: var(--step-head); text-transform: uppercase; }
+.field .who { margin-top: 16px; max-width: 34ch; font-size: var(--step-lead); line-height: 1.3; }
+.choose { margin-top: 36px; display: flex; flex-direction: column; gap: 14px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; border: 0; padding: 0; margin: 0; }
+.chips legend { padding: 0; margin-bottom: 10px; font-weight: 500; }
+.chips input { position: absolute; opacity: 0; pointer-events: none; }
+.chips label { display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 999px; cursor: pointer; font-weight: 500;
+  background: rgba(255,255,255,.1); transition: background-color .2s, color .2s, transform .2s var(--ease); }
+.care .chips label { background: rgba(13,20,32,.07); }
+.chips label:hover { transform: translateY(-2px); }
+.chips input:checked + label { background: var(--accent-ink); color: var(--deep); }
+.care .chips input:checked + label { background: var(--accent); color: var(--accent-ink); }
+.chips input:focus-visible + label { outline: 3px solid currentColor; outline-offset: 2px; }
+.chips input:disabled + label { opacity: .35; cursor: not-allowed; transform: none; }
+.readout { margin-top: auto; padding-top: 88px; display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; flex-wrap: wrap; }
+.price { font-size: clamp(4rem, 2rem + 7vw, 9rem); font-weight: 700; letter-spacing: -0.04em; line-height: .85; font-variant-numeric: tabular-nums; }
+.price small { display: block; margin-top: 14px; font-size: var(--step-body); font-weight: 400; letter-spacing: 0; line-height: 1.4; max-width: 32ch; }
+.pack { display: flex; align-items: center; gap: 10px; margin-top: 4px; font-weight: 500; cursor: pointer; }
+.pack input { width: 22px; height: 22px; accent-color: var(--accent-ink); }
+
+/* ---------- Services: two-column menu, round photo bullets ---------- */
+.services { padding: 200px var(--m) 120px; }
+.services > h2 { font-size: var(--step-head); text-transform: uppercase; }
+.services .intro { margin-top: 18px; max-width: 52ch; font-size: var(--step-lead); line-height: 1.35; }
+.cat { margin-top: 96px; }
+.cat-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 40px; }
+.cat-head h3 { font-size: clamp(2rem, 1.3rem + 2vw, 3.125rem); }
+.items { display: grid; grid-template-columns: 1fr 1fr; gap: 36px 64px; list-style: none; margin: 0; padding: 0; }
+.item { display: grid; grid-template-columns: 96px 1fr; gap: 20px; align-items: start; }
+.item img { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; }
+.item .row { display: flex; justify-content: space-between; gap: 12px; font-weight: 700; }
+.item .row span:last-child { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.item p { margin-top: 6px; color: var(--muted); max-width: 44ch; }
+
+/* ---------- About: inset deep panel, round portrait ---------- */
+.about { padding: 0 20px; }
+.panel { position: relative; background: var(--deep); color: var(--deep-ink); min-height: 110svh; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; padding: 56px; }
+.panel h2 { font-size: var(--step-head); text-transform: uppercase; }
+.founders { margin-top: 48px; width: min(38vw, 520px); aspect-ratio: 1; border-radius: 50%; overflow: hidden; }
+.founders img { width: 100%; height: 100%; object-fit: cover; }
+.panel .text { display: flex; flex-direction: column; gap: 56px; padding-top: 8px; }
+.panel h3 { font-size: var(--step-lead); letter-spacing: -0.01em; line-height: 1.2; }
+.panel .text p { margin-top: 12px; max-width: 46ch; }
+.team { list-style: none; margin: 24px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px 20px; }
+.team li { display: flex; flex-direction: column; gap: 10px; }
+.team img { width: 100%; aspect-ratio: 1; border-radius: 50%; object-fit: cover; max-width: 160px; }
+.team b { display: block; font-weight: 500; }
+.team span { color: #c3cddd; font-size: var(--step-small); }
+
+/* ---------- FAQ: index cards with tabs ---------- */
+.faq { padding: 200px var(--m); }
+.faq-inner { max-width: 900px; margin: 0 auto; }
+.faq h2 { font-size: var(--step-head); text-transform: uppercase; margin-bottom: 56px; }
+.cards { display: flex; flex-direction: column; }
+.card { --tab: 0px; position: relative; margin-top: -24px; padding-top: 40px; }
+.card:first-child { margin-top: 0; }
+.card:nth-child(3n+1) { --c: var(--pale-blue); } .card:nth-child(3n+2) { --c: var(--pale-green); } .card:nth-child(3n) { --c: var(--surface); }
+.card summary { list-style: none; cursor: pointer; position: relative; display: block; background: var(--c); padding: 20px 28px 44px; font-weight: 500; font-size: var(--step-lead); line-height: 1.25; }
+.card summary::-webkit-details-marker { display: none; }
+.card .tab { position: absolute; top: -40px; left: var(--tab); width: 200px; height: 40px; background: var(--c); border-radius: 14px 14px 0 0; display: flex; align-items: center; gap: 8px; padding: 0 18px; font-size: var(--step-small); font-weight: 500; }
+.card .ans { background: var(--c); padding: 0 28px 52px; }
+.card[open] summary { padding-bottom: 14px; }
+.card .ans p { max-width: 58ch; }
+.card summary:hover { filter: brightness(.98); }
+.card:nth-child(2) { --tab: 150px; } .card:nth-child(3) { --tab: 300px; } .card:nth-child(4) { --tab: 450px; } .card:nth-child(5) { --tab: 600px; }
+
+/* ---------- Contact: a coupon to tear off ---------- */
+.contact { padding: 0 var(--m) 120px; }
+.coupon { position: relative; max-width: 1200px; margin: 0 auto; background: var(--accent); color: var(--accent-ink); display: grid; grid-template-columns: 46fr 54fr; }
+.coupon::before, .coupon::after { content: ""; position: absolute; left: 46%; width: 28px; height: 28px; border-radius: 50%; background: var(--bg); transform: translateX(-50%); }
+.coupon::before { top: -14px; } .coupon::after { bottom: -14px; }
+.coupon .l { padding: 48px; display: flex; flex-direction: column; gap: 20px; }
+.coupon h2 { font-size: clamp(1.75rem, 1rem + 2.4vw, 2.75rem); text-transform: uppercase; }
+.coupon dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 6px 18px; }
+.coupon dt { font-weight: 500; }
+.coupon dd { margin: 0; }
+.coupon .r { padding: 48px; border-left: 5px dotted var(--bg); }
+.coupon form { display: grid; gap: 10px; }
+.coupon label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.coupon input, .coupon select, .coupon textarea { width: 100%; min-height: 52px; border: 0; border-radius: 0; padding: 0 16px; font: inherit; font-size: 1rem; background: #3a69b3; color: #fff; }
+.coupon textarea { padding: 14px 16px; min-height: 96px; resize: vertical; }
+.coupon ::placeholder { color: #dbe5f5; }
+.coupon select { appearance: none; }
+.coupon button { min-height: 56px; border: 0; background: var(--ink); color: #fff; font: 500 var(--step-body)/1 Jost, sans-serif; cursor: pointer; transition: background-color .2s; }
+.coupon button:hover { background: #000; }
+.coupon .note { font-size: var(--step-small); color: #dbe5f5; }
+.hills { max-width: 1200px; margin: 64px auto 0; }
+.hills img { width: 100%; aspect-ratio: 5 / 2; object-fit: cover; }
+.hills figcaption { margin-top: 10px; font-size: var(--step-small); color: var(--muted); }
+
+/* ---------- Footer: the spine, built large ---------- */
+footer { background: var(--deep); color: var(--deep-ink); padding: 72px var(--m) 32px; }
+.bigmark { display: flex; align-items: center; justify-content: space-between; gap: 4px; }
+.bigmark i { flex: none; width: calc(var(--k) * 0.75vw + 2.5vw); aspect-ratio: 1; border-radius: 50%; background: var(--accent); }
+.bigmark i:nth-child(odd) { background: #2f63b8; }
+.foot-name { margin-top: 32px; font-size: var(--step-head); text-transform: uppercase; }
+.foot-grid { margin-top: 56px; display: grid; grid-template-columns: repeat(4, 1fr) 2fr; gap: 32px; }
+.foot-grid ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.foot-grid a { text-decoration: none; } .foot-grid a:hover { text-decoration: underline; }
+.foot-last { margin-top: 56px; display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; font-size: var(--step-small); }
+.foot-last .credits a { text-decoration: underline; }
+
+/* ---------- Motion ---------- */
+.js [data-in] { opacity: 0; transform: translateY(24px); transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: calc(var(--i, 0) * 75ms); }
+.js [data-in].on { opacity: 1; transform: none; }
+.disc { animation: grow 1.4s var(--ease) both; }
+@keyframes grow { from { transform: translate(-50%, -50%) scale(.82); opacity: 0; } }
+.spine i { animation: pop .8s var(--ease) both; animation-delay: calc(var(--k) * 60ms + .3s); }
+@keyframes pop { from { transform: scale(.9); opacity: 0; } }
+.js .founders { clip-path: inset(0 0 100% 0); transition: clip-path 1.1s var(--ease); }
+.js .founders img { transform: scale(1.12); transition: transform 1.1s var(--ease); }
+.js .founders.on { clip-path: inset(0 0 0 0); }
+.js .founders.on img { transform: none; }
+.price { transition: opacity .25s; }
+.price.flip { opacity: .2; }
+.hills img { animation: drift 30s ease-in-out infinite alternate; }
+.hills .frame { overflow: hidden; }
+@keyframes drift { from { transform: scale(1.04); } to { transform: scale(1.12) translateX(-2%); } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js [data-in] { opacity: 1; transform: none; }
+  .js .founders { clip-path: none; } .js .founders img { transform: none; }
+}
+
+/* ---------- Phone ---------- */
+@media (max-width: 860px) {
+  .top nav a:not(.btn) { display: none; }
+  .top nav .btn { background: var(--accent); color: var(--accent-ink); }
+  .hero { min-height: 0; padding-bottom: 72vw; }
+  .disc { width: 130vw; height: 130vw; left: 50%; top: auto; bottom: -65vw; transform: translateX(-50%); }
+  @keyframes grow { from { transform: translateX(-50%) scale(.82); opacity: 0; } }
+  .orb { width: 52vw; left: 6vw; top: auto; bottom: 8vw; border-width: 6px; }
+  .spine i { width: calc(4vw + var(--k) * 0.35vw) !important; height: calc(4vw + var(--k) * 0.35vw) !important; }
+  .spine { left: 70%; top: auto; bottom: 0; height: 64vw; transform: translateX(-50%); gap: 1.6vw; }
+  .hero-copy { max-width: none; padding-top: 8vh; padding-bottom: 32px; }
+  .hero h1 { font-size: 11.5vw; }
+  .prices { grid-template-columns: 1fr; }
+  .field { min-height: 0; padding: 48px 20px; }
+  .field .who { order: 1; } .field h2 { order: 0; } .readout { order: 2; padding-top: 32px; margin-top: 0; } .choose { order: 3; }
+  .services { padding: 120px var(--m) 80px; }
+  .items { grid-template-columns: 1fr; }
+  .item { grid-template-columns: 52px 1fr; gap: 16px; } .item img { width: 52px; height: 52px; }
+  .about { padding: 0 10px; }
+  .panel { grid-template-columns: 1fr; padding: 40px 20px 0; min-height: 0; gap: 40px; }
+  .founders { width: 86vw; margin: 0 auto -21vw; order: 3; }
+  .panel .text { gap: 40px; }
+  .team { grid-template-columns: 1fr 1fr; }
+  .faq { padding: 120px var(--m); }
+  .card .tab { width: 130px; } .card:nth-child(2) { --tab: 40px; } .card:nth-child(3) { --tab: 80px; } .card:nth-child(4) { --tab: 120px; } .card:nth-child(5) { --tab: 160px; }
+  .coupon { grid-template-columns: 1fr; }
+  .coupon::before, .coupon::after { left: auto; top: 50%; width: 28px; }
+  .coupon::before { left: -14px; transform: translateY(-50%); } .coupon::after { right: -14px; bottom: auto; transform: translateY(-50%); }
+  .coupon .l, .coupon .r { padding: 32px 20px; }
+  .coupon .r { border-left: 0; border-top: 5px dotted var(--bg); }
+  .foot-grid { grid-template-columns: 1fr 1fr; }
+  .foot-grid > :last-child { grid-column: 1 / -1; }
+}
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Centre of Wellbeing. This is a design preview, not the live website.</div>
+
+<header class="hero" id="top">
+  <div class="disc" aria-hidden="true"></div>
+  <figure class="orb"><img src="img/remedial.jpg" width="700" height="467" alt="Therapist working on a client's leg on a treatment table" fetchpriority="high"></figure>
+  <div class="spine" aria-hidden="true">
+    <i style="--k:0;width:3.2vh;height:3.2vh"></i><i style="--k:1;width:3.6vh;height:3.6vh"></i><i style="--k:2;width:4vh;height:4vh"></i><i style="--k:3;width:4.4vh;height:4.4vh"></i>
+    <i style="--k:4;width:4.8vh;height:4.8vh"></i><i style="--k:5;width:5.2vh;height:5.2vh"></i><i style="--k:6;width:5.6vh;height:5.6vh"></i><i style="--k:7;width:6vh;height:6vh"></i>
+    <i style="--k:8;width:6.4vh;height:6.4vh"></i><i style="--k:9;width:6.8vh;height:6.8vh"></i><i style="--k:10;width:7.2vh;height:7.2vh"></i>
+  </div>
+  <div class="top">
+    <a class="mark" href="#top"><span class="dot" aria-hidden="true"></span>Centre of Wellbeing</a>
+    <nav aria-label="Main"><a href="#prices">Prices</a><a href="#services">Services</a><a href="#team">Team</a><a class="btn" href="https://centreofwellbeing.cliniko.com/bookings#location" target="_blank" rel="noopener">Book now</a></nav>
+  </div>
+  <div class="hero-copy">
+    <h1>Centre of Wellbeing</h1>
+    <p class="lede">Massage, chiropractic and counselling at 77 Anne Rd, Knoxfield. In the community since 2000.</p>
+    <div class="actions">
+      <a class="btn" href="https://centreofwellbeing.cliniko.com/bookings#location" target="_blank" rel="noopener">Book now</a>
+      <a class="tel" href="tel:0397630033">(03) 9763 0033</a>
+    </div>
+    <p class="rebate"><span class="dot" aria-hidden="true"></span>Claim from your health fund on the spot with HICAPS.</p>
+  </div>
+</header>
+
+<main>
+  <section class="prices" id="prices" aria-label="Price list">
+    <div class="field massage" id="massage-field">
+      <h2 data-in>Massage</h2>
+      <p class="who" data-in style="--i:1">Remedial, sports, relaxation, myotherapy, hot stones and reflexology. Pick a treatment and a length.</p>
+      <div class="choose" data-in style="--i:2">
+        <fieldset class="chips" id="m-type"><legend>Treatment</legend>
+          <input type="radio" name="mt" id="mt1" value="std" checked><label for="mt1">Remedial, sports or relaxation</label>
+          <input type="radio" name="mt" id="mt2" value="myo"><label for="mt2">Myotherapy</label>
+          <input type="radio" name="mt" id="mt3" value="stone"><label for="mt3">Hot stones</label>
+          <input type="radio" name="mt" id="mt4" value="reflex"><label for="mt4">Reflexology</label>
+          <input type="radio" name="mt" id="mt5" value="ear"><label for="mt5">Ear candling</label>
+        </fieldset>
+        <fieldset class="chips" id="m-len"><legend>Length</legend>
+          <input type="radio" name="ml" id="ml1" value="30"><label for="ml1">30 min</label>
+          <input type="radio" name="ml" id="ml2" value="60" checked><label for="ml2">1 hour</label>
+          <input type="radio" name="ml" id="ml3" value="90"><label for="ml3">1.5 hours</label>
+          <input type="radio" name="ml" id="ml4" value="120"><label for="ml4">2 hours</label>
+        </fieldset>
+        <label class="pack" id="m-pack-wrap"><input type="checkbox" id="m-pack"> Pay for 5, get the 6th free</label>
+      </div>
+      <div class="readout">
+        <p class="price" aria-live="polite"><span id="m-price">$97.50</span><small id="m-note">1 hour massage (standard)</small></p>
+        <a class="btn light" href="https://centreofwellbeing.cliniko.com/bookings#location" target="_blank" rel="noopener">Book now</a>
+      </div>
+    </div>
+    <div class="field care">
+      <h2 data-in>Chiro and counselling</h2>
+      <p class="who" data-in style="--i:1">Chiropractic with Dr Tiarna, and counselling with Ros Wilson.</p>
+      <div class="choose" data-in style="--i:2">
+        <fieldset class="chips" id="c-type"><legend>Appointment</legend>
+          <input type="radio" name="ct" id="ct1" value="0" checked><label for="ct1">Chiro, first visit</label>
+          <input type="radio" name="ct" id="ct2" value="1"><label for="ct2">Chiro, follow up</label>
+          <input type="radio" name="ct" id="ct3" value="2"><label for="ct3">Chiro, extended</label>
+          <input type="radio" name="ct" id="ct4" value="3"><label for="ct4">Counselling</label>
+          <input type="radio" name="ct" id="ct5" value="4"><label for="ct5">Counselling, 90 min</label>
+          <input type="radio" name="ct" id="ct6" value="5"><label for="ct6">Group counselling</label>
+        </fieldset>
+      </div>
+      <div class="readout">
+        <p class="price" aria-live="polite"><span id="c-price">$97.50</span><small id="c-note">Initial consultation, up to 30 minutes</small></p>
+        <a class="btn" href="https://centreofwellbeing.cliniko.com/bookings#location" target="_blank" rel="noopener">Book now</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services" aria-labelledby="services-h">
+    <h2 id="services-h" data-in>Services</h2>
+    <p class="intro" data-in style="--i:1">Every treatment is tailored to the person on the table. WorkCover, TAC and health fund rebates are available, and many claims are settled on the spot.</p>
+
+    <div class="cat">
+      <div class="cat-head" data-in><h3>Massage</h3><span>6 treatments</span></div>
+      <ul class="items">
+        <li class="item" data-in><img src="img/remedial.jpg" width="700" height="467" alt="Therapist stretching a client's leg on a treatment table" loading="lazy"><div><div class="row"><span>Remedial and sports</span><span>from $67.50</span></div><p>Deep tissue, trigger point therapy, myofascial release, stretching and mobilisations, joint strapping and K-taping.</p></div></li>
+        <li class="item" data-in style="--i:1"><img src="img/relaxation.jpg" width="700" height="467" alt="Client resting face down beside lit candles" loading="lazy"><div><div class="row"><span>Relaxation</span><span>from $67.50</span></div><p>Long smooth gliding strokes at a pressure that suits you, in a quiet room with calming music.</p></div></li>
+        <li class="item" data-in><img src="img/hotstone.jpg" width="700" height="467" alt="Smooth dark stones being placed along a client's back" loading="lazy"><div><div class="row"><span>Hot stones</span><span>from $112.50</span></div><p>Smooth basalt stones, warmed for hours in a slow cooker, glided over the muscles with massage.</p></div></li>
+        <li class="item" data-in style="--i:1"><img src="img/reflexology.jpg" width="700" height="467" alt="Therapist holding a client's foot during reflexology" loading="lazy"><div><div class="row"><span>Reflexology</span><span>$97.50</span></div><p>A foot massage working the reflex areas of the feet.</p></div></li>
+        <li class="item" data-in><img src="img/remedial.jpg" width="700" height="467" alt="" loading="lazy"><div><div class="row"><span>Myotherapy</span><span>from $87.50</span></div><p>Half-hour and one-hour sessions.</p></div></li>
+        <li class="item" data-in style="--i:1"><img src="img/earcandling.jpg" width="700" height="467" alt="Client lying on her side during an ear candling session" loading="lazy"><div><div class="row"><span>Ear candling</span><span>$87.50</span></div><p>Traditional BIOSUN ear candles. There is also a 2 to 2.5 hour course to learn it for family and friends ($125.00)</p></div></li>
+      </ul>
+    </div>
+
+    <div class="cat">
+      <div class="cat-head" data-in><h3>Chiropractic</h3><span>3 visit types</span></div>
+      <ul class="items">
+        <li class="item" data-in><img src="img/chiro.jpg" width="700" height="467" alt="Chiropractor assessing a seated patient's back" loading="lazy"><div><div class="row"><span>First visit</span><span>$97.50</span></div><p>Up to 30 minutes. Manual adjusting, low force and mechanical assisted techniques, soft tissue therapy and rehabilitation exercises.</p></div></li>
+        <li class="item" data-in style="--i:1"><img src="img/chiro.jpg" width="700" height="467" alt="" loading="lazy"><div><div class="row"><span>Follow up</span><span>$67.50</span></div><p>About 15 minutes. Extended consultation, up to 30 minutes: $82.50 · WorkSafe, TAC, DVA and Medicare CDM patients welcome.</p></div></li>
+      </ul>
+    </div>
+
+    <div class="cat">
+      <div class="cat-head" data-in><h3>Counselling</h3><span>4 options</span></div>
+      <ul class="items">
+        <li class="item" data-in><img src="img/counselling.jpg" width="700" height="467" alt="Counsellor talking with a client in a bright room" loading="lazy"><div><div class="row"><span>One on one</span><span>$155.00</span></div><p>For women, children, couples, families and individuals. Extended 90 minute session: $225.00</p></div></li>
+        <li class="item" data-in style="--i:1"><img src="img/counselling.jpg" width="700" height="467" alt="" loading="lazy"><div><div class="row"><span>Group</span><span>$50.00</span></div><p>Pay for 5 sessions up front and get 6, or pay for 10 and get 13. Counselling supervision: $100.00</p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="about" id="team" aria-labelledby="team-h">
+    <div class="panel">
+      <div>
+        <h2 id="team-h" data-in>Founded by Rob and Ros</h2>
+        <figure class="founders" data-in style="margin:48px 0 0"><img src="img/rob.jpg" width="480" height="480" alt="Rob Melville, remedial and sports massage therapist, smiling in a navy polo" loading="lazy"></figure>
+      </div>
+      <div class="text">
+        <div data-in>
+          <h3>At 77 Anne Rd since 2006</h3>
+          <p>Rob Melville and Ros Wilson started the Centre of Wellbeing after a "sea change". It has served Knoxfield, Scoresby, Rowville, Ferntree Gully, Boronia, Bayswater, Wantirna, Studfield and Vermont since the early 2000s. We can also attend corporate and sporting events.</p>
+        </div>
+        <div data-in style="--i:1">
+          <h3>Who you'll see</h3>
+          <ul class="team">
+            <li><img src="img/rob.jpg" width="480" height="480" alt="" loading="lazy"><div><b>Rob Melville</b><span>Remedial and sports massage therapist. Diploma in Remedial Massage.</span></div></li>
+            <li><img src="img/ros.jpg" width="480" height="480" alt="Ros Wilson" loading="lazy"><div><b>Ros Wilson</b><span>Clinical counsellor and supervisor.</span></div></li>
+            <li><img src="img/tiarna.jpg" width="480" height="480" alt="Dr Tiarna, chiropractor" loading="lazy"><div><b>Dr Tiarna (Chiropractor)</b><span>Caring for Dr Anna's patients while she is on leave.</span></div></li>
+            <li><img src="img/anna.jpg" width="480" height="480" alt="Dr Anna Kelly, chiropractor" loading="lazy"><div><b>Dr Anna Kelly (Chiropractor)</b><span>Doctor of Chiropractic, RMIT. Currently on leave.</span></div></li>
+            <li><img src="img/patrick.jpg" width="480" height="480" alt="Patrick, massage therapist" loading="lazy"><div><b>Patrick</b><span>Massage therapist and personal trainer.</span></div></li>
+          </ul>
+        </div>
+        <p data-in style="--i:2"><a class="btn light" href="https://centreofwellbeing.cliniko.com/bookings#location" target="_blank" rel="noopener">Book with the team</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" aria-labelledby="faq-h">
+    <div class="faq-inner">
+      <h2 id="faq-h" data-in>Good to know</h2>
+      <div class="cards" data-in style="--i:1">
+        <details class="card" name="faq" open><summary><span class="tab"><span class="dot"></span>Health funds</span>Can I claim from my health fund?</summary>
+          <div class="ans"><p>Yes. All our therapists are registered with the major health funds, and you can claim on the spot through our HICAPS terminal. What you get back depends on your fund and your level of cover.</p></div></details>
+        <details class="card" name="faq"><summary><span class="tab"><span class="dot"></span>WorkCover</span>Do you take WorkCover and TAC?</summary>
+          <div class="ans"><p>Yes. WorkCover, TAC and other provider rebates are available, and many can be processed on site. For chiropractic we also see DVA patients and patients on a Medicare Chronic Disease Management plan.</p></div></details>
+        <details class="card" name="faq"><summary><span class="tab"><span class="dot"></span>Comfort</span>Do I have to get undressed?</summary>
+          <div class="ans"><p>No. We can work through your clothes. You only undress to your level of comfort, you stay draped under towels, and we only uncover the area we're working on.</p></div></details>
+        <details class="card" name="faq"><summary><span class="tab"><span class="dot"></span>Hours</span>Can I get a later or Saturday appointment?</summary>
+          <div class="ans"><p>After-hours appointments are available for many services. Book ahead for later times and Saturdays, as they are popular. If you can't make it, please give us plenty of notice.</p></div></details>
+        <details class="card" name="faq"><summary><span class="tab"><span class="dot"></span>Referrals</span>What if you can't help me?</summary>
+          <div class="ans"><p>If we feel we can't help, we have a network of other therapists we know and trust, some in house, that we can refer you to.</p></div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-h">
+    <div class="coupon" data-in>
+      <div class="l">
+        <h2 id="contact-h">Ask us anything</h2>
+        <dl>
+          <dt>Address</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=77+Anne+Rd+Knoxfield+VIC+3180" target="_blank" rel="noopener">77 Anne Rd, Knoxfield VIC 3180</a></dd>
+          <dt>Phone</dt><dd><a href="tel:0397630033">(03) 9763 0033</a></dd>
+          <dt>Email</dt><dd><a href="mailto:info@centreofwellbeing.com.au">info@centreofwellbeing.com.au</a></dd>
+          <dt>Mon–Fri</dt><dd>9.30am – 5.30pm</dd>
+          <dt>Saturday</dt><dd>9.30am – 5.00pm</dd>
+          <dt>Sunday</dt><dd>Closed. By appointment only.</dd>
+        </dl>
+        <p>Rather book straight in? <a href="https://centreofwellbeing.cliniko.com/bookings#location" target="_blank" rel="noopener">Book online</a>.</p>
+      </div>
+      <div class="r">
+        <form id="enquiry">
+          <label for="f-name">Your name</label><input id="f-name" name="name" placeholder="Your name" autocomplete="name" required>
+          <label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" placeholder="Phone" autocomplete="tel" required>
+          <label for="f-email">Email</label><input id="f-email" name="email" type="email" placeholder="Email" autocomplete="email">
+          <label for="f-help">How can we help?</label>
+          <select id="f-help" name="help"><option>Massage</option><option>Chiropractor</option><option>Counselling</option><option>Other</option></select>
+          <label for="f-msg">Message</label><textarea id="f-msg" name="message" placeholder="Your question"></textarea>
+          <button type="submit">Send enquiry</button>
+          <p class="note">Opens your email app with the details filled in.</p>
+        </form>
+      </div>
+    </div>
+    <figure class="hills" data-in><div class="frame"><img src="img/dandenongs.jpg" width="1920" height="769" alt="Suburbs of Melbourne's east with the Dandenong Ranges on the horizon" loading="lazy"></div><figcaption>Looking east to the Dandenong Ranges, the hills behind Knox.</figcaption></figure>
+  </section>
+</main>
+
+<footer aria-labelledby="foot-h">
+  <div class="bigmark" aria-hidden="true"><i style="--k:0"></i><i style="--k:1"></i><i style="--k:2"></i><i style="--k:3"></i><i style="--k:4"></i><i style="--k:5"></i><i style="--k:6"></i><i style="--k:7"></i><i style="--k:8"></i><i style="--k:9"></i><i style="--k:10"></i><i style="--k:11"></i></div>
+  <h2 class="foot-name" id="foot-h">Centre of Wellbeing</h2>
+  <div class="foot-grid">
+    <ul><li><a href="#prices">Price list</a></li><li><a href="#services">Services</a></li><li><a href="#team">Team</a></li></ul>
+    <ul><li><a href="#services">Massage</a></li><li><a href="#services">Chiropractic</a></li><li><a href="#services">Counselling</a></li></ul>
+    <ul><li><a href="https://centreofwellbeing.cliniko.com/bookings#location" target="_blank" rel="noopener">Book now</a></li><li><a href="#contact">Enquiries</a></li><li><a href="https://www.facebook.com/centreofwellbeing" target="_blank" rel="noopener">Facebook</a></li></ul>
+    <ul><li><a href="#contact">Cancellation policy</a></li><li><a href="#contact">Privacy policy</a></li></ul>
+    <div><p>77 Anne Rd, Knoxfield VIC 3180</p><p><a href="tel:0397630033">(03) 9763 0033</a> · <a href="mailto:info@centreofwellbeing.com.au">info@centreofwellbeing.com.au</a></p></div>
+  </div>
+  <div class="foot-last">
+    <p>© 2026 Centre of Wellbeing. Concept design by <a href="https://swoopsites.com/">Swoop Sites</a>, Melbourne.</p>
+    <p class="credits">Photo: <a href="https://commons.wikimedia.org/w/index.php?curid=129442672">“Burwood East facing the Dandenong Ranges to the East”</a> by Bob Tan, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, via Wikimedia Commons.</p>
+  </div>
+</footer>
+
+<script>
+document.documentElement.classList.add('js');
+const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+document.querySelectorAll('[data-in], .founders').forEach((el) => io.observe(el));
+
+// Their published price list (centreofwellbeing.com.au/pricing.htm)
+const M = {
+  std:    { 30: ['$67.50', '½ hour massage (short)', '$337.50'], 60: ['$97.50', '1 hour massage (standard)', '$487.50'], 90: ['$142.50', '1.5 hour massage (extended)'], 120: ['$177.50', '2 hour massage (long)'] },
+  myo:    { 30: ['$87.50', '½ hour myotherapy'], 60: ['$127.50', '1 hour myotherapy'] },
+  stone:  { 60: ['$112.50', 'Hot stones massage, 1 hour'], 90: ['$152.50', 'Hot stones massage, 1.5 hours'] },
+  reflex: { 60: ['$97.50', 'Reflexology (foot massage)'] },
+  ear:    { 60: ['$87.50', 'Ear candling session'] },
+};
+const C = [['$97.50', 'Initial consultation, up to 30 minutes'], ['$67.50', 'Standard follow up, about 15 minutes'], ['$82.50', 'Extended consultation, up to 30 minutes'],
+  ['$155.00', 'One on one counselling'], ['$225.00', 'Extended counselling session, 90 minutes'], ['$50.00', 'Group counselling']];
+const $ = (s) => document.querySelector(s);
+const flip = (el, text) => { el.classList.add('flip'); setTimeout(() => { el.textContent = text; el.classList.remove('flip'); }, 160); };
+function massage() {
+  const t = $('input[name=mt]:checked').value; const opts = M[t];
+  document.querySelectorAll('input[name=ml]').forEach((r) => { r.disabled = !opts[r.value]; });
+  let len = $('input[name=ml]:checked');
+  if (!len || !opts[len.value]) { const first = Object.keys(opts)[0]; len = $(`input[name=ml][value="${first}"]`); len.checked = true; }
+  const [price, note, pack] = opts[len.value];
+  $('#m-pack-wrap').style.visibility = pack ? 'visible' : 'hidden';
+  const usePack = pack && $('#m-pack').checked;
+  flip($('#m-price'), usePack ? pack : price);
+  $('#m-note').textContent = usePack ? `6 × ${note.toLowerCase()}, paid as 5 up front` : note;
+}
+document.querySelectorAll('#m-type input, #m-len input, #m-pack').forEach((i) => i.addEventListener('change', massage));
+document.querySelectorAll('#c-type input').forEach((i) => i.addEventListener('change', () => { const [p, n] = C[+i.value]; flip($('#c-price'), p); $('#c-note').textContent = n; }));
+massage();
+
+$('#enquiry').addEventListener('submit', (e) => {
+  e.preventDefault(); const f = new FormData(e.target);
+  const body = `Name: ${f.get('name')}\nPhone: ${f.get('phone')}\nEmail: ${f.get('email')}\nService: ${f.get('help')}\n\n${f.get('message')}`;
+  location.href = 'mailto:info@centreofwellbeing.com.au?subject=' + encodeURIComponent('Enquiry: ' + f.get('help')) + '&body=' + encodeURIComponent(body);
+});
+</script>
+</body>
+</html>
