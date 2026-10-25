@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Addon Electrics | Electrician in Cranbourne North (concept)</title>
+<meta name="description" content="Concept homepage for Addon Electrics, Cranbourne North: domestic, commercial and industrial electrical work, air conditioning, electric heaters, shop and restaurant fit-outs. Quick quote form.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Dealt proportions (cool grey ground, near-black ink, one accent, one flat field).
+     Colours taken from Addon Electrics' own site: the orange header bar and the navy menu bar. */
+  --bg: #eef0f3;
+  --surface: #e2e5ea;
+  --ink: #10151d;
+  --muted: #4c5361;
+  --accent: #f2a33a;        /* their orange: the action, and the switch levers */
+  --accent-press: #e08f20;
+  --accent-ink: #10151d;
+  --field: #1f2737;         /* their navy: the switchboard section */
+  --field-2: #2b3446;
+  --field-ink: #eef0f3;
+  --field-muted: #b9c0cc;
+  --step-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+  --step-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+  --step-lead: clamp(1.375rem, 1.1rem + 1vw, 2rem);
+  --step-head: clamp(2.5rem, 1rem + 4.6vw, 5.5rem);
+  --step-mono: clamp(4.5rem, 12.4vw, 18rem);
+  --m: clamp(16px, 2vw, 28px);
+  --ease: cubic-bezier(.16, 1, .3, 1);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 var(--step-body)/1.45 "Hanken Grotesk", system-ui, sans-serif; letter-spacing: -0.005em; font-kerning: normal; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-underline-offset: 4px; text-decoration-thickness: 2px; }
+::selection { background: var(--accent); color: var(--accent-ink); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+h1, h2, h3 { font-weight: 500; margin: 0; letter-spacing: -0.03em; line-height: 1; text-wrap: balance; }
+p { margin: 0; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 24px; background: var(--accent); color: var(--accent-ink);
+  font: 500 var(--step-body)/1 "Hanken Grotesk", sans-serif; text-decoration: none; border: 0; border-radius: 0; cursor: pointer; white-space: nowrap;
+  transition: transform .25s var(--ease), background-color .25s var(--ease); }
+.btn:hover { background: var(--accent-press); transform: translateY(-2px); }
+.btn:active { transform: translateY(0) scale(.98); }
+.btn.ink { background: var(--ink); color: var(--bg); }
+.btn.ink:hover { background: #2a3140; }
+
+.concept { background: #0b0e13; color: #d4d8de; font-size: var(--step-small); text-align: center; padding: 9px var(--m); position: relative; z-index: 5; }
+.concept b { color: #fff; }
+
+/* ---------- Hero: name under a photograph ---------- */
+.hero { position: relative; min-height: calc(100svh - 38px); display: grid; grid-template-rows: 58fr auto auto; background: var(--bg); overflow: hidden; }
+.hero-photo { position: relative; margin: 0; overflow: hidden; min-height: 300px; background: #cfe3ef; }
+.hero-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; animation: drift 26s ease-in-out infinite alternate; }
+@keyframes drift { from { transform: scale(1.04); } to { transform: scale(1.12) translate(-1.5%, 1%); } }
+.top { position: absolute; top: 0; left: 0; right: 0; z-index: 2; display: flex; justify-content: space-between; align-items: center; padding: 18px var(--m); }
+.top .where { white-space: nowrap; font-weight: 500; background: var(--bg); padding: 12px 14px; }
+.top nav { display: flex; gap: 6px; background: var(--bg); padding: 0 6px; }
+.top nav a { white-space: nowrap; display: inline-flex; align-items: center; min-height: 48px; padding: 0 12px; text-decoration: none; font-weight: 500; transition: color .2s; }
+.top nav a:hover { text-decoration: underline; }
+.menu { display: none; }
+.band { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 24px var(--m) 0; }
+.band p { max-width: 44ch; font-size: var(--step-body); }
+.band .acts { display: flex; gap: 10px; flex-wrap: wrap; }
+.hero h1 { padding: 0 var(--m); font-size: var(--step-mono); letter-spacing: -0.05em; line-height: .85; white-space: nowrap; margin: clamp(8px, 2vh, 24px) 0 24px; }
+.hero h1 .w { display: inline-block; transform-origin: 50% 100%; }
+
+/* ---------- Showcase: square plate, spare text ---------- */
+.show { background: var(--surface); min-height: 88svh; display: grid; grid-template-columns: 1fr 1fr; }
+.show input { position: absolute; opacity: 0; pointer-events: none; }
+.plate { margin: 0; padding: 40px; display: grid; place-items: center; }
+.plate .sq { position: relative; width: 100%; max-width: 720px; aspect-ratio: 1; overflow: hidden; background: var(--bg); }
+.plate img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.05); transition: opacity .6s var(--ease), transform 1.2s var(--ease); }
+.side { display: flex; flex-direction: column; justify-content: space-between; gap: 48px; padding: 40px var(--m) 40px 0; }
+.tabs { display: flex; flex-wrap: wrap; gap: 4px 6px; }
+.tabs label { display: inline-flex; align-items: center; min-height: 48px; padding: 0 14px; cursor: pointer; color: var(--muted); font-weight: 500; transition: color .2s, background-color .2s; }
+.tabs label:first-of-type { padding-left: 0; }
+.tabs label:hover { color: var(--ink); }
+.pane { display: none; }
+.pane h2 { font-size: var(--step-lead); }
+.pane p { margin-top: 32px; max-width: 40ch; font-size: var(--step-lead); line-height: 1.25; }
+.cells { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+.cells .btn { min-height: 72px; justify-content: flex-start; padding: 0 22px; }
+.cells .btn.tone { background: var(--bg); color: var(--ink); }
+.cells .btn.tone:hover { background: #f7f8fa; }
+.show:has(#t1:checked) [data-t="1"], .show:has(#t2:checked) [data-t="2"], .show:has(#t3:checked) [data-t="3"] { display: block; }
+.show:has(#t1:checked) img[data-t="1"], .show:has(#t2:checked) img[data-t="2"], .show:has(#t3:checked) img[data-t="3"] { opacity: 1; transform: none; }
+.show:has(#t1:checked) label[for="t1"], .show:has(#t2:checked) label[for="t2"], .show:has(#t3:checked) label[for="t3"] { color: var(--ink); text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 4px; text-underline-offset: 10px; }
+.tabs input:focus-visible + label { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+/* ---------- The live thing: the switchboard quote ---------- */
+.board-sec { background: var(--field); color: var(--field-ink); padding: 160px var(--m); }
+.board-sec .wrap { max-width: 1392px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(32px, 5vw, 80px); align-items: start; }
+.board-sec h2 { font-size: var(--step-head); letter-spacing: -0.04em; line-height: .95; max-width: 11ch; }
+.board-sec .lede { margin-top: 32px; max-width: 46ch; color: var(--field-muted); }
+.board { margin-top: 48px; background: var(--field-2); padding: 28px 24px 24px; }
+.rail { display: grid; grid-template-columns: repeat(9, minmax(0, 1fr)); gap: 6px; position: relative; }
+.rail::before { content: ""; position: absolute; left: -8px; right: -8px; top: 64px; height: 22px; background: #151b27; }
+.brk { position: relative; display: flex; flex-direction: column; align-items: stretch; cursor: pointer; }
+.brk input { position: absolute; opacity: 0; pointer-events: none; }
+.brk .body { position: relative; height: 150px; background: #f4f5f7; display: grid; justify-items: center; align-content: start; padding-top: 12px; transition: background-color .3s; }
+.brk .state { font-size: var(--step-small); font-weight: 500; color: #4c5361; line-height: 1; }
+.brk .slot { position: relative; margin-top: 12px; width: 30px; height: 96px; background: #c9ced6; }
+.brk .lever { position: absolute; left: 3px; right: 3px; height: 45px; bottom: 3px; background: #6a7180; transition: transform .35s var(--ease), background-color .35s; }
+.brk .tag { margin-top: 6px; min-height: 64px; overflow-wrap: anywhere; hyphens: auto; background: #e8eaee; color: var(--ink); font-size: var(--step-small); line-height: 1.2; padding: 8px 6px; text-align: center; display: grid; place-items: center; transition: background-color .3s; }
+.brk:hover .body { background: #fff; }
+.brk input:checked ~ .body .lever { transform: translateY(-45px); background: var(--accent); }
+.brk input:checked ~ .tag { background: var(--accent); }
+.brk input:focus-visible ~ .body { outline: 3px solid var(--accent); outline-offset: 2px; }
+.status { margin-top: 18px; min-height: 2.9em; color: var(--field-ink); font-weight: 500; }
+.qform { background: var(--bg); color: var(--ink); padding: 32px 28px 0; display: grid; gap: 14px; }
+.qform h3 { font-size: var(--step-lead); }
+.qform label { display: grid; gap: 4px; font-size: var(--step-small); font-weight: 500; }
+.qform input, .qform textarea { font: inherit; font-size: var(--step-body); color: var(--ink); background: #fff; border: 1px solid #8a919d; border-radius: 0; padding: 12px; width: 100%; min-height: 48px; }
+.qform textarea { min-height: 96px; resize: vertical; }
+.qform input:focus, .qform textarea:focus { outline: 3px solid var(--accent); outline-offset: 0; border-color: var(--ink); }
+.qform .jobs { font-size: var(--step-small); color: var(--muted); }
+.qform .jobs b { color: var(--ink); font-weight: 500; }
+.qform .note { font-size: var(--step-small); color: var(--muted); }
+.qform .btn { margin: 4px -28px 0; min-height: 64px; }
+
+/* ---------- Index of the work ---------- */
+.index { padding: 20vh var(--m); display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px; }
+.index h2 { grid-column: 1 / -1; font-size: var(--step-lead); margin-bottom: 96px; }
+.index .grp { grid-column: span 3; }
+.index .grp:nth-of-type(1) { grid-column: 1 / span 3; }
+.index h3 { font-size: var(--step-body); font-weight: 500; letter-spacing: -0.005em; margin-bottom: 1.25em; }
+.index ul { list-style: none; margin: 0; padding: 0; color: var(--muted); line-height: 1.25; }
+.index li { padding: 6px 0; cursor: default; transition: color .2s; }
+.index li:hover, .index li:focus { color: var(--ink); outline: none; }
+.index .sum { display: none; margin-top: 16px; color: var(--muted); }
+.index aside { grid-column: 10 / span 3; grid-row: 2; align-self: start; }
+.index aside p { color: var(--ink); min-height: 6em; }
+.index aside .lab { color: var(--muted); font-size: var(--step-small); margin-bottom: 6px; min-height: 0; }
+
+/* ---------- One verb at a time ---------- */
+.verb { position: relative; display: flow-root; height: 100svh; padding-bottom: 150px; overflow: clip; color: var(--bg); background: var(--field); }
+.verb > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.verb::after { content: ""; position: absolute; inset: 0; background: rgba(16, 21, 29, .5); }
+.verb .stick { position: sticky; z-index: 1; top: calc(50svh - .45em); margin-top: calc(50svh - .45em); text-align: center; font-size: var(--step-mono); line-height: .9; }
+.verb h2 { font-size: 1em; letter-spacing: -0.05em; line-height: .9; }
+.verb p { position: absolute; z-index: 1; left: var(--m); bottom: 28px; max-width: 34ch; padding: 14px 18px; background: rgba(16, 21, 29, .72); font-size: var(--step-body); }
+
+/* ---------- About: picture as drop cap ---------- */
+.about { padding: 160px var(--m); display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px; }
+.about .facts { grid-column: 1 / span 2; display: flex; flex-direction: column; gap: 16px; font-size: var(--step-small); }
+.about .facts h2 { font-size: var(--step-body); }
+.about .facts a { font-weight: 500; }
+.about .text { grid-column: 3 / span 10; font-size: var(--step-lead); line-height: 1.2; color: var(--muted); max-width: 64ch; }
+.about .text p + p { margin-top: 1.2em; }
+.about .text b { color: var(--ink); font-weight: 500; }
+.about .cap { float: left; width: 3.6em; height: 3.6em; margin: .12em .5em 0 0; object-fit: cover; }
+
+/* ---------- Contact: display rows ---------- */
+.rows { background: var(--surface); }
+.row { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; min-height: 150px; padding: 0 20px 22px; font-size: var(--step-head); line-height: 1; letter-spacing: -0.04em; }
+.row:nth-child(even) { background: #d6dae1; }
+.row h2 { font-size: 1em; letter-spacing: -0.04em; }
+.row a { text-decoration: none; transition: color .2s; }
+.row a:hover { text-decoration: underline; text-decoration-thickness: 4px; }
+.row .small { font-size: var(--step-body); letter-spacing: -0.005em; padding-bottom: .5em; color: var(--muted); }
+.row.go { background: var(--accent); justify-content: flex-start; }
+.round { display: inline-grid; place-items: center; width: .9em; height: .9em; margin-left: 24px; border-radius: 50%; background: var(--ink); color: var(--bg); transition: transform .3s var(--ease); flex: none; }
+.round svg { width: 42%; height: 42%; }
+.row.go a { display: inline-flex; align-items: center; }
+.row.go a:hover .round { transform: translateX(8px); }
+.row.go a:hover { text-decoration: none; }
+
+/* ---------- Footer: invitation over a cropped name ---------- */
+footer { position: relative; background: var(--ink); color: var(--bg); padding: 120px var(--m) 0; overflow: hidden; min-height: 100svh; display: flex; flex-direction: column; }
+.foot-top { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px; }
+.invite { grid-column: 1 / span 7; }
+.invite h2 { font-size: var(--step-head); letter-spacing: -0.04em; line-height: .95; max-width: 12ch; }
+.invite .btn { margin-top: 36px; }
+.foot-links { grid-column: 10 / span 3; display: flex; flex-direction: column; gap: 4px; }
+.foot-links a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; }
+.foot-links a:hover { text-decoration: underline; }
+.legal { margin-top: auto; padding-top: 96px; display: flex; justify-content: space-between; gap: 12px 24px; flex-wrap: wrap; font-size: var(--step-small); color: #c3c8d1; }
+.legal .credits { flex-basis: 100%; max-width: 75ch; }
+.legal a { color: inherit; }
+.giant { font-size: 21vw; font-weight: 500; letter-spacing: -0.05em; line-height: .8; white-space: nowrap; margin: 12px 0 0 -0.04em; transform: translateY(26%); color: var(--bg); transform-origin: 0 100%; }
+.callbar { display: none; transition: transform .35s var(--ease); }
+.callbar.away { transform: translateY(110%); }
+
+/* ---------- Motion ---------- */
+.js [data-in] { opacity: 0; transform: translateY(24px); transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: calc(var(--i, 0) * 75ms); }
+.js [data-in].on { opacity: 1; transform: none; }
+.band > *, .hero h1 { animation: rise 1s var(--ease) both; }
+.band > :nth-child(2) { animation-delay: .08s; }
+.hero h1 { animation-delay: .14s; }
+@keyframes rise { from { opacity: 0; transform: translateY(24px); } }
+@supports (animation-timeline: view()) {
+  .hero h1 .w { animation: settle linear both; animation-timeline: view(); animation-range: exit 0% exit 100%; }
+  @keyframes settle { to { transform: scale(.93); } }
+  .giant { animation: arrive linear both; animation-timeline: view(); animation-range: entry 0% entry 100%; }
+  @keyframes arrive { from { scale: .94; } to { scale: 1; } }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js [data-in] { opacity: 1; transform: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1100px) {
+  .board-sec .wrap { grid-template-columns: 1fr; }
+  .top nav { display: none; }
+  .menu { display: inline-flex; align-items: center; min-height: 48px; padding: 0 14px; background: var(--bg); font-weight: 500; text-decoration: none; }
+  .show { grid-template-columns: 1fr; min-height: 0; }
+  .plate { padding: 32px var(--m) 0; }
+  .plate .sq { max-width: none; aspect-ratio: 4 / 3; }
+  .side { padding: 32px var(--m) 72px; }
+  .foot-top { display: block; }
+  .foot-links { flex-direction: row; flex-wrap: wrap; gap: 0 18px; margin-top: 36px; }
+  .rail { grid-template-columns: repeat(5, minmax(0, 1fr)); row-gap: 20px; }
+  .rail::before { display: none; }
+  .band { order: 3; padding-bottom: 32px; }
+  .hero h1 { order: 2; }
+  .row .small { display: none; }
+  .band p { font-size: var(--step-lead); line-height: 1.25; }
+  footer { min-height: 0; }
+  .index .grp, .index .grp:nth-of-type(1) { grid-column: span 4; }
+  .index aside { grid-column: 1 / -1; grid-row: auto; margin-top: 48px; }
+}
+
+/* ---------- Phone: its own composition ---------- */
+@media (max-width: 760px) {
+  body { padding-bottom: 64px; }
+  .hero { min-height: 0; grid-template-rows: 50svh auto auto; }
+  .top { padding: 12px var(--m); }
+  .top nav { display: none; }
+  .menu { display: inline-flex; align-items: center; min-height: 48px; padding: 0 14px; background: var(--bg); font-weight: 500; text-decoration: none; }
+  .band { flex-direction: column; align-items: flex-start; gap: 16px; padding-top: 4px; }
+  .band .acts { width: 100%; }
+  .band .acts .btn { flex: 1 1 100%; }
+  .hero h1 { white-space: normal; font-size: 19.5vw; margin: 20px 0 16px; }
+  .hero h1 .w { display: block; width: max-content; }
+  .show { grid-template-columns: 1fr; min-height: 0; }
+  .plate { padding: 16px var(--m) 0; }
+  .plate .sq { aspect-ratio: 1; }
+  .side { padding: 24px var(--m) 56px; gap: 28px; }
+  .tabs label { padding: 0 10px; }
+  .pane h2 { font-size: var(--step-lead); }
+  .pane p { margin-top: 16px; font-size: var(--step-body); line-height: 1.45; }
+  .cells { grid-template-columns: 1fr; }
+  .cells .btn { min-height: 60px; }
+  .board-sec { padding: 96px var(--m); }
+  .board { padding: 18px 12px 14px; }
+  .rail { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; row-gap: 14px; }
+  .brk .body { height: 104px; }
+  .brk .slot { height: 62px; }
+  .brk .lever { height: 28px; }
+  .brk input:checked ~ .body .lever { transform: translateY(-28px); }
+  .qform { padding: 24px 18px 0; }
+  .qform .btn { margin: 4px -18px 0; }
+  .index { padding: 120px var(--m); display: block; }
+  .index h2 { font-size: var(--step-lead); margin-bottom: 48px; }
+  .index .grp + .grp { margin-top: 40px; }
+  .index ul { line-height: 1.4; }
+  .index li { padding: 4px 0; }
+  .index .sum { display: block; }
+  .index aside { display: none; }
+  .verb .stick { font-size: 21vw; }
+  .verb { padding-bottom: 170px; }
+  .verb p { left: 0; right: 0; bottom: 0; max-width: none; padding: 18px var(--m) 22px; }
+  .about { padding: 120px var(--m); display: flex; flex-direction: column-reverse; gap: 40px; }
+  .about .text { line-height: 1.25; }
+  .about .cap { width: 110px; height: 110px; }
+  .about .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .about .facts h2 { grid-column: 1 / -1; }
+  .row { min-height: 84px; padding: 0 16px 16px; }
+  .row .small { display: none; }
+  .row.go a { width: 100%; justify-content: space-between; }
+  .round { width: 56px; height: 56px; margin-left: 0; }
+  footer { padding-top: 96px; min-height: 0; }
+  .foot-top { display: block; }
+  .invite .btn { width: 100%; }
+  .foot-links { flex-direction: row; flex-wrap: wrap; gap: 0 18px; margin-top: 36px; }
+  .legal { padding-top: 64px; }
+  .giant { font-size: 34vw; }
+  .callbar { display: flex; position: fixed; z-index: 20; left: 0; right: 0; bottom: 0; min-height: 64px; align-items: center; justify-content: center; gap: 10px; background: var(--accent); color: var(--accent-ink); font-weight: 500; text-decoration: none; font-size: var(--step-body); }
+  .callbar svg { width: 20px; height: 20px; }
+}
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Addon Electrics. This is a design preview, not the live website.</div>
+<main>
+  <section class="hero" id="top" aria-labelledby="name">
+    <figure class="hero-photo">
+      <img src="img/cable.jpg" width="1800" height="1292" alt="Close-up of a cut electrical cable showing three copper cores in brown, blue and green-yellow insulation">
+    </figure>
+    <header class="top">
+      <span class="where">Electricians, Cranbourne North</span>
+      <nav aria-label="Main">
+        <a href="#work">Air con and fit-outs</a><a href="#services">Services</a><a href="#quote">Quick quote</a><a href="#contact">Contact</a>
+      </nav>
+      <a class="menu" href="#services">Menu</a>
+    </header>
+    <div class="band">
+      <p>Electricians in Cranbourne North for homes, shops, restaurants and industry. Air conditioning, heaters and fit-outs.</p>
+      <div class="acts">
+        <a class="btn" href="#quote">Get a quick quote</a>
+      </div>
+    </div>
+    <h1 id="name"><span class="w">Addon</span> <span class="w">Electrics</span></h1>
+  </section>
+
+  <section class="show" id="work" aria-label="Air conditioning and fit-outs">
+    <figure class="plate" data-in>
+      <div class="sq">
+        <img data-t="1" src="img/aircon.jpg" width="1200" height="836" alt="Outdoor unit of a split-system air conditioner on a pad beside a garden bed" loading="lazy">
+        <img data-t="2" src="img/retrofit.jpg" width="1600" height="1070" alt="An electrician in hi-vis re-wiring light fittings in a commercial ceiling" loading="lazy">
+        <img data-t="3" src="img/restaurant.jpg" width="1600" height="1066" alt="A restaurant dining room with pendant lights and downlights over dark wooden tables" loading="lazy">
+      </div>
+    </figure>
+    <div class="side">
+      <div class="tabs" role="radiogroup" aria-label="Choose the work" data-in>
+        <input type="radio" name="tab" id="t1" checked><label for="t1">Air conditioning</label>
+        <input type="radio" name="tab" id="t2"><label for="t2">Shop fit-outs</label>
+        <input type="radio" name="tab" id="t3"><label for="t3">Restaurant fit-outs</label>
+      </div>
+      <div data-in style="--i:1">
+        <div class="pane" data-t="1">
+          <h2>Air conditioning</h2>
+          <p>We diagnose and repair all types of air conditioners: split, centralised and HVAC. Plus electric heaters, plug-in or permanent.</p>
+        </div>
+        <div class="pane" data-t="2">
+          <h2>Shop fit-outs</h2>
+          <p>Turnkey electrical work for shops and offices, from complex commercial projects to maintenance, priced to meet your budget.</p>
+        </div>
+        <div class="pane" data-t="3">
+          <h2>Restaurant fit-outs</h2>
+          <p>Restaurant fit-outs and kitchen renovations, with 3D design, installation and maintenance by one electrical company.</p>
+        </div>
+      </div>
+      <div class="cells" data-in style="--i:2">
+        <a class="btn ink" href="#quote" id="quote-this">Quote for this job</a>
+        <a class="btn tone" href="tel:0403550095">Call 0403 550 095</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="board-sec" id="quote" aria-labelledby="quote-h">
+    <form class="wrap" id="qf" action="mailto:admin@addonelectrics.com.au" method="get" enctype="text/plain">
+      <div>
+        <h2 id="quote-h" data-in>Switch on what you need</h2>
+        <p class="lede" data-in style="--i:1">Flip a switch for each job, add your details, and your quote request is ready to send. Every message is answered within 48 hrs.</p>
+        <div class="board" data-in style="--i:2">
+          <div class="rail" role="group" aria-label="Jobs you need">
+            <label class="brk"><input type="checkbox" name="job" value="Air conditioning" id="j-ac"><span class="body"><span class="state">Off</span><span class="slot"><span class="lever"></span></span></span><span class="tag">Air con&shy;ditioning</span></label>
+            <label class="brk"><input type="checkbox" name="job" value="Electric heaters"><span class="body"><span class="state">Off</span><span class="slot"><span class="lever"></span></span></span><span class="tag">Heaters</span></label>
+            <label class="brk"><input type="checkbox" name="job" value="Shop fit-out" id="j-shop"><span class="body"><span class="state">Off</span><span class="slot"><span class="lever"></span></span></span><span class="tag">Shop fit-out</span></label>
+            <label class="brk"><input type="checkbox" name="job" value="Restaurant fit-out" id="j-rest"><span class="body"><span class="state">Off</span><span class="slot"><span class="lever"></span></span></span><span class="tag">Restaurant fit-out</span></label>
+            <label class="brk"><input type="checkbox" name="job" value="Kitchen renovation"><span class="body"><span class="state">Off</span><span class="slot"><span class="lever"></span></span></span><span class="tag">Kitchen reno</span></label>
+            <label class="brk"><input type="checkbox" name="job" value="Domestic electrical"><span class="body"><span class="state">Off</span><span class="slot"><span class="lever"></span></span></span><span class="tag">Home</span></label>
+            <label class="brk"><input type="checkbox" name="job" value="Commercial electrical"><span class="body"><span class="state">Off</span><span class="slot"><span class="lever"></span></span></span><span class="tag">Commer&shy;cial</span></label>
+            <label class="brk"><input type="checkbox" name="job" value="Industrial electrical"><span class="body"><span class="state">Off</span><span class="slot"><span class="lever"></span></span></span><span class="tag">Indus&shy;trial</span></label>
+            <label class="brk"><input type="checkbox" name="job" value="Maintenance"><span class="body"><span class="state">Off</span><span class="slot"><span class="lever"></span></span></span><span class="tag">Mainten&shy;ance</span></label>
+          </div>
+          <p class="status" id="status" aria-live="polite">Everything is off. Tap a switch.</p>
+        </div>
+      </div>
+      <div class="qform" data-in style="--i:3">
+        <h3>Quick quote</h3>
+        <p class="jobs" id="jobs">Jobs: <b>none switched on yet</b></p>
+        <label>Your name<input name="name" autocomplete="name" required></label>
+        <label>Phone<input name="phone" type="tel" autocomplete="tel" required></label>
+        <label>Suburb<input name="suburb" autocomplete="address-level2"></label>
+        <label>Anything else we should know<textarea name="message"></textarea></label>
+        <p class="note">This opens your email app with everything filled in, addressed to admin@addonelectrics.com.au. Nothing is stored on this page.</p>
+        <button class="btn" type="submit">Send my quote request</button>
+      </div>
+    </form>
+  </section>
+
+  <section class="index" id="services" aria-labelledby="services-h">
+    <h2 id="services-h" data-in>Domestic, commercial, industrial</h2>
+    <div class="grp" data-in>
+      <h3>Domestic</h3>
+      <ul>
+        <li tabindex="0" data-d="Design, installation and maintenance of electrical jobs at home.">Electrical design</li>
+        <li tabindex="0" data-d="New circuits, lights and power, put in by skilled electricians.">Installation</li>
+        <li tabindex="0" data-d="Upkeep and repairs so everything keeps working.">Maintenance</li>
+        <li tabindex="0" data-d="Plug-in or permanent electric heaters for any room.">Electric heaters</li>
+        <li tabindex="0" data-d="Split systems diagnosed, repaired and looked after.">Split systems</li>
+        <li tabindex="0" data-d="The electrical side of a kitchen renovation.">Kitchen renovations</li>
+      </ul>
+      <p class="sum">Design, installation and maintenance of electrical jobs at home, with heaters and split systems.</p>
+    </div>
+    <div class="grp" data-in style="--i:1">
+      <h3>Commercial</h3>
+      <ul>
+        <li tabindex="0" data-d="Complex commercial projects, handled as turnkey jobs.">Turnkey projects</li>
+        <li tabindex="0" data-d="Electrical fit-outs for shops and offices.">Shop fit-outs</li>
+        <li tabindex="0" data-d="Restaurant and commercial kitchen fit-outs.">Restaurant fit-outs</li>
+        <li tabindex="0" data-d="Fit-outs planned with 3D design.">3D design</li>
+        <li tabindex="0" data-d="Installation and maintenance throughout the region.">Installation and maintenance</li>
+        <li tabindex="0" data-d="Cost-effective pricing to meet the budget.">Priced to your budget</li>
+      </ul>
+      <p class="sum">Turnkey commercial projects, shop and restaurant fit-outs, priced to meet the budget.</p>
+    </div>
+    <div class="grp" data-in style="--i:2">
+      <h3>Industrial</h3>
+      <ul>
+        <li tabindex="0" data-d="Work across a very wide range of industries.">Many industries</li>
+        <li tabindex="0" data-d="Skilled and experienced people for any industrial electrical job.">Industrial electrical</li>
+        <li tabindex="0" data-d="Heating, ventilation and air conditioning.">HVAC</li>
+        <li tabindex="0" data-d="Centralised air conditioning, diagnosed and repaired.">Centralised air con</li>
+        <li tabindex="0" data-d="Ongoing maintenance for plant and sites.">Maintenance</li>
+      </ul>
+      <p class="sum">Skilled and experienced people for any industrial electrical job, across a wide range of industries.</p>
+    </div>
+    <aside aria-live="polite" data-in style="--i:3">
+      <p class="lab" id="d-lab">Addon Electrics</p>
+      <p id="d-txt">Point at any line for a short description. We design, install and maintain electrical jobs for homes, businesses and industry.</p>
+    </aside>
+  </section>
+
+  <section class="verb" aria-labelledby="v1">
+    <img src="img/panel.jpg" width="1600" height="1068" alt="An open switchboard with its wiring showing behind the cover" loading="lazy">
+    <div class="stick"><h2 id="v1">Design</h2></div>
+    <p>Every job starts with the design, including 3D design for shop and restaurant fit-outs.</p>
+  </section>
+  <section class="verb" aria-labelledby="v2">
+    <img src="img/retrofit.jpg" width="1600" height="1070" alt="An electrician re-wiring light fittings in a ceiling" loading="lazy" style="object-position: 30% 50%">
+    <div class="stick"><h2 id="v2">Install</h2></div>
+    <p>Installed by highly skilled electricians and registered electrical workers.</p>
+  </section>
+  <section class="verb" aria-labelledby="v3">
+    <img src="img/fusebox.jpg" width="1600" height="902" alt="A finished switchboard with a row of orange circuit breakers" loading="lazy">
+    <div class="stick"><h2 id="v3">Maintain</h2></div>
+    <p>Maintenance for homes, shops and industry, and repairs to all types of air conditioners.</p>
+  </section>
+
+  <section class="about" id="about" aria-labelledby="about-h">
+    <div class="facts" data-in>
+      <h2 id="about-h">About us</h2>
+      <span>Cranbourne North VIC</span>
+      <span>Every message answered within 48 hrs</span>
+      <a href="tel:0403550095">0403 550 095</a>
+    </div>
+    <div class="text" data-in style="--i:1">
+      <p><img class="cap" src="img/redsand.jpg" width="900" height="675" alt="The Red Sand Garden at the Royal Botanic Gardens Cranbourne" loading="lazy"><b>Addon Electrics</b> is an electrical company in Cranbourne North. We do the design, installation and maintenance of electrical jobs, with highly skilled electricians and registered electrical workers.</p>
+      <p>For businesses we take on complex commercial projects as turnkey jobs, priced to meet the budget. For industry, we have the skilled and experienced people for any industrial electrical job.</p>
+    </div>
+  </section>
+
+  <section class="rows" id="contact" aria-labelledby="contact-h">
+    <div class="row" data-in><h2 id="contact-h">Call Addon Electrics</h2></div>
+    <div class="row" data-in><a href="tel:0403550095">0403 550 095</a><span class="small">Main number</span></div>
+    <div class="row" data-in><span>Cranbourne North VIC</span><span class="small">Working across Dandenong and nearby</span></div>
+    <div class="row" data-in><span>Replies within 48 hrs</span></div>
+    <div class="row go" data-in><a href="mailto:admin@addonelectrics.com.au?subject=Electrical%20job%20enquiry">Email us<span class="round" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h14M12 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6"/></svg></span></a></div>
+  </section>
+</main>
+
+<footer aria-labelledby="foot-h">
+  <div class="foot-top">
+    <div class="invite" data-in>
+      <h2 id="foot-h">Switch on a quote today</h2>
+      <a class="btn" href="#quote">Get a quick quote</a>
+    </div>
+    <div class="foot-links" data-in style="--i:1">
+      <a href="tel:0403550095">0403 550 095</a>
+      <a href="tel:0488026265">0488 026 265</a>
+      <a href="tel:0430140085">0430 140 085</a>
+      <a href="mailto:admin@addonelectrics.com.au">admin@addonelectrics.com.au</a>
+    </div>
+  </div>
+  <div class="legal">
+    <p>© <span data-year>2026</span> Addon Electrics Pty Ltd, Cranbourne North VIC.</p>
+    <p>Concept design by <a href="https://swoopsites.com/">Swoop Sites</a>, Melbourne.</p>
+    <p class="credits">Pictures: <a href="https://commons.wikimedia.org/wiki/File:Electric_guide_3%C3%972.5_mm.jpg">“Electric guide 3×2.5 mm”</a> by Petar Milošević, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=181382673">“Carrier Outdoor Split Air Conditioner Heat Pump System”</a> by Tony Webster, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=70019104">“Lighting Retrofit Project, Re-wiring Light Fixtures”</a> by NAVFAC, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>; <a href="https://wordpress.org/photos/photo/46677d64d9/">restaurant interior</a> by Nilo Velez, CC0; <a href="https://commons.wikimedia.org/wiki/File:Electrical_panel_with_exposed_wiring_in_a_residential_setting.jpg">“Electrical panel with exposed wiring”</a> by Shixart1985, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=11768173">“Fuse box after finishing”</a> by Dmitry G, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>; <a href="https://commons.wikimedia.org/wiki/File:RedSandGardenToVisitorCentre,RBG-CranbourneVIC.jpg">“Red Sand Garden to Visitor Centre, RBG Cranbourne”</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>. Via Wikimedia Commons and the WordPress Photo Directory.</p>
+  </div>
+  <p class="giant" aria-hidden="true">Addon Electrics</p>
+</footer>
+
+<a class="callbar" href="tel:0403550095"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="currentColor"/></svg>Call 0403 550 095</a>
+
+<script>
+document.documentElement.classList.add('js');
+// the year is never hard-coded wrong
+document.querySelectorAll('[data-year]').forEach((el) => { el.textContent = new Date().getFullYear(); });
+// entrances, once
+const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+document.querySelectorAll('[data-in]').forEach((el) => io.observe(el));
+// fit the name to the width
+const h1 = document.getElementById('name');
+function fit() {
+  const words = [...h1.querySelectorAll('.w')];
+  h1.style.fontSize = '100px';
+  const cs = getComputedStyle(h1);
+  const avail = h1.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+  const stacked = matchMedia('(max-width: 760px)').matches;
+  const r = words.map((w) => w.getBoundingClientRect());
+  const used = stacked ? Math.max(...r.map((b) => b.width)) : r[r.length - 1].right - r[0].left;
+  h1.style.fontSize = Math.min(100 * avail / used * 0.99, 340) + 'px';
+}
+(document.fonts ? document.fonts.ready : Promise.resolve()).then(fit);
+addEventListener('resize', fit);
+// the phone call bar steps aside where the page already shows the numbers large
+const bar = document.querySelector('.callbar'), seen = new Set();
+const io2 = new IntersectionObserver((es) => { es.forEach((e) => e.isIntersecting ? seen.add(e.target) : seen.delete(e.target)); bar.classList.toggle('away', seen.size > 0); });
+document.querySelectorAll('#contact, footer').forEach((el) => io2.observe(el));
+// the switchboard
+const boxes = [...document.querySelectorAll('.brk input')];
+const status = document.getElementById('status'), jobs = document.getElementById('jobs');
+function update() {
+  const on = boxes.filter((b) => b.checked).map((b) => b.value);
+  boxes.forEach((b) => { b.closest('.brk').querySelector('.state').textContent = b.checked ? 'On' : 'Off'; });
+  status.textContent = on.length ? on.length + (on.length === 1 ? ' switch on: ' : ' switches on: ') + on.join(', ') + '.' : 'Everything is off. Tap a switch.';
+  jobs.innerHTML = 'Jobs: <b>' + (on.length ? on.join(', ') : 'none switched on yet') + '</b>';
+}
+boxes.forEach((b) => b.addEventListener('change', update));
+// "Quote for this job" flips the matching switch on
+document.getElementById('quote-this').addEventListener('click', () => {
+  const t = document.querySelector('input[name=tab]:checked').id;
+  const map = { t1: 'j-ac', t2: 'j-shop', t3: 'j-rest' };
+  const box = document.getElementById(map[t]); if (box) { box.checked = true; update(); }
+});
+// the index: show a line's description in the empty columns
+const dl = document.getElementById('d-lab'), dt = document.getElementById('d-txt');
+document.querySelectorAll('.index li').forEach((li) => {
+  const show = () => { dl.textContent = li.textContent; dt.textContent = li.dataset.d; };
+  li.addEventListener('mouseenter', show); li.addEventListener('focus', show);
+});
+// build a tidy email instead of a raw form post
+document.getElementById('qf').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const f = new FormData(e.target);
+  const on = f.getAll('job');
+  const body = `Name: ${f.get('name')}\nPhone: ${f.get('phone')}\nSuburb: ${f.get('suburb')}\nJobs: ${on.join(', ') || 'not sure yet'}\n\n${f.get('message')}`;
+  location.href = 'mailto:admin@addonelectrics.com.au?subject=' + encodeURIComponent('Quick quote: ' + (on.join(', ') || 'electrical job')) + '&body=' + encodeURIComponent(body);
+});
+</script>
+</body>
+</html>
