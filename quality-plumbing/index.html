@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Quality Plumbing &amp; Sewer Connections | Sewer Connections and Plumber, Mitcham (concept)</title>
+<meta name="description" content="Concept homepage for Quality Plumbing &amp; Sewer Connections, Mitcham: sewer connections for the Yarra Valley Water Community Sewerage Program, drainage, roof plumbing, hot water and general maintenance.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Colours from their own world: the navy and sky blue of their logo, trench clay, PVC pipe white, reinstated lawn. */
+  --bg: #14223b;          /* navy ground */
+  --surface: #1c2d4b;
+  --ink: #eef1ec;         /* PVC white */
+  --muted: #c3ccd6;
+  --accent: #5bbcf0;      /* their sky blue: the one action colour */
+  --accent-ink: #0d1a2e;
+  --clay: #7b4f33;
+  --paper: #eef1ec;
+  --paper-ink: #14223b;
+  --grass: #35553a;
+  --step-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+  --step-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+  --step-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
+  --step-head: clamp(2.5rem, 1.2rem + 5vw, 5.5rem);
+  --step-hero: clamp(3.25rem, 8.2vw, 8.5rem);
+  --step-h3: clamp(1.75rem, 1.2rem + 1.6vw, 2.5rem);
+  --m: clamp(16px, 2.2vw, 28px);
+  --ease: cubic-bezier(.16, 1, .3, 1);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 var(--step-body)/1.5 Barlow, system-ui, sans-serif; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-underline-offset: 3px; }
+::selection { background: var(--accent); color: var(--accent-ink); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+h1, h2, h3 { font-family: "Barlow Condensed", "Arial Narrow", sans-serif; font-weight: 700; letter-spacing: -0.02em; line-height: 0.92; margin: 0; text-wrap: balance; text-transform: uppercase; }
+p { margin: 0; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 22px; background: var(--accent); color: var(--accent-ink);
+  font: 500 var(--step-body)/1 Barlow, sans-serif; text-decoration: none; border: 0; border-radius: 0; cursor: pointer;
+  transition: transform .25s var(--ease), background-color .25s var(--ease); }
+.btn:hover { background: #8fd2f6; transform: translateY(-2px); }
+.btn:active { transform: translateY(0) scale(.98); }
+.btn.ghost { background: transparent; color: inherit; border: 2px solid currentColor; }
+.btn.ghost:hover { background: var(--ink); color: var(--bg); }
+
+.concept { background: #0a1220; color: #d6dbe2; font-size: var(--step-small); text-align: center; padding: 9px var(--m); position: relative; z-index: 5; }
+.concept b { color: #fff; }
+
+/* ---------- Top line ---------- */
+.top { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px var(--m); }
+.mark { font: 700 var(--step-lead)/1 "Barlow Condensed", sans-serif; text-transform: uppercase; text-decoration: none; letter-spacing: -0.01em; }
+.top nav { display: flex; align-items: center; gap: 26px; }
+.top nav a:not(.btn) { text-decoration: none; font-weight: 500; }
+.top nav a:not(.btn):hover { text-decoration: underline; }
+
+/* ---------- Hero: the sentence with the machinery in it ---------- */
+.hero { min-height: calc(100svh - 120px); display: grid; align-content: center; padding: 40px var(--m) 72px; }
+.hero h1 { font-size: var(--step-hero); line-height: 0.9; display: flex; align-items: center; gap: 0.18em; white-space: nowrap; }
+.strip { flex: 1; min-width: 12vw; height: 0.86em; overflow: hidden; border-radius: 14px; background: var(--surface); }
+.strip img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 62%; }
+.hero .below { margin-top: 44px; display: grid; grid-template-columns: minmax(0, 8fr) minmax(0, 5fr); gap: 40px; align-items: end; }
+.hero .below figure { margin: 0; }
+.hero .below figure img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: 50% 70%; }
+.hero .below figcaption { margin-top: 8px; font-size: var(--step-small); color: var(--muted); }
+.hero .lede { margin-top: 0; max-width: 46ch; font-size: var(--step-lead); line-height: 1.3; }
+.hero .acts { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 10px; }
+.hero .acts .btn { padding: 0 18px; }
+.hero .facts { margin-top: 40px; display: flex; flex-wrap: wrap; gap: 8px 32px; color: var(--muted); }
+.hero .facts a { color: var(--ink); font-weight: 500; }
+
+/* ---------- The program: Warrandyte from the air ---------- */
+.program { padding: 0 0 200px; }
+.program figure { margin: 0; position: relative; overflow: hidden; }
+.program figure img { width: 100%; aspect-ratio: 1920 / 775; object-fit: cover; min-height: 280px; }
+.program figcaption { padding: 10px var(--m) 0; font-size: var(--step-small); color: var(--muted); }
+.program .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; padding: 96px var(--m) 0; max-width: 1440px; margin: 0 auto; }
+.program h2 { font-size: var(--step-head); }
+.program .text { display: flex; flex-direction: column; gap: 1em; max-width: 60ch; }
+.program .text p:first-child { font-size: var(--step-lead); line-height: 1.3; }
+.suburbs { columns: 2; column-gap: 32px; font: 700 var(--step-h3)/1.15 "Barlow Condensed", sans-serif; text-transform: uppercase; }
+.suburbs li { break-inside: avoid; padding: 2px 0; }
+.suburbs-note { margin-top: 18px; color: var(--muted); font-size: var(--step-small); }
+
+/* ---------- The live thing: dig, connect, fill back in ---------- */
+.dig { background: var(--paper); color: var(--paper-ink); padding: 160px var(--m) 180px; }
+.dig .wrap { max-width: 1384px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 4vw, 72px); align-items: start; }
+.dig h2 { font-size: var(--step-head); }
+.dig .intro { margin-top: 20px; max-width: 44ch; }
+.ctl { margin-top: 32px; display: grid; gap: 18px; }
+.ctl fieldset { border: 0; margin: 0; padding: 0; }
+.ctl legend, .ctl label.lbl { font-weight: 500; font-size: var(--step-small); margin-bottom: 6px; display: block; padding: 0; }
+.seg { display: flex; gap: 6px; }
+.seg input { position: absolute; opacity: 0; pointer-events: none; }
+.seg label { flex: 1; min-height: 48px; display: flex; align-items: center; justify-content: center; background: #dde3e0; cursor: pointer; font-weight: 500; transition: background-color .2s, color .2s; }
+.seg label:hover { background: #cfd7d3; }
+.seg input:checked + label { background: var(--paper-ink); color: var(--paper); }
+.seg input:focus-visible + label { outline: 3px solid #1b78b0; outline-offset: 2px; }
+.ctl select { font: inherit; font-size: 1rem; min-height: 48px; width: 100%; padding: 0 12px; border: 2px solid var(--paper-ink); border-radius: 0; background: #fff; color: var(--paper-ink); }
+.steps { margin-top: 36px; display: grid; gap: 6px; }
+.steps button { all: unset; box-sizing: border-box; width: 100%; display: grid; grid-template-columns: 1fr auto; gap: 4px 16px; padding: 14px 18px; min-height: 56px; background: #e2e7e4; cursor: pointer; transition: background-color .25s var(--ease); }
+.steps button:hover { background: #d6ddd9; }
+.steps button:focus-visible { outline: 3px solid #1b78b0; outline-offset: 2px; }
+.steps b { font: 700 var(--step-lead)/1 "Barlow Condensed", sans-serif; text-transform: uppercase; align-self: center; }
+.steps .say { grid-column: 1 / -1; display: none; line-height: 1.45; }
+.steps .go { align-self: center; font-size: var(--step-small); font-weight: 500; }
+.steps li.on button { background: var(--paper-ink); color: var(--paper); }
+.steps li.on .say { display: block; }
+.no-js .steps .say { display: block; }
+.steps .gr, .steps .pr { display: none; }
+.dig[data-type="gravity"] .steps .gr, .dig[data-type="pressure"] .steps .pr { display: inline; }
+.dig .take { margin-top: 24px; }
+.dig .take .btn { width: 100%; background: var(--paper-ink); color: var(--paper); }
+.dig .take .btn:hover { background: #24375a; }
+
+.right { position: sticky; top: 24px; }
+.verb { font: 700 var(--step-head)/0.9 "Barlow Condensed", sans-serif; text-transform: uppercase; letter-spacing: -0.02em; min-height: 1em; }
+.section-art { margin: 18px 0 0; background: #cfe3ee; }
+.section-art svg { display: block; width: 100%; height: auto; }
+.art-cap { margin-top: 10px; font-size: var(--step-small); }
+.pair { margin-top: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.pair figure { margin: 0; }
+.pair img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.pair figcaption { margin-top: 6px; font-size: var(--step-small); }
+
+/* drawing states, driven by data-step and data-type on .dig */
+.section-art * { transition: opacity .6s var(--ease), fill .6s var(--ease), stroke-dashoffset 1.2s var(--ease), transform .8s var(--ease); }
+.s-main { stroke: #2c4a6e; }
+.s-route, .s-trench, .s-pipe-g, .s-pipe-p, .s-pump, .s-mound, .s-fill, .s-lawn-new, .s-x, .s-ready { opacity: 0; }
+.s-pipe-g path, .s-pipe-p path { stroke-dasharray: 900; stroke-dashoffset: 900; }
+.dig[data-step="1"] .s-ready { opacity: 1; }
+.dig[data-step="1"] .s-main { stroke: #1b78b0; }
+.dig[data-step="2"] .s-route { opacity: 1; }
+.dig[data-step="3"] .s-trench, .dig[data-step="4"] .s-trench, .dig[data-step="3"] .s-mound, .dig[data-step="4"] .s-mound { opacity: 1; }
+.dig[data-step="3"] .s-lawn-cut, .dig[data-step="4"] .s-lawn-cut { opacity: 0; }
+.dig[data-type="gravity"][data-step="3"] .s-pipe-g, .dig[data-type="gravity"][data-step="4"] .s-pipe-g, .dig[data-type="gravity"][data-step="5"] .s-pipe-g { opacity: 1; }
+.dig[data-type="pressure"][data-step="3"] .s-pipe-p, .dig[data-type="pressure"][data-step="4"] .s-pipe-p, .dig[data-type="pressure"][data-step="5"] .s-pipe-p,
+.dig[data-type="pressure"][data-step="3"] .s-pump, .dig[data-type="pressure"][data-step="4"] .s-pump, .dig[data-type="pressure"][data-step="5"] .s-pump { opacity: 1; }
+.dig[data-step="3"] .s-pipe-g path, .dig[data-step="4"] .s-pipe-g path, .dig[data-step="5"] .s-pipe-g path,
+.dig[data-step="3"] .s-pipe-p path, .dig[data-step="4"] .s-pipe-p path, .dig[data-step="5"] .s-pipe-p path { stroke-dashoffset: 0; }
+.dig[data-step="4"] .s-tank, .dig[data-step="5"] .s-tank { fill: #9b7354; }
+.dig[data-step="4"] .s-x, .dig[data-step="5"] .s-x { opacity: 1; }
+.dig[data-step="4"] .s-olddrain, .dig[data-step="5"] .s-olddrain { opacity: .15; }
+.dig[data-step="5"] .s-fill, .dig[data-step="5"] .s-lawn-new { opacity: 1; }
+.no-js .s-pipe-g, .no-js .s-fill, .no-js .s-lawn-new { opacity: 1; }
+.no-js .s-pipe-g path { stroke-dashoffset: 0; }
+
+/* ---------- Statements on colour fields ---------- */
+.field { min-height: 76svh; display: grid; grid-template-columns: repeat(12, 1fr); grid-template-rows: auto 1fr auto; padding: 72px var(--m) 56px; column-gap: 24px; }
+.field p { grid-column: 8 / span 4; grid-row: 1; max-width: 32ch; font-size: var(--step-lead); line-height: 1.35; }
+.field h2 { grid-column: 1 / span 9; grid-row: 3; font-size: var(--step-hero); line-height: 0.88; }
+.field.flip p { grid-column: 2 / span 4; }
+.field.flip h2 { grid-column: 4 / -1; text-align: right; }
+.f-clay { background: var(--clay); color: var(--paper); }
+.f-paper { background: #dfe6e2; color: var(--paper-ink); }
+.f-grass { background: var(--grass); color: var(--paper); }
+
+/* ---------- Services as one paragraph ---------- */
+.work { padding: 200px var(--m); }
+.work .inner { max-width: 1384px; margin: 0 auto; }
+.work h2 { font-size: var(--step-head); }
+.names { margin-top: 36px; font: 500 var(--step-h3)/1.35 Barlow, sans-serif; color: var(--muted); }
+.names li { display: inline; }
+.names li:not(:last-child)::after { content: ","; color: var(--muted); }
+.names a { text-decoration: none; transition: color .2s; }
+.names a:hover, .names a:focus-visible { color: var(--ink); text-decoration: underline; }
+.names .frame { display: inline-block; width: 1.9em; height: 1.2em; margin: 0 .2em 0 .3em; vertical-align: -0.2em; overflow: hidden; transform-origin: left center; transition: transform .4s var(--ease); }
+.names .frame img { width: 100%; height: 100%; object-fit: cover; }
+.names li:hover .frame { transform: scale(1.5); }
+.work .count { margin-top: 32px; max-width: 70ch; }
+
+/* ---------- Customer words ---------- */
+.words { background: var(--surface); padding: 180px var(--m); }
+.words .inner { max-width: 1384px; margin: 0 auto; }
+.spread { margin: 0; font: 700 var(--step-hero)/1 "Barlow Condensed", sans-serif; text-transform: uppercase; letter-spacing: -0.02em; }
+.spread > span { display: flex; justify-content: space-between; gap: .3em; }
+.spread > span + span { margin-top: .35em; }
+.spread-by { margin-top: 28px; display: flex; justify-content: space-between; gap: 16px; font-size: var(--step-lead); }
+.words h2 { margin-top: 140px; font-size: var(--step-head); }
+.quotes { margin-top: 40px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px 48px; }
+.quotes blockquote { margin: 0; }
+.quotes blockquote p { line-height: 1.5; }
+.quotes footer { margin-top: 12px; font-weight: 500; }
+.quotes footer span { color: var(--muted); font-weight: 400; }
+.quotes .wide { grid-column: span 2; }
+.quotes .wide p { font-size: var(--step-lead); line-height: 1.35; }
+.words .later { margin-top: 48px; color: var(--muted); max-width: 70ch; }
+
+/* ---------- About: picture as drop cap ---------- */
+.about { padding: 200px var(--m); }
+.about .inner { max-width: 1384px; margin: 0 auto; display: grid; grid-template-columns: 2fr 10fr; gap: 24px 48px; }
+.about h2 { grid-column: 2; font-size: var(--step-head); }
+.about aside { grid-column: 1; grid-row: 2; display: flex; flex-direction: column; gap: 18px; font-size: var(--step-small); color: var(--muted); }
+.about aside b { display: block; color: var(--ink); font-size: var(--step-body); font-weight: 500; }
+.bio { grid-column: 2; grid-row: 2; font-size: var(--step-lead); line-height: 1.25; display: flex; flex-direction: column; gap: 1em; max-width: 60ch; }
+.bio .cap { float: left; width: 3.75em; height: 3.75em; margin: .2em .5em 0 0; object-fit: cover; }
+.bio .soft { color: var(--muted); }
+.bio strong { font-weight: 500; }
+
+/* ---------- Contact: sentence, picture, the quote form ---------- */
+.contact { background: var(--paper); color: var(--paper-ink); padding: 160px var(--m) 140px; }
+.contact .inner { max-width: 1384px; margin: 0 auto; display: grid; grid-template-columns: 5fr 2fr 5fr; gap: 48px; align-items: start; }
+.contact h2 { font-size: var(--step-head); }
+.contact .say { margin-top: 24px; font-size: var(--step-lead); line-height: 1.3; max-width: 30ch; }
+.contact dl { margin: 32px 0 0; display: grid; grid-template-columns: auto 1fr; gap: 10px 20px; }
+.contact dt { font-weight: 500; }
+.contact dd { margin: 0; font-variant-numeric: tabular-nums; }
+.contact .place img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+.contact .place figcaption { margin-top: 8px; font-size: var(--step-small); }
+.contact .place { margin: 0; }
+form { display: grid; gap: 14px; }
+form h3 { font-size: var(--step-h3); }
+form label { display: grid; gap: 4px; font-size: var(--step-small); font-weight: 500; }
+form input, form select, form textarea { font: inherit; font-size: 1rem; color: var(--paper-ink); background: #fff; border: 2px solid #8796a8; border-radius: 0; padding: 10px 12px; min-height: 48px; width: 100%; }
+form input:focus, form select:focus, form textarea:focus { border-color: var(--paper-ink); outline: none; }
+form textarea { min-height: 96px; resize: vertical; }
+form .two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+form .btn { min-height: 56px; background: var(--paper-ink); color: var(--paper); }
+form .btn:hover { background: #24375a; }
+form .note { font-size: var(--step-small); color: #3b4a5e; }
+
+/* ---------- Footer: the name returns ---------- */
+.foot { background: var(--bg); padding: 120px var(--m) 40px; }
+.foot .big { font: 700 var(--step-hero)/0.86 "Barlow Condensed", sans-serif; text-transform: uppercase; letter-spacing: -0.03em; }
+.foot .row { margin-top: 56px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+.foot .row b { display: block; font-weight: 500; margin-bottom: 6px; }
+.foot .row a { display: inline-block; min-height: 32px; }
+.imprint { margin-top: 72px; font-size: var(--step-small); color: var(--muted); display: flex; flex-direction: column; gap: 8px; }
+.imprint a { color: var(--ink); }
+
+/* phone call bar (promised: Call buttons for Craig and Hayden on phones) */
+.callbar { display: none; }
+
+/* ---------- Motion ---------- */
+.js [data-in] { opacity: 0; transform: translateY(24px); transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: calc(var(--i, 0) * 75ms); }
+.js [data-in].on { opacity: 1; transform: none; }
+.strip { animation: shutter 1.1s var(--ease) both .15s; }
+.strip img { animation: settle 1.4s var(--ease) both .15s; }
+@keyframes shutter { from { clip-path: inset(0 100% 0 0 round 14px); } to { clip-path: inset(0 0 0 0 round 14px); } }
+@keyframes settle { from { transform: scale(1.12); } }
+.hero .lede, .hero .acts, .hero .facts { animation: rise 1s var(--ease) both; }
+.hero .acts { animation-delay: .1s; } .hero .facts { animation-delay: .2s; }
+@keyframes rise { from { opacity: 0; transform: translateY(20px); } }
+.program figure img { animation: drift 28s ease-in-out infinite alternate; }
+@keyframes drift { from { transform: scale(1.04); } to { transform: scale(1.12) translateX(-2%); } }
+.dig[data-step="1"] .s-ready circle { animation: ping 1.8s ease-out infinite; transform-origin: 712px 318px; }
+@keyframes ping { from { transform: scale(.6); opacity: .9; } to { transform: scale(1.8); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js [data-in] { opacity: 1; transform: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1100px) {
+  .dig .wrap { grid-template-columns: minmax(0, 1fr); }
+  .dig .wrap { display: flex; flex-direction: column; align-items: stretch; gap: 0; }
+  .dig .left, .dig .right { display: contents; }
+  .dig h2 { order: 1; } .dig .intro { order: 2; } .dig .ctl { order: 3; } .stage { order: 4; margin-top: 40px; }
+  .steps { order: 5; } .dig .take { order: 6; } .pair { order: 7; margin-top: 32px; }
+  .program .cols { grid-template-columns: 1fr; }
+  .top nav { gap: 18px; } .top nav a { white-space: nowrap; }
+  .field p { grid-column: 6 / -1; } .field.flip p { grid-column: 1 / span 7; }
+  .field h2 { grid-column: 1 / -1; } .field.flip h2 { grid-column: 1 / -1; }
+  .foot .row { grid-template-columns: 1fr 1fr; }
+  .foot .row a { overflow-wrap: anywhere; }
+  .about .inner { grid-template-columns: 1fr; }
+  .about h2, .bio { grid-column: 1; grid-row: auto; }
+  .about aside { grid-column: 1; grid-row: auto; flex-direction: row; flex-wrap: wrap; gap: 16px 40px; }
+  .hero .below { grid-template-columns: 1fr 1fr; }
+  .contact .inner { grid-template-columns: 1fr 1fr; }
+  .contact .place { grid-row: 2; }
+  .contact form { grid-column: 2; grid-row: 1 / span 2; }
+  .quotes { grid-template-columns: 1fr 1fr; }
+}
+
+/* ---------- Phone: its own composition ---------- */
+@media (max-width: 760px) {
+  .top nav a:not(.btn) { display: none; }
+  .hero { min-height: 0; padding: 48px var(--m) 72px; }
+  .hero h1 { flex-direction: column; align-items: flex-start; font-size: 19vw; gap: 0; white-space: normal; }
+  .hero h1 > span:not(.strip) { display: block; }
+  .strip { flex: none; width: 100%; height: auto; aspect-ratio: 2 / 1; margin: .12em 0 .16em; }
+  .hero .lede { margin-top: 32px; }
+  .hero .acts .btn { flex: 1 1 100%; }
+  .program { padding-bottom: 120px; }
+  .program .cols { grid-template-columns: 1fr; padding-top: 56px; gap: 40px; }
+  .dig { padding: 120px var(--m); }
+  .pair { grid-template-columns: 1fr 1fr; }
+  .field { min-height: 64svh; display: flex; flex-direction: column; justify-content: space-between; gap: 40px; padding: 48px var(--m); }
+  .field p { max-width: 80%; }
+  .field.flip p { align-self: flex-end; text-align: right; }
+  .field.flip h2 { text-align: left; }
+  .field h2 { font-size: 15vw; }
+  .work { padding: 120px var(--m); }
+  .names { color: var(--ink); line-height: 1.5; }
+  .names .frame { display: none; }
+  .names li:nth-child(-n+3) .frame { display: inline-block; }
+  .words { padding: 120px var(--m); }
+  .spread-by { flex-direction: column; gap: 4px; font-size: var(--step-body); }
+  .quotes { grid-template-columns: 1fr; }
+  .quotes .wide { grid-column: auto; }
+  .words h2 { margin-top: 96px; }
+  .about { padding: 120px var(--m); }
+  .about .inner { grid-template-columns: 1fr; }
+  .about h2, .bio { grid-column: 1; grid-row: auto; }
+  .about aside { grid-column: 1; grid-row: auto; flex-direction: row; flex-wrap: wrap; gap: 16px 28px; }
+  .bio { font-size: 1.375rem; }
+  .bio .cap { width: 4.2em; height: 4.2em; }
+  .contact { padding: 120px var(--m); }
+  .contact .inner { grid-template-columns: 1fr; }
+  .contact .place, .contact form { grid-column: 1; grid-row: auto; }
+  .contact .place { width: 60%; }
+  form .two { grid-template-columns: 1fr; }
+  .foot { padding-top: 96px; }
+  .foot .row { grid-template-columns: 1fr 1fr; }
+  .callbar { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; position: sticky; top: 0; z-index: 10; padding: 8px var(--m); background: #0a1220; }
+  .hero .below { grid-template-columns: 1fr; gap: 32px; }
+  .spread { font-size: 10.5vw; }
+  .names { font-size: 1.5rem; }
+  .foot .big { font-size: 9.5vw; }
+  .callbar .btn { min-height: 52px; padding: 0 10px; }
+}
+</style>
+</head>
+<body class="no-js">
+<div class="concept">Free concept by <b>Swoop Sites</b> for Quality Plumbing &amp; Sewer Connections. This is a design preview, not the live website.</div>
+
+<header class="top">
+  <a class="mark" href="#top">Quality Plumbing</a>
+  <nav aria-label="Main">
+    <a href="#sewer">Sewer connections</a><a href="#services">Plumbing</a><a href="#words">Customers</a><a href="#about">About</a>
+    <a class="btn" href="#quote">Get a quote</a>
+  </nav>
+</header>
+<div class="callbar" aria-label="Call us">
+  <a class="btn" href="tel:0418542380">Call Craig</a>
+  <a class="btn" href="tel:0491726574">Call Hayden</a>
+</div>
+
+<main id="top">
+  <section class="hero" aria-labelledby="hero-h">
+    <h1 id="hero-h"><span>We do the</span><span class="strip"><img src="img/machinery.jpg" width="672" height="505" alt="Quality Plumbing's two mini excavators on a trailer, ready for a sewer connection trench"></span><span>dirty work</span></h1>
+    <div class="below"><div>
+    <p class="lede">Sewer connections, drainage and everyday plumbing from Quality Plumbing &amp; Sewer Connections, a family run business in Mitcham.</p>
+    <div class="acts">
+      <a class="btn" href="#quote">Get a sewer connection quote</a>
+      <a class="btn ghost" href="tel:0418542380">Call Craig 0418 542 380</a>
+      <a class="btn ghost" href="tel:0491726574">Call Hayden 0491 726 574</a>
+    </div>
+    <p class="facts"><span>Over 30 years plumbing service across Victoria</span><span>Over 800 sewers connected</span><span>Open 9:00 to 18:00</span></p>
+    </div>
+    <figure><img src="img/garden-reinstated.jpg" width="450" height="600" alt="A front garden put back with rocks, a stone bench and flowering shrubs after a sewer connection"><figcaption>After the dirty work: a garden put back once the sewer was connected</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="program" id="sewer" aria-labelledby="program-h">
+    <figure><img src="img/warrandyte.jpg" width="1920" height="775" alt="Bushland and houses along the Yarra River valley at Warrandyte, seen from the air" loading="lazy">
+      <figcaption>Warrandyte from the air. Homes like these across the outer east were built before the sewer arrived.</figcaption></figure>
+    <div class="cols">
+      <div class="text">
+        <h2 id="program-h" data-in>Need your sewer connected?</h2>
+        <p data-in style="--i:1">If your property is in one of the suburbs affected by Yarra Valley Water’s Community Sewerage Program, you will receive a letter from Yarra Valley Water informing you that you’re ready to connect your property to the new sewer system.</p>
+        <p data-in style="--i:2">Once their part is complete you will need a licenced plumber to connect your house to the new sewer service. Quality Plumbing has been conducting sewer connections and converting septic tank systems to both Pressure and Gravity systems for over 15 years.</p>
+      </div>
+      <div data-in style="--i:2">
+        <ul class="suburbs" aria-label="Suburbs in the Community Sewerage Program">
+          <li>Donvale</li><li>Eltham South</li><li>Kallista</li><li>Launching Place</li><li>Lilydale</li><li>Lower Plenty</li><li>Mitcham</li><li>Monbulk</li><li>North Warrandyte</li><li>Park Orchards</li>
+        </ul>
+        <p class="suburbs-note">Program suburbs named on our current site. Yarra Valley Water shows the stage each one is at.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="dig" id="process" data-step="5" data-type="gravity" aria-labelledby="dig-h">
+    <div class="wrap">
+      <div class="left">
+        <h2 id="dig-h" data-in>From septic tank to sewer</h2>
+        <p class="intro" data-in style="--i:1">Pick your sewer type, then tap through the five steps to see the job happen under your lawn. Your choices go into the quote form.</p>
+        <div class="ctl" data-in style="--i:2">
+          <fieldset>
+            <legend>Your sewer type</legend>
+            <div class="seg">
+              <input type="radio" name="stype" id="t-g" value="gravity" checked><label for="t-g">Gravity sewer</label>
+              <input type="radio" name="stype" id="t-p" value="pressure"><label for="t-p">Pressure sewer</label>
+            </div>
+          </fieldset>
+          <div>
+            <label class="lbl" for="suburb-pick">Your suburb</label>
+            <select id="suburb-pick">
+              <option>Donvale</option><option>Eltham South</option><option>Kallista</option><option>Launching Place</option><option>Lilydale</option><option>Lower Plenty</option><option selected>Mitcham</option><option>Monbulk</option><option>North Warrandyte</option><option>Park Orchards</option><option>Somewhere else</option>
+            </select>
+          </div>
+        </div>
+        <ol class="steps" aria-label="The sewer connection process">
+          <li data-step="1"><button type="button"><b>Apply to connect</b><span class="go">Step one</span><span class="say">If you’ve received a notice from Yarra Valley Water to let you know that sewerage services are now available in your area, you can now apply to connect. <span class="gr">For gravity sewers application will need to be made to Yarra Valley Water to obtain consent to connect.</span><span class="pr">For pressure sewers application will need to be made to Yarra Valley Water to obtain consent to connect.</span></span></button></li>
+          <li data-step="2"><button type="button"><b>Get a quote</b><span class="go">Step two</span><span class="say">Contact a licenced plumber, like us, to get a sewer connection quote. Call Craig or Hayden, or send the form below with your suburb and sewer type.</span></button></li>
+          <li data-step="3"><button type="button"><b>Connect sewer</b><span class="go">Step three</span><span class="say"><span class="gr">A gravity sewer system relies on the sewer drain to be gradually sloping to allow the sewage to flow naturally downhill, away from your property and into the collection network.</span><span class="pr">A pressure sewer system provides each property with a small pump station unit. The property’s sewer drain is connected to the pump unit and all wastewater from the property is pumped to a discharge point.</span></span></button></li>
+          <li data-step="4"><button type="button"><b>Decommission septic tank</b><span class="go">Step four</span><span class="say">With the house running to the new sewer, the old septic tank is taken out of use.</span></button></li>
+          <li data-step="5" class="on"><button type="button"><b>Reinstate property</b><span class="go">Step five</span><span class="say">Reinstating your property back to how it looked before we started!</span></button></li>
+        </ol>
+        <p class="take"><a class="btn" href="#quote" id="take">Get a quote for this connection</a></p>
+      </div>
+
+      <div class="right">
+      <div class="stage" data-in style="--i:1">
+        <p class="verb" id="verb" aria-live="polite">Reinstate</p>
+        <figure class="section-art" aria-hidden="true">
+          <svg viewBox="0 0 800 420">
+            <!-- sky and ground -->
+            <rect width="800" height="420" fill="#cfe3ee"/>
+            <rect y="176" width="800" height="244" fill="#b98a62"/>
+            <rect y="300" width="800" height="120" fill="#a9784f"/>
+            <!-- street -->
+            <rect x="640" y="160" width="160" height="16" fill="#5d6670"/>
+            <rect x="630" y="150" width="10" height="26" fill="#8c949c"/>
+            <!-- street sewer main (gravity deep, pressure shallow share one main here) -->
+            <circle class="s-main" cx="712" cy="318" r="18" fill="#e6e9e4" stroke-width="7"/>
+            <g class="s-ready"><circle cx="712" cy="318" r="26" fill="none" stroke="#1b78b0" stroke-width="4"/></g>
+            <!-- house -->
+            <polygon points="40,96 140,40 240,96" fill="#14223b"/>
+            <rect x="56" y="96" width="168" height="80" fill="#eef1ec"/>
+            <rect x="80" y="116" width="44" height="34" fill="#9cc3d8"/>
+            <rect x="150" y="122" width="34" height="54" fill="#14223b"/>
+            <!-- lawn, garden -->
+            <rect class="s-lawn" y="168" width="640" height="10" fill="#4f7a45"/>
+            <rect class="s-lawn-cut" x="236" y="168" width="404" height="10" fill="#4f7a45"/>
+            <g fill="#35553a"><circle cx="30" cy="160" r="14"/><circle cx="262" cy="158" r="12"/><circle cx="600" cy="156" r="16"/><circle cx="584" cy="164" r="10"/></g>
+            <!-- house drain and septic tank -->
+            <path class="s-olddrain" d="M200 176 V206 H290" fill="none" stroke="#6d4c33" stroke-width="8"/>
+            <rect class="s-tank" x="290" y="190" width="96" height="58" fill="#556270"/>
+            <rect x="322" y="178" width="30" height="12" fill="#3f4a56"/>
+            <g class="s-x" stroke="#14223b" stroke-width="6"><path d="M298 196 L378 242 M378 196 L298 242"/></g>
+            <!-- planned route -->
+            <path class="s-route" d="M214 210 L700 312" fill="none" stroke="#14223b" stroke-width="4" stroke-dasharray="10 9"/>
+            <!-- trench and spoil mound -->
+            <polygon class="s-trench" points="236,176 640,176 700,296 724,300 724,336 690,336 236,232" fill="#6d4a31"/>
+            <path class="s-mound" d="M250 176 Q300 136 360 176 M410 176 Q470 132 540 176" fill="#9b6b45"/>
+            <!-- gravity pipe: falls all the way to the main -->
+            <g class="s-pipe-g"><path d="M214 210 L696 312" fill="none" stroke="#f4f6f2" stroke-width="10" stroke-linecap="round"/></g>
+            <!-- pressure: pump unit then a shallow rising main -->
+            <g class="s-pump"><rect x="420" y="178" width="46" height="92" fill="#1b78b0"/><rect x="414" y="170" width="58" height="10" fill="#14223b"/></g>
+            <g class="s-pipe-p"><path d="M214 210 L420 250 M466 228 L640 228 L696 306" fill="none" stroke="#f4f6f2" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/></g>
+            <!-- back-filled and lawn returned -->
+            <polygon class="s-fill" points="236,176 640,176 700,296 724,300 724,336 690,336 236,232" fill="#b98a62"/>
+            <rect class="s-lawn-new" x="236" y="168" width="404" height="10" fill="#4f7a45"/>
+          </svg>
+        </figure>
+        <p class="art-cap" id="art-cap">A septic tank home in Mitcham, joined to the new sewer in the street.</p>
+      </div>
+        <div class="pair" data-in style="--i:2">
+          <figure><img src="img/long-trench.jpg" width="450" height="600" alt="A long, straight sewer trench with the white pipe laid in its base" loading="lazy"><figcaption>A long sewer trench, pipe in place</figcaption></figure>
+          <figure><img src="img/pipe-in-trench.jpg" width="450" height="600" alt="New white sewer pipe and riser laid in the base of a trench" loading="lazy"><figcaption>Pipe and riser laid before backfill</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="field f-clay" aria-labelledby="f1">
+    <p data-in>We are prompt, communicate well and will never leave a mess! Our team treats every household and shop as it were our own.</p>
+    <h2 id="f1" data-in style="--i:1">Never leave a mess</h2>
+  </section>
+  <section class="field f-paper flip" aria-labelledby="f2">
+    <p data-in>Quality Plumbing &amp; Sewer Connections connected over 800 sewers across Victoria. Our experience, knowledge and equipment will alleviate mess and save you time and money.</p>
+    <h2 id="f2" data-in style="--i:1">Over 800 sewers</h2>
+  </section>
+  <section class="field f-grass" aria-labelledby="f3">
+    <p data-in>A family run business that is a fully licensed and insured company, built on quality workmanship, friendly service, good communication, reliability and honest rates.</p>
+    <h2 id="f3" data-in style="--i:1">Family run, 30 years</h2>
+  </section>
+
+  <section class="work" id="services" aria-labelledby="work-h">
+    <div class="inner">
+      <h2 id="work-h" data-in>Plumbing work, big or small</h2>
+      <ul class="names" data-in style="--i:1">
+        <li><a href="#quote" data-job="Sewer connection">Sewer connections</a><span class="frame"><img src="img/long-trench.jpg" width="450" height="600" alt="" loading="lazy"></span></li>
+        <li><a href="#quote" data-job="Drainage">stormwater drainage</a><span class="frame"><img src="img/pipe-in-trench.jpg" width="450" height="600" alt="" loading="lazy"></span></li>
+        <li><a href="#quote" data-job="Drainage">stormwater pits and pumps</a><span class="frame"><img src="img/machinery.jpg" width="672" height="505" alt="" loading="lazy"></span></li>
+        <li><a href="#quote" data-job="Drainage">aggie systems</a></li>
+        <li><a href="#quote" data-job="Hot water">hot water repairs, replacements and new installations</a></li>
+        <li><a href="#quote" data-job="Hot water">PTR valve replacements</a></li>
+        <li><a href="#quote" data-job="Hot water">thermocouple replacements</a></li>
+        <li><a href="#quote" data-job="Hot water">instantaneous and storage hot water systems</a></li>
+        <li><a href="#quote" data-job="Roof plumbing">roof renewals</a></li>
+        <li><a href="#quote" data-job="Roof plumbing">new roof installations</a></li>
+        <li><a href="#quote" data-job="Roof plumbing">gutters, flashings and downpipes</a></li>
+        <li><a href="#quote" data-job="Roof plumbing">leak detection and repairs</a></li>
+        <li><a href="#quote" data-job="General maintenance">leaking taps</a></li>
+        <li><a href="#quote" data-job="General maintenance">leaking and new toilets</a></li>
+        <li><a href="#quote" data-job="General maintenance">blocked drains</a></li>
+        <li><a href="#quote" data-job="General maintenance">gas leaks</a></li>
+        <li><a href="#quote" data-job="General maintenance">burst pipes</a></li>
+        <li><a href="#quote" data-job="General maintenance">basins, sinks, showers and baths</a></li>
+      </ul>
+      <p class="count" data-in style="--i:2">Domestic and commercial plumbing from Mitcham across the Yarra Valley and the eastern and northern suburbs. Tap any job to start a quote for it.</p>
+    </div>
+  </section>
+
+  <section class="words" id="words" aria-labelledby="words-h">
+    <div class="inner">
+      <blockquote class="spread" data-in>
+        <span><span>“That</span><span>mound</span><span>of dirt</span></span>
+        <span><span>all</span><span>flattened”</span></span>
+      </blockquote>
+      <p class="spread-by" data-in style="--i:1"><span>Julie &amp; Rob</span><span>Sewer connection customers</span><span>Oct 2011</span></p>
+
+      <h2 id="words-h" data-in>What customers wrote</h2>
+      <div class="quotes">
+        <blockquote class="wide" data-in><p>“I recently used Quality Plumbing to connect our bbq to natural gas and also move our outdoor garden pipes and tap. The team worked quietly and quickly despite the 38c heat. They were terrific and I wouldn’t hesitate to use them again. Thanks so much!”</p><footer>Dave <span>Feb 2020</span></footer></blockquote>
+        <blockquote data-in style="--i:1"><p>“Came very promptly and appreciate efforts in managing difficult access. Thanks.”</p><footer>Phillip <span>Feb 2020</span></footer></blockquote>
+        <blockquote data-in><p>“Quick response and came within 30 minutes. Very professional would recommend.”</p><footer>Michael <span>Feb 2020</span></footer></blockquote>
+        <blockquote data-in style="--i:1"><p>“Nice service and professional staff , will recommend and back to them in future.”</p><footer>Liang <span>Feb 2020</span></footer></blockquote>
+        <blockquote data-in style="--i:2"><p>“Thank you very much for doing the works so promptly and so efficiently. I have put your name in my tradesmen’s list as the first port of call for any plumbing work I might need to have done in the future. Thanks again”</p><footer>Sushil <span>Feb 2012</span></footer></blockquote>
+        <blockquote class="wide" data-in><p>“Just a note to say thank you very much for finishing off my job so neatly. You and your team were very efficient and I really appreciated the consideration you showed in minimising disruption to me. Your two young ones are very nice, polite young lads. And I’m sure the dogs would give you all the thumbs-up, too!”</p><footer>Wendy <span>May 2012</span></footer></blockquote>
+        <blockquote data-in style="--i:1"><p>“We just wanted to thank you for the wonderful job you did, it was a very nice surprise to come home and find that mound of dirt all flattened. Thank you very much.”</p><footer>Julie &amp; Rob <span>Oct 2011</span></footer></blockquote>
+      </div>
+      <p class="later" data-in>Word for word from our current website, newest first. On the live site this space shows your latest Google customer comments, with their dates.</p>
+    </div>
+  </section>
+
+  <section class="about" id="about" aria-labelledby="about-h">
+    <div class="inner">
+      <h2 id="about-h" data-in>About Quality Plumbing</h2>
+      <aside data-in style="--i:1">
+        <p><b>Mitcham</b>Unit 5/21 Cook Rd, Mitcham VIC 3132</p>
+        <p><b>Opening hours</b>9:00 to 18:00</p>
+        <p><b>Call</b><a href="tel:0418542380">Craig 0418 542 380</a><br><a href="tel:0491726574">Hayden 0491 726 574</a></p>
+      </aside>
+      <div class="bio" data-in style="--i:2">
+        <p><img class="cap" src="img/long-trench.jpg" width="450" height="600" alt="A long sewer trench dug along a garden path" loading="lazy"><strong>Quality Plumbing &amp; Sewer Connections</strong> is a family run business that is a fully licensed and insured company. Based in the eastern suburbs of Melbourne, we have the machinery to offer a wide range of domestic and commercial plumbing services. In particular, we specialise in sewer connections and all other aspects of drainage.</p>
+        <p class="soft">Our customers can expect all jobs big or small to be completed to the highest professional and legal standards. Our team treats every household and shop as it were our own. We look at every job through your eyes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="quote" aria-labelledby="quote-h">
+    <div class="inner">
+      <div>
+        <h2 id="quote-h" data-in>Get a quote</h2>
+        <p class="say" data-in style="--i:1">Need your sewer connected, or a plumbing job done around the house? Call Craig or Hayden, or send the form.</p>
+        <dl data-in style="--i:2">
+          <dt>Craig</dt><dd><a href="tel:0418542380">0418 542 380</a></dd>
+          <dt>Hayden</dt><dd><a href="tel:0491726574">0491 726 574</a></dd>
+          <dt>Email</dt><dd><a href="mailto:contact@qualityplumbing.net.au">contact@qualityplumbing.net.au</a></dd>
+          <dt>Hours</dt><dd>9:00 to 18:00</dd>
+        </dl>
+      </div>
+      <figure class="place" data-in style="--i:1"><img src="img/kallista-1936.jpg" width="1200" height="851" alt="Hand-coloured lantern slide of blackwood trees on a hillside at Kallista, 1936" loading="lazy"><figcaption>Kallista, one of the program suburbs, in 1936</figcaption></figure>
+      <form id="quote-form" action="mailto:contact@qualityplumbing.net.au" method="get" enctype="text/plain" data-in style="--i:2">
+        <h3>Sewer connection quote</h3>
+        <div class="two">
+          <label>Your name<input name="name" autocomplete="name" required></label>
+          <label>Phone<input name="phone" type="tel" autocomplete="tel" required></label>
+        </div>
+        <div class="two">
+          <label>Suburb
+            <select name="suburb" id="f-suburb">
+              <option>Donvale</option><option>Eltham South</option><option>Kallista</option><option>Launching Place</option><option>Lilydale</option><option>Lower Plenty</option><option selected>Mitcham</option><option>Monbulk</option><option>North Warrandyte</option><option>Park Orchards</option><option>Somewhere else</option>
+            </select>
+          </label>
+          <label>Job
+            <select name="job" id="f-job">
+              <option>Sewer connection</option><option>Drainage</option><option>Roof plumbing</option><option>Hot water</option><option>General maintenance</option>
+            </select>
+          </label>
+        </div>
+        <div class="two">
+          <label>Sewer type
+            <select name="sewer" id="f-sewer"><option>Gravity sewer</option><option>Pressure sewer</option><option selected>Not sure yet</option></select>
+          </label>
+          <label>Yarra Valley Water notice?
+            <select name="notice"><option>Yes, I have my letter</option><option>Not yet</option><option>Not sure</option></select>
+          </label>
+        </div>
+        <label>Tell us about the job<textarea name="message" id="f-message"></textarea></label>
+        <p class="note">This opens your email app with the details filled in. Nothing is stored on this page.</p>
+        <button class="btn" type="submit">Send my quote request</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="foot" aria-labelledby="foot-h">
+  <h2 class="big" id="foot-h" data-in>Quality Plumbing &amp; Sewer Connections</h2>
+  <div class="row" data-in style="--i:1">
+    <div><b>Call</b><a href="tel:0418542380">Craig 0418 542 380</a><br><a href="tel:0491726574">Hayden 0491 726 574</a></div>
+    <div><b>Email</b><a href="mailto:contact@qualityplumbing.net.au">contact@qualityplumbing.net.au</a></div>
+    <div><b>Mitcham</b>Unit 5/21 Cook Rd<br>Mitcham VIC 3132<br>9:00 to 18:00</div>
+    <div><b>Follow</b><a href="https://www.facebook.com/Quality-Plumbing-101087791389632">Facebook</a><br><a href="https://www.instagram.com/quality__plumbing/">Instagram</a></div>
+  </div>
+  <div class="imprint">
+    <p>© <span id="yr">2026</span> Quality Plumbing &amp; Sewer Connections. Concept design by <a href="https://swoopsites.com/">Swoop Sites</a>, Melbourne.</p>
+    <p>Pictures: photographs of trenches, pipes, machinery and the reinstated garden from Quality Plumbing’s own website. <a href="https://commons.wikimedia.org/w/index.php?curid=136842935">“Aerial panorama of the Yarra River at Warrandyte. September 2023”</a> by Bob Tan, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, via Wikimedia Commons; <a href="https://collections.museumsvictoria.com.au/items/1448886">“Lantern Slide - Blackwood Trees, Kallista, Victoria, 1936”</a> by A.G. Campbell, public domain, via Museums Victoria.</p>
+  </div>
+</footer>
+
+
+<script>
+document.body.classList.remove('no-js');
+document.documentElement.classList.add('js');
+document.getElementById('yr').textContent = new Date().getFullYear();
+const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+document.querySelectorAll('[data-in]').forEach((el) => io.observe(el));
+
+// the live thing: sewer type + five steps redraw the cross-section
+const dig = document.getElementById('process');
+const verbs = { 1: 'Apply', 2: 'Quote', 3: 'Connect', 4: 'Decommission', 5: 'Reinstate' };
+const verb = document.getElementById('verb'), cap = document.getElementById('art-cap'), pick = document.getElementById('suburb-pick');
+const steps = [...dig.querySelectorAll('.steps li')];
+function setStep(n) {
+  dig.dataset.step = n;
+  steps.forEach((li) => li.classList.toggle('on', li.dataset.step === String(n)));
+  verb.textContent = verbs[n];
+}
+steps.forEach((li) => li.querySelector('button').addEventListener('click', () => setStep(li.dataset.step)));
+document.querySelectorAll('input[name=stype]').forEach((r) => r.addEventListener('change', () => { dig.dataset.type = r.value; if (+dig.dataset.step < 3) setStep(3); }));
+function caption() {
+  const s = pick.value === 'Somewhere else' ? 'your suburb' : pick.value;
+  cap.textContent = 'A septic tank home in ' + s + ', joined to the new sewer in the street.';
+}
+pick.addEventListener('change', caption);
+setStep(1);
+
+// carry the choices into the quote form
+const fJob = document.getElementById('f-job'), fSub = document.getElementById('f-suburb'), fSew = document.getElementById('f-sewer'), fMsg = document.getElementById('f-message');
+document.getElementById('take').addEventListener('click', () => {
+  fJob.value = 'Sewer connection';
+  fSub.value = pick.value;
+  fSew.value = dig.dataset.type === 'pressure' ? 'Pressure sewer' : 'Gravity sewer';
+  if (!fMsg.value) fMsg.value = 'I would like a quote to connect my ' + dig.dataset.type + ' sewer and decommission the septic tank. ';
+});
+document.querySelectorAll('[data-job]').forEach((a) => a.addEventListener('click', () => { fJob.value = a.dataset.job; }));
+document.getElementById('quote-form').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const f = new FormData(e.target);
+  const body = `Name: ${f.get('name')}\nPhone: ${f.get('phone')}\nSuburb: ${f.get('suburb')}\nJob: ${f.get('job')}\nSewer type: ${f.get('sewer')}\nYarra Valley Water notice: ${f.get('notice')}\n\n${f.get('message')}`;
+  location.href = 'mailto:contact@qualityplumbing.net.au?subject=' + encodeURIComponent('Quote request: ' + f.get('job') + ', ' + f.get('suburb')) + '&body=' + encodeURIComponent(body);
+});
+</script>
+</body>
+</html>
