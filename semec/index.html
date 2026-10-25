@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>seMec | Electrician in Mentone: Domestic, Commercial and Industrial (concept)</title>
+<meta name="description" content="Concept homepage for seMec (SE Melbourne Electrical Contracting), a Mentone electrical contractor, REC 26017. Domestic, commercial and industrial electrical work across greater Melbourne. Free quotes on 0423 486 634.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Stone and blueprint, with the blue taken from the "M" in seMec's own logo. */
+  --bg: #dfdedb;
+  --surface: #d3d2ce;
+  --paper: #ecebe8;
+  --ink: #26251e;
+  --muted: #55534b;
+  --accent: #2c4cb0;
+  --accent-deep: #223d93;
+  --accent-ink: #ffffff;
+  --pale: #b9c4dc;
+  --metal: #c9c8c3;
+  --step-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+  --step-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+  --step-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
+  --step-head: clamp(2rem, 1.3rem + 3.2vw, 4rem);
+  --m: clamp(16px, 1.6vw, 24px);   /* the one pair of page margins */
+  --g: 8px;            /* the one gap between tiles */
+  --ease: cubic-bezier(.16, 1, .3, 1);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 var(--step-body)/1.5 Jost, system-ui, sans-serif; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-underline-offset: 3px; }
+::selection { background: var(--accent); color: var(--accent-ink); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+h1, h2, h3 { font-family: Jost, sans-serif; font-weight: 700; letter-spacing: -0.03em; line-height: 0.95; margin: 0; text-wrap: balance; }
+p, ul, dl, figure { margin: 0; }
+ul { padding: 0; list-style: none; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 22px; background: var(--accent); color: var(--accent-ink);
+  font: 500 var(--step-body)/1 Jost, sans-serif; text-decoration: none; border: 0; border-radius: 0; cursor: pointer;
+  transition: transform .25s var(--ease), background-color .25s var(--ease); }
+.btn:hover { background: var(--accent-deep); transform: translateY(-2px); }
+.btn:active { transform: translateY(0) scale(.98); }
+
+/* Concept banner: always first, never hidden */
+.concept { background: #111; color: #ddd; font-size: var(--step-small); text-align: center; padding: 9px var(--m); }
+.concept b { color: #fff; }
+
+/* ---------- Top row: itself made of tiles ---------- */
+.top { display: grid; grid-template-columns: 60px 1fr auto; gap: var(--g); padding: var(--m) var(--m) 0; }
+.top > * { min-height: 60px; }
+.logo { display: grid; place-items: center; background: var(--ink); }
+.logo svg { width: 30px; height: 36px; }
+.navtile { background: var(--surface); display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding: 0 24px; }
+.navtile .who { font-weight: 500; }
+.navtile nav { display: flex; gap: 28px; }
+.navtile nav a { text-decoration: none; font-weight: 500; min-height: 48px; display: inline-flex; align-items: center; }
+.navtile nav a:hover { text-decoration: underline; }
+.top .btn { min-height: 60px; padding: 0 28px; }
+
+/* ---------- Hero: two-by-two board ---------- */
+.board { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: var(--g); padding: var(--g) var(--m) 0;
+  height: calc(100svh - 112px); min-height: 620px; max-height: 1000px; }
+.tile { position: relative; overflow: hidden; }
+.name { background: var(--paper); display: flex; flex-direction: column; justify-content: flex-end; padding: 24px; }
+.name h1 { font-size: clamp(96px, 12.5vw, 190px); letter-spacing: -0.04em; line-height: 0.82; font-weight: 700; }
+.name p { margin-top: 20px; font-size: var(--step-lead); line-height: 1.25; max-width: 30ch; }
+.pic img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.05); }
+.pic figcaption { position: absolute; left: 0; bottom: 0; background: rgba(20, 20, 16, .72); color: #f1f0ec; font-size: var(--step-small); padding: 6px 12px; }
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: var(--g); }
+.say { padding: 24px; font-size: var(--step-lead); line-height: 1.25; }
+.say.dark { background: var(--ink); color: var(--paper); }
+.say.act { background: var(--accent); color: var(--accent-ink); text-decoration: none; display: flex; flex-direction: column; justify-content: space-between; gap: 16px;
+  transition: background-color .25s var(--ease); }
+.say.act:hover { background: var(--accent-deep); }
+.say.act strong { white-space: nowrap; font-size: clamp(1.75rem, 0.6rem + 2.6vw, 4rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1; font-variant-numeric: tabular-nums; }
+
+/* ---------- Sections share the board's gap and margins ---------- */
+section { padding: 0 var(--m); }
+.sec { margin-top: 160px; }
+.grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--g); }
+
+/* ---------- Services: giant word + the switchboard (the live thing) ---------- */
+.word { grid-column: 1 / 8; background: var(--surface); padding: 24px; container-type: inline-size; }
+.word h2 { font-size: 19.5cqw; text-transform: uppercase; line-height: 0.8; letter-spacing: -0.035em; }
+.word p { margin-top: 24px; font-size: var(--step-lead); line-height: 1.3; max-width: 36ch; }
+.panel { grid-column: 8 / 13; background: var(--ink); color: var(--paper); padding: 24px; display: flex; flex-direction: column; gap: 18px; }
+.panel h3 { font-size: var(--step-lead); letter-spacing: -0.01em; line-height: 1.2; font-weight: 500; }
+.panel p { color: #cfcdc6; max-width: 38ch; }
+.rail { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--g); margin-top: auto; padding: 0 0 4px; }
+.rail::before { content: ""; position: absolute; left: -8px; right: -8px; top: 74px; height: 22px; background: #4a4940; }
+.rail input { position: absolute; opacity: 0; pointer-events: none; }
+.breaker { position: relative; display: flex; flex-direction: column; align-items: center; gap: 10px; cursor: pointer; padding: 0 0 6px; }
+.mcb { position: relative; width: 74px; height: 170px; background: var(--metal); display: grid; justify-items: center; align-content: space-between; padding: 10px 0;
+  transition: background-color .3s var(--ease), transform .3s var(--ease); }
+.breaker:hover .mcb { transform: translateY(-3px); }
+.mcb .state { font-size: var(--step-small); font-weight: 500; color: var(--ink); }
+.slot { position: relative; width: 30px; height: 76px; background: #3a3932; }
+.lever { position: absolute; left: 3px; right: 3px; height: 34px; bottom: 3px; background: #f6f5f1; transition: bottom .35s var(--ease), background-color .35s var(--ease); }
+.flag { width: 30px; height: 12px; background: #8f8d86; transition: background-color .35s var(--ease); }
+.breaker .lbl { font-weight: 500; color: var(--paper); }
+.rail input:checked + .breaker .lever { bottom: 39px; background: #fff; }
+.rail input:checked + .breaker .flag { background: var(--accent); }
+.rail input:checked + .breaker .mcb { background: #e7e6e1; }
+.rail input:focus-visible + .breaker .mcb { outline: 3px solid #8fa6ec; outline-offset: 3px; }
+.state .on, .rail input:checked + .breaker .state .off { display: none; }
+.rail input:checked + .breaker .state .on { display: inline; }
+
+.circ-pic { grid-column: 1 / 5; background: var(--surface); min-height: 420px; }
+.circ-pic img { width: 100%; height: 100%; object-fit: cover; }
+.schedule { grid-column: 5 / 13; background: var(--paper); padding: 24px; }
+.schedule h3 { font-size: var(--step-head); text-transform: uppercase; }
+.schedule .lead { margin: 16px 0 24px; max-width: 52ch; }
+.bars { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.bars li { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 56px; padding: 0 0 0 18px; background: var(--surface); font-weight: 500; }
+.bars li a { align-self: stretch; display: inline-flex; align-items: center; padding: 0 18px; min-width: 48px; text-decoration: none; color: var(--accent); white-space: nowrap; transition: background-color .2s; }
+.bars li a:hover { background: var(--pale); }
+.schedule .go { margin-top: 24px; }
+/* the switch decides what shows; without :has() support every circuit simply shows */
+.services:has(#c-dom:checked) [data-c]:not([data-c="dom"]),
+.services:has(#c-com:checked) [data-c]:not([data-c="com"]),
+.services:has(#c-ind:checked) [data-c]:not([data-c="ind"]) { display: none; }
+.circ-pic figure { position: relative; height: 100%; }
+
+/* ---------- Projects: one strip per project ---------- */
+.work { display: grid; grid-template-columns: 13% 1fr; gap: 24px; }
+.work .side { position: sticky; top: 24px; align-self: start; }
+.work h2 { font-size: var(--step-lead); letter-spacing: -0.02em; }
+.filters { margin-top: 16px; display: flex; flex-direction: column; align-items: flex-start; }
+.filters button { font: 500 var(--step-small)/1 Jost, sans-serif; color: var(--muted); background: none; border: 0; padding: 0; min-height: 44px; cursor: pointer; }
+.filters button[aria-pressed="true"] { color: var(--ink); text-decoration: underline; text-underline-offset: 5px; }
+.filters button:hover { color: var(--ink); }
+.strips { display: flex; flex-direction: column; gap: 45px; min-width: 0; }
+.strip .row { display: flex; gap: var(--g); overflow: hidden; }
+.strip .row > * { flex: none; height: 190px; position: relative; }
+.strip .row img { height: 190px; width: auto; max-width: none; transition: opacity .3s var(--ease); }
+.strip .row figcaption { position: absolute; left: 0; bottom: 0; background: rgba(20, 20, 16, .72); color: #f1f0ec; font-size: var(--step-small); padding: 4px 10px; }
+.strip .txt { width: 300px; background: var(--ink); color: var(--paper); padding: 20px; font-size: var(--step-lead); line-height: 1.2; }
+.strip .txt.blue { background: var(--accent); color: var(--accent-ink); }
+.strip .txt.stone { background: var(--surface); color: var(--ink); }
+.strips:hover .strip:not(:hover) img { opacity: .55; }
+.strip .cap { display: grid; grid-template-columns: 1fr auto 1fr; gap: 16px; margin-top: 10px; font-size: var(--step-small); }
+.strip .cap b { font-weight: 500; }
+.strip .cap span:last-child { text-align: right; }
+.strip .more { margin-top: 6px; max-width: 60ch; }
+.strip[hidden] { display: none; }
+
+/* ---------- About: wide photo, colour tile, facts ---------- */
+.about h2 { font-size: var(--step-head); }
+.about .lede { grid-column: 1 / 7; margin-top: 24px; font-size: var(--step-lead); line-height: 1.35; }
+.about .tiles { margin-top: 72px; align-items: start; }
+.wide { grid-column: 1 / 9; position: relative; }
+.wide .ph { position: relative; }
+.wide img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+.wide .note { position: absolute; top: 0; right: 0; width: 340px; background: var(--paper); padding: 20px; }
+.wide figcaption { position: absolute; left: 0; bottom: 0; background: rgba(20, 20, 16, .72); color: #f1f0ec; font-size: var(--step-small); padding: 6px 12px; }
+.mapcol { grid-column: 9 / 13; }
+.map { background: var(--pale); aspect-ratio: 4 / 3.6; }
+.map svg { width: 100%; height: 100%; display: block; }
+.facts { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 16px; margin-top: 24px; }
+.facts dt { font-size: var(--step-small); color: var(--muted); }
+.facts dd { margin: 2px 0 0; font-weight: 500; }
+
+/* ---------- Contact: photo strip, the quote bar ---------- */
+.contact { margin-top: 160px; background: var(--accent); color: var(--accent-ink); padding: 48px 0 72px; }
+.marquee { overflow: hidden; }
+.marquee .track { display: flex; gap: var(--g); width: max-content; animation: slide 70s linear infinite; }
+.marquee:hover .track { animation-play-state: paused; }
+.marquee img { height: 150px; width: auto; max-width: none; }
+@keyframes slide { to { transform: translateX(-50%); } }
+.contact .in { padding: 0 var(--m); }
+.contact .head { margin-top: 72px; display: grid; grid-template-columns: 1fr 1fr; gap: var(--g); align-items: end; }
+.contact h2 { font-size: var(--step-head); }
+.contact .sub { margin-top: 16px; font-size: var(--step-lead); max-width: 44ch; }
+.quote { margin-top: 40px; display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--g); }
+.quote label { display: grid; gap: 6px; font-size: var(--step-small); font-weight: 500; }
+.quote input, .quote select, .quote textarea { font: inherit; font-size: 18px; color: #fff; background: var(--accent-deep); border: 0; border-radius: 0; padding: 0 18px; height: 96px; width: 100%;
+  transition: background-color .2s; }
+.quote select option { color: var(--ink); background: #fff; }
+.quote textarea { height: 96px; padding: 14px 18px; resize: vertical; }
+.quote input:focus, .quote select:focus, .quote textarea:focus { background: #fff; color: var(--ink); outline: none; }
+.quote .msg { grid-column: 1 / 4; }
+.quote button { align-self: end; height: 96px; background: #fff; color: var(--accent); font: 700 var(--step-lead)/1 Jost, sans-serif; border: 0; cursor: pointer; transition: background-color .2s, transform .25s var(--ease); }
+.quote button:hover { background: var(--paper); transform: translateY(-2px); }
+.small { margin-top: 16px; display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--g); font-size: var(--step-small); }
+.small p:first-child { grid-column: 1 / 4; }
+.reach { display: grid; grid-template-columns: 1fr 1fr; gap: var(--g); }
+.reach > div { grid-column: 1 / -1; }
+.reach > * { background: var(--accent-deep); padding: 20px 24px; min-height: 96px; display: flex; flex-direction: column; justify-content: space-between; gap: 8px; text-decoration: none; transition: background-color .2s; }
+.reach a:hover { background: #1b3279; }
+.reach span { font-size: var(--step-small); }
+.reach b { font-size: var(--step-lead); font-weight: 500; line-height: 1.2; overflow-wrap: anywhere; }
+
+/* ---------- Footer: the mark, built large ---------- */
+footer { padding: 96px var(--m) 32px; }
+.mark { display: flex; align-items: flex-end; gap: 4px; height: 34svh; min-height: 220px; }
+.mark span { flex: 1; display: flex; align-items: flex-end; justify-content: center; overflow: hidden; color: var(--paper);
+  font: 700 clamp(5rem, 12.5vw, 190px)/0.8 Jost, sans-serif; letter-spacing: -0.04em; padding-bottom: 2%; }
+.mark span:nth-child(1) { height: 72%; background: var(--ink); }
+.mark span:nth-child(2) { height: 60%; background: var(--muted); }
+.mark span:nth-child(3) { height: 100%; background: var(--accent); }
+.mark span:nth-child(4) { height: 82%; background: var(--ink); }
+.mark span:nth-child(5) { height: 66%; background: var(--muted); }
+.links { margin-top: 56px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--g); font-size: var(--step-small); }
+.links h3 { font-size: var(--step-small); font-weight: 500; letter-spacing: 0; color: var(--muted); margin-bottom: 10px; }
+.links .col { grid-column: span 2; }
+.links .col li a { display: inline-flex; min-height: 32px; align-items: center; text-decoration: none; }
+.links .col li a:hover { text-decoration: underline; }
+.links address { grid-column: 9 / 13; font-style: normal; display: flex; flex-direction: column; gap: 8px; }
+.links address a { text-decoration: none; }
+.last { margin-top: 56px; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; font-size: var(--step-small); }
+.credits { margin-top: 24px; font-size: var(--step-small); color: var(--muted); max-width: 75ch; }
+.credits a { color: var(--ink); }
+.callbar { display: none; }
+
+/* ---------- Motion: entrances, the shutter, the strip ---------- */
+.js [data-in] { opacity: 0; transform: translateY(24px); transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: calc(var(--i, 0) * 75ms); }
+.js [data-in].on { opacity: 1; transform: none; }
+.shutter { overflow: hidden; }
+.js .shutter { clip-path: inset(0 0 100% 0); transition: clip-path 1.1s cubic-bezier(.65, 0, .35, 1); }
+.js .shutter img { transform: scale(1.12); transition: transform 1.5s var(--ease); }
+.js .shutter.on { clip-path: inset(0); }
+.js .shutter.on img { transform: none; }
+.name > * { animation: rise 1s var(--ease) both; }
+.name p { animation-delay: .1s; }
+.pair > * { animation: rise 1s var(--ease) both; }
+.pair > *:nth-child(2) { animation-delay: .12s; }
+@keyframes rise { from { opacity: 0; transform: translateY(24px); } }
+.drift img { animation: drift 26s ease-in-out infinite alternate; }
+@keyframes drift { from { transform: scale(1.02); } to { transform: scale(1.12) translate(-2%, -1%); } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js [data-in] { opacity: 1; transform: none; }
+  .js .shutter { clip-path: none; }
+  .js .shutter img { transform: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1100px) {
+  .word { grid-column: 1 / -1; }
+  .panel { grid-column: 1 / -1; }
+  .circ-pic { grid-column: 1 / -1; min-height: 0; aspect-ratio: 16 / 9; }
+  .schedule { grid-column: 1 / -1; }
+  .about .lede { grid-column: 1 / -1; }
+  .wide { grid-column: 1 / -1; }
+  .mapcol { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+  .facts { margin-top: 0; }
+  .work { grid-template-columns: 1fr; }
+  .work .side { position: static; display: flex; justify-content: space-between; align-items: center; }
+  .filters { margin: 0; flex-direction: row; gap: 18px; }
+  .links .col { grid-column: span 4; }
+  .links address { grid-column: 1 / -1; margin-top: 24px; }
+  .navtile { grid-template-columns: 1fr; }
+  .navtile .who { display: none; }
+  .navtile nav { justify-content: flex-end; }
+  .pair { grid-template-columns: 1fr; }
+  .say { font-size: var(--step-body); }
+  .contact .head { grid-template-columns: 1fr; gap: 32px; }
+}
+
+/* ---------- Phone: its own board ---------- */
+@media (max-width: 760px) {
+  :root { --g: 6px; --m: 16px; }
+  body { padding-bottom: 64px; }
+  .top { grid-template-columns: 52px 1fr; }
+  .top > * { min-height: 52px; }
+  .top .btn { display: none; }
+  .navtile { grid-template-columns: 1fr; padding: 0 12px; }
+  .navtile .who { display: none; }
+  .navtile nav { justify-content: space-between; gap: 8px; }
+  .navtile nav a:nth-child(3) { display: none; }
+  .board { display: flex; flex-direction: column; height: auto; min-height: 0; max-height: none; }
+  .name { min-height: 40svh; padding: 20px; }
+  .name h1 { font-size: 24vw; }
+  .name p { font-size: 1.25rem; }
+  .board .pic { aspect-ratio: 4 / 3; }
+  .board .pic.second { order: 5; }
+  .pair { grid-template-columns: 1fr 1fr; aspect-ratio: 2 / 1.15; }
+  .say { padding: 16px; font-size: 1.125rem; }
+  .say.act strong { font-size: 1.25rem; }
+  .sec { margin-top: 110px; }
+  .word { padding: 18px; }
+  .panel { padding: 20px 14px; }
+  .mcb { width: 64px; height: 150px; }
+  .rail::before { top: 66px; }
+  .schedule { padding: 18px; }
+  .bars { grid-template-columns: 1fr; }
+  .work .side { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .filters { flex-wrap: wrap; gap: 4px 18px; }
+  .strip .row { display: grid; grid-template-columns: 1fr 1fr; }
+  .strip .row > * { height: 150px; }
+  .strip .row img { height: 150px; width: 100%; object-fit: cover; }
+  .strip .row > :nth-child(n+3) { display: none; }
+  .strip .txt { width: auto; font-size: 1.125rem; padding: 16px; }
+  .strip .cap { grid-template-columns: 1fr auto; }
+  .strip .cap span:nth-child(2) { display: none; }
+  .about h2 { font-size: 9vw; }
+  .about .lede { font-size: 1.125rem; }
+  .about .tiles { margin-top: 40px; }
+  .wide img { aspect-ratio: 4 / 3; }
+  .wide .note { position: static; width: auto; padding: 16px 0 0; background: none; }
+  .mapcol { grid-template-columns: 1fr; }
+  .contact { margin-top: 110px; padding: 32px 0 56px; }
+  .marquee img { height: 110px; }
+  .contact .head { margin-top: 48px; }
+  .contact h2 { font-size: 9vw; }
+  .contact .sub { font-size: 1.125rem; }
+  .quote { grid-template-columns: 1fr; }
+  .quote input, .quote select, .quote button { height: 60px; }
+  .quote .msg { grid-column: auto; }
+  .small { grid-template-columns: 1fr; }
+  .small p:first-child { grid-column: auto; }
+  .reach { grid-template-columns: 1fr; }
+  footer { padding-top: 90px; }
+  .mark { height: 22svh; min-height: 150px; }
+  .mark span { font-size: 22vw; }
+  .links .col { grid-column: span 6; }
+  .last { flex-direction: column; align-items: flex-start; }
+  .callbar { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; padding: 6px; background: var(--bg); }
+  .callbar .btn { min-height: 52px; padding: 0 10px; font-size: 1rem; white-space: nowrap; }
+  .callbar .btn.alt { background: var(--ink); }
+}
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for seMec. This is a design preview, not the live website.</div>
+
+<header class="top">
+  <a class="logo" href="#top" aria-label="seMec, home">
+    <svg viewBox="0 0 30 36" aria-hidden="true"><path d="M15 2a11 11 0 0 0-6.5 19.9V26h13v-4.1A11 11 0 0 0 15 2z" fill="none" stroke="#fff" stroke-width="2.6"/><path d="M12 9v6M18 9v6M11 15h8v3h-8z" stroke="#fff" stroke-width="2" fill="#fff"/><rect x="9.5" y="28" width="11" height="2.6" fill="#fff"/><rect x="11.5" y="32" width="7" height="2.6" fill="#fff"/></svg>
+  </a>
+  <div class="navtile">
+    <span class="who">SE Melbourne Electrical Contracting</span>
+    <nav aria-label="Main"><a href="#services">Services</a><a href="#projects">Projects</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  </div>
+  <a class="btn" href="#contact">Get a quote</a>
+</header>
+
+<main id="top">
+  <div class="board">
+    <div class="tile name">
+      <h1>seMec</h1>
+      <p>Electrical contractors in Mentone, working across greater Melbourne.</p>
+    </div>
+    <figure class="tile pic shutter"><img src="img/switchboard.jpg" width="1100" height="1465" alt="An older Australian home switchboard with meters and circuit breakers on a brick wall"><figcaption>A home switchboard, the domestic end of the job</figcaption></figure>
+    <figure class="tile pic second drift"><img src="img/curtis-island.jpg" width="1600" height="1050" alt="Aerial view of the LNG plants under construction on Curtis Island, Queensland"><figcaption>Curtis Island LNG plants, the industrial end</figcaption></figure>
+    <div class="pair">
+      <p class="say dark">No job too big or small. Domestic, commercial and industrial electrical work.</p>
+      <a class="say act" href="tel:0423486634"><span>Call for a free quote</span><strong>0423 486 634</strong></a>
+    </div>
+  </div>
+
+  <section class="services sec" id="services" aria-labelledby="services-h">
+    <div class="grid">
+      <div class="word" data-in>
+        <h2 id="services-h">Services</h2>
+        <p>On-time, on-budget electrical services, customised to your needs. From your household needs all the way through to heavy industrial installs.</p>
+      </div>
+      <div class="panel" data-in style="--i:1">
+        <h3>Switch on a circuit</h3>
+        <p>Flip a breaker to see what seMec does for homes, businesses and industry. The one you pick goes into your quote.</p>
+        <div class="rail" role="radiogroup" aria-label="Type of work">
+          <input type="radio" name="circuit" id="c-dom" value="Domestic" checked>
+          <label class="breaker" for="c-dom"><span class="mcb" aria-hidden="true"><span class="state"><span class="on">ON</span><span class="off">OFF</span></span><span class="slot"><span class="lever"></span></span><span class="flag"></span></span><span class="lbl">Domestic</span></label>
+          <input type="radio" name="circuit" id="c-com" value="Commercial">
+          <label class="breaker" for="c-com"><span class="mcb" aria-hidden="true"><span class="state"><span class="on">ON</span><span class="off">OFF</span></span><span class="slot"><span class="lever"></span></span><span class="flag"></span></span><span class="lbl">Commercial</span></label>
+          <input type="radio" name="circuit" id="c-ind" value="Industrial">
+          <label class="breaker" for="c-ind"><span class="mcb" aria-hidden="true"><span class="state"><span class="on">ON</span><span class="off">OFF</span></span><span class="slot"><span class="lever"></span></span><span class="flag"></span></span><span class="lbl">Industrial</span></label>
+        </div>
+      </div>
+
+      <div class="circ-pic" data-in style="--i:2">
+        <figure class="tile pic-c" data-c="dom"><img src="img/house-frame.jpg" width="660" height="420" alt="Timber frame of a new two-storey house against a blue sky" loading="lazy"></figure>
+        <figure class="tile pic-c" data-c="com"><img src="img/melbourne-cbd.jpg" width="660" height="351" alt="Melbourne's city towers along the Yarra River" loading="lazy"></figure>
+        <figure class="tile pic-c" data-c="ind"><img src="img/hv-plant.jpg" width="1200" height="675" alt="A large synchronous condenser and high voltage equipment at Templestowe, Victoria" loading="lazy"></figure>
+      </div>
+
+      <div class="schedule" data-in style="--i:3">
+        <div data-c="dom" id="domestic-services">
+          <h3>Domestic services</h3>
+          <p class="lead">From the design phase of your house all the way to installation and final checks before your power is connected. seMec follows the National Building Code and Australian electrical standards.</p>
+          <ul class="bars">
+            <li>New installs, extensions and rewires <a href="#contact" data-job="Domestic: new install, extension or rewire">Quote</a></li>
+            <li>Switchboard upgrades and safety switches <a href="#contact" data-job="Domestic: switchboard upgrade or safety switches">Quote</a></li>
+            <li>Phone, data, NBN and digital TV antennas <a href="#contact" data-job="Domestic: phone, data, NBN or TV antenna">Quote</a></li>
+            <li>Security alarms and CCTV <a href="#contact" data-job="Domestic: security alarm or CCTV">Quote</a></li>
+            <li>Solar systems <a href="#contact" data-job="Domestic: solar system">Quote</a></li>
+            <li>Maintenance and repairs <a href="#contact" data-job="Domestic: maintenance or repairs">Quote</a></li>
+          </ul>
+        </div>
+        <div data-c="com" id="commercial-services">
+          <h3>Commercial services</h3>
+          <p class="lead">From the design of an office refurbishment through to commissioning, energising, maintenance and handing over. Switchboards, safety switches, lighting and emergency services, serviced and maintained.</p>
+          <ul class="bars">
+            <li>New installs, refurbishments and rewires <a href="#contact" data-job="Commercial: new install, refurbishment or rewire">Quote</a></li>
+            <li>Office fitouts <a href="#contact" data-job="Commercial: office fitout">Quote</a></li>
+            <li>Phone, data and optical fibre <a href="#contact" data-job="Commercial: phone, data or optical fibre">Quote</a></li>
+            <li>Solar systems <a href="#contact" data-job="Commercial: solar system">Quote</a></li>
+            <li>Emergency services <a href="#contact" data-job="Commercial: emergency services">Quote</a></li>
+            <li>Test and tagging <a href="#contact" data-job="Commercial: test and tagging">Quote</a></li>
+            <li>RCD testing <a href="#contact" data-job="Commercial: RCD testing">Quote</a></li>
+            <li>Preventative and scheduled maintenance <a href="#contact" data-job="Commercial: scheduled maintenance">Quote</a></li>
+          </ul>
+        </div>
+        <div data-c="ind" id="industrial-services">
+          <h3>Industrial services</h3>
+          <p class="lead">Plant and equipment across a wide range of industries: design, construction, maintenance, commissioning, testing, energisation and inspections, from small jobs to large projects.</p>
+          <ul class="bars">
+            <li>New installs, refurbishments and rewires <a href="#contact" data-job="Industrial: new install, refurbishment or rewire">Quote</a></li>
+            <li>Commissioning and decommissioning <a href="#contact" data-job="Industrial: commissioning or decommissioning">Quote</a></li>
+            <li>Quality assurance and quality control <a href="#contact" data-job="Industrial: QA and QC">Quote</a></li>
+            <li>High voltage installs <a href="#contact" data-job="Industrial: high voltage install">Quote</a></li>
+            <li>Hazardous area inspections <a href="#contact" data-job="Industrial: hazardous area inspection">Quote</a></li>
+            <li>Instrumentation and control <a href="#contact" data-job="Industrial: instrumentation and control">Quote</a></li>
+          </ul>
+        </div>
+        <p class="go"><a class="btn" href="#contact" id="take-circuit">Get a quote for this work</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="projects" aria-labelledby="projects-h">
+    <div class="work">
+      <div class="side">
+        <h2 id="projects-h">Projects</h2>
+        <div class="filters" role="group" aria-label="Show projects">
+          <button type="button" aria-pressed="true" data-f="all">All</button>
+          <button type="button" aria-pressed="false" data-f="ind">Industrial</button>
+          <button type="button" aria-pressed="false" data-f="com">Commercial</button>
+          <button type="button" aria-pressed="false" data-f="dom">Domestic</button>
+        </div>
+      </div>
+      <div class="strips">
+        <article class="strip" data-k="ind" data-in>
+          <div class="row">
+            <p class="txt blue">Hazardous area inspections, Train 1</p>
+            <figure><img src="img/aplng-walkway.jpg" width="300" height="227" alt="Workers in high-visibility gear on a walkway at the Curtis Island LNG plant" loading="lazy"></figure>
+            <figure><img src="img/curtis-island.jpg" width="1600" height="1050" alt="Curtis Island from the air, with the LNG plants on the shore" loading="lazy"><figcaption>Curtis Island from the air</figcaption></figure>
+            <p class="txt">With Bechtel and EPS Group Australia</p>
+          </div>
+          <p class="cap"><b>APLNG Curtis Island</b><span>Hazardous area inspections</span><span>Industrial</span></p>
+          <p class="more">Hazardous area inspections on all electrical equipment on Train 1 of the Asia Pacific Liquefied Natural Gas plant on Curtis Island, in association with Bechtel and EPS Group Australia.</p>
+        </article>
+        <article class="strip" data-k="com" data-in>
+          <div class="row">
+            <figure><img src="img/telstra-242-exhibition.jpg" width="1200" height="900" alt="The Telstra building at 242 Exhibition Street among Melbourne's city towers" loading="lazy"><figcaption>242 Exhibition St, centre</figcaption></figure>
+            <p class="txt blue">45-storey refurbishment</p>
+            <figure><img src="img/office-fitout.jpg" width="300" height="227" alt="A bright office corridor with glass partitions and planter boxes" loading="lazy"></figure>
+            <p class="txt stone">Melbourne CBD</p>
+          </div>
+          <p class="cap"><b>Telstra Building</b><span>45-storey refurbishment</span><span>Commercial</span></p>
+          <p class="more">Electrical work on the 45-storey refurbishment of 242 Exhibition St.</p>
+        </article>
+        <article class="strip" data-k="dom" data-in>
+          <div class="row">
+            <p class="txt">Complete rewire of a 1950s build</p>
+            <figure><img src="img/screwdriver.jpg" width="300" height="227" alt="An electrician's hands working on wiring with a screwdriver" loading="lazy"></figure>
+            <figure><img src="img/new-homes.jpg" width="300" height="227" alt="A street of Melbourne houses with a new timber frame going up" loading="lazy"></figure>
+            <p class="txt blue">New installs, extensions and rewires</p>
+          </div>
+          <p class="cap"><b>23 Patrick St.</b><span>Complete rewire</span><span>Domestic</span></p>
+          <p class="more">A complete rewire of a house built in the 1950s.</p>
+        </article>
+        <article class="strip" data-k="ind" data-in>
+          <div class="row">
+            <p class="txt stone">Site audit after an explosion</p>
+            <figure><img src="img/hv-plant.jpg" width="1200" height="675" alt="High voltage plant at Templestowe, Victoria" loading="lazy"><figcaption>High voltage plant, Templestowe</figcaption></figure>
+            <p class="txt blue">Testing, inspection and quality control</p>
+          </div>
+          <p class="cap"><b>RENEX</b><span>Site audit</span><span>Industrial</span></p>
+          <p class="more">Auditing of the RENEX site after an explosion.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="about sec" id="about" aria-labelledby="about-h">
+    <h2 id="about-h" data-in>Based in Mentone</h2>
+    <div class="grid">
+      <p class="lede" data-in style="--i:1">seMec is a Mentone based, Australian privately owned electrical contracting company with a qualified team experienced in domestic, commercial and industrial projects. Larger businesses are often too busy to turn up on time. seMec is here to change that, with a personal touch.</p>
+    </div>
+    <div class="grid tiles">
+      <figure class="wide" data-in style="--i:2">
+        <div class="ph"><img src="img/mentone-beach.jpg" width="1600" height="691" alt="Mentone Beach on Port Phillip Bay, with the lifesaving club on the left" loading="lazy"><figcaption>Mentone Beach, Port Phillip Bay</figcaption></div>
+        <p class="note">No job too big or small, from household needs to heavy industrial installs. Your satisfaction is what seMec puts its name to.</p>
+      </figure>
+      <div class="mapcol" data-in style="--i:3">
+        <div class="map">
+          <svg viewBox="0 0 300 270" role="img" aria-label="Map of Port Phillip Bay with Mentone marked on the eastern shore">
+            <path d="M138 30 L152 34 L162 44 L170 60 L178 78 L188 96 L198 114 L210 136 L218 158 L214 178 L204 196 L190 214 L172 232 L150 244 L126 250 L104 254 L92 248 L84 236 L72 222 L60 214 L44 208 L30 198 L26 184 L40 176 L56 168 L62 150 L66 128 L80 108 L96 84 L112 58 L124 40 Z" fill="#dfdedb"/>
+            <path d="M84 240 L100 246 L106 270 L78 270 Z" fill="#dfdedb"/>
+            <circle cx="193" cy="105" r="8" fill="#2c4cb0"/>
+            <text x="104" y="22" font-family="Jost, sans-serif" font-size="14" fill="#55534b">Melbourne</text>
+            <text x="206" y="110" font-family="Jost, sans-serif" font-size="16" font-weight="500" fill="#26251e">Mentone</text>
+            <text x="112" y="150" font-family="Jost, sans-serif" font-size="14" fill="#55534b">Port Phillip</text>
+          </svg>
+        </div>
+        <dl class="facts">
+          <div><dt>Head office</dt><dd>Mentone VIC 3194</dd></div>
+          <div><dt>Works across</dt><dd>Greater Melbourne</dd></div>
+          <div><dt>Electrical contractor</dt><dd>REC 26017</dd></div>
+          <div><dt>Founded</dt><dd>2016</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-h">
+    <div class="marquee" aria-hidden="true">
+      <div class="track">
+        <img src="img/mentone-station.jpg" width="900" height="599" alt="" loading="lazy">
+        <img src="img/house-frame.jpg" width="660" height="420" alt="" loading="lazy">
+        <img src="img/mentone-signal-box-1910.jpg" width="600" height="1058" alt="" loading="lazy">
+        <img src="img/office-fitout.jpg" width="300" height="227" alt="" loading="lazy">
+        <img src="img/mentone-beach.jpg" width="1600" height="691" alt="" loading="lazy">
+        <img src="img/aplng-walkway.jpg" width="300" height="227" alt="" loading="lazy">
+        <img src="img/new-homes.jpg" width="300" height="227" alt="" loading="lazy">
+        <img src="img/melbourne-cbd.jpg" width="660" height="351" alt="" loading="lazy">
+        <img src="img/screwdriver.jpg" width="300" height="227" alt="" loading="lazy">
+        <img src="img/mentone-station.jpg" width="900" height="599" alt="" loading="lazy">
+        <img src="img/house-frame.jpg" width="660" height="420" alt="" loading="lazy">
+        <img src="img/mentone-signal-box-1910.jpg" width="600" height="1058" alt="" loading="lazy">
+        <img src="img/office-fitout.jpg" width="300" height="227" alt="" loading="lazy">
+        <img src="img/mentone-beach.jpg" width="1600" height="691" alt="" loading="lazy">
+        <img src="img/aplng-walkway.jpg" width="300" height="227" alt="" loading="lazy">
+        <img src="img/new-homes.jpg" width="300" height="227" alt="" loading="lazy">
+        <img src="img/melbourne-cbd.jpg" width="660" height="351" alt="" loading="lazy">
+        <img src="img/screwdriver.jpg" width="300" height="227" alt="" loading="lazy">
+      </div>
+    </div>
+    <div class="in">
+      <div class="head">
+        <div><h2 id="contact-h">Get a quick quote</h2>
+        <p class="sub">Tell seMec about the job and someone will contact you shortly. Quotes are free.</p></div>
+<div class="reach">
+        <a href="tel:0423486634"><span>Call</span><b>0423 486 634</b></a>
+        <a href="mailto:admin@semec.com.au"><span>Email</span><b>admin@semec.com.au</b></a>
+        <div><span>Jobs at seMec</span><b>Send a cover letter and resume to admin@semec.com.au</b></div>
+      </div>
+      </div>
+      <form class="quote" id="quote" action="mailto:admin@semec.com.au" method="get" enctype="text/plain">
+        <label>Your name<input name="name" autocomplete="name" required></label>
+        <label>Phone<input name="phone" type="tel" autocomplete="tel" required></label>
+        <label>Type of work
+          <select name="job" id="job">
+            <option>Domestic</option><option>Commercial</option><option>Industrial</option>
+          </select>
+        </label>
+        <label class="msg">About the job<textarea name="message" id="message"></textarea></label>
+        <button type="submit">Send</button>
+      </form>
+      <div class="small">
+        <p>This opens your email app with the details filled in. Nothing is stored on this page.</p>
+        <p>Or call 0423 486 634.</p>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer aria-labelledby="foot-h">
+  <h2 id="foot-h" class="mark"><span>s</span><span>e</span><span>M</span><span>e</span><span>c</span></h2>
+  <div class="links">
+    <div class="col"><h3>Services</h3><ul>
+      <li><a href="#domestic-services" data-circ="c-dom">Domestic services</a></li>
+      <li><a href="#commercial-services" data-circ="c-com">Commercial services</a></li>
+      <li><a href="#industrial-services" data-circ="c-ind">Industrial services</a></li>
+    </ul></div>
+    <div class="col"><h3>seMec</h3><ul>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul></div>
+    <div class="col"><h3>Follow</h3><ul>
+      <li><a href="https://www.facebook.com/SEMelbElectrical/">Facebook</a></li>
+      <li><a href="https://www.linkedin.com/company/south-east-melbourne-electrical-contractors-pty.-ltd.">LinkedIn</a></li>
+      <li><a href="https://instagram.com/semelbourneelectrical">Instagram</a></li>
+    </ul></div>
+    <div class="col"><h3>Licence</h3><ul>
+      <li>REC 26017</li>
+    </ul></div>
+    <address>
+      <a href="tel:0423486634">0423 486 634</a>
+      <a href="mailto:admin@semec.com.au">admin@semec.com.au</a>
+      <span>Head office: Mentone VIC 3194</span>
+    </address>
+  </div>
+  <div class="last">
+    <p>© <span id="yr">2026</span> South East Melbourne Electrical Contractors Pty Ltd, trading as SE Melbourne Electrical Contracting. Concept design by <a href="https://swoopsites.com/">Swoop Sites</a>, Melbourne.</p>
+    <a class="btn" href="#contact">Get a quote</a>
+  </div>
+  <p class="credits">Pictures: <a href="https://commons.wikimedia.org/w/index.php?curid=185024348">“Older residential electrical switchboard with legacy metering and circuit breakers, Australia”</a> by DezzignProtect, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=32023933">“Curtis Island”</a> by Lock the Gate Alliance, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=5778560">“Telstracorporatecentre”</a> by Kostanza, <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=41239527">“Templestowe Synchronous Condenser 1”</a> by Mriya, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=4823031">“Mentone Beach Victoria”</a> by Melburnian, <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=32414454">“Mentone Railway Station”</a> by Thebusofdoom, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>; all via Wikimedia Commons, shown in greyscale or cropped. <a href="https://collections.museumsvictoria.com.au/items/795807">“Victorian Railways Signal Box, Mentone, Jan 1910”</a>, public domain, via Museums Victoria. Other pictures from seMec's current website.</p>
+</footer>
+
+<div class="callbar">
+  <a class="btn" href="tel:0423486634">Call 0423 486 634</a>
+  <a class="btn alt" href="#contact">Get a quote</a>
+</div>
+
+<script>
+document.documentElement.classList.add('js');
+document.getElementById('yr').textContent = new Date().getFullYear();
+// entrances and the hero shutter, once, as each part arrives
+const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+document.querySelectorAll('[data-in], .shutter').forEach((el) => io.observe(el));
+// the switchboard: the chosen circuit goes into the quote form
+const job = document.getElementById('job'), msg = document.getElementById('message');
+const circuit = () => document.querySelector('input[name=circuit]:checked');
+document.querySelectorAll('input[name=circuit]').forEach((r) => r.addEventListener('change', () => { job.value = r.value; }));
+document.querySelectorAll('[data-job]').forEach((a) => a.addEventListener('click', () => {
+  job.value = a.dataset.job.split(':')[0];
+  msg.value = a.dataset.job.split(': ')[1].replace(/^./, (c) => c.toUpperCase()) + '. ';
+}));
+document.getElementById('take-circuit').addEventListener('click', () => { const c = circuit(); if (c) job.value = c.value; });
+// footer service links switch the board too
+document.querySelectorAll('[data-circ]').forEach((a) => a.addEventListener('click', (e) => {
+  e.preventDefault();
+  const r = document.getElementById(a.dataset.circ); r.checked = true; job.value = r.value;
+  history.replaceState(null, '', a.getAttribute('href'));
+  document.getElementById('services').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+}));
+// projects filter
+const fb = document.querySelectorAll('.filters button');
+fb.forEach((b) => b.addEventListener('click', () => {
+  fb.forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+  document.querySelectorAll('.strip').forEach((s) => { s.hidden = b.dataset.f !== 'all' && s.dataset.k !== b.dataset.f; });
+}));
+// a tidy email instead of a raw form post
+document.getElementById('quote').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const f = new FormData(e.target);
+  const body = `Name: ${f.get('name')}\nPhone: ${f.get('phone')}\nType of work: ${f.get('job')}\n\n${f.get('message')}`;
+  location.href = 'mailto:admin@semec.com.au?subject=' + encodeURIComponent('Quote request: ' + f.get('job')) + '&body=' + encodeURIComponent(body);
+});
+</script>
+</body>
+</html>
