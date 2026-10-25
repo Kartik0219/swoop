@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Mirrool Counselling Centre | Psychologists and Counsellors, Frankston (concept)</title>
+<meta name="description" content="Concept homepage for Mirrool Counselling Centre, 110 Skye Road, Frankston VIC 3199: psychologists and counsellors for adults, children and adolescents, parents and families. Call (03) 9783 3222 to make an appointment.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Bottle green and gold, moved onto the centre's own deep teal (#004a4f on their current site) and the pale stone (#ebe7e6) it uses for panels. */
+  --bg: #004a4f;
+  --surface: #0a5a60;
+  --deep: #00363a;
+  --ink: #f6e7b4;
+  --muted: #d5c690;
+  --accent: #f2c94c;
+  --accent-ink: #00363a;
+  --paper: #ebe7e6;
+  --paper-ink: #003a3e;
+  --paper-muted: #33585a;
+  --step-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+  --step-body: clamp(1.125rem, 1.05rem + 0.3vw, 1.3125rem);
+  --step-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
+  --step-head: clamp(2rem, 1.3rem + 3.2vw, 4rem);
+  --step-display: clamp(2.5rem, 0.2rem + 7vw, 7.5rem);
+  --m: clamp(16px, 5.5vw, 96px);
+  --gap: clamp(16px, 2vw, 32px);
+  --ease: cubic-bezier(.16, 1, .3, 1);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scrollbar-color: var(--muted) var(--deep); }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 var(--step-body)/1.6 Newsreader, Georgia, serif; font-optical-sizing: auto; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+::selection { background: var(--accent); color: var(--accent-ink); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+h1, h2, h3 { font-weight: 300; letter-spacing: -0.04em; line-height: 0.95; margin: 0; text-wrap: balance; }
+p, ul, ol, dl, figure { margin: 0; }
+ul { padding: 0; list-style: none; }
+.grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap); padding-inline: var(--m); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 26px; background: var(--accent); color: var(--accent-ink);
+  font: 500 var(--step-body)/1 Newsreader, Georgia, serif; text-decoration: none; border: 0; border-radius: 0; cursor: pointer;
+  transition: transform .3s var(--ease), background-color .3s var(--ease); }
+.btn:hover { background: #f7d872; transform: translateY(-2px); }
+.btn:active { transform: translateY(0) scale(.98); }
+.link { display: inline-flex; align-items: center; min-height: 48px; font-weight: 500; }
+.link span { transition: transform .3s var(--ease); display: inline-block; margin-left: 8px; }
+.link:hover span { transform: translateX(4px); }
+
+/* Concept banner: always first */
+.concept { background: #111; color: #ddd; font-size: var(--step-small); text-align: center; padding: 9px var(--m); position: relative; z-index: 5; }
+.concept b { color: #fff; }
+
+/* ---------- Hero: small name, open sky (three foreshore views crossfade) ---------- */
+.hero { position: relative; height: calc(100svh - 38px); min-height: 600px; overflow: hidden; background: var(--deep); color: var(--ink); }
+.hero .views img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1.6s ease-out; }
+.hero .views img.on { opacity: 1; }
+.hero .views img:nth-child(1) { object-position: 60% 50%; }
+.hero .views img:nth-child(2) { object-position: 58% 50%; }
+.hero .views img:nth-child(3) { object-position: 45% 50%; }
+.hero .views { position: absolute; inset: 0; animation: drift 30s ease-in-out infinite alternate; }
+.hero::after { content: ""; position: absolute; inset: 0; background: rgba(0, 32, 35, .38); }
+@keyframes drift { from { transform: scale(1.02); } to { transform: scale(1.1) translate(-1%, -1%); } }
+.bar { position: absolute; z-index: 2; top: 0; left: 0; right: 0; display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; padding: 20px var(--m) 0; font-size: var(--step-small); line-height: 1.3; }
+.bar .name { display: block; text-decoration: none; padding: 4px 0; min-height: 48px; }
+.bar .name span { display: block; }
+.bar nav { display: flex; flex-wrap: wrap; justify-content: flex-end; }
+.bar nav a { display: inline-flex; align-items: center; min-height: 48px; padding: 0 2px; text-decoration: none; }
+.bar nav a:not(:last-child)::after { content: ","; margin-right: 6px; }
+.bar nav a:hover { text-decoration: underline; text-decoration-thickness: 2px; }
+.hero-foot { position: absolute; z-index: 2; left: var(--m); right: var(--m); bottom: clamp(28px, 6vh, 64px); display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; }
+.hero h1 { font-size: var(--step-display); line-height: 0.88; letter-spacing: -0.05em; }
+.hero h1 span { display: block; }
+.hero .side { max-width: 34ch; text-align: right; display: flex; flex-direction: column; align-items: flex-end; gap: 22px; }
+.hero .side p { font-size: var(--step-body); line-height: 1.45; }
+.hero .calls { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 8px 24px; }
+
+/* ---------- Values: one scene, stepping statements ---------- */
+.values { position: relative; height: 300svh; background: var(--deep); }
+.stage { position: sticky; top: 0; height: 100svh; overflow: hidden; background: var(--deep); }
+.stage > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 70%; }
+.stage::after { content: ""; position: absolute; inset: 0; background: rgba(0, 26, 28, .52); }
+.stack { position: relative; z-index: 2; width: min(34ch, calc(100% - 2 * var(--m))); margin: 0 auto; padding-top: clamp(64px, 12vh, 140px); text-align: center; font-size: var(--step-lead); line-height: 1.25; }
+.stack h2 { font-size: var(--step-lead); font-weight: 500; letter-spacing: -0.01em; line-height: 1.25; margin-bottom: 18px; color: var(--ink); }
+.stack li { color: var(--muted); padding: 6px 0; transition: color .5s var(--ease), transform .5s var(--ease); }
+.stack li.on { color: var(--ink); font-weight: 500; transform: scale(1.04); }
+.stack li.on::before { content: ""; display: inline-block; width: 10px; height: 10px; background: var(--accent); margin-right: 12px; vertical-align: 0.15em; }
+.prints { position: absolute; inset: 0; z-index: 1; }
+.print { position: absolute; margin: 0; opacity: 0; transform: translateY(28px); transition: opacity 1s var(--ease), transform 1s var(--ease); }
+.print.on { opacity: 1; transform: none; }
+.print img { width: 100%; height: 100%; object-fit: cover; }
+.print.a { left: var(--m); width: clamp(160px, 15vw, 240px); }
+.print.b { right: var(--m); width: clamp(160px, 14vw, 220px); }
+.print.r34 img { aspect-ratio: 3 / 4; } .print.r11 img { aspect-ratio: 1; } .print.r45 img { aspect-ratio: 4 / 5; } .print.r32 img { aspect-ratio: 3 / 2; }
+.print.t1 { top: 30%; } .print.t2 { top: 52%; } .print.t3 { top: 40%; } .print.t4 { top: 60%; }
+.print figcaption { margin-top: 8px; font-size: var(--step-small); color: var(--ink); }
+
+/* ---------- Who we help: photographs down a diagonal, on the stone ground ---------- */
+.help { background: var(--paper); color: var(--paper-ink); padding: clamp(100px, 10vw, 170px) 0; }
+.help .grid { row-gap: 0; }
+.help h2 { grid-column: 7 / 13; grid-row: 1; align-self: start; font-size: var(--step-head); }
+.help .lede { grid-column: 7 / 12; grid-row: 1; align-self: start; margin-top: calc(var(--step-head) * 2.2); font-size: var(--step-lead); line-height: 1.35; }
+.stage-1 { grid-row: 1 / span 2; grid-column: 1 / 5; }
+.stage-1-t { grid-row: 2; grid-column: 5 / 9; margin-top: 48px; }
+.stage-2 { grid-row: 3; grid-column: 6 / 9; margin-top: 140px; }
+.stage-2-t { grid-row: 3; grid-column: 9 / 13; margin-top: 140px; }
+.stage-3 { grid-row: 4; grid-column: 8 / 13; margin-top: 140px; }
+.stage-3-t { grid-row: 4; grid-column: 2 / 7; margin-top: 140px; }
+.help figure img { width: 100%; object-fit: cover; }
+.stage-1 img { aspect-ratio: 3 / 4; } .stage-2 img { aspect-ratio: 1; } .stage-3 img { aspect-ratio: 16 / 10; object-position: 50% 40%; }
+.help figcaption { margin-top: 8px; font-size: var(--step-small); color: var(--paper-muted); }
+.who p { max-width: 36ch; }
+.who p b { font-weight: 500; }
+.who details { margin-top: 18px; background: #dfdad8; max-width: 36ch; }
+.who summary { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 52px; padding: 0 16px; cursor: pointer; font-weight: 500; list-style: none; transition: background-color .2s; }
+.who summary::-webkit-details-marker { display: none; }
+.who summary::after { content: "+"; font-size: 1.5rem; line-height: 1; transition: transform .3s var(--ease); }
+.who details[open] summary::after { transform: rotate(45deg); }
+.who summary:hover { background: #d4cecb; }
+.who ul { padding: 4px 16px 18px; display: flex; flex-direction: column; gap: 6px; font-size: var(--step-body); line-height: 1.4; }
+.who .ask { margin-top: 10px; }
+.help .safety { grid-column: 2 / 12; grid-row: 5; margin-top: 110px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap); background: #dfdad8; padding: clamp(24px, 3vw, 44px); }
+.help .safety h3 { font-size: var(--step-lead); font-weight: 500; letter-spacing: -0.01em; line-height: 1.25; }
+.help .safety p { margin-top: 10px; }
+
+/* ---------- Staff: pinned title, people pass ---------- */
+.staff { padding: clamp(100px, 10vw, 170px) 0; background: var(--bg); }
+.staff .row { grid-column: 1 / 13; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap); }
+.staff .pin { grid-column: 1 / 5; align-self: start; position: sticky; top: 48px; }
+.staff h2 { font-size: var(--step-head); }
+.staff .pin p { margin-top: 28px; max-width: 34ch; }
+.staff .pin p + p { margin-top: 16px; }
+.people { grid-column: 5 / 13; display: grid; grid-template-columns: 1fr 1fr; gap: 48px var(--gap); align-items: start; padding-top: 96px; }
+.person { background: var(--surface); padding: clamp(24px, 2.6vw, 40px); }
+.person:nth-child(even) { margin-top: 180px; }
+.person h3 { font-size: var(--step-head); }
+.person .role { margin-top: 14px; font-size: var(--step-lead); line-height: 1.3; }
+.person .quals { margin-top: 6px; font-size: var(--step-small); color: var(--muted); }
+.person p.bio { margin-top: 22px; max-width: 40ch; }
+.person .tags { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 8px; }
+.person .tags li { background: var(--bg); padding: 4px 12px; font-size: var(--step-small); }
+.person .ask { margin-top: 12px; }
+.staff figure.wide { grid-column: 1 / 13; margin-top: clamp(100px, 10vw, 160px); }
+.staff figure.wide img { width: 100%; aspect-ratio: 21 / 9; object-fit: cover; }
+.staff figure.wide figcaption { margin-top: 10px; font-size: var(--step-small); color: var(--muted); }
+
+/* ---------- Hours: the live thing ---------- */
+.hours { background: var(--surface); padding: clamp(110px, 12vw, 200px) 0; }
+.hours .intro { grid-column: 1 / 5; }
+.hours h2 { font-size: var(--step-head); }
+.status { margin-top: 26px; font-size: var(--step-lead); line-height: 1.3; min-height: 2.6em; }
+.status b { font-weight: 500; }
+.hours .intro p.note { margin-top: 18px; max-width: 32ch; }
+.hours .intro .btn { margin-top: 30px; }
+.week { grid-column: 5 / 13; display: flex; flex-direction: column; gap: 10px; }
+.axis { display: flex; justify-content: space-between; padding-left: 0; font-size: var(--step-small); color: var(--muted); margin-left: var(--lab); }
+.week { --lab: 132px; }
+.day { display: grid; grid-template-columns: var(--lab) 1fr; align-items: center; width: 100%; min-height: 64px; padding: 0; background: none; border: 0; color: var(--ink); font: inherit; text-align: left; cursor: pointer; }
+.day .dname { font-weight: 500; }
+.day .track { position: relative; height: 64px; background: var(--bg); }
+.day .span { position: absolute; top: 0; bottom: 0; left: var(--s); width: var(--w); background: var(--paper); color: var(--paper-ink); display: flex; align-items: center; padding: 0 16px; font-size: var(--step-small); font-weight: 500; white-space: nowrap; overflow: hidden;
+  transition: background-color .3s var(--ease), transform .4s var(--ease); transform-origin: left center; }
+.day:hover .span { background: #fff; }
+.day[aria-pressed="true"] .span { background: var(--accent); color: var(--accent-ink); }
+.day[aria-pressed="true"] .dname::after { content: " (chosen)"; font-weight: 400; color: var(--muted); font-size: var(--step-small); }
+.day .now { position: absolute; top: -6px; bottom: -6px; width: 3px; background: var(--ink); left: var(--n); display: none; }
+.day.today .now { display: block; }
+.day.closed { cursor: default; }
+.day.closed .track { display: flex; align-items: center; padding: 0 16px; font-size: var(--step-small); color: var(--muted); }
+.js .week .span { transform: scaleX(0.02); }
+.js .week.on .span { transform: none; }
+.week .day:nth-child(3) .span { transition-delay: .05s; } .week .day:nth-child(4) .span { transition-delay: .12s; } .week .day:nth-child(5) .span { transition-delay: .19s; } .week .day:nth-child(6) .span { transition-delay: .26s; }
+.funding { grid-column: 5 / 13; margin-top: 48px; }
+.funding h3 { font-size: var(--step-lead); font-weight: 500; letter-spacing: -0.01em; line-height: 1.25; }
+.funding ul { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; }
+.funding li { background: var(--bg); padding: 8px 14px; font-size: var(--step-small); }
+
+/* ---------- Contact: sentence, picture, links, enquiry form ---------- */
+.contact { padding: clamp(120px, 12vw, 200px) 0 clamp(110px, 10vw, 160px); background: var(--bg); }
+.contact .say { grid-column: 1 / 6; }
+.contact h2 { font-size: var(--step-head); }
+.contact .say > p { margin-top: 24px; font-size: var(--step-lead); line-height: 1.35; max-width: 30ch; }
+.reach { display: grid; grid-template-columns: 1fr; gap: 24px; margin-top: 40px; align-items: start; }
+.reach img { width: 160px; aspect-ratio: 1; object-fit: cover; }
+.reach dl { display: grid; gap: 2px; }
+.reach dt { font-size: var(--step-small); color: var(--muted); margin-top: 10px; }
+.reach dt:first-child { margin-top: 0; }
+.reach dd { margin: 0; }
+.reach dd a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 500; overflow-wrap: anywhere; }
+.form { grid-column: 7 / 13; background: var(--surface); padding: clamp(24px, 3vw, 44px); align-self: start; }
+.form h3 { font-size: var(--step-lead); font-weight: 500; letter-spacing: -0.01em; line-height: 1.25; }
+.form > p { margin-top: 8px; color: var(--ink); }
+.form form { margin-top: 22px; display: grid; gap: 16px; }
+.form .two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form label { display: grid; gap: 6px; font-size: var(--step-small); font-weight: 500; }
+.form input, .form select, .form textarea { font: inherit; font-size: 1.0625rem; color: var(--paper-ink); background: var(--paper); border: 1px solid var(--paper); border-radius: 0; padding: 12px 14px; width: 100%; min-height: 50px; caret-color: var(--paper-ink); }
+.form input:focus, .form select:focus, .form textarea:focus { outline: 3px solid var(--accent); outline-offset: 0; }
+.form textarea { min-height: 120px; resize: vertical; }
+.form .small { font-size: var(--step-small); color: var(--ink); }
+.form .btn { width: 100%; min-height: 56px; }
+
+/* ---------- Footer: the name across the last photograph ---------- */
+footer { position: relative; min-height: 100svh; display: flex; flex-direction: column; justify-content: space-between; color: var(--ink); overflow: hidden; background: #0d2224; }
+footer > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; filter: brightness(0.5); }
+footer .top { position: relative; display: flex; justify-content: space-between; gap: 32px; padding: 40px var(--m) 0; }
+footer nav ul { display: flex; flex-direction: column; }
+footer nav a, footer address a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; }
+footer nav a:hover, footer address a:hover { text-decoration: underline; }
+footer address { font-style: normal; text-align: right; display: flex; flex-direction: column; align-items: flex-end; max-width: 30ch; }
+footer address span { padding: 10px 0; }
+footer .base { position: relative; padding: 0 var(--m) 28px; }
+footer .word { font-size: var(--step-display); font-weight: 300; letter-spacing: -0.05em; line-height: 0.85; margin: 0; }
+footer .legal { margin-top: 22px; font-size: var(--step-small); display: flex; flex-direction: column; gap: 8px; max-width: 72ch; }
+footer .legal a { color: inherit; }
+
+/* ---------- Motion: entrances, staggered; content is visible without script ---------- */
+.js [data-in] { opacity: 0; transform: translateY(24px); transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: calc(var(--i, 0) * 80ms); }
+.js [data-in].on { opacity: 1; transform: none; }
+.hero h1 span, .hero .side > * { animation: rise 1.2s var(--ease) both; }
+.hero h1 span:nth-child(2) { animation-delay: .08s; } .hero .side > :nth-child(1) { animation-delay: .2s; } .hero .side > :nth-child(2) { animation-delay: .3s; }
+@keyframes rise { from { opacity: 0; transform: translateY(26px); } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js [data-in] { opacity: 1; transform: none; }
+  .js .week .span { transform: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1100px) {
+  .hero-foot { flex-direction: column; align-items: flex-start; gap: 24px; }
+  .hero .side { text-align: left; align-items: flex-start; }
+  .hero .calls { justify-content: flex-start; }
+  .help h2 { grid-column: 6 / 13; } .help .lede { grid-column: 6 / 13; }
+  .stage-1 { grid-column: 1 / 6; } .stage-1-t { grid-column: 6 / 13; }
+  .stage-2 { grid-column: 2 / 7; } .stage-2-t { grid-column: 7 / 13; }
+  .stage-3 { grid-column: 6 / 13; } .stage-3-t { grid-column: 1 / 6; }
+  .staff .pin { grid-column: 1 / 13; position: static; }
+  .staff .row { display: block; }
+  .people { display: flex; flex-direction: column; gap: 56px; padding-top: 72px; }
+  .person { width: min(80%, 560px); }
+  .person:nth-child(even) { margin-top: 0; align-self: flex-end; }
+  .hours .intro { grid-column: 1 / 13; }
+  .week, .funding { grid-column: 1 / 13; margin-top: 40px; }
+  .contact .say { grid-column: 1 / 13; }
+  .form { grid-column: 1 / 13; margin-top: 64px; }
+  .print.a, .print.b { width: clamp(140px, 22vw, 200px); }
+  .print.t1 { top: 46%; } .print.t2 { top: 64%; } .print.t3 { top: 52%; } .print.t4 { top: 70%; }
+}
+
+/* ---------- Phone: its own composition ---------- */
+@media (max-width: 760px) {
+  .grid { display: block; }
+  .bar { padding-top: 14px; }
+  .bar .name { font-size: 0.8125rem; }
+  .bar nav a { display: none; }
+  .bar nav a.keep { display: inline-flex; }
+  .bar nav a.keep::after { content: none; }
+  .hero { height: calc(100svh - 56px); min-height: 560px; }
+  .hero-foot { flex-direction: column; align-items: flex-start; gap: 22px; left: 20px; right: 20px; bottom: 24px; }
+  .hero .side { text-align: left; align-items: flex-start; max-width: none; }
+  .hero .calls { justify-content: flex-start; }
+  .hero .btn { width: 100%; }
+  .values { height: 260svh; }
+  .stack { position: absolute; left: var(--m); right: var(--m); bottom: 28px; width: auto; padding: 0; text-align: left; font-size: 1.0625rem; }
+  .stack li.on { transform: none; }
+  .print.b { display: none; }
+  .print.a { left: auto; right: var(--m); top: 16px; width: 44vw; }
+  .help h2 { margin-bottom: 18px; }
+  .help .lede { margin-top: 0; }
+  .who-block { margin-top: 64px; }
+  .help figure { margin-top: 0; }
+  .stage-1 { width: 100%; margin-top: 48px; }
+  .stage-2 { width: 62%; margin-left: auto; margin-top: 56px; }
+  .stage-3 { width: 78%; margin-top: 56px; }
+  .stage-1-t, .stage-2-t, .stage-3-t { margin-top: 20px; }
+  .stage-2-t { width: 62%; margin-left: auto; min-width: 280px; }
+  .help .safety { display: block; margin-top: 72px; }
+  .help .safety > div + div { margin-top: 22px; }
+  .person { width: 92%; }
+  .staff figure.wide img { aspect-ratio: 4 / 3; }
+  .week { --lab: 0px; }
+  .axis { display: none; }
+  .day { grid-template-columns: 1fr; gap: 6px; min-height: 0; }
+  .day .track { height: 52px; }
+  .day .span { padding: 0 10px; }
+  .funding { margin-top: 48px; }
+  .reach img { width: 120px; }
+  .form .two { grid-template-columns: 1fr; }
+  footer { min-height: 88svh; }
+  footer .top { flex-direction: column; gap: 16px; padding-top: 28px; }
+  footer address { text-align: left; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Mirrool Counselling Centre. This is a design preview, not the live website.</div>
+
+<header class="hero" id="top">
+  <div class="views" aria-hidden="true">
+    <img class="on" src="img/boardwalk.jpg" width="1600" height="1200" alt="" fetchpriority="high">
+    <img src="img/pier-sunset.jpg" width="1920" height="1280" alt="" decoding="async">
+    <img src="img/bushrangers-bay.jpg" width="1600" height="1000" alt="" decoding="async">
+  </div>
+  <div class="bar">
+    <a class="name" href="#top" aria-label="Mirrool Counselling Centre, home"><span>Mirrool</span><span>Counselling</span><span>Centre</span></a>
+    <nav aria-label="Main">
+      <a href="#help">Who we help</a><a href="#staff">Our staff</a><a href="#hours">Hours</a><a class="keep" href="#contact">Contact</a>
+    </nav>
+  </div>
+  <div class="hero-foot">
+    <h1><span>Mirrool</span><span>Counselling Centre</span></h1>
+    <div class="side">
+      <p>Psychologists and counsellors for adults, children and families, at 110 Skye Road just outside the Frankston CBD.</p>
+      <div class="calls">
+        <a class="link" href="#contact">Send an enquiry<span aria-hidden="true">&rarr;</span></a>
+        <a class="btn" href="tel:+61397833222">Call (03) 9783 3222</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="values" id="values" aria-labelledby="values-h">
+    <div class="stage">
+      <img src="img/pier-sunset.jpg" width="1920" height="1280" alt="Sunset over Port Phillip at the end of Frankston Pier" loading="lazy">
+      <div class="prints" aria-hidden="true">
+        <figure class="print a r34 t1" data-step="0"><img src="img/foreshore-trees.jpg" width="900" height="1200" alt="" loading="lazy"></figure>
+        <figure class="print b r11 t2" data-step="0"><img src="img/boardwalk-sq.jpg" width="800" height="800" alt="" loading="lazy"></figure>
+        <figure class="print a r11 t3" data-step="1"><img src="img/pier-1954.jpg" width="1200" height="1200" alt="" loading="lazy"></figure>
+        <figure class="print b r45 t1" data-step="1"><img src="img/foreshore-trees.jpg" width="900" height="1200" alt="" loading="lazy" style="object-position:30% 50%"></figure>
+        <figure class="print a r32 t2" data-step="2"><img src="img/olivers-hill.jpg" width="1400" height="1050" alt="" loading="lazy"></figure>
+        <figure class="print b r34 t3" data-step="2"><img src="img/boardwalk.jpg" width="1600" height="1200" alt="" loading="lazy" style="object-position:80% 50%"></figure>
+        <figure class="print a r45 t4" data-step="3"><img src="img/bushrangers-bay.jpg" width="1600" height="1000" alt="" loading="lazy" style="object-position:20% 50%"></figure>
+        <figure class="print b r32 t2" data-step="3"><img src="img/coastline.jpg" width="1920" height="774" alt="" loading="lazy"></figure>
+        <figure class="print a r11 t2" data-step="4"><img src="img/olivers-hill.jpg" width="1400" height="1050" alt="" loading="lazy" style="object-position:70% 50%"></figure>
+        <figure class="print b r34 t4" data-step="4"><img src="img/pier-1954.jpg" width="1200" height="1200" alt="" loading="lazy" style="object-position:35% 50%"></figure>
+      </div>
+      <div class="stack">
+        <h2 id="values-h">What the centre prides itself on</h2>
+        <ul>
+          <li class="on" data-step="0">Integrity</li>
+          <li data-step="1">Confidentiality</li>
+          <li data-step="2">Empathy</li>
+          <li data-step="3">Up-to-date techniques, CBT among them</li>
+          <li data-step="4">Psychologists who keep training</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="help" id="help" aria-labelledby="help-h">
+    <div class="grid">
+      <h2 id="help-h" data-in>Who we help</h2>
+      <p class="lede" data-in style="--i:1">Our psychologists work with a range of issues for adults, for children and adolescents, and for parents and families.</p>
+
+      <figure class="stage-1" data-in style="--i:2"><img src="img/foreshore-trees.jpg" width="900" height="1200" alt="Morning sun through the trees on the Frankston foreshore" loading="lazy"><figcaption>The foreshore trees, Frankston</figcaption></figure>
+      <div class="who stage-1-t" data-in style="--i:3">
+        <p><b>For adults.</b> Depression, anxiety, panic and stress, relationships and couples counselling, anger management, grief and loss.</p>
+        <details><summary>All areas for adults</summary><ul>
+          <li>Depression</li><li>Anxiety, panic and stress management</li><li>Relationships and couples counselling</li><li>Anger management</li><li>Post traumatic stress (PTSD)</li><li>Sexual abuse and rape</li><li>Grief and loss</li><li>Hypnotherapy</li><li>Drug and alcohol issues</li><li>Survivors of physical and emotional abuse</li><li>Harassment and bullying</li><li>Obsessive compulsive disorder (OCD)</li><li>Critical incident debriefing</li><li>Self-esteem and self confidence</li><li>Communication skills</li><li>Assertiveness</li><li>Conflict resolution</li><li>Sleeping problems</li><li>Sexual difficulties</li>
+        </ul></details>
+        <a class="link ask" href="#contact" data-for="An adult">Enquire for an adult<span aria-hidden="true">&rarr;</span></a>
+      </div>
+
+      <figure class="stage-2" data-in><img src="img/boardwalk-sq.jpg" width="800" height="800" alt="The timber boardwalk along the dunes at Frankston, with the pier in the distance" loading="lazy"><figcaption>The boardwalk, Frankston</figcaption></figure>
+      <div class="who stage-2-t" data-in style="--i:1">
+        <p><b>For children and adolescents.</b> Fears and worries, school refusal, bullying, anger, learning difficulties, sleep, grief and loss.</p>
+        <details><summary>All areas for children and teens</summary><ul>
+          <li>Educational assessment and reporting, learning difficulties</li><li>Fears and worries (social anxiety, phobias, separation anxiety, panic disorder, OCD)</li><li>Child and adolescent depression</li><li>Suicidal thoughts and self harm behaviours</li><li>Behavioural issues (hyperactivity, attention difficulties, tantrums, oppositional behaviours)</li><li>School refusal</li><li>Bullying</li><li>Anger and aggressive behaviour</li><li>Communication and interpersonal skills (assertive and social skills)</li><li>Grief and loss issues</li><li>Sleep difficulties</li><li>The impact of child abuse (sexual, physical and emotional neglect)</li>
+        </ul></details>
+        <a class="link ask" href="#contact" data-for="A child or adolescent">Enquire for a child or teen<span aria-hidden="true">&rarr;</span></a>
+      </div>
+
+      <figure class="stage-3" data-in><img src="img/pier-1954.jpg" width="1200" height="1200" alt="A mother and her small daughter reading together on Frankston Pier, around 1954" loading="lazy"><figcaption>Reading on Frankston Pier, about 1954</figcaption></figure>
+      <div class="who stage-3-t" data-in style="--i:1">
+        <p><b>For parents and families.</b> Parenting strategies, coping with difficult children, sibling issues, and families adapting to change.</p>
+        <details><summary>All areas for parents and families</summary><ul>
+          <li>Parenting strategies</li><li>Coping with difficult children</li><li>Sibling issues</li><li>Adapting to change in families</li><li>Separation</li><li>Trauma</li><li>Relocation</li><li>Death</li>
+        </ul></details>
+        <a class="link ask" href="#contact" data-for="A parent or family">Enquire for a family<span aria-hidden="true">&rarr;</span></a>
+      </div>
+
+      <div class="safety" data-in>
+        <div><h3>Making a first appointment</h3><p>Please call the centre on <a href="tel:+61397833222">(03) 9783 3222</a> to arrange an appointment, or send an enquiry with the form below.</p></div>
+        <div><h3>If you need help right now</h3><p>In an emergency call 000. Lifeline answers 24 hours a day on 13 11 14.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="staff" id="staff" aria-labelledby="staff-h">
+    <div class="grid">
+      <div class="row">
+      <div class="pin">
+        <h2 id="staff-h" data-in>Our staff</h2>
+        <p data-in style="--i:1">A counselling and psychology practice just outside the Frankston CBD, established 23 June 1988. Over 30 psychologists have worked at the centre since then.</p>
+        <p data-in style="--i:2">Its psychologists and counsellors are members of associations such as the Australian Psychological Society, the National Association of Loss and Grief, the Australian Counselling Association and the Australian Hypnosis Society.</p>
+      </div>
+      <div class="people">
+        <article class="person" data-in>
+          <h3>Michael Warner</h3>
+          <p class="role">Psychologist</p>
+          <p class="quals">B.A. Dip. Ed. Grad.Dip.Ed.Psych, Cert. Trauma &amp; Grief, M.A.P.S.</p>
+          <p class="bio">Works with adults, adolescents and children. He has practised psychology for nearly 20 years, within the Department of Education, Youth at Risk, the Reach Foundation and private practice.</p>
+          <ul class="tags"><li>Depression</li><li>Anxiety</li><li>Couples</li><li>PTSD</li><li>Grief</li><li>Parenting</li></ul>
+          <a class="link ask" href="#contact" data-who="Michael Warner">Ask about Michael<span aria-hidden="true">&rarr;</span></a>
+        </article>
+        <article class="person" data-in>
+          <h3>Marita Murphy</h3>
+          <p class="role">Psychologist</p>
+          <p class="quals">B.A. Teach, B.A. Social Science, MAPS Associate</p>
+          <p class="bio">A primary teacher first, then six years as a counsellor and team manager at a community palliative care service. She has trained in hypnosis and play therapy, and works with all age groups.</p>
+          <ul class="tags"><li>Grief and loss</li><li>Children</li><li>Anxiety</li><li>Trauma</li><li>Play therapy</li></ul>
+          <a class="link ask" href="#contact" data-who="Marita Murphy">Ask about Marita<span aria-hidden="true">&rarr;</span></a>
+        </article>
+        <article class="person" data-in>
+          <h3>Kylie Johnson</h3>
+          <p class="role">Clinical Psychologist</p>
+          <p class="quals">B.App Sc (Hons), M. Psych (Clin), MAPS, CCLIN</p>
+          <p class="bio">Works mainly with adults, using CBT, DBT, ACT and EMDR. She spent 8 years in the Dialectical Behaviour Therapy Program at The Melbourne Clinic in Richmond.</p>
+          <ul class="tags"><li>Anxiety and phobias</li><li>Depression</li><li>Pain management</li><li>Sleep</li><li>Body image</li></ul>
+          <a class="link ask" href="#contact" data-who="Kylie Johnson">Ask about Kylie<span aria-hidden="true">&rarr;</span></a>
+        </article>
+        <article class="person" data-in>
+          <h3>Jan St Clair</h3>
+          <p class="role">Counsellor</p>
+          <p class="bio">Jan is the centre's counsellor. Call the centre to ask whether an appointment with Jan suits what you are looking for.</p>
+          <a class="link ask" href="#contact" data-who="Jan St Clair">Ask about Jan<span aria-hidden="true">&rarr;</span></a>
+        </article>
+      </div>
+      </div>
+      <figure class="wide" data-in><img src="img/coastline.jpg" width="1920" height="774" alt="The Frankston coastline from above, looking north towards Melbourne" loading="lazy"><figcaption>Frankston, looking north along the bay towards Melbourne</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="hours" id="hours" aria-labelledby="hours-h">
+    <div class="grid">
+      <div class="intro">
+        <h2 id="hours-h" data-in>Our new hours</h2>
+        <p class="status" id="status" aria-live="polite" data-in style="--i:1">Monday to Friday. Closed on weekends.</p>
+        <p class="note" data-in style="--i:2">Every weekday keeps different hours. Tap the day that suits you and we will put it on your enquiry.</p>
+        <a class="btn" href="#contact" id="take-day" data-in style="--i:3">Enquire for Monday</a>
+      </div>
+      <div class="week" id="week" data-ui role="group" aria-label="Opening hours, Monday to Friday">
+        <div class="axis" aria-hidden="true"><span>9am</span><span>11am</span><span>1pm</span><span>3pm</span><span>5pm</span><span>7pm</span></div>
+        <button class="day" type="button" data-day="Monday" data-d="1" data-o="11" data-c="18" aria-pressed="true"><span class="dname">Monday</span><span class="track"><span class="span" style="--s:20%;--w:70%">11:00am – 6:00pm</span><span class="now"></span></span></button>
+        <button class="day" type="button" data-day="Tuesday" data-d="2" data-o="11.5" data-c="19" aria-pressed="false"><span class="dname">Tuesday</span><span class="track"><span class="span" style="--s:25%;--w:75%">11:30am – 7:00pm</span><span class="now"></span></span></button>
+        <button class="day" type="button" data-day="Wednesday" data-d="3" data-o="11.5" data-c="16.5" aria-pressed="false"><span class="dname">Wednesday</span><span class="track"><span class="span" style="--s:25%;--w:50%">11:30am – 4:30pm</span><span class="now"></span></span></button>
+        <button class="day" type="button" data-day="Thursday" data-d="4" data-o="9" data-c="19" aria-pressed="false"><span class="dname">Thursday</span><span class="track"><span class="span" style="--s:0%;--w:100%">9:00am – 7:00pm</span><span class="now"></span></span></button>
+        <button class="day" type="button" data-day="Friday" data-d="5" data-o="9" data-c="15" aria-pressed="false"><span class="dname">Friday</span><span class="track"><span class="span" style="--s:0%;--w:60%">9:00am – 3:00pm</span><span class="now"></span></span></button>
+        <div class="day closed"><span class="dname">Weekends</span><span class="track">Closed on weekends</span></div>
+      </div>
+      <div class="funding" data-in>
+        <h3>The centre services</h3>
+        <ul><li>Medicare</li><li>WorkCover</li><li>TAC</li><li>Victims of Crime (V.O.C.A.T)</li><li>E.P.C</li><li>Private health insurance</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-h">
+    <div class="grid">
+      <div class="say">
+        <h2 id="contact-h" data-in>Make an appointment</h2>
+        <p data-in style="--i:1">Please call to make an appointment, or send an enquiry with the form.</p>
+        <div class="reach" data-in style="--i:2">
+          <img src="img/olivers-hill.jpg" width="1400" height="1050" alt="Frankston beach seen from Olivers Hill" loading="lazy">
+          <dl>
+            <dt>Phone</dt><dd><a href="tel:+61397833222">(03) 9783 3222</a></dd>
+            <dt>Email</dt><dd><a href="mailto:admin@mirroolcounsellingcentre.com.au">admin@mirroolcounsellingcentre.com.au</a></dd>
+            <dt>Fax</dt><dd>9783 9966</dd>
+            <dt>Find us</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=110+Skye+Road+Frankston+VIC+3199" rel="noopener">110 Skye Road, Frankston VIC 3199</a></dd>
+          </dl>
+        </div>
+      </div>
+      <div class="form">
+        <h3>Send an enquiry</h3>
+        <p>Leave your details and a good time to call. Please keep personal health details for the conversation itself.</p>
+        <form id="enquiry" action="mailto:admin@mirroolcounsellingcentre.com.au" method="get" enctype="text/plain">
+          <div class="two">
+            <label>Your name<input name="name" autocomplete="name" required></label>
+            <label>Phone<input name="phone" type="tel" autocomplete="tel" required></label>
+          </div>
+          <label>Email (optional)<input name="email" type="email" autocomplete="email"></label>
+          <div class="two">
+            <label>The appointment is for
+              <select name="for" id="for"><option>Me (an adult)</option><option>An adult</option><option>A child or adolescent</option><option>A parent or family</option></select>
+            </label>
+            <label>Best day
+              <select name="day" id="day"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Any weekday</option></select>
+            </label>
+          </div>
+          <label>Anything you would like us to know<textarea name="message" id="message"></textarea></label>
+          <p class="small">This opens your email app with the details filled in. Nothing is stored on this page.</p>
+          <button class="btn" type="submit">Send my enquiry</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer aria-labelledby="foot-h">
+  <img src="img/bushrangers-bay.jpg" width="1600" height="1000" alt="Bushrangers Bay on the Mornington Peninsula" loading="lazy">
+  <div class="top">
+    <nav aria-label="Footer"><ul><li><a href="#help">Who we help</a></li><li><a href="#staff">Our staff</a></li><li><a href="#hours">Opening hours</a></li><li><a href="#contact">Make an appointment</a></li></ul></nav>
+    <address>
+      <a href="tel:+61397833222">(03) 9783 3222</a>
+      <a href="mailto:admin@mirroolcounsellingcentre.com.au">Email the centre</a>
+      <span>110 Skye Road, Frankston VIC 3199</span>
+    </address>
+  </div>
+  <div class="base">
+    <h2 class="word" id="foot-h">Mirrool Counselling Centre</h2>
+    <div class="legal">
+      <p>© <span id="yr">2026</span> Mirrool Counselling Centre, 110 Skye Road, Frankston VIC 3199. Concept design by <a href="https://swoopsites.com/">Swoop Sites</a>, Melbourne.</p>
+      <p>Pictures: <a href="https://commons.wikimedia.org/wiki/File:Frankston_Boardwalk,_Frankston_suburb_of_Melbourne.jpg">“Frankston Boardwalk”</a>, public domain; <a href="https://commons.wikimedia.org/w/index.php?curid=42820895">“Sunset over Port Phillip at Frankston Pier”</a> by NouvelleAuteur, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=58440962">“Bush Rangers Bay, Mornington Peninsula National Park”</a> by Kevin Graham de Valle, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Frankston_coastline_facing_north_towards_Melbourne.jpg">“Frankston coastline facing north towards Melbourne”</a> by BobTanGo, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Wind_beaten_foreshore_plants.jpg">“Wind beaten foreshore plants”</a> by Recyclobat, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=141417015">“Frankston beach from Olivers Hill”</a> by Tangerineduel, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; all via Wikimedia Commons. <a href="https://collections.museumsvictoria.com.au/items/2102129">“Eileen &amp; Susan Leech Sitting Reading on Frankston Pier, circa 1954”</a>, public domain, via Museums Victoria. Pictures show Frankston and the bay, not the centre.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.documentElement.classList.add('js');
+document.getElementById('yr').textContent = new Date().getFullYear();
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// entrances, once, as each part arrives
+const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+const ins = [...document.querySelectorAll('[data-in], #week')];
+ins.forEach((el) => io.observe(el));
+const sweep = () => { const h = innerHeight; for (const el of ins) if (!el.classList.contains('on') && el.getBoundingClientRect().top < h) el.classList.add('on'); };
+addEventListener('scroll', () => requestAnimationFrame(sweep), { passive: true });
+
+// hero: three views of the foreshore, slow crossfade; paused when the tab is hidden
+const views = [...document.querySelectorAll('.views img')];
+let v = 0;
+if (!reduce) setInterval(() => { if (document.hidden) return; views[v].classList.remove('on'); v = (v + 1) % views.length; views[v].classList.add('on'); }, 6500);
+
+// values: the active statement steps down the stack as the scene scrolls
+const scene = document.getElementById('values');
+const lines = [...scene.querySelectorAll('.stack li')], prints = [...scene.querySelectorAll('.print')];
+let cur = -1;
+const step = () => {
+  const r = scene.getBoundingClientRect(), span = scene.offsetHeight - innerHeight;
+  const p = Math.min(1, Math.max(0, -r.top / Math.max(1, span)));
+  const s = Math.min(lines.length - 1, Math.floor(p * lines.length));
+  if (s === cur) return; cur = s;
+  lines.forEach((l, i) => l.classList.toggle('on', i === s));
+  prints.forEach((f) => f.classList.toggle('on', +f.dataset.step === s));
+};
+addEventListener('scroll', () => requestAnimationFrame(step), { passive: true });
+step();
+
+// hours: open now? (Melbourne time), choose a day, carry it into the enquiry
+const days = [...document.querySelectorAll('.day[data-day]')];
+const daySel = document.getElementById('day'), take = document.getElementById('take-day'), status = document.getElementById('status');
+const fmt = (h) => { const hh = Math.floor(h), mm = Math.round((h - hh) * 60), ap = hh >= 12 ? 'pm' : 'am', h12 = ((hh + 11) % 12) + 1; return h12 + ':' + String(mm).padStart(2, '0') + ap; };
+const choose = (b) => { days.forEach((d) => d.setAttribute('aria-pressed', d === b ? 'true' : 'false')); take.textContent = 'Enquire for ' + b.dataset.day; daySel.value = b.dataset.day; };
+days.forEach((b) => b.addEventListener('click', () => choose(b)));
+take.addEventListener('click', () => { const b = days.find((d) => d.getAttribute('aria-pressed') === 'true'); if (b) daySel.value = b.dataset.day; });
+try {
+  const parts = Object.fromEntries(new Intl.DateTimeFormat('en-AU', { timeZone: 'Australia/Melbourne', weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }).formatToParts(new Date()).map((x) => [x.type, x.value]));
+  const wd = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(parts.weekday), now = +parts.hour + parts.minute / 60;
+  const today = days.find((d) => +d.dataset.d === wd);
+  if (today) {
+    choose(today);
+    today.classList.add('today');
+    today.querySelector('.now').style.setProperty('--n', Math.min(100, Math.max(0, (now - 9) / 10 * 100)) + '%');
+  }
+  if (today && now >= +today.dataset.o && now < +today.dataset.c) status.innerHTML = '<b>Open now</b>, until ' + fmt(+today.dataset.c) + ' today.';
+  else {
+    let next = null;
+    for (let k = 0; k < 8 && !next; k++) { const d = days.find((x) => +x.dataset.d === (wd + k) % 7); if (d && (k > 0 || now < +d.dataset.o)) next = [d, k]; }
+    if (next) status.innerHTML = '<b>Closed right now.</b> Opens ' + (next[1] === 0 ? 'today' : next[1] === 1 ? 'tomorrow' : next[0].dataset.day) + ' at ' + fmt(+next[0].dataset.o) + '.';
+  }
+} catch (e) { /* the hours stay readable as written */ }
+
+// who-for and staff links fill the enquiry
+const forSel = document.getElementById('for'), msg = document.getElementById('message');
+document.querySelectorAll('[data-for]').forEach((a) => a.addEventListener('click', () => { forSel.value = a.dataset.for; }));
+document.querySelectorAll('[data-who]').forEach((a) => a.addEventListener('click', () => { if (!msg.value) msg.value = 'I would like to ask about an appointment with ' + a.dataset.who + '. '; }));
+
+// a tidy email instead of a raw form post
+document.getElementById('enquiry').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const f = new FormData(e.target);
+  const body = `Name: ${f.get('name')}\nPhone: ${f.get('phone')}\nEmail: ${f.get('email')}\nAppointment for: ${f.get('for')}\nBest day: ${f.get('day')}\n\n${f.get('message')}`;
+  location.href = 'mailto:admin@mirroolcounsellingcentre.com.au?subject=' + encodeURIComponent('Appointment enquiry: ' + f.get('day')) + '&body=' + encodeURIComponent(body);
+});
+</script>
+</body>
+</html>
