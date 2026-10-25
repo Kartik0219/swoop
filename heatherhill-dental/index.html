@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Heatherhill Dental | Dentist in Frankston, Heatherhill Road (concept)</title>
+<meta name="description" content="Concept homepage for Heatherhill Dental, 36 Heatherhill Rd, Frankston: Dr James Lin and Dr Lin Liang. Open Monday to Wednesday and Friday 8am to 5pm, every second Saturday 8:30am to 1pm. Book online or call (03) 9781 1785.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Colours from Heatherhill Dental's own logo: the blue lettering, the teal wave, the grey tooth. */
+  --paper: #f2f6f6;
+  --paper-2: #e3ecec;
+  --ink: #12233b;
+  --soft: #3d4d63;
+  --accent: #1f56a3;        /* logo blue: the one action colour */
+  --accent-dark: #163f7a;
+  --accent-ink: #ffffff;
+  --teal: #4bb3b4;          /* the wave, used as whole colour fields */
+  --teal-2: #3a9d9e;
+  --grey: #8d9196;          /* the tooth outline */
+  --step-small: 0.9375rem;
+  --step-sub: clamp(1.75rem, 1.2rem + 1.6vw, 2.625rem);
+  --step-body: clamp(1.0625rem, 1rem + 0.2vw, 1.1875rem);
+  --step-lead: clamp(1.25rem, 1.1rem + 0.5vw, 1.4375rem);
+  --step-head: clamp(2.5rem, 1.6rem + 3vw, 4rem);
+  --step-display: clamp(4rem, 8.3vw, 8rem);
+  --m: clamp(16px, 2.2vw, 32px);
+  --axis: 42vw;
+  --ease: cubic-bezier(.16, 1, .3, 1);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { margin: 0; background: var(--ink); color: var(--ink); font: 400 var(--step-body)/1.55 Raleway, system-ui, sans-serif; font-variant-numeric: lining-nums; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+::selection { background: var(--teal); color: var(--ink); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+h1, h2, h3 { font-weight: 500; letter-spacing: -0.035em; line-height: 0.95; margin: 0; text-wrap: balance; }
+p { margin: 0; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 24px; background: var(--accent); color: var(--accent-ink);
+  font: 600 var(--step-body)/1 Raleway, sans-serif; text-decoration: none; border: 0; border-radius: 0; cursor: pointer;
+  transition: transform .25s var(--ease), background-color .25s var(--ease); }
+.btn:hover { background: var(--accent-dark); transform: translateY(-2px); }
+.btn:active { transform: translateY(0) scale(.98); }
+.btn.alt { background: var(--paper-2); color: var(--ink); }
+.btn.alt:hover { background: var(--ink); color: var(--paper); }
+
+.concept { background: #0b1626; color: #d6dde6; font-size: var(--step-small); text-align: center; padding: 9px var(--m); position: relative; z-index: 5; }
+.concept b { color: #fff; }
+
+main { position: relative; z-index: 2; background: var(--paper); }
+
+/* ---------- Masthead: header on a gutterless mosaic ---------- */
+.top { display: grid; grid-template-columns: auto 1fr auto; align-items: stretch; background: var(--paper); }
+.mark { display: flex; align-items: center; background: #fff; padding: 8px 22px; min-height: 72px; }
+.mark img { width: 104px; }
+.tab { display: flex; align-items: center; gap: 32px; background: var(--accent); color: var(--accent-ink); padding: 0 28px; width: calc(var(--axis) - 148px); }
+.tab a { text-decoration: none; font-weight: 600; min-height: 48px; display: inline-flex; align-items: center; }
+.tab a:hover { text-decoration: underline; }
+.top .act { display: flex; align-items: center; justify-content: flex-end; gap: 22px; padding: 0 var(--m); }
+.top .act .ph { font-weight: 600; text-decoration: none; min-height: 48px; display: inline-flex; align-items: center; font-variant-numeric: tabular-nums; }
+.top .act .ph:hover { text-decoration: underline; }
+
+.mosaic { display: grid; grid-template-columns: repeat(6, 1fr); grid-template-rows: repeat(2, 1fr); grid-auto-flow: dense; height: 40svh; min-height: 340px; overflow: hidden; }
+.mosaic > * { min-width: 0; min-height: 0; overflow: hidden; }
+.mosaic img { width: 100%; height: 100%; object-fit: cover; }
+.mosaic .wide { grid-column: span 2; }
+.mosaic .tall { grid-row: span 2; }
+.t-teal { background: var(--teal); } .t-blue { background: var(--accent); } .t-grey { background: var(--grey); } .t-paper { background: var(--paper-2); }
+.mosaic .wide img { animation: drift 26s ease-in-out infinite alternate; }
+@keyframes drift { from { transform: scale(1.02); } to { transform: scale(1.12) translate(-2%, -1%); } }
+
+.title { display: grid; grid-template-columns: calc(var(--axis) - var(--m)) 1fr; padding: 64px var(--m) 120px; align-items: start; }
+.stand { font-size: var(--step-lead); line-height: 1.35; max-width: 30ch; padding-right: 32px; margin-top: 18px; }
+.stand + .stand { margin-top: 18px; font-size: var(--step-body); color: var(--soft); }
+.title h1 { font-size: var(--step-display); line-height: 0.92; letter-spacing: -0.04em; }
+.title h1 .ln { display: block; overflow: hidden; padding-bottom: .06em; }
+.title h1 .ln > span { display: block; animation: lift .95s var(--ease) both; }
+.title h1 .ln:nth-child(2) > span { animation-delay: .11s; }
+@keyframes lift { from { transform: translateY(105%); } }
+.title .sub { margin-top: 32px; font-size: var(--step-lead); line-height: 1.35; max-width: 34ch; animation: fade .8s .35s var(--ease) both; }
+.calls { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; animation: fade .8s .42s var(--ease) both; }
+@keyframes fade { from { opacity: 0; transform: translateY(14px); } }
+
+/* ---------- Intro: heading, note, facts row ---------- */
+.intro { background: var(--paper-2); padding: 140px var(--m) 120px; }
+.intro .row1 { display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; align-items: end; }
+.intro h2 { grid-column: 1 / 7; font-size: var(--step-head); font-weight: 400; }
+.intro .note { grid-column: 9 / 13; display: flex; flex-direction: column; gap: 14px; }
+.facts { list-style: none; margin: 120px 0 0; padding: 0; display: flex; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+.facts strong { display: block; font-size: var(--step-sub); font-weight: 400; letter-spacing: -0.03em; line-height: 1.05; }
+.facts span { display: block; margin-top: 8px; font-size: var(--step-small); color: var(--soft); max-width: 26ch; }
+.intro figure { margin: 72px 0 0 auto; width: min(100%, calc((100% - 24px * 11) / 12 * 6 + 24px * 5)); }
+.intro figure img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+figcaption { margin-top: 10px; font-size: var(--step-small); color: var(--soft); }
+
+/* ---------- The live thing: who is in which day ---------- */
+.week { background: var(--paper); padding: 160px var(--m); }
+.week .head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; }
+.week h2 { font-size: var(--step-head); }
+.week h2 .s { color: var(--soft); display: block; }
+.week .status { margin-top: 18px; font-size: var(--step-lead); }
+.week .status b { font-weight: 600; }
+.agenda { display: grid; grid-template-columns: 150px 1fr; gap: 40px; margin-top: 56px; }
+.agenda > input { position: absolute; opacity: 0; pointer-events: none; }
+.tabs { display: flex; flex-direction: column; gap: 6px; }
+.tabs label { display: flex; flex-direction: column; justify-content: center; height: 64px; padding: 0 16px; background: var(--paper-2); cursor: pointer; transition: background-color .25s var(--ease), transform .25s var(--ease); }
+.tabs label:hover { background: #d3e1e1; transform: translateX(3px); }
+.tabs label b { font-weight: 600; }
+.tabs label small { font-size: var(--step-small); color: var(--soft); min-height: 1.2em; white-space: nowrap; }
+.panel { display: none; flex-direction: column; gap: 4px; }
+.band { display: grid; grid-template-columns: 22% 1fr auto; align-items: center; gap: 20px; min-height: 84px; padding: 14px 20px; background: var(--paper-2); }
+.band:nth-child(even) { background: #d7e4e4; }
+.band .time { font-weight: 500; font-variant-numeric: tabular-nums; }
+.band .what b { display: block; font-weight: 600; }
+.band .what span { display: block; font-size: var(--step-small); color: var(--soft); }
+.band .who { display: flex; align-items: center; gap: 12px; }
+.band .ini { width: 40px; height: 40px; border-radius: 50%; background: var(--teal); color: var(--ink); display: grid; place-items: center; font-weight: 700; font-size: var(--step-small); }
+.band .who a { font-weight: 600; min-height: 48px; display: inline-flex; align-items: center; }
+.band.closed { background: var(--grey); color: #0d1726; }
+.band.closed .what span { color: #0d1726; }
+.agenda:has(#d1:checked) .p1, .agenda:has(#d2:checked) .p2, .agenda:has(#d3:checked) .p3,
+.agenda:has(#d4:checked) .p4, .agenda:has(#d5:checked) .p5, .agenda:has(#d6:checked) .p6 { display: flex; animation: fade .5s var(--ease) both; }
+.agenda:has(#d1:checked) [for=d1], .agenda:has(#d2:checked) [for=d2], .agenda:has(#d3:checked) [for=d3],
+.agenda:has(#d4:checked) [for=d4], .agenda:has(#d5:checked) [for=d5], .agenda:has(#d6:checked) [for=d6] { background: var(--ink); color: var(--paper); }
+.agenda:has(#d1:checked) [for=d1] small, .agenda:has(#d2:checked) [for=d2] small, .agenda:has(#d3:checked) [for=d3] small,
+.agenda:has(#d4:checked) [for=d4] small, .agenda:has(#d5:checked) [for=d5] small, .agenda:has(#d6:checked) [for=d6] small { color: #c5d0dc; }
+.agenda > input:focus-visible ~ .tabs label { outline: 0; }
+.agenda:has(input:focus-visible) .tabs { outline: 3px solid var(--accent); outline-offset: 4px; }
+
+/* ---------- Dentists: wide photos with paper blocks ---------- */
+.team { background: var(--teal); padding: 160px var(--m); }
+.team h2 { font-size: var(--step-head); }
+.team .lead { margin-top: 24px; font-size: var(--step-lead); line-height: 1.4; max-width: 46ch; }
+.tiles { display: grid; grid-template-columns: 8fr 4fr; gap: 16px; margin-top: 72px; align-items: start; }
+.tile { position: relative; margin: 0; }
+.tile img { width: 100%; object-fit: cover; }
+.tile.l img { aspect-ratio: 16 / 10; }
+.tile.r img { aspect-ratio: 4 / 5; }
+.tile .card { position: absolute; top: 0; right: 0; width: 340px; background: var(--paper); padding: 22px 22px 24px; }
+.tile.r .card { position: static; width: auto; }
+.tile .card h3 { font-size: var(--step-sub); letter-spacing: -0.03em; }
+.tile .card p { margin-top: 12px; }
+.tile .card a { display: inline-flex; align-items: center; min-height: 48px; font-weight: 600; margin-top: 4px; }
+.tile figcaption { color: var(--ink); }
+.pairs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin: 56px 0 0; }
+.pairs dt { font-size: var(--step-small); font-weight: 600; }
+.pairs dd { margin: 4px 0 0; font-size: var(--step-lead); line-height: 1.3; }
+
+/* ---------- Find us: text on the axis, the clinic large ---------- */
+.find { background: var(--paper); padding: 160px var(--m); }
+.find .grid { display: grid; grid-template-columns: calc(var(--axis) - var(--m)) 1fr; gap: 0; }
+.find figure { margin: 0 32px 0 0; }
+.find figure img { width: 100%; aspect-ratio: 1; object-fit: cover; object-position: 22% 75%; }
+.find h2 { font-size: var(--step-head); }
+.find .body { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 32px; }
+.find .body p { max-width: 38ch; }
+.find address { font-style: normal; font-size: var(--step-lead); line-height: 1.35; }
+.find .links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.find table { border-collapse: collapse; margin-top: 8px; width: 100%; font-variant-numeric: tabular-nums; }
+.find th, .find td { text-align: left; padding: 10px 0; border-bottom: 1px solid #c9d6d6; font-weight: 400; }
+.find td { text-align: right; }
+.find tr.today th, .find tr.today td { font-weight: 700; }
+
+/* ---------- Book ---------- */
+.book { background: var(--accent); color: var(--accent-ink); padding: 160px var(--m); }
+.book .grid { display: grid; grid-template-columns: calc(var(--axis) - var(--m)) 1fr; }
+.book h2 { font-size: var(--step-head); }
+.book .side p { margin-top: 22px; max-width: 32ch; font-size: var(--step-lead); line-height: 1.35; }
+.book form { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 20px; max-width: 760px; }
+.book label { display: grid; gap: 6px; font-size: var(--step-small); font-weight: 600; }
+.book .full { grid-column: 1 / -1; }
+.book input, .book select, .book textarea { font: inherit; color: var(--ink); background: #fff; border: 2px solid transparent; border-radius: 0; padding: 12px 14px; width: 100%; min-height: 52px; }
+.book input:focus, .book select:focus, .book textarea:focus { border-color: var(--teal); outline: 0; }
+.book textarea { min-height: 110px; resize: vertical; }
+.book .btn { background: var(--paper); color: var(--ink); min-height: 60px; }
+.book .btn:hover { background: var(--teal); }
+.book .fine { font-size: var(--step-small); color: #dbe5f3; }
+
+/* ---------- Closing band ---------- */
+.close { background: var(--paper); padding: 160px var(--m) 120px; display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; align-items: start; }
+.close .say { grid-column: 1 / 7; }
+.close .say h2 { font-size: var(--step-head); }
+.close .say p { margin-top: 24px; font-size: var(--step-lead); line-height: 1.35; max-width: 30ch; }
+.close figure { grid-column: 8 / 10; margin: 0; }
+.close figure img { width: 170px; aspect-ratio: 1; object-fit: cover; }
+.close .q { grid-column: 10 / 13; }
+.close .q b { font-weight: 600; }
+.close .q a { display: flex; align-items: center; min-height: 48px; overflow-wrap: anywhere; }
+.close .q small { display: block; margin-top: 8px; font-size: var(--step-small); color: var(--soft); }
+
+/* ---------- Footer: uncovered as the page slides away ---------- */
+footer { position: sticky; bottom: 0; z-index: 1; min-height: 100svh; display: grid; grid-template-rows: auto 1fr auto; background: var(--ink); color: #aebbd0; padding: 40px var(--m) 24px; }
+.cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; font-size: var(--step-small); }
+.cols ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+.cols li:first-child { color: #fff; font-weight: 600; margin-bottom: 6px; }
+.cols a { display: inline-flex; align-items: center; min-height: 44px; }
+.cols a:hover { color: #fff; }
+.word { align-self: end; margin-top: 48px; }
+.word svg { width: 100%; height: auto; display: block; }
+.legal { margin-top: 20px; font-size: var(--step-small); display: flex; flex-direction: column; gap: 8px; }
+.legal a { color: #d3dceb; }
+
+/* ---------- Entrances; content is visible without script ---------- */
+.js [data-in] { opacity: 0; transform: translateY(24px); transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: calc(var(--i, 0) * 80ms); }
+.js [data-in].on { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js [data-in] { opacity: 1; transform: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1100px) {
+  .tab { width: auto; gap: 22px; }
+  .top .act .ph { display: none; }
+  .pairs { grid-template-columns: repeat(2, 1fr); }
+  .find .body { grid-template-columns: 1fr; }
+}
+@media (max-width: 900px) {
+  :root { --axis: 0px; }
+  .title, .find .grid, .book .grid { grid-template-columns: 1fr; }
+  .title { padding: 56px var(--m) 96px; }
+  .title .stand { order: 2; margin-top: 28px; }
+  .title > div { order: 1; }
+  .title h1 { font-size: 16vw; }
+  .title .sub { max-width: 40ch; }
+  .find .grid > figure { order: 2; margin: 48px 0 0; }
+  .intro .row1 { grid-template-columns: 1fr; }
+  .intro h2, .intro .note { grid-column: auto; }
+  .tiles { grid-template-columns: 1fr; }
+  .tile.r img { aspect-ratio: 16 / 10; }
+  .find figure img { aspect-ratio: 4 / 3; }
+  .book .side { margin-bottom: 40px; }
+  .close { grid-template-columns: 96px 1fr; }
+  .close .say { grid-column: 1 / -1; margin-bottom: 16px; }
+  .close .say h2 { font-size: 12vw; }
+  .close .say p { max-width: none; }
+  .close figure { grid-column: 1; }
+  .close figure img { width: 96px; }
+  .close .q { grid-column: 2; }
+  .cols { grid-template-columns: 1fr 1fr; row-gap: 32px; }
+}
+/* ---------- Phone: its own composition ---------- */
+@media (max-width: 640px) {
+  .tab { display: none; }
+  .mark { padding: 6px 14px; min-height: 64px; }
+  .mark img { width: 84px; }
+  .top .act .btn { padding: 0 18px; }
+  .mosaic { grid-template-columns: repeat(3, 1fr); height: 34svh; min-height: 240px; }
+  .mosaic .hide-s { display: none; }
+  .mosaic .wide { grid-column: span 2; }
+  .title h1 { font-size: 15.5vw; }
+  .calls .btn { width: 100%; }
+  .intro, .week, .team, .find, .book { padding-top: 104px; padding-bottom: 104px; }
+  .facts { margin-top: 64px; display: grid; grid-template-columns: 1fr 1fr; row-gap: 32px; }
+  .intro figure { width: 100%; margin-top: 48px; }
+  .agenda { grid-template-columns: 1fr; gap: 16px; margin-top: 36px; }
+  .tabs { flex-direction: row; position: sticky; top: 0; z-index: 2; background: var(--paper); padding: 6px 0; }
+  .tabs label { flex: 1; height: 60px; padding: 0 4px; align-items: center; text-align: center; }
+  .band { grid-template-columns: 1fr auto; gap: 6px 14px; padding: 16px; }
+  .band .time { grid-column: 1 / -1; }
+  .week .head .btn { width: 100%; }
+  .tile .card { position: static; width: auto; }
+  .pairs { grid-template-columns: 1fr; gap: 18px; }
+  .book form { grid-template-columns: 1fr; }
+  .close { padding-top: 104px; grid-template-columns: 1fr; }
+  .close figure, .close .q { grid-column: 1; }
+}
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Heatherhill Dental. This is a design preview, not the live website.</div>
+<main>
+  <header class="top">
+    <a class="mark" href="#top" aria-label="Heatherhill Dental, home"><img src="img/logo.png" width="400" height="262" alt="Heatherhill Dental"></a>
+    <nav class="tab" aria-label="Main"><a href="#week">Hours</a><a href="#dentists">Dentists</a><a href="#find">Find us</a></nav>
+    <div class="act"><a class="ph" href="tel:0397811785">(03) 9781 1785</a><a class="btn" href="#book">Book now</a></div>
+  </header>
+
+  <div class="mosaic" aria-hidden="false">
+    <div class="wide"><img src="img/clinic.jpg" width="1600" height="900" alt="The Heatherhill Dental building on Heatherhill Road, with its ramp and onsite parking"></div>
+    <div class="t-teal tall hide-s"></div>
+    <div><img src="img/clinic-sign.jpg" width="480" height="420" alt="The Heatherhill Dental sign in the front window"></div>
+    <div class="t-blue"></div>
+    <div class="t-grey hide-s"></div>
+    <div class="wide hide-s"><img src="img/boardwalk.jpg" width="1400" height="1050" alt="The Frankston foreshore boardwalk with the pier in the distance"></div>
+    <div><img src="img/clinic-ramp.jpg" width="960" height="640" alt="The ramp and handrails up to the clinic entrance"></div>
+    <div class="t-grey"></div>
+    <div class="t-blue hide-s"></div>
+  </div>
+
+  <section class="title" id="top">
+    <p class="stand">Your dentist on Heatherhill Road, Frankston.</p>
+    <div>
+      <h1><span class="ln"><span>Heatherhill</span></span><span class="ln"><span>Dental</span></span></h1>
+      <p class="sub">Dr James Lin and Dr Lin Liang look after families from a house on the Heatherhill Road roundabout, with onsite parking and bus 775 out front.</p>
+      <div class="calls">
+        <a class="btn" href="#book">Book an appointment</a>
+        <a class="btn alt" href="tel:0397811785">Call (03) 9781 1785</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="intro" aria-labelledby="intro-h">
+    <div class="row1">
+      <h2 id="intro-h" data-in>Your caring dentist in Frankston</h2>
+      <div class="note" data-in style="--i:1">
+        <p>Our mission is to provide you with the professional and genuine dental care you deserve, for the entire family.</p>
+        <p>We are also a collection point for Terracycle, which recycles any dental products.</p>
+      </div>
+    </div>
+    <ul class="facts">
+      <li data-in><strong>Mon to Wed, Fri</strong><span>8:00am to 5:00pm</span></li>
+      <li data-in style="--i:1"><strong>Every 2nd Saturday</strong><span>8:30am to 1:00pm</span></li>
+      <li data-in style="--i:2"><strong>Thursday</strong><span>Closed</span></li>
+      <li data-in style="--i:3"><strong>Bus 775</strong><span>Stops just in front of the practice</span></li>
+    </ul>
+    <figure data-in style="--i:2"><img src="img/clinic-ramp.jpg" width="960" height="640" alt="Ramp, steps and handrails at the front of Heatherhill Dental" loading="lazy"><figcaption>Ramp and steps to the front door, with plenty of onsite parking</figcaption></figure>
+  </section>
+
+  <section class="week" id="week" aria-labelledby="week-h">
+    <div class="head">
+      <div>
+        <h2 id="week-h" data-in><span class="s">Who is in</span>which day</h2>
+        <p class="status" id="status" aria-live="polite" data-in style="--i:1">Tap a day to see the hours and the dentist.</p>
+      </div>
+      <a class="btn" href="#book" id="book-day">Book this day</a>
+    </div>
+    <div class="agenda" data-in style="--i:2">
+      <input type="radio" name="day" id="d1" value="Monday" checked>
+      <input type="radio" name="day" id="d2" value="Tuesday">
+      <input type="radio" name="day" id="d3" value="Wednesday">
+      <input type="radio" name="day" id="d4" value="Thursday">
+      <input type="radio" name="day" id="d5" value="Friday">
+      <input type="radio" name="day" id="d6" value="Saturday">
+      <div class="tabs" role="radiogroup" aria-label="Day of the week">
+        <label for="d1"><b>Mon</b><small data-date="1"></small></label>
+        <label for="d2"><b>Tue</b><small data-date="2"></small></label>
+        <label for="d3"><b>Wed</b><small data-date="3"></small></label>
+        <label for="d4"><b>Thu</b><small data-date="4"></small></label>
+        <label for="d5"><b>Fri</b><small data-date="5"></small></label>
+        <label for="d6"><b>Sat</b><small data-date="6"></small></label>
+      </div>
+      <div class="days">
+        <div class="panel p1">
+          <div class="band"><span class="time">8:00 to 5:00</span><span class="what"><b>Clinic open</b><span>Monday is the day both dentists are in</span></span><span></span></div>
+          <div class="band"><span class="time">Dentist</span><span class="what"><b>Dr James Lin</b><span>Bachelor of Dental Surgery, Otago</span></span><span class="who"><span class="ini" aria-hidden="true">JL</span><a href="#book" data-day="Monday" data-who="Dr James Lin">Book</a></span></div>
+          <div class="band"><span class="time">Dentist</span><span class="what"><b>Dr Lin Liang</b><span>Fluent in Cantonese and Mandarin</span></span><span class="who"><span class="ini" aria-hidden="true">LL</span><a href="#book" data-day="Monday" data-who="Dr Lin Liang">Book</a></span></div>
+        </div>
+        <div class="panel p2">
+          <div class="band"><span class="time">8:00 to 5:00</span><span class="what"><b>Clinic open</b><span>Call or book online</span></span><span></span></div>
+          <div class="band"><span class="time">Dentist</span><span class="what"><b>Dr James Lin</b><span>Bachelor of Dental Surgery, Otago</span></span><span class="who"><span class="ini" aria-hidden="true">JL</span><a href="#book" data-day="Tuesday" data-who="Dr James Lin">Book</a></span></div>
+        </div>
+        <div class="panel p3">
+          <div class="band"><span class="time">8:00 to 5:00</span><span class="what"><b>Clinic open</b><span>Call or book online</span></span><span></span></div>
+          <div class="band"><span class="time">Dentist</span><span class="what"><b>Ask the front desk</b><span>Call (03) 9781 1785 to check who is in on Wednesdays</span></span><span class="who"><a href="tel:0397811785">Call</a></span></div>
+        </div>
+        <div class="panel p4">
+          <div class="band closed"><span class="time">All day</span><span class="what"><b>Closed on Thursdays</b><span>Open again Friday at 8:00am</span></span><span></span></div>
+        </div>
+        <div class="panel p5">
+          <div class="band"><span class="time">8:00 to 5:00</span><span class="what"><b>Clinic open</b><span>Call or book online</span></span><span></span></div>
+          <div class="band"><span class="time">Dentist</span><span class="what"><b>Dr James Lin</b><span>Bachelor of Dental Surgery, Otago</span></span><span class="who"><span class="ini" aria-hidden="true">JL</span><a href="#book" data-day="Friday" data-who="Dr James Lin">Book</a></span></div>
+        </div>
+        <div class="panel p6">
+          <div class="band"><span class="time">8:30 to 1:00</span><span class="what"><b>Every second Saturday</b><span>Call to check this Saturday is an open one</span></span><span></span></div>
+          <div class="band"><span class="time">Dentist</span><span class="what"><b>Dr James Lin</b><span>Every second Saturday morning</span></span><span class="who"><span class="ini" aria-hidden="true">JL</span><a href="#book" data-day="Saturday" data-who="Dr James Lin">Book</a></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="team" id="dentists" aria-labelledby="team-h">
+    <h2 id="team-h" data-in>Our dentists</h2>
+    <p class="lead" data-in style="--i:1">Dr James Lin and Dr Lin Liang would like to warmly welcome you to a practice dedicated to your dental needs, in a caring and relaxed environment.</p>
+    <div class="tiles">
+      <figure class="tile l" data-in style="--i:2">
+        <img src="img/otago.jpg" width="1000" height="666" alt="The clocktower building at the University of Otago, Dunedin" loading="lazy">
+        <div class="card">
+          <h3>Dr James Lin</h3>
+          <p>Graduated with a Bachelor of Dental Surgery from Otago University, New Zealand. In on weekdays except Wednesday, and every second Saturday morning.</p>
+          <a href="#book" data-who="Dr James Lin">Book with Dr James Lin</a>
+        </div>
+        <figcaption>University of Otago, where Dr James Lin studied</figcaption>
+      </figure>
+      <figure class="tile r" data-in style="--i:3">
+        <img src="img/melbuni.jpg" width="1000" height="750" alt="The Old Arts building at the University of Melbourne, Parkville" loading="lazy">
+        <div class="card">
+          <h3>Dr Lin Liang</h3>
+          <p>Graduated with a Bachelor of Dental Science (Honours) from the University of Melbourne. Fluent in Cantonese and Mandarin. In on Mondays.</p>
+          <a href="#book" data-day="Monday" data-who="Dr Lin Liang">Book with Dr Lin Liang</a>
+        </div>
+        <figcaption>University of Melbourne, where Dr Lin Liang studied</figcaption>
+      </figure>
+    </div>
+    <dl class="pairs">
+      <div data-in><dt>Dr James Lin</dt><dd>Mon, Tue, Fri and every 2nd Saturday</dd></div>
+      <div data-in style="--i:1"><dt>Dr Lin Liang</dt><dd>Mondays</dd></div>
+      <div data-in style="--i:2"><dt>Languages</dt><dd>Cantonese and Mandarin with Dr Lin Liang</dd></div>
+      <div data-in style="--i:3"><dt>Recycling</dt><dd>Terracycle collection point for dental products</dd></div>
+    </dl>
+  </section>
+
+  <section class="find" id="find" aria-labelledby="find-h">
+    <div class="grid">
+      <figure data-in><img src="img/clinic.jpg" width="1600" height="900" alt="Heatherhill Dental from the car park on a sunny day" loading="lazy"><figcaption>36 Heatherhill Road, from the car park</figcaption></figure>
+      <div>
+        <h2 id="find-h" data-in>Find us</h2>
+        <div class="body">
+          <div data-in style="--i:1">
+            <address>36 Heatherhill Rd<br>Frankston VIC 3199</address>
+            <p style="margin-top:18px">Close to the shopping strip on the Heatherhill Road roundabout. There is plenty of onsite parking, and bus route 775 stops just in front of the practice.</p>
+            <div class="links">
+              <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=36+Heatherhill+Rd+Frankston+VIC+3199">Get directions</a>
+              <a class="btn alt" href="mailto:info@heatherhilldental.com.au">Email us</a>
+            </div>
+          </div>
+          <div data-in style="--i:2">
+            <table aria-label="Opening hours">
+              <tr data-dow="1"><th scope="row">Monday</th><td>8:00am to 5:00pm</td></tr>
+              <tr data-dow="2"><th scope="row">Tuesday</th><td>8:00am to 5:00pm</td></tr>
+              <tr data-dow="3"><th scope="row">Wednesday</th><td>8:00am to 5:00pm</td></tr>
+              <tr data-dow="4"><th scope="row">Thursday</th><td>Closed</td></tr>
+              <tr data-dow="5"><th scope="row">Friday</th><td>8:00am to 5:00pm</td></tr>
+              <tr data-dow="6"><th scope="row">Saturday</th><td>8:30am to 1:00pm, every 2nd week</td></tr>
+              <tr data-dow="0"><th scope="row">Sunday</th><td>Closed</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="book" id="book" aria-labelledby="book-h">
+    <div class="grid">
+      <div class="side">
+        <h2 id="book-h" data-in>Book a visit</h2>
+        <p data-in style="--i:1">Choose a day and a dentist and send it through. Prefer to talk? Call <a href="tel:0397811785">(03) 9781 1785</a>.</p>
+      </div>
+      <form id="booking" action="mailto:info@heatherhilldental.com.au" method="get" enctype="text/plain" data-in style="--i:2">
+        <label>Your name<input name="name" autocomplete="name" required></label>
+        <label>Phone<input name="phone" type="tel" autocomplete="tel" required></label>
+        <label>Preferred day
+          <select name="day" id="f-day"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Friday</option><option>Saturday</option></select>
+        </label>
+        <label>Dentist
+          <select name="dentist" id="f-who"><option>No preference</option><option>Dr James Lin</option><option>Dr Lin Liang</option></select>
+        </label>
+        <label class="full">What is the visit for?<textarea name="message" id="f-msg"></textarea></label>
+        <p class="fine full">This opens your email app with the details filled in, so the team can confirm a time. Nothing is stored on this page.</p>
+        <button class="btn full" type="submit">Send booking request</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="close" aria-labelledby="close-h">
+    <div class="say"><h2 id="close-h" data-in>Come and visit us</h2><p data-in style="--i:1">We would love to see you on Heatherhill Road. Call, email or book online.</p></div>
+    <figure data-in style="--i:1"><img src="img/pier.jpg" width="1600" height="1066" alt="Sunset over Port Phillip at Frankston Pier" loading="lazy"></figure>
+    <div class="q" data-in style="--i:2">
+      <b>Questions about a visit?</b>
+      <a href="tel:0397811785">(03) 9781 1785</a>
+      <a href="mailto:info@heatherhilldental.com.au">info@heatherhilldental.com.au</a>
+      <small>36 Heatherhill Rd, Frankston VIC 3199</small>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="cols">
+    <ul><li>Visit</li><li>36 Heatherhill Rd</li><li>Frankston VIC 3199</li><li><a href="https://www.google.com/maps/search/?api=1&amp;query=36+Heatherhill+Rd+Frankston+VIC+3199">Directions</a></li></ul>
+    <ul><li>Hours</li><li>Mon to Wed, Fri 8am to 5pm</li><li>Thursday closed</li><li>Every 2nd Sat 8:30am to 1pm</li></ul>
+    <ul><li>Contact</li><li><a href="tel:0397811785">(03) 9781 1785</a></li><li><a href="mailto:info@heatherhilldental.com.au">info@heatherhilldental.com.au</a></li><li><a href="#book">Book online</a></li></ul>
+    <ul><li>Pages</li><li><a href="#week">Who is in</a></li><li><a href="#dentists">Our dentists</a></li><li><a href="#find">Find us</a></li></ul>
+  </div>
+  <div class="word" aria-hidden="true">
+    <svg viewBox="0 0 1000 96"><text x="0" y="80" textLength="1000" lengthAdjust="spacingAndGlyphs" fill="#f2f6f6" font-family="Raleway, sans-serif" font-weight="500" font-size="104" letter-spacing="-3">Heatherhill Dental</text></svg>
+  </div>
+  <div class="legal">
+    <p>© <span id="yr">2026</span> Heatherhill Dental, Frankston. Concept design by <a href="https://swoopsites.com/">Swoop Sites</a>, Melbourne.</p>
+    <p class="credits">Pictures of the clinic: Heatherhill Dental. Other pictures: <a href="https://commons.wikimedia.org/wiki/File:Frankston_Boardwalk,_Frankston_suburb_of_Melbourne.jpg">“Frankston Boardwalk, Frankston suburb of Melbourne”</a>, <a href="https://creativecommons.org/publicdomain/mark/1.0/">public domain</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=42820895">“Sunset over Port Phillip at Frankston Pier (September 2015)”</a> by NouvelleAuteur, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=9754150">“University of Otago Clocktower”</a> by Antilived, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=30708488">“Old Arts Building. Parkville Campus of University of Melbourne”</a> by Polly clip, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>; via Wikimedia Commons.</p>
+  </div>
+</footer>
+
+<script>
+document.documentElement.classList.add('js');
+const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+document.querySelectorAll('[data-in]').forEach((el) => io.observe(el));
+
+// today in Frankston (Melbourne time), whatever the visitor's clock says
+const parts = Object.fromEntries(new Intl.DateTimeFormat('en-AU', { timeZone: 'Australia/Melbourne', weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23', year: 'numeric', month: 'numeric', day: 'numeric' }).formatToParts(new Date()).map((p) => [p.type, p.value]));
+const dow = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(parts.weekday);
+const mins = (+parts.hour) * 60 + (+parts.minute);
+document.getElementById('yr').textContent = parts.year;
+
+// dates under the day tabs: this week, Monday to Saturday
+const today = new Date(+parts.year, +parts.month - 1, +parts.day);
+const monday = new Date(today); monday.setDate(today.getDate() - ((dow + 6) % 7));
+document.querySelectorAll('[data-date]').forEach((el) => { const d = new Date(monday); d.setDate(monday.getDate() + (+el.dataset.date - 1)); el.textContent = d.toLocaleDateString('en-AU', { day: 'numeric', month: 'short' }); });
+
+// open the tab for today (Sunday shows Monday) and say whether the clinic is open now
+const pick = dow === 0 ? 1 : dow;
+document.getElementById('d' + pick).checked = true;
+const row = document.querySelector('tr[data-dow="' + dow + '"]'); if (row) row.classList.add('today');
+const status = document.getElementById('status');
+const weekday = [1, 2, 3, 5].includes(dow);
+if (weekday && mins >= 480 && mins < 1020) status.innerHTML = '<b>Open now</b>, until 5:00pm today.';
+else if (weekday && mins < 480) status.innerHTML = '<b>Opens at 8:00am</b> today.';
+else if (dow === 6) status.innerHTML = '<b>Saturday:</b> open 8:30am to 1:00pm every second week. Call to check today.';
+else if (dow === 4) status.innerHTML = '<b>Closed today.</b> Open again Friday at 8:00am.';
+else if (dow === 3) status.innerHTML = '<b>Closed for today.</b> Thursday is closed, so open again Friday at 8:00am.';
+else if (dow === 1 || dow === 2) status.innerHTML = '<b>Closed for today.</b> Open again tomorrow at 8:00am.';
+else if (dow === 5) status.innerHTML = '<b>Closed for today.</b> Open Monday at 8:00am, and some Saturdays.';
+else status.innerHTML = '<b>Closed today.</b> Open Monday at 8:00am.';
+
+// carry the chosen day and dentist into the booking form
+const fDay = document.getElementById('f-day'), fWho = document.getElementById('f-who');
+const setDay = (v) => { if ([...fDay.options].some((o) => o.value === v)) fDay.value = v; };
+document.getElementById('book-day').addEventListener('click', () => { const s = document.querySelector('input[name=day]:checked'); if (s) setDay(s.value); });
+document.querySelectorAll('[data-who]').forEach((a) => a.addEventListener('click', () => { fWho.value = a.dataset.who; if (a.dataset.day) setDay(a.dataset.day); }));
+document.getElementById('booking').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const f = new FormData(e.target);
+  const body = `Name: ${f.get('name')}\nPhone: ${f.get('phone')}\nPreferred day: ${f.get('day')}\nDentist: ${f.get('dentist')}\n\n${f.get('message')}`;
+  location.href = 'mailto:info@heatherhilldental.com.au?subject=' + encodeURIComponent('Booking request: ' + f.get('day')) + '&body=' + encodeURIComponent(body);
+});
+</script>
+</body>
+</html>
