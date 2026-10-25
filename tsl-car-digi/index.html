@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>TSL Car Digi | Built-in Car GPS, Dash Cams and Reverse Cameras, Nunawading (concept)</title>
+<meta name="description" content="Concept homepage for TSL Car Digi, Nunawading: built-in car GPS and DVD systems, dash cams, reverse cameras and more, for drivers, car dealers and car audio shops.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100,400;100,500;112,800&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Colours from TSL's own logo and its world: the black of a dashboard, the red of the TSL letters. */
+  --bg: #121315;          /* dashboard black: the one ground */
+  --surface: #1c1e21;     /* a step up, for panels */
+  --paper: #f1f1ee;       /* the contact card and the form */
+  --ink: #f4f4f2;
+  --muted: #b7bbc1;
+  --ink-dark: #141517;
+  --muted-dark: #4a4e55;
+  --accent: #df1720;      /* TSL red: the action colour */
+  --accent-ink: #ffffff;
+  --step-small: clamp(0.875rem, 0.84rem + 0.1vw, 0.9375rem);
+  --step-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+  --step-lead: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+  --step-head: clamp(2rem, 1.1rem + 3.4vw, 4rem);
+  --step-hero: clamp(2.1rem, 0.6rem + 4.6vw, 4.25rem);
+  --m: clamp(16px, 2.2vw, 32px);
+  --ease: cubic-bezier(.16, 1, .3, 1);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 var(--step-body)/1.5 Archivo, system-ui, sans-serif; font-stretch: 100%; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-underline-offset: 3px; }
+::selection { background: var(--accent); color: var(--accent-ink); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+h1, h2, h3 { font-family: Archivo, sans-serif; font-stretch: 112%; font-weight: 800; letter-spacing: -0.03em; line-height: 0.98; margin: 0; text-wrap: balance; }
+p { margin: 0; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 24px; background: var(--accent); color: var(--accent-ink);
+  font: 500 var(--step-body)/1.1 Archivo, sans-serif; text-decoration: none; border: 0; border-radius: 0; cursor: pointer; text-align: center;
+  transition: transform .25s var(--ease), background-color .25s var(--ease); }
+.btn:hover { background: #b9111a; transform: translateY(-2px); }
+.btn:active { transform: translateY(0) scale(.98); }
+.btn.ghost { background: var(--surface); color: var(--ink); }
+.btn.ghost:hover { background: #2a2d31; }
+
+.concept { background: #000; color: #d6d6d6; font-size: var(--step-small); text-align: center; padding: 9px var(--m); position: relative; z-index: 5; }
+.concept b { color: #fff; }
+
+/* ---------- Top bar ---------- */
+.top { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 16px; padding: 18px var(--m); }
+.mark { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; text-decoration: none; font: 800 1.375rem/1 Archivo, sans-serif; font-stretch: 112%; letter-spacing: -0.02em; }
+.mark b { color: var(--accent); }
+.mark span { font-weight: 500; font-stretch: 100%; }
+.top nav { display: flex; gap: 28px; }
+.top nav a { text-decoration: none; font-weight: 500; padding: 12px 0; }
+.top nav a:hover { text-decoration: underline; }
+.top .btn { justify-self: end; }
+
+/* ---------- Hero: the head unit is the live thing ---------- */
+.hero { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 7fr); gap: clamp(32px, 4vw, 72px); align-items: center; padding: clamp(32px, 6vh, 80px) var(--m) clamp(80px, 12vh, 140px); }
+.hero h1 { font-size: var(--step-hero); }
+.hero .what { margin-top: 36px; font-size: var(--step-lead); line-height: 1.35; max-width: 30ch; }
+.hero .calls { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 36px; }
+.hero .reach { margin-top: 28px; color: var(--muted); }
+.hero .reach a { color: var(--ink); font-weight: 500; }
+
+.unit { background: #050506; padding: clamp(10px, 1.4vw, 18px); border-radius: 14px; }
+.screen { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #0b1a2a; border-radius: 4px; }
+.screen .layer { position: absolute; inset: 0; opacity: 0; transition: opacity .5s var(--ease); }
+.screen .layer img { width: 100%; height: 100%; object-fit: cover; }
+.screen .layer svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.unit:has(#m-nav:checked) .l-nav, .unit:has(#m-cam:checked) .l-cam, .unit:has(#m-rev:checked) .l-rev { opacity: 1; }
+.status { position: absolute; z-index: 2; left: 0; right: 0; top: 0; display: flex; justify-content: space-between; gap: 12px; padding: 8px 14px; background: rgba(5, 6, 8, .72); color: #fff; font-size: clamp(0.8125rem, 0.7rem + 0.4vw, 1rem); font-variant-numeric: tabular-nums; }
+.status b { font-weight: 500; }
+.rec { display: inline-flex; align-items: center; gap: 8px; }
+.rec i { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); animation: blink 1.2s steps(2, start) infinite; }
+@keyframes blink { to { visibility: hidden; } }
+.l-cam img { animation: road 14s ease-in-out infinite alternate; transform-origin: 50% 60%; }
+@keyframes road { from { transform: scale(1.02); } to { transform: scale(1.12); } }
+.dest { position: absolute; z-index: 2; left: 14px; bottom: 12px; background: var(--paper); color: var(--ink-dark); padding: 8px 12px; font-size: clamp(0.8125rem, 0.7rem + 0.4vw, 1rem); line-height: 1.3; }
+.dest b { display: block; font-weight: 500; }
+.keys { display: flex; justify-content: space-between; align-items: center; padding: 10px 6px 2px; color: #8a8f96; font-size: 0.8125rem; }
+
+.pick { margin-top: 22px; display: grid; gap: 16px; }
+.pick fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+.pick legend { font-weight: 500; margin-bottom: 8px; padding: 0; }
+.chips { position: relative; display: flex; flex-wrap: wrap; gap: 8px; }
+.chips input, .who input { position: absolute; left: 0; top: 0; width: 1px; height: 1px; margin: 0; opacity: 0; pointer-events: none; }
+.chip { display: inline-flex; align-items: center; min-height: 48px; padding: 0 16px; background: var(--surface); cursor: pointer; transition: background-color .2s var(--ease), transform .25s var(--ease); }
+.chip:hover { background: #2a2d31; transform: translateY(-2px); }
+.chips input:checked + .chip { background: var(--ink); color: var(--ink-dark); }
+.chips input:focus-visible + .chip { outline: 3px solid var(--accent); outline-offset: 3px; }
+.ask { margin-top: 4px; }
+
+/* ---------- The range: sticky picture, list ---------- */
+.range { background: var(--surface); padding: 160px var(--m); }
+.range .grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(32px, 6vw, 110px); max-width: 1320px; margin: 0 auto; align-items: start; }
+.range figure { position: sticky; top: 10vh; margin: 0; }
+.range .frame { position: relative; aspect-ratio: 4 / 3; background: #e9eaec; overflow: hidden; }
+.range .frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity .35s var(--ease); }
+.range .frame img.cover { object-fit: cover; }
+.range .frame img[data-pic="unit"] { background: #02021a; }
+.range .frame img[data-pic="cam"] { background: #d9d9d9; }
+.range .frame img.on { opacity: 1; }
+.range figcaption { margin-top: 12px; font-size: var(--step-small); color: var(--muted); }
+.range h2 { font-size: var(--step-head); margin-bottom: 20px; }
+.range .lede { max-width: 44ch; margin-bottom: 36px; }
+.rows details { background: var(--bg); margin-bottom: 6px; }
+.rows summary { list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 64px; padding: 10px 20px; cursor: pointer; font-size: var(--step-lead); font-weight: 500; line-height: 1.2; transition: background-color .2s; }
+.rows summary::-webkit-details-marker { display: none; }
+.rows summary small { font-size: var(--step-small); color: var(--muted); font-weight: 400; white-space: nowrap; }
+.rows summary:hover { background: #24272b; }
+.rows details[open] summary small { color: var(--ink); }
+.rows .panel { padding: 0 20px 22px; display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
+.rows .panel p { max-width: 46ch; }
+.rows .panel a { font-weight: 500; min-height: 48px; display: inline-flex; align-items: center; }
+
+/* ---------- About: Nunawading from the air ---------- */
+.about { padding: 0 0 160px; }
+.about .band { overflow: hidden; }
+.about .band img { width: 100%; aspect-ratio: 2.47 / 1; object-fit: cover; animation: drift 30s ease-in-out infinite alternate; }
+@keyframes drift { from { transform: scale(1.02); } to { transform: scale(1.1) translateX(-1.5%); } }
+.about .cap { padding: 10px var(--m) 0; font-size: var(--step-small); color: var(--muted); }
+.about .cols { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(32px, 6vw, 110px); max-width: 1320px; margin: 96px auto 0; padding: 0 var(--m); }
+.about h2 { font-size: var(--step-head); }
+.about .text { display: flex; flex-direction: column; gap: 1.1em; }
+.about .text .big { font-size: var(--step-lead); line-height: 1.35; }
+.makes { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.makes li { background: var(--surface); padding: 10px 14px; font-weight: 500; }
+
+/* ---------- Enquiry: retail or dealer ---------- */
+.enquire { background: var(--paper); color: var(--ink-dark); padding: 160px var(--m); }
+.enquire .grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(32px, 6vw, 110px); max-width: 1320px; margin: 0 auto; align-items: start; }
+.enquire h2 { font-size: var(--step-head); }
+.enquire .side { display: flex; flex-direction: column; gap: 1.1em; }
+.enquire .side .big { font-size: var(--step-lead); line-height: 1.35; margin-top: 12px; }
+.enquire figure { margin: 0; }
+.enquire .side img { margin-top: 18px; width: 100%; }
+.enquire .side figcaption { font-size: var(--step-small); color: var(--muted-dark); margin-top: 8px; }
+form { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+form .full { grid-column: 1 / -1; }
+form label { display: grid; gap: 6px; font-size: var(--step-small); font-weight: 500; }
+form input, form select, form textarea { font: inherit; font-size: 1rem; color: var(--ink-dark); background: #fff; border: 1px solid #8b9097; border-radius: 0; padding: 12px; min-height: 48px; width: 100%; }
+form textarea { min-height: 110px; resize: vertical; }
+.who { position: relative; grid-column: 1 / -1; border: 0; margin: 0 0 6px; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.who legend { font-weight: 500; margin-bottom: 8px; padding: 0; font-size: var(--step-body); }
+.who label { display: inline-flex; align-items: center; min-height: 48px; padding: 0 18px; background: #dfe0e2; cursor: pointer; font-size: var(--step-body); transition: background-color .2s; }
+.who input:checked + label { background: var(--ink-dark); color: #fff; }
+.who input:focus-visible + label { outline: 3px solid var(--accent); outline-offset: 3px; }
+.dealer { display: none; }
+form:has(#w-dealer:checked) .dealer { display: grid; }
+form .note { grid-column: 1 / -1; font-size: var(--step-small); color: var(--muted-dark); }
+form .btn { grid-column: 1 / -1; min-height: 56px; }
+
+/* ---------- Contact: a card on Nunawading ---------- */
+.contact { position: relative; min-height: 100svh; }
+.contact > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.contact .inner { position: relative; display: flex; justify-content: flex-end; padding: 60px var(--m) 140px; }
+.visit { width: 420px; background: var(--paper); color: var(--ink-dark); padding: 32px 32px 0; }
+.visit h2 { font-size: clamp(1.75rem, 1.4rem + 1.2vw, 2.4rem); }
+.visit address { font-style: normal; margin-top: 16px; }
+.visit dl { margin: 18px 0 0; display: grid; grid-template-columns: auto 1fr; gap: 10px 16px; }
+.visit dt { font-weight: 500; }
+.visit dd { margin: 0; text-align: right; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.visit .dir { display: inline-flex; align-items: center; min-height: 48px; margin-top: 10px; font-weight: 500; }
+.visit .btn { width: calc(100% + 64px); margin: 14px -32px 0; min-height: 56px; }
+.contact figure { margin: 0; }
+.contact figcaption { position: absolute; left: var(--m); bottom: 24px; color: #fff; font-size: var(--step-small); background: rgba(0,0,0,.6); padding: 6px 10px; }
+
+/* ---------- Footer: one quiet line ---------- */
+footer { padding: 30svh var(--m) 30px; }
+.line { display: grid; grid-template-columns: 1fr auto 1fr; gap: 24px; align-items: center; font-size: var(--step-small); color: var(--muted); }
+.line nav { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+.line nav a { color: var(--ink); text-decoration: none; display: inline-flex; align-items: center; min-height: 48px; }
+.line nav a:hover { text-decoration: underline; }
+.line .yr { text-align: right; }
+.imprint { margin-top: 28px; font-size: var(--step-small); color: var(--muted); display: flex; flex-direction: column; gap: 8px; max-width: 110ch; }
+.imprint a { color: var(--ink); }
+
+/* ---------- Motion ---------- */
+.js [data-in] { opacity: 0; transform: translateY(24px); transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: calc(var(--i, 0) * 80ms); }
+.js [data-in].on { opacity: 1; transform: none; }
+.hero > div > * { animation: rise 1s var(--ease) both; }
+.hero > div > :nth-child(2) { animation-delay: .08s; } .hero > div > :nth-child(3) { animation-delay: .16s; } .hero > div > :nth-child(4) { animation-delay: .24s; }
+@keyframes rise { from { opacity: 0; transform: translateY(24px); } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js [data-in] { opacity: 1; transform: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* ---------- Tablet and phone ---------- */
+@media (max-width: 1000px) {
+  .hero { grid-template-columns: 1fr; }
+  .range .grid, .about .cols, .enquire .grid { grid-template-columns: 1fr; }
+  .range figure { position: static; margin-bottom: 48px; }
+  .range .frame { aspect-ratio: 16 / 9; width: 100%; }
+}
+@media (max-width: 760px) {
+  .top { grid-template-columns: 1fr auto; }
+  .top nav { display: none; }
+  .hero { padding-top: 20px; padding-bottom: 96px; }
+  .hero .calls .btn { width: 100%; }
+  .range, .enquire { padding: 112px var(--m); }
+  .about { padding-bottom: 112px; }
+  .about .band img { aspect-ratio: 4 / 3; }
+  .about .cols { margin-top: 56px; }
+  form { grid-template-columns: 1fr; }
+  .contact { min-height: 0; display: flex; flex-direction: column; }
+  .contact > img { position: relative; height: 62svh; }
+  .contact .inner { display: block; margin-top: -80px; padding: 0 var(--m) 48px; }
+  .visit { width: auto; padding: 28px 20px 0; }
+  .visit .btn { width: calc(100% + 40px); margin: 14px -20px 0; }
+  .contact figure { order: 3; padding: 0 var(--m) 24px; }
+  .contact figcaption { position: static; background: none; color: var(--muted); padding: 0; }
+  footer { padding-top: 20svh; }
+  .line { grid-template-columns: 1fr; gap: 8px; }
+  .line nav { justify-content: flex-start; }
+  .line .yr { text-align: left; }
+}
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for TSL Car Digi. This is a design preview, not the live website.</div>
+<main>
+  <header class="top">
+    <a class="mark" href="#top" aria-label="TSL Car Digi, home"><b>TSL</b><span>Car Digi</span></a>
+    <nav aria-label="Main"><a href="#range">Range</a><a href="#about">About</a><a href="#enquire">Dealers</a><a href="#contact">Contact</a></nav>
+    <a class="btn" href="#enquire">Ask what fits</a>
+  </header>
+
+  <section class="hero" id="top">
+    <div>
+      <h1>Built-in car GPS specialists</h1>
+      <p class="what">Car GPS and DVD systems, dash cams and reverse cameras, from Nunawading, for drivers, car dealers and car audio shops.</p>
+      <div class="calls">
+        <a class="btn" href="#range">See the range</a>
+        <a class="btn ghost" href="tel:0398507283">Call 03 9850 7283</a>
+      </div>
+      <p class="reach">Or email <a href="mailto:tim@tslcardigi.com.au">tim@tslcardigi.com.au</a></p>
+    </div>
+
+    <div class="unit" data-ui role="group" aria-label="Try a screen: pick your car and what you want to see">
+      <div class="screen">
+        <div class="status"><b id="s-car">Toyota</b><span id="s-mode">Navigation</span><span id="s-clock">10:06</span></div>
+        <div class="layer l-nav" aria-hidden="true">
+          <svg viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice">
+            <rect width="640" height="360" fill="#13283d"/>
+            <g fill="#1b354f"><rect x="40" y="60" width="120" height="70"/><rect x="190" y="60" width="150" height="70"/><rect x="370" y="60" width="110" height="70"/><rect x="510" y="60" width="110" height="70"/>
+              <rect x="40" y="170" width="120" height="120"/><rect x="190" y="170" width="150" height="50"/><rect x="190" y="250" width="150" height="60"/><rect x="370" y="170" width="250" height="140"/></g>
+            <g stroke="#2d4d6c" stroke-width="16" fill="none"><path d="M0 150H640"/><path d="M175 0V360"/><path d="M355 0V360"/><path d="M495 0V160"/><path d="M175 235H355"/></g>
+            <path d="M175 360V150H355V235" fill="none" stroke="#df1720" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+            <circle cx="175" cy="330" r="11" fill="#fff"/><circle cx="175" cy="330" r="6" fill="#df1720"/>
+            <circle cx="355" cy="235" r="12" fill="#df1720"/><circle cx="355" cy="235" r="5" fill="#fff"/>
+          </svg>
+          <p class="dest"><b>3/50 Rooks Road</b>Nunawading VIC 3131</p>
+        </div>
+        <div class="layer l-cam"><img src="img/nunawading-intersection.jpg" width="1280" height="960" alt="Looking along a wide road at an intersection in Nunawading, as a dash cam would see it"></div>
+        <div class="layer l-rev"><img src="img/car-park.jpg" width="1280" height="960" alt="A multi-level car park in Melbourne, as a reverse camera would see it">
+          <svg viewBox="0 0 640 360" preserveAspectRatio="none" aria-hidden="true"><g fill="none" stroke-width="5" stroke-linecap="round"><path d="M150 360 L235 215" stroke="#3fd16b"/><path d="M490 360 L405 215" stroke="#3fd16b"/><path d="M190 300 H450" stroke="#f2d33a"/><path d="M215 255 H425" stroke="#3fd16b"/><path d="M170 335 H470" stroke="#df1720"/></g></svg>
+        </div>
+      </div>
+      <div class="keys" aria-hidden="true"><span>Home</span><span>Back</span><span>Map</span><span>Vol</span></div>
+      <div class="pick">
+        <fieldset>
+          <legend>Your car</legend>
+          <div class="chips">
+            <input type="radio" name="make" id="k1" value="Toyota" checked><label class="chip" for="k1">Toyota</label>
+            <input type="radio" name="make" id="k2" value="Honda"><label class="chip" for="k2">Honda</label>
+            <input type="radio" name="make" id="k3" value="Mazda"><label class="chip" for="k3">Mazda</label>
+            <input type="radio" name="make" id="k4" value="Mitsubishi"><label class="chip" for="k4">Mitsubishi</label>
+            <input type="radio" name="make" id="k5" value="Nissan"><label class="chip" for="k5">Nissan</label>
+            <input type="radio" name="make" id="k6" value="Volkswagen"><label class="chip" for="k6">Volkswagen</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Show me</legend>
+          <div class="chips">
+            <input type="radio" name="mode" id="m-nav" value="Navigation" data-product="Android GPS system" checked><label class="chip" for="m-nav">Built-in GPS</label>
+            <input type="radio" name="mode" id="m-cam" value="Dash cam" data-product="Dash cam DVR video recorder"><label class="chip" for="m-cam">Dash cam</label>
+            <input type="radio" name="mode" id="m-rev" value="Reverse camera" data-product="Reverse camera"><label class="chip" for="m-rev">Reverse camera</label>
+          </div>
+        </fieldset>
+        <a class="btn ask" href="#enquire" id="ask">Ask Tim about built-in GPS for a Toyota</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="range" id="range" aria-labelledby="range-h">
+    <div class="grid">
+      <figure data-in>
+        <div class="frame">
+          <img class="on" data-pic="unit" src="img/tsl-head-unit.jpg" width="555" height="310" alt="An Android GPS head unit, from TSL Car Digi's own website" loading="lazy">
+          <img data-pic="cam" src="img/tsl-dash-cam.jpg" width="480" height="365" alt="A dash cam DVR with a rear camera, from TSL Car Digi's own website" loading="lazy">
+          <img class="cover" data-pic="rev" src="img/car-park.jpg" width="1280" height="960" alt="A car park in Melbourne, the kind of view a reverse camera shows" loading="lazy">
+        </div>
+        <figcaption id="pic-cap">Android GPS head unit</figcaption>
+      </figure>
+      <div>
+        <h2 id="range-h" data-in>The range</h2>
+        <p class="lede" data-in style="--i:1">Nine product ranges. Tap one to read about it, then ask Tim for the price and what fits your car.</p>
+        <div class="rows" data-in style="--i:2">
+          <details name="range" open data-pic="unit" data-cap="Android GPS head unit"><summary>Android GPS system <small>Ask for price</small></summary><div class="panel"><p>Built-in Android head units: navigation, Bluetooth for streaming and hands-free calling, and USB audio. TSL's own homepage shows a 10.2" screen.</p><a href="#enquire" data-job="Android GPS system">Ask about Android GPS</a></div></details>
+          <details name="range" data-pic="unit" data-cap="Android GPS head unit"><summary>WINCE DVD / GPS system <small>Ask for price</small></summary><div class="panel"><p>Built-in DVD and GPS systems running Windows CE, made for specific car models.</p><a href="#enquire" data-job="WINCE DVD / GPS system">Ask about DVD / GPS</a></div></details>
+          <details name="range" data-pic="unit" data-cap="Android GPS head unit"><summary>In-car entertainment system <small>Ask for price</small></summary><div class="panel"><p>Screens and multimedia for the car. Tell Tim the make and model and he can say what suits it.</p><a href="#enquire" data-job="In-car entertainment system">Ask about entertainment</a></div></details>
+          <details name="range" data-pic="cam" data-cap="Dash cam DVR with rear camera"><summary>Dash cam DVR video recorder <small>Ask for price</small></summary><div class="panel"><p>A car black box: a camera that records the road while you drive.</p><a href="#enquire" data-job="Dash cam DVR video recorder">Ask about dash cams</a></div></details>
+          <details name="range" data-pic="rev" data-cap="A Melbourne car park, as a reverse camera sees it"><summary>Reverse camera <small>Ask for price</small></summary><div class="panel"><p>A camera at the back of the car that shows what is behind you on the screen when you reverse.</p><a href="#enquire" data-job="Reverse camera">Ask about reverse cameras</a></div></details>
+          <details name="range"><summary>LED headlight <small>Ask for price</small></summary><div class="panel"><p>LED headlights for your car.</p><a href="#enquire" data-job="LED headlight">Ask about LED headlights</a></div></details>
+          <details name="range"><summary>VL106 4G GPS tracker <small>Ask for price</small></summary><div class="panel"><p>The VL106, a GPS tracker that works over the 4G mobile network.</p><a href="#enquire" data-job="VL106 4G GPS tracker">Ask about the VL106</a></div></details>
+          <details name="range"><summary>WIFI IP camera <small>Ask for price</small></summary><div class="panel"><p>A camera that connects over Wi-Fi.</p><a href="#enquire" data-job="WIFI IP camera">Ask about IP cameras</a></div></details>
+          <details name="range"><summary>Power bank <small>Ask for price</small></summary><div class="panel"><p>Portable power banks.</p><a href="#enquire" data-job="Power bank">Ask about power banks</a></div></details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about" aria-labelledby="about-h">
+    <div class="band"><img src="img/nunawading-panorama.jpg" width="1920" height="777" alt="Nunawading from the air, looking east toward the Dandenong Ranges" loading="lazy"></div>
+    <p class="cap">Nunawading from the air, looking toward the Dandenong Ranges</p>
+    <div class="cols">
+      <h2 id="about-h" data-in>Australian owned</h2>
+      <div class="text">
+        <p class="big" data-in style="--i:1">TSL Car Digi is an Australian owned company in Nunawading that makes custom built-in car GPS and DVD systems and other electronic products.</p>
+        <p data-in style="--i:2">TSL is the importer and distributor of Dongguan City Yessun Electronic Co. Ltd, a car audio and sat nav maker in China whose brands are JYT, LISTEN and YESSUN.</p>
+        <p data-in style="--i:3">Yessun makes more than 200 models for specific cars, each system configured to suit, for makes such as:</p>
+        <ul class="makes" data-in style="--i:4"><li>Honda</li><li>Toyota</li><li>Mazda</li><li>Mitsubishi</li><li>Nissan</li><li>Volkswagen</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="enquire" id="enquire" aria-labelledby="enq-h">
+    <div class="grid">
+      <div class="side">
+        <h2 id="enq-h" data-in>For your car, or your dealership</h2>
+        <p class="big" data-in style="--i:1">TSL supplies GPS systems to local car dealers and car audio shops for their aftermarket products.</p>
+        <p data-in style="--i:2">Buying for your own car? Tell us the make, model and year. A dealer or car audio shop? Choose the second option, add your business details, and Tim will come back to you.</p>
+        <figure data-in style="--i:3"><img src="img/tsl-dash-cam.jpg" width="480" height="365" alt="A dash cam DVR with a rear camera, from TSL Car Digi's own website" loading="lazy"><figcaption>Dash cam DVR with rear camera</figcaption></figure>
+      </div>
+      <form id="form" action="mailto:tim@tslcardigi.com.au" method="get" enctype="text/plain" data-in style="--i:1">
+        <fieldset class="who">
+          <legend>I am</legend>
+          <input type="radio" name="who" id="w-retail" value="Buying for my car" checked><label for="w-retail">Buying for my car</label>
+          <input type="radio" name="who" id="w-dealer" value="Dealer or wholesale"><label for="w-dealer">A dealer or car audio shop</label>
+        </fieldset>
+        <label>Your name<input name="name" autocomplete="name" required></label>
+        <label>Contact number<input name="phone" type="tel" autocomplete="tel" required></label>
+        <label class="full">Email<input name="email" type="email" autocomplete="email" required></label>
+        <label class="dealer">Company name<input name="company" autocomplete="organization"></label>
+        <label class="dealer">ABN<input name="abn" inputmode="numeric"></label>
+        <label class="dealer">Address<input name="address" autocomplete="street-address"></label>
+        <label class="dealer">Website<input name="website" type="url" inputmode="url"></label>
+        <label>Product
+          <select name="product" id="product">
+            <option>Android GPS system</option><option>WINCE DVD / GPS system</option><option>In-car entertainment system</option>
+            <option>Dash cam DVR video recorder</option><option>Reverse camera</option><option>LED headlight</option>
+            <option>VL106 4G GPS tracker</option><option>WIFI IP camera</option><option>Power bank</option>
+          </select>
+        </label>
+        <label>Car make, model and year<input name="car" id="car"></label>
+        <label class="full">Message<textarea name="message" id="message"></textarea></label>
+        <p class="note">This opens your email app with the details filled in, addressed to tim@tslcardigi.com.au. Nothing is stored on this page.</p>
+        <button class="btn" type="submit">Send my enquiry</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-h">
+    <img src="img/nunawading-from-above.jpg" width="1920" height="1440" alt="Nunawading from above: the railway line, Whitehorse Road and the streets of shops and warehouses around it" loading="lazy">
+    <figure><figcaption>Nunawading from above, looking toward the city</figcaption></figure>
+    <div class="inner">
+      <div class="visit" data-in>
+        <h2 id="contact-h">Find TSL</h2>
+        <address>3/50 Rooks Road<br>Nunawading VIC 3131</address>
+        <dl>
+          <dt>Phone</dt><dd><a href="tel:0398507283">03 9850 7283</a></dd>
+          <dt>Mobile</dt><dd><a href="tel:0412368308">0412 368 308</a></dd>
+          <dt>Email</dt><dd><a href="mailto:tim@tslcardigi.com.au">tim@tslcardigi.com.au</a></dd>
+          <dt>Also</dt><dd><a href="mailto:tslcardigi@hotmail.com">tslcardigi@hotmail.com</a></dd>
+        </dl>
+        <a class="dir" href="https://www.google.com/maps/search/?api=1&amp;query=3%2F50+Rooks+Road+Nunawading+VIC+3131">Get directions</a>
+        <a class="btn" href="tel:0398507283">Call 03 9850 7283</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="line">
+    <p>TSL Car Digi, built-in car GPS, Nunawading</p>
+    <nav aria-label="Footer"><a href="#range">Range</a><a href="#about">About</a><a href="#enquire">Dealers</a><a href="#contact">Contact</a></nav>
+    <p class="yr">© <span id="yr">2026</span> TSL Car Digi</p>
+  </div>
+  <div class="imprint">
+    <p>Concept design by <a href="https://swoopsites.com/">Swoop Sites</a>, Melbourne.</p>
+    <p class="credits">Pictures: head unit and dash cam from TSL Car Digi's own website; <a href="https://commons.wikimedia.org/wiki/File:Intersection_Nunawading1.jpg">“Intersection Nunawading1”</a> by Ottre, public domain; <a href="https://commons.wikimedia.org/wiki/File:Melbourne_Airport_car_park_2016-10-30.jpg">“Melbourne Airport car park 2016-10-30”</a> by Tangerineduel, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=146409149">“Nunawading aerial panorama facing the Dandenong Ranges”</a> and <a href="https://commons.wikimedia.org/w/index.php?curid=146409148">“Nunawading train station from above facing the Melbourne CBD”</a> by BobTanGo, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; via Wikimedia Commons.</p>
+  </div>
+</footer>
+
+<script>
+document.documentElement.classList.add('js');
+document.getElementById('yr').textContent = new Date().getFullYear();
+const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+document.querySelectorAll('[data-in]').forEach((el) => io.observe(el));
+
+// the head unit: pick a car and a view, carry both into the enquiry
+const car = document.getElementById('s-car'), mode = document.getElementById('s-mode'), ask = document.getElementById('ask');
+const product = document.getElementById('product'), carField = document.getElementById('car');
+const what = { 'Navigation': 'built-in GPS', 'Dash cam': 'a dash cam', 'Reverse camera': 'a reverse camera' };
+function pick() {
+  const k = document.querySelector('input[name=make]:checked'), m = document.querySelector('input[name=mode]:checked');
+  car.textContent = k.value;
+  mode.innerHTML = m.value === 'Dash cam' ? '<span class="rec"><i></i>REC</span>' : m.value;
+  ask.textContent = 'Ask Tim about ' + what[m.value] + ' for a ' + k.value;
+}
+document.querySelectorAll('input[name=make], input[name=mode]').forEach((r) => r.addEventListener('change', pick));
+ask.addEventListener('click', () => {
+  const k = document.querySelector('input[name=make]:checked'), m = document.querySelector('input[name=mode]:checked');
+  product.value = m.dataset.product; if (!carField.value) carField.value = k.value + ' ';
+});
+const clock = document.getElementById('s-clock');
+const tick = () => { clock.textContent = new Date().toLocaleTimeString('en-AU', { hour: '2-digit', minute: '2-digit' }); };
+tick(); setInterval(tick, 20000);
+
+// the range: open a row, swap the picture, preset the enquiry
+const pics = document.querySelectorAll('.frame img'), cap = document.getElementById('pic-cap');
+document.querySelectorAll('.rows details').forEach((d) => d.addEventListener('toggle', () => {
+  if (!d.open || !d.dataset.pic) return;
+  pics.forEach((p) => p.classList.toggle('on', p.dataset.pic === d.dataset.pic));
+  cap.textContent = d.dataset.cap;
+}));
+document.querySelectorAll('[data-job]').forEach((a) => a.addEventListener('click', () => { product.value = a.dataset.job; }));
+
+// build a tidy email instead of a raw form post
+document.getElementById('form').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const f = new FormData(e.target), dealer = f.get('who') === 'Dealer or wholesale';
+  let body = `${f.get('who')}\nName: ${f.get('name')}\nContact number: ${f.get('phone')}\nEmail: ${f.get('email')}\n`;
+  if (dealer) body += `Company: ${f.get('company')}\nABN: ${f.get('abn')}\nAddress: ${f.get('address')}\nWebsite: ${f.get('website')}\n`;
+  body += `Product: ${f.get('product')}\nCar: ${f.get('car')}\n\n${f.get('message')}`;
+  location.href = 'mailto:tim@tslcardigi.com.au?subject=' + encodeURIComponent((dealer ? 'Wholesale enquiry: ' : 'Enquiry: ') + f.get('product')) + '&body=' + encodeURIComponent(body);
+});
+</script>
+</body>
+</html>
