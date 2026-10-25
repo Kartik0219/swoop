@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<title>176 Beach St Psychology &amp; Counselling Group | Frankston (concept)</title>
+<meta name="description" content="Concept homepage for 176 Beach St Psychology & Counselling Group, Frankston: psychology and counselling with Leigh McLachlan, Christine de Vallois and Carol Schulz. Enquiries, practitioner profiles and directions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Three stones from the sheet; the one accent is the slate blue of the weatherboard at 176 Beach St. */
+  --bg: #eeecea;
+  --surface: #e4e1dd;
+  --field: #cdc3b6;
+  --ink: #2c3034;
+  --muted: #55524f;
+  --accent: #3a4b5e;
+  --accent-ink: #ffffff;
+  --deep: #283039;
+  --deep-ink: #e9e6e1;
+  --step-small: clamp(0.875rem, 0.85rem + 0.1vw, 0.9375rem);
+  --step-body: clamp(1.0625rem, 1rem + 0.3vw, 1.1875rem);
+  --step-lead: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+  --step-head: clamp(2.5rem, 1.4rem + 4vw, 5rem);
+  --step-h3: clamp(1.75rem, 1.4rem + 1.2vw, 2.375rem);
+  --m: clamp(16px, 2.2vw, 32px);
+  --ease: cubic-bezier(.16, 1, .3, 1);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 var(--step-body)/1.55 Newsreader, Georgia, serif; font-optical-sizing: auto; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+::selection { background: var(--accent); color: var(--accent-ink); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+h1, h2, h3 { font-weight: 300; letter-spacing: -0.02em; line-height: 1; margin: 0; text-wrap: balance; }
+p { margin: 0; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 24px; background: var(--accent); color: var(--accent-ink);
+  font: 500 var(--step-body)/1 Newsreader, Georgia, serif; text-decoration: none; border: 0; border-radius: 0; cursor: pointer;
+  transition: transform .25s var(--ease), background-color .25s var(--ease); }
+.btn:hover { background: #2a3847; transform: translateY(-2px); }
+.btn:active { transform: translateY(0) scale(.98); }
+.btn.light { background: var(--bg); color: var(--ink); }
+.btn.light:hover { background: #fff; }
+
+/* Concept banner: always first */
+.concept { background: #111; color: #ddd; font-size: var(--step-small); text-align: center; padding: 9px var(--m); position: relative; z-index: 5; }
+.concept b { color: #fff; }
+
+/* ---------- Hero: the house, title from top edge to bottom edge ---------- */
+.hero { position: relative; min-height: calc(100svh - 38px); color: #fff; overflow: clip; display: grid; grid-template-rows: auto auto 1fr auto; background: #3a4436; }
+.hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 58% 60%; }
+.hero .shade { position: absolute; inset: 0; background: rgba(18, 20, 22, .30); }
+.hero .scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(16,17,18,.45) 0%, rgba(16,17,18,0) 38%, rgba(16,17,18,0) 58%, rgba(16,17,18,.55) 100%); } /* taste-skill-ignore: neutral legibility scrim over the photograph */
+.bar { grid-row: 1; grid-column: 1; position: relative; z-index: 3; display: flex; justify-content: flex-end; align-items: center; gap: 28px; padding: 22px var(--m) 80px; }
+.bar nav { display: flex; gap: 24px; }
+.bar a { text-decoration: none; }
+.bar nav a:hover { text-decoration: underline; }
+.bar .btn { min-height: 48px; }
+.hero h1 { grid-row: 2 / 5; grid-column: 1; display: grid; grid-template-rows: subgrid; font-size: clamp(6rem, 13vw, 12.5rem); pointer-events: none; }
+.hero .line { position: relative; z-index: 2; display: block; overflow: hidden; font-size: clamp(6rem, 13vw, 12.5rem); font-weight: 300; line-height: .9; letter-spacing: -0.03em; padding-bottom: .08em; margin-bottom: -.08em; }
+.hero .line > span { display: block; }
+.hero .l1 { grid-row: 1; padding: 0 var(--m); margin-top: -8px; }
+.hero .l2 { grid-row: 3; padding: 0 var(--m) 18px 28vw; }
+.hero .mid { grid-row: 3; grid-column: 1; position: relative; z-index: 2; align-self: center; margin-left: 30vw; padding-right: var(--m); max-width: calc(44ch + 30vw); }
+.hero .mid p { max-width: 36ch; font-size: var(--step-lead); line-height: 1.35; }
+.hero .mid .btn { margin-top: 24px; }
+
+/* ---------- Intro: find the right fit ---------- */
+.intro { padding: 160px var(--m) 140px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px; align-items: start; }
+.intro .words { grid-column: 1 / 7; padding-top: 40px; }
+.intro h2 { font-size: var(--step-head); line-height: 1.02; }
+.intro .words p { margin-top: 32px; max-width: 30ch; font-size: var(--step-lead); line-height: 1.4; }
+.intro .words .more { margin-top: 20px; max-width: 46ch; }
+.intro .small { margin: 56px 0 0; width: min(360px, 70%); }
+.intro .small img { aspect-ratio: 9 / 10; object-fit: cover; width: 100%; }
+.intro .tall { grid-column: 7 / 13; margin: 0; }
+.intro .tall img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 55% 50%; }
+
+/* ---------- Practitioners + the fit finder (the live thing) ---------- */
+.team { background: var(--surface); padding: 160px var(--m); }
+.team-head { max-width: 1376px; margin: 0 auto; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px; }
+.team-head { align-items: end; }
+.team-head h2 { grid-column: 1 / 7; font-size: var(--step-head); }
+.team-head p { grid-column: 8 / 13; font-size: var(--step-lead); line-height: 1.4; }
+.team-grid { max-width: 1376px; margin: 72px auto 0; display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 24px 56px; align-items: start; }
+.finder { position: sticky; top: 24px; background: var(--bg); padding: 32px 28px; }
+.finder h3 { font-size: var(--step-h3); }
+.finder > p { margin-top: 10px; }
+.finder fieldset { border: 0; margin: 24px 0 0; padding: 0; }
+.finder legend { padding: 0; font-weight: 500; margin-bottom: 10px; }
+.finder .opts { display: flex; flex-wrap: wrap; gap: 8px; }
+.finder input { position: absolute; opacity: 0; pointer-events: none; }
+.finder label { display: inline-flex; align-items: center; min-height: 48px; padding: 0 16px; background: var(--surface); cursor: pointer; transition: background-color .2s var(--ease), color .2s var(--ease), transform .2s var(--ease); }
+.finder label:hover { background: var(--field); }
+.finder label:active { transform: scale(.97); }
+.finder input:checked + label { background: var(--accent); color: var(--accent-ink); }
+.finder input:focus-visible + label { outline: 3px solid var(--accent); outline-offset: 2px; }
+.finder .result { margin-top: 24px; min-height: 3.1em; font-size: var(--step-body); }
+.finder .clear { margin-top: 8px; min-height: 48px; padding: 0; background: none; border: 0; font: inherit; text-decoration: underline; text-underline-offset: 3px; color: var(--ink); cursor: pointer; }
+.people { display: flex; flex-direction: column; gap: 24px; }
+.person { display: grid; grid-template-columns: minmax(0, 220px) minmax(0, 1fr); gap: 32px; background: var(--bg); padding: 28px; transition: opacity .4s var(--ease), transform .4s var(--ease); }
+.person.dim { opacity: .45; }
+.person figure { margin: 0; }
+.person figure img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+.person h3 { font-size: var(--step-h3); }
+.person .cred { margin-top: 8px; color: var(--muted); }
+.person .closed { margin-top: 14px; display: inline-block; background: var(--field); padding: 6px 12px; font-weight: 500; }
+.person .about { margin-top: 16px; max-width: 60ch; }
+.person .tags { list-style: none; margin: 18px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; font-size: var(--step-small); }
+.person .tags li { background: var(--surface); padding: 5px 10px; transition: background-color .3s var(--ease), color .3s var(--ease); }
+.person .tags li.hit { background: var(--accent); color: var(--accent-ink); }
+.person .missing { margin-top: 10px; font-size: var(--step-small); color: var(--muted); min-height: 1.4em; }
+.person .acts { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 10px 20px; align-items: center; }
+.person .acts a:not(.btn) { min-height: 48px; display: inline-flex; align-items: center; }
+
+/* ---------- Programmes: statement, table pushed right ---------- */
+.prog { padding: 160px var(--m); display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px; }
+.prog h2 { grid-column: 1 / -1; font-size: var(--step-head); padding-left: 3vw; line-height: .98; }
+.prog figure { grid-column: 1 / 5; grid-row: 2; align-self: end; margin: 96px 0 0; }
+.prog figure img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+.prog figcaption, .cap { margin-top: 8px; font-size: var(--step-small); color: var(--muted); }
+.prog .tbl { grid-column: 7 / 13; grid-row: 2; margin-top: 96px; }
+.prog table { width: 100%; border-collapse: collapse; font-size: var(--step-body); }
+.prog th, .prog td { text-align: left; vertical-align: top; padding: 0 0 22px; font-weight: 400; }
+.prog thead th { font-weight: 500; padding-bottom: 26px; }
+.prog td:last-child, .prog th:last-child { text-align: right; padding-left: 16px; }
+.prog tr.gap th, .prog tr.gap td { padding-top: 22px; }
+.prog .tbl p { margin-top: 16px; max-width: 46ch; }
+
+/* ---------- The rooms: wide photo, colour tile, facts ---------- */
+.rooms { background: var(--field); padding: 160px var(--m); }
+.rooms .wrap { max-width: 1376px; margin: 0 auto; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 16px; }
+.rooms h2 { grid-column: 1 / -1; font-size: var(--step-head); }
+.rooms .lead { grid-column: 1 / 7; margin-top: 24px; font-size: var(--step-lead); line-height: 1.4; }
+.rooms .photo { grid-column: 1 / 9; margin: 72px 0 0; position: relative; }
+.rooms .photo img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+.rooms .photo .note { position: absolute; top: 0; right: 0; width: 340px; background: var(--bg); padding: 22px 22px 24px; }
+.rooms .photo .note p + p { margin-top: 12px; }
+.rooms .side { grid-column: 9 / 13; margin-top: 72px; }
+.rooms .tile { background: var(--surface); aspect-ratio: 4 / 3.6; }
+.rooms .tile svg { display: block; width: 100%; height: 100%; }
+.rooms dl { margin: 24px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 20px 16px; }
+.rooms dt { font-size: var(--step-small); color: var(--muted); }
+.rooms dd { margin: 2px 0 0; font-weight: 500; }
+
+/* ---------- Gallery: a drag row of the rooms ---------- */
+.gallery { padding: 140px 0 160px; }
+.gallery .head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 0 var(--m); margin-bottom: 32px; }
+.gallery h2 { font-size: var(--step-h3); }
+.gallery .count { color: var(--muted); }
+.row { display: flex; gap: 12px; height: 68svh; min-height: 420px; max-height: 720px; overflow-x: auto; scroll-snap-type: x proximity; padding: 0 var(--m); scrollbar-width: none; cursor: grab; }
+.row::-webkit-scrollbar { display: none; }
+.row figure { margin: 0; flex: none; scroll-snap-align: start; display: flex; flex-direction: column; gap: 12px; height: 100%; }
+.row img { height: 100%; width: 100%; object-fit: cover; transition: transform .8s var(--ease); }
+.row .wide { width: calc(68svh * 1.6); max-width: 82vw; }
+.row .pair { width: calc(68svh * .62); }
+.row .pair img { height: calc(50% - 6px); }
+.row figure:hover img { transform: scale(1.02); }
+
+/* ---------- FAQ: questions beside a tall photograph ---------- */
+.faq { background: var(--surface); padding: 0 var(--m); }
+.faq .wrap { max-width: 1376px; margin: 0 auto; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px; }
+.faq .qs { grid-column: 1 / 6; padding: 160px 0; }
+.faq h2 { font-size: var(--step-h3); }
+.faq .facts { list-style: none; margin: 24px 0 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.faq details { margin-top: 28px; }
+.faq summary { list-style: none; display: flex; justify-content: space-between; gap: 16px; align-items: center; min-height: 48px; font-weight: 500; cursor: pointer; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary i { flex: none; width: 12px; height: 12px; position: relative; transition: transform .3s var(--ease); }
+.faq summary i::before, .faq summary i::after { content: ""; position: absolute; top: 3px; width: 8px; height: 2px; background: var(--ink); }
+.faq summary i::before { left: 0; transform: rotate(45deg); } .faq summary i::after { right: 0; transform: rotate(-45deg); }
+.faq details[open] summary i { transform: rotate(180deg); }
+.faq summary:hover { text-decoration: underline; text-underline-offset: 4px; }
+.faq .ans { margin-top: 8px; max-width: 58ch; }
+.faq .ans p + p { margin-top: 10px; }
+.faq .close { margin-top: 40px; display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; }
+.faq .pics { grid-column: 7 / 13; position: relative; padding-bottom: 80px; }
+.faq .pics .big { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: 62% 50%; }
+.faq .pics .sq { position: absolute; left: -40px; bottom: 40px; width: 34%; aspect-ratio: 1; object-fit: cover; border: 8px solid var(--surface); }
+
+/* ---------- Contact: a card on a photograph of Frankston ---------- */
+.contact { position: relative; min-height: 100svh; background: #3b3b38; }
+.contact > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 30% 50%; }
+.contact .inner { position: relative; display: flex; justify-content: flex-end; padding: 60px var(--m) 120px; }
+.card { width: 440px; background: var(--bg); padding: 32px 32px 0; }
+.card h2 { font-size: var(--step-h3); }
+.card > p { margin-top: 12px; }
+.card dl { margin: 20px 0 0; display: grid; grid-template-columns: auto 1fr; gap: 8px 16px; }
+.card dt { font-weight: 500; }
+.card dd { margin: 0; text-align: right; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.card form { margin-top: 24px; display: grid; gap: 14px; }
+.card label { display: grid; gap: 4px; font-size: var(--step-small); font-weight: 500; }
+.card input, .card select, .card textarea { font: inherit; color: var(--ink); background: #fff; border: 1px solid #8f8a84; border-radius: 0; padding: 11px 12px; width: 100%; min-height: 48px; }
+.card textarea { min-height: 110px; resize: vertical; }
+.card .small-note { font-size: var(--step-small); color: var(--muted); }
+.card .btn { width: calc(100% + 64px); margin: 10px -32px 0; min-height: 56px; }
+.contact figure { position: absolute; left: var(--m); bottom: 24px; margin: 0; }
+.contact figcaption { color: #eee; font-size: var(--step-small); background: rgba(0,0,0,.6); padding: 6px 10px; }
+
+/* ---------- Footer: the back of the card ---------- */
+footer { background: var(--deep); color: var(--deep-ink); padding: 96px var(--m) 40px; }
+.back { max-width: 1120px; margin: 0 auto; background: var(--bg); color: var(--ink); padding: 72px clamp(24px, 5vw, 64px) 28px; position: relative; }
+.back .edge { position: absolute; left: 0; right: 0; top: -1px; width: 100%; height: 28px; display: block; }
+.back .halves { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+.back h2 { font-size: var(--step-h3); }
+.back .msg { margin-top: 16px; max-width: 36ch; }
+.back address { font-style: normal; display: flex; flex-direction: column; gap: 12px; padding-top: 128px; }
+.back address a { min-height: 32px; }
+.back .stamp { position: absolute; top: 44px; right: clamp(24px, 5vw, 64px); width: 88px; background: var(--bg); padding: 6px; transform: rotate(2deg); }
+.back .stamp img { aspect-ratio: 3 / 4; object-fit: cover; }
+.imprint { margin-top: 64px; text-align: center; font-size: var(--step-small); display: flex; flex-direction: column; gap: 8px; }
+
+/* ---------- Motion: content is visible without script ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .js .hero .line > span { transform: translateY(105%); animation: lineup .8s var(--ease) forwards; animation-delay: calc(.05s + var(--i, 0) * 110ms); }
+  .js .hero .mid { opacity: 0; animation: fadeup .7s var(--ease) .4s forwards; }
+  .js .bar { opacity: 0; animation: fadeup .7s var(--ease) .5s forwards; }
+  .hero > img { animation: drift 30s ease-in-out infinite alternate; }
+  .js [data-in] { opacity: 0; transform: translateY(24px); transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: calc(var(--i, 0) * 80ms); }
+  .js [data-in].on { opacity: 1; transform: none; }
+  .js .pic-in img, .js img.pic-in { transform: scale(1.06); transition: transform 1.6s var(--ease); }
+  .js .pic-in.on img, .js img.pic-in.on { transform: none; }
+  .intro .tall, .faq .pics { overflow: clip; }
+}
+@keyframes lineup { to { transform: none; } }
+@keyframes fadeup { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@keyframes drift { from { transform: scale(1.02); } to { transform: scale(1.1) translate(-1.5%, -1%); } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  html { scroll-behavior: auto; }
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1100px) {
+  .team-grid { grid-template-columns: 1fr; }
+  .finder { position: static; }
+  .rooms .photo { grid-column: 1 / -1; }
+  .rooms .side { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+  .rooms .side dl { margin-top: 0; }
+  .bar nav { display: none; }
+}
+/* ---------- Phone: its own composition ---------- */
+@media (max-width: 760px) {
+  .bar { padding: 16px var(--m) 0; gap: 12px; }
+  .hero { min-height: calc(100svh - 84px); }
+  .hero .line { font-size: 19vw; }
+  .hero .l1 { padding: 20px 16px 0; margin-top: 0; }
+  .hero .l2 { padding: 0 16px 20px; text-align: right; }
+  .hero .mid { margin: 0; padding: 0 16px; align-self: center; }
+  .hero > img { object-position: 64% 50%; }
+  .intro { display: block; padding: 112px var(--m) 96px; }
+  .intro .words { padding-top: 0; }
+  .intro h2 { font-size: 12vw; }
+  .intro .tall { margin: 40px 0 0 25%; }
+  .intro .small { margin-top: 40px; width: 50%; }
+  .team { padding: 112px var(--m); }
+  .team-head p { grid-column: 1 / -1; margin-top: 24px; }
+  .team-head h2 { grid-column: 1 / -1; }
+  .finder { padding: 24px 18px; }
+  .person { grid-template-columns: 1fr; padding: 20px; gap: 20px; }
+  .person figure { width: 60%; }
+  .prog { display: block; padding: 112px var(--m); }
+  .prog h2 { padding-left: 0; font-size: 9.5vw; }
+  .prog .tbl { margin-top: 48px; }
+  .prog figure { width: 60%; margin: 40px 0 0 auto; }
+  .rooms { padding: 112px var(--m); }
+  .rooms .wrap { display: block; }
+  .rooms .photo img { aspect-ratio: 4 / 3; }
+  .rooms .photo .note { position: static; width: auto; padding: 20px 0 0; background: none; }
+  .rooms .side { display: block; margin-top: 40px; }
+  .rooms .tile { aspect-ratio: 3 / 2.4; }
+  .rooms .side dl { margin-top: 24px; }
+  .gallery { padding: 96px 0 112px; }
+  .row { height: 62svh; min-height: 360px; gap: 8px; padding: 0 20px; }
+  .row .wide { width: 88vw; max-width: none; }
+  .row .pair { width: 64vw; }
+  .row .pair img { height: calc(50% - 4px); }
+  .faq .wrap { display: flex; flex-direction: column-reverse; }
+  .faq .qs { padding: 40px 0 112px; }
+  .faq .pics { padding: 0; margin: 0 calc(var(--m) * -1); }
+  .faq .pics .big { aspect-ratio: 4 / 5; }
+  .faq .pics .sq { left: auto; right: var(--m); bottom: -40px; width: 38%; }
+  .faq h2 { margin-top: 40px; }
+  .faq .close .btn { width: 100%; }
+  .contact { min-height: 0; display: flex; flex-direction: column; }
+  .contact > img { position: relative; height: 70svh; }
+  .contact .inner { display: block; margin-top: -80px; padding: 0 var(--m) 40px; }
+  .card { width: auto; padding: 24px 20px 0; }
+  .card .btn { width: calc(100% + 40px); margin: 10px -20px 0; }
+  .contact figure { position: static; order: 3; padding: 0 var(--m) 40px; }
+  .contact figcaption { background: none; padding: 0; color: #ddd; }
+  footer { padding-top: 72px; }
+  .back { padding-top: 60px; }
+  .back .halves { grid-template-columns: 1fr; gap: 32px; }
+  .back .halves > div:first-child { padding-right: 76px; }
+  .back address { padding-top: 0; }
+  .back .stamp { width: 64px; top: 36px; }
+}
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for 176 Beach St Psychology &amp; Counselling Group. This is a design preview, not the live website.</div>
+<main>
+  <section class="hero" id="top" aria-labelledby="hero-h">
+    <img src="img/house.jpg" width="1800" height="1090" alt="The house at 176 Beach Street, Frankston, with its sign by the driveway" fetchpriority="high">
+    <div class="shade" aria-hidden="true"></div>
+    <div class="scrim" aria-hidden="true"></div>
+    <header class="bar">
+      <nav aria-label="Main"><a href="#team">Therapists</a><a href="#rooms">The rooms</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
+      <a class="btn light" href="tel:0397810600" aria-label="Call (03) 9781 0600">Call (03) 9781 0600</a>
+    </header>
+    <h1 id="hero-h" aria-label="176 Beach St Psychology and Counselling Group">
+      <span class="line l1"><span style="--i:0">176</span></span>
+      <span class="line l2"><span style="--i:1">Beach St</span></span>
+    </h1>
+    <div class="mid">
+      <p>Psychology &amp; Counselling Group in Frankston. Three practitioners in one house on Beach Street: find the one who fits you.</p>
+      <a class="btn" href="#contact">Send an enquiry</a>
+    </div>
+  </section>
+
+  <section class="intro" aria-labelledby="intro-h">
+    <div class="words">
+      <h2 id="intro-h" data-in>Find the right fit</h2>
+      <p data-in style="--i:1">Therapy is a special kind of relationship. The person seeking help needs to feel safe and confident with their therapist.</p>
+      <p class="more" data-in style="--i:2">The rooms at 176 Beach St were established in 2007. We are a group of professionals who aim to give each person a very personal and individualised approach, and we hope you will find the right fit with one of us.</p>
+      <figure class="small" data-in style="--i:3"><img src="img/daisy.jpg" width="995" height="572" alt="A white daisy with small insects on its centre, in grass" loading="lazy"></figure>
+    </div>
+    <figure class="tall pic-in"><img src="img/sun-field.jpg" width="1400" height="875" alt="Low sun over a field of grass" loading="lazy"></figure>
+  </section>
+
+  <section class="team" id="team" aria-labelledby="team-h">
+    <div class="team-head">
+      <h2 id="team-h" data-in>Three practitioners</h2>
+      <p data-in style="--i:1">Each has their own way of working. Tell us what matters to you and see whose page mentions it, then contact them directly or send one enquiry.</p>
+    </div>
+    <div class="team-grid">
+      <form class="finder" id="finder" data-in onsubmit="return false" aria-labelledby="finder-h">
+        <h3 id="finder-h">What matters to you?</h3>
+        <p>Tap any that apply.</p>
+        <fieldset><legend>Who it is for</legend><div class="opts">
+          <input type="checkbox" id="f-child" value="child" data-label="a child"><label for="f-child">A child</label>
+          <input type="checkbox" id="f-teen" value="teen" data-label="a teenager"><label for="f-teen">A teenager</label>
+          <input type="checkbox" id="f-adult" value="adult" data-label="an adult"><label for="f-adult">An adult</label>
+          <input type="checkbox" id="f-couple" value="couple" data-label="couples or families"><label for="f-couple">A couple or family</label>
+        </div></fieldset>
+        <fieldset><legend>How you would like to talk</legend><div class="opts">
+          <input type="checkbox" id="f-remote" value="remote" data-label="zoom or phone sessions"><label for="f-remote">Zoom or phone</label>
+          <input type="checkbox" id="f-french" value="french" data-label="French"><label for="f-french">In French</label>
+        </div></fieldset>
+        <fieldset><legend>How it is paid for</legend><div class="opts">
+          <input type="checkbox" id="f-medicare" value="medicare" data-label="Medicare"><label for="f-medicare">Medicare plan</label>
+          <input type="checkbox" id="f-tac" value="tac" data-label="TAC"><label for="f-tac">TAC</label>
+          <input type="checkbox" id="f-ndis" value="ndis" data-label="NDIS"><label for="f-ndis">NDIS</label>
+          <input type="checkbox" id="f-wc" value="wc" data-label="WorkCover or Victims of Crime"><label for="f-wc">WorkCover or Victims of Crime</label>
+        </div></fieldset>
+        <p class="result" id="result" aria-live="polite">All three practitioners are shown.</p>
+        <button class="clear" type="button" id="clear">Clear choices</button>
+      </form>
+
+      <div class="people">
+        <article class="person" id="leigh" data-has="child teen adult medicare tac ndis" data-name="Leigh" data-in>
+          <figure><img src="img/leigh.jpg" width="700" height="394" alt="Leigh McLachlan at the beach" loading="lazy" style="object-position: 46% 30%"></figure>
+          <div>
+            <h3>Leigh McLachlan</h3>
+            <p class="cred">BA BSW MAASW (Acc). Accredited mental health social worker since 2007.</p>
+            <p class="about">Interpersonal, narrative and relaxation therapy as well as problem solving approaches, in a discreet, professional manner. Leigh works across the lifespan, in Frankston and the Mornington Peninsula, and spent eight years at Headspace Frankston. Earlier work includes assisting asylum seekers at the Norwegian Red Cross, and senior roles in forensic psychiatry, mental health, and drug and alcohol.</p>
+            <ul class="tags"><li data-k="child teen adult">Across the lifespan</li><li data-k="medicare">Medicare</li><li data-k="tac">TAC</li><li data-k="ndis">NDIS</li><li>API</li></ul>
+            <p class="missing" aria-live="polite"></p>
+            <div class="acts"><a class="btn" href="tel:0404907766">Call Leigh 0404 90 77 66</a><a href="#contact" data-pick="Leigh McLachlan">Enquire about Leigh</a></div>
+          </div>
+        </article>
+
+        <article class="person" id="christine" data-has="child teen adult remote french medicare" data-name="Christine" data-in style="--i:1">
+          <figure><img src="img/christine.jpg" width="323" height="448" alt="Christine de Vallois in front of a bookcase" loading="lazy"></figure>
+          <div>
+            <h3>Christine de Vallois</h3>
+            <p class="cred">Registered Clinical Psychologist. Trained in France in the psychoanalytic/psychodynamic method. Bilingual French and English.</p>
+            <p class="about">Psychoanalytically oriented psychotherapy is talking with the purpose of learning about oneself: finding your own voice, your own place and your own story. Christine sees adults, teenagers and children from diverse cultures and backgrounds, in person, by zoom or by phone. Work covered under Medicare includes anxiety, depression, addictions, OCD, stress, PTSD, identity issues, fears and phobias, and difficulties with work, study or family life.</p>
+            <ul class="tags"><li data-k="child">Children</li><li data-k="teen">Teenagers</li><li data-k="adult">Adults</li><li data-k="remote">In person, zoom or phone</li><li data-k="french">French and English</li><li data-k="medicare">Medicare</li></ul>
+            <p class="missing" aria-live="polite"></p>
+            <div class="acts"><a class="btn" href="tel:0409953537">Call Christine 0409 953 537</a><a href="mailto:christinedevallois@gmail.com">christinedevallois@gmail.com</a></div>
+          </div>
+        </article>
+
+        <article class="person" id="carol" data-has="child teen adult couple medicare tac ndis wc" data-name="Carol" data-in style="--i:2">
+          <figure><img src="img/carol.jpg" width="700" height="768" alt="Carol Schulz in her consulting room" loading="lazy"></figure>
+          <div>
+            <h3>Carol Schulz</h3>
+            <p class="cred">Peninsula Hypnosis &amp; Counselling. Masters in Psychology (Counselling); trained at Relationships Australia as a Couple Therapist, and in Clinical Hypnosis.</p>
+            <p class="closed">Carol's books are closed at this time.</p>
+            <p class="about">Carol works with individuals at all stages of life, and with couples and families. Her page describes work with people surviving trauma, with grief and loss, with anxiety, and with finding ways to calm emotions when they become overwhelming.</p>
+            <ul class="tags"><li data-k="child">Children</li><li data-k="teen">Teenagers</li><li data-k="adult">Adults</li><li data-k="couple">Couples and families</li><li data-k="medicare">Medicare</li><li data-k="tac">TAC</li><li data-k="ndis">NDIS</li><li data-k="wc">WorkCover, Victims of Crime</li></ul>
+            <p class="missing" aria-live="polite"></p>
+            <div class="acts"><a href="#contact" data-pick="Carol Schulz">General enquiry or contact Carol</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="prog" aria-labelledby="prog-h">
+    <h2 id="prog-h" data-in>Medicare and other programmes</h2>
+    <figure data-in style="--i:1"><img src="img/canopy.jpg" width="655" height="377" alt="Looking up through gum trees towards the sun" loading="lazy"></figure>
+    <div class="tbl" data-in style="--i:2">
+      <table>
+        <thead><tr><th scope="col">Programme</th><th scope="col">Listed on the page of</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Medicare, with a Mental Health Care Plan</th><td>Leigh, Christine, Carol</td></tr>
+          <tr><th scope="row">TAC</th><td>Leigh, Carol</td></tr>
+          <tr><th scope="row">NDIS</th><td>Leigh, Carol</td></tr>
+          <tr class="gap"><th scope="row">API</th><td>Leigh</td></tr>
+          <tr><th scope="row">WorkCover</th><td>Carol</td></tr>
+          <tr><th scope="row">Victims of Crime</th><td>Carol</td></tr>
+          <tr><th scope="row">Bulk billing for people on a low income</th><td>Carol</td></tr>
+        </tbody>
+      </table>
+      <p>Costs are set by each practitioner. Ask when you call or enquire, and check with your health fund whether your extras policy covers psychological services.</p>
+    </div>
+  </section>
+
+  <section class="rooms" id="rooms" aria-labelledby="rooms-h">
+    <div class="wrap">
+      <h2 id="rooms-h" data-in>The rooms at 176</h2>
+      <p class="lead" data-in style="--i:1">A waiting room and three air-conditioned consulting rooms, diagonally opposite the Leonard St bus stop on Beach Street.</p>
+      <figure class="photo" data-in style="--i:2">
+        <img src="img/waiting-room.jpg" width="958" height="430" alt="The waiting room, with red sofas, a fireplace and a coffee table of magazines" loading="lazy">
+        <div class="note">
+          <p><b>For practitioners.</b> The clinic has three air-conditioned rooms available for use by other practitioners on a sessional or longer term basis.</p>
+          <p><a href="#contact" data-pick="Consulting rooms (for practitioners)">Ask about times and rates</a></p>
+        </div>
+      </figure>
+      <div class="side" data-in style="--i:3">
+        <div class="tile">
+          <svg viewBox="0 0 400 360" role="img" aria-labelledby="map-t">
+            <title id="map-t">Sketch: from the Leonard St bus stop, cross Beach Street and walk about 50 metres to the left</title>
+            <rect width="400" height="360" fill="#e4e1dd"/>
+            <rect x="0" y="150" width="400" height="64" fill="#b9b1a6"/>
+            <text x="24" y="188" font-family="Newsreader, Georgia, serif" font-size="18" fill="#2c3034">Beach Street</text>
+            <rect x="268" y="226" width="64" height="26" fill="#3a4b5e"/>
+            <text x="300" y="244" font-family="Newsreader, Georgia, serif" font-size="13" fill="#fff" text-anchor="middle">770 bus</text>
+            <text x="300" y="276" font-family="Newsreader, Georgia, serif" font-size="15" fill="#2c3034" text-anchor="middle">Leonard St stop</text>
+            <path d="M300 222 V136 H186" fill="none" stroke="#2c3034" stroke-width="3" stroke-dasharray="2 8" stroke-linecap="round"/>
+            <circle cx="170" cy="118" r="14" fill="#3a4b5e"/>
+            <text x="170" y="84" font-family="Newsreader, Georgia, serif" font-size="18" fill="#2c3034" text-anchor="middle">176</text>
+            <text x="244" y="128" font-family="Newsreader, Georgia, serif" font-size="13" fill="#55524f" text-anchor="middle">about 50 m</text>
+            <text x="200" y="338" font-family="Newsreader, Georgia, serif" font-size="13" fill="#55524f" text-anchor="middle">Sketch, not to scale</text>
+          </svg>
+        </div>
+        <dl>
+          <div><dt>Established</dt><dd>2007</dd></div>
+          <div><dt>Rooms</dt><dd>Three, air-conditioned</dd></div>
+          <div><dt>Train</dt><dd>Frankston Station</dd></div>
+          <div><dt>Bus</dt><dd>770 along Beach St</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery" aria-labelledby="gal-h">
+    <div class="head"><h2 id="gal-h" data-in>Inside the house</h2><span class="count" data-in style="--i:1">Four photographs, drag to see more</span></div>
+    <div class="row" id="row" tabindex="0" aria-label="Photographs of the rooms">
+      <figure class="wide"><img src="img/room-2.jpg" width="958" height="528" alt="Consulting room with a desk, armchair and grey sofa" loading="lazy"></figure>
+      <figure class="pair"><img src="img/room-1.jpg" width="958" height="333" alt="Consulting room with a cream sofa, bookshelves and a bay window" loading="lazy"><img src="img/room-3.jpg" width="958" height="450" alt="Consulting room with a beach painting, a fig tree and a blue rug" loading="lazy"></figure>
+      <figure class="wide"><img src="img/leaves.jpg" width="756" height="435" alt="Green leaves against the sky" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <section class="faq" id="faq" aria-labelledby="faq-h">
+    <div class="wrap">
+      <div class="qs">
+        <h2 id="faq-h" data-in>Questions people ask</h2>
+        <ul class="facts">
+          <li>176 Beach Street, Frankston VIC 3199</li>
+          <li>Phone <a href="tel:0397810600">(03) 9781 0600</a></li>
+          <li>770 bus to the Leonard St stop</li>
+        </ul>
+        <details><summary>When should I seek counselling or therapy?<i aria-hidden="true"></i></summary><div class="ans">
+          <p>Most often people seek counselling when life has reached some kind of crisis. Sometimes something bothers you but lurks in the background and seems easier to ignore. Shame, or fear of rejection, can also put people off.</p>
+          <p>Making time for yourself to understand a problem and find out how to deal with it is a sign of strength and courage, not weakness.</p>
+        </div></details>
+        <details><summary>What happens in therapy?<i aria-hidden="true"></i></summary><div class="ans">
+          <p>It is shaped by what you are struggling with and who you are. At the start your therapist will want to understand what led you to seek help: relationships, work, family, your physical health, and important earlier experiences.</p>
+          <p>There may be things you don't want to talk about at a given time, and that is ok. You need to feel safe and in control of the process.</p>
+        </div></details>
+        <details><summary>How much does it cost? Do you bulk bill?<i aria-hidden="true"></i></summary><div class="ans">
+          <p>Each practitioner sets their own fees, so ask when you call or enquire. All three list Medicare with a Mental Health Care Plan from your GP; see the programmes list above.</p>
+        </div></details>
+        <details><summary>Can I have sessions by zoom or phone?<i aria-hidden="true"></i></summary><div class="ans">
+          <p>Christine offers in-person, zoom or phone sessions. Ask the others when you get in touch.</p>
+        </div></details>
+        <details><summary>How do I get to you by public transport?<i aria-hidden="true"></i></summary><div class="ans">
+          <p>Get the train or bus to Frankston Railway Station, then the 770 bus along Beach Street, and get off at the Leonard St bus stop. The practice is diagonally opposite: cross the road and walk to the left about 50 metres.</p>
+        </div></details>
+        <div class="close"><a class="btn" href="#contact">Send an enquiry</a><a href="tel:0397810600">Call (03) 9781 0600</a></div>
+      </div>
+      <div class="pics">
+        <img class="big pic-in" src="img/beach.jpg" width="1200" height="674" alt="Frankston beach at sunset, with grasses on the dunes">
+        <img class="sq" src="img/canopy.jpg" width="655" height="377" alt="" style="object-position: 70% 30%">
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-h">
+    <img src="img/pier-1954.jpg" width="1800" height="1359" alt="A woman and a young girl reading on Frankston Pier, around 1954, black and white">
+    <figure><figcaption>Reading on Frankston Pier, about 1954</figcaption></figure>
+    <div class="inner">
+      <div class="card">
+        <h2 id="contact-h">Get in touch</h2>
+        <p>For general enquiries, or to contact Carol directly, use this form. You can also call each practitioner on the number in their profile.</p>
+        <dl>
+          <dt>Address</dt><dd>176 Beach Street, Frankston VIC 3199</dd>
+          <dt>Phone</dt><dd><a href="tel:0397810600">(03) 9781 0600</a></dd>
+          <dt>Fax</dt><dd>(03) 9781 0608</dd>
+          <dt>Email</dt><dd><a href="mailto:counselling@carolschulz.com.au">counselling@carolschulz.com.au</a></dd>
+        </dl>
+        <form id="enquiry">
+          <label>Your name<input name="name" autocomplete="name" required></label>
+          <label>Email<input name="email" type="email" autocomplete="email" required></label>
+          <label>Phone (optional)<input name="phone" type="tel" autocomplete="tel"></label>
+          <label>Who would you like to see?
+            <select name="who" id="who">
+              <option>Whoever fits best</option>
+              <option>Leigh McLachlan</option>
+              <option>Christine de Vallois</option>
+              <option>Carol Schulz</option>
+              <option>Consulting rooms (for practitioners)</option>
+            </select>
+          </label>
+          <label>Message<textarea name="message" id="message" required></textarea></label>
+          <p class="small-note">This opens your email app with your message filled in. Nothing is stored on this page.</p>
+          <button class="btn" type="submit">Send my enquiry</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer aria-labelledby="foot-h">
+  <div class="back" data-in>
+    <svg class="edge" viewBox="0 0 1200 28" preserveAspectRatio="none" aria-hidden="true"><path fill="#283039" d="M0 0H1200V0 A50 28 0 0 1 1100 0 A50 28 0 0 1 1000 0 A50 28 0 0 1 900 0 A50 28 0 0 1 800 0 A50 28 0 0 1 700 0 A50 28 0 0 1 600 0 A50 28 0 0 1 500 0 A50 28 0 0 1 400 0 A50 28 0 0 1 300 0 A50 28 0 0 1 200 0 A50 28 0 0 1 100 0 A50 28 0 0 1 0 0 Z"/></svg>
+    <div class="stamp"><img src="img/house-stamp.jpg" width="300" height="400" alt="" loading="lazy"></div>
+    <div class="halves">
+      <div>
+        <h2 id="foot-h">176 Beach St</h2>
+        <p class="msg">Psychology &amp; Counselling Group, Frankston. Diagonally opposite the Leonard St stop on the 770 bus.</p>
+      </div>
+      <address>
+        <a href="tel:0397810600">(03) 9781 0600</a>
+        <a href="mailto:counselling@carolschulz.com.au">counselling@carolschulz.com.au</a>
+        <span>176 Beach Street, Frankston VIC 3199</span>
+        <a href="#team">Leigh McLachlan, Christine de Vallois, Carol Schulz</a>
+      </address>
+    </div>
+    <div class="imprint">
+      <p>&copy; <span id="yr">2026</span> 176 Beach St Psychology &amp; Counselling Group. Concept design by <a href="https://swoopsites.com/">Swoop Sites</a>, Melbourne.</p>
+      <p class="credits">Picture: <a href="https://collections.museumsvictoria.com.au/items/2102129">&ldquo;Photograph - Eileen &amp; Susan Leech Sitting Reading on Frankston Pier, Frankston, circa 1954&rdquo;</a>, unknown photographer, public domain, via Museums Victoria. Other photographs from the practice's own website.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.documentElement.classList.add('js');
+document.getElementById('yr').textContent = new Date().getFullYear();
+// entrances, once, as each part arrives
+const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+const ins = [...document.querySelectorAll('[data-in], .pic-in')];
+ins.forEach((el) => io.observe(el));
+// a fast scroll can jump past a part between frames: show everything above the fold line too
+let ticking = false;
+addEventListener('scroll', () => { if (ticking) return; ticking = true; requestAnimationFrame(() => { ticking = false; ins.forEach((el) => { if (!el.classList.contains('on') && el.getBoundingClientRect().top < innerHeight * 0.92) { el.classList.add('on'); io.unobserve(el); } }); }); }, { passive: true });
+
+// the live thing: find the right fit
+const boxes = [...document.querySelectorAll('#finder input')];
+const people = [...document.querySelectorAll('.person')];
+const result = document.getElementById('result');
+const names = (list) => list.length < 2 ? list.join('') : list.slice(0, -1).join(', ') + ' and ' + list[list.length - 1];
+function update() {
+  const picked = boxes.filter((b) => b.checked);
+  const keys = picked.map((b) => b.value);
+  const fits = [];
+  people.forEach((p) => {
+    const has = p.dataset.has.split(' ');
+    const miss = picked.filter((b) => !has.includes(b.value));
+    p.classList.toggle('dim', keys.length > 0 && miss.length > 0);
+    p.querySelectorAll('.tags li').forEach((li) => li.classList.toggle('hit', !!li.dataset.k && li.dataset.k.split(' ').some((k) => keys.includes(k))));
+    p.querySelector('.missing').textContent = keys.length && miss.length ? 'Not mentioned on ' + p.dataset.name + "'s page: " + names(miss.map((b) => b.dataset.label)) + '. Ask when you get in touch.' : '';
+    if (!miss.length) fits.push(p.dataset.name);
+  });
+  if (!keys.length) result.textContent = 'All three practitioners are shown.';
+  else if (!fits.length) result.textContent = "No one's page mentions all of these. Send an enquiry and ask.";
+  else if (fits.length === 3) result.textContent = 'All three pages mention this.';
+  else result.textContent = names(fits) + (fits.length > 1 ? "'s pages mention" : "'s page mentions") + ' all of this.' + (fits.length === 1 && fits[0] === 'Carol' ? " Carol's books are closed at this time." : '');
+}
+boxes.forEach((b) => b.addEventListener('change', update));
+document.getElementById('clear').addEventListener('click', () => { boxes.forEach((b) => { b.checked = false; }); update(); });
+
+// carry the choice into the enquiry form
+const who = document.getElementById('who'), msg = document.getElementById('message');
+document.querySelectorAll('[data-pick]').forEach((a) => a.addEventListener('click', () => {
+  who.value = a.dataset.pick;
+  const picked = boxes.filter((b) => b.checked).map((b) => b.dataset.label);
+  if (!msg.value && picked.length) msg.value = 'I am looking for: ' + picked.join(', ') + '. ';
+}));
+
+// a tidy email instead of a raw form post
+document.getElementById('enquiry').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const f = new FormData(e.target);
+  const body = `Name: ${f.get('name')}\nEmail: ${f.get('email')}\nPhone: ${f.get('phone')}\nWould like to see: ${f.get('who')}\n\n${f.get('message')}`;
+  location.href = 'mailto:counselling@carolschulz.com.au?subject=' + encodeURIComponent('Enquiry: ' + f.get('who')) + '&body=' + encodeURIComponent(body);
+});
+
+// drag the photo row with a mouse
+const row = document.getElementById('row'); let sx = 0, sl = 0, down = false;
+row.addEventListener('pointerdown', (e) => { if (e.pointerType !== 'mouse') return; down = true; sx = e.clientX; sl = row.scrollLeft; row.style.cursor = 'grabbing'; });
+addEventListener('pointerup', () => { down = false; row.style.cursor = ''; });
+row.addEventListener('pointermove', (e) => { if (down) row.scrollLeft = sl - (e.clientX - sx); });
+</script>
+</body>
+</html>
