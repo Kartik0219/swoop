@@ -1,0 +1,738 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Couper Air | Air Conditioning Installation and Service, Rowville and Melbourne (concept)</title>
+<meta name="description" content="Concept homepage for Couper Air, Rowville: heating, ventilation and air conditioning design, installation and service for homes and commercial properties across Melbourne since 1973.">
+<meta name="theme-color" content="#13203a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Colours from Couper Air's own badge logo: navy lettering and the bronze "C" seal, on a cool off-white. */
+  --bg: #eaecec;
+  --surface: #dde2e4;
+  --paper: #f6f7f6;
+  --ink: #13203a;
+  --muted: #3b4860;
+  --navy: #13203a;
+  --navy-2: #1b2b4a;
+  --navy-ink: #eaecec;
+  --navy-muted: #b9c2d2;
+  --accent: #8a6a3a;          /* bronze: the one action colour */
+  --accent-hover: #74572d;
+  --accent-ink: #ffffff;
+  --live: #3fbf74;
+  --r: 14px;                   /* the one corner radius */
+  --m: clamp(16px, 2.4vw, 32px);
+  --axis: 42%;
+  --shadow: 0 1px 3px rgba(10, 18, 34, .08), 0 30px 60px rgba(10, 18, 34, .18);
+  --shadow-lift: 0 2px 6px rgba(10, 18, 34, .10), 0 40px 80px rgba(10, 18, 34, .24);
+  --step-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+  --step-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+  --step-lead: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+  --step-head: clamp(2.5rem, 1.4rem + 3.8vw, 5rem);
+  --step-hero: clamp(2.75rem, 1rem + 7vw, 6rem);
+  --ease: cubic-bezier(.16, 1, .3, 1);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 84px; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 var(--step-body)/1.55 Archivo, system-ui, sans-serif; }
+img, video { display: block; max-width: 100%; }
+img { height: auto; }
+a { color: inherit; text-underline-offset: 3px; }
+::selection { background: var(--accent); color: var(--accent-ink); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+h1, h2, h3 { font-family: "Big Shoulders Display", "Arial Narrow", sans-serif; font-weight: 800; letter-spacing: -0.02em; line-height: .92; margin: 0; text-wrap: balance; }
+p { margin: 0; text-wrap: pretty; }
+ul { margin: 0; padding: 0; list-style: none; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 0 24px; border: 0; border-radius: 999px;
+  background: var(--accent); color: var(--accent-ink); font: 600 var(--step-body)/1 Archivo, sans-serif; text-decoration: none; cursor: pointer;
+  transition: transform .3s var(--ease), background-color .3s var(--ease); }
+.btn:hover { background: var(--accent-hover); transform: translateY(-2px); }
+.btn:active { transform: translateY(0) scale(.97); }
+.btn.dark { background: var(--navy); color: var(--navy-ink); }
+.btn.dark:hover { background: var(--navy-2); }
+.btn.light { background: var(--navy-ink); color: var(--navy); }
+.btn.light:hover { background: #fff; }
+
+/* Concept banner: always first */
+.concept { background: #0b1222; color: #c9d0dc; font-size: var(--step-small); text-align: center; padding: 9px var(--m); position: relative; z-index: 60; }
+.concept b { color: #fff; }
+
+/* ---------- Header: sticky, blurs once the page moves ---------- */
+.top { position: sticky; top: 0; z-index: 50; display: flex; align-items: center; gap: 28px; padding: 16px var(--m);
+  background: var(--bg); transition: padding .35s var(--ease), background-color .35s var(--ease), box-shadow .35s var(--ease); } /* taste-skill-ignore: premium bar: depth on floating panels, sticky bars */
+.top.scrolled { padding-top: 8px; padding-bottom: 8px; background: rgba(234, 236, 236, .78); -webkit-backdrop-filter: blur(14px) saturate(1.3); backdrop-filter: blur(14px) saturate(1.3); /* taste-skill-ignore: premium bar: depth on floating panels, sticky bars */
+  box-shadow: 0 1px 0 rgba(19,32,58,.06), 0 10px 30px rgba(19,32,58,.08); } /* taste-skill-ignore: premium bar: depth on floating panels, sticky bars */
+.mark { display: inline-flex; align-items: baseline; gap: 10px; text-decoration: none; margin-right: auto; }
+.mark b { font: 800 1.75rem/1 "Big Shoulders Display", sans-serif; letter-spacing: -0.01em; }
+.mark span { font-size: var(--step-small); color: var(--muted); }
+.top nav { display: flex; gap: 24px; }
+.top nav a { text-decoration: underline 2px transparent; text-underline-offset: 6px; font-weight: 500; padding: 12px 0; transition: text-decoration-color .3s var(--ease); }
+.top nav a:hover { text-decoration-color: currentColor; }
+.top .tel { font-weight: 600; text-decoration: none; font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* ---------- Hero: the masthead film, then the title on the axis ---------- */
+.mast { position: relative; height: clamp(320px, 50svh, 600px); background: var(--navy); overflow: hidden; }
+.mast video, .mast > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.mast .cards { position: absolute; right: var(--m); bottom: var(--m); display: flex; gap: 16px; }
+.hcard { width: 220px; display: block; text-decoration: none; background: var(--paper); border-radius: var(--r); overflow: hidden; box-shadow: var(--shadow); /* taste-skill-ignore: premium bar: depth on floating panels, sticky bars */
+  transition: transform .4s var(--ease), box-shadow .4s var(--ease); } /* taste-skill-ignore: premium bar: depth on floating panels, sticky bars */
+.hcard:hover { transform: translateY(-4px); box-shadow: var(--shadow-lift); } /* taste-skill-ignore: premium bar: depth on floating panels, sticky bars */
+.hcard:active { transform: translateY(-1px) scale(.99); }
+.hcard img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.hcard span { display: flex; justify-content: space-between; align-items: center; min-height: 48px; padding: 0 14px; font-weight: 600; }
+.hcard svg { width: 18px; height: 18px; transition: transform .3s var(--ease); }
+.hcard:hover svg { transform: translateX(4px); }
+
+.title { display: grid; grid-template-columns: var(--axis) 1fr; gap: 0; padding: 48px var(--m) 0; }
+.title .main { padding-left: 0; }
+.title h1 { font-size: var(--step-hero); line-height: .9; }
+.title .stand { margin-top: 32px; max-width: 44ch; font-size: var(--step-lead); line-height: 1.38; }
+.title .acts { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.kin .kw { display: inline-block; opacity: 0; filter: blur(8px); animation: kin .55s cubic-bezier(.2,.7,.2,1) forwards; animation-delay: calc(var(--i) * 70ms + 120ms); }
+@keyframes kin { to { opacity: 1; filter: blur(0); } }
+
+/* the instrument: the service desk, live */
+.desk { align-self: start; margin-right: clamp(24px, 4vw, 64px); background: var(--navy); color: var(--navy-ink); border-radius: var(--r); padding: 22px 24px 20px; box-shadow: var(--shadow); max-width: 420px; } /* taste-skill-ignore: premium bar: depth on floating panels, sticky bars */
+.desk .clock { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.desk .clock b { font: 800 clamp(2.5rem, 1.8rem + 2vw, 3.25rem)/1 "Big Shoulders Display", sans-serif; font-variant-numeric: tabular-nums; letter-spacing: 0; }
+.desk .clock span { color: var(--navy-muted); font-size: var(--step-small); text-align: right; }
+.desk dl { margin: 18px 0 0; display: grid; gap: 6px; }
+.desk dl div { display: grid; grid-template-columns: 112px 1fr; gap: 12px; padding: 10px 12px; background: var(--navy-2); border-radius: 10px; }
+.desk dt { color: var(--navy-muted); font-size: var(--step-small); padding-top: 2px; }
+.desk dd { margin: 0; font-size: 1rem; line-height: 1.4; }
+.dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: var(--live); margin-right: 8px; vertical-align: 1px; box-shadow: 0 0 0 0 rgba(63,191,116,.6); animation: pulse 2.2s infinite; } /* taste-skill-ignore: premium bar: depth on floating panels, sticky bars */
+@keyframes pulse { 70% { box-shadow: 0 0 0 9px rgba(63,191,116,0); } 100% { box-shadow: 0 0 0 0 rgba(63,191,116,0); } } /* taste-skill-ignore: premium bar: depth on floating panels, sticky bars */
+
+/* ---------- Numbers: a navy band, counting up once ---------- */
+.numbers { margin-top: 120px; background: var(--navy); color: var(--navy-ink); padding: 96px var(--m) 104px; }
+.numbers h2 { font-size: var(--step-head); max-width: 14ch; margin-left: var(--axis); }
+.figs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 56px; }
+.fig { padding: 0; }
+.fig b { display: block; font: 800 clamp(3.5rem, 2.4rem + 3.6vw, 6rem)/.9 "Big Shoulders Display", sans-serif; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; color: #fff; }
+.fig p { margin-top: 14px; color: var(--navy-muted); font-size: 1rem; line-height: 1.4; max-width: 24ch; }
+
+/* ---------- Residential: text on the axis, picture in the side zone ---------- */
+.res { padding: 160px var(--m); display: grid; grid-template-columns: var(--axis) 1fr; }
+.res figure { margin: 0 clamp(24px, 4vw, 64px) 0 0; }
+.res figure img { width: 100%; max-width: 360px; aspect-ratio: 1; object-fit: cover; border-radius: var(--r); }
+.res figcaption, .cap { margin-top: 12px; font-size: var(--step-small); color: var(--muted); }
+.res h2 { font-size: var(--step-head); }
+.res .lede { margin-top: 28px; font-size: var(--step-lead); line-height: 1.4; max-width: 40ch; }
+.res .body { margin-top: 20px; max-width: 62ch; }
+.lists { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 40px; }
+.list { background: var(--paper); border-radius: var(--r); padding: 26px 26px 28px; box-shadow: var(--shadow); transition: transform .4s var(--ease), box-shadow .4s var(--ease); } /* taste-skill-ignore: premium bar: depth on floating panels, sticky bars */
+.list:hover { transform: translateY(-4px); box-shadow: var(--shadow-lift); } /* taste-skill-ignore: premium bar: depth on floating panels, sticky bars */
+.list h3 { font-size: 2rem; }
+.list ul { margin-top: 16px; display: grid; gap: 10px; }
+.list li { padding-left: 22px; position: relative; line-height: 1.4; }
+.list li::before { content: ""; position: absolute; left: 0; top: .5em; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+.list .btn { margin-top: 24px; }
+
+/* ---------- Commercial: a full field taken from the plant-room photo ---------- */
+.com { background: #17263a; color: var(--navy-ink); padding: 112px var(--m) 120px; }
+.com .head { display: grid; grid-template-columns: var(--axis) 1fr; align-items: end; }
+.com h2 { font-size: var(--step-head); max-width: 12ch; }
+.com .lede { font-size: var(--step-lead); line-height: 1.4; max-width: 42ch; }
+.com .plate { margin: 56px auto 0; max-width: 980px; }
+.com .plate img { width: 100%; aspect-ratio: 650 / 300; object-fit: cover; border-radius: var(--r); }
+.com .plate figcaption { margin-top: 12px; font-size: var(--step-small); color: var(--navy-muted); }
+.com .cols { display: grid; grid-template-columns: var(--axis) 1fr 1fr; gap: 0 40px; margin-top: 64px; }
+.com .cols p { max-width: 34ch; color: var(--navy-ink); }
+.com h3 { font-size: 1.75rem; color: #fff; }
+.com ul { margin-top: 16px; display: grid; gap: 9px; }
+.com li { line-height: 1.4; color: var(--navy-muted); }
+.com .go { margin-top: 28px; }
+
+/* ---------- How we work: gutterless-feel mosaic of unlike tiles ---------- */
+.work { padding: 160px var(--m); }
+.mosaic { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-rows: 96px; gap: 8px; }
+.tile { border-radius: var(--r); padding: 24px; overflow: hidden; position: relative; }
+.tile.photo { padding: 0; margin: 0; }
+.tile.photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
+.tile.photo:hover img { transform: scale(1.04); }
+.tile.photo figcaption { position: absolute; left: 12px; top: 12px; background: rgba(11,18,34,.72); color: #fff; font-size: var(--step-small); padding: 6px 10px; border-radius: 8px; }
+.t-head { grid-column: 1 / 7; grid-row: 1 / 3; background: var(--bg); padding-left: 0; }
+.t-head h2 { font-size: var(--step-head); }
+.t-a { grid-column: 7 / 13; grid-row: 1 / 6; }
+.t-b { grid-column: 1 / 4; grid-row: 3 / 6; background: var(--navy); color: var(--navy-ink); }
+.t-c { grid-column: 4 / 7; grid-row: 3 / 6; background: var(--surface); }
+.t-d { grid-column: 1 / 7; grid-row: 6 / 9; background: var(--accent); color: #fff; }
+.t-e { grid-column: 7 / 13; grid-row: 6 / 9; }
+.t-f { grid-column: 7 / 10; grid-row: 9 / 12; background: var(--surface); }
+.t-h { grid-column: 10 / 13; grid-row: 9 / 12; background: var(--navy); color: var(--navy-ink); }
+.t-g { grid-column: 1 / 7; grid-row: 9 / 12; }
+.tile .say { font-size: clamp(1.375rem, 1rem + 1vw, 1.875rem); line-height: 1.2; max-width: 26ch; }
+.tile .big { font: 800 clamp(3.25rem, 2rem + 3.4vw, 5.25rem)/.9 "Big Shoulders Display", sans-serif; letter-spacing: -0.02em; }
+.tile .small { margin-top: 10px; font-size: 1rem; line-height: 1.4; }
+.tile ul { display: grid; gap: 6px; font-size: 1.125rem; }
+
+/* ---------- Service plan builder: the live thing ---------- */
+.plans { background: var(--surface); padding: 160px var(--m); display: grid; grid-template-columns: var(--axis) 1fr; }
+.plans .intro { padding-right: clamp(24px, 4vw, 64px); }
+.plans h2 { font-size: var(--step-head); }
+.plans .intro p { margin-top: 24px; max-width: 36ch; font-size: var(--step-lead); line-height: 1.4; }
+.builder { background: var(--paper); border-radius: var(--r); padding: clamp(22px, 3vw, 40px); box-shadow: var(--shadow); } /* taste-skill-ignore: premium bar: depth on floating panels, sticky bars */
+.builder fieldset { border: 0; margin: 0 0 22px; padding: 0; }
+.builder legend { font-weight: 600; margin-bottom: 10px; padding: 0; }
+.seg { display: flex; flex-wrap: wrap; gap: 8px; }
+.seg input { position: absolute; opacity: 0; pointer-events: none; }
+.seg label { display: inline-flex; align-items: center; min-height: 48px; padding: 0 18px; border-radius: 999px; background: var(--surface); cursor: pointer; font-weight: 500;
+  transition: background-color .25s var(--ease), color .25s var(--ease), transform .25s var(--ease); }
+.seg label:hover { transform: translateY(-2px); }
+.seg input:checked + label { background: var(--navy); color: var(--navy-ink); }
+.seg input:focus-visible + label { outline: 3px solid var(--accent); outline-offset: 3px; }
+.seg input:disabled + label { opacity: .4; cursor: not-allowed; transform: none; }
+.year { margin-top: 8px; background: var(--bg); border-radius: var(--r); padding: 20px; }
+.months { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(12, 1fr); gap: 6px; }
+.months li { display: flex; flex-direction: column; align-items: center; gap: 8px; font-size: var(--step-small); color: var(--muted); }
+.months i { display: block; width: 100%; height: 56px; border-radius: 8px; background: var(--surface); transition: background-color .45s var(--ease), transform .45s var(--ease); }
+.months li.on i { background: var(--accent); transform: scaleY(1.08); }
+.months li.on { color: var(--ink); font-weight: 600; }
+.sum { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 18px; margin-top: 18px; }
+.sum b { font: 800 clamp(2.25rem, 1.6rem + 2vw, 3.25rem)/1 "Big Shoulders Display", sans-serif; }
+.sum span { color: var(--muted); }
+.incl { margin-top: 18px; display: grid; gap: 8px; }
+.incl li { padding-left: 22px; position: relative; line-height: 1.4; }
+.incl li::before { content: ""; position: absolute; left: 0; top: .5em; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+.builder .btn { margin-top: 24px; }
+
+/* ---------- About: side facts, wide paragraph ---------- */
+.about { padding: 160px var(--m); }
+.about .row { display: grid; grid-template-columns: 34% 1fr; }
+.about h2 { font-size: var(--step-head); grid-column: 2; }
+.facts { display: grid; gap: 20px; align-content: start; padding-right: 32px; }
+.facts dt { font-size: var(--step-small); color: var(--muted); }
+.facts dd { margin: 4px 0 0; font-weight: 500; }
+.about .para { margin-top: 28px; font-size: clamp(1.25rem, 1rem + .7vw, 1.625rem); line-height: 1.38; max-width: 46ch; }
+.about .para + .para { margin-top: 18px; }
+.about .team { margin: 64px 0 0; grid-column: 2; max-width: 920px; }
+.about .team img { width: 100%; aspect-ratio: 650 / 300; object-fit: cover; border-radius: var(--r); }
+.record { margin-top: 96px; }
+.record .word { font-weight: 600; padding-top: 2px; }
+.record .two { display: grid; grid-template-columns: 1fr 1fr; gap: 0 64px; }
+.record h3 { font-size: 1.75rem; margin-bottom: 14px; }
+.record li { display: flex; justify-content: space-between; gap: 16px; padding: 7px 0; }
+.record li span { color: var(--muted); }
+
+/* ---------- Contact: sentence, picture, the quick quote ---------- */
+.contact { background: var(--navy); color: var(--navy-ink); padding: 160px var(--m) 140px; display: grid; grid-template-columns: var(--axis) 1fr; }
+.contact .say { padding-right: clamp(24px, 4vw, 64px); }
+.contact h2 { font-size: var(--step-head); }
+.contact .say > p { margin-top: 24px; font-size: var(--step-lead); line-height: 1.4; max-width: 30ch; }
+.contact .lines { margin-top: 32px; display: grid; gap: 14px; }
+.contact .lines a { font-weight: 600; font-size: 1.25rem; }
+.contact .lines span { color: var(--navy-muted); font-size: 1rem; }
+.contact .pic { margin-top: 40px; display: flex; gap: 16px; align-items: flex-end; }
+.contact .pic img { width: 160px; aspect-ratio: 1; object-fit: cover; border-radius: var(--r); }
+.contact .pic p { color: var(--navy-muted); font-size: var(--step-small); max-width: 22ch; }
+.quote { background: var(--paper); color: var(--ink); border-radius: var(--r); padding: clamp(22px, 3vw, 40px); box-shadow: 0 1px 3px rgba(0,0,0,.2), 0 40px 80px rgba(0,0,0,.35); } /* taste-skill-ignore: premium bar: depth on floating panels, sticky bars */
+.quote h3 { font-size: 2.25rem; }
+.quote form { margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.quote label { display: grid; gap: 6px; font-size: var(--step-small); font-weight: 600; }
+.quote .full { grid-column: 1 / -1; }
+.quote input, .quote select, .quote textarea { font: inherit; font-size: 1rem; font-weight: 400; color: var(--ink); background: #fff; border: 1px solid #aab3bf; border-radius: 10px; padding: 12px 14px; min-height: 48px; width: 100%; }
+.quote input:focus, .quote select:focus, .quote textarea:focus { outline: 3px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
+.quote textarea { min-height: 110px; resize: vertical; }
+.quote .note { font-size: var(--step-small); color: var(--muted); font-weight: 400; }
+.quote .btn { justify-self: start; }
+
+/* ---------- Footer: the phone number is the headline ---------- */
+footer { background: #0b1222; color: var(--navy-ink); padding: 40px var(--m) 28px; min-height: 90svh; display: flex; flex-direction: column; }
+.notes { display: flex; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+.notes .three { display: grid; grid-template-columns: repeat(3, minmax(0, 260px)); gap: 32px; font-size: .9375rem; color: var(--navy-muted); }
+.notes .three b { display: block; color: var(--navy-ink); font-weight: 600; margin-bottom: 4px; }
+.notes .totop { font-weight: 600; min-height: 48px; }
+.callline { margin-top: auto; padding-top: 120px; }
+.callline h2 { font-size: var(--step-small); font-family: Archivo, sans-serif; font-weight: 500; letter-spacing: 0; color: var(--navy-muted); }
+.callline a { display: block; margin-top: 12px; font: 800 clamp(3.5rem, 1rem + 11vw, 11rem)/.86 "Big Shoulders Display", sans-serif; letter-spacing: -0.02em; text-decoration: none; color: #fff; font-variant-numeric: tabular-nums; transition: color .3s var(--ease); }
+.callline a:hover { color: #d9c3a0; }
+.meta { margin-top: 40px; display: grid; grid-template-columns: 1fr auto 1fr; gap: 16px; font-size: .875rem; color: var(--navy-muted); }
+.meta .links { display: flex; gap: 18px; flex-wrap: wrap; }
+.meta .right { text-align: right; }
+.meta a { color: var(--navy-ink); }
+
+/* phone action bar */
+.bar { display: none; }
+
+/* ---------- Reveals ---------- */
+.js .rv { opacity: 0; transform: translateY(22px); transition: opacity .8s var(--ease), transform .8s var(--ease); transition-delay: calc(var(--d, 0) * 80ms); }
+.js .rv.in { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .kin .kw { opacity: 1; filter: none; }
+  .js .rv { opacity: 1; transform: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1100px) {
+  .top nav { display: none; }
+  .mosaic .say { font-size: 1.25rem; }
+  .mosaic .big { font-size: 3rem; }
+  .title, .plans, .res { grid-template-columns: minmax(0, 1fr); }
+  .res figure { order: 2; margin: 48px 0 0; }
+  .res figure img { max-width: 520px; }
+  .title .main { order: -1; }
+  .desk { margin: 40px 0 0; }
+  .plans .intro { padding: 0 0 40px; }
+  .figs { grid-template-columns: repeat(2, 1fr); }
+  .com .cols { grid-template-columns: 1fr 1fr; }
+  .com .cols > p { grid-column: 1 / -1; margin-bottom: 32px; }
+}
+
+/* ---------- Phone: its own composition ---------- */
+@media (max-width: 760px) {
+  :root { --axis: 100%; }
+  body { padding-bottom: 72px; }
+  .top { gap: 12px; }
+  .top .tel, .mark span { display: none; }
+  .top .btn { min-height: 44px; padding: 0 18px; }
+  .mast { height: auto; padding-bottom: 0; background: var(--bg); }
+  .mast video, .mast > img { position: relative; height: 44svh; min-height: 260px; }
+  .mast .cards { position: relative; right: auto; bottom: auto; margin: -56px var(--m) 0; gap: 10px; }
+  .hcard { width: auto; flex: 1; }
+  .title { grid-template-columns: 1fr; padding-top: 36px; }
+  .title .main { order: -1; }
+  .title .stand { margin-top: 20px; }
+  .desk { margin: 36px 0 0; max-width: none; }
+  .title .acts .btn { flex: 1 1 100%; }
+  .numbers { margin-top: 96px; padding: 80px var(--m); }
+  .numbers h2 { margin-left: 0; }
+  .figs { gap: 10px; margin-top: 36px; }
+  .res, .plans, .contact { grid-template-columns: 1fr; padding-top: 112px; padding-bottom: 112px; }
+  .res figure { margin: 0 0 40px; order: 2; }
+  .res figure img { max-width: none; aspect-ratio: 4 / 3; }
+  .res .text { order: 1; }
+  .res figure { order: 2; margin: 40px 0 0; }
+  .lists { grid-template-columns: 1fr; }
+  .com { padding: 112px var(--m); }
+  .com .head { grid-template-columns: 1fr; gap: 20px; }
+  .com .cols { grid-template-columns: 1fr; gap: 32px; }
+  .work { padding: 112px var(--m); }
+  .mosaic { grid-template-columns: 1fr 1fr; grid-auto-rows: auto; gap: 6px; }
+  .tile { grid-column: span 2 !important; grid-row: auto !important; }
+  .t-b, .t-c, .t-f, .t-h { grid-column: span 1 !important; }
+  .t-head { padding: 0 0 16px; }
+  .t-a { aspect-ratio: 650 / 300; }
+  .tile .big { font-size: 2.75rem; }
+  .tile .say { font-size: 1.25rem; }
+  .t-e { aspect-ratio: 469 / 200; }
+  .t-f, .t-h { grid-column: span 1; }
+  .t-g { aspect-ratio: 469 / 200; }
+  .plans .intro { padding: 0 0 36px; }
+  .months { grid-template-columns: repeat(6, 1fr); row-gap: 14px; }
+  .months i { height: 40px; }
+  .about { padding: 112px var(--m); }
+  .about .row { grid-template-columns: 1fr; }
+  .about h2, .about .team { grid-column: 1; }
+  .facts { grid-template-columns: 1fr 1fr; padding: 0; margin-top: 36px; order: 2; }
+  .record .two { grid-template-columns: 1fr; gap: 40px; }
+  .record .word { margin-bottom: 12px; }
+  .contact .say { padding: 0 0 48px; }
+  .quote form { grid-template-columns: 1fr; }
+  .quote .btn { width: 100%; }
+  .notes .three { grid-template-columns: 1fr; gap: 18px; }
+  .meta { grid-template-columns: 1fr; }
+  .meta .right { text-align: left; }
+  .bar { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 70; padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+    background: rgba(11, 18, 34, .9); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); box-shadow: 0 -10px 30px rgba(0,0,0,.2); } /* taste-skill-ignore: premium bar: depth on floating panels, sticky bars */
+  .bar .btn { min-height: 52px; }
+  .bar.away { transform: translateY(110%); visibility: hidden; }
+  .bar { transition: transform .35s var(--ease); }
+}
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Couper Air. This is a design preview, not the live website.</div>
+
+<header class="top" id="top">
+  <a class="mark" href="#hero" aria-label="Couper Air, home"><b>Couper Air</b><span>Rowville, est. 1973</span></a>
+  <nav aria-label="Main">
+    <a href="#residential">Residential</a><a href="#commercial">Commercial</a><a href="#plans">Service plans</a><a href="#about">About</a><a href="#contact">Contact</a>
+  </nav>
+  <a class="tel" href="tel:+61387060300">03 8706 0300</a>
+  <a class="btn" href="#contact">Get a quote</a>
+</header>
+
+<main>
+  <section class="hero" id="hero" aria-labelledby="hero-h">
+    <div class="mast">
+      <video autoplay muted loop playsinline preload="metadata" poster="img/hero-poster.jpg" width="1300" height="600" aria-label="Couper Air's team and service fleet, a chiller install, rooftop plant and a helicopter lift on a commercial job"><source src="img/hero.mp4" type="video/mp4"></video>
+      <div class="cards">
+        <a data-ui class="hcard" href="#residential"><img src="img/residential-unit.jpg" width="350" height="350" alt="A technician servicing an outdoor air conditioning unit beside a brick home"><span>Residential <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9h11M10 4.5 14.5 9 10 13.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <a data-ui class="hcard" href="#commercial"><img src="img/city-building.jpg" width="350" height="350" alt="A multi-storey commercial building in Melbourne"><span>Commercial <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9h11M10 4.5 14.5 9 10 13.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      </div>
+    </div>
+
+    <div class="title">
+      <aside data-ui class="desk" aria-label="Service desk">
+        <div class="clock"><b id="clock">9:00</b><span>Melbourne time<br><span id="day">today</span></span></div>
+        <dl>
+          <div><dt>Emergencies</dt><dd><span class="dot" aria-hidden="true"></span>24 hours, 7 days, for service contract customers</dd></div>
+          <div><dt>Office</dt><dd>2/26 Laser Drive, Rowville</dd></div>
+          <div><dt>On record</dt><dd>Every job from the first, in 1973, to today</dd></div>
+        </dl>
+      </aside>
+      <div class="main">
+        <h1 id="hero-h" class="kin"><span class="kw" style="--i:0">Heating</span> <span class="kw" style="--i:1">and</span> <span class="kw" style="--i:2">cooling</span> <span class="kw" style="--i:3">since</span> <span class="kw" style="--i:4">1973</span></h1>
+        <p class="stand">Couper Air designs, installs and services air conditioning for homes and commercial buildings across Melbourne, from our base in Rowville.</p>
+        <div class="acts">
+          <a class="btn" href="#contact">Get a quote</a>
+          <a class="btn dark" href="tel:+61387060300">Call 03 8706 0300</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="numbers" aria-labelledby="num-h">
+    <h2 id="num-h" class="rv">Over 50 years, one company</h2>
+    <div class="figs">
+      <div class="fig rv" style="--d:0"><b><span data-count="53" data-years>53</span></b><p>years since David Couper Air conditioning started in 1973</p></div>
+      <div class="fig rv" style="--d:1"><b><span data-count="40">40</span>%</b><p>of our staff have been with us more than 10 years</p></div>
+      <div class="fig rv" style="--d:2"><b><span data-count="20">20</span>%</b><p>have been with us more than 20 years</p></div>
+      <div class="fig rv" style="--d:3"><b><span data-count="24">24</span>/7</b><p>emergency attendance for service contract customers</p></div>
+    </div>
+  </section>
+
+  <section class="res" id="residential" aria-labelledby="res-h">
+    <figure class="rv"><img src="img/residential-unit.jpg" width="350" height="350" alt="A technician working on a reverse cycle outdoor unit at a brick home" loading="lazy"><figcaption>Residential service, Melbourne</figcaption></figure>
+    <div class="text">
+      <h2 id="res-h" class="rv">Residential air conditioning</h2>
+      <p class="lede rv" style="--d:1">A well designed system is the difference between a home you want to be in and one you want to get away from.</p>
+      <p class="body rv" style="--d:2">From a single reverse cycle split system for one room to whole-home heating and cooling, we calculate the heating and cooling load for the layout and orientation of your home first. We are not tied to any one manufacturer, so we recommend the system that suits you, whether that is energy efficiency or performance in any weather.</p>
+      <div class="lists">
+        <div data-ui class="list rv" style="--d:1">
+          <h3>Install</h3>
+          <ul>
+            <li>Design and installation for new and existing homes</li>
+            <li>Heating and cooling load calculated on every project</li>
+            <li>Work with builders, architects and home owners</li>
+            <li>Modifications and alterations to existing systems</li>
+            <li>Qualified building practitioner</li>
+          </ul>
+          <a class="btn dark" href="#contact" data-job="Home installation" data-type="Home">Quote for a home install</a>
+        </div>
+        <div data-ui class="list rv" style="--d:2">
+          <h3>Service</h3>
+          <ul>
+            <li>Repairs, maintenance and replacement</li>
+            <li>'On demand' service and repairs</li>
+            <li>Fixed price comprehensive maintenance contracts</li>
+            <li>Independent design and performance review</li>
+            <li>Emergency 24hr attendance for service contract customers</li>
+          </ul>
+          <a class="btn dark" href="#contact" data-job="Service or repair" data-type="Home">Book a home service</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="com" id="commercial" aria-labelledby="com-h">
+    <div class="head">
+      <h2 id="com-h" class="rv">Commercial air conditioning</h2>
+      <p class="lede rv" style="--d:1">From one split system to multi-storey developments and green building upgrades, in buildings that are vacant or fully tenanted.</p>
+    </div>
+    <figure class="plate rv" style="--d:1"><img src="img/chiller.jpg" width="650" height="300" alt="A Powerpax chiller unit installed by Couper Air inside a plant enclosure" loading="lazy"><figcaption>Commercial install: chiller in its plant enclosure</figcaption></figure>
+    <div class="cols">
+      <p class="rv">Each building is unique. We calculate the load for its layout, orientation and use, so the system meets your needs and Australian Standards. Our fleet of fully equipped service vehicles means most problems are solved on the spot.</p>
+      <div class="rv" style="--d:1">
+        <h3>Projects</h3>
+        <ul>
+          <li>New building HVAC design and installation</li>
+          <li>System upgrade or replacement</li>
+          <li>Chiller replacement and upgrade</li>
+          <li>Installation of VRV systems</li>
+          <li>Cooling tower upgrade and replacement</li>
+          <li>Building automation</li>
+          <li>'Green' energy efficiency upgrades</li>
+        </ul>
+      </div>
+      <div class="rv" style="--d:2">
+        <h3>Service</h3>
+        <ul>
+          <li>Comprehensive service contracts for 1 to 3 years</li>
+          <li>Breakdown service and repairs</li>
+          <li>Life cycle planning and asset management</li>
+          <li>Air balancing</li>
+          <li>Essential services maintenance and compliance</li>
+          <li>Water treatment management</li>
+          <li>Site OH&amp;S access review and upgrades</li>
+        </ul>
+        <a class="btn light go" href="#contact" data-job="Commercial project" data-type="Commercial">Talk to us about a building</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="work" id="work" aria-labelledby="work-h">
+    <div class="mosaic">
+      <div class="tile t-head rv"><h2 id="work-h">How we work</h2></div>
+      <figure class="tile photo t-a rv" style="--d:1"><img src="img/helicopter-lift.jpg" width="650" height="300" alt="A helicopter lifting air conditioning plant onto a commercial site, with a Couper Air vehicle in the foreground" loading="lazy"><figcaption>Helicopter install</figcaption></figure>
+      <div class="tile t-b rv" style="--d:1"><p class="big">In-house</p><p class="small">engineering and managerial staff behind every crew</p></div>
+      <div class="tile t-c rv" style="--d:2"><ul><li>Plumbers</li><li>Electricians</li><li>Refrigeration technicians</li><li>Design engineers</li></ul></div>
+      <div class="tile t-d rv" style="--d:2"><p class="say">Designed with architects, builders and owners, delivered on time and on budget.</p></div>
+      <figure class="tile photo t-e rv" style="--d:3"><img src="img/rooftop-plant.jpg" width="469" height="200" alt="Rooftop cooling tower and insulated pipework on a commercial building" loading="lazy"><figcaption>Rooftop plant</figcaption></figure>
+      <div class="tile t-f rv" style="--d:3"><p class="say">Not tied to any one manufacturer.</p></div>
+      <div class="tile t-h rv" style="--d:4"><p class="say">Fully equipped vans: most problems solved on the spot.</p></div>
+      <figure class="tile photo t-g rv" style="--d:4"><img src="img/plant-room.jpg" width="469" height="200" alt="Pumps, valves and insulated pipework in a commercial plant area" loading="lazy"><figcaption>Plant and pipework</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="plans" id="plans" aria-labelledby="plans-h">
+    <div class="intro">
+      <h2 id="plans-h" class="rv">Build a service plan</h2>
+      <p class="rv" style="--d:1">From 'on demand' call-outs to scheduled maintenance monthly, quarterly, six monthly or once a year. Set yours here and send it with your quote request.</p>
+    </div>
+    <div data-ui class="builder rv" style="--d:1" id="builder">
+      <fieldset>
+        <legend>Property</legend>
+        <div class="seg">
+          <input type="radio" name="prop" id="p-home" value="Home" checked><label for="p-home">Home</label>
+          <input type="radio" name="prop" id="p-com" value="Commercial"><label for="p-com">Commercial building</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Visits</legend>
+        <div class="seg">
+          <input type="radio" name="freq" id="f0" value="0"><label for="f0">On demand</label>
+          <input type="radio" name="freq" id="f1" value="1"><label for="f1">Annual</label>
+          <input type="radio" name="freq" id="f2" value="2"><label for="f2">Six monthly</label>
+          <input type="radio" name="freq" id="f4" value="4" checked><label for="f4">Quarterly</label>
+          <input type="radio" name="freq" id="f12" value="12"><label for="f12">Monthly</label>
+        </div>
+      </fieldset>
+      <fieldset id="termset">
+        <legend>Contract</legend>
+        <div class="seg">
+          <input type="radio" name="term" id="t1" value="1" checked><label for="t1">One year</label>
+          <input type="radio" name="term" id="t2" value="2"><label for="t2">Two years</label>
+          <input type="radio" name="term" id="t3" value="3"><label for="t3">Three years</label>
+        </div>
+      </fieldset>
+      <div class="year" aria-live="polite">
+        <ol class="months" id="months">
+          <li class="on"><i></i>Jan</li><li><i></i>Feb</li><li><i></i>Mar</li><li class="on"><i></i>Apr</li><li><i></i>May</li><li><i></i>Jun</li>
+          <li class="on"><i></i>Jul</li><li><i></i>Aug</li><li><i></i>Sep</li><li class="on"><i></i>Oct</li><li><i></i>Nov</li><li><i></i>Dec</li>
+        </ol>
+        <p class="sum"><b id="sum-a">4 visits a year</b><span id="sum-b">over a one-year comprehensive service contract</span></p>
+        <ul class="incl" id="incl">
+          <li>Scheduled preventative maintenance</li>
+          <li>Breakdown service and repair</li>
+          <li>Emergency 24hr attendance for service contract customers</li>
+        </ul>
+      </div>
+      <a class="btn" href="#contact" id="take-plan">Ask about this plan</a>
+    </div>
+  </section>
+
+  <section class="about" id="about" aria-labelledby="about-h">
+    <div class="row">
+      <dl class="facts rv">
+        <div><dt>Founded</dt><dd>1973, as David Couper Air conditioning</dd></div>
+        <div><dt>Based in</dt><dd>Rowville, serving Melbourne and surrounding suburbs</dd></div>
+        <div><dt>ABN</dt><dd>69 831 035 090</dd></div>
+        <div><dt>ARCtick</dt><dd>AU12026</dd></div>
+      </dl>
+      <div>
+        <h2 id="about-h" class="rv">A record of every job</h2>
+        <p class="para rv" style="--d:1">Since 1973 Couper Air has designed heating, ventilation and air conditioning systems around each client's needs. Our archive holds the service and installation details of every job, from the very first one to today.</p>
+        <p class="para rv" style="--d:2">The people stay too: 40% of our staff have been with us for more than 10 years, and 20% for more than 20.</p>
+      </div>
+      <figure class="team rv"><img src="img/team-fleet.jpg" width="650" height="300" alt="The Couper Air team standing in front of their fleet of white service vans and utes" loading="lazy"><figcaption class="cap">The Couper Air team and service fleet</figcaption></figure>
+    </div>
+    <div class="row record">
+      <p class="word rv">Who we work with</p>
+      <div class="two">
+        <div class="rv" style="--d:1">
+          <h3>Our clients</h3>
+          <ul>
+            <li>Home and property owners <span>Residential</span></li>
+            <li>Builders and developers <span>Both</span></li>
+            <li>Architects <span>Both</span></li>
+            <li>Property managers <span>Both</span></li>
+            <li>Investors <span>Both</span></li>
+          </ul>
+        </div>
+        <div class="rv" style="--d:2">
+          <h3>Commercial properties</h3>
+          <ul>
+            <li>Laboratories and clean rooms</li>
+            <li>Medical centres</li>
+            <li>Shopping centres</li>
+            <li>Apartment complexes</li>
+            <li>Restaurants and night clubs</li>
+            <li>Offices and multi-storey office blocks</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-h">
+    <div class="say">
+      <h2 id="contact-h" class="rv">Get a quote</h2>
+      <p class="rv" style="--d:1">New system, a service, a maintenance contract or a building upgrade: tell us about it and we will be in touch.</p>
+      <div class="lines rv" style="--d:2">
+        <a href="tel:+61387060300">03 8706 0300</a>
+        <a href="mailto:admin@couperair.com">admin@couperair.com</a>
+        <span>2/26 Laser Drive, Rowville VIC 3178</span>
+      </div>
+      <div class="pic rv" style="--d:3"><img src="img/team-fleet.jpg" width="650" height="300" alt="" loading="lazy"><p>Calling from a phone? Tap the number to ring the Rowville office.</p></div>
+    </div>
+    <div data-ui class="quote rv" style="--d:1">
+      <h3>Quick quote</h3>
+      <form id="quote" action="mailto:admin@couperair.com" method="get" enctype="text/plain">
+        <label>Your name<input name="name" autocomplete="name" required></label>
+        <label>Phone<input name="phone" type="tel" autocomplete="tel" required></label>
+        <label>Email<input name="email" type="email" autocomplete="email"></label>
+        <label>Suburb<input name="suburb" autocomplete="address-level2"></label>
+        <label>Property
+          <select name="type" id="type"><option>Home</option><option>Commercial</option></select>
+        </label>
+        <label>What do you need?
+          <select name="job" id="job">
+            <option>Home installation</option><option>Service or repair</option><option>Maintenance contract</option><option>Commercial project</option><option>Design or performance review</option>
+          </select>
+        </label>
+        <label class="full">Tell us about it<textarea name="message" id="message"></textarea></label>
+        <p class="note full">This opens your email app with the details filled in, addressed to admin@couperair.com. Nothing is stored on this page.</p>
+        <button class="btn full" type="submit">Send my quote request</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer aria-labelledby="foot-h">
+  <div class="notes">
+    <div class="three">
+      <p><b>Couper Air</b>Heating, ventilation and air conditioning, residential and commercial, since 1973.</p>
+      <p><b>Rowville office</b>2/26 Laser Drive, Rowville VIC 3178<br>Fax 03 9764 1505</p>
+      <p><b>ABN</b>69 831 035 090</p>
+    </div>
+    <a class="totop" href="#top">Back to top</a>
+  </div>
+  <div class="callline">
+    <h2 id="foot-h">Call the Rowville office</h2>
+    <a href="tel:+61387060300">03 8706 0300</a>
+  </div>
+  <div class="meta">
+    <p class="links"><a href="mailto:admin@couperair.com">admin@couperair.com</a><a href="#residential">Residential</a><a href="#commercial">Commercial</a></p>
+    <p>Concept design by Swoop Sites, Melbourne.</p>
+    <p class="right">© <span id="yr">2026</span> Couper Air, Rowville</p>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="btn light" href="tel:+61387060300">Call</a>
+  <a class="btn" href="#contact">Get a quote</a>
+</nav>
+
+<script>
+document.documentElement.classList.add('js');
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const now = new Date();
+
+// years since 1973 and the footer year, so the page never goes stale
+const yrs = now.getFullYear() - 1973;
+document.querySelectorAll('[data-years]').forEach((el) => { el.dataset.count = yrs; el.textContent = yrs; });
+document.getElementById('yr').textContent = now.getFullYear();
+
+// the video rests under reduced motion
+const vid = document.querySelector('.mast video');
+if (reduce && vid) { vid.removeAttribute('autoplay'); vid.pause(); }
+document.addEventListener('visibilitychange', () => { if (!vid || reduce) return; document.hidden ? vid.pause() : vid.play().catch(() => {}); });
+
+// sticky header gains its blur once the page moves
+const hdr = document.querySelector('.top');
+const onScroll = () => hdr.classList.toggle('scrolled', scrollY > 40);
+addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+// the service desk clock, in Melbourne time
+const clock = document.getElementById('clock'), day = document.getElementById('day');
+const tick = () => {
+  const d = new Date();
+  clock.textContent = d.toLocaleTimeString('en-AU', { timeZone: 'Australia/Melbourne', hour: 'numeric', minute: '2-digit' }).replace(/\s?[ap]m/i, (m) => ' ' + m.trim().toLowerCase());
+  day.textContent = d.toLocaleDateString('en-AU', { timeZone: 'Australia/Melbourne', weekday: 'long', day: 'numeric', month: 'long' });
+};
+tick(); setInterval(tick, 15000);
+
+// reveals and count-ups, once each
+const countUp = (el) => {
+  const end = +el.dataset.count; if (reduce) { el.textContent = end; return; }
+  const t0 = performance.now(), dur = 1400;
+  const step = (t) => { const p = Math.min(1, (t - t0) / dur); el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(step); };
+  el.textContent = 0; requestAnimationFrame(step);
+};
+const io = new IntersectionObserver((es) => es.forEach((e) => {
+  if (!e.isIntersecting) return;
+  e.target.classList.add('in');
+  e.target.querySelectorAll('[data-count]').forEach(countUp);
+  io.unobserve(e.target);
+}), { rootMargin: '0px 0px -8% 0px' });
+document.querySelectorAll('.rv').forEach((el) => io.observe(el));
+
+// the phone bar steps aside while a heading passes under it, and near the quote form
+const bar = document.querySelector('.bar'), heads = [...document.querySelectorAll('main h2, main h3, .big, .say, .lede, .stand, .para, .sum b, .fig b')], contact = document.getElementById('contact');
+const barCheck = () => {
+  if (!bar || getComputedStyle(bar).display === 'none') return;
+  const H = innerHeight, cr = contact.getBoundingClientRect();
+  const under = heads.some((h) => { const r = h.getBoundingClientRect(); return r.bottom > H - 110 && r.top < H; });
+  bar.classList.toggle('away', under || (cr.top < H && cr.bottom > 0));
+};
+addEventListener('scroll', barCheck, { passive: true }); addEventListener('resize', barCheck); barCheck();
+
+// the service plan builder
+const B = document.getElementById('builder');
+const monthsEl = document.getElementById('months'), sumA = document.getElementById('sum-a'), sumB = document.getElementById('sum-b'), incl = document.getElementById('incl');
+const termWords = { 1: 'one-year', 2: 'two-year', 3: 'three-year' };
+const freqWords = { 0: 'On demand', 1: 'Annual', 2: 'Six monthly', 4: 'Quarterly', 12: 'Monthly' };
+const val = (n) => B.querySelector(`input[name=${n}]:checked`).value;
+const plan = () => {
+  const prop = val('prop'), f = +val('freq'), term = +val('term');
+  B.querySelectorAll('input[name=term]').forEach((i) => { i.disabled = f === 0; });
+  const start = (now.getMonth() + 1) % 12;
+  monthsEl.innerHTML = '';
+  for (let k = 0; k < 12; k++) {
+    const m = new Date(2000, (start + k) % 12, 1).toLocaleDateString('en-AU', { month: 'short' });
+    const on = f > 0 && k % (12 / f) === 0;
+    const li = document.createElement('li'); if (on) li.className = 'on';
+    li.innerHTML = '<i></i>' + m; monthsEl.appendChild(li);
+  }
+  if (f === 0) { sumA.textContent = 'Call when you need us'; sumB.textContent = "'on demand' service and repairs, no contract"; }
+  else {
+    sumA.textContent = f === 1 ? '1 visit a year' : f + ' visits a year';
+    sumB.textContent = (f * term) + ' scheduled visits over a ' + termWords[term] + ' comprehensive service contract';
+  }
+  const items = f === 0 ? ["'On demand' service and repairs", 'Breakdown service and repair'] :
+    ['Scheduled preventative maintenance', 'Breakdown service and repair', 'Emergency 24hr attendance for service contract customers'];
+  if (prop === 'Commercial') items.push('Essential services maintenance and compliance', 'Water treatment management', 'Building automation and remote monitoring');
+  incl.innerHTML = items.map((t) => '<li>' + t + '</li>').join('');
+  B.dataset.summary = prop + ', ' + freqWords[f].toLowerCase() + (f ? ' maintenance, ' + termWords[term] + ' contract' : ' service');
+};
+B.addEventListener('change', plan); plan();
+
+// carry choices into the quick quote form
+const job = document.getElementById('job'), type = document.getElementById('type'), msg = document.getElementById('message');
+document.getElementById('take-plan').addEventListener('click', () => {
+  job.value = 'Maintenance contract'; type.value = val('prop');
+  msg.value = 'Service plan: ' + B.dataset.summary + '. ';
+});
+document.querySelectorAll('[data-job]').forEach((a) => a.addEventListener('click', () => { job.value = a.dataset.job; if (a.dataset.type) type.value = a.dataset.type; }));
+
+// a tidy email instead of a raw form post
+document.getElementById('quote').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const f = new FormData(e.target);
+  const body = `Name: ${f.get('name')}\nPhone: ${f.get('phone')}\nEmail: ${f.get('email')}\nSuburb: ${f.get('suburb')}\nProperty: ${f.get('type')}\nNeed: ${f.get('job')}\n\n${f.get('message')}`;
+  location.href = 'mailto:admin@couperair.com?subject=' + encodeURIComponent('Quote request: ' + f.get('job')) + '&body=' + encodeURIComponent(body);
+});
+</script>
+</body>
+</html>
