@@ -1,0 +1,728 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>M1 Motors | European Car Service and Roadworthy, Nunawading (concept)</title>
+<meta name="description" content="Concept homepage for M1 Motors, Unit 3, 50 Rooks Rd, Nunawading: European car servicing and repairs for BMW, Mercedes Benz, Audi, Volkswagen and Mini, logbook servicing and VicRoads licensed roadworthy inspections.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,900;1,900&family=Red+Hat+Text:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Taken from M1 Motors itself: the black workshop jackets, the bone of the shop sign, the red of the M1 lettering. */
+  --bg: #121212;
+  --surface: #1c1c1b;
+  --surface-2: #262625;
+  --ink: #ecebe6;
+  --muted: #a9a8a2;
+  --accent: #e3101a;       /* M1 red: the action, and the name */
+  --accent-ink: #ffffff;
+  --paper: #ecebe6;
+  --paper-ink: #141414;
+  --paper-muted: #4b4a46;
+  --step-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+  --step-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+  --step-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
+  --step-head: clamp(2.5rem, 1.2rem + 5vw, 5.5rem);
+  --m: clamp(16px, 2vw, 28px);
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  --r: 14px;               /* one corner radius for every card, photo and panel */
+  --lift: 0 1px 3px rgba(0,0,0,.18), 0 30px 60px rgba(0,0,0,.38);
+  --lift-hi: 0 2px 6px rgba(0,0,0,.22), 0 40px 80px rgba(0,0,0,.5);
+  --hh: 76px;              /* header height */
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+html, body { overflow-x: clip; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 var(--step-body)/1.5 "Red Hat Text", system-ui, sans-serif; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-underline-offset: 4px; }
+::selection { background: var(--accent); color: var(--accent-ink); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+h1, h2, h3 { font-family: "Red Hat Display", system-ui, sans-serif; font-weight: 900; letter-spacing: -0.03em; line-height: 0.92; margin: 0; text-wrap: balance; }
+p { margin: 0; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 24px; background: var(--accent); color: var(--accent-ink);
+  font: 700 var(--step-body)/1 "Red Hat Text", sans-serif; text-decoration: none; border: 0; border-radius: 999px; cursor: pointer;
+  transition: transform .25s var(--ease), background-color .25s var(--ease), color .25s var(--ease); }
+.btn:hover { background: #b80a12; transform: translateY(-2px); }
+.btn:active { transform: translateY(1px) scale(.97); }
+.btn.alt { background: var(--surface-2); color: var(--ink); }
+.btn.alt:hover { background: var(--ink); color: var(--paper-ink); }
+
+/* Concept banner: always first */
+.concept { background: #000; color: #d6d5d0; font-size: var(--step-small); text-align: center; padding: 9px var(--m); position: relative; z-index: 6; }
+.concept b { color: #fff; }
+
+/* ---------- Top bar ---------- */
+.top { position: sticky; top: 0; z-index: 30; height: var(--hh); display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 0 var(--m); background: transparent;
+  transition: height .35s var(--ease), background-color .35s var(--ease), box-shadow .35s var(--ease), backdrop-filter .35s var(--ease); }
+.top.scrolled { height: 62px; background: rgba(18,18,18,.72); -webkit-backdrop-filter: blur(14px) saturate(1.2); backdrop-filter: blur(14px) saturate(1.2); box-shadow: 0 1px 0 rgba(255,255,255,.06), 0 12px 30px rgba(0,0,0,.35); } /* taste-skill-ignore: the one sticky bar */
+.top .btn { min-height: 48px; padding: 0 22px; white-space: nowrap; }
+.mark { white-space: nowrap; font: 900 1.375rem/1 "Red Hat Display", sans-serif; letter-spacing: -0.02em; text-decoration: none; font-style: italic; min-height: 48px; display: inline-flex; align-items: center; }
+.top nav { display: flex; gap: 6px; }
+.top nav a { text-decoration: none; font-weight: 500; padding: 0 12px; min-height: 48px; display: inline-flex; align-items: center; transition: color .2s; }
+.top nav a:hover { color: #fff; text-decoration: underline; }
+.top .right { display: flex; align-items: center; gap: 18px; }
+.top .tel { white-space: nowrap; font-weight: 700; text-decoration: none; min-height: 48px; display: inline-flex; align-items: center; font-variant-numeric: tabular-nums; }
+.top .tel:hover { text-decoration: underline; }
+
+/* ---------- Hero: the name pinned while the workshop passes beneath ---------- */
+.hero { position: relative; margin-top: calc(-1 * var(--hh)); overflow-x: clip; }
+/* their own workshop photos, as a slow loop behind the name */
+.stage { position: sticky; top: 0; height: 100svh; z-index: 0; overflow: hidden; background: #000; }
+.stage video, .stage img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.stage .shade { position: absolute; inset: 0; background: rgba(12,12,12,.52); }
+.stage .shade + .shade { background: rgba(12,12,12,.4); opacity: var(--dim, 0); }
+.pin { position: sticky; top: 0; height: calc(100svh - 40px); margin-top: -100svh; z-index: 2; pointer-events: none; display: grid; grid-template-rows: auto 1fr auto; padding: var(--hh) var(--m) 32px; }
+.pin h1 { color: var(--accent); text-transform: uppercase; text-align: center; font-size: clamp(5rem, 15.5vw, 15rem); line-height: .82; letter-spacing: -0.045em; padding-top: 5svh; white-space: nowrap; }
+.pin h1 .sub { display: block; font-size: var(--step-lead); letter-spacing: 0; line-height: 1.3; color: var(--ink); text-transform: none; font-family: "Red Hat Text", sans-serif; font-weight: 500; margin-top: 18px; white-space: normal; }
+.kin .kw { display: inline-block; opacity: 0; filter: blur(8px); animation: kin .55s cubic-bezier(.2,.7,.2,1) forwards; animation-delay: calc(var(--i) * 70ms + 120ms); }
+@keyframes kin { to { opacity: 1; filter: blur(0); } }
+.pin .foot { grid-row: 3; display: flex; justify-content: space-between; align-items: end; gap: 24px; }
+.pin .what { max-width: 27ch; font-weight: 700; font-size: var(--step-body); line-height: 1.4; pointer-events: auto; }
+.pin .calls { display: flex; flex-direction: column; gap: 8px; pointer-events: auto; }
+.pin .foot > * { transition: opacity .45s var(--ease), visibility .45s; }
+.pin.past .foot > * { opacity: 0; visibility: hidden; }
+/* the instrument: a workshop readout with HUD corners, built from their own facts */
+.hud { position: relative; pointer-events: auto; width: min(380px, 32vw); padding: 16px 18px; background: rgba(18,18,18,.8); 
+  border-radius: var(--r); font-size: var(--step-small); font-variant-numeric: tabular-nums; }
+[data-ui].hud, [data-ui].nums-card { box-shadow: var(--lift); } /* taste-skill-ignore: interface panels (workshop readout, figures) */
+[data-ui].nums-card:hover { box-shadow: var(--lift-hi); } /* taste-skill-ignore: hover lift on the figures */
+.hud::before, .hud::after { content: ""; position: absolute; width: 16px; height: 16px; border: 2px solid var(--accent); }
+.hud::before { top: -6px; left: -6px; border-right: 0; border-bottom: 0; border-top-left-radius: 6px; }
+.hud::after { bottom: -6px; right: -6px; border-left: 0; border-top: 0; border-bottom-right-radius: 6px; }
+.hud .t { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-weight: 700; color: #fff; padding-bottom: 4px; }
+.hud .t i { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); display: inline-block; margin-right: 8px; animation: blink 2s ease-in-out infinite; }
+@keyframes blink { 50% { opacity: .25; } }
+.hud dl { margin: 12px 0 0; display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; }
+.hud dt { color: var(--muted); }
+.hud dd { margin: 0; text-align: right; color: var(--ink); }
+.reel { position: relative; z-index: 1; margin-top: -100svh; padding: 100svh var(--m) 30svh; display: flex; flex-direction: column; align-items: center; gap: 22svh; }
+.reel figure { margin: 0; width: min(44vw, 680px); transition: transform .4s var(--ease); }
+.reel img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--r); }
+.reel figure:hover { transform: translateY(-4px); }
+.reel figcaption { margin-top: 10px; font-size: var(--step-small); color: var(--muted); }
+.reel figure:nth-child(2) { transform: translateX(-14%); }
+.reel figure:nth-child(3) { transform: translateX(14%); }
+
+/* ---------- Services: names in three columns ---------- */
+.services { background: var(--surface); padding: 200px var(--m); }
+.services h2 { font-size: var(--step-head); text-transform: uppercase; }
+.services .makes { margin-top: 24px; font-size: var(--step-lead); line-height: 1.3; max-width: 34ch; }
+.names { margin-top: 96px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 0 24px; }
+.names .group { grid-column: span 3; }
+.names h3 { font: 700 var(--step-body)/1.25 "Red Hat Text", sans-serif; letter-spacing: 0; color: var(--ink); margin-bottom: 1.25em; }
+.names ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.names li { color: var(--muted); line-height: 1.25; padding: 5px 0; cursor: default; transition: color .2s; }
+.names li:hover, .names li.on { color: var(--ink); }
+.names .sum { display: none; }
+.names .desc { grid-column: 10 / 13; }
+.names .desc p { min-height: 6.5em; color: var(--ink); }
+.names .desc figure { margin: 24px 0 0; }
+.names .desc img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--r); }
+
+/* ---------- What we check: job card + drawn car (the live thing) ---------- */
+.check { background: var(--bg); padding: 200px var(--m); }
+.check-grid { display: grid; grid-template-columns: 4fr 3fr 5fr; gap: clamp(24px, 3vw, 56px); align-items: start; max-width: 1440px; margin: 0 auto; }
+.check h2 { font-size: var(--step-head); text-transform: uppercase; }
+.check .intro > p { margin-top: 24px; max-width: 34ch; }
+.seg { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 32px; }
+.seg input, .makes-pick input { position: absolute; opacity: 0; pointer-events: none; }
+.seg label { border-radius: var(--r); min-height: 52px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 12px; background: var(--surface-2); cursor: pointer; font-weight: 700; transition: background-color .2s, color .2s; }
+.seg label:hover { background: #33332f; }
+.seg input:checked + label { background: var(--ink); color: var(--paper-ink); }
+.seg input:focus-visible + label, .makes-pick input:focus-visible + label { outline: 3px solid var(--accent); outline-offset: 3px; }
+.pick-h { margin-top: 28px; font-weight: 700; }
+.makes-pick { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.makes-pick label { border-radius: 999px; min-height: 48px; display: inline-flex; align-items: center; padding: 0 16px; background: var(--surface-2); cursor: pointer; transition: background-color .2s, color .2s; }
+.makes-pick label:hover { background: #33332f; }
+.makes-pick input:checked + label { background: var(--ink); color: var(--paper-ink); }
+.check .go { margin-top: 28px; width: 100%; }
+.car { position: sticky; top: 24px; margin: 0; }
+.car svg { display: block; width: 100%; height: auto; max-height: 78svh; }
+.car figcaption { margin-top: 10px; font-size: var(--step-small); color: var(--muted); text-align: center; min-height: 2.6em; }
+.car .p { fill: #2e2e2c; transition: fill .35s var(--ease); }
+.car .s { fill: none; stroke: #4a4a46; stroke-width: 4; stroke-linecap: round; transition: stroke .35s var(--ease); }
+.car .b { fill: #232322; stroke: #4a4a46; stroke-width: 3; transition: fill .35s var(--ease), stroke .35s var(--ease); }
+.car .g { fill: #3c4044; transition: fill .35s var(--ease); }
+.car .on.p, .car .on.g { fill: var(--accent); }
+.car .on.s { stroke: var(--accent); }
+.car .on.b { stroke: var(--accent); fill: #2c1213; }
+[data-ui].slip-wrap { filter: drop-shadow(0 1px 2px rgba(0,0,0,.2)) drop-shadow(0 24px 40px rgba(0,0,0,.45)); } /* taste-skill-ignore: the job card is an interface panel */
+.slip-wrap { transition: transform .4s var(--ease); }
+.slip-wrap:hover { transform: translateY(-4px); }
+.slip { border-radius: var(--r) var(--r) 0 0; background: var(--paper); color: var(--paper-ink); padding: 28px 28px 48px; font-variant-numeric: tabular-nums;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12px), 97.917% 100%, 95.833% calc(100% - 12px), 93.750% 100%, 91.667% calc(100% - 12px), 89.583% 100%, 87.500% calc(100% - 12px), 85.417% 100%, 83.333% calc(100% - 12px), 81.250% 100%, 79.167% calc(100% - 12px), 77.083% 100%, 75.000% calc(100% - 12px), 72.917% 100%, 70.833% calc(100% - 12px), 68.750% 100%, 66.667% calc(100% - 12px), 64.583% 100%, 62.500% calc(100% - 12px), 60.417% 100%, 58.333% calc(100% - 12px), 56.250% 100%, 54.167% calc(100% - 12px), 52.083% 100%, 50.000% calc(100% - 12px), 47.917% 100%, 45.833% calc(100% - 12px), 43.750% 100%, 41.667% calc(100% - 12px), 39.583% 100%, 37.500% calc(100% - 12px), 35.417% 100%, 33.333% calc(100% - 12px), 31.250% 100%, 29.167% calc(100% - 12px), 27.083% 100%, 25.000% calc(100% - 12px), 22.917% 100%, 20.833% calc(100% - 12px), 18.750% 100%, 16.667% calc(100% - 12px), 14.583% 100%, 12.500% calc(100% - 12px), 10.417% 100%, 8.333% calc(100% - 12px), 6.250% 100%, 4.167% calc(100% - 12px), 2.083% 100%, 0.000% calc(100% - 12px)); }
+.slip .head { display: flex; justify-content: space-between; gap: 12px; font-weight: 700; }
+.slip .head span:last-child { color: var(--paper-muted); font-weight: 500; }
+.card[hidden] { display: none; }
+.card h3 { font: 700 var(--step-body)/1.3 "Red Hat Text", sans-serif; letter-spacing: 0; margin-top: 28px; }
+.card ul { list-style: none; margin: 6px 0 0; padding: 0; }
+.row { width: 100%; min-height: 48px; display: flex; align-items: baseline; gap: 10px; padding: 12px 8px; margin: 0 -8px; width: calc(100% + 16px); background: none; border: 0; color: inherit; font: inherit; text-align: left; cursor: pointer; transition: background-color .2s; }
+.row:hover { background: #dcdbd4; }
+.row[aria-pressed="true"] { background: var(--paper-ink); color: var(--paper); }
+.row .dots { flex: 1; border-bottom: 4px dotted #a3a29b; transform: translateY(-4px); min-width: 16px; }
+.row[aria-pressed="true"] .dots { border-color: #5d5c57; }
+.row .where { white-space: nowrap; }
+.result { margin: 24px -28px 0; min-height: 52px; background: var(--paper-ink); color: var(--paper); display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 28px; font-weight: 700; }
+
+/* ---------- Workshop: prints dropped on the name of the street ---------- */
+.street { position: relative; background: var(--surface); overflow: hidden; display: flex; flex-direction: column; align-items: center; gap: 72px; padding: 160px var(--m) 140px; }
+.street h2 { text-transform: uppercase; text-align: center; font-size: clamp(7.5rem, 15vw, 14rem); line-height: .85; color: var(--ink); }
+.street h2 span { display: block; }
+.prints { display: flex; justify-content: center; align-items: flex-start; width: 100%; max-width: 1200px; }
+.print { position: relative; z-index: 2; margin: 0; background: var(--paper); padding: 10px 10px 12px; border-radius: var(--r); transition: transform .3s var(--ease); }
+.print img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: calc(var(--r) - 6px); }
+.print figcaption { color: var(--paper-ink); font-size: var(--step-small); margin-top: 8px; }
+.print:hover { z-index: 3; transform: rotate(0deg) scale(1.02); }
+.print.a { width: 30%; max-width: 360px; transform: rotate(-6deg); }
+.print.a img { object-position: 30% 50%; }
+.print.b { width: 30%; max-width: 360px; margin: 56px -2% 0; transform: rotate(4deg); z-index: 3; }
+.print.b img { object-position: 40% 50%; }
+.print.c { width: 26%; max-width: 320px; margin-top: 12px; transform: rotate(-3deg); }
+.print.c img { object-position: 80% 50%; }
+.street .line { max-width: 44ch; text-align: center; font-size: var(--step-body); }
+
+/* ---------- About: the team, in their words ---------- */
+.about { background: var(--bg); padding: 200px var(--m); }
+.about-grid { display: grid; grid-template-columns: 7fr 5fr; gap: clamp(32px, 4vw, 72px); align-items: start; max-width: 1440px; margin: 0 auto; }
+.about figure { margin: 0; }
+.about figure img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--r); transition: transform .4s var(--ease); }
+.about figure:hover img { transform: translateY(-4px); }
+.about figcaption { margin-top: 10px; font-size: var(--step-small); color: var(--muted); }
+.about h2 { font-size: var(--step-head); text-transform: uppercase; }
+.about .words { margin-top: 32px; display: flex; flex-direction: column; gap: 1.1em; max-width: 46ch; }
+.about .stub { margin-top: 36px; display: flex; flex-wrap: wrap; gap: 10px; }
+
+/* ---------- Find us: the address in display rows ---------- */
+.find { background: var(--surface); }
+.find > figure { margin: 0; position: relative; }
+.find > figure img { width: 100%; height: 46svh; min-height: 280px; object-fit: cover; object-position: 50% 62%; }
+.find > figure figcaption { position: absolute; left: var(--m); bottom: 16px; background: rgba(0,0,0,.6); color: #fff; font-size: var(--step-small); padding: 6px 10px; }
+.rows { list-style: none; margin: 0; padding: 0; }
+.rows > li { min-height: 150px; display: flex; align-items: flex-end; padding: 0 var(--m) 26px; font: 400 clamp(2.75rem, 6vw, 5.5rem)/1 "Red Hat Display", sans-serif; letter-spacing: -0.03em; }
+.rows > li:nth-child(odd) { background: var(--surface); }
+.rows > li:nth-child(even) { background: var(--surface-2); }
+.rows h2 { font: inherit; letter-spacing: inherit; text-transform: none; }
+.rows a { text-decoration: none; transition: color .2s; }
+.rows a:hover { color: #fff; text-decoration: underline; text-decoration-thickness: 3px; }
+.rows .mail { font-size: clamp(1.75rem, 5vw, 5.5rem); overflow-wrap: anywhere; }
+.rows .greet { gap: 24px; align-items: center; padding-bottom: 0; }
+.rows .greet a.round { width: .9em; height: .9em; min-width: 56px; min-height: 56px; border-radius: 50%; background: var(--accent); color: #fff; display: grid; place-items: center; transition: transform .25s var(--ease), background-color .25s; }
+.rows .greet a.round:hover { transform: translateX(6px); background: #b80a12; }
+.rows .greet svg { width: 42%; height: 42%; }
+
+/* ---------- Book: invitation and form over the cropped name ---------- */
+footer { position: relative; background: var(--paper); color: var(--paper-ink); overflow: hidden; padding: 140px var(--m) 0; }
+.book-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 0 24px; }
+.book { grid-column: 1 / 8; }
+.book h2 { font-size: clamp(2.75rem, 5vw, 5rem); text-transform: uppercase; }
+.book > p { margin-top: 20px; max-width: 46ch; }
+.book form { margin-top: 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px 16px; }
+.book label { display: grid; gap: 6px; font-size: var(--step-small); font-weight: 700; }
+.book .wide { grid-column: 1 / -1; }
+.book input, .book select, .book textarea { font: inherit; font-size: 1rem; color: var(--paper-ink); background: #fff; border: 1px solid #8f8e88; border-radius: 10px; padding: 12px; min-height: 48px; width: 100%; }
+.book textarea { min-height: 96px; resize: vertical; }
+.book .note { grid-column: 1 / -1; font-size: var(--step-small); color: var(--paper-muted); }
+.book button { grid-column: 1 / -1; justify-self: start; min-width: 280px; }
+.links { grid-column: 10 / 13; display: flex; flex-direction: column; gap: 4px; font-style: normal; }
+.links a, .links span { min-height: 44px; display: flex; align-items: center; font-weight: 500; }
+.links a { text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+.legal { margin-top: 120px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 32px; font-size: var(--step-small); color: var(--paper-muted); }
+.legal p { max-width: 70ch; }
+.legal a { color: inherit; }
+.wordmark { font: italic 900 clamp(5rem, 21vw, 22rem)/.8 "Red Hat Display", sans-serif; letter-spacing: -0.05em; text-transform: uppercase; color: var(--paper-ink); white-space: nowrap; margin: 16px 0 0 -0.04em; transform: translateY(24%); }
+
+/* phone action bar: call and book always under the thumb */
+.thumb { display: none; }
+
+/* ---------- Motion ---------- */
+.js [data-in] { opacity: 0; transform: translateY(22px); transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); transition-delay: calc(var(--i, 0) * 80ms); }
+.js [data-in].on { opacity: 1; transform: none; }
+.js .print[data-in].on.a { transform: rotate(-6deg); } .js .print[data-in].on.b { transform: rotate(4deg); } .js .print[data-in].on.c { transform: rotate(-3deg); }
+.js .print[data-in].on:hover { transform: rotate(0deg) scale(1.02); }
+.pin .foot { animation: rise 1s var(--ease) both; animation-delay: .35s; }
+@keyframes rise { from { opacity: 0; transform: translateY(28px); } }
+.find > figure img { animation: drift 26s ease-in-out infinite alternate; }
+@keyframes drift { from { transform: scale(1.04); } to { transform: scale(1.12) translateX(-2%); } }
+.find > figure { overflow: hidden; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js [data-in] { opacity: 1; transform: none; }
+  .kin .kw { opacity: 1; filter: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* ---------- Numbers: only what their own pages say ---------- */
+.nums { position: relative; z-index: 3; background: var(--bg); padding: 120px var(--m); }
+.nums ul { list-style: none; margin: 0 auto; padding: 0; max-width: 1440px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.nums li { background: var(--surface); border-radius: var(--r); padding: 28px 24px 26px; transition: transform .35s var(--ease); }
+.nums li:hover { transform: translateY(-4px); }
+.nums b { display: block; font: 900 clamp(3.5rem, 2.2rem + 4vw, 6.5rem)/.9 "Red Hat Display", sans-serif; letter-spacing: -0.05em; color: var(--accent); font-variant-numeric: tabular-nums; }
+.nums span { display: block; margin-top: 14px; color: var(--muted); max-width: 22ch; }
+@media (max-width: 900px) { .nums ul { grid-template-columns: 1fr 1fr; } .nums { padding: 56px var(--m) 72px; } .hud { display: none; } }
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1100px) {
+  .top nav { display: none; }
+  .check-grid { grid-template-columns: 1fr 1fr; }
+  .check .intro { grid-column: 1 / -1; }
+  .check .intro > p { max-width: 52ch; }
+  .names .group { grid-column: span 4; }
+  .names .desc { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 48px; }
+  .names .desc figure { margin: 0; }
+  .reel figure { width: min(62vw, 620px); }
+  .about-grid { grid-template-columns: 1fr; }
+  .book { grid-column: 1 / -1; }
+  .links { grid-column: 1 / -1; flex-direction: row; flex-wrap: wrap; gap: 0 24px; margin-top: 56px; }
+}
+@media (max-width: 900px) {
+  .pin { grid-template-rows: auto; }
+  .pin .foot { display: none; }
+  .reel { padding-top: 58svh; }
+  .reel .after { display: flex; width: 100%; max-width: 620px; flex-direction: column; gap: 16px; align-items: stretch; }
+}
+@media (min-width: 901px) { .reel .after { display: none; } }
+
+/* ---------- Phone: its own composition ---------- */
+@media (max-width: 760px) {
+  body { padding-bottom: 68px; }
+  .top nav, .top .tel { display: none; }
+  .top .btn { min-height: 48px; padding: 0 18px; }
+  :root { --hh: 64px; }
+  .pin { height: 100svh; }
+  .pin h1 { font-size: 16.5vw; padding-top: 4svh; }
+  .pin h1 .sub { font-size: 1.125rem; margin-top: 12px; }
+  .reel { padding: 54svh var(--m) 20svh; gap: 12svh; }
+  .reel figure, .reel figure:nth-child(n) { width: 100%; transform: none; }
+  .reel .after { font-weight: 700; }
+  .services, .check, .about { padding: 120px var(--m); }
+  .names { margin-top: 48px; display: block; }
+  .names .group { margin-bottom: 40px; }
+  .names li { font-size: 1.125rem; line-height: 1.4; padding: 2px 0; color: var(--ink); }
+  .names .sum { display: block; margin-top: 12px; color: var(--muted); }
+  .names .desc { display: block; margin: 0; }
+  .names .desc p { display: none; }
+  .check-grid { display: block; }
+  .car { position: sticky; top: 0; z-index: 3; background: var(--bg); padding: 10px 0 4px; margin-top: 28px; }
+  .car svg { height: 30svh; max-height: none; width: auto; margin: 0 auto; }
+  .car figcaption { margin-top: 4px; }
+  .slip { margin-top: 12px; padding: 22px 18px 44px; }
+  .result { margin: 24px -18px 0; padding: 10px 18px; }
+  .street { padding: 112px var(--m) 96px; gap: 48px; }
+  .street h2 { font-size: 27vw; }
+  .print.a { width: 52%; }
+  .print.b { width: 52%; margin: 40px 0 0 -6%; }
+  .print.c { display: none; }
+  .street .line { font-size: 0.9375rem; }
+  .rows > li { min-height: 84px; padding: 0 var(--m) 18px; font-size: 9.6vw; }
+  .rows .mail { font-size: 7.4vw; }
+  .rows .greet { background: var(--accent) !important; justify-content: space-between; padding-bottom: 0; color: #fff; }
+  .rows .greet a.round { background: #fff; color: var(--accent); }
+  footer { padding-top: 96px; }
+  .book form { grid-template-columns: 1fr; }
+  .book button { min-width: 0; width: 100%; }
+  .links { grid-column: 1 / -1; flex-direction: row; flex-wrap: wrap; gap: 0 20px; margin-top: 56px; }
+  .book { grid-column: 1 / -1; }
+  .book h2 { font-size: 11vw; }
+  .legal { margin-top: 64px; }
+  .wordmark { font-size: 30vw; }
+  .thumb { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; position: fixed; z-index: 20; left: 0; right: 0; bottom: 0; padding: 8px; background: #000; transition: transform .35s var(--ease); }
+  .thumb.away { transform: translateY(110%); }
+  .thumb .btn { min-height: 52px; padding: 0 10px; }
+}
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for M1 Motors. This is a design preview, not the live website.</div>
+<header class="top">
+  <a class="mark" href="#top" aria-label="M1 Motors, home">M1 Motors</a>
+  <nav aria-label="Main">
+    <a href="#services">Services</a><a href="#check">Roadworthy and logbook</a><a href="#workshop">Workshop</a><a href="#find">Find us</a>
+  </nav>
+  <div class="right">
+    <a class="tel" href="tel:0398733668">03 9873 3668</a>
+    <a class="btn" href="#book">Book online</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="top" aria-labelledby="hero-h">
+    <div class="stage" aria-hidden="true">
+      <video class="hero-video" src="img/hero.mp4" poster="img/hero-poster.jpg" width="1280" height="720" muted autoplay loop playsinline preload="metadata"></video>
+      <div class="shade"></div><div class="shade"></div>
+    </div>
+    <div class="pin">
+      <h1 id="hero-h" class="kin"><span class="kw" style="--i:0">M1</span> <span class="kw" style="--i:1">Motors</span><span class="sub"><span class="kw" style="--i:3">European</span> <span class="kw" style="--i:4">car</span> <span class="kw" style="--i:5">service,</span> <span class="kw" style="--i:6">Nunawading</span></span></h1>
+      <div class="foot">
+        <p class="what">BMW, Mercedes Benz, Audi, Volkswagen and Mini servicing and repairs, and VicRoads licensed roadworthy tests.</p>
+        <aside class="hud" data-ui aria-label="Workshop details">
+          <p class="t"><span><i aria-hidden="true"></i>Rooks Rd workshop, Nunawading</span></p>
+          <dl>
+            <dt>Local time</dt><dd><time id="clock">Melbourne time</time></dd>
+            <dt>Makes</dt><dd>BMW, Mercedes Benz, Audi, VW, Mini</dd>
+            <dt>Roadworthy</dt><dd>VicRoads licensed tester</dd>
+            <dt>Logbook</dt><dd>Stamped, warranty kept</dd>
+            <dt>Where</dt><dd>Unit 3, 50 Rooks Rd</dd>
+          </dl>
+        </aside>
+        <div class="calls">
+          <a class="btn" href="#book">Book online</a>
+          <a class="btn alt" href="tel:0398733668">Call 03 9873 3668</a>
+        </div>
+      </div>
+    </div>
+    <div class="reel">
+      <div class="after">
+        <p>BMW, Mercedes Benz, Audi, Volkswagen and Mini servicing and repairs, and VicRoads licensed roadworthy tests.</p>
+        <a class="btn" href="#book">Book online</a>
+        <a class="btn alt" href="tel:0398733668">Call 03 9873 3668</a>
+      </div>
+      <figure><img src="img/engine.jpg" width="1035" height="690" alt="A BMW M Power engine bay with carbon fibre bracing, bonnet open in the workshop" loading="lazy"><figcaption>Under the bonnet of a BMW M car</figcaption></figure>
+      <figure><img src="img/diagnostics.jpg" width="600" height="400" alt="An M1 Motors mechanic reading a diagnostic tablet plugged in under an open bonnet" loading="lazy"><figcaption>Diagnostics under the bonnet</figcaption></figure>
+      <figure><img src="img/shopfront.jpg" width="1035" height="690" alt="The M1 Motors sign over the roller door at Unit 3, 50 Rooks Rd, with a silver Audi out front" loading="lazy"><figcaption>Unit 3, 50 Rooks Rd, Nunawading</figcaption></figure>
+      <figure><img src="img/cockpit.jpg" width="1035" height="690" alt="Black and white close-up of a Mercedes-Benz steering wheel and dashboard" loading="lazy"><figcaption>Mercedes Benz, one of the five makes we specialise in</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="nums" aria-label="M1 Motors in numbers">
+    <ul>
+      <li class="nums-card" data-ui data-in><b data-count="15">15</b><span>years or so serving Nunawading and nearby suburbs</span></li>
+      <li class="nums-card" data-ui data-in style="--i:1"><b data-count="5">5</b><span>European makes we specialise in</span></li>
+      <li class="nums-card" data-ui data-in style="--i:2"><b data-count="6">6</b><span>services under one roof, from logbook to engine work</span></li>
+      <li class="nums-card" data-ui data-in style="--i:3"><b data-count="10">10</b><span>checks on our logbook service list</span></li>
+    </ul>
+  </section>
+
+  <section class="services" id="services" aria-labelledby="services-h">
+    <h2 id="services-h" data-in>Services</h2>
+    <p class="makes" data-in style="--i:1">BMW, Mercedes Benz, Audi, Volkswagen and Mini are our specialty. One workshop for servicing, repairs, tyres and roadworthies.</p>
+    <div class="names">
+      <div class="group" data-in style="--i:1">
+        <h3>Servicing</h3>
+        <ul>
+          <li data-d="If your new car is still under warranty, we can perform manufacturer logbook servicing without voiding your warranty.">Logbook servicing</li>
+          <li data-d="Outside the warranty period, minor and major servicing keeps your car running safely and reliably.">Minor and major services</li>
+          <li data-d="We service to the manufacturer's specification at the recommended intervals, record it in your logbook and stamp it.">Logbook stamped</li>
+          <li data-d="Logbook servicing for all makes and models, not only European cars.">All makes and models</li>
+          <li data-d="We only use genuine and top quality aftermarket components, for a more reliable car.">Genuine and quality parts</li>
+        </ul>
+        <p class="sum">Logbook servicing that keeps your new car's warranty, and minor and major services after it.</p>
+      </div>
+      <div class="group" data-in style="--i:2">
+        <h3>Repairs</h3>
+        <ul>
+          <li data-d="Pads, rotors, drums, shoes and any other worn or damaged parts, on all European makes.">Brake repairs</li>
+          <li data-d="Performance brake pads and slotted rotors for more stopping power and less overheating.">Performance pads and rotors</li>
+          <li data-d="Cracked, rattling or louder than normal? We assess and quote on exhaust repair or replacement.">Exhaust repairs</li>
+          <li data-d="If you've blown an engine or need other major mechanical work, we'll assess it and quote.">Major mechanical repairs</li>
+          <li data-d="From a minor service to an engine rebuild, no repair is too big or too small.">Engine rebuilds</li>
+          <li data-d="We can tune EFI systems for the torque and horsepower you're after.">EFI tuning</li>
+        </ul>
+        <p class="sum">Brakes, exhausts and major mechanical work, up to a full engine rebuild.</p>
+      </div>
+      <div class="group" data-in style="--i:3">
+        <h3>Roadworthy and tyres</h3>
+        <ul>
+          <li data-d="Bought a used car? We inspect it and advise any repairs needed for a roadworthy certificate.">Roadworthy inspections</li>
+          <li data-d="We are a VicRoads licensed vehicle tester.">VicRoads licensed tester</li>
+          <li data-d="We supply and fit tyres from a wide range of reputable manufacturers.">Tyre supply and fitting</li>
+          <li data-d="Performance tyres for grip and handling, or economy tyres that are good value for money.">Performance and economy tyres</li>
+          <li data-d="Once your tyres are fitted we can balance and align your wheels to prevent uneven wear.">Wheel balance and alignment</li>
+        </ul>
+        <p class="sum">Roadworthy certificates from a VicRoads licensed tester, and tyres fitted, balanced and aligned.</p>
+      </div>
+      <div class="desc" data-in style="--i:4">
+        <p id="svc-desc" aria-live="polite">If your new car is still under warranty, we can perform manufacturer logbook servicing without voiding your warranty.</p>
+        <figure><img src="img/wheel.jpg" width="600" height="400" alt="A BMW M alloy wheel and blue brake caliper in the workshop" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="check" id="check" aria-labelledby="check-h">
+    <div class="check-grid">
+      <div class="intro">
+        <h2 id="check-h" data-in>What we check</h2>
+        <p data-in style="--i:1">Our own roadworthy and logbook lists, as a job card. Tap a line to see where on your car we look, then book it in.</p>
+        <div class="seg" role="radiogroup" aria-label="Which job" data-in style="--i:2">
+          <input type="radio" name="job" id="j-rwc" value="Roadworthy inspection" checked><label for="j-rwc">Roadworthy</label>
+          <input type="radio" name="job" id="j-log" value="Logbook service"><label for="j-log">Logbook service</label>
+        </div>
+        <p class="pick-h" data-in style="--i:3">Your car</p>
+        <div class="makes-pick" role="radiogroup" aria-label="Your car's make" data-in style="--i:3">
+          <input type="radio" name="make" id="m-bmw" value="BMW" checked><label for="m-bmw">BMW</label>
+          <input type="radio" name="make" id="m-mb" value="Mercedes Benz"><label for="m-mb">Mercedes Benz</label>
+          <input type="radio" name="make" id="m-audi" value="Audi"><label for="m-audi">Audi</label>
+          <input type="radio" name="make" id="m-vw" value="Volkswagen"><label for="m-vw">Volkswagen</label>
+          <input type="radio" name="make" id="m-mini" value="Mini"><label for="m-mini">Mini</label>
+          <input type="radio" name="make" id="m-other" value="Another make"><label for="m-other">Another make</label>
+        </div>
+        <a class="btn go" href="#book" id="take-job" data-in style="--i:4"><span>Book a <span id="go-job">roadworthy</span> for my <span id="go-make">BMW</span></span></a>
+      </div>
+
+      <figure class="car" aria-hidden="true">
+        <svg viewBox="0 0 240 520">
+          <!-- wheels and brakes -->
+          <rect class="p z-wheels" x="18" y="86" width="26" height="64" rx="6"/><rect class="p z-wheels" x="196" y="86" width="26" height="64" rx="6"/>
+          <rect class="p z-wheels" x="18" y="374" width="26" height="64" rx="6"/><rect class="p z-wheels" x="196" y="374" width="26" height="64" rx="6"/>
+          <!-- axles: steering and suspension -->
+          <path class="s z-steering z-suspension" d="M44 118 H196 M44 406 H196"/>
+          <!-- body and chassis -->
+          <path class="b z-body z-all" d="M74 24 Q120 10 166 24 Q198 34 200 90 L204 250 L200 440 Q198 494 166 502 Q120 512 74 502 Q42 494 40 440 L36 250 L40 90 Q42 34 74 24Z"/>
+          <!-- engine bay -->
+          <rect class="p z-engine" x="62" y="40" width="116" height="104" rx="10"/>
+          <rect class="p z-hoses z-radiator" x="76" y="32" width="88" height="8" rx="3"/>
+          <path class="s z-hoses" d="M90 40 Q84 64 98 80 M150 40 Q160 70 140 92"/>
+          <circle class="g z-belts" cx="98" cy="96" r="10"/><circle class="g z-belts" cx="124" cy="118" r="7"/>
+          <path class="s z-belts" d="M90 92 L118 122 M106 92 L130 116"/>
+          <rect class="g z-battery" x="144" y="104" width="24" height="18" rx="2"/>
+          <path class="g z-fluids z-oil" d="M128 52 Q140 70 140 78 A12 12 0 0 1 116 78 Q116 70 128 52Z"/>
+          <!-- glass -->
+          <path class="g z-glass z-screen" d="M60 158 Q120 140 180 158 L172 196 Q120 186 68 196Z"/>
+          <path class="s z-wipers" d="M80 192 L112 166 M128 190 L160 164"/>
+          <path class="g z-glass" d="M54 206 L62 206 L62 390 L54 390Z M178 206 L186 206 L186 390 L178 390Z"/>
+          <path class="g z-glass" d="M68 410 Q120 418 172 410 L178 440 Q120 452 62 440Z"/>
+          <!-- cabin: seats, belts, steering wheel (right-hand drive) -->
+          <rect class="p z-seats" x="76" y="222" width="38" height="56" rx="8"/><rect class="p z-seats" x="126" y="222" width="38" height="56" rx="8"/>
+          <rect class="p z-seats" x="72" y="318" width="96" height="58" rx="10"/>
+          <path class="s z-seats" d="M84 226 L108 274 M134 226 L158 274"/>
+          <circle class="s z-steering" cx="145" cy="208" r="12"/>
+          <!-- lights, signals and reflectors -->
+          <path class="p z-lights" d="M56 40 Q66 26 86 24 L82 36 Q66 38 60 48Z M184 40 Q174 26 154 24 L158 36 Q174 38 180 48Z"/>
+          <path class="p z-lights" d="M54 478 Q62 494 84 500 L84 488 Q66 486 60 472Z M186 478 Q178 494 156 500 L156 488 Q174 486 180 472Z"/>
+          <!-- brakes over the wheels -->
+          <circle class="g z-brakes" cx="31" cy="118" r="8"/><circle class="g z-brakes" cx="209" cy="118" r="8"/>
+          <circle class="g z-brakes" cx="31" cy="406" r="8"/><circle class="g z-brakes" cx="209" cy="406" r="8"/>
+        </svg>
+        <figcaption id="car-cap">Wheels and tyres: each wheel</figcaption>
+      </figure>
+
+      <div class="slip-wrap" data-ui data-in style="--i:2"><div class="slip">
+        <p class="head"><span>M1 Motors job card</span><span id="slip-make">BMW</span></p>
+        <div class="card" id="card-rwc">
+          <h3>Roadworthy inspection: running gear</h3>
+          <ul>
+            <li><button class="row" type="button" data-z="wheels" aria-pressed="true">Wheels and tyres<i class="dots"></i><span class="where">Each wheel</span></button></li>
+            <li><button class="row" type="button" data-z="oil fluids" aria-pressed="false">Oil and fluid leaks<i class="dots"></i><span class="where">Engine bay</span></button></li>
+            <li><button class="row" type="button" data-z="steering suspension" aria-pressed="false">Steering and suspension<i class="dots"></i><span class="where">Both axles</span></button></li>
+            <li><button class="row" type="button" data-z="brakes" aria-pressed="false">Brakes<i class="dots"></i><span class="where">Each wheel</span></button></li>
+          </ul>
+          <h3>Inside</h3>
+          <ul>
+            <li><button class="row" type="button" data-z="seats" aria-pressed="false">Seats and seatbelts<i class="dots"></i><span class="where">Cabin</span></button></li>
+            <li><button class="row" type="button" data-z="all" aria-pressed="false">General vehicle<i class="dots"></i><span class="where">Whole car</span></button></li>
+          </ul>
+          <h3>Outside</h3>
+          <ul>
+            <li><button class="row" type="button" data-z="lights" aria-pressed="false">Lights, signals and reflectors<i class="dots"></i><span class="where">Front and rear</span></button></li>
+            <li><button class="row" type="button" data-z="glass" aria-pressed="false">Windscreen and windows<i class="dots"></i><span class="where">All round</span></button></li>
+            <li><button class="row" type="button" data-z="body" aria-pressed="false">Body and chassis<i class="dots"></i><span class="where">Whole car</span></button></li>
+          </ul>
+          <p class="result"><span>Certificate, if it passes</span><span>Within a week</span></p>
+        </div>
+        <div class="card" id="card-log" hidden>
+          <h3>Logbook service: under the bonnet</h3>
+          <ul>
+            <li><button class="row" type="button" data-z="oil" aria-pressed="false">Engine oil and oil filter changed<i class="dots"></i><span class="where">Engine bay</span></button></li>
+            <li><button class="row" type="button" data-z="belts" aria-pressed="false">Fan belts<i class="dots"></i><span class="where">Engine bay</span></button></li>
+            <li><button class="row" type="button" data-z="battery" aria-pressed="false">Computer battery test<i class="dots"></i><span class="where">Engine bay</span></button></li>
+            <li><button class="row" type="button" data-z="fluids" aria-pressed="false">Fluids checked and refilled<i class="dots"></i><span class="where">Engine bay</span></button></li>
+            <li><button class="row" type="button" data-z="hoses" aria-pressed="false">Radiator hoses<i class="dots"></i><span class="where">Engine bay</span></button></li>
+          </ul>
+          <h3>Running gear</h3>
+          <ul>
+            <li><button class="row" type="button" data-z="brakes" aria-pressed="false">Brakes inspected and adjusted<i class="dots"></i><span class="where">Each wheel</span></button></li>
+            <li><button class="row" type="button" data-z="steering suspension" aria-pressed="false">Steering and suspension<i class="dots"></i><span class="where">Both axles</span></button></li>
+            <li><button class="row" type="button" data-z="wheels" aria-pressed="false">Tyre pressures<i class="dots"></i><span class="where">Each wheel</span></button></li>
+          </ul>
+          <h3>Outside</h3>
+          <ul>
+            <li><button class="row" type="button" data-z="lights" aria-pressed="false">Lights<i class="dots"></i><span class="where">Front and rear</span></button></li>
+            <li><button class="row" type="button" data-z="screen wipers" aria-pressed="false">Wipers and windscreen<i class="dots"></i><span class="where">Windscreen</span></button></li>
+          </ul>
+          <p class="result"><span>Your logbook, stamped</span><span>Warranty kept</span></p>
+        </div>
+      </div></div>
+    </div>
+  </section>
+
+  <section class="street" id="workshop" aria-labelledby="street-h">
+    <h2 id="street-h" data-in><span>Rooks</span><span>Road</span></h2>
+    <div class="prints">
+    <figure class="print a" data-in style="--i:1"><img src="img/m4-bonnet.jpg" width="600" height="400" alt="Mechanic standing beside a BMW M4 with the bonnet up" loading="lazy"><figcaption>BMW M4 in for work</figcaption></figure>
+    <figure class="print b" data-in style="--i:2"><img src="img/tyre-machine.jpg" width="600" height="400" alt="Mechanic fitting a tyre on the tyre changing machine" loading="lazy"><figcaption>Tyre fitting</figcaption></figure>
+    <figure class="print c" data-in style="--i:3"><img src="img/engine-rebuild.jpg" width="600" height="400" alt="Mechanic working on an engine out of the car" loading="lazy"><figcaption>Engine work</figcaption></figure>
+    </div>
+    <p class="line" data-in style="--i:4">Inside the workshop at Unit 3, 50 Rooks Rd, Nunawading, with the latest diagnostic equipment.</p>
+  </section>
+
+  <section class="about" id="about" aria-labelledby="about-h">
+    <div class="about-grid">
+      <figure data-in><img src="img/team.jpg" width="600" height="400" alt="The M1 Motors team in black workshop jackets lined up beside a dark BMW on the workshop floor" loading="lazy"></figure>
+      <div>
+        <h2 id="about-h" data-in>About us</h2>
+        <div class="words">
+          <p data-in style="--i:1">M1 Motors services and repairs European cars for Nunawading, the Eastern suburbs and a loyal customer base across Melbourne.</p>
+          <p data-in style="--i:2">Our staff get the latest industry training and work with state of the art tools and equipment, so we can repair the latest BMW, Mercedes Benz, Audi, Volkswagen and Mini models.</p>
+          <p data-in style="--i:3">We treat every customer with respect, keep you updated through the repair, and give honest advice. No job is too big or too small, from a minor service to an engine rebuild.</p>
+        </div>
+        <div class="stub" data-in style="--i:4">
+          <a class="btn" href="#book">Book online</a>
+          <a class="btn alt" href="mailto:joe@m1motors.com.au">joe@m1motors.com.au</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="find" id="find" aria-labelledby="find-h">
+    <figure><img src="img/nunawading.jpg" width="1920" height="497" alt="Aerial view of Nunawading looking east along the railway line to the Dandenong Ranges" loading="lazy"><figcaption>Nunawading from the air, looking east to the Dandenongs</figcaption></figure>
+    <ul class="rows">
+      <li><h2 id="find-h">Find us</h2></li>
+      <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Unit+3+50+Rooks+Rd+Nunawading+VIC+3131">Unit 3, 50 Rooks Rd</a></li>
+      <li>Nunawading VIC 3131</li>
+      <li><a href="tel:0398733668">03 9873 3668</a></li>
+      <li class="mail"><a href="mailto:joe@m1motors.com.au">joe@m1motors.com.au</a></li>
+      <li class="greet"><span>Book in</span><a class="round" href="#book" aria-label="Book online"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h16M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="3"/></svg></a></li>
+    </ul>
+  </section>
+</main>
+
+<footer id="book" aria-labelledby="book-h">
+  <div class="book-grid">
+    <div class="book">
+      <h2 id="book-h" data-in>Book your car in</h2>
+      <p data-in style="--i:1">Tell us the car and the job, and we'll come back to you to confirm a time. Rather talk? Call 03 9873 3668.</p>
+      <form id="booking" action="mailto:joe@m1motors.com.au" method="get" enctype="text/plain" data-in style="--i:2">
+        <label>Your name<input name="name" autocomplete="name" required></label>
+        <label>Phone<input name="phone" type="tel" autocomplete="tel" required></label>
+        <label>Make
+          <select name="make" id="f-make">
+            <option>BMW</option><option>Mercedes Benz</option><option>Audi</option><option>Volkswagen</option><option>Mini</option><option>Another make</option>
+          </select>
+        </label>
+        <label>Model and year<input name="model" placeholder="e.g. 320i, 2019"></label>
+        <label>Job
+          <select name="job" id="f-job">
+            <option>Logbook service</option><option>Minor or major service</option><option>Roadworthy inspection</option><option>Tyres</option>
+            <option>Brake repairs</option><option>Exhaust repairs</option><option>Major mechanical repairs</option>
+          </select>
+        </label>
+        <label>Preferred day<input name="day" type="date"></label>
+        <label class="wide">Anything we should know<textarea name="message" id="f-msg"></textarea></label>
+        <p class="note">This opens your email app with the details filled in, addressed to joe@m1motors.com.au. Nothing is stored on this page.</p>
+        <button class="btn" type="submit">Send my booking request</button>
+      </form>
+    </div>
+    <address class="links" data-in style="--i:2">
+      <a href="tel:0398733668">03 9873 3668</a>
+      <a href="mailto:joe@m1motors.com.au">joe@m1motors.com.au</a>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=Unit+3+50+Rooks+Rd+Nunawading+VIC+3131">Unit 3, 50 Rooks Rd, Nunawading</a>
+      <a href="https://www.facebook.com/groups/200568787326/">Facebook</a>
+    </address>
+  </div>
+  <div class="legal">
+    <p>© <span data-year>2026</span> M1 Motors, Unit 3, 50 Rooks Rd, Nunawading VIC 3131. Workshop photographs: M1 Motors. Aerial picture: <a href="https://commons.wikimedia.org/w/index.php?curid=146409149">“Nunawading aerial panorama facing the Dandenong Ranges. March 2024”</a> by BobTanGo, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, via Wikimedia Commons.</p>
+    <p>Concept design by <a href="https://swoopsites.com/">Swoop Sites</a>, Melbourne.</p>
+  </div>
+  <p class="wordmark" aria-hidden="true">M1 Motors</p>
+</footer>
+
+<nav class="thumb" aria-label="Call or book">
+  <a class="btn alt" href="tel:0398733668">Call</a>
+  <a class="btn" href="#book">Book online</a>
+</nav>
+
+<script>
+document.documentElement.classList.add('js');
+document.querySelectorAll('[data-year]').forEach((el) => { el.textContent = new Date().getFullYear(); });
+// entrances, once per element
+const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+document.querySelectorAll('[data-in]').forEach((el) => io.observe(el));
+
+// sticky header: gains a blurred backing once the page moves
+const hdr = document.querySelector('.top'), thumb = document.querySelector('.thumb'); let lastY = scrollY; const pin = document.querySelector('.pin');
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const hero = document.querySelector('.hero'), stage = document.querySelector('.stage');
+function onScroll() {
+  hdr.classList.toggle('scrolled', scrollY > 24);
+  pin.classList.toggle('past', scrollY > innerHeight * 0.4);
+  // phone bar: steps aside while you read down, back the moment you scroll up
+  thumb.classList.toggle('away', scrollY > lastY && scrollY > innerHeight * 0.5);
+  lastY = scrollY;
+  // darken the loop as the photos start to pass over it
+  const k = Math.min(1, Math.max(0, scrollY / (innerHeight * 0.8)));
+  stage.style.setProperty('--dim', k.toFixed(3));
+}
+addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+// the hero loop: off for reduced motion, paused when out of view
+const vid = document.querySelector('.hero-video');
+if (reduce) { vid.removeAttribute('autoplay'); vid.pause(); }
+else new IntersectionObserver(([e]) => { e.isIntersecting ? vid.play().catch(() => {}) : vid.pause(); }).observe(hero);
+
+// workshop readout: local time in Nunawading
+const clock = document.getElementById('clock');
+const fmt = new Intl.DateTimeFormat('en-AU', { timeZone: 'Australia/Melbourne', hour: 'numeric', minute: '2-digit' });
+function tick() { const now = new Date(); clock.textContent = fmt.format(now); clock.dateTime = now.toISOString(); }
+tick(); setInterval(tick, 15000);
+
+// numbers count up once, the first time they are seen
+const cio = new IntersectionObserver((es) => es.forEach((e) => {
+  if (!e.isIntersecting) return; cio.unobserve(e.target);
+  const el = e.target, end = +el.dataset.count; if (reduce) return;
+  const t0 = performance.now(), dur = 1100;
+  (function step(t) { const p = Math.min(1, (t - t0) / dur); el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(step); })(t0);
+}), { threshold: .6 });
+document.querySelectorAll('[data-count]').forEach((el) => cio.observe(el));
+
+// services: pointing at a name shows its line in the fixed spot
+const desc = document.getElementById('svc-desc');
+document.querySelectorAll('.names li[data-d]').forEach((li) => li.addEventListener('mouseenter', () => {
+  document.querySelectorAll('.names li.on').forEach((x) => x.classList.remove('on'));
+  li.classList.add('on'); desc.textContent = li.dataset.d;
+}));
+
+// the job card lights the car
+const car = document.querySelector('.car svg'), cap = document.getElementById('car-cap');
+function light(btn) {
+  document.querySelectorAll('.row[aria-pressed="true"]').forEach((b) => b.setAttribute('aria-pressed', 'false'));
+  btn.setAttribute('aria-pressed', 'true');
+  car.querySelectorAll('.on').forEach((el) => el.classList.remove('on'));
+  btn.dataset.z.split(' ').forEach((z) => car.querySelectorAll('.z-' + z).forEach((el) => el.classList.add('on')));
+  cap.textContent = btn.firstChild.textContent.trim() + ': ' + btn.querySelector('.where').textContent.toLowerCase();
+}
+document.querySelectorAll('.row').forEach((b) => b.addEventListener('click', () => light(b)));
+light(document.querySelector('#card-rwc .row'));
+
+// roadworthy or logbook, and the make, carried into the button and the booking form
+const fJob = document.getElementById('f-job'), fMake = document.getElementById('f-make');
+function sync() {
+  const log = document.getElementById('j-log').checked;
+  document.getElementById('card-rwc').hidden = log;
+  document.getElementById('card-log').hidden = !log;
+  const make = document.querySelector('input[name=make]:checked').value;
+  document.getElementById('go-job').textContent = log ? 'logbook service' : 'roadworthy';
+  document.getElementById('go-make').textContent = make === 'Another make' ? 'car' : make;
+  document.getElementById('slip-make').textContent = make;
+}
+document.querySelectorAll('input[name=job]').forEach((r) => r.addEventListener('change', () => { sync(); light(document.querySelector((document.getElementById('j-log').checked ? '#card-log' : '#card-rwc') + ' .row')); }));
+document.querySelectorAll('input[name=make]').forEach((r) => r.addEventListener('change', sync));
+document.getElementById('take-job').addEventListener('click', () => {
+  fJob.value = document.getElementById('j-log').checked ? 'Logbook service' : 'Roadworthy inspection';
+  fMake.value = document.querySelector('input[name=make]:checked').value;
+});
+sync();
+
+// a tidy email instead of a raw form post
+document.getElementById('booking').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const f = new FormData(e.target);
+  const body = `Name: ${f.get('name')}\nPhone: ${f.get('phone')}\nCar: ${f.get('make')} ${f.get('model')}\nJob: ${f.get('job')}\nPreferred day: ${f.get('day') || 'Any'}\n\n${f.get('message')}`;
+  location.href = 'mailto:joe@m1motors.com.au?subject=' + encodeURIComponent('Booking request: ' + f.get('job') + ', ' + f.get('make')) + '&body=' + encodeURIComponent(body);
+});
+</script>
+</body>
+</html>
