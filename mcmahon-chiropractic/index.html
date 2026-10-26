@@ -1,0 +1,771 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Raymond McMahon Chiropractic Centre | Chiropractor and Homoeopath, Endeavour Hills (concept)</title>
+<meta name="description" content="Concept homepage for the Raymond McMahon Chiropractic Centre and Endeavour Hills Homoeopathic Centre: chiropractic and homoeopathy side by side with Dr John Cook at 2 Hellyer Way, Endeavour Hills. Orthotics and mineral hair analysis. Call 03 9700 0333.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Colour chapters. Slate is the blue-grey of the clinic's own old site and its spine artwork; sage is the remedy;
+     blush and paper are the quiet chapters; deep olive is the one action colour and the closing chapter. */
+  --bg: #a6b3bc;          /* slate: chiropractic */
+  --surface: #b2bdc5;
+  --ink: #1c1c1c;
+  --muted: #38424a;
+  --accent: #2c3620;      /* deep olive: the one action colour */
+  --accent-ink: #e3e2da;
+  --sage: #b7c8be;        /* homoeopathy */
+  --blush: #d6c4b8;
+  --paper: #e3e2da;
+  --olive: #2c3620;
+  --step-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+  --step-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+  --step-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
+  --step-head: clamp(2.25rem, 1.2rem + 4.2vw, 5.5rem);
+  --step-hero: clamp(2.75rem, 0.6rem + 6.6vw, 6.5rem);
+  --step-h3: clamp(1.5rem, 1.2rem + 0.8vw, 2rem);
+  --m: clamp(16px, 2vw, 28px);
+  --r: 14px;
+  --drop: drop-shadow(0 1px 2px rgba(0,0,0,.08)) drop-shadow(0 22px 34px rgba(0,0,0,.16)); /* taste-skill-ignore: premium depth (Swoop Sites premium bar) */
+  --drop-hi: drop-shadow(0 2px 3px rgba(0,0,0,.1)) drop-shadow(0 34px 50px rgba(0,0,0,.24)); /* taste-skill-ignore: premium depth (Swoop Sites premium bar) */
+  --drop-dark: drop-shadow(0 1px 3px rgba(0,0,0,.25)) drop-shadow(0 26px 44px rgba(0,0,0,.35)); /* taste-skill-ignore: premium depth (Swoop Sites premium bar) */
+  --ease: cubic-bezier(.16, 1, .3, 1);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { margin: 0; background: var(--olive); color: var(--ink); font: 400 var(--step-body)/1.45 "Schibsted Grotesk", system-ui, sans-serif; letter-spacing: -0.01em; }
+img, video { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-underline-offset: 3px; }
+::selection { background: var(--accent); color: var(--accent-ink); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+h1, h2, h3 { font-weight: 800; letter-spacing: -0.05em; line-height: 0.92; margin: 0; text-wrap: balance; }
+p, ul, ol, dl, figure, blockquote { margin: 0; }
+ul { padding: 0; list-style: none; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 26px; white-space: nowrap;
+  background: var(--accent); color: var(--accent-ink); font: 600 var(--step-body)/1 "Schibsted Grotesk", sans-serif; letter-spacing: -0.01em;
+  text-decoration: none; border: 0; border-radius: 999px; cursor: pointer;
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease), background-color .25s var(--ease); }
+.btn:hover { transform: translateY(-2px); background: #374428; box-shadow: 0 2px 4px rgba(0,0,0,.14), 0 18px 34px rgba(44,54,32,.34); } /* taste-skill-ignore: premium depth (Swoop Sites premium bar) */
+.btn:active { transform: translateY(0) scale(.97); box-shadow: 0 1px 2px rgba(0,0,0,.14); } /* taste-skill-ignore: premium depth (Swoop Sites premium bar) */
+.btn.light { background: var(--paper); color: var(--ink); }
+.btn.light:hover { background: #fff; }
+.tlink { display: inline-flex; align-items: center; min-height: 48px; font-weight: 600; text-decoration: underline; text-decoration-thickness: 2px; }
+.tlink:hover { text-decoration-thickness: 4px; }
+
+/* Concept banner: always first, never hidden */
+.concept { background: #111; color: #ddd; font-size: var(--step-small); text-align: center; padding: 9px var(--m); position: relative; z-index: 50; }
+.concept b { color: #fff; }
+
+/* ---------- Header: ink block, the tab of links, the one action. Sticky, blurs after scrolling ---------- */
+.top { position: sticky; top: 0; z-index: 40; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 0;
+  padding: 10px var(--m); background: var(--bg); transition: padding .3s var(--ease), background-color .3s var(--ease), box-shadow .3s var(--ease); }
+.top.scrolled { padding-top: 6px; padding-bottom: 6px; background: rgba(166,179,188,.8); -webkit-backdrop-filter: blur(14px) saturate(1.3); backdrop-filter: blur(14px) saturate(1.3); /* taste-skill-ignore: premium depth (Swoop Sites premium bar) */
+  box-shadow: 0 1px 0 rgba(0,0,0,.05), 0 12px 30px rgba(0,0,0,.12); } /* taste-skill-ignore: premium depth (Swoop Sites premium bar) */
+.mark { display: inline-flex; align-items: center; gap: 12px; min-height: 52px; padding: 0 18px 0 8px; background: var(--ink); color: var(--paper); text-decoration: none;
+  border-radius: 999px 0 0 999px; font-weight: 800; font-size: 1.0625rem; letter-spacing: -0.03em; line-height: 1.05; }
+.mark svg { width: 38px; height: 38px; flex: none; }
+.tab { display: flex; align-items: center; gap: 26px; min-height: 52px; padding: 0 22px; background: var(--surface); border-radius: 0 999px 999px 0; justify-self: start; }
+.tab a { font-weight: 600; text-decoration: none; padding: 12px 0; font-size: var(--step-small); }
+.tab a:hover { text-decoration: underline; }
+.top .btn { justify-self: end; }
+
+/* ---------- Hero: mosaic masthead, title on the axis ---------- */
+.hero { background: var(--bg); padding: 6px var(--m) clamp(64px, 9vh, 112px); }
+.mosaic { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); grid-template-rows: 1fr 1fr; height: clamp(420px, 54svh, 600px);
+  border-radius: var(--r); overflow: hidden; filter: var(--drop); } /* taste-skill-ignore: premium depth (Swoop Sites premium bar) */
+.mosaic > * { min-width: 0; min-height: 0; position: relative; margin: 0; }
+.mosaic .film { grid-column: 1 / 4; grid-row: 1 / 3; background: #d9d6cb; }
+.mosaic .film video { width: 100%; height: 100%; object-fit: cover; }
+.mosaic .cap { position: absolute; left: 14px; bottom: 14px; background: rgba(28,28,28,.66); color: #f1f0ea; font-size: var(--step-small); padding: 6px 12px; border-radius: 999px; }
+.mosaic .pic img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.05); }
+.mosaic .doc { grid-column: 5; grid-row: 1; }
+.mosaic .doc img { object-position: 50% 22%; }
+.mosaic .house { grid-column: 5 / 7; grid-row: 2; }
+.mosaic .house img { object-position: 50% 40%; }
+.mosaic .tile { grid-column: 6; grid-row: 1; background: var(--blush); display: flex; align-items: flex-end; padding: 18px; font-weight: 600; font-size: var(--step-small); line-height: 1.3; }
+
+/* instrument: the clinic's week, live */
+.status { grid-column: 4; grid-row: 1 / 3; background: var(--sage); padding: clamp(16px, 1.6vw, 24px); display: flex; flex-direction: column; gap: 14px; }
+.status .clock { font-size: clamp(2rem, 1.2rem + 1.6vw, 3rem); font-weight: 800; letter-spacing: -0.05em; line-height: 1; }
+.status .where { font-size: var(--step-small); font-weight: 600; }
+.status .state { display: flex; align-items: center; gap: 10px; font-weight: 600; line-height: 1.25; }
+.status .dot { width: 12px; height: 12px; border-radius: 50%; background: var(--olive); flex: none; box-shadow: 0 0 0 0 rgba(44,54,32,.5); animation: pulse 2.2s infinite; } /* taste-skill-ignore: premium depth (Swoop Sites premium bar) */
+.status.shut .dot { background: #6d6a63; animation: none; }
+@keyframes pulse { to { box-shadow: 0 0 0 9px rgba(44,54,32,0); } } /* taste-skill-ignore: premium depth (Swoop Sites premium bar) */
+.week { margin-top: auto; display: grid; gap: 5px; font-size: var(--step-small); }
+.week li { display: grid; grid-template-columns: 2.6em minmax(0, 1fr); align-items: center; gap: 8px; }
+.week .track { position: relative; height: 10px; background: rgba(28,28,28,.1); border-radius: 999px; }
+.week .track i { position: absolute; top: 0; bottom: 0; background: var(--olive); border-radius: 999px; opacity: .55; }
+.week .now-line { position: absolute; top: -3px; bottom: -3px; width: 2px; background: var(--ink); display: none; }
+.week li.today { font-weight: 800; }
+.week li.today .track i { opacity: 1; }
+.week li.today .now-line { display: block; }
+
+.lead-row { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 0 16px; margin-top: clamp(40px, 7vh, 96px); align-items: start; }
+.stand { grid-column: 1 / 5; font-size: var(--step-lead); line-height: 1.3; max-width: 30ch; padding-top: .4em; }
+.title { grid-column: 5 / 13; }
+.title h1 { font-size: var(--step-hero); line-height: .9; letter-spacing: -0.055em; }
+.title h1 .ln { display: block; }
+.calls { grid-column: 5 / 13; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 26px; margin-top: 34px; }
+
+/* kinetic headline */
+.kin .kw { display: inline-block; opacity: 0; filter: blur(8px); animation: kin .55s cubic-bezier(.2,.7,.2,1) forwards; animation-delay: calc(var(--i) * 70ms + 120ms); }
+@keyframes kin { to { opacity: 1; filter: blur(0); } }
+
+/* real numbers */
+.nums { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: clamp(56px, 8vh, 96px); }
+.nums div { background: var(--surface); border-radius: var(--r); padding: clamp(18px, 2vw, 28px); filter: var(--drop); /* taste-skill-ignore: premium depth (Swoop Sites premium bar) */
+  transition: transform .35s var(--ease), filter .35s var(--ease); }
+.nums div:hover { transform: translateY(-4px); filter: var(--drop-hi); } /* taste-skill-ignore: premium depth (Swoop Sites premium bar) */
+.nums b { display: block; font-size: var(--step-head); font-weight: 800; letter-spacing: -0.055em; line-height: 1; font-variant-numeric: tabular-nums; }
+.nums div > span { display: block; margin-top: 10px; font-weight: 600; line-height: 1.3; }
+
+/* ---------- Intro: staircase statement on blush ---------- */
+.stair { background: var(--blush); padding: 160px var(--m) 140px; display: grid; grid-template-columns: minmax(0, 9fr) minmax(0, 3fr); grid-template-rows: auto auto 1fr; gap: 0 24px; }
+.stair h2 { grid-column: 1; font-size: var(--step-lead); letter-spacing: -0.03em; margin-bottom: 56px; }
+.stair .steps { grid-column: 1; }
+.stair .steps { font-size: clamp(2rem, 1rem + 3.4vw, 4rem); font-weight: 800; line-height: 1.02; letter-spacing: -0.045em; }
+.stair .steps li { display: block; }
+.stair .steps { list-style: none; padding: 0; margin: 0; }
+.stair .steps li:nth-child(2) { padding-left: 6vw; color: var(--olive); }
+.stair .steps li:nth-child(3) { padding-left: 12vw; }
+.stair .steps li:nth-child(4) { padding-left: 18vw; color: var(--olive); }
+.stair .steps li:nth-child(5) { padding-left: 24vw; }
+.stair .pair { grid-column: 2; grid-row: 1 / 4; display: grid; gap: 16px; align-self: start; }
+.stair .pair img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--r); filter: var(--drop); } /* taste-skill-ignore: premium depth (Swoop Sites premium bar) */
+.stair .pair figcaption { font-size: var(--step-small); margin-top: 6px; font-weight: 600; }
+.stair .note { grid-column: 1; align-self: end; margin-top: 72px; font-size: var(--step-small); font-weight: 600; max-width: 46ch; }
+
+/* ---------- Services: two chapters side by side ---------- */
+.both { display: grid; grid-template-columns: 1fr 1fr; }
+.chap { padding: 140px var(--m) 160px; }
+.chap.chiro { background: var(--bg); }
+.chap.homo { background: var(--sage); }
+.chap > h2 { font-size: var(--step-head); }
+.chap .lede { margin-top: 26px; font-size: var(--step-lead); line-height: 1.3; max-width: 30ch; }
+.blocks { margin-top: 96px; display: flex; flex-direction: column; gap: 100px; }
+.blk h3 { font-size: var(--step-h3); letter-spacing: -0.04em; margin-bottom: 20px; }
+.blk .pairing { display: grid; grid-template-columns: minmax(140px, 200px) minmax(0, 1fr); gap: 24px; align-items: start; }
+.blk.flip .pairing { grid-template-columns: minmax(0, 1fr) minmax(140px, 200px); }
+.blk.flip .pairing figure { order: 2; }
+.blk figure img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--r); filter: var(--drop); transition: transform .4s var(--ease); } /* taste-skill-ignore: premium depth (Swoop Sites premium bar) */
+.blk figure:hover img { transform: translateY(-4px) rotate(-.6deg); }
+.blk figcaption { margin-top: 8px; font-size: var(--step-small); font-weight: 600; line-height: 1.3; }
+.blk li { padding: 7px 0; line-height: 1.4; }
+.blk li + li { margin-top: 2px; }
+.blk .solo { max-width: 46ch; }
+
+/* ---------- Also at the clinic: orthotics and hair analysis on paper ---------- */
+.also { background: var(--paper); padding: 160px var(--m); }
+.also > h2 { font-size: var(--step-head); }
+.also .cols { margin-top: 64px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px; }
+.panel { background: #e8ebec; border-radius: var(--r); padding: clamp(24px, 3vw, 44px); filter: var(--drop); transition: transform .35s var(--ease), filter .35s var(--ease); } /* taste-skill-ignore: premium depth (Swoop Sites premium bar) */
+.panel:hover { transform: translateY(-4px); filter: var(--drop-hi); } /* taste-skill-ignore: premium depth (Swoop Sites premium bar) */
+.panel.feet { grid-column: 1 / 7; }
+.panel.hair { grid-column: 7 / 13; margin-top: 80px; }
+.panel h3 { font-size: var(--step-h3); }
+.panel p { margin-top: 16px; max-width: 46ch; }
+.panel ul { margin-top: 18px; display: grid; gap: 10px; }
+.panel li { padding-left: 22px; position: relative; line-height: 1.4; }
+.panel li::before { content: ""; position: absolute; left: 0; top: .5em; width: 10px; height: 10px; border-radius: 50%; background: var(--olive); }
+.insole { margin-top: 24px; background: var(--bg); border-radius: var(--r); padding: 18px; }
+.insole svg { width: 100%; height: auto; display: block; }
+.insole .opts { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+.insole input { position: absolute; opacity: 0; pointer-events: none; }
+.insole label { min-height: 48px; display: inline-flex; align-items: center; padding: 0 18px; border-radius: 999px; background: var(--surface); font-weight: 600; cursor: pointer; transition: transform .25s var(--ease), background-color .25s; }
+.insole label:hover { transform: translateY(-2px); }
+.insole input:checked + label { background: var(--ink); color: var(--paper); }
+.insole input:focus-visible + label { outline: 3px solid var(--accent); outline-offset: 2px; }
+.insole .sole { transition: d .5s var(--ease); }
+.insole:has(#len-34:checked) .full-part { opacity: 0; }
+.insole .full-part { transition: opacity .5s var(--ease); }
+.insole .say { font-size: var(--step-small); margin-top: 10px; font-weight: 600; }
+.insole .say .t34 { display: none; }
+.insole:has(#len-34:checked) .say .t34 { display: inline; }
+.insole:has(#len-34:checked) .say .tfull { display: none; }
+
+/* ---------- The live thing: am I covered? ---------- */
+.cover { background: var(--blush); padding: 160px var(--m); }
+.cover-in { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 5vw, 80px); align-items: start; }
+.cover h2 { font-size: var(--step-head); }
+.cover .lede { margin-top: 26px; font-size: var(--step-lead); line-height: 1.3; max-width: 28ch; }
+.cover fieldset { border: 0; padding: 0; margin: 0 0 22px; }
+.cover legend { font-weight: 600; margin-bottom: 10px; padding: 0; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips input { position: absolute; opacity: 0; pointer-events: none; }
+.chips label { min-height: 52px; display: inline-flex; align-items: center; padding: 0 20px; border-radius: 999px; background: #e6d9cf; font-weight: 600; cursor: pointer;
+  transition: transform .25s var(--ease), background-color .25s, color .25s, box-shadow .25s; } /* taste-skill-ignore: premium depth (Swoop Sites premium bar) */
+.chips label:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,.1); } /* taste-skill-ignore: premium depth (Swoop Sites premium bar) */
+.chips input:checked + label { background: var(--ink); color: var(--paper); }
+.chips input:focus-visible + label { outline: 3px solid var(--accent); outline-offset: 2px; }
+.answer { background: var(--paper); border-radius: var(--r); padding: clamp(24px, 3vw, 40px); filter: var(--drop); margin-top: 10px; } /* taste-skill-ignore: premium depth (Swoop Sites premium bar) */
+.answer article { display: none; animation: readin .45s var(--ease); }
+.answer article h3 { font-size: var(--step-h3); }
+.answer article p { margin-top: 14px; max-width: 48ch; }
+.answer .from { margin-top: 18px; font-size: var(--step-small); color: var(--muted); }
+.answer .go { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 10px 24px; align-items: center; }
+@keyframes readin { from { opacity: 0; transform: translateY(10px); } }
+.cover:has(#t-chiro:checked):has(#c-priv:checked) [data-a="chiro-priv"],
+.cover:has(#t-chiro:checked):has(#c-medi:checked) [data-a="chiro-medi"],
+.cover:has(#t-chiro:checked):has(#c-work:checked) [data-a="chiro-work"],
+.cover:has(#t-homo:checked):has(#c-priv:checked) [data-a="homo-priv"],
+.cover:has(#t-homo:checked):has(#c-medi:checked) [data-a="homo-medi"],
+.cover:has(#t-homo:checked):has(#c-work:checked) [data-a="homo-work"] { display: block; }
+
+/* ---------- About Dr Cook: two columns, highlighted words ---------- */
+.about { background: var(--sage); padding: 140px var(--m); }
+.about h2 { font-size: var(--step-head); margin-bottom: 48px; }
+.story { columns: 2; column-gap: 40px; font-size: var(--step-lead); line-height: 1.3; letter-spacing: -0.02em; color: var(--muted); text-align: justify; hyphens: auto; }
+.story p + p { margin-top: .7em; }
+.story b { color: var(--ink); font-weight: 600; }
+.story mark { color: var(--ink); padding: 0 .12em; border-radius: 4px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.story mark.a { background: var(--paper); } .story mark.b { background: var(--blush); } .story mark.c { background: var(--bg); }
+.story .end { display: inline; background: var(--olive); color: var(--accent-ink); text-decoration: none; padding: 0 .15em; border-radius: 4px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.story .end:hover { background: #374428; }
+
+/* ---------- FAQ: a band per question, in the colour of its practice ---------- */
+.faq .head { background: var(--olive); color: var(--accent-ink); min-height: 40svh; display: flex; align-items: flex-end; padding: 64px var(--m) 48px; }
+.faq .head h2 { font-size: var(--step-hero); }
+.band { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 0 24px; padding: 56px var(--m); }
+.band.c { background: var(--bg); } .band.h { background: var(--sage); }
+.band h3 { grid-column: 1 / 6; font-size: var(--step-h3); letter-spacing: -0.04em; line-height: 1.05; }
+.band .ans { grid-column: 7 / 13; line-height: 1.5; }
+.band .ans .who { display: block; font-size: var(--step-small); font-weight: 600; margin-bottom: 8px; }
+
+/* ---------- Visit: photo strip, hours, the three-cell bar ---------- */
+.visit { background: var(--olive); color: var(--accent-ink); padding: 48px 0 140px; overflow: hidden; }
+.strip { display: flex; gap: 8px; width: max-content; animation: drift 60s linear infinite; }
+.strip img { height: 150px; width: auto; object-fit: cover; border-radius: 8px; }
+.strip img.w34 { aspect-ratio: 3 / 4; } .strip img.w11 { aspect-ratio: 1; } .strip img.w32 { aspect-ratio: 3 / 2; }
+@keyframes drift { to { transform: translateX(-50%); } }
+.visit .in { padding: 0 var(--m); }
+.visit h2 { margin-top: 72px; font-size: var(--step-head); max-width: 14ch; }
+.visit .grid { margin-top: 48px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px; }
+.visit .addr { grid-column: 1 / 6; display: flex; flex-direction: column; gap: 4px; font-size: var(--step-lead); line-height: 1.3; }
+.visit .addr a { min-height: 44px; display: inline-flex; align-items: center; }
+.visit .addr .small { font-size: var(--step-body); margin-top: 14px; }
+.hours { grid-column: 7 / 13; background: #36422a; border-radius: var(--r); padding: clamp(20px, 2.4vw, 32px); filter: var(--drop-dark); } /* taste-skill-ignore: premium depth (Swoop Sites premium bar) */
+.hours h3 { font-size: var(--step-h3); margin-bottom: 14px; }
+.hours dl { display: grid; grid-template-columns: auto 1fr; gap: 0; }
+.hours dt, .hours dd { padding: 9px 12px; margin: 0; }
+.hours dd { text-align: right; }
+.hours .today { background: var(--accent-ink); color: var(--olive); font-weight: 800; }
+.hours dt.today { border-radius: 8px 0 0 8px; } .hours dd.today { border-radius: 0 8px 8px 0; }
+.ask { margin-top: 64px; }
+.ask h3 { font-size: var(--step-h3); margin-bottom: 16px; }
+.bar { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.bar label { position: relative; display: block; }
+.bar label span { position: absolute; left: 22px; top: 12px; font-size: var(--step-small); font-weight: 600; color: #4a5440; pointer-events: none; }
+.bar input, .bar select { width: 100%; height: 96px; padding: 30px 22px 0; font: 600 1.125rem/1.2 "Schibsted Grotesk", sans-serif; color: var(--ink); background: #c9d3bd; border: 0; border-radius: var(--r); transition: background-color .2s; appearance: none; }
+.bar input:focus, .bar select:focus { background: #eef2e8; outline: 3px solid var(--accent-ink); outline-offset: 2px; }
+.bar button { height: 96px; border-radius: var(--r); background: var(--accent-ink); color: var(--olive); font-size: 1.25rem; } /* taste-skill-ignore: premium depth (Swoop Sites premium bar) */
+.bar button:hover { background: #fff; }
+.fine { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: 10px; font-size: var(--step-small); }
+.fine p:last-child { grid-column: 3; }
+.place { margin-top: 72px; }
+.place img { width: 100%; aspect-ratio: 3 / 1; object-fit: cover; border-radius: var(--r); filter: var(--drop-dark); } /* taste-skill-ignore: premium depth (Swoop Sites premium bar) */
+.place figcaption { margin-top: 10px; font-size: var(--step-small); }
+
+/* ---------- Footer: the name returns at full width ---------- */
+footer { background: #222a18; color: var(--accent-ink); padding: 96px var(--m) 40px; }
+footer .big { font-size: var(--step-hero); font-weight: 800; letter-spacing: -0.06em; line-height: .9; }
+footer .row { margin-top: 48px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px; }
+footer address { grid-column: 1 / 6; font-style: normal; display: flex; flex-direction: column; gap: 2px; }
+footer address a, footer address span { min-height: 44px; display: inline-flex; align-items: center; }
+footer .imprint { grid-column: 7 / 13; font-size: var(--step-small); display: flex; flex-direction: column; gap: 10px; }
+footer .imprint a { color: inherit; }
+.callbar { display: none; }
+
+/* ---------- Motion: reveals; content stays visible without script ---------- */
+.js .rv { opacity: 0; transform: translateY(22px); transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: calc(var(--d, 0) * 80ms); }
+.js .rv.in { opacity: 1; transform: none; }
+.hero .stand, .hero .calls { animation: rise .9s var(--ease) both; animation-delay: .45s; }
+@keyframes rise { from { opacity: 0; transform: translateY(18px); } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js .rv { opacity: 1; transform: none; }
+  .kin .kw { opacity: 1; filter: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1100px) {
+  .tab { gap: 18px; }
+  .both { grid-template-columns: 1fr; }
+  .stand { grid-column: 1 / 13; max-width: 40ch; order: 2; margin-top: 24px; }
+  .calls { order: 3; margin-top: 28px; }
+  .title { grid-column: 1 / 13; }
+  .lead-row { display: flex; flex-direction: column; }
+  .cover-in { grid-template-columns: 1fr; }
+  .panel.feet, .panel.hair { grid-column: 1 / 13; margin-top: 0; }
+  .nums { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .visit .addr, .hours { grid-column: 1 / 13; }
+}
+@media (max-width: 900px) {
+  .mosaic { grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: 44vw auto; height: auto; }
+  .mosaic .film { grid-column: 1 / 4; grid-row: 1; }
+  .mosaic .doc { grid-column: 1; grid-row: 2; }
+  .status { grid-column: 2 / 4; grid-row: 2; }
+  .mosaic .house, .mosaic .tile { display: none; }
+  .week { margin-top: 18px; }
+  .tab { display: none; }
+  .mark { border-radius: 999px; }
+}
+
+/* ---------- Phone: its own composition ---------- */
+@media (max-width: 760px) {
+  .top { padding: 8px 12px; }
+  .mark { font-size: .9375rem; padding-right: 14px; }
+  .mark .long { display: none; }
+  .top .btn .num { display: none; }
+  .top .btn { padding: 0 18px; min-height: 48px; }
+  .hero { padding: 4px 16px 72px; }
+  .mosaic { grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: 52vw auto; height: auto; }
+  .mosaic .film { grid-column: 1 / 4; grid-row: 1; }
+  .mosaic .doc { grid-column: 1; grid-row: 2; }
+  .status { grid-column: 2 / 4; grid-row: 2; gap: 8px; padding: 14px; }
+  .status .clock { font-size: 1.75rem; }
+  .week { gap: 3px; }
+  .mosaic .house, .mosaic .tile { display: none; }
+  .title h1 { font-size: 11vw; }
+  .stand { font-size: 1.125rem; }
+  .calls .btn { flex: 1 1 100%; }
+  .nums { gap: 8px; margin-top: 96px; }
+  .nums b { font-size: 2.5rem; }
+  .stair { grid-template-columns: 1fr; padding: 112px 18px 120px; }
+  .stair h2, .stair .steps, .stair .pair, .stair .note { grid-column: 1; grid-row: auto; }
+  .stair .steps { font-size: 6.6vw; }
+  .stair .steps li:nth-child(2) { padding-left: 5vw; } .stair .steps li:nth-child(3) { padding-left: 10vw; }
+  .stair .steps li:nth-child(4) { padding-left: 15vw; } .stair .steps li:nth-child(5) { padding-left: 20vw; }
+  .stair .pair { grid-template-columns: 1fr 1fr; margin-top: 32px; }
+  .stair .note { margin-top: 28px; }
+  .chap { padding: 96px 18px 112px; }
+  .chap > h2 { position: static; font-size: 13vw; }
+  .blocks { margin-top: 56px; gap: 72px; }
+  .blk .pairing, .blk.flip .pairing { grid-template-columns: 1fr; }
+  .blk.flip .pairing figure { order: 0; }
+  .blk figure img { aspect-ratio: 4 / 3; }
+  .also, .cover, .about { padding: 112px 18px; }
+  .story { columns: 1; text-align: left; font-size: 1.25rem; line-height: 1.25; }
+  .faq .head { min-height: 30svh; }
+  .faq .head h2 { font-size: 13vw; }
+  .band { display: block; padding: 32px 20px; }
+  .band .ans { margin-top: 14px; font-size: 1.0625rem; }
+  .strip img { height: 110px; }
+  .visit .addr, .hours { grid-column: 1 / 13; }
+  .bar { grid-template-columns: 1fr; }
+  .bar input, .bar select, .bar button { height: 64px; }
+  .bar input, .bar select { padding-top: 24px; }
+  .bar label span { top: 8px; }
+  .fine { grid-template-columns: 1fr; }
+  .fine p:last-child { grid-column: auto; }
+  .place img { aspect-ratio: 4 / 3; }
+  footer { padding-bottom: 110px; }
+  footer .big { font-size: 9vw; }
+  footer address, footer .imprint { grid-column: 1 / 13; }
+  .callbar { display: flex; position: fixed; z-index: 45; left: 0; right: 0; bottom: 0; padding: 10px 12px; gap: 8px;
+    background: rgba(44,54,32,.88); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); box-shadow: 0 -10px 30px rgba(0,0,0,.25); } /* taste-skill-ignore: premium depth (Swoop Sites premium bar) */
+  .callbar .btn { flex: 1; min-height: 52px; padding: 0 12px; }
+  .callbar { transition: transform .35s var(--ease); }
+  .callbar.away { transform: translateY(110%); }
+}
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Raymond McMahon Chiropractic Centre. This is a design preview, not the live website.</div>
+
+<header class="top">
+  <a class="mark" href="#top" aria-label="Raymond McMahon Chiropractic Centre, home">
+    <svg viewBox="0 0 38 38" aria-hidden="true"><circle cx="19" cy="19" r="19" fill="#b7c8be"/><g fill="#1c1c1c"><rect x="16" y="6" width="6" height="4.2" rx="2"/><rect x="15.4" y="11.6" width="7.2" height="4.4" rx="2"/><rect x="15" y="17.4" width="8" height="4.6" rx="2.2"/><rect x="15.4" y="23.4" width="7.2" height="4.4" rx="2"/><rect x="16" y="29.2" width="6" height="3.4" rx="1.7"/></g></svg>
+    <span>McMahon<span class="mid"> Chiropractic</span><span class="long"> &amp; Homoeopathic Centre</span></span>
+  </a>
+  <nav class="tab" aria-label="Main">
+    <a href="#chiropractic">Chiropractic</a><a href="#homoeopathy">Homoeopathy</a><a href="#cover">Cover</a><a href="#dr-cook">Dr Cook</a><a href="#visit">Hours</a>
+  </nav>
+  <a class="btn" href="tel:0397000333">Call<span class="num">03 9700 0333</span></a>
+</header>
+
+<main>
+  <section class="hero" id="top" aria-labelledby="hero-h">
+    <div class="mosaic">
+      <figure class="film">
+        <video id="film" src="img/hero.mp4" poster="img/hero-poster.jpg" width="1024" height="640" autoplay muted loop playsinline preload="metadata" aria-label="A slow film of old anatomical and botanical plates: the spine and its nerves, belladonna, Dr Samuel Hahnemann, arnica and dandelion"></video>
+        <figcaption class="cap">The spine and the remedy</figcaption>
+      </figure>
+      <div class="status" id="status" data-ui aria-label="Clinic hours, live">
+        <p class="clock" id="clock">9:00</p>
+        <p class="where">Now in Endeavour Hills</p>
+        <p class="state"><i class="dot" aria-hidden="true"></i><span id="state">Open Monday to Saturday</span></p>
+        <ul class="week" id="week" aria-label="Opening hours this week">
+          <li data-d="1"><span>Mon</span><span class="track"><i style="left:21%;width:38%"></i><b class="now-line"></b></span></li>
+          <li data-d="2"><span>Tue</span><span class="track"><i style="left:44%;width:15%"></i><b class="now-line"></b></span></li>
+          <li data-d="3"><span>Wed</span><span class="track"><i style="left:21%;width:38%"></i><b class="now-line"></b></span></li>
+          <li data-d="4"><span>Thu</span><span class="track"><i style="left:44%;width:15%"></i><b class="now-line"></b></span></li>
+          <li data-d="5"><span>Fri</span><span class="track"><i style="left:21%;width:38%"></i><b class="now-line"></b></span></li>
+          <li data-d="6"><span>Sat</span><span class="track"><i style="left:21%;width:13%"></i><b class="now-line"></b></span></li>
+        </ul>
+      </div>
+      <figure class="pic doc"><img src="img/dr-cook.jpg" width="448" height="800" alt="Dr John Cook, smiling, seated at his desk in a blue shirt and tie"></figure>
+      <p class="tile">2 Hellyer Way, Endeavour Hills</p>
+      <figure class="pic house"><img src="img/clinic.jpg" width="638" height="352" alt="Dr Cook on the ramp at the front of the brick clinic at 2 Hellyer Way"></figure>
+    </div>
+
+    <div class="lead-row">
+      <p class="stand">Dr John Cook, chiropractor and homoeopath, at the Raymond McMahon Chiropractic Centre and Endeavour Hills Homoeopathic Centre.</p>
+      <div class="title">
+        <h1 id="hero-h" class="kin" aria-label="Chiropractic and homoeopathy">
+          <span class="ln" aria-hidden="true"><span class="kw" style="--i:0">Chiropractic</span> <span class="kw" style="--i:1">&amp;</span></span>
+          <span class="ln" aria-hidden="true"><span class="kw" style="--i:2">homoeopathy</span></span>
+        </h1>
+      </div>
+      <div class="calls">
+        <a class="btn" href="tel:0397000333">Call 03 9700 0333</a>
+        <a class="tlink" href="#cover">Am I covered?</a>
+      </div>
+    </div>
+
+    <div class="nums" aria-label="The clinic in numbers">
+      <div class="rv"><b><span data-count="6">6</span></b><span>Days a week, Monday to Saturday</span></div>
+      <div class="rv" style="--d:1"><b><span data-count="2">2</span></b><span>Practices under one roof</span></div>
+      <div class="rv" style="--d:2"><b><span data-count="35">35</span>+</b><span>Minerals measured in a hair analysis</span></div>
+      <div class="rv" style="--d:3"><b><span data-count="25">25</span>+</b><span>Mineral ratios in your report</span></div>
+    </div>
+  </section>
+
+  <section class="stair" aria-labelledby="stair-h">
+    <h2 id="stair-h" class="rv">Your first visit</h2>
+    <ul class="steps rv" style="--d:1">
+      <li>A full case history,</li>
+      <li>a physical examination,</li>
+      <li>then the results,</li>
+      <li>talked through</li>
+      <li>with you.</li>
+    </ul>
+    <div class="pair">
+      <figure class="rv" style="--d:2"><img src="img/spine-nerves.jpg" width="720" height="1172" alt="An old engraving of the spine in cross-section, with the nerves running out from it" loading="lazy" style="object-position:50% 45%"><figcaption>Chiropractic: the spine and its nerves</figcaption></figure>
+      <figure class="rv" style="--d:3"><img src="img/belladonna.jpg" width="900" height="1042" alt="A botanical plate of belladonna, with its leaves, purple flowers and black berries" loading="lazy" style="object-position:50% 20%"><figcaption>Homoeopathy: belladonna</figcaption></figure>
+    </div>
+    <p class="note rv" style="--d:4">The same unhurried start for both practices, at 2 Hellyer Way.</p>
+  </section>
+
+  <div class="both">
+    <section class="chap chiro" id="chiropractic" aria-labelledby="chiro-h">
+      <h2 id="chiro-h">Chiropractic</h2>
+      <p class="lede rv">The art and science of achieving the full potential of the individual, through the removal of any interference to the nervous system.</p>
+      <div class="blocks">
+        <div class="blk rv">
+          <h3>What Dr Cook looks at</h3>
+          <div class="pairing">
+            <figure><img src="img/spine-nerves.jpg" width="720" height="1172" alt="Engraving of the nerves leaving the spine" loading="lazy" style="object-position:50% 70%"><figcaption>The nervous system</figcaption></figure>
+            <ul>
+              <li>The spine and limbs, for joints that have locked up</li>
+              <li>Physical knocks: car accidents, sport, gardening, work</li>
+              <li>Nutrition, such as a lack of magnesium or vitamins</li>
+              <li>Lifestyle: exercise and posture</li>
+              <li>Stress at work or at home</li>
+            </ul>
+          </div>
+        </div>
+        <div class="blk flip rv">
+          <h3>Your first consultation</h3>
+          <div class="pairing">
+            <figure><img src="img/dr-cook.jpg" width="448" height="800" alt="Dr John Cook at his desk" loading="lazy" style="object-position:50% 25%"><figcaption>Dr John Cook</figcaption></figure>
+            <ul>
+              <li>An extensive case history</li>
+              <li>A physical examination</li>
+              <li>The results, discussed with you</li>
+            </ul>
+          </div>
+        </div>
+        <div class="blk rv">
+          <h3>Treatment may include</h3>
+          <ul class="solo">
+            <li>Muscle work: massage, ultrasound and stretching</li>
+            <li>Chiropractic adjustments, by hand or mechanically assisted</li>
+            <li>Advice for home, and sometimes changes to diet or supplements</li>
+            <li>X-rays from an x-ray clinic where clinically indicated, the cost usually covered by Medicare</li>
+            <li>Treatment changed to suit you, including with osteoporosis or after spinal surgery</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="chap homo" id="homoeopathy" aria-labelledby="homo-h">
+      <h2 id="homo-h">Homoeopathy</h2>
+      <p class="lede rv">Natural remedies that take the whole person into account: physical, emotional and mental health.</p>
+      <div class="blocks">
+        <div class="blk flip rv">
+          <h3>Where it comes from</h3>
+          <div class="pairing">
+            <figure><img src="img/hahnemann.jpg" width="800" height="1068" alt="Engraved portrait of Dr Samuel Hahnemann" loading="lazy" style="object-position:50% 40%"><figcaption>Dr Samuel Hahnemann</figcaption></figure>
+            <ul>
+              <li>A complete system of medicine</li>
+              <li>Developed by the German physician Dr Samuel Hahnemann</li>
+              <li>Based on the principle of “like cures like”</li>
+              <li>Used for first aid, and for acute or chronic complaints</li>
+            </ul>
+          </div>
+        </div>
+        <div class="blk rv">
+          <h3>Your first consultation</h3>
+          <div class="pairing">
+            <figure><img src="img/belladonna.jpg" width="900" height="1042" alt="Botanical plate of belladonna" loading="lazy" style="object-position:50% 30%"><figcaption>Belladonna</figcaption></figure>
+            <ul>
+              <li>The problem that brought you in</li>
+              <li>Any other conditions you have</li>
+              <li>Your character and emotional state</li>
+              <li>A homoeopathic medicine, prescribed on the whole symptom picture</li>
+            </ul>
+          </div>
+        </div>
+        <div class="blk flip rv">
+          <h3>With your other medicines</h3>
+          <div class="pairing">
+            <figure><img src="img/arnica.jpg" width="800" height="1026" alt="Botanical plate of arnica, with yellow flowers" loading="lazy" style="object-position:50% 20%"><figcaption>Arnica</figcaption></figure>
+            <ul>
+              <li>Homoeopathic and pharmaceutical medicines can be used together</li>
+              <li>They work very differently and will not react with each other</li>
+              <li>Only stop a pharmaceutical medicine under the direction of your doctor</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="also" id="also" aria-labelledby="also-h">
+    <h2 id="also-h" class="rv">Also at the clinic</h2>
+    <div class="cols">
+      <div class="panel feet rv" style="--d:1">
+        <h3>Orthotics</h3>
+        <p>Your feet are the foundation for your whole body, and many people with foot problems feel little or no pain in their feet. Dr Cook often suggests Stabilizers: orthotics made by Foot Levelers, an American company that makes them for chiropractors.</p>
+        <div class="insole">
+          <svg viewBox="0 0 400 150" role="img" aria-label="An orthotic insole, seen from above">
+            <path class="full-part" d="M300 30 C350 28 388 52 390 76 C392 102 352 122 300 120 Z" fill="#7d8a72"/>
+            <path d="M28 76 C28 44 70 26 130 26 C200 26 260 30 300 30 L300 120 C260 122 200 126 130 126 C70 126 28 108 28 76 Z" fill="#2c3620"/>
+            <path d="M70 62 C110 46 170 48 230 58" stroke="#b7c8be" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <path d="M300 22 V128" stroke="#e3e2da" stroke-width="3" stroke-dasharray="6 6"/>
+          </svg>
+          <div class="opts" role="radiogroup" aria-label="Length">
+            <input type="radio" name="len" id="len-full" checked><label for="len-full">Full length</label>
+            <input type="radio" name="len" id="len-34"><label for="len-34">¾ length</label>
+          </div>
+          <p class="say">Full size or ¾ length, depending on the kind of shoe you wear, and in different thicknesses for how active you are.</p>
+        </div>
+      </div>
+      <div class="panel hair rv" style="--d:2">
+        <h3>Mineral hair analysis</h3>
+        <p>HTMA is a safe, non-invasive pathology test. It measures the levels and ratios of nutrient and toxic minerals found in hair.</p>
+        <ul>
+          <li>Data on more than 35 nutrient and toxic minerals</li>
+          <li>Over 25 important mineral ratios</li>
+          <li>Health information often not shown in standard blood and urine tests</li>
+          <li>Personalised patient and doctor reports, with suggested changes to diet and supplements</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="cover" id="cover" aria-labelledby="cover-h">
+    <div class="cover-in">
+      <div>
+        <h2 id="cover-h" class="rv">Am I covered?</h2>
+        <p class="lede rv" style="--d:1">Pick the treatment and your cover to read the clinic’s own answer.</p>
+      </div>
+      <div class="rv" style="--d:2">
+        <fieldset><legend>Treatment</legend>
+          <div class="chips">
+            <input type="radio" name="t" id="t-chiro" value="Chiropractic" checked><label for="t-chiro">Chiropractic</label>
+            <input type="radio" name="t" id="t-homo" value="Homoeopathy"><label for="t-homo">Homoeopathy</label>
+          </div>
+        </fieldset>
+        <fieldset><legend>Cover</legend>
+          <div class="chips">
+            <input type="radio" name="c" id="c-priv" value="Private health extras" checked><label for="c-priv">Private health extras</label>
+            <input type="radio" name="c" id="c-medi" value="Medicare"><label for="c-medi">Medicare</label>
+            <input type="radio" name="c" id="c-work" value="WorkCover or TAC"><label for="c-work">WorkCover or TAC</label>
+          </div>
+        </fieldset>
+        <div class="answer" aria-live="polite">
+          <article data-a="chiro-priv"><h3>Yes, with the right extras</h3><p>All private health insurers will cover chiropractic treatment if you are on the right level of extras cover.</p></article>
+          <article data-a="chiro-medi"><h3>Not usually</h3><p>Medicare doesn’t pay for chiropractic on its own. If you have a complex medical condition, your GP can refer you under the Medicare EPC program, which pays for five allied health consultations a year, chiropractic included.</p></article>
+          <article data-a="chiro-work"><h3>Yes</h3><p>WorkCover and the TAC both cover chiropractic. In either case you are covered for one of chiropractic, osteopathy or physiotherapy, not more than one.</p></article>
+          <article data-a="homo-priv"><h3>Usually, under extras</h3><p>Most private health insurers cover homoeopathy under their extras tables.</p></article>
+          <article data-a="homo-medi"><h3>No</h3><p>Medicare does not cover homoeopathy.</p></article>
+          <article data-a="homo-work"><h3>Ask us first</h3><p>Give the clinic a call before your visit and we’ll talk it through with you.</p></article>
+          <p class="from">Check the details with your own insurer or scheme too.</p>
+          <div class="go"><a class="btn" href="tel:0397000333">Call 03 9700 0333</a><a class="tlink" id="ask-mail" href="mailto:info@chiropractorendeavourhills.com.au">Email the clinic</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="dr-cook" aria-labelledby="about-h">
+    <h2 id="about-h" class="rv">Dr John Cook</h2>
+    <div class="story rv" style="--d:1">
+      <p><b>Dr John Cook</b> is the principal of the centre, a chiropractor and homoeopath who has practised in <mark class="b">Endeavour Hills</mark> for many years. For a long time he was also a part-time lecturer in Clinical Practice at the <mark class="a">RMIT Department of Chiropractic</mark>, now retired.</p>
+      <p>His qualifications are a <mark class="c">B.App.Sc. (Chiro.)</mark>, a <mark class="a">Grad.Dip. in Musculoskeletal Diagnosis</mark>, a <mark class="b">Dip. Homoeopathy</mark> and the Diploma of the National Board of Chiropractic Examiners in the United States.</p>
+      <p>He is a member of the <mark class="c">Australian Chiropractors Association</mark> and the Australian Homoeopathic Association, registered as a chiropractor, and listed on the Australian Register of Homoeopaths. As a chiropractor he looks at the whole picture: injuries, nutrition, lifestyle and stress, as well as the spine. <a class="end" href="#visit">Make a time to see Dr Cook.</a></p>
+    </div>
+  </section>
+
+  <section class="faq" id="faq" aria-labelledby="faq-h">
+    <div class="head"><h2 id="faq-h" class="rv">Questions</h2></div>
+    <div class="band c rv"><h3>Will adjustments make my spine too loose?</h3><p class="ans"><span class="who">Chiropractic</span>No. Only the joints that need to be adjusted are adjusted.</p></div>
+    <div class="band h rv"><h3>Can I keep taking my usual medicines?</h3><p class="ans"><span class="who">Homoeopathy</span>Yes. The two types of medicine work very differently and will not react with each other.</p></div>
+    <div class="band c rv"><h3>How many treatments will I need?</h3><p class="ans"><span class="who">Chiropractic</span>It varies from person to person. It depends on how long the problem has been there, whether there is any pathology such as osteoarthritis, your lifestyle, your age and your vitality.</p></div>
+    <div class="band h rv"><h3>Should I stop my pharmaceutical medicines?</h3><p class="ans"><span class="who">Homoeopathy</span>No. Only stop a pharmaceutical medicine under the direction of your medical doctor. If your symptoms improve, your doctor can reduce it.</p></div>
+    <div class="band c rv"><h3>Do I have to have treatment forever?</h3><p class="ans"><span class="who">Chiropractic</span>No. Some people only want the problem they came in with looked after: they have a series of treatments and come back when they need to. Others prefer maintenance, and are seen anywhere from once a month to once every six months.</p></div>
+    <div class="band h rv"><h3>Do homoeopathic medicines have side effects?</h3><p class="ans"><span class="who">Homoeopathy</span>It is very rare for people to react badly to homoeopathic medicines.</p></div>
+  </section>
+
+  <section class="visit" id="visit" aria-labelledby="visit-h">
+    <div class="strip" aria-hidden="true">
+      <img class="w32" src="img/clinic.jpg" width="638" height="352" alt="" loading="lazy">
+      <img class="w34" src="img/spine-nerves.jpg" width="720" height="1172" alt="" loading="lazy">
+      <img class="w11" src="img/belladonna.jpg" width="900" height="1042" alt="" loading="lazy">
+      <img class="w34" src="img/dr-cook.jpg" width="448" height="800" alt="" loading="lazy">
+      <img class="w32" src="img/heatherton-road.jpg" width="1600" height="1066" alt="" loading="lazy">
+      <img class="w34" src="img/hahnemann.jpg" width="800" height="1068" alt="" loading="lazy">
+      <img class="w11" src="img/arnica.jpg" width="800" height="1026" alt="" loading="lazy">
+      <img class="w34" src="img/dandelion.jpg" width="800" height="1100" alt="" loading="lazy">
+      <img class="w32" src="img/clinic.jpg" width="638" height="352" alt="" loading="lazy">
+      <img class="w34" src="img/spine-nerves.jpg" width="720" height="1172" alt="" loading="lazy">
+      <img class="w11" src="img/belladonna.jpg" width="900" height="1042" alt="" loading="lazy">
+      <img class="w34" src="img/dr-cook.jpg" width="448" height="800" alt="" loading="lazy">
+      <img class="w32" src="img/heatherton-road.jpg" width="1600" height="1066" alt="" loading="lazy">
+      <img class="w34" src="img/hahnemann.jpg" width="800" height="1068" alt="" loading="lazy">
+      <img class="w11" src="img/arnica.jpg" width="800" height="1026" alt="" loading="lazy">
+      <img class="w34" src="img/dandelion.jpg" width="800" height="1100" alt="" loading="lazy">
+    </div>
+    <div class="in">
+      <h2 id="visit-h" class="rv">Visit 2 Hellyer Way</h2>
+      <div class="grid">
+        <div class="addr rv" style="--d:1">
+          <span>2 Hellyer Way</span>
+          <span>Endeavour Hills VIC 3802</span>
+          <a href="tel:0397000333">Phone 03 9700 0333</a>
+          <a href="mailto:info@chiropractorendeavourhills.com.au">info@chiropractorendeavourhills.com.au</a>
+          <span class="small">Fax 03 9700 0208</span>
+          <a class="tlink small" href="https://www.google.com/maps/search/?api=1&amp;query=2+Hellyer+Way+Endeavour+Hills+VIC+3802">Get directions</a>
+        </div>
+        <div class="hours rv" style="--d:2">
+          <h3>Opening hours</h3>
+          <dl id="hours">
+            <dt data-d="1">Monday</dt><dd data-d="1">9:00am – 6:00pm</dd>
+            <dt data-d="2">Tuesday</dt><dd data-d="2">2:30pm – 6:00pm</dd>
+            <dt data-d="3">Wednesday</dt><dd data-d="3">9:00am – 6:00pm</dd>
+            <dt data-d="4">Thursday</dt><dd data-d="4">2:30pm – 6:00pm</dd>
+            <dt data-d="5">Friday</dt><dd data-d="5">9:00am – 6:00pm</dd>
+            <dt data-d="6">Saturday</dt><dd data-d="6">9:00am – 12:00pm</dd>
+          </dl>
+        </div>
+      </div>
+      <form class="ask rv" id="ask" action="mailto:info@chiropractorendeavourhills.com.au" method="get" enctype="text/plain">
+        <h3>Ask for a time</h3>
+        <div class="bar">
+          <label><span>Your name</span><input name="name" autocomplete="name" required></label>
+          <label><span>For</span><select name="for" id="for"><option>Chiropractic</option><option>Homoeopathy</option><option>Orthotics</option><option>Mineral hair analysis</option></select></label>
+          <button class="btn" type="submit">Send the request</button>
+        </div>
+        <div class="fine"><p>Your name goes in the email so the clinic knows who is asking.</p><p>This opens your email app with the details filled in. Nothing is stored on this page.</p></div>
+      </form>
+      <figure class="place rv"><img src="img/heatherton-road.jpg" width="1600" height="1066" alt="The Monash Freeway at the Heatherton Road exit, the turn-off for Endeavour Hills" loading="lazy"><figcaption>The Heatherton Road exit off the Monash Freeway, the way into Endeavour Hills</figcaption></figure>
+    </div>
+  </section>
+</main>
+
+<footer aria-labelledby="foot-h">
+  <h2 id="foot-h" class="big rv">Raymond McMahon Chiropractic Centre</h2>
+  <div class="row">
+    <address>
+      <span>Endeavour Hills Homoeopathic Centre</span>
+      <span>2 Hellyer Way, Endeavour Hills VIC 3802</span>
+      <a href="tel:0397000333">03 9700 0333</a>
+      <a href="mailto:info@chiropractorendeavourhills.com.au">info@chiropractorendeavourhills.com.au</a>
+    </address>
+    <div class="imprint">
+      <p>© <span id="yr">2026</span> Dr John Cook, Raymond McMahon Chiropractic Centre.</p>
+      <p>Concept design by <a href="https://swoopsites.com/">Swoop Sites</a>, Melbourne.</p>
+      <p>Photographs of Dr Cook and the clinic are the clinic’s own. Other pictures: <a href="https://commons.wikimedia.org/wiki/File:Spine_and_nerves;_cross-section_showing_the_nerves_of_the_sp_Wellcome_V0007994.jpg">“Spine and nerves: cross-section”</a>, Wellcome Collection, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Portrait_of_Dr._Samuel_Hahnemann_Wellcome_L0047458.jpg">“Portrait of Dr. Samuel Hahnemann”</a>, Wellcome Collection, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Atropa_belladonna_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-018.jpg">belladonna</a>, <a href="https://commons.wikimedia.org/wiki/File:Arnica_montana_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-015.jpg">arnica</a> and <a href="https://commons.wikimedia.org/wiki/File:Taraxacum_officinale_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-135.jpg">dandelion</a> from Köhler’s Medizinal-Pflanzen, public domain; <a href="https://commons.wikimedia.org/wiki/File:Monash_Freeway_at_the_Heatherton_Road_exit,_Endeavour_Hills,_Victoria.jpg">“Monash Freeway at the Heatherton Road exit”</a> by Maksym Kozlenko, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>; via Wikimedia Commons.</p>
+    </div>
+  </div>
+</footer>
+<div class="callbar"><a class="btn light" href="tel:0397000333">Call the clinic</a><a class="btn" href="#visit">Ask for a time</a></div>
+
+<script>
+document.documentElement.classList.add('js');
+document.getElementById('yr').textContent = new Date().getFullYear();
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+// scroll reveals, once, staggered by --d
+const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+document.querySelectorAll('.rv').forEach((el) => io.observe(el));
+// hero film rests on its poster when motion is reduced
+const film = document.getElementById('film');
+if (reduce) { film.removeAttribute('autoplay'); film.pause(); }
+// sticky header tightens and blurs after the first scroll
+const hdr = document.querySelector('.top');
+const bar = document.querySelector('.callbar'); let lastY = scrollY;
+const onScroll = () => {
+  hdr.classList.toggle('scrolled', scrollY > 40);
+  // the phone call bar steps aside while reading down the page, and comes back on the way up and at the end
+  const atEnd = innerHeight + scrollY >= document.documentElement.scrollHeight - 80;
+  if (Math.abs(scrollY - lastY) > 6) { bar.classList.toggle('away', scrollY > lastY && scrollY > 200 && !atEnd); lastY = scrollY; }
+};
+addEventListener('scroll', onScroll, { passive: true }); onScroll();
+// the clinic's week, live in Melbourne time (hours from the clinic's own site)
+const HOURS = { 1: [540, 1080], 2: [870, 1080], 3: [540, 1080], 4: [870, 1080], 5: [540, 1080], 6: [540, 720] };
+const NAMES = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const fmt = (m) => { const h = Math.floor(m / 60), mm = m % 60, ap = h >= 12 ? 'pm' : 'am'; return ((h + 11) % 12 + 1) + (mm ? ':' + String(mm).padStart(2, '0') : '') + ap; };
+function tick() {
+  const parts = new Intl.DateTimeFormat('en-AU', { timeZone: 'Australia/Melbourne', weekday: 'short', hour: 'numeric', minute: '2-digit', hourCycle: 'h23' }).formatToParts(new Date());
+  const get = (t) => (parts.find((p) => p.type === t) || {}).value;
+  const day = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(get('weekday'));
+  const min = (+get('hour')) * 60 + (+get('minute'));
+  document.getElementById('clock').textContent = new Intl.DateTimeFormat('en-AU', { timeZone: 'Australia/Melbourne', hour: 'numeric', minute: '2-digit' }).format(new Date());
+  const today = HOURS[day], box = document.getElementById('status'), state = document.getElementById('state');
+  let text, open = false;
+  if (today && min >= today[0] && min < today[1]) { open = true; text = 'Open now, until ' + fmt(today[1]); }
+  else if (today && min < today[0]) text = 'Opens today at ' + fmt(today[0]);
+  else { let d = day; do { d = (d + 1) % 7; } while (!HOURS[d]); text = 'Closed now. Opens ' + (d === (day + 1) % 7 ? 'tomorrow' : NAMES[d]) + ' at ' + fmt(HOURS[d][0]); }
+  state.textContent = text; box.classList.toggle('shut', !open);
+  document.querySelectorAll('#week li').forEach((li) => {
+    const on = +li.dataset.d === day; li.classList.toggle('today', on);
+    if (on) li.querySelector('.now-line').style.left = Math.max(0, Math.min(100, (min - 360) / 900 * 100)) + '%';
+  });
+  document.querySelectorAll('#hours [data-d]').forEach((el) => el.classList.toggle('today', +el.dataset.d === day));
+}
+tick(); setInterval(tick, 20000);
+// real numbers count up once, on first view
+const cio = new IntersectionObserver((es) => es.forEach((e) => {
+  if (!e.isIntersecting) return; cio.unobserve(e.target);
+  const el = e.target, to = +el.dataset.count;
+  if (reduce) { el.textContent = to; return; }
+  const t0 = performance.now(), dur = 1300;
+  const step = (t) => { const p = Math.min(1, (t - t0) / dur), k = 1 - Math.pow(1 - p, 3); el.textContent = Math.round(to * k); if (p < 1) requestAnimationFrame(step); };
+  el.textContent = 0; requestAnimationFrame(step);
+}), { threshold: .6 });
+document.querySelectorAll('[data-count]').forEach((el) => cio.observe(el));
+// the cover question carries into the email and the request form
+const mail = document.getElementById('ask-mail'), forSel = document.getElementById('for');
+const sync = () => {
+  const t = document.querySelector('input[name=t]:checked').value, c = document.querySelector('input[name=c]:checked').value;
+  mail.href = 'mailto:info@chiropractorendeavourhills.com.au?subject=' + encodeURIComponent(t + ' and ' + c);
+  forSel.value = t;
+};
+document.querySelectorAll('.cover input').forEach((i) => i.addEventListener('change', sync)); sync();
+// a tidy email instead of a raw form post
+document.getElementById('ask').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const f = new FormData(e.target);
+  const body = `Hello,\n\nI'd like to make a time for ${f.get('for')}.\n\nName: ${f.get('name')}\nBest phone number: \n\nThank you.`;
+  location.href = 'mailto:info@chiropractorendeavourhills.com.au?subject=' + encodeURIComponent('Appointment request: ' + f.get('for')) + '&body=' + encodeURIComponent(body);
+});
+</script>
+</body>
+</html>
