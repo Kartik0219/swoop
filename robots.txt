@@ -2,6 +2,7 @@ User-agent: *
 Allow: /$
 Allow: /index.html
 Allow: /resources/
+Allow: /privacy/
 Allow: /logo.svg
 Allow: /favicon.svg
 Allow: /og-image.jpg
