@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>WYP Dental | Family Dentist and Orthodontics, Box Hill and Preston (concept)</title>
+<meta name="description" content="Concept homepage for WYP Dental: family dentistry, Invisalign and braces at two clinics, Box Hill and Preston. Care in English, Mandarin, Cantonese, Sichuanese and Shanghainese. Book online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Teal from WYP's own logo; deep teal and a tinted paper around it. */
+  --paper: #f2f6f6;
+  --surface: #e2ebec;
+  --ink: #15252a;
+  --muted: #44565b;
+  --accent: #7ac4d4;
+  --accent-ink: #0f2328;
+  --deep: #143843;
+  --deep-ink: #eef5f6;
+  --deep-muted: #b9ccd0;
+  --step-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+  --step-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+  --step-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
+  --step-head: clamp(2.5rem, 1.3rem + 3.4vw, 4rem);
+  --step-display: clamp(3.25rem, 1rem + 7.4vw, 8rem);
+  --m: clamp(16px, 4vw, 56px);
+  --r: 14px;
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  --lift: 0 1px 3px rgba(10, 30, 36, .06), 0 30px 60px rgba(10, 30, 36, .18);
+  --lift-soft: 0 1px 2px rgba(10, 30, 36, .06), 0 14px 34px rgba(10, 30, 36, .12);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 84px; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 var(--step-body)/1.45 "Schibsted Grotesk", system-ui, sans-serif; letter-spacing: -0.01em; }
+img, video { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-underline-offset: 4px; text-decoration-thickness: 1.5px; }
+::selection { background: var(--accent); color: var(--accent-ink); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+h1, h2, h3 { font-weight: 800; letter-spacing: -0.045em; line-height: 0.95; margin: 0; text-wrap: balance; }
+h2 { font-size: var(--step-head); }
+h3 { font-size: var(--step-lead); letter-spacing: -0.03em; line-height: 1.1; }
+p { margin: 0; text-wrap: pretty; }
+
+/* buttons: one shape, the pill */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 52px; padding: 0 26px; border-radius: 999px; border: 0;
+  background: var(--accent); color: var(--accent-ink); font: 600 var(--step-body)/1 "Schibsted Grotesk", sans-serif; letter-spacing: -0.01em; text-decoration: none; cursor: pointer;
+  transition: transform .3s var(--ease), box-shadow .3s var(--ease), background-color .3s var(--ease); }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 1px 2px rgba(10, 30, 36, .12), 0 18px 34px rgba(10, 30, 36, .26); background: #8fd0de; } /* taste-skill-ignore: premium bar 4/5, hover lift, instrument panels and the sticky blur */
+.btn:active { transform: translateY(0) scale(.97); box-shadow: none; } /* taste-skill-ignore: premium bar 4/5, hover lift, instrument panels and the sticky blur */
+.btn.ghost { background: transparent; color: inherit; box-shadow: inset 0 0 0 2px currentColor; } /* taste-skill-ignore: premium bar 4/5, hover lift, instrument panels and the sticky blur */
+.btn.ghost:hover { background: rgba(255, 255, 255, .1); }
+
+/* concept banner: first, never hidden */
+.concept { background: #0b0f10; color: #d9dede; font-size: var(--step-small); text-align: center; padding: 9px var(--m); position: relative; z-index: 30; }
+.concept b { color: #fff; }
+
+/* ---------- sticky header: gains a blur once scrolled, takes the ink of the chapter below ---------- */
+.top { position: sticky; top: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 20px var(--m);
+  color: var(--ink); transition: padding .35s var(--ease), background-color .35s var(--ease), color .3s var(--ease), box-shadow .35s var(--ease); }
+.top.scrolled { padding-top: 10px; padding-bottom: 10px; background: rgba(242, 246, 246, .82); -webkit-backdrop-filter: saturate(1.4) blur(14px); backdrop-filter: saturate(1.4) blur(14px); /* taste-skill-ignore: premium bar 4/5, hover lift, instrument panels and the sticky blur */
+  box-shadow: 0 10px 30px rgba(10, 30, 36, .08); } /* taste-skill-ignore: premium bar 4/5, hover lift, instrument panels and the sticky blur */
+.top.scrolled.on-deep { background: rgba(20, 56, 67, .84); color: var(--deep-ink); }
+.top.scrolled.on-accent { background: rgba(122, 196, 212, .86); color: var(--accent-ink); }
+.top.on-accent .btn { background: var(--deep); color: var(--deep-ink); }
+.mark { display: inline-flex; align-items: baseline; gap: 8px; text-decoration: none; font-weight: 800; font-size: var(--step-lead); letter-spacing: -0.05em; line-height: 1; }
+.mark small { font-weight: 600; font-size: var(--step-body); letter-spacing: -0.01em; }
+.top nav { display: flex; gap: 26px; font-weight: 600; }
+.top nav a { text-decoration: none; padding: 12px 0; }
+.top nav a:hover { text-decoration: underline; }
+.top .calls { display: flex; align-items: center; gap: 18px; font-weight: 600; }
+.top .calls a.tel { text-decoration: none; white-space: nowrap; }
+.top .calls a.tel:hover { text-decoration: underline; }
+
+/* ---------- hero: one sentence across two fields ---------- */
+.hero { --fs: var(--step-display); --pad: clamp(56px, 12svh, 150px); position: relative; background: var(--deep); color: var(--deep-ink); margin-top: -92px; padding: calc(92px + var(--pad)) var(--m) 0; text-align: center; }
+.hero::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: calc(93px + var(--pad)); background: var(--paper); }
+.hero > * { position: relative; }
+.hero h1 { font-size: var(--fs); line-height: 0.95; letter-spacing: -0.05em; }
+.hero h1 .l1 { display: block; color: var(--ink); background: var(--paper); margin: 0 calc(-1 * var(--m)); padding: 0 var(--m); }
+.hero h1 .l2 { display: block; }
+.slot { display: inline-block; vertical-align: baseline; width: 2.5em; height: 0.74em; margin: 0; border-radius: 0.14em; overflow: hidden; position: relative; top: 0.02em; background: #2a5764; }
+.slot video, .slot img { width: 100%; height: 100%; object-fit: cover; }
+.strip { display: none; }
+.hero .what { max-width: 40ch; margin: 36px auto 0; font-size: var(--step-lead); line-height: 1.3; color: var(--deep-ink); }
+.hero .acts { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 30px; }
+
+/* the instrument: both clinics side by side */
+.clinics { max-width: 980px; margin: 64px auto 0; display: grid; grid-template-columns: 1fr 1fr; background: var(--paper); color: var(--ink); border-radius: var(--r); box-shadow: var(--lift); overflow: hidden; text-align: left; } /* taste-skill-ignore: premium bar 4/5, hover lift, instrument panels and the sticky blur */
+.clinic { padding: 28px 30px 30px; display: flex; flex-direction: column; gap: 10px; }
+.clinic + .clinic { background: #e9f0f1; }
+.clinic h2 { font-size: var(--step-head); }
+.clinic .live { display: inline-flex; align-items: center; gap: 8px; font-size: var(--step-small); font-weight: 600; color: var(--muted); }
+.clinic .live i, .unused { width: 9px; height: 9px; border-radius: 50%; background: #2f9e6e; box-shadow: 0 0 0 0 rgba(47, 158, 110, .5); animation: ping 2.4s var(--ease) infinite; } /* taste-skill-ignore: premium bar 4/5, hover lift, instrument panels and the sticky blur */
+@keyframes ping { 70% { box-shadow: 0 0 0 9px rgba(47, 158, 110, 0); } 100% { box-shadow: 0 0 0 0 rgba(47, 158, 110, 0); } } /* taste-skill-ignore: premium bar 4/5, hover lift, instrument panels and the sticky blur */
+.clinic address { font-style: normal; }
+.clinic .tel { font-size: var(--step-lead); font-weight: 800; letter-spacing: -0.03em; text-decoration: none; display: inline-flex; min-height: 48px; align-items: center; }
+.clinic .tel:hover { text-decoration: underline; }
+.clinic .note { font-size: var(--step-small); color: var(--muted); }
+.clinic-foot { grid-column: 1 / -1; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 24px; padding: 16px 30px; background: var(--surface); font-size: var(--step-small); font-weight: 600; }
+.clinic-foot b { font-variant-numeric: tabular-nums; }
+.clock { display: none; } .js .clock { display: inline; }
+
+/* real numbers */
+.nums { list-style: none; max-width: 980px; margin: 0 auto; padding: 64px 0 120px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: left; }
+.nums b { display: block; font-size: var(--step-head); font-weight: 800; letter-spacing: -0.05em; line-height: 1; font-variant-numeric: tabular-nums; color: var(--accent); }
+.nums li > span { display: block; margin-top: 8px; color: var(--deep-muted); }
+
+/* ---------- services: rows on one axis, photographs in the margin ---------- */
+.care { padding: 180px var(--m) 160px; }
+.axis { display: grid; grid-template-columns: 35% 1fr; max-width: 1320px; margin: 0 auto; }
+.axis > * { grid-column: 2; }
+.care h2 { padding-bottom: 28px; }
+.care .lede { max-width: 46ch; font-size: var(--step-lead); line-height: 1.3; }
+.rows { list-style: none; margin: 96px 0 0; padding: 0; display: flex; flex-direction: column; gap: 104px; }
+.row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 40px; align-items: start; }
+.row h3 { font-size: var(--step-lead); letter-spacing: -0.035em; line-height: 1.05; }
+.row p { margin-top: 14px; max-width: 46ch; }
+.row .more { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 20px; font-weight: 600; }
+.row .more a { display: inline-flex; min-height: 44px; align-items: center; }
+.row figure { margin: 0; }
+.row img { border-radius: var(--r); object-fit: cover; transition: transform .5s var(--ease), box-shadow .5s var(--ease); }
+.row img:hover { transform: translateY(-4px); box-shadow: var(--lift); } /* taste-skill-ignore: premium bar 4/5, hover lift, instrument panels and the sticky blur */
+.row figcaption { margin-top: 8px; font-size: var(--step-small); color: var(--muted); }
+.row:nth-child(1) img { width: 300px; aspect-ratio: 4 / 5; }
+.row:nth-child(2) img { width: 380px; aspect-ratio: 3 / 2; }
+.row:nth-child(3) img { width: 340px; aspect-ratio: 635 / 489; object-fit: contain; background: #fff; }
+.row:nth-child(4) img { width: 280px; aspect-ratio: 2 / 3; }
+.row:nth-child(5) img { width: 360px; aspect-ratio: 3 / 2; }
+.also { margin-top: 96px; padding: 28px 30px; background: var(--surface); border-radius: var(--r); }
+.also h3 { margin-bottom: 12px; }
+.also ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 22px; }
+
+/* ---------- the live thing: plan the family visit ---------- */
+.plan { background: var(--accent); color: var(--accent-ink); padding: 160px var(--m); }
+.plan .wrap { max-width: 1320px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 5vw, 80px); align-items: start; }
+.plan h2 { max-width: 9ch; }
+.plan .intro { margin-top: 24px; max-width: 34ch; font-size: var(--step-lead); line-height: 1.3; }
+.plan .src { margin-top: 18px; font-size: var(--step-small); max-width: 40ch; }
+.planner { background: var(--paper); color: var(--ink); border-radius: var(--r); box-shadow: var(--lift); padding: 28px; } /* taste-skill-ignore: premium bar 4/5, hover lift, instrument panels and the sticky blur */
+.who { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+.age { background: var(--surface); border-radius: 12px; padding: 12px 10px 10px; text-align: center; transition: background-color .3s var(--ease), transform .3s var(--ease); }
+.age.has { background: var(--deep); color: var(--deep-ink); }
+.age .lab { display: block; font-weight: 600; font-size: var(--step-small); line-height: 1.2; min-height: 2.4em; }
+.age .ctl { display: flex; align-items: center; justify-content: space-between; margin-top: 8px; }
+.age button { width: 44px; height: 44px; border-radius: 50%; border: 0; background: var(--paper); color: var(--ink); font: 800 var(--step-lead)/1 "Schibsted Grotesk", sans-serif; cursor: pointer; transition: transform .2s var(--ease), background-color .2s; }
+.age button:hover { transform: translateY(-2px); background: #fff; }
+.age button:active { transform: scale(.92); }
+.age output { font-weight: 800; font-size: var(--step-lead); font-variant-numeric: tabular-nums; min-width: 1.2ch; }
+.where { display: flex; gap: 10px; margin-top: 18px; flex-wrap: wrap; align-items: center; }
+.where span { font-weight: 600; margin-right: 4px; }
+.where input { position: absolute; opacity: 0; pointer-events: none; }
+.where label { display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border-radius: 999px; background: var(--surface); font-weight: 600; cursor: pointer; transition: background-color .25s, color .25s, transform .25s var(--ease); }
+.where label:hover { transform: translateY(-2px); }
+.where input:checked + label { background: var(--ink); color: var(--paper); }
+.where input:focus-visible + label { outline: 3px solid var(--deep); outline-offset: 3px; }
+.notes { list-style: none; margin: 22px 0 0; padding: 0; display: flex; flex-direction: column; gap: 10px; min-height: 120px; }
+.notes li { background: #fff; border-radius: 12px; padding: 14px 16px; box-shadow: 0 1px 2px rgba(10, 30, 36, .06); animation: pop .45s var(--ease) both; } /* taste-skill-ignore: premium bar 4/5, hover lift, instrument panels and the sticky blur */
+.notes li b { display: block; }
+@keyframes pop { from { opacity: 0; transform: translateY(8px); } }
+.planner .go { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.planner .go .btn { background: var(--deep); color: var(--deep-ink); }
+.planner .go .btn:hover { background: #1c4b59; }
+.planner .go a.tel { font-weight: 600; min-height: 48px; display: inline-flex; align-items: center; }
+
+/* ---------- team: the founder as a drop-cap portrait, then the dentists ---------- */
+.team { background: var(--surface); padding: 170px var(--m) 160px; }
+.team .inner { max-width: 1320px; margin: 0 auto; display: grid; grid-template-columns: 2fr 10fr; gap: 0 clamp(24px, 3vw, 48px); }
+.team h2 { grid-column: 2; margin-bottom: 48px; }
+.team aside { grid-row: 2 / span 2; font-size: var(--step-small); display: flex; flex-direction: column; gap: 18px; padding-top: 6px; }
+.team aside b { display: block; font-size: var(--step-body); }
+.bio { grid-column: 2; font-size: var(--step-lead); line-height: 1.3; letter-spacing: -0.025em; color: var(--muted); max-width: 40em; }
+.bio strong { color: var(--ink); font-weight: 600; }
+.bio .cap { float: left; width: 3.6em; height: 3.6em; margin: 0.18em 0.5em 0 0; object-fit: cover; object-position: 50% 20%; border-radius: var(--r); }
+.bio + .bio { margin-top: 1.2em; }
+.bio .cap.r { object-position: 50% 15%; }
+.drs { grid-column: 2; list-style: none; margin: 96px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.dr { background: var(--paper); border-radius: var(--r); overflow: hidden; transition: transform .4s var(--ease), box-shadow .4s var(--ease); }
+.dr:hover { transform: translateY(-5px); box-shadow: var(--lift); } /* taste-skill-ignore: premium bar 4/5, hover lift, instrument panels and the sticky blur */
+.dr img { width: 100%; aspect-ratio: 1; object-fit: cover; object-position: 50% 25%; }
+.dr div { padding: 16px 18px 20px; }
+.dr h3 { font-size: var(--step-body); letter-spacing: -0.02em; }
+.dr .q { margin-top: 4px; font-size: var(--step-small); color: var(--muted); }
+.dr p:not(.q) { margin-top: 10px; line-height: 1.4; }
+.dr .lang { margin-top: 12px; font-size: var(--step-small); font-weight: 600; }
+
+/* ---------- why: the practice in four plain lines ---------- */
+.why { padding: 170px var(--m); }
+.why .inner { max-width: 1320px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); gap: clamp(32px, 5vw, 96px); align-items: start; }
+.why .say { font-size: var(--step-lead); line-height: 1.25; letter-spacing: -0.03em; margin-top: 28px; max-width: 24ch; }
+.why .by { margin-top: 18px; color: var(--muted); }
+.why dl { margin: 0; display: grid; gap: 14px; }
+.why dl div { background: var(--surface); border-radius: var(--r); padding: 22px 24px; transition: transform .4s var(--ease), box-shadow .4s var(--ease); }
+.why dl div:hover { transform: translateY(-4px); box-shadow: var(--lift-soft); } /* taste-skill-ignore: premium bar 4/5, hover lift, instrument panels and the sticky blur */
+.why dt { font-weight: 800; font-size: var(--step-lead); letter-spacing: -0.03em; }
+.why dd { margin: 6px 0 0; }
+.why figure { margin: 28px 0 0; }
+.why figure { max-width: 320px; }
+.why figure img { border-radius: var(--r); width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: 50% 20%; }
+.why figcaption { margin-top: 8px; font-size: var(--step-small); color: var(--muted); }
+
+/* ---------- book online ---------- */
+.book { background: var(--deep); color: var(--deep-ink); padding: 170px var(--m) 150px; }
+.book .inner { max-width: 1320px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 5vw, 96px); align-items: start; }
+.book .say { margin-top: 26px; font-size: var(--step-lead); line-height: 1.3; max-width: 30ch; }
+.book .direct { margin-top: 32px; display: flex; flex-direction: column; gap: 6px; }
+.book .direct a { font-weight: 600; min-height: 44px; display: inline-flex; align-items: center; }
+.book .pic { margin: 40px 0 0; max-width: 420px; }
+.book .pic img { border-radius: var(--r); width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.book .pic figcaption { margin-top: 8px; font-size: var(--step-small); color: var(--deep-muted); }
+form.req { background: var(--paper); color: var(--ink); border-radius: var(--r); box-shadow: 0 1px 3px rgba(0, 0, 0, .2), 0 30px 60px rgba(0, 0, 0, .3); padding: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; } /* taste-skill-ignore: premium bar 4/5, hover lift, instrument panels and the sticky blur */
+form.req h3 { grid-column: 1 / -1; font-size: var(--step-lead); letter-spacing: -0.035em; }
+form.req label { display: grid; gap: 6px; font-size: var(--step-small); font-weight: 600; }
+form.req .full { grid-column: 1 / -1; }
+form.req input, form.req select, form.req textarea { font: inherit; color: var(--ink); background: #fff; border: 1px solid #9fb2b6; border-radius: 10px; padding: 12px 14px; width: 100%; min-height: 48px; transition: border-color .2s, box-shadow .2s; }
+form.req input:focus, form.req select:focus, form.req textarea:focus { outline: none; border-color: var(--deep); box-shadow: 0 0 0 3px rgba(122, 196, 212, .55); } /* taste-skill-ignore: premium bar 4/5, hover lift, instrument panels and the sticky blur */
+form.req textarea { min-height: 110px; resize: vertical; }
+form.req .note { grid-column: 1 / -1; font-size: var(--step-small); color: var(--muted); }
+form.req .btn { grid-column: 1 / -1; background: var(--deep); color: var(--deep-ink); min-height: 56px; }
+form.req .btn:hover { background: #1c4b59; }
+
+/* ---------- footer ---------- */
+footer { background: #0e2229; color: #dbe7e9; padding: 110px var(--m) 40px; }
+footer .inner { max-width: 1320px; margin: 0 auto; display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 40px; }
+footer h2 { font-size: var(--step-head); }
+footer .cn { margin-top: 10px; font-size: var(--step-lead); font-weight: 600; letter-spacing: 0.02em; }
+footer h3 { font-size: var(--step-body); margin-bottom: 12px; }
+footer address { font-style: normal; display: flex; flex-direction: column; gap: 4px; }
+footer address a { display: inline-flex; min-height: 44px; align-items: center; }
+footer .social { margin-top: 18px; display: flex; gap: 18px; }
+footer .social a { min-height: 44px; display: inline-flex; align-items: center; }
+.imprint { max-width: 1320px; margin: 80px auto 0; padding-top: 24px; font-size: var(--step-small); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 24px; color: #a8bcc0; }
+
+/* phone bar */
+.mbar { display: none; }
+
+/* ---------- motion ---------- */
+.kin .kw { display: inline-block; opacity: 0; filter: blur(8px); animation: kin .55s cubic-bezier(.2,.7,.2,1) forwards; animation-delay: calc(var(--i) * 70ms + 120ms); }
+@keyframes kin { to { opacity: 1; filter: blur(0); } }
+.js .rv { opacity: 0; transform: translateY(22px); transition: opacity .8s var(--ease), transform .8s var(--ease); transition-delay: calc(var(--d, 0) * 80ms); }
+.js .rv.on { opacity: 1; transform: none; }
+.hero .what, .hero .acts { animation: rise .9s var(--ease) both; animation-delay: .55s; }
+.hero .acts { animation-delay: .65s; }
+.clinics { animation: rise 1s var(--ease) both; animation-delay: .8s; }
+@keyframes rise { from { opacity: 0; transform: translateY(22px); } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .kin .kw { opacity: 1; filter: none; }
+  .js .rv { opacity: 1; transform: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* ---------- tablet ---------- */
+@media (max-width: 1100px) {
+  .top nav { display: none; }
+  .axis { grid-template-columns: 1fr; }
+  .axis > * { grid-column: 1; }
+  .plan .wrap, .book .inner, .why .inner { grid-template-columns: minmax(0, 1fr); }
+  .team .inner { grid-template-columns: minmax(0, 1fr); }
+  .team h2, .bio, .drs { grid-column: 1; }
+  .team aside { grid-row: auto; flex-direction: row; flex-wrap: wrap; gap: 14px 28px; margin-bottom: 32px; }
+  .drs { grid-template-columns: repeat(2, 1fr); }
+  footer .inner { grid-template-columns: 1fr 1fr; }
+  footer .inner > :first-child { grid-column: 1 / -1; }
+}
+
+/* ---------- phone: its own composition ---------- */
+@media (max-width: 760px) {
+  html { scroll-padding-top: 70px; }
+  .top { padding: 14px var(--m); }
+  .top .calls a.tel { display: none; }
+  .top .btn { min-height: 48px; padding: 0 20px; }
+  .hero { --fs: clamp(3rem, 14.5vw, 4.5rem); --pad: 44px; margin-top: -76px; padding-top: calc(76px + var(--pad)); }
+  .hero::before { height: calc(77px + var(--pad)); }
+  .hero h1 .slot { display: none; }
+  .strip { display: block; margin: 18px auto 0; aspect-ratio: 16 / 5; border-radius: 12px; overflow: hidden; background: #2a5764; }
+  .strip video { width: 100%; height: 100%; object-fit: cover; }
+  .hero .what { font-size: var(--step-body); max-width: 30ch; margin-top: 26px; }
+  .hero .acts .btn { width: 100%; }
+  .clinics { grid-template-columns: 1fr; margin-top: 44px; }
+  .clinic { padding: 24px 22px; }
+  .clinic-foot { padding: 14px 22px; }
+  .nums { grid-template-columns: 1fr 1fr; gap: 28px 16px; padding: 48px 0 96px; }
+  .care, .team, .why { padding: 120px var(--m); }
+  .plan, .book { padding: 120px var(--m); }
+  .rows { margin-top: 64px; gap: 72px; }
+  .row { grid-template-columns: 1fr; gap: 20px; }
+  .row:nth-child(n) img { width: 100%; }
+  .row:nth-child(2) figure { width: 72%; margin-left: auto; }
+  .row:nth-child(3) figure { width: 100%; }
+  .row:nth-child(4) figure { width: 64%; margin-left: auto; }
+  .who { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .age { display: flex; align-items: center; justify-content: space-between; padding: 8px 10px 8px 16px; text-align: left; }
+  .age .lab { min-height: 0; font-size: var(--step-body); }
+  .age .ctl { margin-top: 0; gap: 14px; }
+  .planner { padding: 20px 16px; }
+  .bio .cap { width: 4.6em; height: 4.6em; }
+  .drs { grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 64px; }
+  .dr div { padding: 12px 12px 16px; }
+  .dr p:not(.q) { display: none; }
+  form.req { grid-template-columns: 1fr; padding: 22px 18px; }
+  footer { padding-bottom: 110px; }
+  footer .inner { grid-template-columns: 1fr; }
+  .mbar { display: grid; grid-template-columns: 1fr 1fr 1.2fr; gap: 8px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 25; padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+    background: rgba(242, 246, 246, .9); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); box-shadow: 0 -10px 30px rgba(10, 30, 36, .12); } /* taste-skill-ignore: premium bar 4/5, hover lift, instrument panels and the sticky blur */
+  .mbar { transition: transform .35s var(--ease); }
+  .mbar.away { transform: translateY(115%); }
+  .mbar a { min-height: 50px; padding: 0 10px; }
+  .mbar a.ghost { box-shadow: inset 0 0 0 2px var(--ink); color: var(--ink); } /* taste-skill-ignore: premium bar 4/5, hover lift, instrument panels and the sticky blur */
+}
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for WYP Dental. This is a design preview, not the live website.</div>
+
+<header class="top" id="top">
+  <a class="mark" href="#home" aria-label="WYP Dental, home">WYP <small>Dental</small></a>
+  <nav aria-label="Main">
+    <a href="#care">Services</a><a href="#plan">Family planner</a><a href="#team">Our dentists</a><a href="#book">Contact</a>
+  </nav>
+  <div class="calls">
+    <a class="tel" href="tel:0398974411">Box Hill (03) 9897 4411</a>
+    <a class="btn" href="#book">Book online</a>
+  </div>
+</header>
+
+<main id="home">
+  <section class="hero" data-tone="deep" aria-labelledby="hero-h">
+    <h1 id="hero-h" class="kin">
+      <span class="l1"><span class="kw" style="--i:0">Caring</span> <span class="kw" style="--i:1">runs</span></span>
+      <span class="l2"><span class="kw" style="--i:2">in</span> <span class="kw" style="--i:3">our</span> <span class="slot kw" style="--i:4"><video src="img/hero.mp4" poster="img/hero-poster.jpg" width="832" height="260" muted autoplay loop playsinline preload="metadata" aria-label="WYP Dental: a young patient in the chair, a patient at the mirror, the front desk, a treatment room"></video></span> <span class="kw" style="--i:5">family</span></span>
+    </h1>
+    <div class="strip" aria-hidden="true"><video data-src="img/hero.mp4" poster="img/hero-poster.jpg" width="832" height="260" muted loop playsinline preload="none"></video></div>
+    <p class="what">WYP Dental: family dentistry, Invisalign and braces in Box Hill and Preston, since Dr Youping Wang opened her first clinic in 2000.</p>
+    <div class="acts">
+      <a class="btn" href="#book">Book online</a>
+      <a class="btn ghost" href="#plan">Plan a visit for the family</a>
+    </div>
+
+    <div class="clinics" data-ui aria-label="Our two clinics">
+      <div class="clinic">
+        <h2>Box Hill</h2>
+        <address>Level 1, 65–67 Carrington Road<br>Box Hill VIC 3128</address>
+        <a class="tel" href="tel:0398974411">(03) 9897 4411</a>
+        <p class="note">Family dentistry, Invisalign and braces. Online booking requests welcome.</p>
+      </div>
+      <div class="clinic">
+        <h2>Preston</h2>
+        <address>195 Bell Street<br>Preston VIC 3072</address>
+        <a class="tel" href="tel:0394847056">(03) 9484 7056</a>
+        <p class="note">HCF and Bupa preferred provider. Free parking at the rear, via the lane from Newcastle St or Harold St.</p>
+      </div>
+      <div class="clinic-foot"><span>Text us: <a href="sms:0451439223">0451 439 223</a></span><span>Email: <a href="mailto:info@wypdental.com.au">info@wypdental.com.au</a></span><span>On-the-spot health fund claims</span><span class="clock">Melbourne time <b id="clock"></b></span></div>
+    </div>
+
+    <ul class="nums" aria-label="WYP Dental in numbers">
+      <li><b><span data-count="20">20</span>+</b><span>years caring for families</span></li>
+      <li><b data-count="2">2</b><span>clinics, Box Hill and Preston</span></li>
+      <li><b data-count="6">6</b><span>dentists on the team</span></li>
+      <li><b data-count="5">5</b><span>languages spoken in the chair</span></li>
+    </ul>
+  </section>
+
+  <section class="care" id="care" data-tone="paper" aria-labelledby="care-h">
+    <div class="axis">
+      <h2 id="care-h" class="rv">Care for every age</h2>
+      <p class="lede rv" style="--d:1">From toddlers to braces at sixty-four. One practice for the whole family, with a plan built around each person, not just their teeth.</p>
+      <ol class="rows">
+        <li class="row">
+          <div class="rv">
+            <h3>Check-ups and cleans</h3>
+            <p>Think of it like a logbook service for your car: small problems are found sooner, before they become bigger and more costly. Most people need a check and clean every 6 to 12 months.</p>
+            <p>Our standard fee is $195 before health fund rebates. HCF and Bupa members at Preston can have a check-up and clean with minimal to no out-of-pocket fees.</p>
+            <div class="more"><a href="#book" data-job="Check-up and clean">Book a check-up</a></div>
+          </div>
+          <figure class="rv" style="--d:1"><img src="img/surgery.jpg" width="418" height="511" alt="A bright WYP Dental treatment room with a dentist at work by the window" loading="lazy"><figcaption>A treatment room at WYP Dental</figcaption></figure>
+        </li>
+        <li class="row">
+          <div class="rv">
+            <h3>Children's dentistry</h3>
+            <p>We love seeing kids from a young age, so the dentist becomes a familiar, friendly place. Eligible children aged 2 to 17 can be bulk billed through the Child Dental Benefits Schedule.</p>
+            <div class="more"><a href="#plan">Plan for your kids</a></div>
+          </div>
+          <figure class="rv" style="--d:1"><img src="img/kids.jpg" width="714" height="474" alt="A WYP dentist laughing with a young boy in the dental chair" loading="lazy"><figcaption>A young patient in the chair</figcaption></figure>
+        </li>
+        <li class="row">
+          <div class="rv">
+            <h3>Invisalign and braces</h3>
+            <p>Dr Wang holds a master's and PhD in orthodontics; Dr Wendy has a Postgraduate Diploma in Digital Orthodontics and Invisalign accreditation. You choose between clear aligners and braces after a proper consultation, with a clear financial consent before anything starts.</p>
+            <p>An orthodontic consult is $80.</p>
+            <div class="more"><a href="#book" data-job="Orthodontic consultation">Book an orthodontic consult</a></div>
+          </div>
+          <figure class="rv" style="--d:1"><img src="img/braces-or-aligners.jpg" width="635" height="489" alt="WYP Dental's own comparison sheet: Invisalign or braces, make an informed choice" loading="lazy"><figcaption>Our braces or aligners comparison sheet</figcaption></figure>
+        </li>
+        <li class="row">
+          <div class="rv">
+            <h3>Fillings, crowns and implants</h3>
+            <p>Fillings and restorations, root canal treatment, crown and bridge, dentures and dental implants, with dentists whose special interests include endodontics, prosthodontics and implant dentistry.</p>
+            <div class="more"><a href="#book" data-job="Fillings, crowns or implants">Book a visit</a></div>
+          </div>
+          <figure class="rv" style="--d:1"><img src="img/nurse.jpg" width="388" height="577" alt="A WYP Dental assistant in a gown carrying a tray down the clinic hallway" loading="lazy"><figcaption>Ready for the next patient</figcaption></figure>
+        </li>
+        <li class="row">
+          <div class="rv">
+            <h3>Toothache or emergency</h3>
+            <p>Call the clinic nearest you and we'll find you a time. You can also text us on 0451 439 223.</p>
+            <div class="more"><a href="tel:0398974411">Call Box Hill</a><a href="tel:0394847056">Call Preston</a></div>
+          </div>
+          <figure class="rv" style="--d:1"><img src="img/reception.jpg" width="725" height="480" alt="A patient signing in at the WYP Dental front desk" loading="lazy"><figcaption>The front desk</figcaption></figure>
+        </li>
+      </ol>
+      <div class="also rv">
+        <h3>Everything we do</h3>
+        <ul>
+          <li>Preventative dentistry</li><li>Fillings and restorations</li><li>Invisalign</li><li>Orthodontics and braces</li><li>Children's dentistry</li><li>Cosmetic dentistry and veneers</li>
+          <li>Emergencies and toothaches</li><li>Root canal treatment</li><li>Crown and bridge</li><li>Dentures</li><li>Oral surgery</li><li>Dental implants</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="plan" id="plan" data-tone="accent" aria-labelledby="plan-h">
+    <div class="wrap">
+      <div>
+        <h2 id="plan-h" class="rv">Plan the family visit</h2>
+        <p class="intro rv" style="--d:1">Tell us who's coming. We'll show what applies to each of them, then carry it into your booking.</p>
+        <p class="src rv" style="--d:2">Everything here comes from WYP Dental's own advice. Your dentist will confirm what's right for each person.</p>
+      </div>
+      <div class="planner rv" data-ui style="--d:1">
+        <div class="who" role="group" aria-label="Who is coming">
+          <div class="age" data-band="u2"><span class="lab">Under 2</span><div class="ctl"><button type="button" data-step="-1" aria-label="One fewer under 2">−</button><output>0</output><button type="button" data-step="1" aria-label="One more under 2">+</button></div></div>
+          <div class="age" data-band="k"><span class="lab">2 to 7</span><div class="ctl"><button type="button" data-step="-1" aria-label="One fewer aged 2 to 7">−</button><output>0</output><button type="button" data-step="1" aria-label="One more aged 2 to 7">+</button></div></div>
+          <div class="age has" data-band="t"><span class="lab">8 to 11</span><div class="ctl"><button type="button" data-step="-1" aria-label="One fewer aged 8 to 11">−</button><output>1</output><button type="button" data-step="1" aria-label="One more aged 8 to 11">+</button></div></div>
+          <div class="age" data-band="y"><span class="lab">12 to 17</span><div class="ctl"><button type="button" data-step="-1" aria-label="One fewer aged 12 to 17">−</button><output>0</output><button type="button" data-step="1" aria-label="One more aged 12 to 17">+</button></div></div>
+          <div class="age has" data-band="a"><span class="lab">Adults</span><div class="ctl"><button type="button" data-step="-1" aria-label="One fewer adult">−</button><output>2</output><button type="button" data-step="1" aria-label="One more adult">+</button></div></div>
+        </div>
+        <div class="where" role="radiogroup" aria-label="Which clinic">
+          <span>Clinic</span>
+          <input type="radio" name="clinic" id="c-bh" value="Box Hill" checked><label for="c-bh">Box Hill</label>
+          <input type="radio" name="clinic" id="c-pr" value="Preston"><label for="c-pr">Preston</label>
+        </div>
+        <ul class="notes" id="notes" aria-live="polite">
+          <li><b>Everyone: a check and clean every 6 to 12 months</b>Regular checks find small problems early.</li>
+          <li><b>8 to 11: time for an orthodontic check</b>Children should be assessed for orthodontic problems from 8 to 10. May be bulk billed through the CDBS, if eligible.</li>
+          <li><b>Adults: braces aren't only for teenagers</b>Dr Wang's eldest braces patient is 64. Standard check-up and clean $195 before rebates.</li>
+        </ul>
+        <div class="go">
+          <a class="btn" href="#book" id="take-plan">Book for 3 people at Box Hill</a>
+          <a class="tel" id="plan-tel" href="tel:0398974411">or call (03) 9897 4411</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="team" id="team" data-tone="paper" aria-labelledby="team-h">
+    <div class="inner">
+      <h2 id="team-h" class="rv">Our dentists</h2>
+      <aside class="rv" style="--d:1">
+        <p><b>Since 2000</b>First clinic opened in Preston</p>
+        <p><b>Box Hill and Preston</b>Two clinics, one family</p>
+        <p><b>English and Chinese</b>Mandarin, Cantonese, Sichuanese and Shanghainese</p>
+      </aside>
+      <p class="bio rv" style="--d:1"><img class="cap" src="img/dr-wang.jpg" width="717" height="506" alt="Dr Youping Wang" loading="lazy"><strong>Dr Youping Wang</strong> trained at the West China School of Dentistry and was the first female PhD graduate in orthodontics in her field. She moved to Australia in 1991 and opened her first clinic in Preston in 2000. She loves treating kids and easing anxious patients.</p>
+      <p class="bio rv" style="--d:2"><img class="cap r" src="img/dr-wendy.jpg" width="382" height="501" alt="Dr Wendy Hu" loading="lazy"><strong>Dr Wendy Hu</strong>, principal dentist, always looked up to her mum and followed her into dentistry. She graduated from the University of Queensland with first class honours, with special interests in Invisalign, children's dentistry, aesthetic dentistry and implants.</p>
+      <ul class="drs">
+        <li class="dr rv"><img src="img/dr-lou.jpg" width="604" height="488" alt="Dr Ming Lou" loading="lazy"><div><h3>Dr Ming Lou</h3><p class="q">BDS, ADC Cert</p><p>Endodontics, crown and bridge, dentures and dental implants.</p><p class="lang">Mandarin, Shanghainese, English</p></div></li>
+        <li class="dr rv" style="--d:1"><img src="img/dr-michael.jpg" width="468" height="467" alt="Dr Michael Xu" loading="lazy"><div><h3>Dr Michael Xu</h3><p class="q">BDS, MDS (Pros), PhD</p><p>Crown and bridge, cosmetic and implant dentistry. An avid long-distance runner.</p><p class="lang">English, Mandarin</p></div></li>
+        <li class="dr rv" style="--d:2"><img src="img/dr-tracy.jpg" width="451" height="451" alt="Dr Tracy (Huaying) Li" loading="lazy"><div><h3>Dr Tracy Li</h3><p class="q">BDS, ADC Cert</p><p>Family dentistry, for patients from all walks of life.</p><p class="lang">Mandarin, English</p></div></li>
+        <li class="dr rv" style="--d:3"><img src="img/dr-regina.jpg" width="430" height="429" alt="Dr Regina Wong" loading="lazy"><div><h3>Dr Regina Wong</h3><p class="q">BDS (UK)</p><p>Restorative and children's dentistry. Trained at King's College London.</p><p class="lang">English, Mandarin, Cantonese</p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="why" id="why" data-tone="paper" aria-labelledby="why-h">
+    <div class="inner">
+      <div>
+        <h2 id="why-h" class="rv">The WYP difference</h2>
+        <p class="say rv" style="--d:1">"Dentistry to us is not just about fixing teeth, it is about listening to each individual's story."</p>
+        <p class="by rv" style="--d:2">Dr Youping Wang, founder</p>
+        <figure class="rv" style="--d:2"><img src="img/wang-wendy.jpg" width="303" height="451" alt="Dr Wendy Hu and Dr Youping Wang in a treatment room" loading="lazy"><figcaption>Dr Wendy Hu and her mum, Dr Youping Wang</figcaption></figure>
+      </div>
+      <dl>
+        <div class="rv"><dt>Family run</dt><dd>We're a family practice, and we look after you like family: your name, your family, your preferences.</dd></div>
+        <div class="rv" style="--d:1"><dt>QIP accredited practice</dt><dd>Assessed against the National Safety and Quality Health Service Standards for dentistry, with strict infection control.</dd></div>
+        <div class="rv" style="--d:2"><dt>Care in English and Chinese</dt><dd>Between them, our dentists speak English, Mandarin, Cantonese, Sichuanese and Shanghainese.</dd></div>
+        <div class="rv" style="--d:3"><dt>Digital dentistry</dt><dd>Digital x-rays, intraoral cameras and scanners, and an iTero digital practice for Invisalign.</dd></div>
+        <div class="rv" style="--d:4"><dt>Claims on the spot</dt><dd>On-the-spot claims with all major health funds. HCF and Bupa preferred provider at Preston.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="book" id="book" data-tone="deep" aria-labelledby="book-h">
+    <div class="inner">
+      <div>
+        <h2 id="book-h" class="rv">Book online</h2>
+        <p class="say rv" style="--d:1">Send a request and the team will be in touch to confirm a time. Or call the clinic you'd like to visit.</p>
+        <div class="direct rv" style="--d:2">
+          <a href="tel:0398974411">Box Hill (03) 9897 4411</a>
+          <a href="tel:0394847056">Preston (03) 9484 7056</a>
+          <a href="sms:0451439223">Text 0451 439 223</a>
+          <a href="mailto:info@wypdental.com.au">info@wypdental.com.au</a>
+        </div>
+        <figure class="pic rv" style="--d:3"><img src="img/mirror.jpg" width="644" height="587" alt="A patient smiling into a round mirror with her dentist beside her" loading="lazy"><figcaption>See you soon in Box Hill or Preston</figcaption></figure>
+      </div>
+      <form class="req rv" data-ui id="req" action="mailto:info@wypdental.com.au" method="get" enctype="text/plain" style="--d:1">
+        <h3>Request an appointment</h3>
+        <label>Your name<input name="name" autocomplete="name" required></label>
+        <label>Phone<input name="phone" type="tel" autocomplete="tel" required></label>
+        <label>Clinic
+          <select name="clinic" id="f-clinic"><option>Box Hill</option><option>Preston</option></select>
+        </label>
+        <label>Appointment
+          <select name="job" id="f-job">
+            <option>Check-up and clean</option><option>Children's check-up</option><option>Orthodontic consultation</option><option>Fillings, crowns or implants</option><option>Toothache or emergency</option><option>Family visit</option><option>Something else</option>
+          </select>
+        </label>
+        <label class="full">Who's coming and anything we should know<textarea name="message" id="f-msg"></textarea></label>
+        <p class="note">This opens your email app with the details filled in. Nothing is stored on this page.</p>
+        <button class="btn" type="submit">Send my booking request</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer aria-labelledby="foot-h">
+  <div class="inner">
+    <div>
+      <h2 id="foot-h">WYP Dental</h2>
+      <p class="cn" lang="zh-Hans">王幼平牙科诊所</p>
+      <p style="margin-top:14px;max-width:34ch">Dentistry and orthodontics for the whole family, in Box Hill and Preston.</p>
+      <div class="social"><a href="https://www.instagram.com/wypdental/">Instagram</a><a href="https://www.facebook.com/youpingdentalclinic">Facebook</a></div>
+    </div>
+    <div>
+      <h3>Box Hill</h3>
+      <address>Level 1, 65–67 Carrington Road<br>Box Hill VIC 3128<a href="tel:0398974411">(03) 9897 4411</a></address>
+    </div>
+    <div>
+      <h3>Preston</h3>
+      <address>195 Bell Street<br>Preston VIC 3072<a href="tel:0394847056">(03) 9484 7056</a><a href="mailto:info@wypdental.com.au">info@wypdental.com.au</a></address>
+    </div>
+  </div>
+  <div class="imprint">
+    <p>© <span id="yr">2026</span> WYP Dental. All rights reserved.</p>
+    <p>Concept design by <a href="https://swoopsites.com/">Swoop Sites</a>, Melbourne.</p>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Quick contact">
+  <a class="btn ghost" href="tel:0398974411">Box Hill</a>
+  <a class="btn ghost" href="tel:0394847056">Preston</a>
+  <a class="btn" href="#book">Book online</a>
+</nav>
+
+<script>
+document.documentElement.classList.add('js');
+document.getElementById('yr').textContent = new Date().getFullYear();
+const clock = document.getElementById('clock');
+const tickClock = () => { clock.textContent = new Date().toLocaleTimeString('en-AU', { timeZone: 'Australia/Melbourne', hour: 'numeric', minute: '2-digit' }); };
+tickClock(); setInterval(tickClock, 15000);
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const sv = document.querySelector('.strip video');
+if (sv && getComputedStyle(sv.parentElement).display !== 'none') { sv.src = sv.dataset.src; sv.preload = 'metadata'; if (!reduce) { sv.autoplay = true; sv.play().catch(() => {}); } }
+
+// scroll reveals, once, staggered by --d
+const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+document.querySelectorAll('.rv').forEach((el) => io.observe(el));
+
+// sticky header: blur after scrolling, ink of the chapter beneath it
+const hdr = document.getElementById('top');
+const chapters = [...document.querySelectorAll('[data-tone]')];
+function onScroll() {
+  hdr.classList.toggle('scrolled', scrollY > 40);
+  const y = hdr.getBoundingClientRect().bottom;
+  let tone = 'paper';
+  for (const s of chapters) { const r = s.getBoundingClientRect(); if (r.top <= y && r.bottom > y) { tone = s.dataset.tone; break; } }
+  if (scrollY < 200) tone = 'paper';
+  hdr.classList.toggle('on-deep', tone === 'deep');
+  hdr.classList.toggle('on-accent', tone === 'accent');
+}
+addEventListener('scroll', onScroll, { passive: true }); onScroll();
+// phone bar: steps aside while you read down, comes back when you scroll up
+const mbar = document.querySelector('.mbar'); let lastY = scrollY;
+addEventListener('scroll', () => { const y = scrollY; if (Math.abs(y - lastY) > 8) { mbar.classList.toggle('away', y > lastY && y > 300); lastY = y; } }, { passive: true });
+
+// count up, once
+const cio = new IntersectionObserver((es) => es.forEach((e) => {
+  if (!e.isIntersecting) return; cio.unobserve(e.target);
+  const el = e.target, end = +el.dataset.count; if (reduce) return;
+  const t0 = performance.now(), dur = 1300;
+  const tick = (t) => { const p = Math.min(1, (t - t0) / dur); el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(tick); };
+  el.textContent = '0'; requestAnimationFrame(tick);
+}), { threshold: .6 });
+document.querySelectorAll('[data-count]').forEach((el) => cio.observe(el));
+
+// the family planner: built from WYP Dental's own advice
+const bands = {
+  u2: { who: 'under 2', note: ['First visits: start early', 'We love seeing kids from a young age, so the dentist becomes a familiar place.'] },
+  k: { who: '2 to 7', note: ['Children 2 to 7: may be bulk billed', 'Eligible children aged 2 to 17 can be bulk billed through the Child Dental Benefits Schedule (CDBS).'] },
+  t: { who: '8 to 11', note: ['8 to 11: time for an orthodontic check', 'Children should be assessed for orthodontic problems from 8 to 10. May be bulk billed through the CDBS, if eligible.'] },
+  y: { who: '12 to 17', note: ['12 to 17: the usual age for braces', 'Braces are often recommended around 12 to 14, once the adult teeth are through. May be bulk billed through the CDBS, if eligible.'] },
+  a: { who: 'adult', note: ['Adults: braces aren\'t only for teenagers', 'Dr Wang\'s eldest braces patient is 64. Standard check-up and clean $195 before rebates.'] }
+};
+const phones = { 'Box Hill': ['tel:0398974411', '(03) 9897 4411'], 'Preston': ['tel:0394847056', '(03) 9484 7056'] };
+const notes = document.getElementById('notes'), take = document.getElementById('take-plan'), ptel = document.getElementById('plan-tel');
+const counts = () => Object.fromEntries([...document.querySelectorAll('.age')].map((a) => [a.dataset.band, +a.querySelector('output').value || +a.querySelector('output').textContent]));
+function clinic() { return document.querySelector('input[name=clinic]:checked').value; }
+function render() {
+  const c = counts(), total = Object.values(c).reduce((s, n) => s + n, 0), where = clinic();
+  const items = [];
+  if (total) items.push(['Everyone: a check and clean every 6 to 12 months', 'Regular checks find small problems early.']);
+  for (const k of Object.keys(bands)) if (c[k]) items.push(bands[k].note);
+  if (where === 'Preston' && total) items.push(['HCF or Bupa member?', 'At Preston, HCF and Bupa members can have a check-up and clean with minimal to no out-of-pocket fees.']);
+  if (!total) items.push(['Add the people who are coming', 'Use the + buttons above.']);
+  notes.innerHTML = items.map(([b, t]) => `<li><b>${b}</b>${t}</li>`).join('');
+  take.textContent = total ? `Book for ${total} ${total === 1 ? 'person' : 'people'} at ${where}` : `Book at ${where}`;
+  ptel.href = phones[where][0]; ptel.textContent = 'or call ' + phones[where][1];
+}
+document.querySelectorAll('.age button').forEach((b) => b.addEventListener('click', () => {
+  const box = b.closest('.age'), out = box.querySelector('output');
+  const n = Math.max(0, Math.min(9, (+out.textContent) + (+b.dataset.step)));
+  out.textContent = n; out.value = n; box.classList.toggle('has', n > 0); render();
+}));
+document.querySelectorAll('input[name=clinic]').forEach((r) => r.addEventListener('change', render));
+render();
+
+// carry the plan into the booking request
+const fc = document.getElementById('f-clinic'), fj = document.getElementById('f-job'), fm = document.getElementById('f-msg');
+take.addEventListener('click', () => {
+  const c = counts(), parts = Object.keys(bands).filter((k) => c[k]).map((k) => `${c[k]} × ${bands[k].who}`);
+  fc.value = clinic(); fj.value = 'Family visit';
+  if (parts.length) fm.value = `Family visit for: ${parts.join(', ')}.\n`;
+});
+document.querySelectorAll('[data-job]').forEach((a) => a.addEventListener('click', () => { fj.value = a.dataset.job; }));
+
+// a tidy email instead of a raw form post
+document.getElementById('req').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const f = new FormData(e.target);
+  const body = `Name: ${f.get('name')}\nPhone: ${f.get('phone')}\nClinic: ${f.get('clinic')}\nAppointment: ${f.get('job')}\n\n${f.get('message')}`;
+  location.href = 'mailto:info@wypdental.com.au?subject=' + encodeURIComponent('Booking request: ' + f.get('job') + ', ' + f.get('clinic')) + '&body=' + encodeURIComponent(body);
+});
+</script>
+</body>
+</html>
