@@ -30,6 +30,10 @@
   --m: clamp(16px, 5.5vw, 96px);
   --gap: clamp(16px, 2vw, 32px);
   --ease: cubic-bezier(.16, 1, .3, 1);
+  --r: 14px;
+  --shadow: 0 1px 3px rgba(0, 0, 0, .06), 0 30px 60px rgba(0, 0, 0, .18);
+  --shadow-s: 0 1px 2px rgba(0, 0, 0, .08), 0 10px 24px rgba(0, 0, 0, .12);
+  --shadow-l: 0 2px 6px rgba(0, 0, 0, .08), 0 40px 80px rgba(0, 0, 0, .26);
 }
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scrollbar-color: var(--muted) var(--deep); }
@@ -44,10 +48,10 @@ p, ul, ol, dl, figure { margin: 0; }
 ul { padding: 0; list-style: none; }
 .grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap); padding-inline: var(--m); }
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 26px; background: var(--accent); color: var(--accent-ink);
-  font: 500 var(--step-body)/1 Newsreader, Georgia, serif; text-decoration: none; border: 0; border-radius: 0; cursor: pointer;
-  transition: transform .3s var(--ease), background-color .3s var(--ease); }
-.btn:hover { background: #f7d872; transform: translateY(-2px); }
-.btn:active { transform: translateY(0) scale(.98); }
+  font: 500 var(--step-body)/1 Newsreader, Georgia, serif; text-decoration: none; border: 0; border-radius: 999px; cursor: pointer;
+  transition: transform .3s var(--ease), background-color .3s var(--ease), box-shadow .3s var(--ease); } /* taste-skill-ignore: premium bar depth, BUILD-BRIEF 4-5 */
+.btn:hover { background: #f7d872; transform: translateY(-2px); box-shadow: var(--shadow); } /* taste-skill-ignore: premium bar depth, BUILD-BRIEF 4-5 */
+.btn:active { transform: translateY(0) scale(.97); box-shadow: none; transition-duration: .08s; } /* taste-skill-ignore: premium bar depth, BUILD-BRIEF 4-5 */
 .link { display: inline-flex; align-items: center; min-height: 48px; font-weight: 500; }
 .link span { transition: transform .3s var(--ease); display: inline-block; margin-left: 8px; }
 .link:hover span { transform: translateX(4px); }
@@ -56,26 +60,51 @@ ul { padding: 0; list-style: none; }
 .concept { background: #111; color: #ddd; font-size: var(--step-small); text-align: center; padding: 9px var(--m); position: relative; z-index: 5; }
 .concept b { color: #fff; }
 
-/* ---------- Hero: small name, open sky (three foreshore views crossfade) ---------- */
-.hero { position: relative; height: calc(100svh - 38px); min-height: 600px; overflow: hidden; background: var(--deep); color: var(--ink); }
-.hero .views img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1.6s ease-out; }
-.hero .views img.on { opacity: 1; }
-.hero .views img:nth-child(1) { object-position: 60% 50%; }
-.hero .views img:nth-child(2) { object-position: 58% 50%; }
-.hero .views img:nth-child(3) { object-position: 45% 50%; }
-.hero .views { position: absolute; inset: 0; animation: drift 30s ease-in-out infinite alternate; }
-.hero::after { content: ""; position: absolute; inset: 0; background: rgba(0, 32, 35, .38); }
-@keyframes drift { from { transform: scale(1.02); } to { transform: scale(1.1) translate(-1%, -1%); } }
-.bar { position: absolute; z-index: 2; top: 0; left: 0; right: 0; display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; padding: 20px var(--m) 0; font-size: var(--step-small); line-height: 1.3; }
-.bar .name { display: block; text-decoration: none; padding: 4px 0; min-height: 48px; }
-.bar .name span { display: block; }
+/* ---------- Sticky header: sits over the hero, gains a blurred ground once the page moves ---------- */
+.bar { position: sticky; top: 0; z-index: 30; height: 0; color: var(--ink); }
+.bar-in { position: absolute; top: 0; left: 0; right: 0; display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 18px var(--m); font-size: var(--step-small); line-height: 1.3;
+  transition: padding .45s var(--ease), background-color .45s var(--ease), box-shadow .45s var(--ease), backdrop-filter .45s var(--ease); } /* taste-skill-ignore: premium bar depth, BUILD-BRIEF 4-5 */
+.bar.scrolled .bar-in { padding-block: 6px; background: rgba(0, 54, 58, .74); -webkit-backdrop-filter: blur(16px) saturate(1.3); backdrop-filter: blur(16px) saturate(1.3); box-shadow: 0 1px 0 rgba(246, 231, 180, .12), 0 18px 40px rgba(0, 0, 0, .22); } /* taste-skill-ignore: premium bar depth, BUILD-BRIEF 4-5 */
+.bar .name { display: flex; flex-direction: column; justify-content: center; text-decoration: none; min-height: 48px; }
+.bar .name span { display: block; transition: margin .45s var(--ease); }
+.bar.scrolled .name { flex-direction: row; align-items: center; gap: .32em; font-size: 1rem; }
+.bar .right { display: flex; align-items: center; gap: 22px; }
 .bar nav { display: flex; flex-wrap: wrap; justify-content: flex-end; }
 .bar nav a { display: inline-flex; align-items: center; min-height: 48px; padding: 0 2px; text-decoration: none; }
 .bar nav a:not(:last-child)::after { content: ","; margin-right: 6px; }
 .bar nav a:hover { text-decoration: underline; text-decoration-thickness: 2px; }
+.bar .pill { min-height: 48px; padding: 0 22px; font-size: var(--step-small); }
+
+/* ---------- Hero: small name, open sky (a slow loop of four foreshore views) ---------- */
+.hero { position: relative; height: calc(100svh - 38px); min-height: 600px; overflow: hidden; background: var(--deep) url("img/hero-poster.jpg") 50% 50% / cover no-repeat; color: var(--ink); }
+.hero .loop { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 55% 50%; }
+.hero::after { content: ""; position: absolute; inset: 0; background: rgba(0, 32, 35, .4); }
+.hud { position: absolute; z-index: 2; top: 116px; right: var(--m); width: 330px; padding: 18px 20px; border-radius: var(--r); background: rgba(0, 46, 50, .86); /* taste-skill-ignore: premium bar depth, BUILD-BRIEF 4-5 */
+  box-shadow: inset 0 0 0 1px rgba(246, 231, 180, .16), var(--shadow); font-size: var(--step-small); line-height: 1.35; animation: rise 1.2s var(--ease) .5s both; } /* taste-skill-ignore: premium bar depth, BUILD-BRIEF 4-5 */
+.hud::before, .hud::after { content: ""; position: absolute; width: 14px; height: 14px; border: 0 solid var(--accent); }
+.hud::before { top: 8px; left: 8px; border-top-width: 2px; border-left-width: 2px; border-top-left-radius: 4px; }
+.hud::after { bottom: 8px; right: 8px; border-bottom-width: 2px; border-right-width: 2px; border-bottom-right-radius: 4px; }
+.hud .state { display: flex; align-items: center; gap: 10px; font-size: 1.0625rem; }
+.hud .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--muted); flex: none; }
+.hud.open .dot { background: #8fe3a5; box-shadow: 0 0 0 0 rgba(143, 227, 165, .6); animation: ping 2.4s ease-out infinite; } /* taste-skill-ignore: premium bar depth, BUILD-BRIEF 4-5 */
+@keyframes ping { 70% { box-shadow: 0 0 0 9px rgba(143, 227, 165, 0); } 100% { box-shadow: 0 0 0 0 rgba(143, 227, 165, 0); } } /* taste-skill-ignore: premium bar depth, BUILD-BRIEF 4-5 */
+.hud .sub { margin-top: 4px; color: var(--muted); }
+.hud dl { margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(246, 231, 180, .16); display: grid; grid-template-columns: 1fr 1fr; gap: 10px; } /* taste-skill-ignore: premium bar depth, BUILD-BRIEF 4-5 */
+.hud dt { color: var(--muted); font-size: .75rem; letter-spacing: .04em; text-transform: uppercase; }
+.hud dd { margin: 2px 0 0; font-weight: 500; font-variant-numeric: tabular-nums; }
 .hero-foot { position: absolute; z-index: 2; left: var(--m); right: var(--m); bottom: clamp(28px, 6vh, 64px); display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; }
 .hero h1 { font-size: var(--step-display); line-height: 0.88; letter-spacing: -0.05em; }
-.hero h1 span { display: block; }
+.hero h1 > span { display: block; }
+.kin .kw { display: inline-block; opacity: 0; filter: blur(8px); animation: kin .55s cubic-bezier(.2, .7, .2, 1) forwards; animation-delay: calc(var(--i) * 70ms + 120ms); }
+@keyframes kin { to { opacity: 1; filter: blur(0); } }
+
+/* ---------- Real numbers ---------- */
+.figs { background: var(--deep); padding: clamp(56px, 7vw, 110px) 0; }
+.figs ul { row-gap: 40px; }
+.figs li { grid-column: span 3; background: var(--bg); border-radius: var(--r); padding: 26px 24px 24px; box-shadow: var(--shadow); transition: transform .45s var(--ease), box-shadow .45s var(--ease); } /* taste-skill-ignore: readout tiles (data-ui) */
+.figs li:hover { transform: translateY(-4px); box-shadow: var(--shadow-l); } /* taste-skill-ignore: premium bar depth, BUILD-BRIEF 4-5 */ /* taste-skill-ignore: readout tiles (data-ui) */
+.figs b { display: block; font-size: clamp(3rem, 1.6rem + 4.6vw, 6.25rem); font-weight: 300; letter-spacing: -0.05em; line-height: .9; font-variant-numeric: tabular-nums; color: var(--ink); }
+.figs span { display: block; margin-top: 14px; max-width: 24ch; font-size: var(--step-small); line-height: 1.45; color: var(--muted); }
 .hero .side { max-width: 34ch; text-align: right; display: flex; flex-direction: column; align-items: flex-end; gap: 22px; }
 .hero .side p { font-size: var(--step-body); line-height: 1.45; }
 .hero .calls { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 8px 24px; }
@@ -111,20 +140,21 @@ ul { padding: 0; list-style: none; }
 .stage-2-t { grid-row: 3; grid-column: 9 / 13; margin-top: 140px; }
 .stage-3 { grid-row: 4; grid-column: 8 / 13; margin-top: 140px; }
 .stage-3-t { grid-row: 4; grid-column: 2 / 7; margin-top: 140px; }
-.help figure img { width: 100%; object-fit: cover; }
+.help figure img { width: 100%; object-fit: cover; border-radius: var(--r); } /* taste-skill-ignore: premium bar depth, BUILD-BRIEF 4-5 */
+.print img, .staff figure.wide img, .reach img { border-radius: var(--r); } /* taste-skill-ignore: premium bar depth, BUILD-BRIEF 4-5 */
 .stage-1 img { aspect-ratio: 3 / 4; } .stage-2 img { aspect-ratio: 1; } .stage-3 img { aspect-ratio: 16 / 10; object-position: 50% 40%; }
 .help figcaption { margin-top: 8px; font-size: var(--step-small); color: var(--paper-muted); }
 .who p { max-width: 36ch; }
 .who p b { font-weight: 500; }
-.who details { margin-top: 18px; background: #dfdad8; max-width: 36ch; }
+.who details { margin-top: 18px; background: #f3f0ef; max-width: 36ch; border-radius: var(--r); overflow: hidden; } /* taste-skill-ignore: premium bar depth, BUILD-BRIEF 4-5 */
 .who summary { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 52px; padding: 0 16px; cursor: pointer; font-weight: 500; list-style: none; transition: background-color .2s; }
 .who summary::-webkit-details-marker { display: none; }
 .who summary::after { content: "+"; font-size: 1.5rem; line-height: 1; transition: transform .3s var(--ease); }
 .who details[open] summary::after { transform: rotate(45deg); }
-.who summary:hover { background: #d4cecb; }
+.who summary:hover { background: #e6e1df; }
 .who ul { padding: 4px 16px 18px; display: flex; flex-direction: column; gap: 6px; font-size: var(--step-body); line-height: 1.4; }
 .who .ask { margin-top: 10px; }
-.help .safety { grid-column: 2 / 12; grid-row: 5; margin-top: 110px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap); background: #dfdad8; padding: clamp(24px, 3vw, 44px); }
+.help .safety { grid-column: 2 / 12; grid-row: 5; margin-top: 110px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap); background: #f3f0ef; padding: clamp(24px, 3vw, 44px); border-radius: var(--r); } /* taste-skill-ignore: premium bar depth, BUILD-BRIEF 4-5 */
 .help .safety h3 { font-size: var(--step-lead); font-weight: 500; letter-spacing: -0.01em; line-height: 1.25; }
 .help .safety p { margin-top: 10px; }
 
@@ -136,14 +166,15 @@ ul { padding: 0; list-style: none; }
 .staff .pin p { margin-top: 28px; max-width: 34ch; }
 .staff .pin p + p { margin-top: 16px; }
 .people { grid-column: 5 / 13; display: grid; grid-template-columns: 1fr 1fr; gap: 48px var(--gap); align-items: start; padding-top: 96px; }
-.person { background: var(--surface); padding: clamp(24px, 2.6vw, 40px); }
+.person { background: var(--surface); padding: clamp(24px, 2.6vw, 40px); border-radius: var(--r); transition: transform .45s var(--ease), box-shadow .45s var(--ease); } /* taste-skill-ignore: premium bar depth, BUILD-BRIEF 4-5 */
+.person:hover { transform: translateY(-6px); box-shadow: inset 0 0 0 1px rgba(246, 231, 180, .14), var(--shadow-l); } /* taste-skill-ignore: premium bar depth, BUILD-BRIEF 4-5 */
 .person:nth-child(even) { margin-top: 180px; }
 .person h3 { font-size: var(--step-head); }
 .person .role { margin-top: 14px; font-size: var(--step-lead); line-height: 1.3; }
 .person .quals { margin-top: 6px; font-size: var(--step-small); color: var(--muted); }
 .person p.bio { margin-top: 22px; max-width: 40ch; }
 .person .tags { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 8px; }
-.person .tags li { background: var(--bg); padding: 4px 12px; font-size: var(--step-small); }
+.person .tags li { background: var(--bg); padding: 4px 12px; font-size: var(--step-small); border-radius: 999px; }
 .person .ask { margin-top: 12px; }
 .staff figure.wide { grid-column: 1 / 13; margin-top: clamp(100px, 10vw, 160px); }
 .staff figure.wide img { width: 100%; aspect-ratio: 21 / 9; object-fit: cover; }
@@ -162,10 +193,10 @@ ul { padding: 0; list-style: none; }
 .week { --lab: 132px; }
 .day { display: grid; grid-template-columns: var(--lab) 1fr; align-items: center; width: 100%; min-height: 64px; padding: 0; background: none; border: 0; color: var(--ink); font: inherit; text-align: left; cursor: pointer; }
 .day .dname { font-weight: 500; }
-.day .track { position: relative; height: 64px; background: var(--bg); }
-.day .span { position: absolute; top: 0; bottom: 0; left: var(--s); width: var(--w); background: var(--paper); color: var(--paper-ink); display: flex; align-items: center; padding: 0 16px; font-size: var(--step-small); font-weight: 500; white-space: nowrap; overflow: hidden;
-  transition: background-color .3s var(--ease), transform .4s var(--ease); transform-origin: left center; }
-.day:hover .span { background: #fff; }
+.day .track { position: relative; height: 64px; background: var(--bg); border-radius: var(--r); box-shadow: inset 0 2px 6px rgba(0, 0, 0, .18); } /* taste-skill-ignore: premium bar depth, BUILD-BRIEF 4-5 */
+.day .span { position: absolute; top: 0; bottom: 0; left: var(--s); width: var(--w); background: var(--paper); color: var(--paper-ink); display: flex; align-items: center; padding: 0 16px; font-size: var(--step-small); font-weight: 500; white-space: nowrap; overflow: hidden; border-radius: var(--r); box-shadow: var(--shadow-s); /* taste-skill-ignore: premium bar depth, BUILD-BRIEF 4-5 */
+  transition: background-color .3s var(--ease), transform .4s var(--ease), box-shadow .3s var(--ease); transform-origin: left center; } /* taste-skill-ignore: premium bar depth, BUILD-BRIEF 4-5 */
+.day:hover .span { background: #fff; box-shadow: var(--shadow); } /* taste-skill-ignore: premium bar depth, BUILD-BRIEF 4-5 */
 .day[aria-pressed="true"] .span { background: var(--accent); color: var(--accent-ink); }
 .day[aria-pressed="true"] .dname::after { content: " (chosen)"; font-weight: 400; color: var(--muted); font-size: var(--step-small); }
 .day .now { position: absolute; top: -6px; bottom: -6px; width: 3px; background: var(--ink); left: var(--n); display: none; }
@@ -178,7 +209,7 @@ ul { padding: 0; list-style: none; }
 .funding { grid-column: 5 / 13; margin-top: 48px; }
 .funding h3 { font-size: var(--step-lead); font-weight: 500; letter-spacing: -0.01em; line-height: 1.25; }
 .funding ul { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; }
-.funding li { background: var(--bg); padding: 8px 14px; font-size: var(--step-small); }
+.funding li { background: var(--bg); padding: 8px 16px; font-size: var(--step-small); border-radius: 999px; } /* taste-skill-ignore: premium bar depth, BUILD-BRIEF 4-5 */
 
 /* ---------- Contact: sentence, picture, links, enquiry form ---------- */
 .contact { padding: clamp(120px, 12vw, 200px) 0 clamp(110px, 10vw, 160px); background: var(--bg); }
@@ -192,13 +223,13 @@ ul { padding: 0; list-style: none; }
 .reach dt:first-child { margin-top: 0; }
 .reach dd { margin: 0; }
 .reach dd a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 500; overflow-wrap: anywhere; }
-.form { grid-column: 7 / 13; background: var(--surface); padding: clamp(24px, 3vw, 44px); align-self: start; }
+.form { grid-column: 7 / 13; background: var(--surface); padding: clamp(24px, 3vw, 44px); align-self: start; border-radius: var(--r); box-shadow: inset 0 0 0 1px rgba(246, 231, 180, .08), var(--shadow-l); } /* taste-skill-ignore: premium bar depth, BUILD-BRIEF 4-5 */
 .form h3 { font-size: var(--step-lead); font-weight: 500; letter-spacing: -0.01em; line-height: 1.25; }
 .form > p { margin-top: 8px; color: var(--ink); }
 .form form { margin-top: 22px; display: grid; gap: 16px; }
 .form .two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .form label { display: grid; gap: 6px; font-size: var(--step-small); font-weight: 500; }
-.form input, .form select, .form textarea { font: inherit; font-size: 1.0625rem; color: var(--paper-ink); background: var(--paper); border: 1px solid var(--paper); border-radius: 0; padding: 12px 14px; width: 100%; min-height: 50px; caret-color: var(--paper-ink); }
+.form input, .form select, .form textarea { font: inherit; font-size: 1.0625rem; color: var(--paper-ink); background: var(--paper); border: 1px solid var(--paper); border-radius: 10px; padding: 12px 14px; width: 100%; min-height: 50px; caret-color: var(--paper-ink); }
 .form input:focus, .form select:focus, .form textarea:focus { outline: 3px solid var(--accent); outline-offset: 0; }
 .form textarea { min-height: 120px; resize: vertical; }
 .form .small { font-size: var(--step-small); color: var(--ink); }
@@ -218,15 +249,21 @@ footer .word { font-size: var(--step-display); font-weight: 300; letter-spacing:
 footer .legal { margin-top: 22px; font-size: var(--step-small); display: flex; flex-direction: column; gap: 8px; max-width: 72ch; }
 footer .legal a { color: inherit; }
 
-/* ---------- Motion: entrances, staggered; content is visible without script ---------- */
-.js [data-in] { opacity: 0; transform: translateY(24px); transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: calc(var(--i, 0) * 80ms); }
-.js [data-in].on { opacity: 1; transform: none; }
-.hero h1 span, .hero .side > * { animation: rise 1.2s var(--ease) both; }
-.hero h1 span:nth-child(2) { animation-delay: .08s; } .hero .side > :nth-child(1) { animation-delay: .2s; } .hero .side > :nth-child(2) { animation-delay: .3s; }
+/* ---------- Phone bottom bar ---------- */
+.dock { display: none; }
+
+/* ---------- Motion: scroll reveals, staggered; content is visible without script ---------- */
+.js .rv { opacity: 0; transform: translateY(22px); transition: opacity .9s var(--ease), transform .9s var(--ease), box-shadow .45s var(--ease); transition-delay: calc(var(--i, 0) * 80ms); } /* taste-skill-ignore: premium bar depth, BUILD-BRIEF 4-5 */
+.js .rv.on { opacity: 1; transform: none; }
+.js .person.rv.on:hover { transform: translateY(-6px); transition-delay: 0s; }
+.hero .side > * { animation: rise 1.2s var(--ease) both; }
+.hero .side > :nth-child(1) { animation-delay: .35s; } .hero .side > :nth-child(2) { animation-delay: .45s; }
 @keyframes rise { from { opacity: 0; transform: translateY(26px); } }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
-  .js [data-in] { opacity: 1; transform: none; }
+  .kin .kw { opacity: 1; filter: none; }
+  .hero .loop { display: none; }
+  .js .rv { opacity: 1; transform: none; }
   .js .week .span { transform: none; }
   html { scroll-behavior: auto; }
 }
@@ -251,17 +288,33 @@ footer .legal a { color: inherit; }
   .form { grid-column: 1 / 13; margin-top: 64px; }
   .print.a, .print.b { width: clamp(140px, 22vw, 200px); }
   .print.t1 { top: 46%; } .print.t2 { top: 64%; } .print.t3 { top: 52%; } .print.t4 { top: 70%; }
+  .figs li { grid-column: span 6; } /* taste-skill-ignore: readout tiles (data-ui) */
+  .bar nav { display: none; }
 }
 
 /* ---------- Phone: its own composition ---------- */
 @media (max-width: 760px) {
   .grid { display: block; }
-  .bar { padding-top: 14px; }
+  body { padding-bottom: 76px; }
+  .bar-in { padding-top: 12px; padding-bottom: 12px; }
   .bar .name { font-size: 0.8125rem; }
+  .bar.scrolled .name { font-size: 0.875rem; }
+  .bar .pill { display: none; }
+  .bar nav { display: flex; }
   .bar nav a { display: none; }
   .bar nav a.keep { display: inline-flex; }
   .bar nav a.keep::after { content: none; }
-  .hero { height: calc(100svh - 56px); min-height: 560px; }
+  .hero { height: calc(100svh - 56px - 76px); min-height: 560px; }
+  .hud { top: 92px; left: 20px; right: 20px; width: auto; padding: 12px 16px 12px 18px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .hud .sub, .hud dl > div:last-child { display: none; }
+  .hud dl { margin: 0; padding: 0; border: 0; display: block; text-align: right; }
+  .figs ul { display: grid; grid-template-columns: 1fr 1fr; gap: 32px 20px; }
+  .figs li { grid-column: auto; padding: 20px 16px 18px; }
+  .dock { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; position: fixed; z-index: 40; left: 0; right: 0; bottom: 0; padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); background: rgba(0, 54, 58, .82); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); box-shadow: 0 -1px 0 rgba(246, 231, 180, .12), 0 -12px 30px rgba(0, 0, 0, .2); } /* taste-skill-ignore: premium bar depth, BUILD-BRIEF 4-5 */
+  .dock { transition: transform .35s var(--ease); }
+  .dock.away { transform: translateY(110%); }
+  .dock .btn { min-height: 52px; padding: 0 12px; font-size: 1.0625rem; }
+  .dock .btn.ghost { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1px rgba(246, 231, 180, .5); } /* taste-skill-ignore: premium bar depth, BUILD-BRIEF 4-5 */
   .hero-foot { flex-direction: column; align-items: flex-start; gap: 22px; left: 20px; right: 20px; bottom: 24px; }
   .hero .side { text-align: left; align-items: flex-start; max-width: none; }
   .hero .calls { justify-content: flex-start; }
@@ -301,20 +354,32 @@ footer .legal a { color: inherit; }
 <body>
 <div class="concept">Free concept by <b>Swoop Sites</b> for Mirrool Counselling Centre. This is a design preview, not the live website.</div>
 
-<header class="hero" id="top">
-  <div class="views" aria-hidden="true">
-    <img class="on" src="img/boardwalk.jpg" width="1600" height="1200" alt="" fetchpriority="high">
-    <img src="img/pier-sunset.jpg" width="1920" height="1280" alt="" decoding="async">
-    <img src="img/bushrangers-bay.jpg" width="1600" height="1000" alt="" decoding="async">
-  </div>
-  <div class="bar">
-    <a class="name" href="#top" aria-label="Mirrool Counselling Centre, home"><span>Mirrool</span><span>Counselling</span><span>Centre</span></a>
+<div class="bar" id="bar"><div class="bar-in">
+  <a class="name" href="#top" aria-label="Mirrool Counselling Centre, home"><span>Mirrool</span><span>Counselling</span><span>Centre</span></a>
+  <div class="right">
     <nav aria-label="Main">
       <a href="#help">Who we help</a><a href="#staff">Our staff</a><a href="#hours">Hours</a><a class="keep" href="#contact">Contact</a>
     </nav>
+    <a class="btn pill" href="tel:+61397833222">Call (03) 9783 3222</a>
   </div>
+</div></div>
+
+<header class="hero" id="top">
+  <video class="loop" autoplay muted loop playsinline preload="metadata" poster="img/hero-poster.jpg" width="1280" height="720" aria-hidden="true" tabindex="-1">
+    <source src="img/hero.mp4" type="video/mp4">
+  </video>
+  <aside class="hud" id="hud" data-ui aria-label="The centre today">
+    <div>
+      <p class="state"><span class="dot" aria-hidden="true"></span><b id="hud-state">Open Monday to Friday</b></p>
+      <p class="sub" id="hud-sub">Closed on weekends</p>
+    </div>
+    <dl>
+      <div><dt>Melbourne</dt><dd id="hud-clock">Mon to Fri</dd></div>
+      <div><dt>Today</dt><dd id="hud-today">See our hours</dd></div>
+    </dl>
+  </aside>
   <div class="hero-foot">
-    <h1><span>Mirrool</span><span>Counselling Centre</span></h1>
+    <h1 class="kin"><span><span class="kw" style="--i:0">Mirrool</span></span><span><span class="kw" style="--i:1">Counselling</span> <span class="kw" style="--i:2">Centre</span></span></h1>
     <div class="side">
       <p>Psychologists and counsellors for adults, children and families, at 110 Skye Road just outside the Frankston CBD.</p>
       <div class="calls">
@@ -326,6 +391,15 @@ footer .legal a { color: inherit; }
 </header>
 
 <main>
+  <section class="figs" aria-label="The centre in numbers">
+    <ul class="grid" data-ui>
+      <li class="rv"><b data-count="1988" data-from="1940">1988</b><span>The centre opened on 23 June 1988, just outside the Frankston CBD.</span></li>
+      <li class="rv" style="--i:1"><b data-count="30" data-suffix="+">30+</b><span>Psychologists have worked at the centre since it opened.</span></li>
+      <li class="rv" style="--i:2"><b data-count="4">4</b><span>Practitioners on the team: three psychologists and a counsellor.</span></li>
+      <li class="rv" style="--i:3"><b data-count="5">5</b><span>Weekdays open, each with its own hours. Closed on weekends.</span></li>
+    </ul>
+  </section>
+
   <section class="values" id="values" aria-labelledby="values-h">
     <div class="stage">
       <img src="img/pier-sunset.jpg" width="1920" height="1280" alt="Sunset over Port Phillip at the end of Frankston Pier" loading="lazy">
@@ -342,7 +416,7 @@ footer .legal a { color: inherit; }
         <figure class="print b r34 t4" data-step="4"><img src="img/pier-1954.jpg" width="1200" height="1200" alt="" loading="lazy" style="object-position:35% 50%"></figure>
       </div>
       <div class="stack">
-        <h2 id="values-h">What the centre prides itself on</h2>
+        <h2 id="values-h" class="rv">What the centre prides itself on</h2>
         <ul>
           <li class="on" data-step="0">Integrity</li>
           <li data-step="1">Confidentiality</li>
@@ -356,11 +430,11 @@ footer .legal a { color: inherit; }
 
   <section class="help" id="help" aria-labelledby="help-h">
     <div class="grid">
-      <h2 id="help-h" data-in>Who we help</h2>
-      <p class="lede" data-in style="--i:1">Our psychologists work with a range of issues for adults, for children and adolescents, and for parents and families.</p>
+      <h2 class="rv" id="help-h">Who we help</h2>
+      <p class="lede rv" style="--i:1">Our psychologists work with a range of issues for adults, for children and adolescents, and for parents and families.</p>
 
-      <figure class="stage-1" data-in style="--i:2"><img src="img/foreshore-trees.jpg" width="900" height="1200" alt="Morning sun through the trees on the Frankston foreshore" loading="lazy"><figcaption>The foreshore trees, Frankston</figcaption></figure>
-      <div class="who stage-1-t" data-in style="--i:3">
+      <figure class="stage-1 rv" style="--i:2"><img src="img/foreshore-trees.jpg" width="900" height="1200" alt="Morning sun through the trees on the Frankston foreshore" loading="lazy"><figcaption>The foreshore trees, Frankston</figcaption></figure>
+      <div class="who stage-1-t rv" style="--i:3">
         <p><b>For adults.</b> Depression, anxiety, panic and stress, relationships and couples counselling, anger management, grief and loss.</p>
         <details><summary>All areas for adults</summary><ul>
           <li>Depression</li><li>Anxiety, panic and stress management</li><li>Relationships and couples counselling</li><li>Anger management</li><li>Post traumatic stress (PTSD)</li><li>Sexual abuse and rape</li><li>Grief and loss</li><li>Hypnotherapy</li><li>Drug and alcohol issues</li><li>Survivors of physical and emotional abuse</li><li>Harassment and bullying</li><li>Obsessive compulsive disorder (OCD)</li><li>Critical incident debriefing</li><li>Self-esteem and self confidence</li><li>Communication skills</li><li>Assertiveness</li><li>Conflict resolution</li><li>Sleeping problems</li><li>Sexual difficulties</li>
@@ -368,8 +442,8 @@ footer .legal a { color: inherit; }
         <a class="link ask" href="#contact" data-for="An adult">Enquire for an adult<span aria-hidden="true">&rarr;</span></a>
       </div>
 
-      <figure class="stage-2" data-in><img src="img/boardwalk-sq.jpg" width="800" height="800" alt="The timber boardwalk along the dunes at Frankston, with the pier in the distance" loading="lazy"><figcaption>The boardwalk, Frankston</figcaption></figure>
-      <div class="who stage-2-t" data-in style="--i:1">
+      <figure class="stage-2 rv"><img src="img/boardwalk-sq.jpg" width="800" height="800" alt="The timber boardwalk along the dunes at Frankston, with the pier in the distance" loading="lazy"><figcaption>The boardwalk, Frankston</figcaption></figure>
+      <div class="who stage-2-t rv" style="--i:1">
         <p><b>For children and adolescents.</b> Fears and worries, school refusal, bullying, anger, learning difficulties, sleep, grief and loss.</p>
         <details><summary>All areas for children and teens</summary><ul>
           <li>Educational assessment and reporting, learning difficulties</li><li>Fears and worries (social anxiety, phobias, separation anxiety, panic disorder, OCD)</li><li>Child and adolescent depression</li><li>Suicidal thoughts and self harm behaviours</li><li>Behavioural issues (hyperactivity, attention difficulties, tantrums, oppositional behaviours)</li><li>School refusal</li><li>Bullying</li><li>Anger and aggressive behaviour</li><li>Communication and interpersonal skills (assertive and social skills)</li><li>Grief and loss issues</li><li>Sleep difficulties</li><li>The impact of child abuse (sexual, physical and emotional neglect)</li>
@@ -377,8 +451,8 @@ footer .legal a { color: inherit; }
         <a class="link ask" href="#contact" data-for="A child or adolescent">Enquire for a child or teen<span aria-hidden="true">&rarr;</span></a>
       </div>
 
-      <figure class="stage-3" data-in><img src="img/pier-1954.jpg" width="1200" height="1200" alt="A mother and her small daughter reading together on Frankston Pier, around 1954" loading="lazy"><figcaption>Reading on Frankston Pier, about 1954</figcaption></figure>
-      <div class="who stage-3-t" data-in style="--i:1">
+      <figure class="stage-3 rv"><img src="img/pier-1954.jpg" width="1200" height="1200" alt="A mother and her small daughter reading together on Frankston Pier, around 1954" loading="lazy"><figcaption>Reading on Frankston Pier, about 1954</figcaption></figure>
+      <div class="who stage-3-t rv" style="--i:1">
         <p><b>For parents and families.</b> Parenting strategies, coping with difficult children, sibling issues, and families adapting to change.</p>
         <details><summary>All areas for parents and families</summary><ul>
           <li>Parenting strategies</li><li>Coping with difficult children</li><li>Sibling issues</li><li>Adapting to change in families</li><li>Separation</li><li>Trauma</li><li>Relocation</li><li>Death</li>
@@ -386,7 +460,7 @@ footer .legal a { color: inherit; }
         <a class="link ask" href="#contact" data-for="A parent or family">Enquire for a family<span aria-hidden="true">&rarr;</span></a>
       </div>
 
-      <div class="safety" data-in>
+      <div class="safety rv">
         <div><h3>Making a first appointment</h3><p>Please call the centre on <a href="tel:+61397833222">(03) 9783 3222</a> to arrange an appointment, or send an enquiry with the form below.</p></div>
         <div><h3>If you need help right now</h3><p>In an emergency call 000. Lifeline answers 24 hours a day on 13 11 14.</p></div>
       </div>
@@ -397,12 +471,12 @@ footer .legal a { color: inherit; }
     <div class="grid">
       <div class="row">
       <div class="pin">
-        <h2 id="staff-h" data-in>Our staff</h2>
-        <p data-in style="--i:1">A counselling and psychology practice just outside the Frankston CBD, established 23 June 1988. Over 30 psychologists have worked at the centre since then.</p>
-        <p data-in style="--i:2">Its psychologists and counsellors are members of associations such as the Australian Psychological Society, the National Association of Loss and Grief, the Australian Counselling Association and the Australian Hypnosis Society.</p>
+        <h2 class="rv" id="staff-h">Our staff</h2>
+        <p class="rv" style="--i:1">A counselling and psychology practice just outside the Frankston CBD, established 23 June 1988. Over 30 psychologists have worked at the centre since then.</p>
+        <p class="rv" style="--i:2">Its psychologists and counsellors are members of associations such as the Australian Psychological Society, the National Association of Loss and Grief, the Australian Counselling Association and the Australian Hypnosis Society.</p>
       </div>
       <div class="people">
-        <article class="person" data-in>
+        <article class="person rv">
           <h3>Michael Warner</h3>
           <p class="role">Psychologist</p>
           <p class="quals">B.A. Dip. Ed. Grad.Dip.Ed.Psych, Cert. Trauma &amp; Grief, M.A.P.S.</p>
@@ -410,7 +484,7 @@ footer .legal a { color: inherit; }
           <ul class="tags"><li>Depression</li><li>Anxiety</li><li>Couples</li><li>PTSD</li><li>Grief</li><li>Parenting</li></ul>
           <a class="link ask" href="#contact" data-who="Michael Warner">Ask about Michael<span aria-hidden="true">&rarr;</span></a>
         </article>
-        <article class="person" data-in>
+        <article class="person rv">
           <h3>Marita Murphy</h3>
           <p class="role">Psychologist</p>
           <p class="quals">B.A. Teach, B.A. Social Science, MAPS Associate</p>
@@ -418,7 +492,7 @@ footer .legal a { color: inherit; }
           <ul class="tags"><li>Grief and loss</li><li>Children</li><li>Anxiety</li><li>Trauma</li><li>Play therapy</li></ul>
           <a class="link ask" href="#contact" data-who="Marita Murphy">Ask about Marita<span aria-hidden="true">&rarr;</span></a>
         </article>
-        <article class="person" data-in>
+        <article class="person rv">
           <h3>Kylie Johnson</h3>
           <p class="role">Clinical Psychologist</p>
           <p class="quals">B.App Sc (Hons), M. Psych (Clin), MAPS, CCLIN</p>
@@ -426,7 +500,7 @@ footer .legal a { color: inherit; }
           <ul class="tags"><li>Anxiety and phobias</li><li>Depression</li><li>Pain management</li><li>Sleep</li><li>Body image</li></ul>
           <a class="link ask" href="#contact" data-who="Kylie Johnson">Ask about Kylie<span aria-hidden="true">&rarr;</span></a>
         </article>
-        <article class="person" data-in>
+        <article class="person rv">
           <h3>Jan St Clair</h3>
           <p class="role">Counsellor</p>
           <p class="bio">Jan is the centre's counsellor. Call the centre to ask whether an appointment with Jan suits what you are looking for.</p>
@@ -434,17 +508,17 @@ footer .legal a { color: inherit; }
         </article>
       </div>
       </div>
-      <figure class="wide" data-in><img src="img/coastline.jpg" width="1920" height="774" alt="The Frankston coastline from above, looking north towards Melbourne" loading="lazy"><figcaption>Frankston, looking north along the bay towards Melbourne</figcaption></figure>
+      <figure class="wide rv"><img src="img/coastline.jpg" width="1920" height="774" alt="The Frankston coastline from above, looking north towards Melbourne" loading="lazy"><figcaption>Frankston, looking north along the bay towards Melbourne</figcaption></figure>
     </div>
   </section>
 
   <section class="hours" id="hours" aria-labelledby="hours-h">
     <div class="grid">
       <div class="intro">
-        <h2 id="hours-h" data-in>Our new hours</h2>
-        <p class="status" id="status" aria-live="polite" data-in style="--i:1">Monday to Friday. Closed on weekends.</p>
-        <p class="note" data-in style="--i:2">Every weekday keeps different hours. Tap the day that suits you and we will put it on your enquiry.</p>
-        <a class="btn" href="#contact" id="take-day" data-in style="--i:3">Enquire for Monday</a>
+        <h2 class="rv" id="hours-h">Our new hours</h2>
+        <p class="status rv" id="status" aria-live="polite" style="--i:1">Monday to Friday. Closed on weekends.</p>
+        <p class="note rv" style="--i:2">Every weekday keeps different hours. Tap the day that suits you and we will put it on your enquiry.</p>
+        <a class="btn rv" href="#contact" id="take-day" style="--i:3">Enquire for Monday</a>
       </div>
       <div class="week" id="week" data-ui role="group" aria-label="Opening hours, Monday to Friday">
         <div class="axis" aria-hidden="true"><span>9am</span><span>11am</span><span>1pm</span><span>3pm</span><span>5pm</span><span>7pm</span></div>
@@ -455,7 +529,7 @@ footer .legal a { color: inherit; }
         <button class="day" type="button" data-day="Friday" data-d="5" data-o="9" data-c="15" aria-pressed="false"><span class="dname">Friday</span><span class="track"><span class="span" style="--s:0%;--w:60%">9:00am – 3:00pm</span><span class="now"></span></span></button>
         <div class="day closed"><span class="dname">Weekends</span><span class="track">Closed on weekends</span></div>
       </div>
-      <div class="funding" data-in>
+      <div class="funding rv">
         <h3>The centre services</h3>
         <ul><li>Medicare</li><li>WorkCover</li><li>TAC</li><li>Victims of Crime (V.O.C.A.T)</li><li>E.P.C</li><li>Private health insurance</li></ul>
       </div>
@@ -465,9 +539,9 @@ footer .legal a { color: inherit; }
   <section class="contact" id="contact" aria-labelledby="contact-h">
     <div class="grid">
       <div class="say">
-        <h2 id="contact-h" data-in>Make an appointment</h2>
-        <p data-in style="--i:1">Please call to make an appointment, or send an enquiry with the form.</p>
-        <div class="reach" data-in style="--i:2">
+        <h2 class="rv" id="contact-h">Make an appointment</h2>
+        <p class="rv" style="--i:1">Please call to make an appointment, or send an enquiry with the form.</p>
+        <div class="reach rv" style="--i:2">
           <img src="img/olivers-hill.jpg" width="1400" height="1050" alt="Frankston beach seen from Olivers Hill" loading="lazy">
           <dl>
             <dt>Phone</dt><dd><a href="tel:+61397833222">(03) 9783 3222</a></dd>
@@ -477,7 +551,7 @@ footer .legal a { color: inherit; }
           </dl>
         </div>
       </div>
-      <div class="form">
+      <div class="form" data-ui>
         <h3>Send an enquiry</h3>
         <p>Leave your details and a good time to call. Please keep personal health details for the conversation itself.</p>
         <form id="enquiry" action="mailto:admin@mirroolcounsellingcentre.com.au" method="get" enctype="text/plain">
@@ -513,7 +587,7 @@ footer .legal a { color: inherit; }
       <span>110 Skye Road, Frankston VIC 3199</span>
     </address>
   </div>
-  <div class="base">
+  <div class="base rv">
     <h2 class="word" id="foot-h">Mirrool Counselling Centre</h2>
     <div class="legal">
       <p>© <span id="yr">2026</span> Mirrool Counselling Centre, 110 Skye Road, Frankston VIC 3199. Concept design by <a href="https://swoopsites.com/">Swoop Sites</a>, Melbourne.</p>
@@ -522,22 +596,46 @@ footer .legal a { color: inherit; }
   </div>
 </footer>
 
+<nav class="dock" aria-label="Quick actions">
+  <a class="btn" href="tel:+61397833222">Call the centre</a>
+  <a class="btn ghost" href="#contact">Send an enquiry</a>
+</nav>
+
 <script>
 document.documentElement.classList.add('js');
 document.getElementById('yr').textContent = new Date().getFullYear();
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-// entrances, once, as each part arrives
-const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
-const ins = [...document.querySelectorAll('[data-in], #week')];
+// header: shrinks onto a blurred ground once the page moves
+const bar = document.getElementById('bar');
+const onBar = () => bar.classList.toggle('scrolled', scrollY > 40);
+addEventListener('scroll', onBar, { passive: true }); onBar();
+
+// phone bar: steps aside while reading down the page, comes back on any scroll up and at the end
+const dock = document.querySelector('.dock');
+let lastY = scrollY;
+addEventListener('scroll', () => { const y = scrollY, end = y + innerHeight > document.documentElement.scrollHeight - 120; if (Math.abs(y - lastY) < 6) return; dock.classList.toggle('away', y > lastY && y > innerHeight * .6 && !end); lastY = y; }, { passive: true });
+
+// real numbers count up once, the first time they are seen
+const count = (el) => {
+  const to = +el.dataset.count, from = +(el.dataset.from || 0), suf = el.dataset.suffix || '';
+  if (reduce) { el.textContent = to + suf; return; }
+  const t0 = performance.now(), dur = 1500;
+  const f = (t) => { const p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 3); el.textContent = Math.round(from + (to - from) * e) + suf; if (p < 1) requestAnimationFrame(f); };
+  requestAnimationFrame(f);
+};
+
+// scroll reveals, once, as each part arrives
+const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('on'); e.target.querySelectorAll('[data-count]').forEach(count); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+const ins = [...document.querySelectorAll('.rv, #week')];
 ins.forEach((el) => io.observe(el));
-const sweep = () => { const h = innerHeight; for (const el of ins) if (!el.classList.contains('on') && el.getBoundingClientRect().top < h) el.classList.add('on'); };
+const sweep = () => { const h = innerHeight; for (const el of ins) if (!el.classList.contains('on') && el.getBoundingClientRect().top < h) { el.classList.add('on'); el.querySelectorAll('[data-count]').forEach(count); io.unobserve(el); } };
 addEventListener('scroll', () => requestAnimationFrame(sweep), { passive: true });
 
-// hero: three views of the foreshore, slow crossfade; paused when the tab is hidden
-const views = [...document.querySelectorAll('.views img')];
-let v = 0;
-if (!reduce) setInterval(() => { if (document.hidden) return; views[v].classList.remove('on'); v = (v + 1) % views.length; views[v].classList.add('on'); }, 6500);
+// hero loop: still poster for reduced motion, paused while the tab is hidden
+const loop = document.querySelector('.hero .loop');
+if (reduce) loop.removeAttribute('autoplay'), loop.pause();
+document.addEventListener('visibilitychange', () => { if (reduce) return; document.hidden ? loop.pause() : loop.play().catch(() => {}); });
 
 // values: the active statement steps down the stack as the scene scrolls
 const scene = document.getElementById('values');
@@ -561,22 +659,35 @@ const fmt = (h) => { const hh = Math.floor(h), mm = Math.round((h - hh) * 60), a
 const choose = (b) => { days.forEach((d) => d.setAttribute('aria-pressed', d === b ? 'true' : 'false')); take.textContent = 'Enquire for ' + b.dataset.day; daySel.value = b.dataset.day; };
 days.forEach((b) => b.addEventListener('click', () => choose(b)));
 take.addEventListener('click', () => { const b = days.find((d) => d.getAttribute('aria-pressed') === 'true'); if (b) daySel.value = b.dataset.day; });
-try {
+const hud = document.getElementById('hud'), hudState = document.getElementById('hud-state'), hudSub = document.getElementById('hud-sub'), hudClock = document.getElementById('hud-clock'), hudToday = document.getElementById('hud-today');
+let first = true;
+const tick = () => { try {
   const parts = Object.fromEntries(new Intl.DateTimeFormat('en-AU', { timeZone: 'Australia/Melbourne', weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }).formatToParts(new Date()).map((x) => [x.type, x.value]));
   const wd = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(parts.weekday), now = +parts.hour + parts.minute / 60;
   const today = days.find((d) => +d.dataset.d === wd);
+  hudClock.textContent = parts.weekday + ' ' + fmt(+parts.hour + parts.minute / 60);
+  hudToday.textContent = today ? fmt(+today.dataset.o) + ' – ' + fmt(+today.dataset.c) : 'Closed';
   if (today) {
-    choose(today);
+    if (first) choose(today);
     today.classList.add('today');
     today.querySelector('.now').style.setProperty('--n', Math.min(100, Math.max(0, (now - 9) / 10 * 100)) + '%');
   }
-  if (today && now >= +today.dataset.o && now < +today.dataset.c) status.innerHTML = '<b>Open now</b>, until ' + fmt(+today.dataset.c) + ' today.';
-  else {
+  if (today && now >= +today.dataset.o && now < +today.dataset.c) {
+    status.innerHTML = '<b>Open now</b>, until ' + fmt(+today.dataset.c) + ' today.';
+    hud.classList.add('open'); hudState.textContent = 'Open now'; hudSub.textContent = 'Until ' + fmt(+today.dataset.c) + ' today. Call to book.';
+  } else {
+    hud.classList.remove('open');
     let next = null;
     for (let k = 0; k < 8 && !next; k++) { const d = days.find((x) => +x.dataset.d === (wd + k) % 7); if (d && (k > 0 || now < +d.dataset.o)) next = [d, k]; }
-    if (next) status.innerHTML = '<b>Closed right now.</b> Opens ' + (next[1] === 0 ? 'today' : next[1] === 1 ? 'tomorrow' : next[0].dataset.day) + ' at ' + fmt(+next[0].dataset.o) + '.';
+    if (next) {
+      const when = (next[1] === 0 ? 'today' : next[1] === 1 ? 'tomorrow' : next[0].dataset.day) + ' at ' + fmt(+next[0].dataset.o);
+      status.innerHTML = '<b>Closed right now.</b> Opens ' + when + '.';
+      hudState.textContent = 'Closed right now'; hudSub.textContent = 'Opens ' + when + '.';
+    }
   }
-} catch (e) { /* the hours stay readable as written */ }
+  first = false;
+} catch (e) { /* the hours stay readable as written */ } };
+tick(); setInterval(tick, 30000);
 
 // who-for and staff links fill the enquiry
 const forSel = document.getElementById('for'), msg = document.getElementById('message');
