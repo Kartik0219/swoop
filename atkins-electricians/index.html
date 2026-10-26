@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Atkins Electricians | Electricians in Bayside, Cheltenham (concept)</title>
+<meta name="description" content="Concept homepage for Atkins Electricians: family owned electricians in Cheltenham since 1951, for homes, owners corporations and businesses across Bayside. Rewiring, switchboard upgrades, lighting, testing and tagging. Call (03) 9596 3806.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Colours from Atkins' own shopfront and vans: black front, white van body, the red of the Atkins script. */
+  --bg: #f3f1ec;          /* paper: the job card */
+  --surface: #e6e3dc;     /* one step down: inputs, the schedule strip */
+  --ink: #141414;
+  --muted: #4d4b47;
+  --accent: #c41230;      /* Atkins red: the one action colour */
+  --accent-ink: #ffffff;
+  --field-1: #171717;     /* the black shopfront */
+  --field-1-ink: #f3f1ec;
+  --metal: #3b3e41;       /* the meter box */
+  --step-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+  --step-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+  --step-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
+  --step-head: clamp(2rem, 1.3rem + 3.2vw, 4rem);
+  --step-hero: clamp(2.75rem, 1.4rem + 4.6vw, 5.25rem);
+  --m: clamp(16px, 2.2vw, 28px);
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  --r: 6px;
+  --shadow: 0 1px 3px rgba(0,0,0,.06), 0 30px 60px rgba(0,0,0,.18);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { margin: 0; background: var(--field-1); color: var(--ink); font: 400 var(--step-body)/1.5 "Bricolage Grotesque", system-ui, sans-serif; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-underline-offset: 3px; }
+::selection { background: var(--accent); color: var(--accent-ink); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+h1, h2, h3 { font-family: "Bricolage Grotesque", sans-serif; font-weight: 600; letter-spacing: -0.04em; line-height: 0.95; margin: 0; text-wrap: balance; }
+p { margin: 0; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 24px; background: var(--accent); color: var(--accent-ink);
+  font: 500 var(--step-body)/1 "Bricolage Grotesque", sans-serif; text-decoration: none; border: 0; border-radius: 0; cursor: pointer;
+  transition: transform .25s var(--ease), background-color .25s var(--ease); }
+.btn:hover { background: #a10e27; transform: translateY(-2px); }
+.btn:active { transform: translateY(0) scale(.98); }
+.btn.alt { background: var(--field-1); color: var(--field-1-ink); }
+.btn.alt:hover { background: #333; }
+
+/* Concept banner: always first, never hidden */
+.concept { background: #000; color: #ddd; font-size: var(--step-small); text-align: center; padding: 9px var(--m); position: relative; z-index: 5; }
+.concept b { color: #fff; }
+
+main { position: relative; z-index: 2; }
+
+/* ---------- Top row on the shopfront black ---------- */
+.top { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 16px; padding: 20px var(--m); background: var(--field-1); color: var(--field-1-ink); }
+.mark { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font: 600 var(--step-lead)/1 "Bricolage Grotesque", sans-serif; letter-spacing: -0.03em; min-height: 48px; }
+.mark svg { width: 36px; height: 36px; flex: none; }
+.top nav { display: flex; gap: 28px; }
+.top nav a { text-decoration: none; font-weight: 500; padding: 12px 0; }
+.top nav a:hover { text-decoration: underline; }
+.top .btn { justify-self: end; }
+
+/* ---------- Hero: the job card on the black front, beside the shop ---------- */
+.hero { background: var(--field-1); padding: clamp(24px, 4vh, 56px) var(--m) clamp(64px, 9vh, 120px); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(16px, 2vw, 28px); align-items: stretch; max-width: 1440px; margin: 0 auto; }
+.card { position: relative; background: var(--bg); padding: clamp(28px, 3.6vw, 56px);
+  clip-path: polygon(0 0, calc(100% - 34px) 0, 100% 34px, 100% 100%, 0 100%); display: flex; flex-direction: column; }
+.card h1 { font-size: var(--step-hero); }
+.card .what { margin-top: 28px; font-size: var(--step-lead); line-height: 1.3; max-width: 30ch; }
+.facts { list-style: none; margin: 28px 0 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.facts li { display: flex; gap: 12px; align-items: baseline; }
+.facts li::before { content: ""; flex: none; width: 10px; height: 10px; background: var(--accent); transform: translateY(-1px); }
+.calls { display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto; padding-top: 36px; }
+.calls .btn { flex: 1 1 220px; white-space: nowrap; }
+.shop { margin: 0; position: relative; overflow: hidden; min-height: 520px; background: #222; }
+.shop video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%; }
+.shop figcaption { position: absolute; left: 16px; bottom: 16px; background: rgba(0,0,0,.66); color: #f3f1ec; font-size: var(--step-small); padding: 6px 10px; border-radius: var(--r); }
+
+/* ---------- Premium layer: kinetic headline, reveals, depth, sticky header, numbers, instrument ---------- */
+.kin .kw { display: inline-block; opacity: 0; filter: blur(8px); animation: kin .55s cubic-bezier(.2,.7,.2,1) forwards; animation-delay: calc(var(--i) * 70ms + 120ms); }
+@keyframes kin { to { opacity: 1; filter: blur(0); } }
+.card > h1 { animation: none; }
+.top { position: sticky; top: 0; z-index: 30; transition: padding .3s var(--ease), background-color .3s var(--ease), box-shadow .3s var(--ease); }
+.top.scrolled { padding-top: 10px; padding-bottom: 10px; background: rgba(23,23,23,.78); -webkit-backdrop-filter: blur(14px) saturate(1.4); backdrop-filter: blur(14px) saturate(1.4); box-shadow: 0 1px 0 rgba(255,255,255,.06), 0 12px 30px rgba(0,0,0,.25); } /* taste-skill-ignore: the one sticky bar */
+.top .btn { border-radius: 999px; white-space: nowrap; }
+.shop { border-radius: var(--r); }
+.box, .read, .visit, .sheet, .back, .read figure img, .plates img { border-radius: var(--r); }
+[data-ui].box, [data-ui].read, [data-ui].visit { box-shadow: var(--shadow); } /* taste-skill-ignore: interface panels (switchboard, readout, quote form) */
+.box { transition: transform .35s var(--ease), box-shadow .35s var(--ease); }
+.box:hover { transform: translateY(-3px); box-shadow: 0 1px 3px rgba(0,0,0,.08), 0 40px 70px rgba(0,0,0,.24); } /* taste-skill-ignore: hover lift on the switchboard */
+.plates figure img { transition: transform .35s var(--ease); }
+.plates figure:hover img { transform: translateY(-4px); }
+/* instrument: a live readout pinned to the hero film */
+.hud { position: absolute; right: 16px; top: 16px; z-index: 2; background: rgba(14,14,14,.84); color: #f3f1ec;
+  padding: 14px 18px; font-size: var(--step-small); line-height: 1.35; font-variant-numeric: tabular-nums; border-radius: var(--r); min-width: 230px; }
+.hud::before, .hud::after { content: ""; position: absolute; width: 12px; height: 12px; border: 2px solid var(--accent); }
+.hud::before { left: -5px; top: -5px; border-right: 0; border-bottom: 0; }
+.hud::after { right: -5px; bottom: -5px; border-left: 0; border-top: 0; }
+.hud .row { display: flex; justify-content: space-between; gap: 18px; }
+.hud .row + .row { margin-top: 4px; }
+.hud .k { color: #a9a59c; }
+.hud .clock { font-weight: 600; font-size: 1.25rem; letter-spacing: -0.02em; }
+.hud .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #3ccf6e; margin-right: 6px; animation: pulse 1.6s ease-in-out infinite alternate; }
+@keyframes pulse { to { opacity: .35; } }
+/* real numbers, all from their own pages */
+.nums { max-width: 1440px; margin: clamp(28px, 4vw, 48px) auto 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: rgba(243,241,236,.14); border-radius: var(--r); overflow: hidden; }
+.nums div { background: var(--field-1); color: var(--field-1-ink); padding: clamp(18px, 2.4vw, 32px); }
+.nums b { display: block; font: 600 clamp(2.25rem, 1.5rem + 2.6vw, 4rem)/1 "Bricolage Grotesque", sans-serif; letter-spacing: -0.045em; font-variant-numeric: tabular-nums; }
+.nums b em { font-style: normal; color: var(--accent); }
+.nums div > span { display: block; margin-top: 10px; font-size: var(--step-small); color: #c9c6bf; }
+
+/* ---------- The switchboard: the live thing ---------- */
+.board-sec { background: var(--bg); padding: 160px var(--m); }
+.board-sec .head { max-width: 1240px; margin: 0 auto 48px; display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 32px; align-items: end; }
+.board-sec h2 { font-size: var(--step-head); }
+.board-sec .head p { font-size: var(--step-lead); line-height: 1.3; }
+.sb { max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); gap: clamp(24px, 3vw, 48px); align-items: start; }
+.sb input { position: absolute; opacity: 0; pointer-events: none; }
+.box { background: var(--metal); padding: clamp(14px, 2vw, 26px); color: #f3f1ec; }
+.plate { background: #ecebe6; color: var(--ink); padding: clamp(16px, 2vw, 28px); display: grid; gap: 18px; }
+.main-sw { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; background: #d4d1ca; padding: 6px; }
+.main-sw label { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; cursor: pointer; font-weight: 500; background: #f7f6f2; transition: background-color .25s var(--ease), color .25s var(--ease); }
+.main-sw label:hover { background: #fff; }
+.sb:has(#m-home:checked) label[for="m-home"], .sb:has(#m-biz:checked) label[for="m-biz"] { background: var(--ink); color: #fff; }
+.sb input:focus-visible + label, .sb label:has(+ input:focus-visible) { outline: 3px solid var(--accent); outline-offset: 2px; }
+.rail { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; background: #2a2c2e; padding: 14px 10px 0; }
+.brk { display: flex; flex-direction: column; align-items: center; cursor: pointer; }
+.brk .body { width: 64px; height: 112px; background: #fbfbf8; display: grid; place-items: center; position: relative; transition: transform .2s var(--ease); }
+.brk:hover .body { transform: translateY(-2px); }
+.brk .slot { width: 26px; height: 64px; background: #cfccc5; position: relative; }
+.brk .handle { position: absolute; left: 2px; right: 2px; top: 32px; height: 30px; background: #232323; transition: transform .35s var(--ease), background-color .35s var(--ease); }
+.brk .lamp { position: absolute; top: 8px; width: 18px; height: 6px; background: #cfccc5; transition: background-color .35s var(--ease); }
+.brk .tag { width: 100%; margin-top: 10px; background: #fff; color: var(--ink); font-size: var(--step-small); font-weight: 500; line-height: 1.2; text-align: center; padding: 8px 4px; min-height: 48px; display: grid; place-items: center; }
+.rail + .rail { padding-top: 14px; }
+.rail { padding-bottom: 14px; }
+.sb .biz { display: none; }
+.sb:has(#m-biz:checked) .biz { display: revert; }
+.sb:has(#m-biz:checked) .home { display: none; }
+.sb:has(#c1:checked) label[for="c1"] .handle, .sb:has(#c2:checked) label[for="c2"] .handle, .sb:has(#c3:checked) label[for="c3"] .handle,
+.sb:has(#c4:checked) label[for="c4"] .handle, .sb:has(#c5:checked) label[for="c5"] .handle, .sb:has(#c6:checked) label[for="c6"] .handle { transform: translateY(-30px); background: var(--accent); }
+.sb:has(#c1:checked) label[for="c1"] .lamp, .sb:has(#c2:checked) label[for="c2"] .lamp, .sb:has(#c3:checked) label[for="c3"] .lamp,
+.sb:has(#c4:checked) label[for="c4"] .lamp, .sb:has(#c5:checked) label[for="c5"] .lamp, .sb:has(#c6:checked) label[for="c6"] .lamp { background: var(--accent); }
+.sb:has(#c1:checked) label[for="c1"] .tag, .sb:has(#c2:checked) label[for="c2"] .tag, .sb:has(#c3:checked) label[for="c3"] .tag,
+.sb:has(#c4:checked) label[for="c4"] .tag, .sb:has(#c5:checked) label[for="c5"] .tag, .sb:has(#c6:checked) label[for="c6"] .tag { background: var(--ink); color: #fff; }
+.box-foot { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 14px; font-size: var(--step-small); }
+.read { background: var(--surface); padding: clamp(24px, 3vw, 40px); display: flex; flex-direction: column; gap: 22px; }
+.read article { display: none; }
+.sb:has(#c1:checked) .read [data-c="1"], .sb:has(#c2:checked) .read [data-c="2"], .sb:has(#c3:checked) .read [data-c="3"],
+.sb:has(#c4:checked) .read [data-c="4"], .sb:has(#c5:checked) .read [data-c="5"], .sb:has(#c6:checked) .read [data-c="6"] { display: block; }
+.sb:has(#m-home:checked) .read article.biz, .sb:has(#m-biz:checked) .read article.home { display: none !important; }
+.read h3 { font-size: clamp(1.75rem, 1.3rem + 1.4vw, 2.5rem); }
+.read article p { margin-top: 14px; max-width: 46ch; }
+.read article { animation: readin .45s var(--ease); }
+@keyframes readin { from { opacity: 0; transform: translateY(10px); } }
+.read .btn { align-self: flex-start; }
+.read figure { margin: 0; }
+.read figure img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.read figcaption { margin-top: 8px; font-size: var(--step-small); color: var(--muted); }
+
+/* ---------- Clients' words: slips along Bayside's edge ---------- */
+.words { position: relative; min-height: 100svh; overflow: hidden; color: #fff; background: #3d6fc0; padding-bottom: 0; }
+.words > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 70%; }
+.words-copy { position: relative; z-index: 1; isolation: isolate; margin-left: 18%; width: min(620px, calc(100% - 18% - var(--m))); padding-top: 120px; }
+.words-copy::before { content: ""; position: absolute; inset: 88px -32px -32px; background: rgba(12, 16, 24, .62); z-index: -1; }
+.words-copy h2 { font-size: var(--step-head); }
+.words-copy p { margin-top: 20px; font-size: var(--step-lead); line-height: 1.3; }
+.slips { position: relative; z-index: 1; margin-top: 72px; padding: 0 var(--m); display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; align-items: end; }
+.slip { background: var(--bg); color: var(--ink); padding: 18px 16px 28px; font-size: var(--step-small); line-height: 1.45; margin: 0;
+  clip-path: polygon(0 6px, 5% 0, 10% 6px, 15% 0, 20% 6px, 25% 0, 30% 6px, 35% 0, 40% 6px, 45% 0, 50% 6px, 55% 0, 60% 6px, 65% 0, 70% 6px, 75% 0, 80% 6px, 85% 0, 90% 6px, 95% 0, 100% 6px, 100% 100%, 0 100%);
+  transition: transform .35s var(--ease); }
+.slip:hover { transform: translateY(-8px); }
+.slip blockquote { margin: 0; font-size: 1rem; }
+.slip cite { display: block; font: 600 var(--step-body)/1.2 "Bricolage Grotesque", sans-serif; font-style: normal; letter-spacing: -0.02em; }
+.slip .role { display: block; color: var(--muted); margin-top: 2px; }
+.slip .tear { display: block; margin: 12px 0; border-top: 5px dotted #a9a59c; }
+.slip:nth-child(1) { min-height: 38svh; } .slip:nth-child(2) { min-height: 44svh; transform: rotate(-1.5deg); } .slip:nth-child(3) { min-height: 32svh; }
+.slip:nth-child(4) { min-height: 46svh; } .slip:nth-child(5) { min-height: 34svh; transform: rotate(1.2deg); } .slip:nth-child(6) { min-height: 40svh; background: var(--accent); color: #fff; }
+.slip:nth-child(6) .role { color: #fff; }
+.slip:nth-child(6) a { font: 600 var(--step-lead)/1.15 "Bricolage Grotesque", sans-serif; text-decoration: none; display: inline-flex; min-height: 48px; align-items: center; }
+
+/* ---------- About: three generations on one sheet ---------- */
+.about { background: var(--field-1); color: var(--field-1-ink); padding: 180px var(--m); }
+.about-grid { max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 640px) minmax(0, 1fr); gap: clamp(24px, 4vw, 64px); align-items: start; }
+.sheet { background: var(--bg); color: var(--ink); padding: 60px; }
+.sheet h2 { font-size: var(--step-head); }
+.sheet .letter { margin-top: 28px; display: flex; flex-direction: column; gap: 1.1em; line-height: 1.55; }
+.sheet mark { background: #f2c9cf; color: inherit; padding: 0 .15em; }
+.sheet .sign { margin-top: 30px; font-style: italic; font-size: var(--step-lead); }
+.sheet .role { font-size: var(--step-small); color: var(--muted); }
+.stub { background: var(--bg); color: var(--ink); display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; min-height: 72px; padding: 14px 60px 18px;
+  border-top: 6px dotted var(--field-1); }
+.stub a.txt { font-weight: 500; min-height: 48px; display: inline-flex; align-items: center; }
+.plates { display: grid; gap: 16px; }
+.plates figure { margin: 0; }
+.plates img { width: 100%; object-fit: cover; }
+.plates .one img { aspect-ratio: 4 / 3; }
+.plates .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.plates .pair img { aspect-ratio: 1 / 1; }
+.plates figcaption { margin-top: 8px; font-size: var(--step-small); color: #c9c6bf; }
+
+/* ---------- Contact: a card on the tool belt ---------- */
+.contact { position: relative; min-height: 100svh; background: #222; }
+.contact > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 25% 50%; }
+.contact .inner { position: relative; display: flex; justify-content: flex-end; padding: 60px var(--m) 120px; }
+.visit { width: 440px; background: var(--bg); padding: 32px 32px 0; }
+.visit h2 { font-size: clamp(2rem, 1.6rem + 1.4vw, 2.75rem); }
+.visit > p { margin-top: 12px; }
+.visit dl { margin: 20px 0 0; display: grid; grid-template-columns: auto 1fr; gap: 6px 16px; align-items: center; }
+.visit dt { font-weight: 500; }
+.visit dd { margin: 0; text-align: right; font-variant-numeric: tabular-nums; }
+.visit dd a { display: inline-flex; min-height: 44px; align-items: center; }
+.visit form { margin-top: 18px; display: grid; gap: 12px; }
+.visit label { display: grid; gap: 4px; font-size: var(--step-small); font-weight: 500; }
+.visit input, .visit select, .visit textarea { font: inherit; font-size: 1rem; color: var(--ink); background: #fff; border: 1px solid #8f8a80; border-radius: 0; padding: 11px 12px; width: 100%; min-height: 48px; }
+.visit textarea { min-height: 84px; resize: vertical; }
+.visit .btn { width: calc(100% + 64px); margin: 12px -32px 0; min-height: 56px; }
+.visit .note { font-size: var(--step-small); color: var(--muted); }
+.contact figure { position: absolute; left: var(--m); bottom: 24px; margin: 0; }
+.contact figcaption { color: #f3f1ec; font-size: var(--step-small); background: rgba(0,0,0,.6); padding: 6px 10px; }
+
+/* ---------- Footer: the back of the card ---------- */
+footer { position: relative; background: var(--field-1); color: var(--field-1-ink); padding: 72px var(--m) 32px; }
+.back { max-width: 1120px; margin: 0 auto; background: var(--bg); color: var(--ink); padding: 64px clamp(24px, 5vw, 64px) 28px; position: relative; }
+.back .edge { position: absolute; left: 0; right: 0; top: -1px; width: 100%; height: 26px; display: block; }
+.back .halves { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+.back h2 { font-size: var(--step-head); }
+.back .msg { margin-top: 16px; max-width: 34ch; }
+.back address { font-style: normal; display: flex; flex-direction: column; gap: 4px; }
+.back address a, .back address span { min-height: 44px; display: inline-flex; align-items: center; }
+.back .stamp { position: absolute; top: 40px; right: clamp(24px, 5vw, 64px); width: 88px; background: var(--bg); padding: 6px; }
+.back .stamp img { aspect-ratio: 3 / 4; object-fit: cover; }
+.back .right { padding-top: 120px; }
+.imprint { margin-top: 64px; text-align: center; font-size: var(--step-small); display: flex; flex-direction: column; gap: 8px; }
+.imprint a { color: inherit; }
+.callbar { display: none; }
+
+/* ---------- Motion: entrances; content stays visible without script ---------- */
+.js [data-in] { opacity: 0; transform: translateY(22px); transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: calc(var(--i, 0) * 80ms); }
+.js .slip[data-in] { transition: opacity .9s var(--ease), transform .9s var(--ease); }
+.js [data-in].on { opacity: 1; transform: none; }
+.js .slip:nth-child(2)[data-in].on { transform: rotate(-1.5deg); } .js .slip:nth-child(5)[data-in].on { transform: rotate(1.2deg); }
+.card > * { animation: rise 1s var(--ease) both; }
+.card > :nth-child(2) { animation-delay: .08s; } .card > :nth-child(3) { animation-delay: .16s; } .card > :nth-child(4) { animation-delay: .24s; }
+@keyframes rise { from { opacity: 0; transform: translateY(24px); } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js [data-in] { opacity: 1; transform: none; }
+  .kin .kw { opacity: 1; filter: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1100px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .shop { min-height: 0; aspect-ratio: 16 / 9; }
+  .sb { grid-template-columns: 1fr; }
+  .about-grid { grid-template-columns: 1fr; }
+  .plates { grid-template-columns: 2fr 1fr; }
+  .plates .pair { grid-template-columns: 1fr; }
+  .slips { grid-template-columns: repeat(3, 1fr); }
+  .slip:nth-child(n) { min-height: 0; }
+}
+
+@media (max-width: 960px) { .top .long { display: none; } .top nav { gap: 20px; } }
+
+/* ---------- Phone: its own composition ---------- */
+@media (max-width: 760px) {
+  .top { grid-template-columns: 1fr auto; padding: 12px var(--m); }
+  .top nav { display: none; }
+  .top .btn { padding: 0 16px; }
+  .mark { font-size: 1.25rem; }
+  .hero { padding: 8px 12px 72px; }
+  .card { padding: 32px 22px 26px; }
+  .card .what { margin-top: 20px; }
+  .calls { padding-top: 28px; }
+  .calls .btn { flex-basis: 100%; }
+  .shop { aspect-ratio: 4 / 3; }
+  .board-sec { padding: 112px var(--m); }
+  .board-sec .head { grid-template-columns: 1fr; gap: 16px; margin-bottom: 32px; }
+  .brk .body { width: 56px; height: 100px; }
+  .words { min-height: 0; }
+  .words > img { height: 70svh; bottom: auto; }
+  .words-copy { margin: 0 var(--m); width: auto; padding-top: 72px; }
+  .words-copy::before { inset: 48px -16px -24px; }
+  .words-copy p { font-size: 1.25rem; }
+  .slips { grid-template-columns: 1fr; margin-top: 56px; padding-bottom: 24px; gap: 14px; }
+  .slip:nth-child(n) { transform: none; }
+  .js .slip[data-in].on { transform: none; }
+  .about { padding: 112px 0; }
+  .about-grid { gap: 32px; }
+  .sheet { padding: 40px 24px; }
+  .stub { padding: 14px 24px 18px; }
+  .stub .btn { width: 100%; }
+  .plates { grid-template-columns: 1fr; padding: 0 var(--m); }
+  .plates .pair { grid-template-columns: 1fr 1fr; }
+  .contact { min-height: 0; display: flex; flex-direction: column; }
+  .contact > img { position: relative; height: 60svh; }
+  .contact .inner { display: block; margin-top: -80px; padding: 0 var(--m) 64px; }
+  .visit { width: auto; padding: 28px 22px 0; }
+  .visit .btn { width: calc(100% + 44px); margin: 12px -22px 0; }
+  .contact figure { position: static; order: 3; padding: 0 var(--m) 40px; }
+  .contact figcaption { background: none; padding: 0; }
+  .back { padding-top: 56px; }
+  .back .halves { grid-template-columns: 1fr; gap: 28px; }
+  .back .right { padding-top: 0; }
+  .back .stamp { width: 64px; top: 34px; }
+  .back .halves > div:first-child { padding-right: 76px; }
+  footer { padding-bottom: 104px; }
+  .callbar { display: flex; position: fixed; z-index: 20; left: 0; right: 0; bottom: 0; padding: 10px 12px; background: var(--field-1); gap: 8px; }
+  .callbar .btn { flex: 1; min-height: 52px; border-radius: 999px; padding: 0 10px; white-space: nowrap; font-size: 15px; }
+  .callbar .btn.alt { background: var(--bg); color: var(--ink); }
+  .top .long { display: none; }
+  .callbar { box-shadow: 0 -10px 30px rgba(0,0,0,.25); } /* taste-skill-ignore: sticky call bar */
+  .nums { grid-template-columns: 1fr; }
+  .nums div { display: flex; align-items: baseline; gap: 16px; padding: 16px 20px; }
+  .nums b { flex: none; min-width: 4.2ch; font-size: 2.5rem; }
+  .nums div > span { margin-top: 0; }
+  .hud { right: 10px; top: 10px; min-width: 0; padding: 10px 12px; }
+  .hud .row.k2 { display: none; }
+  .hud .clock { font-size: 1.05rem; }
+}
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Atkins Electricians. This is a design preview, not the live website.</div>
+<main>
+  <header class="top">
+    <a class="mark" href="#top" aria-label="Atkins Electricians, home">
+      <svg viewBox="0 0 36 36" aria-hidden="true"><rect width="36" height="36" fill="#c41230"/><path d="M8 28 16.2 8h3.6L28 28h-4.2l-1.9-4.8h-7.8L12.2 28zm7.4-8.4h5.2L18 13z" fill="#fff"/></svg>
+      Atkins Electricians
+    </a>
+    <nav aria-label="Main">
+      <a href="#services">Services</a><a href="#words">Clients</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn" href="tel:0395963806">Call<span class="long">&nbsp;(03) 9596 3806</span></a>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="hero-grid">
+      <div class="card">
+        <h1 class="kin" aria-label="Electricians in Bayside"><span class="kw" style="--i:0" aria-hidden="true">Electricians</span> <span class="kw" style="--i:1" aria-hidden="true">in</span> <span class="kw" style="--i:2" aria-hidden="true">Bayside</span></h1>
+        <p class="what">Family owned and run from 23 Hamlet St, Cheltenham, for homes, owners corporations and businesses across Bayside.</p>
+        <ul class="facts">
+          <li>Operating since 1951, three generations</li>
+          <li>“A” grade electricians, REC 26182</li>
+          <li>Rewiring, switchboards, lighting, testing and tagging</li>
+        </ul>
+        <div class="calls">
+          <a class="btn" href="tel:0395963806">Call (03) 9596 3806</a>
+          <a class="btn alt" href="#contact">Get a quote</a>
+        </div>
+      </div>
+      <figure class="shop">
+        <video id="film" src="img/hero.mp4" poster="img/hero-poster.jpg" width="1280" height="720" autoplay muted loop playsinline preload="metadata" aria-label="Atkins Electricians’ own photos: the Cheltenham shopfront, a company van, an electrician at a meter box and the Estd 1951 work jacket"></video>
+        <div class="hud" data-ui aria-label="Status">
+          <div class="row"><span class="k">Cheltenham</span><span class="clock" id="clock">--:--</span></div>
+          <div class="row"><span><i class="dot" aria-hidden="true"></i>Business emergencies</span><span>24/7</span></div>
+          <div class="row k2"><span class="k">Energy Safe Victoria</span><span>REC 26182</span></div>
+        </div>
+      </figure>
+    </div>
+    <div class="nums" aria-label="Atkins Electricians in numbers">
+      <div data-in><b><span data-count="1951" data-from="1900">1951</span></b><span>Started by Keith Atkins</span></div>
+      <div data-in style="--i:1"><b><span data-count="3">3</span></b><span>Generations of the Atkins family</span></div>
+      <div data-in style="--i:2"><b><span data-count="24">24</span><em>/</em>7</b><span>Business emergencies, every day of the year</span></div>
+      <div data-in style="--i:3"><b><span data-count="12">12</span></b><span>Home and business services</span></div>
+    </div>
+  </section>
+
+  <section class="board-sec" id="services" aria-labelledby="services-h">
+    <div class="head">
+      <h2 id="services-h" data-in>Flip a circuit</h2>
+      <p data-in style="--i:1">Pick home or business on the main switch, then flip a circuit to see what we do on it.</p>
+    </div>
+    <div class="sb">
+      <div class="box" data-ui data-in style="--i:2">
+        <div class="plate">
+          <div class="main-sw" role="radiogroup" aria-label="Home or business">
+            <input type="radio" name="main" id="m-home" value="home" checked><label for="m-home">Home</label>
+            <input type="radio" name="main" id="m-biz" value="biz"><label for="m-biz">Business</label>
+          </div>
+          <div role="radiogroup" aria-label="Services">
+            <div class="rail">
+              <input type="radio" name="circ" id="c1" value="1" checked>
+              <label class="brk" for="c1"><span class="body" aria-hidden="true"><i class="lamp"></i><i class="slot"><i class="handle"></i></i></span><span class="tag"><span class="home">Rewiring</span><span class="biz">Design and install</span></span></label>
+              <input type="radio" name="circ" id="c2" value="2">
+              <label class="brk" for="c2"><span class="body" aria-hidden="true"><i class="lamp"></i><i class="slot"><i class="handle"></i></i></span><span class="tag"><span class="home">Power and lights</span><span class="biz">Testing and tagging</span></span></label>
+              <input type="radio" name="circ" id="c3" value="3">
+              <label class="brk" for="c3"><span class="body" aria-hidden="true"><i class="lamp"></i><i class="slot"><i class="handle"></i></i></span><span class="tag"><span class="home">Switchboard</span><span class="biz">24/7 maintenance</span></span></label>
+            </div>
+            <div class="rail">
+              <input type="radio" name="circ" id="c4" value="4">
+              <label class="brk" for="c4"><span class="body" aria-hidden="true"><i class="lamp"></i><i class="slot"><i class="handle"></i></i></span><span class="tag"><span class="home">LED upgrades</span><span class="biz">Data and comms</span></span></label>
+              <input type="radio" name="circ" id="c5" value="5">
+              <label class="brk" for="c5"><span class="body" aria-hidden="true"><i class="lamp"></i><i class="slot"><i class="handle"></i></i></span><span class="tag"><span class="home">Oven and cooktop</span><span class="biz">Exit and emergency lights</span></span></label>
+              <input type="radio" name="circ" id="c6" value="6">
+              <label class="brk" for="c6"><span class="body" aria-hidden="true"><i class="lamp"></i><i class="slot"><i class="handle"></i></i></span><span class="tag"><span class="home">Data and phone</span><span class="biz">Switchboard and meters</span></span></label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="read" data-ui aria-live="polite">
+        <article class="home" data-c="1" data-job="Rewiring"><h3>Rewiring</h3><p>Many of Melbourne’s pre-1970s houses still have old, outdated cabling, which can be a real hazard. We rewire with up-to-date cabling that protects your family from dangerous electrical faults.</p></article>
+        <article class="home" data-c="2" data-job="Power points and lighting"><h3>Power points and lighting</h3><p>More power points or lighting? With your input we design and install it: garden and outdoor lighting, LEDs including strip lights, general power outlets and more.</p></article>
+        <article class="home" data-c="3" data-job="Switchboard upgrade"><h3>Switchboard upgrades</h3><p>Every home switchboard should have a safety switch. If you have an old porcelain fuse board, or circuit breakers without a safety switch, we upgrade it to a safer, up-to-date board.</p></article>
+        <article class="home" data-c="4" data-job="LED upgrade"><h3>LED upgrades</h3><p>Almost any household light can be upgraded to LED. Compared to halogen downlights they are cheap to run and pose a much lower risk of fire, in styles to suit any room.</p></article>
+        <article class="home" data-c="5" data-job="Oven or cooktop repair"><h3>Oven and cooktop repairs</h3><p>We repair faulty mechanisms on ovens, electric cooktops and upright electric oven and stove units, and can quote for a replacement unit when it’s needed.</p></article>
+        <article class="home" data-c="6" data-job="Data or phone points"><h3>Data and phone points</h3><p>A new phone socket, or more data points for Wi-Fi, cable TV, security or another desk? We install all types of communication wiring and repair existing wiring.</p></article>
+        <article class="biz" data-c="1" data-job="Commercial design and installation"><h3>Design and installation</h3><p>Lighting and power for commercial spaces. We attend site, select the hardware and work directly with the people involved, such as the chairperson or landlord, from start to finish.</p></article>
+        <article class="biz" data-c="2" data-job="Testing and tagging"><h3>Testing and tagging</h3><p>Testing and tagging of portable electrical appliances, as needed or as a regular scheduled service. Where repairs are needed we can often do them on the spot.</p></article>
+        <article class="biz" data-c="3" data-job="Electrical maintenance"><h3>Maintenance, 24/7</h3><p>Electrical emergency? We’re here 24/7, every day of the year. An urgent job at 3am or a faulty light fitting on a Wednesday, someone will answer the phone.</p></article>
+        <article class="biz" data-c="4" data-job="Data and communications"><h3>Data and communications</h3><p>We install, upgrade and repair fittings for all types of data and communications systems, from a simple phone installation to upgrading a fit-out to Cat 6 cabling.</p></article>
+        <article class="biz" data-c="5" data-job="Exit and emergency lighting"><h3>Exit and emergency lighting</h3><p>Fire safety regulations require exit and emergency lights in commercial buildings to be tested every 6 months. We do the testing, maintenance and repairs, and quote for replacements.</p></article>
+        <article class="biz" data-c="6" data-job="Switchboard and meter enclosure"><h3>Switchboards and meter enclosures</h3><p>Many of Melbourne’s older commercial buildings still have porcelain fuse boards and worn-out meter enclosures. We have replaced hundreds of them and bring them up to today’s standards.</p></article>
+        <a class="btn" href="#contact" id="ask">Get a quote for this</a>
+        <figure><img src="img/at-the-meter-box.jpg" width="600" height="398" alt="An Atkins electrician kneeling at an open meter box with his tool belt on" loading="lazy"><figcaption>One of our electricians at a meter box</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="words" id="words" aria-labelledby="words-h">
+    <img src="img/brighton-bathing-boxes.jpg" width="1600" height="1200" alt="The bathing boxes along Brighton beach on a clear day, with the city skyline across the bay" loading="lazy">
+    <div class="words-copy">
+      <h2 id="words-h" data-in>Some words from our clients</h2>
+      <p data-in style="--i:1">From homes in Caulfield, Brighton and Parkdale, and from the property and owners corporation managers who call us for the buildings they look after.</p>
+    </div>
+    <div class="slips">
+      <figure class="slip" data-in><cite>Michelle Rubin</cite><span class="role">Caulfield</span><span class="tear" aria-hidden="true"></span><blockquote>“The quality of their workmanship is excellent, their prices competitive … They get the job done right the first time.”</blockquote></figure>
+      <figure class="slip" data-in style="--i:1"><cite>Jimmy Wong</cite><span class="role">Senior owners corporation manager, Teska Carson</span><span class="tear" aria-hidden="true"></span><blockquote>“They get the job done and I can always reach them by phone no matter what hour.”</blockquote></figure>
+      <figure class="slip" data-in style="--i:2"><cite>Deni</cite><span class="role">Brighton</span><span class="tear" aria-hidden="true"></span><blockquote>“Timely, reliable and most importantly for me, totally trustworthy … And they clean up after themselves!”</blockquote></figure>
+      <figure class="slip" data-in style="--i:3"><cite>Richard Beck</cite><span class="role">Senior property manager, Buxton Real Estate Brighton</span><span class="tear" aria-hidden="true"></span><blockquote>“They are reliable, honest and easy to work with … plus an ability to handle tenant’s time-frames.”</blockquote></figure>
+      <figure class="slip" data-in style="--i:4"><cite>David</cite><span class="role">Parkdale</span><span class="tear" aria-hidden="true"></span><blockquote>“I appreciated them pointing out some electrical deficiencies we could consider rectifying in the future.”</blockquote></figure>
+      <div class="slip" data-in style="--i:5"><cite>Your job next</cite><span class="role">Anywhere in Bayside</span><span class="tear" aria-hidden="true"></span><a href="tel:0395963806">(03) 9596 3806</a></div>
+    </div>
+  </section>
+
+  <section class="about" id="about" aria-labelledby="about-h">
+    <div class="about-grid">
+      <div>
+        <div class="sheet" data-in>
+          <h2 id="about-h">Three generations since 1951</h2>
+          <div class="letter">
+            <p>Keith Atkins started the business in 1951. It carried on through his sons, John and Mark. John has since retired, and Mark now runs Atkins Electricians with his son Joel, with a team of electricians behind them.</p>
+            <p>We work across Bayside and the surrounding suburbs, on houses, units and commercial buildings. No job is too big or small, from general rewiring to commercial testing and tagging.</p>
+            <p>Our focus is customer service, with an emphasis on <mark>punctuality and cleanliness</mark>.</p>
+            <p>Our electricians are “A” grade, and the company is registered with Energy Safe Victoria, REC 26182.</p>
+          </div>
+          <p class="sign">The Atkins family</p>
+          <p class="role">Atkins Electricians, Cheltenham</p>
+        </div>
+        <div class="stub" data-in style="--i:1">
+          <a class="txt" href="sms:0483907521">Text us on 0483 907 521</a>
+          <a class="btn" href="#contact">Get a quote</a>
+        </div>
+      </div>
+      <div class="plates">
+        <figure class="one" data-in style="--i:2"><img src="img/uniform-1951.jpg" width="1200" height="800" alt="Close-up of an Atkins Electricians jacket with the red Atkins logo and ‘Estd 1951’ embroidered on the chest" loading="lazy"><figcaption>Estd 1951, on the work jacket</figcaption></figure>
+        <div class="pair">
+          <figure data-in style="--i:3"><img src="img/van.jpg" width="600" height="398" alt="White and red Atkins Electricians van with ladders on the roof" loading="lazy"><figcaption>On the road in Bayside</figcaption></figure>
+          <figure data-in style="--i:4"><img src="img/van-rear.jpg" width="600" height="398" alt="The back of a red Atkins Electricians van showing the phone number 9596 3806" loading="lazy"><figcaption>The number on the van</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-h">
+    <img src="img/tool-belt.jpg" width="1400" height="788" alt="An Atkins electrician’s tool belt with pliers, screwdrivers and a tester" loading="lazy">
+    <figure><figcaption>The tool belt, ready to go</figcaption></figure>
+    <div class="inner">
+      <div class="visit" data-ui data-in>
+        <h2 id="contact-h">Get a quote</h2>
+        <p>Atkins Electricians, 23 Hamlet St, Cheltenham VIC 3192. Working across Bayside.</p>
+        <dl>
+          <dt>Phone</dt><dd><a href="tel:0395963806">(03) 9596 3806</a></dd>
+          <dt>Text</dt><dd><a href="sms:0483907521">0483 907 521</a></dd>
+          <dt>Businesses</dt><dd>Electrical emergencies 24/7</dd>
+        </dl>
+        <form id="quote" action="sms:0483907521" method="get">
+          <label>Your name<input name="name" autocomplete="name" required></label>
+          <label>Phone<input name="phone" type="tel" autocomplete="tel" required></label>
+          <label>Suburb<input name="suburb" autocomplete="address-level2"></label>
+          <label>Job
+            <select name="job" id="job">
+              <optgroup label="Home">
+                <option>Rewiring</option><option>Power points and lighting</option><option>Switchboard upgrade</option>
+                <option>LED upgrade</option><option>Oven or cooktop repair</option><option>Data or phone points</option>
+              </optgroup>
+              <optgroup label="Business or owners corporation">
+                <option>Commercial design and installation</option><option>Testing and tagging</option><option>Electrical maintenance</option>
+                <option>Data and communications</option><option>Exit and emergency lighting</option><option>Switchboard and meter enclosure</option>
+              </optgroup>
+              <option>Something else</option>
+            </select>
+          </label>
+          <label>Tell us about the job<textarea name="message" id="message"></textarea></label>
+          <p class="note">This opens a text message to 0483 907 521 with your details filled in. Nothing is stored on this page.</p>
+          <button class="btn" type="submit">Send my quote request</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer aria-labelledby="foot-h">
+  <div class="back" data-in><svg class="edge" viewBox="0 0 1200 26" preserveAspectRatio="none" aria-hidden="true"><path fill="#171717" d="M0 0H1200V0 A50 26 0 0 1 1100 0 A50 26 0 0 1 1000 0 A50 26 0 0 1 900 0 A50 26 0 0 1 800 0 A50 26 0 0 1 700 0 A50 26 0 0 1 600 0 A50 26 0 0 1 500 0 A50 26 0 0 1 400 0 A50 26 0 0 1 300 0 A50 26 0 0 1 200 0 A50 26 0 0 1 100 0 A50 26 0 0 1 0 0 Z"/></svg>
+    <div class="stamp"><img src="img/van-rear.jpg" width="600" height="398" alt="" loading="lazy"></div>
+    <div class="halves">
+      <div>
+        <h2 id="foot-h">Atkins Electricians</h2>
+        <p class="msg">Electricians in Bayside since 1951. Family owned and run from Cheltenham, for homes, owners corporations and businesses.</p>
+      </div>
+      <address class="right">
+        <a href="tel:0395963806">Phone (03) 9596 3806</a>
+        <a href="sms:0483907521">Text 0483 907 521</a>
+        <span>23 Hamlet St, Cheltenham VIC 3192</span>
+        <a href="https://www.facebook.com/AtkinsElectricians">Facebook</a>
+        <a href="https://www.instagram.com/atkinselectricians/">Instagram</a>
+      </address>
+    </div>
+    <div class="imprint">
+      <p>© <span id="yr">2026</span> Atkins Electricians, Cheltenham. Registered with Energy Safe Victoria, REC 26182.</p>
+      <p>Concept design by <a href="https://swoopsites.com/">Swoop Sites</a>, Melbourne.</p>
+      <p class="credits">Picture of Brighton beach: <a href="https://commons.wikimedia.org/w/index.php?curid=88205651">“Brighton bathing boxes”</a> by Misaochan2, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons. All other photographs are Atkins Electricians’ own.</p>
+    </div>
+  </div>
+</footer>
+<div class="callbar"><a class="btn" href="tel:0395963806">Call (03) 9596 3806</a><a class="btn alt" href="#contact">Get a quote</a></div>
+
+<script>
+document.documentElement.classList.add('js');
+document.getElementById('yr').textContent = new Date().getFullYear();
+// entrances, once, as each part arrives
+const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+document.querySelectorAll('[data-in]').forEach((el) => io.observe(el));
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+// hero film: stays on the poster when motion is reduced
+const film = document.getElementById('film');
+if (reduce) { film.removeAttribute('autoplay'); film.pause(); }
+// sticky header tightens after the first scroll
+const hdr = document.querySelector('.top');
+const onScroll = () => hdr.classList.toggle('scrolled', scrollY > 40);
+addEventListener('scroll', onScroll, { passive: true }); onScroll();
+// live Cheltenham clock for the status panel
+const clock = document.getElementById('clock');
+const tick = () => { clock.textContent = new Intl.DateTimeFormat('en-AU', { timeZone: 'Australia/Melbourne', hour: 'numeric', minute: '2-digit' }).format(new Date()); };
+tick(); setInterval(tick, 15000);
+// numbers count up once, on first view
+const cio = new IntersectionObserver((es) => es.forEach((e) => {
+  if (!e.isIntersecting) return; cio.unobserve(e.target);
+  const el = e.target, to = +el.dataset.count, from = +(el.dataset.from || 0);
+  if (reduce) { el.textContent = to; return; }
+  const t0 = performance.now(), dur = 1400;
+  const step = (t) => { const p = Math.min(1, (t - t0) / dur), k = 1 - Math.pow(1 - p, 3); el.textContent = Math.round(from + (to - from) * k); if (p < 1) requestAnimationFrame(step); };
+  el.textContent = from; requestAnimationFrame(step);
+}), { threshold: .6 });
+document.querySelectorAll('[data-count]').forEach((el) => cio.observe(el));
+// carry the flipped circuit into the quote form
+const job = document.getElementById('job');
+document.getElementById('ask').addEventListener('click', () => {
+  const main = document.querySelector('input[name=main]:checked').value;
+  const c = document.querySelector('input[name=circ]:checked').value;
+  const a = document.querySelector('.read article.' + main + '[data-c="' + c + '"]');
+  if (a) job.value = a.dataset.job;
+});
+// a tidy text message instead of a raw form post
+document.getElementById('quote').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const f = new FormData(e.target);
+  const body = `Quote request: ${f.get('job')}\nName: ${f.get('name')}\nPhone: ${f.get('phone')}\nSuburb: ${f.get('suburb')}\n${f.get('message')}`;
+  location.href = 'sms:0483907521?&body=' + encodeURIComponent(body);
+});
+</script>
+</body>
+</html>
