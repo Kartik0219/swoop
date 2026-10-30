@@ -1,0 +1,748 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Lockstrike Grip Socks 1.0 (White) | Lockstrike Performance (concept)</title>
+<meta name="description" content="Concept product page for Lockstrike Performance: Lockstrike Grip Socks 1.0 (White), $20.00 AUD, US 8 – US 12. Built on Belief. Made to Perform.">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&display=swap" rel="stylesheet">
+<style>
+/* Lockstrike: one motif. The chevron of the grip pads on the sole (and of the arrow in their logo) cuts every button, photo and band. */
+:root {
+  --bg: #fbfbfa;
+  --surface: #efefec;
+  --surface-2: #e4e4e0;
+  --ink: #0a0a0a;
+  --muted: #555553;
+  --accent: #d92b21;        /* signal red: the action and the big chevrons */
+  --accent-ink: #ffffff;
+  --accent-hi: #b8211a;
+  --field: #0a0a0a;
+  --field-ink: #f4f4f1;
+  --field-muted: #b9b9b4;
+  --step-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+  --step-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+  --step-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
+  --step-head: clamp(2.25rem, 1.3rem + 3.6vw, 4.5rem);
+  --step-hero: clamp(3rem, 1rem + 5.6vw, 6rem);
+  --m: clamp(16px, 4vw, 64px);      /* the one pair of page margins */
+  --r: 0px;                         /* the one corner radius: square, cut by the chevron */
+  --ease: cubic-bezier(.2, .7, .2, 1);
+  --lift: 0 1px 3px rgba(0,0,0,.06), 0 30px 60px rgba(0,0,0,.18);
+  --lift-hi: 0 2px 6px rgba(0,0,0,.08), 0 40px 80px rgba(0,0,0,.24);
+  /* the motif: a grip-pad chevron pointing forward. --d is the depth of the point and the notch. */
+  --chev: polygon(0 0, calc(100% - var(--d, 14px)) 0, 100% 50%, calc(100% - var(--d, 14px)) 100%, 0 100%, var(--d, 14px) 50%);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 80px; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 var(--step-body)/1.5 Archivo, system-ui, sans-serif; font-variation-settings: "wdth" 100; }
+img, video { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-underline-offset: 3px; }
+::selection { background: var(--accent); color: var(--accent-ink); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+h1, h2, h3 { font-family: Archivo, system-ui, sans-serif; font-weight: 800; font-stretch: 78%; font-variation-settings: "wdth" 78; letter-spacing: -0.03em; line-height: 0.92; margin: 0; text-wrap: balance; }
+p { margin: 0; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.wrap { padding-left: var(--m); padding-right: var(--m); }
+
+/* buttons: the chevron cut, lifting on hover, pressing on active */
+.btn { --d: 14px; position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 34px 0 30px;
+  background: var(--accent); color: var(--accent-ink); font: 600 var(--step-body)/1 Archivo, sans-serif; text-decoration: none; border: 0; cursor: pointer;
+  clip-path: polygon(0 0, calc(100% - var(--d)) 0, 100% 50%, calc(100% - var(--d)) 100%, 0 100%, var(--d) 50%); transition: transform .3s var(--ease), background-color .3s var(--ease); }
+.btn:hover { background: var(--accent-hi); transform: translateY(-2px); }
+.btn:active { transform: translateY(0) scale(.97); }
+.btn.ink { background: var(--ink); color: var(--field-ink); }
+.btn.ink:hover { background: #2a2a2a; }
+.lift { filter: drop-shadow(0 1px 2px rgba(0,0,0,.08)) drop-shadow(0 18px 28px rgba(0,0,0,.16)); transition: filter .35s var(--ease), transform .35s var(--ease); } /* taste-skill-ignore: premium bar: depth on cut shapes */
+.lift:hover { filter: drop-shadow(0 2px 4px rgba(0,0,0,.1)) drop-shadow(0 26px 40px rgba(0,0,0,.22)); } /* taste-skill-ignore: premium bar: depth on cut shapes */
+
+/* concept banner */
+.concept { background: #111; color: #ddd; font-size: var(--step-small); text-align: center; padding: 9px var(--m); position: relative; z-index: 40; }
+.concept b { color: #fff; }
+
+/* ---------- Sticky header: shrinks and blurs after scrolling ---------- */
+.top { position: sticky; top: 0; z-index: 30; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px var(--m);
+  background: rgba(251,251,250,0); transition: padding .4s var(--ease), background-color .4s var(--ease), box-shadow .4s var(--ease); }
+.top.scrolled { padding-top: 8px; padding-bottom: 8px; background: rgba(251,251,250,.82); -webkit-backdrop-filter: blur(14px) saturate(1.4); backdrop-filter: blur(14px) saturate(1.4); /* taste-skill-ignore: premium bar: sticky header */
+  box-shadow: 0 1px 0 rgba(0,0,0,.06), 0 12px 30px rgba(0,0,0,.08); } /* taste-skill-ignore: premium bar: sticky header */
+.mark { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; min-height: 48px; }
+.mark svg { width: 34px; height: 32px; transition: transform .4s var(--ease); }
+.mark:hover svg { transform: translate(3px, -3px); }
+.mark span { font: 800 var(--step-lead)/1 Archivo, sans-serif; font-stretch: 125%; font-variation-settings: "wdth" 125; letter-spacing: -0.01em; }
+.top nav { display: flex; gap: 4px; }
+.top nav a { display: inline-flex; align-items: center; min-height: 48px; padding: 0 12px; text-decoration: none; font-weight: 500; transition: color .2s; }
+.top nav a:hover { color: var(--accent); }
+.pill { display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 22px; border-radius: 999px; background: var(--ink); color: var(--field-ink); text-decoration: none; font-weight: 600;
+  transition: transform .3s var(--ease), background-color .3s var(--ease); white-space: nowrap; }
+.pill:hover { background: var(--accent); transform: translateY(-2px); }
+.pill:active { transform: scale(.97); }
+.pill svg { width: 14px; height: 14px; }
+
+/* ---------- Hero: two giant grip chevrons, the front one holds their film ---------- */
+.hero { position: relative; min-height: calc(100svh - 120px); min-height: max(640px, calc(100svh - 120px)); overflow: hidden; display: grid; align-items: center; padding: 40px var(--m) 72px; }
+.hero-copy { position: relative; z-index: 2; max-width: min(48vw, 680px); }
+.hero h1 { font-size: var(--step-hero); }
+.hero h1 span { display: block; }
+.hero .what { margin-top: 36px; max-width: 34ch; font-size: var(--step-lead); line-height: 1.32; }
+.hero .price { margin-top: 18px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.hero .calls { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 22px; margin-top: 34px; }
+.hero .calls .text { font-weight: 600; text-decoration: none; min-height: 48px; display: inline-flex; align-items: center; gap: 8px; }
+.hero .calls .text:hover { color: var(--accent); }
+.tiny { font-size: var(--step-small); color: var(--muted); }
+.hero .tiny { margin-top: 12px; }
+.shapes { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
+.chev { position: absolute; top: -14%; bottom: -14%; clip-path: polygon(0 0, calc(100% - var(--d)) 0, 100% 50%, calc(100% - var(--d)) 100%, 0 100%, var(--d) 50%); }
+.chev.red { --d: 30vh; left: 47%; right: 8%; background: var(--accent); }
+.chev.film { --d: 30vh; left: 56%; right: -24%; background: #2f4a2a; }
+.chev.film video { width: 100%; height: 100%; object-fit: cover; object-position: 30% 50%; }
+.hud { position: absolute; z-index: 3; right: var(--m); bottom: 28px; width: 300px; padding: 16px 18px 14px; background: rgba(10,10,10,.76); color: var(--field-ink);
+  -webkit-backdrop-filter: blur(12px) saturate(1.3); backdrop-filter: blur(12px) saturate(1.3); filter: drop-shadow(0 18px 30px rgba(0,0,0,.22)); font-size: var(--step-small); line-height: 1.35; /* taste-skill-ignore: premium bar: the instrument panel */
+  transition: transform .35s var(--ease); font-variant-numeric: tabular-nums; }
+.hud:hover { transform: translateY(-3px); }
+.hud .row { display: flex; justify-content: space-between; gap: 12px; padding: 3px 0; }
+.hud .row span:first-child { color: var(--field-muted); }
+.hud .now { font-weight: 600; color: #fff; }
+.hud .bar { display: block; height: 3px; margin-top: 10px; background: rgba(255,255,255,.18); overflow: hidden; }
+.hud .bar i { display: block; height: 100%; width: 100%; background: var(--accent); transform-origin: left; transform: scaleX(var(--p, 0)); }
+
+/* ---------- Real numbers ---------- */
+.nums { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding-top: 96px; padding-bottom: 140px; }
+.num { background: var(--surface); padding: 28px 28px 30px; }
+.num b { display: block; font: 800 clamp(3.5rem, 2rem + 4.6vw, 7rem)/0.9 Archivo, sans-serif; font-stretch: 78%; font-variation-settings: "wdth" 78; letter-spacing: -0.04em; font-variant-numeric: tabular-nums; }
+.num b small { font-size: .42em; letter-spacing: -0.02em; margin-right: .08em; vertical-align: .9em; }
+.num p { margin-top: 14px; max-width: 26ch; }
+
+/* ---------- Shop: the live grip viewer + the buy panel ---------- */
+.shop { background: var(--surface); display: grid; grid-template-columns: 1fr 1fr; min-height: 88svh; }
+.shop .left { display: grid; place-items: center; padding: 72px 40px; }
+.plate { position: relative; width: 100%; max-width: 680px; }
+.stage { --d: 7%; position: relative; aspect-ratio: 1; overflow: hidden; clip-path: polygon(0 0, calc(100% - var(--d)) 0, 100% 50%, calc(100% - var(--d)) 100%, 0 100%, var(--d) 50%); background: #3b5a33; cursor: zoom-in; touch-action: pan-y; }
+.stage.zoomed { cursor: grab; touch-action: none; }
+.stage img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform-origin: var(--ox, 50%) var(--oy, 50%); transition: opacity .5s var(--ease), transform .55s var(--ease); }
+.stage.zoomed img { transform: scale(2.4); transition: opacity .5s var(--ease), transform .35s var(--ease); }
+.stage.panning img { transition: opacity .5s var(--ease); }
+.shop:has(#p-sole:checked) .stage img[data-p=sole], .shop:has(#p-brave:checked) .stage img[data-p=brave], .shop:has(#p-believe:checked) .stage img[data-p=believe],
+.shop:has(#p-cuff:checked) .stage img[data-p=cuff], .shop:has(#p-worn:checked) .stage img[data-p=worn] { opacity: 1; }
+.zoombtn { position: absolute; left: 10%; bottom: 18px; z-index: 2; display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 18px; border: 0; border-radius: 999px;
+  background: rgba(10,10,10,.78); color: #fff; font: 600 var(--step-small)/1 Archivo, sans-serif; cursor: pointer; transition: transform .3s var(--ease); }
+.zoombtn:hover { transform: translateY(-2px); }
+.zoombtn:active { transform: scale(.96); }
+.plate .hint { margin-top: 14px; text-align: center; }
+/* signature: the plate opens like a shutter, in the chevron's own shape */
+.js .stage.shut { clip-path: polygon(0 0, 0 0, 0 50%, 0 100%, 0 100%, 0 50%); }
+.js .stage.shut img { transform: scale(1.12); }
+.js .stage.open { transition: clip-path 1s cubic-bezier(.7,0,.2,1); }
+
+.shop .right { display: flex; flex-direction: column; justify-content: space-between; gap: 40px; padding: 72px var(--m) 72px 24px; }
+.tabs { display: flex; flex-wrap: wrap; gap: 6px; border: 0; padding: 0; margin: 26px 0 0; }
+.tabs legend { margin-bottom: 8px; font-weight: 600; }
+.tabs input { position: absolute; opacity: 0; pointer-events: none; }
+.tabs label { display: inline-flex; align-items: center; min-height: 48px; padding: 0 16px; font-size: var(--step-body); font-weight: 500; color: var(--muted); background: var(--surface-2); cursor: pointer;
+  transition: background-color .25s, color .25s, transform .25s var(--ease); }
+.tabs label:hover { color: var(--ink); transform: translateY(-2px); }
+.tabs input:checked + label { background: var(--ink); color: var(--field-ink); }
+.tabs input:focus-visible + label { outline: 3px solid var(--accent); outline-offset: 2px; }
+.buy h2 { font-size: var(--step-head); }
+.buy .price { margin-top: 14px; font-size: var(--step-lead); font-weight: 600; font-variant-numeric: tabular-nums; }
+.buy .price span { font-size: var(--step-body); font-weight: 400; color: var(--muted); }
+.part { margin-top: 20px; max-width: 40ch; min-height: 4.5em; }
+.part p { display: none; }
+.shop:has(#p-sole:checked) .part [data-p=sole], .shop:has(#p-brave:checked) .part [data-p=brave], .shop:has(#p-believe:checked) .part [data-p=believe],
+.shop:has(#p-cuff:checked) .part [data-p=cuff], .shop:has(#p-worn:checked) .part [data-p=worn] { display: block; animation: partin .45s var(--ease); }
+@keyframes partin { from { opacity: 0; transform: translateY(8px); } }
+.size { margin-top: 24px; border: 0; padding: 0; }
+.size legend { font-weight: 600; margin-bottom: 8px; }
+.size label { display: inline-flex; align-items: center; min-height: 48px; padding: 0 18px; background: var(--ink); color: var(--field-ink); font-weight: 600; }
+.size input { position: absolute; opacity: 0; }
+.size .tiny { margin-top: 8px; }
+.cells { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.cell { --d: 18px; display: flex; align-items: center; gap: 14px; min-height: 76px; padding: 0 30px 0 32px; text-decoration: none; font-weight: 600; clip-path: polygon(0 0, calc(100% - var(--d)) 0, 100% 50%, calc(100% - var(--d)) 100%, 0 100%, var(--d) 50%);
+  transition: transform .3s var(--ease), background-color .3s; }
+.cell:hover { transform: translateY(-3px); }
+.cell:active { transform: scale(.98); }
+.cell.buy { background: var(--accent); color: #fff; }
+.cell.buy:hover { background: var(--accent-hi); }
+.cell.ask { background: var(--surface-2); color: var(--ink); }
+.cell.ask:hover { background: #d8d8d3; }
+.cell .thumb { --d: 6px; flex: none; width: 44px; height: 44px; clip-path: polygon(0 0, calc(100% - var(--d)) 0, 100% 50%, calc(100% - var(--d)) 100%, 0 100%, var(--d) 50%); object-fit: cover; }
+.cell b { display: block; font-weight: 700; }
+.cell small { display: block; font-weight: 400; font-size: var(--step-small); }
+.spec { margin: 26px 0 0; display: grid; grid-template-columns: auto 1fr; gap: 6px 18px; font-size: var(--step-body); }
+.spec dt { font-weight: 600; }
+.spec dd { margin: 0; }
+.spec dd.tbc { color: var(--muted); }
+
+/* ---------- What you get: one statement with picture words ---------- */
+.get { padding-top: 200px; padding-bottom: 180px; }
+.statement { font-size: clamp(1.5rem, 0.9rem + 2vw, 2.25rem); line-height: 1.25; font-weight: 500; max-width: 1180px; letter-spacing: -0.015em; text-wrap: pretty; }
+.slot { --d: .22em; display: inline-block; width: 1.9em; height: 1em; vertical-align: -0.12em; clip-path: polygon(0 0, calc(100% - var(--d)) 0, 100% 50%, calc(100% - var(--d)) 100%, 0 100%, var(--d) 50%); overflow: hidden; margin: 0 .08em; background: var(--surface); }
+.slot img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
+.slot:hover img { transform: scale(1.15); }
+.get .after { display: grid; grid-template-columns: repeat(12, 1fr); margin-top: 72px; }
+.get .after > div { grid-column: 7 / -1; }
+.get .after p { font-size: var(--step-body); max-width: 46ch; }
+.get .after .btn { margin-top: 24px; }
+
+/* ---------- The band: the words on the toes ---------- */
+.band { background: var(--accent); color: #fff; display: grid; grid-template-columns: 1.3fr .7fr; gap: 40px; align-items: center; padding-top: 120px; padding-bottom: 120px; overflow: hidden; }
+.band h2 { font-size: clamp(2.75rem, 0.5rem + 5.4vw, 6rem); line-height: .9; font-stretch: 62%; font-variation-settings: "wdth" 62; }
+.band h2 span { display: block; }
+.band p { margin-top: 32px; max-width: 40ch; font-size: var(--step-lead); line-height: 1.32; }
+.band figure { margin: 0; justify-self: end; width: min(100%, 520px); }
+.band .shot { --d: 18%; clip-path: polygon(0 0, calc(100% - var(--d)) 0, 100% 50%, calc(100% - var(--d)) 100%, 0 100%, var(--d) 50%); aspect-ratio: 3 / 4; overflow: hidden; }
+.band .shot img { width: 100%; height: 100%; object-fit: cover; animation: drift 18s ease-in-out infinite alternate; }
+@keyframes drift { from { transform: scale(1.04); } to { transform: scale(1.14) translate(-2%, -1%); } }
+.band figcaption { margin-top: 12px; font-size: var(--step-small); text-align: right; }
+
+/* ---------- Story: inset dark panel, chevron-cut photo ---------- */
+.story { padding: 20px; background: var(--bg); }
+.panel { position: relative; overflow: hidden; background: var(--field); color: var(--field-ink); min-height: 110svh; padding: 56px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.panel h2 { font-size: var(--step-head); color: var(--field-ink); }
+.panel .photo { --d: 22%; position: absolute; left: 56px; bottom: -14%; width: 38vw; aspect-ratio: 3 / 4; clip-path: polygon(0 0, calc(100% - var(--d)) 0, 100% 50%, calc(100% - var(--d)) 100%, 0 100%, var(--d) 50%); }
+.panel .photo img { width: 100%; height: 100%; object-fit: cover; }
+.panel .text { grid-column: 2; padding-left: 12%; display: flex; flex-direction: column; gap: 64px; padding-top: 6px; }
+.panel h3 { font-size: var(--step-lead); letter-spacing: -0.02em; line-height: 1.1; }
+.panel .text p { margin-top: 12px; color: var(--field-ink); max-width: 36ch; }
+.panel q { quotes: "\201C" "\201D"; }
+.panel .tiny { color: var(--field-muted); }
+
+/* ---------- Details: index cards in a drawer ---------- */
+.details { padding-top: 200px; padding-bottom: 160px; }
+.details .inner { max-width: 940px; margin: 0 auto; }
+.details h2 { font-size: var(--step-head); margin-bottom: 64px; }
+.drawer { display: flex; flex-direction: column; }
+.card { --tab: 0px; position: relative; padding-top: 44px; margin-top: -4px; }
+.card:nth-child(1) { --tab: 0px; } .card:nth-child(2) { --tab: 150px; } .card:nth-child(3) { --tab: 300px; } .card:nth-child(4) { --tab: 450px; } .card:nth-child(5) { --tab: 600px; } .card:nth-child(6) { --tab: 300px; }
+.card::before { content: ""; position: absolute; inset: 0; z-index: 0; background: var(--c, var(--surface));
+  clip-path: polygon(var(--tab) 44px, calc(var(--tab) + 14px) 0, calc(var(--tab) + 200px) 0, calc(var(--tab) + 214px) 44px, 100% 44px, 100% 100%, 0 100%, 0 44px); }
+.card:nth-child(even) { --c: var(--field); color: var(--field-ink); }
+.card:nth-child(odd) { --c: var(--surface); }
+.card summary { position: relative; z-index: 1; list-style: none; cursor: pointer; padding: 6px 28px 26px; min-height: 96px; }
+.card summary::-webkit-details-marker { display: none; }
+.card .tab { position: absolute; top: -34px; left: calc(var(--tab) + 30px); font-size: var(--step-body); font-weight: 600; }
+.card .q { display: flex; justify-content: space-between; align-items: center; gap: 16px; font-size: var(--step-lead); font-weight: 600; padding-top: 18px; }
+.card .q::after { content: ""; flex: none; width: 16px; height: 16px; background: currentColor; clip-path: polygon(0 0, 50% 40%, 100% 0, 100% 40%, 50% 100%, 0 40%); transition: transform .35s var(--ease); }
+.card[open] .q::after { transform: rotate(180deg); }
+.card .a { position: relative; z-index: 1; padding: 0 28px 30px; max-width: calc(50ch + 56px); }
+.card .a p + p { margin-top: .8em; }
+.card summary:hover .q { color: var(--accent); }
+.card:nth-child(even) summary:hover .q { color: #ff6b5e; }
+.tbc { color: var(--muted); }
+.card:nth-child(even) .tbc { color: var(--field-muted); }
+
+/* ---------- Contact: a coupon to cut out ---------- */
+.contact { padding-top: 120px; padding-bottom: 160px; }
+.coupon { position: relative; max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 46% 54%; background: var(--field); color: var(--field-ink); }
+.coupon::before, .coupon::after { content: ""; position: absolute; left: calc(46% - 16px); width: 32px; height: 32px; border-radius: 50%; background: var(--bg); }
+.coupon::before { top: -16px; } .coupon::after { bottom: -16px; }
+.coupon .l { display: flex; flex-direction: column; justify-content: space-between; gap: 32px; padding: 48px; }
+.coupon h2 { font-size: var(--step-head); color: var(--field-ink); }
+.coupon .l p { max-width: 36ch; }
+.coupon .l a { font-weight: 600; word-break: break-word; }
+.coupon .r { border-left: 5px dotted var(--bg); padding: 48px; }
+.coupon form { display: grid; gap: 10px; }
+.coupon input, .coupon select, .coupon textarea { width: 100%; min-height: 52px; padding: 14px 16px; border: 0; border-radius: 0; background: #262626; color: var(--field-ink); font: 400 1rem/1.4 Archivo, sans-serif; }
+.coupon input::placeholder, .coupon textarea::placeholder { color: #a9a9a4; }
+.coupon textarea { min-height: 110px; resize: vertical; }
+.coupon .btn { width: 100%; min-height: 56px; margin-top: 6px; }
+.coupon .tiny { color: var(--field-muted); margin-top: 6px; }
+
+/* ---------- Footer: the arrow, built large ---------- */
+footer { background: var(--field); color: var(--field-ink); padding: 96px var(--m) 40px; overflow: hidden; }
+.bigmark { display: grid; grid-template-columns: auto 1fr; align-items: end; gap: clamp(16px, 3vw, 48px); }
+.bigmark svg { width: clamp(90px, 16vw, 250px); height: auto; }
+.bigmark .word { font: 800 clamp(2.5rem, 7.6vw, 9.5rem)/0.8 Archivo, sans-serif; font-stretch: 125%; font-variation-settings: "wdth" 125; letter-spacing: -0.04em; color: var(--field-ink); margin: 0; }
+.fcols { display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; margin-top: 64px; font-size: var(--step-body); }
+.fcols > div { grid-column: span 3; display: flex; flex-direction: column; gap: 4px; }
+.fcols > div.contact-lines { grid-column: 9 / -1; }
+.fcols h3 { font-size: var(--step-body); letter-spacing: 0; line-height: 1.2; margin-bottom: 6px; font-stretch: 100%; font-variation-settings: "wdth" 100; }
+.fcols a { overflow-wrap: anywhere; text-decoration: none; min-height: 32px; display: inline-flex; align-items: center; transition: color .2s; }
+.fcols a:hover { color: #ff6b5e; }
+.fcols p { color: var(--field-muted); }
+.last { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 72px; font-size: var(--step-small); color: var(--field-muted); }
+.last p + p { margin-top: 4px; }
+.last a { color: var(--field-ink); }
+.last .pill { background: var(--field-ink); color: var(--ink); }
+.last .pill:hover { background: var(--accent); color: #fff; }
+
+/* ---------- Phone bottom bar ---------- */
+.mbar { display: none; }
+
+/* ---------- Motion: kinetic headline, reveals, count-up ---------- */
+.kin .kw { display: inline-block; opacity: 0; filter: blur(8px); animation: kin .55s cubic-bezier(.2,.7,.2,1) forwards; animation-delay: calc(var(--i) * 70ms + 120ms); }
+@keyframes kin { to { opacity: 1; filter: blur(0); } }
+.js .rv { opacity: 0; transform: translateY(22px); transition: opacity .8s var(--ease), transform .8s var(--ease); transition-delay: calc(var(--i, 0) * 80ms); }
+.js .rv.in { opacity: 1; transform: none; }
+.hero .what, .hero .price, .hero .calls, .hero .tiny { animation: rise .9s var(--ease) both; }
+.hero .what { animation-delay: .45s; } .hero .price { animation-delay: .55s; } .hero .calls { animation-delay: .65s; } .hero .tiny { animation-delay: .7s; }
+.chev.red { animation: slidein 1.2s var(--ease) both .05s; }
+.chev.film { animation: slidein 1.2s var(--ease) both .2s; }
+.hud { animation: rise 1s var(--ease) both .9s; }
+@keyframes rise { from { opacity: 0; transform: translateY(22px); } }
+@keyframes slidein { from { transform: translateX(14vw); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js .rv { opacity: 1; transform: none; }
+  .kin .kw { opacity: 1; filter: none; }
+  .js .stage.shut { clip-path: polygon(0 0, calc(100% - var(--d)) 0, 100% 50%, calc(100% - var(--d)) 100%, 0 100%, var(--d) 50%); }
+  .js .stage.shut img { transform: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1100px) {
+  .top nav { display: none; }
+  .hero-copy { max-width: 52vw; }
+  .chev.red { left: 50%; right: 0; }
+  .chev.film { left: 60%; right: -40%; }
+  .hud { width: 260px; }
+  .shop { grid-template-columns: 1fr; }
+  .shop .left { padding: 56px var(--m) 8px; }
+  .shop .right { padding: 40px var(--m) 72px; }
+  .cells { max-width: 640px; }
+  .band { grid-template-columns: 1fr 1fr; }
+  .panel { grid-template-columns: 1fr; min-height: 0; padding: 48px 40px 0; }
+  .panel .text { grid-column: 1; padding-left: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .panel .text > .btn-wrap { grid-column: 1 / -1; }
+  .panel .photo { position: relative; left: auto; bottom: auto; width: min(70%, 460px); margin: 24px auto -18%; }
+  .card:nth-child(4) { --tab: 300px; } .card:nth-child(5) { --tab: 450px; } .card:nth-child(6) { --tab: 150px; }
+  .fcols > div { grid-column: span 4; }
+  .fcols > div.contact-lines { grid-column: 1 / -1; }
+}
+
+/* ---------- Phone: its own composition ---------- */
+@media (max-width: 760px) {
+  body { padding-bottom: 76px; }
+  .top { padding: 10px var(--m); }
+  .top .pill { padding: 0 16px; }
+  .top .pill .long { display: none; }
+  .hero { display: block; min-height: 0; padding: 28px 0 0; }
+  .hero-copy { max-width: none; padding: 0 var(--m); }
+  .hero h1 { font-size: 11vw; }
+  .hero .what { margin-top: 22px; font-size: 1.125rem; }
+  .hero .calls { margin-top: 24px; }
+  .shapes { position: relative; inset: auto; height: 104vw; margin-top: 36px; }
+  .chev { top: 0; bottom: 0; }
+  .chev.red { --d: 28vw; left: -40vw; right: 34vw; }
+  .chev.film { --d: 28vw; left: -18vw; right: -36vw; }
+  .hud { position: relative; right: auto; bottom: auto; width: auto; margin: -64px var(--m) 0; background: #141414; }
+  .nums { grid-template-columns: 1fr; gap: 28px; padding-top: 56px; padding-bottom: 96px; }
+  .num { display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: center; padding: 20px; }
+  .num b { font-size: 3.25rem; }
+  .num p { margin-top: 0; }
+  .shop .left { padding: 40px var(--m) 0; }
+  .shop .right { padding: 28px var(--m) 64px; gap: 28px; }
+  .tabs label { padding: 0 13px; }
+  .cells { grid-template-columns: 1fr; }
+  .cell { min-height: 64px; }
+  .get { padding-top: 120px; padding-bottom: 120px; }
+  .statement { font-size: 1.5rem; line-height: 1.3; }
+  .slot { width: 1.5em; }
+  .get .after { display: block; margin-top: 40px; }
+  .band { grid-template-columns: 1fr; padding-top: 88px; padding-bottom: 88px; gap: 40px; }
+  .band h2 { font-size: 10.5vw; }
+  .band figure { justify-self: center; width: 86%; }
+  .story { padding: 10px; }
+  .panel { padding: 40px 22px 0; }
+  .panel h2 { font-size: 8.5vw; }
+  .panel .text { grid-template-columns: 1fr; gap: 36px; }
+  .panel .photo { width: 86vw; margin-bottom: -24%; }
+  .details { padding-top: 120px; padding-bottom: 120px; }
+  .details h2 { font-size: 9vw; margin-bottom: 44px; }
+  .card:nth-child(1) { --tab: 0px; } .card:nth-child(2) { --tab: 48px; } .card:nth-child(3) { --tab: 96px; } .card:nth-child(4) { --tab: 144px; } .card:nth-child(5) { --tab: 96px; } .card:nth-child(6) { --tab: 48px; }
+  .card::before { clip-path: polygon(var(--tab) 44px, calc(var(--tab) + 12px) 0, calc(var(--tab) + 150px) 0, calc(var(--tab) + 162px) 44px, 100% 44px, 100% 100%, 0 100%, 0 44px); }
+  .card .tab { left: calc(var(--tab) + 22px); }
+  .card summary { padding: 6px 20px 22px; min-height: 88px; }
+  .card .a { padding: 0 20px 24px; }
+  .contact { padding-top: 120px; padding-bottom: 96px; }
+  .coupon { grid-template-columns: 1fr; --cut: 230px; }
+  .coupon::before, .coupon::after { top: calc(var(--cut) - 16px); bottom: auto; left: -16px; }
+  .coupon::after { left: auto; right: -16px; }
+  .coupon .l { padding: 36px 22px 30px; height: var(--cut); }
+  .coupon .r { border-left: 0; border-top: 5px dotted var(--bg); padding: 30px 22px 36px; }
+  footer { padding-top: 72px; padding-bottom: 32px; }
+  .bigmark { grid-template-columns: 1fr; }
+  .bigmark .word { font-size: 10.4vw; }
+  .fcols { grid-template-columns: 1fr 1fr; gap: 28px 16px; }
+  .fcols > div, .fcols > div.contact-lines { grid-column: auto; }
+  .fcols > div.contact-lines { grid-column: 1 / -1; }
+  .mbar.away { transform: translateY(110%); }
+  .mbar { transition: transform .4s var(--ease); position: fixed; left: 0; right: 0; bottom: 0; z-index: 35; display: flex; align-items: center; gap: 10px; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: #111; color: #fff;
+    box-shadow: 0 -12px 30px rgba(0,0,0,.18); } /* taste-skill-ignore: premium bar: phone bottom bar */
+  .mbar .who { flex: 1; font-size: var(--step-small); line-height: 1.25; color: #c9c9c4; }
+  .mbar .who b { display: block; color: #fff; font-size: var(--step-body); }
+  .mbar a.mail { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; min-width: 48px; padding: 0 14px; border-radius: 999px; background: #2a2a2a; color: #fff; text-decoration: none; font-weight: 600; }
+  .mbar .btn { min-height: 48px; padding: 0 26px 0 22px; }
+}
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Lockstrike Performance. This is a design preview, not the live website.</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="arrow" viewBox="100 250 960 900"><path d="M305 487 L1040 263 L637 643 L487 677 L803 1137 L313 778 L115 881 Z M962 399 L705 865 L591 735 Z"/></symbol>
+  <symbol id="chev" viewBox="0 0 14 14"><path d="M1 0h6l6 7-6 7H1l6-7z"/></symbol>
+</svg>
+
+<header class="top" id="top">
+  <a class="mark" href="#hero" aria-label="Lockstrike Performance, home">
+    <svg aria-hidden="true"><use href="#arrow"/></svg><span>LOCKSTRIKE</span>
+  </a>
+  <nav aria-label="Main">
+    <a href="#shop">The socks</a><a href="#grip">Grip</a><a href="#story">Story</a><a href="#details">Details</a><a href="#contact">Contact</a>
+  </nav>
+  <a class="pill" href="https://lockstrikeperformance.com/products/lockstrike-grip-socks-be-brave-believe-in-yourself"><span class="long">Add to cart</span><span>$20.00</span><svg aria-hidden="true" fill="currentColor"><use href="#chev"/></svg></a>
+</header>
+
+<main>
+  <section class="hero" id="hero" aria-labelledby="hero-h">
+    <div class="hero-copy">
+      <h1 id="hero-h"><span>Lockstrike</span> <span>Grip Socks 1.0</span></h1>
+      <p class="what">Built on Belief. Made to Perform. White grip socks with a chevron grip sole and a message knitted on the toes.</p>
+      <p class="price">$20.00 AUD, taxes included · US 8 – US 12</p>
+      <div class="calls">
+        <a class="btn lift" href="https://lockstrikeperformance.com/products/lockstrike-grip-socks-be-brave-believe-in-yourself">Add to cart</a>
+        <a class="text" href="#shop">Look at the grip <svg width="12" height="12" aria-hidden="true" fill="currentColor"><use href="#chev"/></svg></a>
+      </div>
+      <p class="tiny">Buying opens the Lockstrike store.</p>
+    </div>
+    <div class="shapes">
+      <div class="chev red" aria-hidden="true"></div>
+      <div class="chev film">
+        <video id="hero-video" autoplay muted loop playsinline preload="metadata" poster="img/hero-poster.jpg" width="960" height="960" aria-label="Lockstrike grip socks: worn with boots on the grass, the chevron grip soles, the Believe In Yourself toe, and the pair laid out on the pitch" disablepictureinpicture></video>
+      </div>
+    </div>
+    <div class="hud" aria-live="off">
+      <div class="row"><span>Now showing</span><span class="now" id="now">Worn on the grass</span></div>
+      <div class="row"><span>Release</span><span>Grip Socks 1.0</span></div>
+      <div class="row"><span>Colour</span><span>White</span></div>
+      <div class="row"><span>Size</span><span>US 8 – US 12</span></div>
+      <span class="bar" aria-hidden="true"><i id="prog"></i></span>
+    </div>
+  </section>
+
+  <section class="nums wrap" aria-labelledby="nums-h">
+    <h2 id="nums-h" class="sr">Grip Socks 1.0 at a glance</h2>
+    <div class="num rv"><b><span data-count="1.0" data-dec="1">1.0</span></b><p>The first release of Lockstrike Performance grip socks.</p></div>
+    <div class="num rv" style="--i:1"><b><small>$</small><span data-count="20">20</span></b><p>AUD a pair, taxes included.</p></div>
+    <div class="num rv" style="--i:2"><b>8–<span data-count="12" data-from="8">12</span></b><p>One size: US 8 – US 12.</p></div>
+  </section>
+
+  <section class="shop" id="shop" aria-labelledby="shop-h">
+    <div class="left">
+      <div class="plate rv">
+        <div class="stage shut" id="stage" aria-label="Close-up of the sock. Tap to zoom, drag to look around.">
+          <img data-p="sole" src="img/sole.jpg" width="1200" height="1200" alt="The soles of both socks: rows of black chevron grip pads under the ball of the foot and heel, and blocks at the toes" loading="lazy">
+          <img data-p="brave" src="img/toe-brave.jpg" width="1100" height="1100" alt="Be Brave knitted across the toe of one sock, next to the grip sole of the other" loading="lazy">
+          <img data-p="believe" src="img/toe-believe.jpg" width="1100" height="1100" alt="Believe In Yourself knitted across the toe of the other sock" loading="lazy">
+          <img data-p="cuff" src="img/cuff.jpg" width="1200" height="1200" alt="Ribbed cuffs with the Lockstrike arrow and the LOCKSTRIKE name knitted in black" loading="lazy">
+          <img data-p="worn" src="img/worn.jpg" width="1200" height="1200" alt="Both socks worn at crew height with boots, seen from behind on the grass" loading="lazy">
+        </div>
+        <button class="zoombtn" id="zoombtn" type="button" aria-pressed="false">Zoom in</button>
+        <p class="hint tiny">Tap the picture to zoom, then drag to look around.</p>
+      </div>
+    </div>
+    <div class="right">
+      <div class="buy rv" style="--i:1">
+        <h2 id="shop-h">Grip Socks 1.0 (White)</h2>
+        <p class="price">$20.00 AUD <span>· Taxes included</span></p>
+        <fieldset class="tabs" id="parts">
+          <legend>Look closer</legend>
+          <input type="radio" name="part" id="p-sole" value="sole" checked><label for="p-sole">Grip sole</label>
+          <input type="radio" name="part" id="p-brave" value="brave"><label for="p-brave">Be Brave</label>
+          <input type="radio" name="part" id="p-believe" value="believe"><label for="p-believe">Believe</label>
+          <input type="radio" name="part" id="p-cuff" value="cuff"><label for="p-cuff">Cuff</label>
+          <input type="radio" name="part" id="p-worn" value="worn"><label for="p-worn">On foot</label>
+        </fieldset>
+        <div class="part" aria-live="polite">
+          <p data-p="sole">Rows of black chevron pads under the ball of the foot and the heel, with a block pattern at the toes. Lockstrike calls it “advanced anti-slip grip technology”.</p>
+          <p data-p="brave">“Be Brave” is knitted across the toe of one sock, where you see it as you lace up.</p>
+          <p data-p="believe">“Believe In Yourself” runs across the toe of the other. In Lockstrike’s words, the message “offers the 1% you’ve been wanting”.</p>
+          <p data-p="cuff">A ribbed cuff with the Lockstrike arrow and the name knitted in black.</p>
+          <p data-p="worn">Crew height, worn here with boots on the grass. Made for “training and match day alike”.</p>
+        </div>
+        <fieldset class="size">
+          <legend>Size</legend>
+          <input type="radio" name="size" id="sz" checked><label for="sz">US 8 – US 12</label>
+          <p class="tiny">One size. Other sizes and a size guide: details coming from Lockstrike.</p>
+        </fieldset>
+        <dl class="spec">
+          <dt>Material</dt><dd class="tbc">Details coming from Lockstrike</dd>
+          <dt>Care</dt><dd class="tbc">Washing details coming from Lockstrike</dd>
+          <dt>Shipping</dt><dd class="tbc">Times and costs coming from Lockstrike</dd>
+          <dt>Returns</dt><dd class="tbc">Policy coming from Lockstrike</dd>
+        </dl>
+      </div>
+      <div class="rv" style="--i:2">
+        <div class="cells">
+          <a class="cell buy lift" id="buy" href="https://lockstrikeperformance.com/products/lockstrike-grip-socks-be-brave-believe-in-yourself">
+            <img class="thumb" id="thumb" src="img/sole.jpg" width="44" height="44" alt="" loading="lazy">
+            <span><b>Add to cart</b><small>$20.00 · US 8 – US 12</small></span>
+          </a>
+          <a class="cell ask" href="#contact" data-topic="Sizing"><span><b>Ask about sizing</b><small>Email Lockstrike</small></span></a>
+        </div>
+        <p class="tiny" style="margin-top:12px">Buying opens the Lockstrike store.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="get wrap" id="grip" aria-labelledby="get-h">
+    <h2 id="get-h" class="sr">What you get</h2>
+    <p class="statement rv">A chevron grip sole <span class="slot"><img src="img/sole.jpg" width="1200" height="1200" alt="" loading="lazy"></span>, a message on each toe <span class="slot"><img src="img/toe-believe.jpg" width="1100" height="1100" alt="" loading="lazy"></span>, and the arrow on every cuff <span class="slot"><img src="img/cuff.jpg" width="1200" height="1200" alt="" loading="lazy"></span>.</p>
+    <div class="after">
+      <div class="rv" style="--i:1">
+        <p>Lockstrike made Grip Socks 1.0 “to help athletes perform at their best when it matters most”, for “traction, stability, and control”.</p>
+        <a class="btn ink lift" href="#shop">Look closer at the grip</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="band wrap" aria-labelledby="band-h">
+    <div>
+      <h2 id="band-h" class="rv"><span>Be Brave.</span> <span>Believe In Yourself.</span></h2>
+      <p class="rv" style="--i:1">The two lines knitted on the toes, one on each sock. The first thing you read before the whistle.</p>
+    </div>
+    <figure class="rv" style="--i:2">
+      <div class="shot lift"><img src="img/toes-pair.jpg" width="1050" height="1400" alt="Both socks laid on the grass, toes up: Believe In Yourself on the left, Be Brave on the right, the Lockstrike arrow on each cuff" loading="lazy"></div>
+      <figcaption>Grip Socks 1.0, toes up.</figcaption>
+    </figure>
+  </section>
+
+  <section class="story" id="story" aria-labelledby="story-h">
+    <div class="panel">
+      <div>
+        <h2 id="story-h" class="rv">More than just grip socks.</h2>
+      </div>
+      <div class="text">
+        <div class="rv" style="--i:1">
+          <h3>A mindset</h3>
+          <p>Lockstrike stands for <q>discipline, resilience, and the pursuit of excellence.</q> Built on Belief. Made to Perform.</p>
+        </div>
+        <div class="rv" style="--i:2">
+          <h3>Training and match day</h3>
+          <p>Their socks are <q>designed to withstand the demands of training and match day alike</q>, whether you are chasing your next goal or pushing your limits in every session.</p>
+        </div>
+        <div class="btn-wrap rv" style="--i:3">
+          <a class="btn lift" href="https://lockstrikeperformance.com/products/lockstrike-grip-socks-be-brave-believe-in-yourself">Shop Grip Socks 1.0</a>
+          <p class="tiny" style="margin-top:12px">Buying opens the Lockstrike store.</p>
+        </div>
+      </div>
+      <div class="photo"><img src="img/pair-sun.jpg" width="1050" height="1400" alt="A pair of Lockstrike grip socks in the sun on the grass, the arrow on each cuff and the grip pads along the soles" loading="lazy"></div>
+    </div>
+  </section>
+
+  <section class="details" id="details" aria-labelledby="details-h">
+    <div class="inner wrap">
+      <h2 id="details-h" class="rv">The details</h2>
+      <div class="drawer rv" style="--i:1">
+        <details class="card" name="faq" open>
+          <summary><span class="tab">Size</span><span class="q">What size are they?</span></summary>
+          <div class="a"><p>One size, US 8 – US 12. $20.00 AUD a pair, taxes included.</p><p class="tbc">Other sizes and a size guide: details coming from Lockstrike.</p></div>
+        </details>
+        <details class="card" name="faq">
+          <summary><span class="tab">Grip</span><span class="q">What is on the sole?</span></summary>
+          <div class="a"><p>Black grip pads in rows of chevrons under the ball of the foot and the heel, and a block pattern at the toes. Lockstrike describes it as “advanced anti-slip grip technology” for “exceptional traction, stability, and control”.</p></div>
+        </details>
+        <details class="card" name="faq">
+          <summary><span class="tab">Message</span><span class="q">What do the toes say?</span></summary>
+          <div class="a"><p>“Be Brave” on one sock and “Believe In Yourself” on the other, knitted in black across the toe.</p></div>
+        </details>
+        <details class="card" name="faq">
+          <summary><span class="tab">Material</span><span class="q">What are they made of?</span></summary>
+          <div class="a"><p>Lockstrike’s description says they are “crafted from premium materials offering maximum comfort and durability”.</p><p class="tbc">Material: details coming from Lockstrike.</p></div>
+        </details>
+        <details class="card" name="faq">
+          <summary><span class="tab">Care</span><span class="q">How do I wash them?</span></summary>
+          <div class="a"><p class="tbc">Washing and care: details coming from Lockstrike.</p></div>
+        </details>
+        <details class="card" name="faq">
+          <summary><span class="tab">Delivery</span><span class="q">Shipping and returns?</span></summary>
+          <div class="a"><p class="tbc">Shipping times and costs: details coming from Lockstrike.</p><p class="tbc">Returns and exchanges: details coming from Lockstrike.</p><p>Questions before you order? <a href="#contact">Email Lockstrike</a>.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact wrap" id="contact" aria-labelledby="contact-h">
+    <div class="coupon rv">
+      <div class="l">
+        <h2 id="contact-h">Ask Lockstrike</h2>
+        <p>Sizing, an order, or anything else. This opens your email app addressed to <a href="mailto:lockstrikeperformance@gmail.com">lockstrikeperformance@gmail.com</a>.</p>
+      </div>
+      <div class="r">
+        <form id="ask" action="mailto:lockstrikeperformance@gmail.com" method="get" enctype="text/plain">
+          <label class="sr" for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" placeholder="Your name" required>
+          <label class="sr" for="f-email">Your email</label><input id="f-email" name="email" type="email" autocomplete="email" placeholder="Your email" required>
+          <label class="sr" for="f-topic">Topic</label>
+          <select id="f-topic" name="topic"><option>Sizing</option><option>An order</option><option>Something else</option></select>
+          <label class="sr" for="f-msg">Your question</label><textarea id="f-msg" name="message" placeholder="Your question"></textarea>
+          <button class="btn" type="submit">Email Lockstrike</button>
+          <p class="tiny">Nothing is stored on this page.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer aria-labelledby="foot-h">
+  <div class="bigmark rv">
+    <svg viewBox="100 250 960 900" fill="#f4f4f1" aria-hidden="true"><use href="#arrow"/></svg>
+    <h2 class="word" id="foot-h">LOCKSTRIKE</h2>
+  </div>
+  <div class="fcols">
+    <div><h3>Shop</h3><a href="#shop">Grip Socks 1.0 (White)</a><a href="#details">Size and details</a><a href="https://lockstrikeperformance.com/products/lockstrike-grip-socks-be-brave-believe-in-yourself">Lockstrike store</a></div>
+    <div><h3>Lockstrike</h3><a href="#story">Our mindset</a><a href="#grip">The grip</a><a href="#hero">Built on Belief</a></div>
+    <div class="contact-lines"><h3>Contact</h3><a href="mailto:lockstrikeperformance@gmail.com">lockstrikeperformance@gmail.com</a><p>Lockstrike Performance, Kingsgrove NSW</p><p>Built on Belief. Made to Perform.</p></div>
+  </div>
+  <div class="last">
+    <div>
+      <p>© <span data-year>2026</span> Lockstrike Performance. Concept design by <a href="https://swoopsites.com/">Swoop Sites</a>, Melbourne.</p>
+      <p>Photos: Lockstrike Performance’s own, from lockstrikeperformance.com.</p>
+    </div>
+    <a class="pill" href="#top">Back to top</a>
+  </div>
+</footer>
+
+<div class="mbar" role="region" aria-label="Quick buy">
+  <span class="who"><b>Grip Socks 1.0</b>$20.00 · US 8 – US 12</span>
+  <a class="mail" href="mailto:lockstrikeperformance@gmail.com">Email</a>
+  <a class="btn" href="https://lockstrikeperformance.com/products/lockstrike-grip-socks-be-brave-believe-in-yourself">Add to cart</a>
+</div>
+
+<script>
+(function () {
+  var d = document, root = d.documentElement;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var yr = d.querySelector('[data-year]'); if (yr) yr.textContent = new Date().getFullYear();
+
+  /* hero film: set the source here so the poster paints first */
+  var hv = d.getElementById('hero-video');
+  if (hv) {
+    var s = d.createElement('source'); s.src = 'img/hero.mp4'; s.type = 'video/mp4'; hv.appendChild(s);
+    if (reduce) { hv.removeAttribute('autoplay'); hv.pause(); } else { hv.load(); var pp = hv.play(); if (pp && pp.catch) pp.catch(function () {}); }
+    /* the instrument: which of their photos is on screen, and where the loop is */
+    var marks = [[0, 'Worn on the grass'], [1.75, 'The grip sole'], [3.25, 'Believe In Yourself'], [4.75, 'The pair, arrows up'], [6.25, 'Be Brave, toes up'], [7.75, 'Worn on the grass']];
+    var now = d.getElementById('now'), prog = d.getElementById('prog');
+    hv.addEventListener('timeupdate', function () {
+      var t = hv.currentTime, label = marks[0][1];
+      for (var i = 0; i < marks.length; i++) if (t >= marks[i][0]) label = marks[i][1];
+      if (now.textContent !== label) now.textContent = label;
+      if (hv.duration) prog.style.setProperty('--p', (t / hv.duration).toFixed(3));
+    });
+  }
+
+  /* kinetic headline */
+  var h1 = d.querySelector('.hero h1');
+  if (h1 && !reduce) {
+    var i = 0;
+    (function split(n) {
+      Array.prototype.slice.call(n.childNodes).forEach(function (c) {
+        if (c.nodeType === 3) {
+          var frag = d.createDocumentFragment();
+          c.nodeValue.split(/(\s+)/).forEach(function (p) {
+            if (!p) return;
+            if (/^\s+$/.test(p)) { frag.appendChild(d.createTextNode(p)); return; }
+            var s = d.createElement('span'); s.className = 'kw'; s.style.setProperty('--i', i++); s.textContent = p; frag.appendChild(s);
+          });
+          n.replaceChild(frag, c);
+        } else if (c.nodeType === 1) split(c);
+      });
+    })(h1);
+    h1.classList.add('kin');
+  }
+
+  /* header shrinks and blurs after scrolling */
+  var top = d.getElementById('top');
+  var onScroll = function () { top.classList.toggle('scrolled', window.scrollY > 40); };
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  /* scroll reveals, count-up, and the shutter on the grip plate */
+  var stage = d.getElementById('stage');
+  if ('IntersectionObserver' in window && !reduce) {
+    root.classList.add('js');
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    d.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
+
+    var countIO = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return; countIO.unobserve(e.target);
+        var el = e.target, to = parseFloat(el.dataset.count), from = parseFloat(el.dataset.from || 0), dec = +(el.dataset.dec || 0), t0 = null;
+        (function step(ts) {
+          if (!t0) t0 = ts; var k = Math.min(1, (ts - t0) / 1400), v = from + (to - from) * (1 - Math.pow(1 - k, 3));
+          el.textContent = v.toFixed(dec); if (k < 1) requestAnimationFrame(step);
+        })(performance.now());
+      });
+    }, { threshold: 0.6 });
+    d.querySelectorAll('[data-count]').forEach(function (el) { countIO.observe(el); });
+
+    var shutIO = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return; shutIO.unobserve(stage);
+        stage.classList.add('open'); requestAnimationFrame(function () { stage.classList.remove('shut'); });
+        setTimeout(function () { stage.classList.remove('open'); }, 1300);
+      });
+    }, { rootMargin: '0px 0px 10% 0px', threshold: 0 });
+    shutIO.observe(stage);
+  } else if (stage) { stage.classList.remove('shut'); }
+
+  /* the live thing: pick a part, zoom into their photo, and the choice rides into Add to cart */
+  var thumb = d.getElementById('thumb'), zbtn = d.getElementById('zoombtn'), buy = d.getElementById('buy');
+  var names = { sole: 'Grip sole', brave: 'Be Brave toe', believe: 'Believe In Yourself toe', cuff: 'Cuff', worn: 'On foot' };
+  function current() { var r = d.querySelector('input[name=part]:checked'); return r ? r.value : 'sole'; }
+  function setZoom(on, x, y) {
+    stage.classList.toggle('zoomed', on);
+    zbtn.setAttribute('aria-pressed', on ? 'true' : 'false'); zbtn.textContent = on ? 'Zoom out' : 'Zoom in';
+    if (x != null) { stage.style.setProperty('--ox', x + '%'); stage.style.setProperty('--oy', y + '%'); }
+  }
+  d.querySelectorAll('input[name=part]').forEach(function (r) {
+    r.addEventListener('change', function () {
+      var img = stage.querySelector('img[data-p=' + r.value + ']');
+      thumb.src = img.getAttribute('src');
+      buy.setAttribute('aria-label', 'Add to cart: Grip Socks 1.0 (White), US 8 – US 12, $20.00. You were looking at the ' + names[r.value] + '. Opens the Lockstrike store.');
+      setZoom(false, 50, 50);
+    });
+  });
+  function pos(e) { var b = stage.getBoundingClientRect(); return [Math.max(0, Math.min(100, (e.clientX - b.left) / b.width * 100)), Math.max(0, Math.min(100, (e.clientY - b.top) / b.height * 100))]; }
+  var dragging = false, moved = false;
+  stage.addEventListener('pointerdown', function (e) {
+    moved = false;
+    if (!stage.classList.contains('zoomed')) return;
+    dragging = true; stage.classList.add('panning'); stage.setPointerCapture(e.pointerId);
+  });
+  stage.addEventListener('pointermove', function (e) {
+    if (!stage.classList.contains('zoomed')) return;
+    if (dragging || e.pointerType === 'mouse') { moved = moved || dragging; var p = pos(e); stage.style.setProperty('--ox', p[0] + '%'); stage.style.setProperty('--oy', p[1] + '%'); stage.classList.add('panning'); }
+  });
+  stage.addEventListener('pointerup', function (e) {
+    var wasDrag = dragging && moved; dragging = false; stage.classList.remove('panning');
+    if (wasDrag) return;
+    var p = pos(e); setZoom(!stage.classList.contains('zoomed'), p[0], p[1]);
+  });
+  stage.addEventListener('pointerleave', function () { stage.classList.remove('panning'); });
+  zbtn.addEventListener('click', function () { setZoom(!stage.classList.contains('zoomed'), 50, 50); });
+
+  /* the phone buy bar steps aside for the footer */
+  var mbar = d.querySelector(".mbar"), foot = d.querySelector("footer");
+  if ("IntersectionObserver" in window && mbar && foot) new IntersectionObserver(function (es) { mbar.classList.toggle("away", es[0].isIntersecting); }).observe(foot);
+
+  /* "Ask about sizing" carries the topic and the part into the email form */
+  var topic = d.getElementById('f-topic'), msg = d.getElementById('f-msg');
+  d.querySelectorAll('[data-topic]').forEach(function (a) {
+    a.addEventListener('click', function () { topic.value = a.dataset.topic; if (!msg.value) msg.value = 'About Grip Socks 1.0 (White), US 8 – US 12: '; });
+  });
+  d.getElementById('ask').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var f = new FormData(e.target);
+    var body = 'Name: ' + f.get('name') + '\nEmail: ' + f.get('email') + '\nTopic: ' + f.get('topic') + '\n\n' + f.get('message');
+    location.href = 'mailto:lockstrikeperformance@gmail.com?subject=' + encodeURIComponent('Grip Socks 1.0: ' + f.get('topic')) + '&body=' + encodeURIComponent(body);
+  });
+})();
+</script>
+</body>
+</html>
