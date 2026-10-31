@@ -27,3 +27,13 @@
   .hero .glow{transition:none}
   [data-mag]{transition:none!important;transform:none!important}
 }
+
+/* full dark page: one header, no light sections (cinematic look) */
+.snav{display:none!important}
+.sec.w,.sec.l,.sec.orange,.sec.fcheck{background:#07080b!important;color:#e9e6df!important}
+.sec.w h1,.sec.w h2,.sec.w h3,.sec.w h4,.sec.l h1,.sec.l h2,.sec.l h3,.sec.l h4,.sec.orange h1,.sec.orange h2,.sec.orange h3,.sec.orange h4,.sec.fcheck h1,.sec.fcheck h2,.sec.fcheck h3{color:#fff!important}
+.sec.w p,.sec.l p,.sec.orange p,.sec.fcheck p,.sec.w li,.sec.l li,.sec.orange li,.sec.fcheck li{color:#b4b8c0}
+.sec.w .tile,.sec.l .tile,.sec.w .sec-card,.sec.l .sec-card,.sec.w .col,.sec.l .col,.sec.w .care,.sec.l .care,.sec.w .who-grid li,.sec.l .who-grid li,.sec.w .incl li,.sec.l .incl li,.sec.w .stat,.sec.l .stat,.sec.w .fixup,.sec.l .fixup,.sec.w .check,.sec.l .check{background:rgba(255,255,255,.04)!important;border-color:rgba(255,255,255,.12)!important;color:#e9e6df!important}
+.sec.w input,.sec.l input,.sec.w textarea,.sec.l textarea,.sec.fcheck input,.fc-form input,.cform input,.cform textarea{background:#14161b!important;color:#fff!important;border-color:rgba(255,255,255,.18)!important}
+.sec.w table,.sec.l table,.sec.w th,.sec.l th,.sec.w td,.sec.l td,.cmp th,.cmp td{border-color:rgba(255,255,255,.12)!important;color:#e9e6df}
+.cmp td.us,.cmp thead th.us{background:rgba(45,212,191,.08)!important}
