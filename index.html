@@ -656,6 +656,22 @@
 .hero .offer{margin-left:auto;margin-right:auto;justify-content:center}
 .hero .facts{justify-content:center}
 </style>
+<style>
+/* Gavin case study: quote and screenshot slideshow */
+.gdf-quote{margin:22px 0 0;padding:0 0 0 16px;border-left:2px solid #0d9488}
+.gdf-quote p{font-size:17px;line-height:1.45;color:var(--ink)}
+.gdf-quote footer{display:block;margin-top:8px;font-size:14px;color:var(--sub);background:none;padding:0}
+.gdf-slides{margin-top:24px;max-width:520px}
+.gdf-slides figure{display:none;margin:0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
+.gdf-slides figure.on{display:block}
+.gdf-slides img{display:block;width:100%;height:auto}
+.gdf-slides figcaption{padding:10px 14px;font-size:14px;color:var(--sub)}
+.gdf-nav{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:12px}
+.gdf-nav button{min-width:44px;min-height:44px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:18px;cursor:pointer}
+.gdots{display:flex;gap:8px}
+.gdots button{width:12px;height:12px;min-width:12px;min-height:12px;padding:0;border-radius:50%;border:0;background:#c7c7cc}
+.gdots button.on{background:#0d9488}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -987,6 +1003,13 @@
           <li>Mobile-first design</li>
           <li>Player registration and enquiry forms</li>
         </ul>
+        <blockquote class="gdf-quote rv d2"><p>"Kartik website has helped me grow and expand to another level and was super helpful with his work."</p><footer>Gavin de Niese, coach, Gavin de Football</footer></blockquote>
+        <div class="gdf-slides rv d2" role="region" aria-roledescription="carousel" aria-label="Gavin de Football website, screenshots" tabindex="0">
+          <figure class="on" aria-roledescription="slide" aria-label="1 of 3"><img src="/assets/gdf-register.webp" alt="The Gavin de Football Term 4 registration page" loading="lazy" width="1100" height="454"><figcaption>The registration page: pick sessions, fill in the form, pay.</figcaption></figure>
+          <figure aria-roledescription="slide" aria-label="2 of 3"><img src="/assets/showcase/gavin-enquiry.png" alt="The Gavin de Football enquiry form" loading="lazy" width="1440" height="1600"><figcaption>The enquiry page: families tell Gavin what they need, in one form.</figcaption></figure>
+          <figure aria-roledescription="slide" aria-label="3 of 3"><img src="/assets/showcase/gavin-holiday-camp.png" alt="The Gavin de Football holiday camp page" loading="lazy" width="1440" height="1600"><figcaption>The holiday camp page: dates, what happens each day and how to join.</figcaption></figure>
+          <div class="gdf-nav"><button type="button" class="gp" aria-label="Previous screenshot">&larr;</button><span class="gdots"><button type="button" class="on" aria-label="Screenshot 1"></button><button type="button" aria-label="Screenshot 2"></button><button type="button" aria-label="Screenshot 3"></button></span><button type="button" class="gn" aria-label="Next screenshot">&rarr;</button></div>
+        </div>
         <a class="more" href="https://gavindefootball.com" target="_blank" rel="noopener">Visit the site<span class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)"> (opens in a new tab)</span></a>
       </div>
     </div>
@@ -1543,6 +1566,19 @@
     window.addEventListener('resize',upd);
     upd();
   }
+})();
+</script>
+<script>
+// Gavin case study slideshow
+(function(){
+  var box=document.querySelector('.gdf-slides'); if(!box) return;
+  var slides=[].slice.call(box.querySelectorAll('figure')); var dots=[].slice.call(box.querySelectorAll('.gdots button'));
+  var cur=0;
+  function show(n){cur=(n+slides.length)%slides.length;slides.forEach(function(f,i){f.classList.toggle('on',i===cur);});dots.forEach(function(d,i){d.classList.toggle('on',i===cur);});}
+  box.querySelector('.gp').addEventListener('click',function(){show(cur-1);});
+  box.querySelector('.gn').addEventListener('click',function(){show(cur+1);});
+  dots.forEach(function(d,i){d.addEventListener('click',function(){show(i);});});
+  box.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1);});
 })();
 </script>
 </body>
