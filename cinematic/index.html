@@ -69,7 +69,22 @@
   .steps{position:relative;width:100%;padding:0 5vw}
   .step{position:absolute;inset:auto 5vw auto 5vw;opacity:0;transform:translateY(60px) scale(.96);transition:opacity .7s,transform .9s cubic-bezier(.2,.7,.2,1);filter:blur(6px)}
   .step.on{opacity:1;transform:none;filter:blur(0)}
-  .step .n{font-size:clamp(80px,16vw,220px);font-weight:800;color:transparent;-webkit-text-stroke:1px var(--line);line-height:1}
+  .step .n{font-size:clamp(80px,16vw,220px);font-weight:800;color:var(--accent);opacity:.85;line-height:1;letter-spacing:-.03em}
+  .step .kicker{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+
+  /* check panel, fills as the pinned section scrolls (illustration only) */
+  .panel{position:absolute;right:5vw;top:50%;transform:translateY(-50%);width:min(380px,34vw);background:var(--card);border:1px solid var(--line);border-radius:22px;padding:30px;display:none}
+  .panel .ph{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+  .panel .row{display:flex;justify-content:space-between;align-items:center;padding:16px 0;border-top:1px solid var(--line);font-size:17px}
+  .panel .row:first-of-type{border-top:0}
+  .panel .st{font-size:14px;color:var(--muted);display:flex;align-items:center;gap:10px}
+  .panel .st i{width:10px;height:10px;border-radius:50%;background:var(--line);display:inline-block}
+  .panel .row.now .st i{background:var(--warm);box-shadow:0 0 0 0 rgba(255,122,89,.6);animation:pulse 1.2s infinite}
+  .panel .row.done .st{color:var(--accent)}
+  .panel .row.done .st i{background:var(--accent)}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,122,89,.6)}100%{box-shadow:0 0 0 12px rgba(255,122,89,0)}}
+  .panel .cap{margin-top:14px;font-size:13px;color:var(--muted)}
+  @media (min-width:900px){.panel{display:block}}
   .step h3{font-size:clamp(30px,4.6vw,60px);font-weight:700;margin-top:-.2em}
   .step p{color:var(--muted);font-size:clamp(17px,1.8vw,21px);max-width:640px;margin-top:14px}
   .progress{position:absolute;left:5vw;bottom:8vh;height:2px;width:0;background:var(--accent)}
@@ -113,6 +128,9 @@
     .pin .stick{position:relative;height:auto;display:block;padding:14vh 0}
     .progress{display:none}
     .glow{animation:none}
+    .panel{display:block;position:relative;right:auto;top:auto;transform:none;margin:0 5vw 40px;width:auto}
+    .panel .row.now .st i{animation:none}
+    .panel .row .st b{font-weight:400}
     .bl{filter:none;opacity:1;transform:none}
     .film video{display:block}
   }
@@ -167,6 +185,14 @@
         <p>Optional care from $99 a month covers updates, security and small edits, handled for you month to month.</p>
       </div>
     </div>
+    <aside class="panel" aria-hidden="true">
+      <p class="ph">Free check · illustration</p>
+      <div class="row" data-r><span>Loads over HTTPS</span><span class="st"><i></i><b>Waiting</b></span></div>
+      <div class="row" data-r><span>Layout on a phone</span><span class="st"><i></i><b>Waiting</b></span></div>
+      <div class="row" data-r><span>Security headers</span><span class="st"><i></i><b>Waiting</b></span></div>
+      <div class="row" data-r><span>Redirects to the secure address</span><span class="st"><i></i><b>Waiting</b></span></div>
+      <p class="cap">Illustration only. Your results come from your real site.</p>
+    </aside>
     <div class="progress" id="bar"></div>
   </div>
 </section>
@@ -224,7 +250,13 @@
     rv.forEach(function(el){ io.observe(el); });
   } else { rv.forEach(function(el){ el.classList.add('in'); }); }
 
-  if (reduce) return;
+  if (reduce) {
+    document.querySelectorAll('.panel .row').forEach(function(row){
+      row.classList.add('done');
+      row.querySelector('b').textContent = 'Checked';
+    });
+    return;
+  }
 
   // scroll-driven: parallax layers, pinned steps, progress bar, hero zoom
   var layers = document.querySelectorAll('.layer');
@@ -243,6 +275,13 @@
       var idx = Math.min(steps.length - 1, Math.floor(p * steps.length));
       steps.forEach(function(s, i){ s.classList.toggle('on', i === idx); });
       bar.style.width = (p * 100) + '%';
+      var rows = document.querySelectorAll('.panel .row');
+      var n = rows.length, done = Math.floor(p * (n + 1));
+      rows.forEach(function(row, i){
+        row.classList.toggle('done', i < done);
+        row.classList.toggle('now', i === done && done < n);
+        row.querySelector('b').textContent = i < done ? 'Checked' : (i === done ? 'Checking' : 'Waiting');
+      });
     }
     ticking = false;
   }
