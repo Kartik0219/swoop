@@ -671,6 +671,12 @@
 .gdots{display:flex;gap:8px}
 .gdots button{width:12px;height:12px;min-width:12px;min-height:12px;padding:0;border-radius:50%;border:0;background:#c7c7cc}
 .gdots button.on{background:#0d9488}
+.browser .gdf-slides{margin:0;max-width:none}
+.browser .gdf-slides figure{border:0;border-radius:0;background:#000}
+.browser .gdf-slides figcaption{display:none}
+.browser .gdf-slides .gdf-nav{background:#f5f5f7;padding:10px 0;margin:0}
+.browser .gdf-slides .gdots button{background:#c7c7cc}
+.browser .gdf-slides .gdots button.on{background:#0d9488}
 </style>
 </head>
 <body>
@@ -993,7 +999,12 @@
     <div class="work">
       <div class="browser rv">
         <div class="bar" aria-hidden="true"><i></i><i></i><i></i><span><svg><use href="#lock"/></svg>gavindefootball.com</span></div>
-        <img class="shot-img" src="/assets/gdf-register.webp" alt="The Gavin de Football Term 4 registration page: three steps to pick sessions, fill in the form and pay by bank transfer" width="1100" height="454" loading="lazy" decoding="async">
+        <div class="gdf-slides" role="region" aria-roledescription="carousel" aria-label="Gavin de Football website, screenshots" tabindex="0">
+          <figure class="on" aria-roledescription="slide" aria-label="1 of 3"><img src="/assets/gdf-register.webp" alt="The Gavin de Football Term 4 registration page: three steps to pick sessions, fill in the form and pay by bank transfer" loading="lazy" width="1100" height="454"></figure>
+          <figure aria-roledescription="slide" aria-label="2 of 3"><img src="/assets/showcase/gavin-enquiry.png" alt="The Gavin de Football enquiry form" loading="lazy" width="1440" height="1600"></figure>
+          <figure aria-roledescription="slide" aria-label="3 of 3"><img src="/assets/showcase/gavin-holiday-camp.png" alt="The Gavin de Football holiday camp page" loading="lazy" width="1440" height="1600"></figure>
+          <div class="gdf-nav"><button type="button" class="gp" aria-label="Previous screenshot">&larr;</button><span class="gdots"><button type="button" class="on" aria-label="Screenshot 1"></button><button type="button" aria-label="Screenshot 2"></button><button type="button" aria-label="Screenshot 3"></button></span><button type="button" class="gn" aria-label="Next screenshot">&rarr;</button></div>
+        </div>
       </div>
       <div class="rv d1">
         <h3>Gavin de Football</h3>
@@ -1004,12 +1015,7 @@
           <li>Player registration and enquiry forms</li>
         </ul>
         <blockquote class="gdf-quote rv d2"><p>"Kartik website has helped me grow and expand to another level and was super helpful with his work."</p><footer>Gavin de Niese, coach, Gavin de Football</footer></blockquote>
-        <div class="gdf-slides rv d2" role="region" aria-roledescription="carousel" aria-label="Gavin de Football website, screenshots" tabindex="0">
-          
-          <figure class="on" aria-roledescription="slide" aria-label="1 of 2"><img src="/assets/showcase/gavin-enquiry.png" alt="The Gavin de Football enquiry form" loading="lazy" width="1440" height="1600"><figcaption>The enquiry page: families tell Gavin what they need, in one form.</figcaption></figure>
-          <figure aria-roledescription="slide" aria-label="2 of 2"><img src="/assets/showcase/gavin-holiday-camp.png" alt="The Gavin de Football holiday camp page" loading="lazy" width="1440" height="1600"><figcaption>The holiday camp page: dates, what happens each day and how to join.</figcaption></figure>
-          <div class="gdf-nav"><button type="button" class="gp" aria-label="Previous screenshot">&larr;</button><span class="gdots"><button type="button" class="on" aria-label="Screenshot 1"></button><button type="button" aria-label="Screenshot 2"></button></span><button type="button" class="gn" aria-label="Next screenshot">&rarr;</button></div>
-        </div>
+        
         <a class="more" href="https://gavindefootball.com" target="_blank" rel="noopener">Visit the site<span class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)"> (opens in a new tab)</span></a>
       </div>
     </div>
