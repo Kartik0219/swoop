@@ -37,3 +37,6 @@
 .sec.w input,.sec.l input,.sec.w textarea,.sec.l textarea,.sec.fcheck input,.fc-form input,.cform input,.cform textarea{background:#14161b!important;color:#fff!important;border-color:rgba(255,255,255,.18)!important}
 .sec.w table,.sec.l table,.sec.w th,.sec.l th,.sec.w td,.sec.l td,.cmp th,.cmp td{border-color:rgba(255,255,255,.12)!important;color:#e9e6df}
 .cmp td.us,.cmp thead th.us{background:rgba(45,212,191,.08)!important}
+
+/* showcase section (preview) */
+.showcase .show-frame{margin:34px 0 22px;min-height:320px;border:1px dashed rgba(255,255,255,.25);border-radius:22px;display:flex;align-items:center;justify-content:center;padding:30px;text-align:center;color:#8a8f99;background:rgba(255,255,255,.03)}
