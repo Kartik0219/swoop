@@ -25,8 +25,20 @@
 
   /* hero */
   .hero{position:relative;height:100vh;min-height:620px;display:flex;align-items:flex-end;overflow:hidden}
-  .hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55;transform:scale(1.08);transition:transform 1.6s ease}
-  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,8,11,.2),rgba(7,8,11,.9) 80%)}
+  .glow{position:absolute;inset:-10%;background:
+      radial-gradient(40vw 40vw at var(--mx,70%) var(--my,30%),rgba(46,230,214,.28),transparent 60%),
+      radial-gradient(30vw 30vw at calc(100% - var(--mx,70%)) calc(100% - var(--my,30%)),rgba(255,122,89,.16),transparent 60%);
+    animation:drift 18s ease-in-out infinite alternate;transition:background-position .4s}
+  @keyframes drift{to{transform:translate3d(-3vw,2vh,0) scale(1.05)}}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,8,11,.1),rgba(7,8,11,.92) 80%)}
+
+  /* film section */
+  .film{padding:12vh 5vw}
+  .film video{width:100%;max-width:1100px;margin:44px auto 0;border-radius:24px;border:1px solid var(--line);background:#000;display:block}
+
+  /* blur-in headings on scroll */
+  .bl{filter:blur(14px);opacity:0;transform:translateY(24px);transition:filter 1.2s ease,opacity 1.2s ease,transform 1.2s cubic-bezier(.2,.7,.2,1)}
+  .bl.in{filter:blur(0);opacity:1;transform:none}
   .hero .inner{position:relative;z-index:2;padding:0 5vw 9vh;max-width:1100px}
   .eyebrow{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:22px}
   .blur-in{font-size:clamp(44px,9vw,128px);font-weight:800;line-height:.98;letter-spacing:-.03em;filter:blur(18px);opacity:0;transform:translateY(30px);animation:blurIn 1.4s .2s cubic-bezier(.2,.7,.2,1) forwards}
@@ -100,7 +112,9 @@
     .pin{height:auto}
     .pin .stick{position:relative;height:auto;display:block;padding:14vh 0}
     .progress{display:none}
-    .hero video{display:none}
+    .glow{animation:none}
+    .bl{filter:none;opacity:1;transform:none}
+    .film video{display:block}
   }
 </style>
 </head>
@@ -112,9 +126,7 @@
 </nav>
 
 <header class="hero" id="top">
-  <video id="hero-video" autoplay muted loop playsinline poster="/assets/hero/poster.jpg" aria-hidden="true">
-    <source src="/assets/hero/swoop-30s.mp4" type="video/mp4">
-  </video>
+  <div class="glow" aria-hidden="true"></div>
   <div class="layer l1" data-speed=".25" aria-hidden="true"></div>
   <div class="layer l2" data-speed="-.18" aria-hidden="true"></div>
   <div class="inner">
@@ -127,6 +139,14 @@
     </div>
   </div>
 </header>
+
+<section class="film" id="film">
+  <p class="label rv">The 30 second film</p>
+  <h2 class="bl">See how a site is built.</h2>
+  <video controls playsinline preload="metadata" poster="/assets/hero/poster.jpg" aria-label="30 second Swoop Sites film">
+    <source src="/assets/hero/swoop-30s.mp4" type="video/mp4">
+  </video>
+</section>
 
 <section class="pin" id="how">
   <div class="stick">
@@ -196,7 +216,7 @@
   var fine = window.matchMedia('(pointer: fine)').matches;
 
   // reveal on scroll
-  var rv = document.querySelectorAll('.rv');
+  var rv = document.querySelectorAll('.rv, .bl');
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function(es){
       es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
@@ -211,13 +231,11 @@
   var steps = Array.prototype.slice.call(document.querySelectorAll('[data-step]'));
   var pin = document.getElementById('how');
   var bar = document.getElementById('bar');
-  var hero = document.getElementById('hero-video');
   var ticking = false;
 
   function onScroll(){
     var y = window.scrollY;
     layers.forEach(function(l){ l.style.transform = 'translate3d(0,' + (y * parseFloat(l.dataset.speed)) + 'px,0)'; });
-    if (hero) hero.style.transform = 'scale(' + (1.08 + Math.min(y / 2000, .12)) + ')';
     if (pin) {
       var r = pin.getBoundingClientRect();
       var total = pin.offsetHeight - window.innerHeight;
@@ -232,6 +250,16 @@
     if (!ticking) { ticking = true; requestAnimationFrame(onScroll); }
   }, {passive:true});
   onScroll();
+
+  // cursor light in the hero
+  var hero0 = document.getElementById('top');
+  if (fine && hero0) {
+    hero0.addEventListener('pointermove', function(e){
+      var r = hero0.getBoundingClientRect();
+      hero0.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
+      hero0.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
+    });
+  }
 
   // tilt cards and magnetic buttons (mouse only)
   if (fine) {
