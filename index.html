@@ -1331,40 +1331,15 @@
     <h2 id="show-h" class="rv">Gavin never had a website. I built him one.</h2>
     <p class="lede rv">Gavin de Football is a local kids' football school in Melbourne. Before, families had no site to check. Now they can see the programs, the times and how to register, on any phone.</p>
     <blockquote class="quote rv"><p>"Kartik website has helped me grow and expand to another level and was super helpful with his work."</p><footer>Gavin de Niese, coach, Gavin de Football</footer></blockquote>
-    <div class="slideshow rv" aria-roledescription="carousel" aria-label="Gavin de Football website, screenshots">
-      <div class="slides" tabindex="0">
-        <figure class="slide"><img src="assets/showcase/gavin-enquiry.png" alt="Gavin de Football enquiry form, phone-friendly layout" loading="lazy" width="1440" height="1600"><figcaption>The enquiry page: families tell Gavin what they need, in one form.</figcaption></figure>
-        <figure class="slide"><img src="assets/showcase/gavin-holiday-camp.png" alt="Gavin de Football holiday camp page, dates and how to join" loading="lazy" width="1440" height="1600"><figcaption>The holiday camp page: dates, what happens each day and how to join.</figcaption></figure>
+    <div class="slideshow rv" role="region" aria-roledescription="carousel" aria-label="Gavin de Football website, screenshots" tabindex="0">
+      <div class="slides">
+        <figure class="slide on" aria-roledescription="slide" aria-label="1 of 2"><img src="assets/showcase/gavin-enquiry.png" alt="Gavin de Football enquiry form, phone-friendly layout" loading="lazy" width="1440" height="1600"><figcaption>The enquiry page: families tell Gavin what they need, in one form.</figcaption></figure>
+        <figure class="slide" aria-roledescription="slide" aria-label="2 of 2"><img src="assets/showcase/gavin-holiday-camp.png" alt="Gavin de Football holiday camp page, dates and how to join" loading="lazy" width="1440" height="1600"><figcaption>The holiday camp page: dates, what happens each day and how to join.</figcaption></figure>
       </div>
-      <p class="dots" aria-hidden="true"><span class="on"></span><span></span></p>
-    </div>
-    <p class="rv"><a class="more" href="https://gavindefootball.com" rel="noopener">Visit gavindefootball.com</a></p>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <div class="blurb">
-      <a class="fbrand" href="#top" aria-label="Swoop Sites, back to top"><svg aria-hidden="true"><use href="#mark"/></svg><span>Swoop Sites</span></a>
-      <p>Fast, secure websites and monthly website care for local businesses across south-east Melbourne.</p>
-      <p>Prices in AUD. Fixed and agreed in writing before any work starts.</p>
-    </div>
-    <div class="fcols">
-      <nav aria-label="Footer: explore">
-        <h4>Explore</h4>
-        <ul><li><a href="#who">Who it's for</a></li><li><a href="#problems">What I fix</a></li><li><a href="#included">What's included</a></li><li><a href="#security">Security</a></li><li><a href="#work">Recent work</a></li></ul>
-      </nav>
-      <nav aria-label="Footer: pricing">
-        <h4>Pricing</h4>
-        <ul><li><a href="#pricing">Packages</a></li><li><a href="#care">Care plans</a></li><li><a href="#compare">DIY vs Swoop</a></li><li><a href="#tune-up">Website tune-up</a></li><li><a href="#security-check">Free security check</a></li><li><a href="/resources/">Free &amp; DIY resources</a></li></ul>
-      </nav>
-      <nav aria-label="Footer: about">
-        <h4>About</h4>
-        <ul><li><a href="#how">How it works</a></li><li><a href="#faq">FAQ</a></li><li><a href="#about">About Kartik</a></li><li><a href="https://www.linkedin.com/in/kartikp19" target="_blank" rel="noopener">LinkedIn</a></li></ul>
-      </nav>
-      <div>
-        <h4>Contact</h4>
-        <ul><li><a href="mailto:Kartikp.work@gmail.com">Kartikp.work@gmail.com</a></li><li>Melbourne, VIC</li><li><a href="#contact">Get a free mockup</a></li></ul>
+      <div class="slide-nav">
+        <button type="button" class="sl-prev" aria-label="Previous screenshot">&larr;</button>
+        <div class="dots" role="tablist" aria-label="Choose screenshot"><button type="button" class="on" aria-label="Screenshot 1"></button><button type="button" aria-label="Screenshot 2"></button></div>
+        <button type="button" class="sl-next" aria-label="Next screenshot">&rarr;</button>
       </div>
     </div>
     <div class="legal">
@@ -1610,6 +1585,27 @@
       b.addEventListener('pointerleave',function(){b.style.transform='';});
     });
   }
+})();
+</script>
+<script>
+// showcase slideshow: one screenshot at a time, arrows, dots, keyboard
+(function(){
+  var box=document.querySelector('.slideshow'); if(!box) return;
+  var slides=[].slice.call(box.querySelectorAll('.slide'));
+  var dots=[].slice.call(box.querySelectorAll('.dots button'));
+  var cur=0;
+  function show(n){
+    cur=(n+slides.length)%slides.length;
+    slides.forEach(function(s,i){s.classList.toggle('on',i===cur);});
+    dots.forEach(function(d,i){d.classList.toggle('on',i===cur);d.setAttribute('aria-current',i===cur?'true':'false');});
+  }
+  box.querySelector('.sl-prev').addEventListener('click',function(){show(cur-1);});
+  box.querySelector('.sl-next').addEventListener('click',function(){show(cur+1);});
+  dots.forEach(function(d,i){d.addEventListener('click',function(){show(i);});});
+  box.addEventListener('keydown',function(e){
+    if(e.key==='ArrowLeft'){show(cur-1);} if(e.key==='ArrowRight'){show(cur+1);}
+  });
+  show(0);
 })();
 </script>
 </body>

@@ -66,19 +66,19 @@
 .showcase figure img{display:block;width:100%;height:auto}
 .showcase figcaption{padding:14px 18px;font-size:15px;color:#b4b8c0}
 
-/* showcase slideshow: swipe or scroll sideways, no auto-advance */
-.showcase .slideshow{margin:34px 0 22px}
-.showcase .slides{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:4px}
-.showcase .slides::-webkit-scrollbar{display:none}
-.showcase .slide{flex:0 0 min(92%,620px);scroll-snap-align:start;margin:0;border:1px solid rgba(255,255,255,.12);border-radius:18px;overflow:hidden;background:#101114}
+/* showcase slideshow: one screenshot at a time */
+.showcase .slideshow{margin:34px 0 22px;max-width:760px}
+.showcase .slide{display:none;margin:0;border:1px solid rgba(255,255,255,.12);border-radius:18px;overflow:hidden;background:#101114}
+.showcase .slide.on{display:block;animation:cin-fade .6s ease both}
+@keyframes cin-fade{from{opacity:0;transform:translateX(12px)}to{opacity:1;transform:none}}
 .showcase .slide img{display:block;width:100%;height:auto}
 .showcase .slide figcaption{padding:14px 18px;font-size:15px;color:#b4b8c0}
-.showcase .dots{display:flex;gap:8px;justify-content:center;margin-top:14px}
-.showcase .dots span{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.25)}
-.showcase .dots span.on{background:#2dd4bf}
-
-/* hero: centre the intro, buttons, offer line and facts under the headline */
-.hero .lede{margin-left:auto;margin-right:auto;text-align:center}
-.hero .ctas{justify-content:center}
-.hero .offer{margin-left:auto;margin-right:auto;justify-content:center;text-align:left}
-.hero .facts{justify-content:center}
+.showcase .slide-nav{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:16px}
+.showcase .slide-nav button{min-width:48px;min-height:48px;border-radius:999px;border:1px solid rgba(255,255,255,.2);background:transparent;color:#e9e6df;font-size:20px;cursor:pointer}
+.showcase .slide-nav button:hover{background:rgba(255,255,255,.06)}
+.showcase .dots{display:flex;gap:10px}
+.showcase .dots button{width:14px;height:14px;min-width:14px;min-height:14px;padding:0;border-radius:50%;border:0;background:rgba(255,255,255,.25)}
+.showcase .dots button.on{background:#2dd4bf}
+/* quote: keep it clean on dark, no light footer box */
+.showcase .quote footer{display:block;background:none;color:#8a8f99;margin-top:10px;padding:0;font-size:14px}
+@media (prefers-reduced-motion:reduce){.showcase .slide.on{animation:none}}
