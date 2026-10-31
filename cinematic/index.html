@@ -66,8 +66,8 @@
   /* pinned steps */
   .pin{height:300vh;position:relative}
   .pin .stick{position:sticky;top:0;height:100vh;display:flex;align-items:center;overflow:hidden}
-  .steps{position:relative;width:100%;padding:0 5vw}
-  .step{position:absolute;inset:auto 5vw auto 5vw;opacity:0;transform:translateY(60px) scale(.96);transition:opacity .7s,transform .9s cubic-bezier(.2,.7,.2,1);filter:blur(6px)}
+  .steps{position:relative;width:100%;height:min(62vh,600px);padding:0}
+  .step{position:absolute;top:50%;translate:0 -50%;left:5vw;right:5vw;max-width:760px;opacity:0;transform:translateY(60px) scale(.96);transition:opacity .7s,transform .9s cubic-bezier(.2,.7,.2,1),filter .7s;filter:blur(6px)}
   .step.on{opacity:1;transform:none;filter:blur(0)}
   .step .n{font-size:clamp(80px,16vw,220px);font-weight:800;color:var(--accent);opacity:.85;line-height:1;letter-spacing:-.03em}
   .step .kicker{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
@@ -123,7 +123,8 @@
     *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
     .blur-in,.sub,.cta-row{opacity:1;filter:none;transform:none}
     .rv{opacity:1;transform:none}
-    .step{position:relative;opacity:1;transform:none;filter:none;margin-bottom:40px}
+    .steps{height:auto}
+    .step{position:relative;top:auto;translate:none;opacity:1;transform:none;filter:none;margin-bottom:40px}
     .pin{height:auto}
     .pin .stick{position:relative;height:auto;display:block;padding:14vh 0}
     .progress{display:none}
