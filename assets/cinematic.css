@@ -40,3 +40,18 @@
 
 /* showcase section (preview) */
 .showcase .show-frame{margin:34px 0 22px;min-height:320px;border:1px dashed rgba(255,255,255,.25);border-radius:22px;display:flex;align-items:center;justify-content:center;padding:30px;text-align:center;color:#8a8f99;background:rgba(255,255,255,.03)}
+
+/* scroll progress line across the top */
+.cin-progress{position:fixed;left:0;top:0;height:2px;width:0;z-index:80;background:linear-gradient(90deg,#2dd4bf,#ff7a59);pointer-events:none}
+
+/* card tilt with a light sheen that follows the cursor (mouse only) */
+@media (pointer:fine){
+  .cin-tilt{transition:transform .45s cubic-bezier(.2,.7,.2,1);transform-style:preserve-3d;position:relative;will-change:transform}
+  .cin-tilt::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .4s;background:radial-gradient(circle at var(--sx,50%) var(--sy,50%),rgba(255,255,255,.12),transparent 55%)}
+  .cin-tilt:hover::after{opacity:1}
+}
+@media (prefers-reduced-motion:reduce){
+  .cin-tilt{transform:none!important;transition:none!important}
+  .cin-tilt::after{display:none}
+  .cin-progress{display:none}
+}

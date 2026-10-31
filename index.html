@@ -1571,6 +1571,30 @@
     },{threshold:.2});
     document.querySelectorAll('.sec h2').forEach(function(h){io.observe(h);});
   }
+  // scroll progress line and hero parallax
+  var prog=document.createElement('div');prog.className='cin-progress';document.body.appendChild(prog);
+  var glow2=document.querySelector('.hero .glow2');
+  var ticking=false;
+  function onScroll(){
+    var h=document.documentElement;var max=h.scrollHeight-h.clientHeight;
+    prog.style.width=(max>0?(scrollY/max)*100:0)+'%';
+    if(glow2&&!reduce)glow2.style.transform='translate3d(0,'+(scrollY*-.15)+'px,0)';
+    ticking=false;
+  }
+  if(!reduce){addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(onScroll);}},{passive:true});onScroll();}
+
+  // tilt cards (mouse only)
+  if(fine&&!reduce){
+    document.querySelectorAll('.care-card,.tile,.sec-card,.about-card,.who-grid li,.col').forEach(function(c){
+      c.classList.add('cin-tilt');
+      c.addEventListener('pointermove',function(e){
+        var r=c.getBoundingClientRect();var x=(e.clientX-r.left)/r.width;var y=(e.clientY-r.top)/r.height;
+        c.style.setProperty('--sx',(x*100)+'%');c.style.setProperty('--sy',(y*100)+'%');
+        c.style.transform='perspective(900px) rotateX('+((.5-y)*5)+'deg) rotateY('+((x-.5)*6)+'deg)';
+      });
+      c.addEventListener('pointerleave',function(){c.style.transform='';});
+    });
+  }
   if(fine&&!reduce){
     document.querySelectorAll('.hero .pill-fill').forEach(function(b){
       b.setAttribute('data-mag','');
