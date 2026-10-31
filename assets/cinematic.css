@@ -59,3 +59,9 @@
 /* showcase quote */
 .showcase .quote{margin:26px 0 0;padding:0 0 0 20px;border-left:2px solid #2dd4bf;color:#e9e6df;font-size:clamp(18px,2vw,22px);line-height:1.45}
 .showcase .quote footer{margin-top:10px;font-size:14px;color:#8a8f99}
+
+/* showcase screenshots of gavindefootball.com (pages with no children in frame) */
+.showcase .show-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin:34px 0 22px}
+.showcase figure{margin:0;border:1px solid rgba(255,255,255,.12);border-radius:18px;overflow:hidden;background:#101114}
+.showcase figure img{display:block;width:100%;height:auto}
+.showcase figcaption{padding:14px 18px;font-size:15px;color:#b4b8c0}
