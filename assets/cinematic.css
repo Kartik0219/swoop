@@ -55,3 +55,7 @@
   .cin-tilt::after{display:none}
   .cin-progress{display:none}
 }
+
+/* showcase quote */
+.showcase .quote{margin:26px 0 0;padding:0 0 0 20px;border-left:2px solid #2dd4bf;color:#e9e6df;font-size:clamp(18px,2vw,22px);line-height:1.45}
+.showcase .quote footer{margin-top:10px;font-size:14px;color:#8a8f99}
