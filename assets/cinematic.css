@@ -4,7 +4,7 @@
 /* hero: cursor-following light and a slow drift */
 .hero{position:relative;overflow:hidden;isolation:isolate}
 .hero .glow,.hero .glow2{display:block!important;position:absolute;pointer-events:none;z-index:-1;border-radius:50%;filter:blur(70px);opacity:.5}
-.hero .glow{width:60vw;height:60vw;max-width:820px;max-height:820px;left:var(--mx,70%);top:var(--my,20%);transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(45,212,191,.32),transparent 62%);transition:left .6s ease,top .6s ease}
+.hero .glow{width:60vw;height:60vw;max-width:820px;max-height:820px;left:var(--mx,50%);top:var(--my,38%);transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(45,212,191,.32),transparent 62%);transition:left .6s ease,top .6s ease}
 .hero .glow2{width:44vw;height:44vw;max-width:600px;max-height:600px;right:-8vw;bottom:-10vw;background:radial-gradient(circle,rgba(255,122,89,.22),transparent 62%);animation:cin-drift 16s ease-in-out infinite alternate}
 @keyframes cin-drift{to{transform:translate3d(-4vw,-3vh,0)}}
 
