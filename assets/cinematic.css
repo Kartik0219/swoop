@@ -65,3 +65,14 @@
 .showcase figure{margin:0;border:1px solid rgba(255,255,255,.12);border-radius:18px;overflow:hidden;background:#101114}
 .showcase figure img{display:block;width:100%;height:auto}
 .showcase figcaption{padding:14px 18px;font-size:15px;color:#b4b8c0}
+
+/* showcase slideshow: swipe or scroll sideways, no auto-advance */
+.showcase .slideshow{margin:34px 0 22px}
+.showcase .slides{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:4px}
+.showcase .slides::-webkit-scrollbar{display:none}
+.showcase .slide{flex:0 0 min(92%,620px);scroll-snap-align:start;margin:0;border:1px solid rgba(255,255,255,.12);border-radius:18px;overflow:hidden;background:#101114}
+.showcase .slide img{display:block;width:100%;height:auto}
+.showcase .slide figcaption{padding:14px 18px;font-size:15px;color:#b4b8c0}
+.showcase .dots{display:flex;gap:8px;justify-content:center;margin-top:14px}
+.showcase .dots span{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.25)}
+.showcase .dots span.on{background:#2dd4bf}
