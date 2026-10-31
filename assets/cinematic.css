@@ -76,3 +76,9 @@
 .showcase .dots{display:flex;gap:8px;justify-content:center;margin-top:14px}
 .showcase .dots span{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.25)}
 .showcase .dots span.on{background:#2dd4bf}
+
+/* hero: centre the intro, buttons, offer line and facts under the headline */
+.hero .lede{margin-left:auto;margin-right:auto;text-align:center}
+.hero .ctas{justify-content:center}
+.hero .offer{margin-left:auto;margin-right:auto;justify-content:center;text-align:left}
+.hero .facts{justify-content:center}
