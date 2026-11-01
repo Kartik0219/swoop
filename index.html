@@ -678,6 +678,7 @@
 .browser .gdf-slides .gdots button{background:#c7c7cc}
 .browser .gdf-slides .gdots button.on{background:#0d9488}
 </style>
+<link rel="stylesheet" href="assets/gl-effects.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -790,6 +791,10 @@
       <li>You own your domain</li>
       <li>Everything by email</li>
     </ul>
+    <div class="gl-strip" aria-hidden="true"><div class="track">
+      <span>Websites <em>&middot;</em></span><span>Security <em>&middot;</em></span><span>Care plans <em>&middot;</em></span><span>Fixed prices <em>&middot;</em></span><span>Melbourne <em>&middot;</em></span>
+      <span>Websites <em>&middot;</em></span><span>Security <em>&middot;</em></span><span>Care plans <em>&middot;</em></span><span>Fixed prices <em>&middot;</em></span><span>Melbourne <em>&middot;</em></span>
+    </div></div>
   </div>
 </section>
 
@@ -1585,6 +1590,31 @@
   box.querySelector('.gn').addEventListener('click',function(){show(cur+1);});
   dots.forEach(function(d,i){d.addEventListener('click',function(){show(i);});});
   box.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1);});
+})();
+</script>
+<script>
+// hand-coded effects (gl-effects): hero tilt and problem-tile spotlight
+(function(){
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine=matchMedia('(pointer: fine)').matches;
+  if(reduce||!fine) return;
+  var stage=document.querySelector('.hero .stage'), phone=document.querySelector('.hero .hvid');
+  if(stage&&phone){
+    stage.addEventListener('pointermove',function(e){
+      var r=stage.getBoundingClientRect();
+      var x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+      phone.style.setProperty('--ry',(x*14)+'deg');
+      phone.style.setProperty('--rx',(-y*10)+'deg');
+    });
+    stage.addEventListener('pointerleave',function(){phone.style.setProperty('--rx','0deg');phone.style.setProperty('--ry','0deg');});
+  }
+  document.querySelectorAll('#problems .tile').forEach(function(t){
+    t.addEventListener('pointermove',function(e){
+      var r=t.getBoundingClientRect();
+      t.style.setProperty('--sx',(e.clientX-r.left)+'px');
+      t.style.setProperty('--sy',(e.clientY-r.top)+'px');
+    });
+  });
 })();
 </script>
 </body>
