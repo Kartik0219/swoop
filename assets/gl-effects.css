@@ -25,3 +25,16 @@
   #problems .tile::before{display:none}
   .gl-strip .track{animation:none}
 }
+
+/* Research change 1: hero paints at once, no blank black before the fade */
+.hero .rv,.hero .rv.d1,.hero .rv.d2,.hero .rv.d3{opacity:1!important;transform:none!important;transition:none!important}
+
+/* Research change 3: one header bar, not two */
+.snav{display:none!important}
+
+/* Research change 4 and 5: proof strap, hook line and chips under the headline */
+.hero .hook{margin:22px auto 0;font-size:clamp(18px,2.2vw,22px);color:#f5f5f7;text-align:center}
+.hero .hook b{font-weight:700}
+.hero .chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px auto 0}
+.hero .chips span{font-size:14px;color:#a1a1a6;border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:7px 14px}
+.hero .strap{margin:26px auto 0;font-size:14px;color:#8a8f99;text-align:center;letter-spacing:.02em}
