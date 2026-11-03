@@ -1,0 +1,16 @@
+/* Preview: product-page style (large centred type, airy spacing, full-width sections).
+   Style only: no Apple text, images or code. */
+:root{--apple-blue:#0071e3}
+body{font-feature-settings:"ss01";letter-spacing:-.01em}
+.sec{padding-top:clamp(96px,14vh,160px)!important;padding-bottom:clamp(96px,14vh,160px)!important}
+.sec .wrap{max-width:1040px}
+.hero h1.h-xl{font-size:clamp(52px,9vw,112px)!important;line-height:1.02!important;font-weight:600!important;letter-spacing:-.045em!important}
+.h-l{font-size:clamp(40px,6vw,76px)!important;line-height:1.05!important;font-weight:600!important;letter-spacing:-.04em!important}
+.lede{font-size:clamp(19px,2.2vw,26px)!important;line-height:1.35!important;font-weight:400!important;max-width:780px}
+.eyebrow{font-size:17px!important;letter-spacing:0!important;text-transform:none!important;font-weight:600!important}
+.center{text-align:center}
+.hero .wrap{text-align:center}
+.hero .ctas,.hero .facts,.hero .offer{justify-content:center}
+.pill{font-size:17px!important;padding:14px 26px!important;font-weight:500!important}
+.pill-fill{background:var(--apple-blue)!important;color:#fff!important}
+.more{font-size:19px!important;color:var(--apple-blue)!important}
