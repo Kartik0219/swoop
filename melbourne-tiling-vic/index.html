@@ -625,6 +625,7 @@ footer a{color:#fff}
     commercial: ['Shop or office', 'hallway.jpg', 'Commercial tiling'],
     repair: ['Tile repair', 'floor.jpg', 'Tile renovation and repair, grouting']
   };
+  var alts = { 'bath-grey.jpg': 'Grey-tiled bathroom from their gallery', 'sink.jpg': 'Tiled laundry splashback from their gallery', 'splashback.jpg': 'Dark tile kitchen splashback from their gallery', 'hallway.jpg': 'Marble-look tiled hallway from their gallery', 'bbq.jpg': 'Tiled outdoor kitchen from their gallery', 'bath-mosaic.jpg': 'Mosaic tiles on a bath front from their gallery', 'floor.jpg': 'Grey floor tiles from their gallery' };
   var area = d.getElementById('area'), areaOut = d.getElementById('areaOut'), cardImg = d.getElementById('cardImg');
   var title = d.getElementById('cardTitle'), tileEl = d.getElementById('cardTile'), prepEl = d.getElementById('cardPrep'), svcEl = d.getElementById('cardSvc');
   function val(n) { var r = d.querySelector('input[name=' + n + ']:checked'); return r ? r.value : ''; }
@@ -639,7 +640,7 @@ footer a{color:#fff}
     tileEl.textContent = j.tile; prepEl.textContent = j.prep; svcEl.textContent = j.svc;
     if (cardImg.getAttribute('src') !== 'img/' + j.img) {
       cardImg.style.opacity = 0;
-      setTimeout(function () { cardImg.src = 'img/' + j.img; cardImg.alt = j.room + ' tiled by Melbourne Tiling VIC'; cardImg.style.opacity = 1; }, reduce ? 0 : 220);
+      setTimeout(function () { cardImg.src = 'img/' + j.img; cardImg.alt = alts[j.img]; cardImg.style.opacity = 1; }, reduce ? 0 : 220);
     }
   }
   d.querySelectorAll('.controls input').forEach(function (el) { el.addEventListener('input', render); el.addEventListener('change', render); });
