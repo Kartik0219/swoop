@@ -1,0 +1,658 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Melbourne Tiling VIC | Wall and floor tilers in Cranbourne (concept)</title>
+<meta name="description" content="Family-owned wall and floor tilers in Cranbourne: bathrooms, laundries, pools, repairs and commercial tiling across Melbourne. Free quote: 0438 646 905.">
+<meta property="og:title" content="Melbourne Tiling VIC | Wall and floor tilers in Cranbourne">
+<meta property="og:description" content="Family-owned wall and floor tilers in Cranbourne. Free quote on 0438 646 905.">
+<meta property="og:image" content="img/hero-poster.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&family=Instrument+Sans:wght@500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/hero-poster.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","name":"Melbourne Tiling VIC","description":"Family-owned wall and floor tiling business based in Cranbourne.","telephone":"+61 438 646 905","email":"info@melbournetilingvic.com.au","url":"https://melbournetilingvic.com.au/","address":{"@type":"PostalAddress","addressLocality":"Cranbourne","addressRegion":"VIC","postalCode":"3977","addressCountry":"AU"},"areaServed":["Cranbourne","Clyde North","Narre Warren","Frankston","Keysborough","Noble Park","Bangholme","Springvale","Melbourne"],"knowsAbout":["Domestic tiling","Commercial tiling","Tile renovation and repair","Floor and wall tiling","Swimming pool tiling","Waterproofing","Grouting and cleaning","Bathroom renovations","Floor screeding","Tile sealing"]}
+</script>
+<style>
+:root{
+  --bg:#dedad3; --surface:#d3cec6; --ink:#0a0a0a; --muted:#4f4b45; --accent:#256f82; --accent-ink:#fff; --dark:#141413;
+  --m:clamp(16px,6vw,96px); --r:999px;
+  --serif:"Newsreader",Georgia,serif; --sans:"Instrument Sans",system-ui,sans-serif;
+  --step-small:clamp(.8125rem,.79rem + .1vw,.875rem);
+  --step-body:clamp(1.0625rem,1.02rem + .25vw,1.25rem);
+  --step-lead:clamp(1.25rem,1.1rem + .7vw,1.625rem);
+  --step-head:clamp(2rem,1.3rem + 3.2vw,4rem);
+  --step-display:clamp(2.75rem,1.6rem + 4.6vw,5.5rem);
+  --lift:0 1px 3px rgba(0,0,0,.06),0 30px 60px rgba(0,0,0,.18); /* taste-skill-ignore: Swoop premium bar, hover lift and the job-card instrument only */
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--step-body)/1.55 var(--serif);font-optical-sizing:auto}
+img,video{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-weight:300;letter-spacing:-.02em;line-height:1.02;margin:0;text-wrap:balance}
+p{margin:0}
+.concept{position:relative;z-index:60;background:var(--ink);color:#f2f2ef;font:500 var(--step-small)/1.4 var(--sans);text-align:center;padding:9px 16px}
+.wrap{padding-inline:var(--m)}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(12px,2vw,28px)}
+
+/* buttons: one shape on the whole page */
+.btn{display:inline-flex;align-items:center;gap:12px;min-height:48px;padding:0 22px 0 18px;border-radius:var(--r);border:0;background:var(--ink);color:#f5f5f2;font:600 15px/1 var(--sans);letter-spacing:.01em;text-decoration:none;cursor:pointer;transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s} /* taste-skill-ignore */
+.btn .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);flex:none}
+.btn .ar{display:inline-block;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--lift)} /* taste-skill-ignore */
+.btn:hover .ar{transform:rotate(-45deg)}
+.btn:active{transform:scale(.97)}
+.btn.light{background:#f5f5f2;color:var(--ink)}
+.link{font:600 15px/1 var(--sans);text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1.5px;min-height:48px;display:inline-flex;align-items:center}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+/* sticky header */
+.top{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px var(--m);transition:padding .3s,background .3s,backdrop-filter .3s}
+.top.scrolled{padding-block:8px;background:rgba(222,218,211,.78);backdrop-filter:blur(14px) saturate(1.2);-webkit-backdrop-filter:blur(14px) saturate(1.2)}
+.mark{font:600 13px/1.15 var(--sans);text-decoration:none;letter-spacing:.01em}
+.nav{display:flex;align-items:center;gap:22px;font:500 14px/1 var(--sans)}
+.nav a:not(.btn){text-decoration:none;padding:16px 0}
+.nav a:not(.btn):hover{text-decoration:underline;text-underline-offset:5px}
+@media (max-width:860px){.nav a:not(.btn){display:none}}
+
+/* hero: their photos as a slow loop */
+.hero{position:relative;height:calc(100svh - 76px);min-height:560px;margin-top:-76px;overflow:hidden;color:#fff;background:#2a2826}
+.hero video,.hero .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.62),rgba(10,10,10,0) 55%),linear-gradient(to bottom,rgba(10,10,10,.5),rgba(10,10,10,0) 26%)} /* taste-skill-ignore: neutral scrim over the photo */
+.hero-in{position:absolute;inset:auto 0 0 0;z-index:2;padding:0 var(--m) clamp(28px,5vh,56px);display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;align-items:end}
+.hero h1{grid-column:1/8;font-size:var(--step-display);font-weight:300;line-height:.98}
+.hero-side{grid-column:9/13;justify-self:end;text-align:right;display:grid;gap:18px;justify-items:end}
+.hero-side p{font:400 17px/1.45 var(--serif);max-width:34ch}
+.hero-side .acts{display:flex;gap:18px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.hero .link{color:#fff}
+.top.on-hero:not(.scrolled){color:#fff}
+.top.on-hero:not(.scrolled) .btn{background:#f5f5f2;color:var(--ink)}
+@media (max-width:860px){
+  .hero{height:calc(100svh - 64px)}
+  .hero-in{display:block;padding-bottom:104px}
+  .hero h1{font-size:11vw;margin-bottom:18px}
+  @media (min-width:600px){.hero h1{font-size:7.6vw;max-width:15ch}}
+  .hero-side{display:block;text-align:left}
+  .hero-side .acts{margin-top:18px}
+  .hero-side .acts{justify-content:flex-start}
+}
+.kin .kw{opacity:0;filter:blur(8px);display:inline-block;animation:kin .55s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(var(--i)*70ms + 120ms)}
+@keyframes kin{to{opacity:1;filter:blur(0)}}
+
+/* reveals */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0ms)}
+.js .rv.in{opacity:1;transform:none}
+
+section{position:relative}
+.intro{padding-block:clamp(96px,14vh,160px) clamp(80px,10vh,140px)}
+.intro p{grid-column:4/10;font-size:var(--step-lead);line-height:1.4}
+.intro p + p{margin-top:20px;font-size:var(--step-body);color:var(--muted);max-width:52ch}
+@media (max-width:860px){.intro p{grid-column:1/-1}}
+
+/* one scene, stepping statements */
+.steps{height:420vh;background:var(--dark)}
+.st-pin{position:sticky;top:0;height:100svh;overflow:hidden;color:#f2f2ef}
+.st-pin > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.42}
+.st-list{position:absolute;top:clamp(80px,14vh,140px);left:50%;transform:translateX(-50%);list-style:none;margin:0;padding:0;text-align:center;width:min(92vw,560px);z-index:2}
+.st-list li{font:400 clamp(1.0625rem,1rem + .4vw,1.375rem)/1.3 var(--serif);color:#a9a49c;padding:6px 0;transition:color .4s}
+.st-list li.on{color:#fff}
+.st-list h2{font:inherit;letter-spacing:0}
+.pair{position:absolute;inset:0;pointer-events:none}
+.pair img{position:absolute;width:clamp(150px,16vw,240px);opacity:0;transform:translateY(24px);transition:opacity .7s,transform .9s cubic-bezier(.2,.7,.2,1)}
+.pair.on img{opacity:1;transform:none}
+.pair img:first-child{left:8vw;top:46%;aspect-ratio:3/4;object-fit:cover}
+.pair img:last-child{right:8vw;top:30%;aspect-ratio:4/3;object-fit:cover}
+.mk{position:absolute;left:0;width:1px;height:70vh}
+@media (max-width:860px){
+  .st-list{top:auto;bottom:10vh;left:var(--m);transform:none;text-align:left;width:auto;right:var(--m)}
+  .pair img:first-child{display:none}
+  .pair img:last-child{right:16px;top:90px;width:44vw}
+}
+
+/* services */
+.services{padding-block:clamp(120px,18vh,220px) clamp(80px,12vh,160px)}
+.services h2{grid-column:1/7;font-size:var(--step-head)}
+.services .lede{grid-column:8/13;align-self:end;color:var(--muted);max-width:40ch}
+.svc{grid-column:1/-1;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(12px,2vw,28px);margin-top:72px}
+.svc ul{list-style:none;margin:0;padding:0;grid-column:3/13;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:56px;row-gap:34px}
+.svc li h3{font:500 var(--step-lead)/1.2 var(--serif);letter-spacing:-.01em}
+.svc li p{color:var(--muted);margin-top:6px;max-width:40ch}
+.svc figure{grid-column:1/3;margin:0;align-self:start}
+.svc figure img{aspect-ratio:3/4;object-fit:cover;width:100%}
+@media (max-width:860px){.services h2,.services .lede{grid-column:1/-1}.services .lede{margin-top:16px}.svc figure{display:none}.svc ul{grid-column:1/-1;grid-template-columns:1fr}}
+
+/* the live thing: plan your job */
+.plan{background:var(--surface);padding-block:clamp(96px,14vh,180px)}
+.plan h2{grid-column:1/8;font-size:var(--step-head)}
+.plan .lede{grid-column:1/7;margin-top:20px;color:var(--muted);max-width:46ch}
+.planner{grid-column:1/-1;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(12px,2vw,28px);margin-top:56px;align-items:start}
+.controls{grid-column:1/7;display:grid;gap:30px}
+fieldset{border:0;margin:0;padding:0}
+legend{font:600 14px/1 var(--sans);margin-bottom:12px;padding:0}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips label{position:relative}
+.chips input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.chips span{display:inline-flex;align-items:center;min-height:48px;padding:0 18px;border-radius:var(--r);background:var(--bg);font:500 15px/1 var(--sans);cursor:pointer;transition:background .2s,color .2s,transform .2s}
+.chips label:hover span{transform:translateY(-1px)}
+.chips input:checked + span{background:var(--ink);color:#f5f5f2}
+.chips input:focus-visible + span{outline:2px solid var(--accent);outline-offset:3px}
+.range{display:flex;align-items:center;gap:16px}
+.range input{flex:1;accent-color:var(--accent);min-height:48px}
+.range output{font:600 15px/1 var(--sans);min-width:70px;font-variant-numeric:tabular-nums}
+.card{grid-column:8/13;background:#f5f5f3;border-radius:18px;box-shadow:var(--lift); /* taste-skill-ignore: job-card instrument */overflow:hidden;position:sticky;top:96px}
+.card-img{position:relative;aspect-ratio:16/10;background:var(--surface)}
+.card-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .5s}
+.card-body{padding:22px 24px 24px}
+.card-body .tag{font:600 13px/1 var(--sans);color:var(--accent);display:flex;align-items:center;gap:8px}
+.card-body .tag::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent)}
+.card-body h3{font:400 var(--step-lead)/1.2 var(--serif);margin:12px 0 14px}
+.spec{margin:0;display:grid;grid-template-columns:auto 1fr;gap:8px 18px;font:500 14px/1.4 var(--sans)}
+.spec dt{color:var(--muted)}
+.spec dd{margin:0}
+.steps4{display:flex;gap:6px;margin:20px 0 18px}
+.steps4 span{flex:1;font:600 13px/1 var(--sans);padding:10px 0 0;border-top:3px solid var(--surface);color:var(--muted)}
+.steps4 span.on{border-color:var(--accent);color:var(--ink)}
+.qform{display:grid;gap:12px;margin-top:6px}
+.qform input,.qform textarea{width:100%;font:400 16px/1.4 var(--serif);padding:12px 14px;border:1px solid #c9c3ba;border-radius:12px;background:#fff;color:var(--ink);min-height:48px}
+.qform textarea{min-height:96px;resize:vertical}
+.qform .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.qform small{font:500 13px/1.4 var(--sans);color:var(--muted)}
+@media (max-width:860px){.plan h2,.plan .lede,.controls,.card{grid-column:1/-1}.card{position:relative;top:0;margin-top:40px}.qform .row{grid-template-columns:1fr}}
+
+/* how it works: photographs down a diagonal */
+.how{padding-block:clamp(120px,18vh,240px)}
+.how h2{grid-column:7/13;font-size:var(--step-head);grid-row:1}
+.stage{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(12px,2vw,28px);grid-column:1/-1}
+.stage img{width:100%;object-fit:cover}
+.stage p{max-width:36ch;font-size:17px;color:var(--muted)}
+.stage p b{color:var(--ink);font-weight:500}
+.s1{grid-row:1;margin-top:0}.s1 img{grid-column:1/5;aspect-ratio:3/4}.s1 p{grid-column:5/8;align-self:start;margin-top:140px}
+.s2{margin-top:clamp(40px,6vw,90px)}.s2 img{grid-column:6/9;aspect-ratio:1}.s2 p{grid-column:9/12;align-self:start}
+.s3{margin-top:clamp(60px,8vw,140px)}.s3 img{grid-column:8/13;aspect-ratio:16/10;grid-row:1}.s3 p{grid-column:4/8;grid-row:1;justify-self:end;text-align:left}
+.s4{margin-top:clamp(60px,8vw,140px)}.s4 img{grid-column:2/6;aspect-ratio:4/5}.s4 p{grid-column:7/10;align-self:end}
+.how .grid{row-gap:0}
+@media (max-width:860px){
+  .how h2{grid-column:1/-1;margin-bottom:40px}
+  .s1{grid-row:auto}
+  .stage img,.stage p{grid-column:1/-1!important;grid-row:auto!important;margin-top:0}
+  .stage{margin-top:56px!important}.s1{margin-top:0!important}
+  .s2 img{width:62%;justify-self:end}.s3 img{width:78%}.s4 img{width:72%;justify-self:end}
+  .stage p{margin-top:16px!important;justify-self:start!important}
+}
+
+/* dark break: one line in their words */
+.break{background:var(--dark);color:#f2f2ef;padding:clamp(110px,18vh,200px) var(--m);overflow:hidden}
+.break p{font:300 var(--step-head)/1.08 var(--serif);letter-spacing:-.02em;max-width:22ch;text-wrap:balance;will-change:transform}
+.break span{display:block;margin-top:28px;font:500 14px/1 var(--sans);color:#a9a49c}
+
+/* gallery: gathered round a heading */
+.gal{min-height:110vh;display:grid;place-items:center;padding-block:120px;overflow:hidden}
+.gal-head{position:relative;z-index:2;text-align:center;max-width:30ch;padding:0 16px}
+.gal-head h2{font-size:clamp(2rem,1.6rem + 1.6vw,2.75rem)}
+.gal-head p{margin:14px auto 8px;color:var(--muted);max-width:34ch}
+.gal-photos{position:absolute;inset:0;pointer-events:none}
+.gal-photos img{position:absolute;width:clamp(120px,13vw,200px);aspect-ratio:9/10;object-fit:cover;will-change:transform}
+@media (max-width:860px){.gal{min-height:auto;padding-block:0;display:block}.gal-photos{position:relative;inset:auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;padding:0 var(--m)}.gal-photos img{position:static;width:100%;transform:none!important}.gal-head{margin:44px auto}}
+
+/* quiet figure lines */
+.stats{padding-block:clamp(100px,18vh,180px)}
+.stats .inner{grid-column:2/8}
+.stats h2{font-size:clamp(1.5rem,1.3rem + .5vw,1.75rem);margin:0 0 56px 156px}
+.stats dl{margin:0;display:grid;gap:28px}
+.stats .row{display:grid;grid-template-columns:132px 1fr;column-gap:24px;align-items:baseline}
+.stats dt{font:500 clamp(1.5rem,1.3rem + .5vw,2rem)/1 var(--serif);text-align:right;font-variant-numeric:tabular-nums lining-nums}
+.stats dd{margin:0;color:var(--muted);max-width:40ch}
+.stats figure{grid-column:9/12;margin:80px 0 0}
+.stats figure img{aspect-ratio:1;object-fit:cover}
+@media (max-width:860px){.stats .inner{grid-column:1/-1}.stats h2{margin-left:112px}.stats .row{grid-template-columns:88px 1fr}.stats figure{grid-column:6/13;margin-top:56px}}
+
+/* in their customers' words */
+.words{padding-block:clamp(100px,14vh,180px)}
+.words h2{grid-column:1/-1;font-size:var(--step-head);margin-bottom:64px}
+.words figure{margin:0;grid-column:2/6;grid-row:2/5}
+.words figure img{aspect-ratio:3/4;object-fit:cover;height:auto}
+.q{grid-column:7/13;margin:0}
+.q + .q{margin-top:56px}
+.q p{font:300 clamp(1.1875rem,1.05rem + .5vw,1.5rem)/1.35 var(--serif);letter-spacing:-.01em;max-width:34ch}
+.q cite{display:block;margin-top:14px;font:600 14px/1 var(--sans);font-style:normal}
+.words .note{grid-column:7/13;margin-top:40px;font:500 13px/1.4 var(--sans);color:var(--muted)}
+@media (max-width:860px){.words figure{grid-column:1/10;grid-row:auto;margin-bottom:40px}.q,.words .note{grid-column:1/-1}}
+
+/* faq */
+.faq{padding-block:clamp(100px,14vh,180px)}
+.faq h2{font-size:clamp(2.5rem,1.4rem + 4vw,5.5rem);max-width:14ch}
+.faq .qs{display:grid;gap:8px;margin-top:80px;margin-left:33%}
+.faq details{border-radius:16px;transition:background .25s}
+.faq details[open]{background:var(--surface)}
+.faq summary{list-style:none;display:flex;justify-content:space-between;gap:20px;align-items:center;cursor:pointer;padding:20px 24px;font:400 clamp(1.1875rem,1.1rem + .4vw,1.5rem)/1.3 var(--serif);min-height:48px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";width:10px;height:10px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg) translateY(-3px);transition:transform .3s;flex:none}
+.faq details[open] summary::after{transform:rotate(-135deg)}
+.faq details p{padding:0 24px 24px;max-width:56ch;color:var(--muted)}
+@media (max-width:860px){.faq .qs{margin-left:0;margin-top:48px}.faq details{border-radius:0;margin-inline:calc(var(--m) * -1);padding-inline:calc(var(--m) - 24px)}}
+
+/* contact band */
+.contact{padding-block:160px 120px}
+.contact .say{grid-column:1/6;font:300 clamp(1.5rem,1.2rem + 1.2vw,2.25rem)/1.15 var(--serif);letter-spacing:-.015em}
+.contact figure{grid-column:8/10;margin:0}
+.contact figure img{aspect-ratio:1;object-fit:cover;width:100%;max-width:170px}
+.contact .reach{grid-column:10/13;display:grid;gap:6px;align-content:start}
+.contact .reach b{font:500 18px/1.3 var(--serif);margin-bottom:10px}
+.contact .reach a{font:500 18px/1.3 var(--serif);text-underline-offset:5px;min-height:44px;display:inline-flex;align-items:center;word-break:break-word}
+.contact .reach small{margin-top:10px;font:500 14px/1.4 var(--sans);color:var(--muted)}
+@media (max-width:860px){.contact .say{grid-column:1/-1;margin-bottom:32px}.contact figure{grid-column:1/4}.contact .reach{grid-column:5/13}}
+
+footer{background:var(--dark);color:#cfcac2;padding:56px var(--m) 120px;font:500 14px/1.6 var(--sans)}
+footer .grid{row-gap:24px}
+footer .c1{grid-column:1/5}footer .c2{grid-column:5/9}footer .c3{grid-column:9/13}
+footer strong{color:#fff;font-weight:600}
+footer a{color:#fff}
+@media (max-width:860px){footer .c1,footer .c2,footer .c3{grid-column:1/-1}}
+
+/* phone call bar */
+.mbar{position:fixed;left:12px;right:12px;bottom:12px;z-index:55;display:none;gap:10px;padding:8px;border-radius:var(--r);background:rgba(20,20,19,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:var(--lift);transition:transform .35s,opacity .35s} /* taste-skill-ignore: sticky call bar */
+.mbar a{flex:1;justify-content:center}
+.mbar.away{transform:translateY(140%);opacity:0}
+.mbar.pulse{animation:pulse 1.2s ease-out 1}
+/* taste-skill-ignore */ @keyframes pulse{0%{box-shadow:var(--lift),0 0 0 0 rgba(37,111,130,.55)}100%{box-shadow:var(--lift),0 0 0 18px rgba(37,111,130,0)}}
+@media (max-width:860px){.mbar{display:flex}}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .js .rv{opacity:1;transform:none}
+  .kin .kw{opacity:1;filter:none}
+  .steps{height:auto}.st-pin{position:relative;height:auto;padding:120px 0 160px}.pair{display:none}.st-list li{color:#f2f2ef}
+  .gal-photos img{transform:none!important}
+}
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Melbourne Tiling VIC. This is a design preview, not the live website.</div>
+
+<header class="top on-hero" id="top">
+  <a class="mark" href="#">Melbourne<br>Tiling VIC</a>
+  <nav class="nav" aria-label="Main">
+    <a href="#services">Services</a>
+    <a href="#how">How we work</a>
+    <a href="#work">Our work</a>
+    <a href="#faq">FAQ</a>
+    <a class="btn" href="#plan"><span class="dot"></span>Free quote <span class="ar" aria-hidden="true">→</span></a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" aria-label="Introduction">
+  <img class="poster" src="img/hero-poster.jpg" width="1280" height="800" alt="A grey-tiled bathroom with a built-in bath, tiled by Melbourne Tiling VIC">
+  <video id="hero-video" muted autoplay loop playsinline preload="metadata" poster="img/hero-poster.jpg" aria-hidden="true"></video>
+  <div class="hero-in">
+    <h1>Wall and floor tiling, from Cranbourne.</h1>
+    <div class="hero-side">
+      <p>A family-owned tiling business. Bathrooms, laundries, outdoor areas, pools and shops across south-east Melbourne.</p>
+      <div class="acts">
+        <a class="link" href="tel:0438646905">Call 0438 646 905</a>
+        <a class="btn light" href="#plan"><span class="dot"></span>Plan your job <span class="ar" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="intro wrap" aria-label="About">
+  <div class="grid">
+    <p class="rv">Melbourne Tiling VIC is a family-owned wall and floor tiling business based in Cranbourne. We tile homes and businesses all over Melbourne and the surrounding suburbs.</p>
+    <p class="rv" style="--d:90ms;grid-column:4/10">We listen to you set out your ideas, and then our tilers go to work, turning them into a tile solution that works well and looks as good as it works.</p>
+  </div>
+</section>
+
+<section class="steps" id="steps" aria-label="What we do">
+  <div class="st-pin">
+    <img src="img/vanity.jpg" width="1200" height="900" alt="" loading="lazy">
+    <ol class="st-list">
+      <li class="on"><h2>Domestic and commercial tilers</h2></li>
+      <li>Family-owned, based in Cranbourne</li>
+      <li>Floors, walls and splashbacks</li>
+      <li>Pools, outdoor areas and repairs</li>
+      <li>Quality first, fast work</li>
+    </ol>
+    <div class="pair on" data-k="0"><img src="img/bath-mosaic.jpg" width="1200" height="900" alt="Bathroom with a mosaic-fronted bath" loading="lazy"><img src="img/hallway.jpg" width="750" height="1000" alt="Marble-look tiled hallway" loading="lazy"></div>
+    <div class="pair" data-k="1"><img src="img/floor.jpg" width="750" height="1000" alt="Grey floor tiles with matching skirting tiles" loading="lazy"><img src="img/bath-grey.jpg" width="1200" height="900" alt="Grey wall and floor tiles around a bath" loading="lazy"></div>
+    <div class="pair" data-k="2"><img src="img/hallway.jpg" width="750" height="1000" alt="Large-format floor tiles in a hallway" loading="lazy"><img src="img/splashback.jpg" width="1200" height="900" alt="Dark stacked tile splashback in a kitchen" loading="lazy"></div>
+    <div class="pair" data-k="3"><img src="img/sink.jpg" width="1200" height="900" alt="Tiled laundry splashback" loading="lazy"><img src="img/bbq.jpg" width="1200" height="900" alt="Outdoor kitchen clad in dark tiles" loading="lazy"></div>
+    <div class="pair" data-k="4"><img src="img/vanity.jpg" width="1200" height="900" alt="Double vanity with mosaic tile strip" loading="lazy"><img src="img/bath-mosaic.jpg" width="1200" height="900" alt="Bath with mosaic tile front" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="services wrap" id="services">
+  <div class="grid">
+    <h2 class="rv">Ten jobs, one family of tilers.</h2>
+    <p class="lede rv" style="--d:80ms">Every service has its own line here, so you can see straight away whether your job is one we do.</p>
+    <div class="svc">
+      <figure class="rv"><img src="img/floor.jpg" width="750" height="1000" alt="Floor tiles with tiled skirting in a bathroom" loading="lazy"></figure>
+      <ul>
+        <li class="rv"><h3>Domestic tiling</h3><p>Tile installation for homes, plus repairs, restoring, grinding, polishing, grouting and re-grout colouring.</p></li>
+        <li class="rv" style="--d:60ms"><h3>Commercial tiling</h3><p>Offices, retail spaces, restaurants and other premises, scheduled to keep disruption to your business low.</p></li>
+        <li class="rv"><h3>Tile renovation and repair</h3><p>Chipped, cracked, loose or missing tiles fixed without retiling the whole area.</p></li>
+        <li class="rv" style="--d:60ms"><h3>Floor and wall tiling</h3><p>A wide range of products to suit what you have in mind, laid to current tiling standards.</p></li>
+        <li class="rv"><h3>Swimming pool tiling</h3><p>New pool tiling, re-tiling and sealing of pool tile, in glass mosaic or porcelain.</p></li>
+        <li class="rv" style="--d:60ms"><h3>Waterproofing</h3><p>Internal and exterior waterproofing membranes, for homes and businesses.</p></li>
+        <li class="rv"><h3>Grouting and cleaning</h3><p>Grouting, re-grouting and grout colouring to bring tired tiles back.</p></li>
+        <li class="rv" style="--d:60ms"><h3>Bathroom renovations</h3><p>The tiling side of a new bathroom, from the floor to the walls.</p></li>
+        <li class="rv"><h3>Floor screeding</h3><p>Levelling the floor before the tiles go down.</p></li>
+        <li class="rv" style="--d:60ms"><h3>Tile sealing</h3><p>Sealing tiled surfaces, pool tile included.</p></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="plan wrap" id="plan">
+  <div class="grid">
+    <h2 class="rv">Plan your job, then send it.</h2>
+    <p class="lede rv" style="--d:80ms">The cost of tiling depends on the size of the room, the tiles and the preparation it needs. Pick yours and it all goes into one quote request.</p>
+    <div class="planner">
+      <div class="controls">
+        <fieldset class="rv">
+          <legend>Where are the tiles going?</legend>
+          <div class="chips" id="room">
+            <label><input type="radio" name="room" value="bathroom" checked><span>Bathroom</span></label>
+            <label><input type="radio" name="room" value="laundry"><span>Laundry</span></label>
+            <label><input type="radio" name="room" value="kitchen"><span>Kitchen splashback</span></label>
+            <label><input type="radio" name="room" value="floor"><span>Floors and hallways</span></label>
+            <label><input type="radio" name="room" value="outdoor"><span>Outdoor area</span></label>
+            <label><input type="radio" name="room" value="pool"><span>Pool</span></label>
+            <label><input type="radio" name="room" value="commercial"><span>Shop or office</span></label>
+            <label><input type="radio" name="room" value="repair"><span>Repair</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="rv">
+          <legend><label for="area">Roughly how big? (square metres)</label></legend>
+          <div class="range"><input type="range" id="area" min="1" max="120" value="8"><output id="areaOut" for="area">8 m²</output></div>
+        </fieldset>
+        <fieldset class="rv">
+          <legend>Which tile?</legend>
+          <div class="chips">
+            <label><input type="radio" name="tile" value="Porcelain" checked><span>Porcelain</span></label>
+            <label><input type="radio" name="tile" value="Glass mosaic"><span>Glass mosaic</span></label>
+            <label><input type="radio" name="tile" value="Natural stone"><span>Natural stone</span></label>
+            <label><input type="radio" name="tile" value="Terracotta"><span>Terracotta</span></label>
+            <label><input type="radio" name="tile" value="Not sure yet"><span>Not sure yet</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="rv">
+          <legend>Preparation it may need</legend>
+          <div class="chips">
+            <label><input type="checkbox" name="prep" value="Remove old tiles"><span>Remove old tiles</span></label>
+            <label><input type="checkbox" name="prep" value="Waterproofing"><span>Waterproofing</span></label>
+            <label><input type="checkbox" name="prep" value="Floor levelling"><span>Floor levelling</span></label>
+          </div>
+        </fieldset>
+      </div>
+
+      <aside class="card rv" data-ui aria-live="polite" aria-label="Your job card">
+        <div class="card-img"><img id="cardImg" src="img/bath-grey.jpg" width="1200" height="900" alt="A bathroom tiled by Melbourne Tiling VIC" loading="lazy"></div>
+        <div class="card-body">
+          <div class="tag">Your job card</div>
+          <h3 id="cardTitle">Bathroom, about 8 m²</h3>
+          <dl class="spec">
+            <dt>Tile</dt><dd id="cardTile">Porcelain</dd>
+            <dt>Prep</dt><dd id="cardPrep">None picked yet</dd>
+            <dt>Service</dt><dd id="cardSvc">Bathroom renovations, floor and wall tiling</dd>
+          </dl>
+          <div class="steps4" aria-label="Where this job is"><span class="on">Consultation</span><span class="on">Quotation</span><span>Construction</span><span>Completion</span></div>
+          <form class="qform" id="quote" novalidate>
+            <div class="row">
+              <input name="name" autocomplete="name" placeholder="Your name" aria-label="Your name" required>
+              <input name="phone" type="tel" autocomplete="tel" placeholder="Your phone" aria-label="Your phone" required>
+            </div>
+            <input name="suburb" autocomplete="address-level2" placeholder="Your suburb" aria-label="Your suburb">
+            <textarea name="msg" id="qmsg" aria-label="Anything else about the job" placeholder="Anything else about the job"></textarea>
+            <button class="btn" type="submit"><span class="dot"></span>Send for a free quote <span class="ar" aria-hidden="true">→</span></button>
+            <small>Opens your email with the job card filled in, to info@melbournetilingvic.com.au. A free, no-obligation quote.</small>
+          </form>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="how wrap" id="how">
+  <div class="grid">
+    <h2 class="rv">Four steps, start to finish.</h2>
+    <div class="stage s1">
+      <img class="rv" src="img/hallway.jpg" width="750" height="1000" alt="Marble-look floor tiles running down a hallway" loading="lazy">
+      <p class="rv" style="--d:100ms"><b>Consultation.</b> You tell us what you have in mind and we listen. We are always happy to answer questions about any of our services.</p>
+    </div>
+    <div class="stage s2">
+      <img class="rv" src="img/sink.jpg" width="1200" height="900" alt="White tiles behind a laundry sink" loading="lazy">
+      <p class="rv" style="--d:100ms"><b>Quotation.</b> A free, no-obligation quote made for your project: the room, the tiles, and any waterproofing, levelling or removal of old tiles.</p>
+    </div>
+    <div class="stage s3">
+      <img class="rv" src="img/bbq.jpg" width="1200" height="900" alt="Outdoor kitchen and floor in large dark tiles" loading="lazy">
+      <p class="rv" style="--d:100ms"><b>Construction.</b> Our tilers go to work, with the approach matched to the tile and the job.</p>
+    </div>
+    <div class="stage s4">
+      <img class="rv" src="img/vanity.jpg" width="1200" height="900" alt="Finished vanity with a mosaic tile feature strip" loading="lazy">
+      <p class="rv" style="--d:100ms"><b>Completion.</b> A finished tile job that works well and looks as good as it works.</p>
+    </div>
+  </div>
+</section>
+
+<section class="break" aria-label="In our words">
+  <p id="breakLine">We listen first. Then our tilers go to work.</p>
+  <span>Melbourne Tiling VIC, Cranbourne</span>
+</section>
+
+<section class="gal" id="work" aria-labelledby="work-h">
+  <div class="gal-photos" aria-hidden="false">
+    <img data-r=".08" style="left:21%;top:7%" src="img/bath-mosaic.jpg" width="1200" height="900" alt="Bath with a mosaic tile front" loading="lazy">
+    <img data-r=".05" style="left:47%;top:3%" src="img/splashback.jpg" width="1200" height="900" alt="Kitchen splashback in dark stacked tiles" loading="lazy">
+    <img data-r=".11" style="right:19%;top:15%" src="img/hallway.jpg" width="750" height="1000" alt="Marble-look tiled hallway" loading="lazy">
+    <img data-r=".06" style="left:16%;top:43%" src="img/floor.jpg" width="750" height="1000" alt="Grey bathroom floor tiles" loading="lazy">
+    <img data-r=".09" style="right:16%;top:55%" src="img/bbq.jpg" width="1200" height="900" alt="Tiled outdoor kitchen" loading="lazy">
+    <img data-r=".04" style="left:28%;bottom:5%" src="img/sink.jpg" width="1200" height="900" alt="Tiled laundry" loading="lazy">
+    <img data-r=".1" style="right:33%;bottom:2%" src="img/bath-grey.jpg" width="1200" height="900" alt="Grey-tiled bathroom" loading="lazy">
+  </div>
+  <div class="gal-head rv">
+    <h2 id="work-h">From our gallery</h2>
+    <p>Finished bathrooms, laundries, kitchens and outdoor areas.</p>
+    <a class="link" href="#plan">Plan a job like these →</a>
+  </div>
+</section>
+
+<section class="stats wrap" aria-labelledby="stats-h">
+  <div class="grid">
+    <div class="inner">
+      <h2 id="stats-h" class="rv">In plain numbers</h2>
+      <dl>
+        <div class="row rv"><dt><span data-count="10">10</span>+</dt><dd>Over ten years of tiling experience, kept up with current tiling standards and techniques.</dd></div>
+        <div class="row rv" style="--d:70ms"><dt><span data-count="10">10</span></dt><dd>Services, from a single cracked tile to a whole commercial floor.</dd></div>
+        <div class="row rv" style="--d:140ms"><dt><span data-count="8">8</span></dt><dd>Suburbs on our job pages: Cranbourne, Clyde North, Narre Warren, Frankston, Keysborough, Noble Park, Bangholme and Springvale.</dd></div>
+        <div class="row rv" style="--d:210ms"><dt><span data-count="4">4</span></dt><dd>Steps on every job: consultation, quotation, construction, completion.</dd></div>
+      </dl>
+    </div>
+    <figure class="rv"><img src="img/splashback.jpg" width="1200" height="900" alt="Kitchen with a dark tile splashback" loading="lazy"></figure>
+  </div>
+</section>
+
+<section class="words wrap" aria-labelledby="words-h">
+  <div class="grid">
+    <h2 id="words-h" class="rv">What our customers wrote.</h2>
+    <figure class="rv"><img src="img/bath-mosaic.jpg" width="1200" height="900" alt="Bathroom with a mosaic tile bath front" loading="lazy"></figure>
+    <blockquote class="q rv"><p>“Amin and his team did a fantastic job of tiling our large outdoor area. We could not be happier with the job they have done, it is absolutely perfect. They were highly skilled, professional and always punctul. I would not hesitate to recommend them to anyone who needs a quality tiler. Very happy customer.”</p><cite>Ryan Ahmadi</cite></blockquote>
+    <blockquote class="q rv"><p>“Amin has been absolutely amazing with his work, advise and on time completion. Thanks a lot Amin for the great job with my laundry. Really Appreciating and definitely will call you again and will recommend you to my friends as well because you are trustworthy, professional and providing best pricing.”</p><cite>Joe Russell</cite></blockquote>
+    <blockquote class="q rv"><p>“I have the best quality work done from Melbourne Tiling VIC, We could see the experiences &amp; dedication on the job they handle.I recommend every one to contact Melbourne Tiling VIC.”</p><cite>Kevin Risk</cite></blockquote>
+  </div>
+</section>
+
+<section class="faq wrap" id="faq" aria-labelledby="faq-h">
+  <h2 id="faq-h" class="rv">Questions people ask first</h2>
+  <div class="qs">
+    <details class="rv"><summary>How much does tiling cost in Melbourne?</summary><p>It depends on the size of the room, the type of tiles, and the preparation needed, such as waterproofing, floor levelling and removing old tiles. We give a free, no-obligation quote made for your project.</p></details>
+    <details class="rv"><summary>Do you tile commercial properties?</summary><p>Yes: offices, retail spaces, restaurants and other business premises. We can schedule the work so it disrupts your business as little as possible.</p></details>
+    <details class="rv"><summary>Can you fix cracked tiles without retiling everything?</summary><p>Yes. Our renovation and repair service fixes chipped, cracked, loose or missing tiles, so you can restore the space without a complete retile.</p></details>
+    <details class="rv"><summary>What tiles are best for a swimming pool?</summary><p>Pool tiles need to handle constant submersion and pool chemicals. Glass mosaics and porcelain are good choices for their durability and non-slip properties, and we can help you choose.</p></details>
+    <details class="rv"><summary>How do I get in touch?</summary><p>Call 0438 646 905 or email info@melbournetilingvic.com.au to talk about your tiling project, or use the job planner above.</p></details>
+  </div>
+</section>
+
+<section class="contact wrap" aria-label="Contact">
+  <div class="grid">
+    <p class="say rv">Homes and businesses across south-east Melbourne: tell us about the floor, wall or pool you have in mind.</p>
+    <figure class="rv" style="--d:80ms"><img src="img/bath-grey.jpg" width="1200" height="900" alt="Grey-tiled bathroom" loading="lazy"></figure>
+    <div class="reach rv" style="--d:140ms">
+      <b>Got a tiling job?</b>
+      <a href="tel:0438646905">0438 646 905</a>
+      <a href="mailto:info@melbournetilingvic.com.au">info@melbournetilingvic.com.au</a>
+      <small>Based in Cranbourne, VIC 3977.</small>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="grid">
+    <div class="c1"><strong>Melbourne Tiling VIC</strong><br>Family-owned wall and floor tilers.<br>Cranbourne, VIC 3977<br><a href="tel:0438646905">0438 646 905</a> · <a href="mailto:info@melbournetilingvic.com.au">info@melbournetilingvic.com.au</a></div>
+    <div class="c2">Domestic, commercial, repairs, floors and walls, pools, waterproofing, grouting, bathrooms, screeding, sealing.<br>Working across Cranbourne, Clyde North, Narre Warren, Frankston, Keysborough, Springvale and the rest of Melbourne.</div>
+    <div class="c3">© <span data-year>2026</span> Melbourne Tiling VIC. All photos are from the Melbourne Tiling VIC website.<br><br>Concept design by Swoop Sites, Melbourne.</div>
+  </div>
+</footer>
+
+<div class="mbar" id="mbar">
+  <a class="btn light" href="tel:0438646905"><span class="dot"></span>Call</a>
+  <a class="btn" href="#plan">Free quote <span class="ar" aria-hidden="true">→</span></a>
+</div>
+
+<script>
+(function () {
+  var d = document, root = d.documentElement;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var yr = d.querySelector('[data-year]'); if (yr) yr.textContent = new Date().getFullYear();
+
+  /* hero loop: source set here so the poster paints first */
+  var hv = d.getElementById('hero-video');
+  if (hv && !reduce) {
+    var s = d.createElement('source'); s.src = 'img/hero.mp4'; s.type = 'video/mp4'; hv.appendChild(s);
+    hv.load(); var pp = hv.play(); if (pp && pp.catch) pp.catch(function () {});
+    d.addEventListener('visibilitychange', function () { if (d.hidden) hv.pause(); else hv.play().catch(function () {}); });
+  } else if (hv) { hv.remove(); }
+
+  /* kinetic headline */
+  var h1 = d.querySelector('.hero h1');
+  if (h1 && !reduce) {
+    var i = 0, frag = d.createDocumentFragment();
+    h1.textContent.split(/(\s+)/).forEach(function (p) {
+      if (!p) return;
+      if (/^\s+$/.test(p)) { frag.appendChild(d.createTextNode(p)); return; }
+      var sp = d.createElement('span'); sp.className = 'kw'; sp.style.setProperty('--i', i++); sp.textContent = p; frag.appendChild(sp);
+    });
+    h1.textContent = ''; h1.appendChild(frag); h1.classList.add('kin');
+  }
+
+  /* header: white over the hero, blurred paper after scrolling */
+  var top = d.getElementById('top'), hero = d.querySelector('.hero');
+  var onScroll = function () {
+    top.classList.toggle('scrolled', window.scrollY > 40);
+    top.classList.toggle('on-hero', window.scrollY < hero.offsetHeight - 80);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  if ('IntersectionObserver' in window && !reduce) {
+    root.classList.add('js');
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    d.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
+
+    var countIO = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return; countIO.unobserve(e.target);
+        var el = e.target, to = +el.dataset.count, t0 = null;
+        (function step(ts) {
+          if (!t0) t0 = ts; var k = Math.min(1, (ts - t0) / 1400);
+          el.textContent = Math.round(to * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(step);
+        })(performance.now());
+      });
+    }, { threshold: 0.6 });
+    d.querySelectorAll('[data-count]').forEach(function (el) { countIO.observe(el); });
+
+    /* gallery drift and the dark line's parallax, on one scroll handler */
+    var scene = d.getElementById('steps'), items = d.querySelectorAll('.st-list li'), pairs = d.querySelectorAll('.pair'), cur = -1;
+    var gal = d.querySelector('.gal'), gimgs = gal.querySelectorAll('img[data-r]'), line = d.getElementById('breakLine');
+    var wide = window.matchMedia('(min-width: 861px)');
+    var drift = function () {
+      var vh = window.innerHeight;
+      var sb = scene.getBoundingClientRect(), prog = Math.max(0, Math.min(.999, -sb.top / (sb.height - vh))), k = Math.floor(prog * items.length);
+      if (k !== cur) { cur = k; items.forEach(function (li, j) { li.classList.toggle('on', j === k); }); pairs.forEach(function (p, j) { p.classList.toggle('on', j === k); }); }
+      if (wide.matches) {
+        var b = gal.getBoundingClientRect(), k = (vh - b.top) / (vh + b.height) - .5;
+        gimgs.forEach(function (im) { im.style.transform = 'translateY(' + (-k * parseFloat(im.dataset.r) * 900).toFixed(1) + 'px)'; });
+      }
+      var lb = line.getBoundingClientRect(); line.style.transform = 'translateY(' + ((lb.top - vh / 2) * -.06).toFixed(1) + 'px)';
+    };
+    window.addEventListener('scroll', drift, { passive: true }); drift();
+
+    /* main button leans towards the cursor, desktop only */
+    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      d.querySelectorAll('.hero .btn, #quote .btn').forEach(function (b) {
+        b.addEventListener('pointermove', function (e) {
+          var r = b.getBoundingClientRect(), x = (e.clientX - r.left - r.width / 2) / r.width, y = (e.clientY - r.top - r.height / 2) / r.height;
+          b.style.transform = 'translate(' + (x * 6).toFixed(1) + 'px,' + (y * 6).toFixed(1) + 'px)';
+        });
+        b.addEventListener('pointerleave', function () { b.style.transform = ''; });
+      });
+    }
+
+    /* phone call bar: one soft pulse after 3 s */
+    setTimeout(function () { var m = d.getElementById('mbar'); if (m) m.classList.add('pulse'); }, 3000);
+  }
+
+  /* phone bar steps aside for the footer */
+  var mbar = d.getElementById('mbar'), foot = d.querySelector('footer');
+  if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { mbar.classList.toggle('away', es[0].isIntersecting); }).observe(foot);
+
+  /* the live thing: the job card */
+  var rooms = {
+    bathroom: ['Bathroom', 'bath-grey.jpg', 'Bathroom renovations, floor and wall tiling'],
+    laundry: ['Laundry', 'sink.jpg', 'Floor and wall tiling'],
+    kitchen: ['Kitchen splashback', 'splashback.jpg', 'Wall tiling'],
+    floor: ['Floors and hallways', 'hallway.jpg', 'Floor tiling, floor screeding'],
+    outdoor: ['Outdoor area', 'bbq.jpg', 'Floor and wall tiling, tile sealing'],
+    pool: ['Pool', 'bath-mosaic.jpg', 'Swimming pool tiling, tile sealing'],
+    commercial: ['Shop or office', 'hallway.jpg', 'Commercial tiling'],
+    repair: ['Tile repair', 'floor.jpg', 'Tile renovation and repair, grouting']
+  };
+  var area = d.getElementById('area'), areaOut = d.getElementById('areaOut'), cardImg = d.getElementById('cardImg');
+  var title = d.getElementById('cardTitle'), tileEl = d.getElementById('cardTile'), prepEl = d.getElementById('cardPrep'), svcEl = d.getElementById('cardSvc');
+  function val(n) { var r = d.querySelector('input[name=' + n + ']:checked'); return r ? r.value : ''; }
+  function job() {
+    var r = rooms[val('room')], prep = Array.prototype.map.call(d.querySelectorAll('input[name=prep]:checked'), function (c) { return c.value; });
+    return { room: r[0], img: r[1], svc: r[2], area: area.value, tile: val('tile'), prep: prep.length ? prep.join(', ') : 'None picked yet' };
+  }
+  function render() {
+    var j = job();
+    areaOut.textContent = j.area + ' m²';
+    title.textContent = j.room + ', about ' + j.area + ' m²';
+    tileEl.textContent = j.tile; prepEl.textContent = j.prep; svcEl.textContent = j.svc;
+    if (cardImg.getAttribute('src') !== 'img/' + j.img) {
+      cardImg.style.opacity = 0;
+      setTimeout(function () { cardImg.src = 'img/' + j.img; cardImg.alt = j.room + ' tiled by Melbourne Tiling VIC'; cardImg.style.opacity = 1; }, reduce ? 0 : 220);
+    }
+  }
+  d.querySelectorAll('.controls input').forEach(function (el) { el.addEventListener('input', render); el.addEventListener('change', render); });
+  render();
+
+  d.getElementById('quote').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var f = new FormData(e.target), j = job();
+    var body = 'Job: ' + j.room + ', about ' + j.area + ' m2\nTile: ' + j.tile + '\nPreparation: ' + j.prep +
+      '\n\nName: ' + (f.get('name') || '') + '\nPhone: ' + (f.get('phone') || '') + '\nSuburb: ' + (f.get('suburb') || '') + '\n\n' + (f.get('msg') || '');
+    location.href = 'mailto:info@melbournetilingvic.com.au?subject=' + encodeURIComponent('Quote request: ' + j.room + ', about ' + j.area + ' m2') + '&body=' + encodeURIComponent(body);
+  });
+})();
+</script>
+</body>
+</html>
