@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Belgrave Hotel | Independent pub, bar and bistro in Belgrave (concept)</title>
+<meta name="description" content="A family-run, 100% independent pub in Belgrave, in the Dandenong Ranges: bar and bistro, weekly specials, live music, open mic Sundays, darts and pool, functions and catering. Book a table or call 03 9754 2222.">
+<meta property="og:title" content="Belgrave Hotel, Belgrave">
+<meta property="og:description" content="Independent, family-run bar and bistro in the heart of Belgrave.">
+<meta property="og:image" content="img/hero-poster.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,400;10..100,500&family=Albert+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/hero-poster.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BarOrPub","name":"Belgrave Hotel","description":"A proudly independent, family-run bar and bistro in the heart of Belgrave, with live music from local bands, weekly specials and function rooms.","telephone":"+61 3 9754 2222","email":"enquiries@belgravehotel.com.au","url":"https://thebelgravehotel.com.au/","servesCuisine":"Pub food","address":{"@type":"PostalAddress","streetAddress":"1645 Burwood Highway","addressLocality":"Belgrave","addressRegion":"VIC","postalCode":"3160","addressCountry":"AU"},"geo":{"@type":"GeoCoordinates","latitude":-37.9095005,"longitude":145.3537489},"acceptsReservations":"https://bookings.wowapps.com/make-booking/thebelgravehotel?src=web","hasMenu":"https://img1.wsimg.com/blobby/go/2b000a3c-62bd-4641-bf9d-e306e5407255/Copy%20of%20Belgrave%20Hotel%20Menu%20180626.pdf","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday"],"opens":"11:30","closes":"20:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Thursday","Friday","Saturday","Sunday"],"opens":"11:30","closes":"01:00"}]}
+</script>
+<style>
+:root{
+  --bg:#dedad3; --surface:#d3cec6; --paper:#ece8e1; --ink:#0a0a0a; --muted:#5c5852; --accent:#256f82; --accent-ink:#fff;
+  --board:#151513; --board-2:#23221f; --chalk:#ece8e1; --chalk-2:#b9b3a8;
+  --m:clamp(20px,4vw,64px); --r:999px; --rad:4px;
+  --display:"Imbue",Georgia,serif; --sans:"Albert Sans",system-ui,sans-serif;
+  --step-small:clamp(.8125rem,.79rem + .1vw,.875rem);
+  --step-body:clamp(1.0625rem,1rem + .25vw,1.1875rem);
+  --step-lead:clamp(1.25rem,1.1rem + .7vw,1.625rem);
+  --step-head:clamp(2.25rem,1.4rem + 3.6vw,4.5rem);
+  --lift:0 1px 3px rgba(0,0,0,.08),0 30px 60px rgba(0,0,0,.22); /* taste-skill-ignore: Swoop premium bar, cards and hover lift */
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--step-body)/1.55 var(--sans)}
+img,video{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{margin:0;text-wrap:balance}
+h2{font:400 var(--step-head)/.92 var(--display);letter-spacing:-.02em;text-transform:uppercase}
+h3{font:600 var(--step-lead)/1.2 var(--sans);letter-spacing:-.01em}
+p{margin:0}
+.concept{position:relative;z-index:60;background:var(--ink);color:var(--paper);font:500 var(--step-small)/1.4 var(--sans);text-align:center;padding:9px 16px}
+.wrap{padding-inline:var(--m)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:48px;padding:0 22px 0 18px;border-radius:var(--r);border:0;background:var(--ink);color:var(--paper);font:600 15px/1 var(--sans);text-decoration:none;cursor:pointer;transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s}
+.btn .dot{width:8px;height:8px;border-radius:50%;background:#7cc3d4;flex:none}
+.btn .ar{display:inline-block;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--lift)} /* taste-skill-ignore */
+.btn:hover .ar{transform:rotate(-45deg)}
+.btn:active{transform:scale(.97)}
+.btn.teal{background:var(--accent);color:var(--accent-ink)}
+.btn.teal .dot{background:#fff}
+.btn.paper{background:var(--paper);color:var(--ink)}
+.btn.paper .dot{background:var(--accent)}
+.link{font:600 15px/1 var(--sans);text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1.5px;min-height:48px;display:inline-flex;align-items:center}
+
+/* sticky header */
+.top{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px var(--m);color:var(--paper);transition:padding .3s,background .3s,color .3s}
+.top.scrolled{padding-block:8px;color:var(--ink);background:rgba(222,218,211,.84);backdrop-filter:blur(14px) saturate(1.2);-webkit-backdrop-filter:blur(14px) saturate(1.2)}
+.mark{font:500 22px/1 var(--display);letter-spacing:.02em;text-transform:uppercase;text-decoration:none;display:inline-flex;flex-direction:column;gap:4px}
+.mark small{font:600 13px/1 var(--sans);letter-spacing:.08em}
+.nav{display:flex;align-items:center;gap:24px;font:500 15px/1 var(--sans)}
+.nav a:not(.btn){text-decoration:none;padding:16px 0}
+.nav a:not(.btn):hover{text-decoration:underline;text-underline-offset:5px}
+@media (max-width:900px){.nav a:not(.btn){display:none}}
+@media (max-width:1100px){.top .chip{display:none!important}}
+@media (max-width:600px){.mark{font-size:20px;white-space:nowrap}.mark small{display:none}.top .btn{display:none}}
+.btn{white-space:nowrap}
+
+/* hero: the name as a monument over a moving picture */
+.hero{position:relative;height:calc(100svh - 38px);min-height:640px;margin-top:-78px;overflow:hidden;background:var(--board);color:var(--paper)}
+.hero video,.hero .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.5) saturate(.9)}
+.hero-copy{position:relative;z-index:2;padding:calc(78px + clamp(40px,8vh,96px)) var(--m) 0;max-width:min(640px,100%)}
+.hero h1{font:400 clamp(2.5rem,1.6rem + 3.2vw,4.25rem)/.95 var(--display);letter-spacing:-.01em;text-transform:uppercase}
+.hero .say{margin-top:20px;font-size:var(--step-body);max-width:40ch;color:#e4dfd6}
+.hero .acts{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:28px}
+.chip{margin-left:auto;display:inline-flex;align-items:center;gap:10px;min-height:40px;padding:8px 16px;border-radius:var(--r);background:rgba(10,10,10,.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);font:600 14px/1.2 var(--sans)}
+.chip i,.status i{width:10px;height:10px;border-radius:50%;background:#9a9384;flex:none}
+.chip.open i,.status.open i{background:#5fc27a;box-shadow:0 0 0 4px rgba(95,194,122,.2)} /* taste-skill-ignore: open-now lamp */
+.monument{position:absolute;left:0;right:0;bottom:-.17em;z-index:1;margin:0;font:400 clamp(150px,27.5vw,600px)/.8 var(--display);letter-spacing:-.035em;text-transform:uppercase;white-space:nowrap;text-align:center;color:var(--bg);pointer-events:none;transform-origin:50% 100%;opacity:.96}
+@media (max-width:700px){
+  .hero{min-height:640px;height:calc(100svh - 58px)}
+  .monument{font-size:31vw;bottom:84px}
+  .hero .acts .btn{width:100%}
+  .hero .acts .link{display:none}
+}
+.kin .kw{opacity:0;filter:blur(8px);display:inline-block;animation:kin .55s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(var(--i)*70ms + 120ms)}
+@keyframes kin{to{opacity:1;filter:blur(0)}}
+
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0ms)}
+.js .rv.in{opacity:1;transform:none}
+section{position:relative}
+.lede{color:var(--muted);max-width:56ch;margin-top:18px}
+
+/* our pub */
+.pub{padding-block:clamp(96px,14vh,170px)}
+.pub-in{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,6vw,96px);align-items:center}
+.pub figure{margin:0}
+.pub figure img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%}
+.pub figcaption{font:500 var(--step-small)/1.4 var(--sans);color:var(--muted);margin-top:10px}
+.pub .copy p+p{margin-top:16px}
+.pub .copy p{max-width:54ch}
+.pub .copy .first{font:400 var(--step-lead)/1.35 var(--sans);color:var(--ink)}
+.facts-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px;padding:0;list-style:none}
+.facts-row li{font:600 14px/1 var(--sans);padding:12px 16px;border-radius:var(--r);background:var(--surface)}
+@media (max-width:900px){.pub-in{grid-template-columns:1fr}.pub figure img{aspect-ratio:1/1}}
+
+/* the live thing: the blackboard */
+.week{padding-block:clamp(96px,14vh,170px);background:var(--surface)}
+.week-in{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(28px,5vw,80px);align-items:start}
+.status{display:inline-flex;align-items:center;gap:10px;margin-top:28px;padding:12px 18px;border-radius:var(--r);background:var(--paper);font:600 15px/1.2 var(--sans)}
+.board{background:var(--board);color:var(--chalk);padding:clamp(18px,2.8vw,34px);border-radius:var(--rad);box-shadow:var(--lift);border:10px solid #3a2e22} /* taste-skill-ignore: the blackboard and its frame */
+.board .bh{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.board .bh b{font:400 clamp(1.75rem,1.3rem + 1.4vw,2.5rem)/1 var(--display);text-transform:uppercase;letter-spacing:.01em}
+.board .bh span{font:500 14px/1.3 var(--sans);color:var(--chalk-2)}
+.days{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px}
+.days button{min-height:48px;min-width:54px;padding:0 12px;border:0;border-radius:var(--r);background:var(--board-2);color:var(--chalk);font:600 14px/1 var(--sans);cursor:pointer;transition:background .2s,transform .2s}
+.days button:hover{transform:translateY(-1px)}
+.days button[aria-pressed=true]{background:var(--chalk);color:var(--ink)}
+.days button .t{display:block;font-size:13px;opacity:.85;margin-top:3px;font-weight:500}
+.slots{display:grid;gap:10px;min-height:300px;align-content:start}
+.slot{display:grid;grid-template-columns:minmax(104px,auto) 1fr;gap:18px;align-items:center;background:var(--board-2);padding:12px 16px;animation:slot .45s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--n)*70ms)}
+.slot b{justify-self:start;font:400 clamp(1.5rem,1.2rem + .8vw,2rem)/1 var(--display);letter-spacing:.01em;min-width:104px;font-variant-numeric:lining-nums}
+.slot span{font:600 17px/1.35 var(--sans)}
+.slot span em{display:block;font:400 15px/1.45 var(--sans);font-style:normal;color:var(--chalk-2)}
+@keyframes slot{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.board .foot{margin-top:18px;font:500 14px/1.5 var(--sans);color:var(--chalk-2)}
+.fortnight{margin-top:14px;padding:16px;background:#1d1c19}
+.fortnight b{display:block;font:600 16px/1.3 var(--sans);margin-bottom:10px}
+.fortnight ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:6px 24px}
+.fortnight li{display:flex;justify-content:space-between;gap:12px;font:400 15px/1.4 var(--sans)}
+.fortnight li span:last-child{font-variant-numeric:tabular-nums;white-space:nowrap}
+@media (max-width:900px){.week-in{grid-template-columns:1fr}}
+@media (max-width:560px){.slot{grid-template-columns:1fr;gap:6px}.fortnight ul{grid-template-columns:1fr}}
+
+/* what's coming: posters */
+.coming{padding-block:clamp(96px,14vh,170px)}
+.coming-h{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.posters{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.6vw,24px)}
+.poster-card{margin:0;background:var(--paper);border-radius:var(--rad);overflow:hidden;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
+.poster-card:hover{transform:translateY(-4px);box-shadow:var(--lift)} /* taste-skill-ignore */
+.poster-card img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 0}
+.poster-card figcaption{padding:14px 16px 18px;display:grid;gap:4px}
+.poster-card figcaption b{font:600 16px/1.3 var(--sans)}
+.poster-card figcaption span{font:400 15px/1.45 var(--sans);color:var(--muted)}
+@media (max-width:900px){.posters{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* food: the specials list beside a poster */
+.food{padding-block:clamp(96px,14vh,170px);background:var(--paper)}
+.food-in{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:clamp(28px,6vw,96px);align-items:start}
+.menu{margin-top:40px;display:grid;gap:6px}
+.menu .row{display:grid;grid-template-columns:110px 1fr auto;gap:18px;align-items:baseline;padding:20px 22px;background:var(--bg);border-radius:var(--rad)}
+.menu .day{font:600 17px/1.3 var(--sans);color:#1b5564}
+.menu .what b{display:block;font:600 18px/1.3 var(--sans)}
+.menu .what span{display:block;font-size:16px;color:var(--muted);margin-top:4px;max-width:46ch}
+.menu .pr{font:400 clamp(1.5rem,1.2rem + .8vw,2rem)/1 var(--display);white-space:nowrap;font-variant-numeric:lining-nums}
+.pdfs{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.food aside img{width:100%;border-radius:var(--rad)}
+.food aside p{font:500 var(--step-small)/1.4 var(--sans);color:var(--muted);margin-top:10px}
+@media (max-width:900px){.food-in{grid-template-columns:1fr}.food aside{max-width:420px}}
+@media (max-width:560px){.menu .row{grid-template-columns:1fr auto}.menu .day{grid-column:1/-1}}
+
+/* drinks */
+.drinks{padding-block:clamp(96px,14vh,170px)}
+.drinks-in{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,3fr) minmax(0,3fr);gap:clamp(20px,3vw,40px);align-items:start}
+.taps{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:4px}
+.taps li{display:flex;justify-content:space-between;gap:16px;padding:14px 16px;background:var(--surface);font-size:17px}
+.taps li span:last-child{color:var(--muted);text-align:right}
+.drinks figure{margin:0}
+.drinks figure img{width:100%;border-radius:var(--rad);transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.drinks figure a:hover img{transform:translateY(-4px)}
+.drinks figcaption{font:500 var(--step-small)/1.4 var(--sans);color:var(--muted);margin-top:10px}
+@media (max-width:900px){.drinks-in{grid-template-columns:1fr 1fr}.drinks-in > div:first-child{grid-column:1/-1}}
+
+/* dark break */
+.break{background:var(--board);color:var(--paper);padding-block:clamp(110px,18vh,200px);overflow:hidden;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:clamp(28px,5vw,80px);align-items:end}
+@media (max-width:800px){.break{grid-template-columns:1fr}}
+.break .big{font:400 clamp(3rem,1.6rem + 6.4vw,8rem)/.88 var(--display);letter-spacing:-.02em;text-transform:uppercase;max-width:12ch;will-change:transform}
+.break .by{font:500 var(--step-body)/1.5 var(--sans);color:var(--chalk-2);max-width:48ch}
+
+/* functions */
+.fn{padding-block:clamp(96px,14vh,170px)}
+.fn-top{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,80px);align-items:end}
+.nums{margin:56px 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.nums dt{font:400 clamp(3rem,2rem + 3.4vw,5.5rem)/.9 var(--display);letter-spacing:-.02em;font-variant-numeric:tabular-nums lining-nums}
+.nums dd{margin:10px 0 0;color:var(--muted);max-width:28ch;font-size:16px}
+.rooms{margin-top:48px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.room{background:var(--paper);border-radius:var(--rad);padding:22px 20px 24px;display:grid;gap:10px;align-content:start;transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s}
+.room:hover{transform:translateY(-3px);box-shadow:var(--lift)} /* taste-skill-ignore */
+.room .cap{font:400 clamp(1.75rem,1.4rem + 1vw,2.25rem)/1 var(--display);text-transform:uppercase}
+.room h3{font-size:18px}
+.room p{font-size:15px;color:var(--muted)}
+.fn-form{margin-top:56px;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px,4vw,64px);background:var(--ink);color:var(--paper);border-radius:var(--rad);padding:clamp(24px,4vw,48px)}
+.fn-form h3{font:400 clamp(2rem,1.5rem + 1.6vw,3rem)/.95 var(--display);text-transform:uppercase;letter-spacing:-.01em}
+.fn-form .l p{font-size:16px;color:var(--chalk-2);margin-top:14px;max-width:38ch}
+.fn-form form{display:grid;gap:10px}
+.fn-form input,.fn-form select{width:100%;min-height:52px;border:0;border-radius:10px;padding:0 16px;background:#242320;color:var(--paper);font:400 16px/1.2 var(--sans)}
+.fn-form input::placeholder{color:#a9a39a}
+.fn-form select{appearance:none}
+.fn-form .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.fn-form button{margin-top:6px;width:100%}
+.fn-form .done{font:500 14px/1.4 var(--sans);color:#e4dfd6;min-height:20px}
+@media (max-width:1000px){.rooms{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:900px){.fn-top,.fn-form{grid-template-columns:1fr}}
+@media (max-width:700px){.nums{grid-template-columns:1fr}.fn-form .two{grid-template-columns:1fr}}
+@media (max-width:520px){.rooms{grid-template-columns:1fr}}
+
+/* visit */
+.visit{background:var(--surface);padding-block:clamp(96px,14vh,170px)}
+.visit-in{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,5vw,80px)}
+.hours{margin:28px 0 0;display:grid;gap:4px;max-width:480px}
+.hours div{display:flex;justify-content:space-between;gap:18px;padding:12px 16px;font-size:17px;background:var(--bg)}
+.hours div.today{background:var(--ink);color:var(--paper)}
+.hours dd{margin:0;font-variant-numeric:tabular-nums}
+.visit .note{margin-top:14px;font:500 14px/1.5 var(--sans);color:var(--muted)}
+.reach{display:grid;gap:4px;align-content:start}
+.reach > a{font:500 var(--step-lead)/1.3 var(--sans);text-underline-offset:5px;min-height:48px;display:inline-flex;align-items:center;overflow-wrap:anywhere}
+.reach .ad{font-size:17px;color:var(--muted);margin:0 0 6px}
+.reach .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+.reach figure{margin:32px 0 0}
+.reach figure img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.reach figcaption{font:500 var(--step-small)/1.4 var(--sans);color:var(--muted);margin-top:8px}
+.getting{margin-top:28px;display:grid;gap:10px;font-size:16px;color:var(--muted);max-width:52ch}
+@media (max-width:900px){.visit-in{grid-template-columns:1fr}.reach > a{font-size:19px}}
+
+footer{background:var(--ink);color:#cfc9bf;padding:56px var(--m) 0;font:400 15px/1.65 var(--sans);overflow:hidden}
+.f-in{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+footer strong{color:#fff;font-weight:600}
+footer a{color:#fff}
+.credits{margin-top:28px;font-size:13px;color:#9d978c}
+.credits a{color:#c9c3b8}
+.f-word{margin:40px 0 0;font:400 27.5vw/.8 var(--display);letter-spacing:-.035em;text-transform:uppercase;color:var(--bg);white-space:nowrap;text-align:center;margin-inline:calc(var(--m) * -1);transform:translateY(.17em)}
+@media (max-width:800px){.f-in{grid-template-columns:1fr}footer{padding-bottom:0}}
+
+.mbar{position:fixed;left:12px;right:12px;bottom:12px;z-index:55;display:none;gap:10px;padding:8px;border-radius:var(--r);background:rgba(10,10,10,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:var(--lift);transition:transform .35s,opacity .35s} /* taste-skill-ignore: sticky call bar */
+.mbar a{flex:1}
+.mbar.away{transform:translateY(140%);opacity:0}
+.mbar.pulse{animation:pulse 1.2s ease-out 1}
+/* taste-skill-ignore */ @keyframes pulse{0%{box-shadow:var(--lift),0 0 0 0 rgba(124,195,212,.6)}100%{box-shadow:var(--lift),0 0 0 18px rgba(124,195,212,0)}}
+@media (max-width:900px){.mbar{display:flex}footer{padding-bottom:0}.monument{bottom:84px}}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .rv{opacity:1;transform:none}
+  .kin .kw{opacity:1;filter:none}
+}
+</style>
+</head>
+<body>
+<div class="concept">Free concept by <b>Swoop Sites</b> for Belgrave Hotel. This is a design preview, not the live website.</div>
+
+<header class="top" id="top">
+  <a class="mark" href="#">Belgrave Hotel<small>BAR &amp; BISTRO</small></a>
+  <span class="chip" id="chip" aria-live="polite"><i></i><span>Checking the hours…</span></span>
+  <nav class="nav" aria-label="Main">
+    <a href="#week">This week</a>
+    <a href="#food">Food</a>
+    <a href="#functions">Functions</a>
+    <a href="#visit">Hours</a>
+    <a class="btn teal" href="https://bookings.wowapps.com/make-booking/thebelgravehotel?src=web" target="_blank" rel="noopener"><span class="dot"></span>Book a table <span class="ar" aria-hidden="true">→</span></a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" aria-label="Introduction">
+  <img class="poster" src="img/hero-poster.jpg" width="1600" height="900" alt="The family who run the Belgrave Hotel, in front of the pub's painted sign">
+  <video id="hero-video" muted autoplay loop playsinline preload="metadata" poster="img/hero-poster.jpg" aria-hidden="true"></video>
+  <div class="hero-copy">
+    <h1>Built by family. Made for everyone.</h1>
+    <p class="say">A proudly independent bar &amp; bistro in the heart of Belgrave, a short walk from Puffing Billy. Great food, live music from local bands and no pokies.</p>
+    <div class="acts">
+      <a class="btn teal" href="https://bookings.wowapps.com/make-booking/thebelgravehotel?src=web" target="_blank" rel="noopener"><span class="dot"></span>Book lunch or dinner <span class="ar" aria-hidden="true">→</span></a>
+      <a class="link" href="#week" style="color:var(--paper)">See this week</a>
+      </div>
+  </div>
+  <p class="monument" id="monument" aria-hidden="true">Belgrave</p>
+</section>
+
+<section class="pub wrap" id="pub" aria-labelledby="pub-h">
+  <div class="pub-in">
+    <figure class="rv">
+      <img src="img/family.jpg" width="806" height="1024" alt="The family behind the Belgrave Hotel standing in front of the pub's painted sign" loading="lazy">
+      <figcaption>The family behind the Belgrave Hotel, running the pub since 2022.</figcaption>
+    </figure>
+    <div class="copy">
+      <h2 id="pub-h" class="rv">What defines us</h2>
+      <p class="first lede rv" style="--d:80ms">We're a 100% independent, community-focused pub in Belgrave, passionate about supporting our locals and welcoming visitors to our beautiful corner of the Dandenongs.</p>
+      <p class="lede rv" style="--d:120ms">Located just a short walk from Puffing Billy, boutique shops and the national park, our bar &amp; bistro is proud to provide friendly service, quality food and the warm, authentic feel of a true local pub.</p>
+      <p class="lede rv" style="--d:160ms">At our pub, you can enjoy live music from local bands, hearty meals and special events, all in a relaxed setting where great value, good company and memorable times come first.</p>
+      <ul class="facts-row rv" style="--d:200ms" aria-label="At a glance">
+        <li>Family-run</li><li>100% independent</li><li>Pokie-free</li><li>Family-friendly</li><li>High chairs available</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="week wrap" id="week" aria-labelledby="week-h">
+  <div class="week-in">
+    <div>
+      <h2 id="week-h" class="rv">This week on the blackboard</h2>
+      <p class="lede rv" style="--d:80ms">The pub runs on its ever-changing blackboard. It opens on today, in Belgrave time. Tap any day to see the hours, the special and what's on.</p>
+      <p class="status rv" id="status" style="--d:140ms" aria-live="polite"><i></i><span>Checking the hours…</span></p>
+    </div>
+    <div class="board rv" data-ui style="--d:100ms">
+      <div class="bh"><b id="bday">Today</b><span>Dine in. Book now or walk in.</span></div>
+      <div class="days" role="group" aria-label="Pick a day" id="days"></div>
+      <div class="slots" id="slots" aria-live="polite"></div>
+      <div class="fortnight" id="fortnight" hidden>
+        <b>Blackboard specials, 6th Nov – 20th Nov</b>
+        <ul>
+          <li><span>Pulled pork sliders</span><span>$32</span></li>
+          <li><span>Beef stroganoff</span><span>$36</span></li>
+          <li><span>Seafood fettuccine</span><span>$40</span></li>
+          <li><span>Vegetarian pizza</span><span>$26</span></li>
+          <li><span>Lentil &amp; vegetable curry</span><span>$32</span></li>
+        </ul>
+      </div>
+      <p class="foot">Live music from local bands and special events through the year. Closed major holidays.</p>
+    </div>
+  </div>
+</section>
+
+<section class="coming wrap" id="coming" aria-labelledby="coming-h">
+  <div class="coming-h">
+    <h2 id="coming-h" class="rv">What's coming to the Belgrave Hotel</h2>
+    <a class="btn rv" href="https://bookings.wowapps.com/make-booking/thebelgravehotel?src=web" target="_blank" rel="noopener"><span class="dot"></span>Book a table <span class="ar" aria-hidden="true">→</span></a>
+  </div>
+  <div class="posters">
+    <figure class="poster-card rv" id="gigCard"><img src="img/gig.jpg" width="800" height="1060" alt="Gig poster: Seedy Jeezus, Two Headed Dog and Death of Nexus at the Belgrave Hotel, Saturday 14 November" loading="lazy"><figcaption><b>Seedy Jeezus, Sat 14 Nov</b><span>With Two Headed Dog and Death of Nexus. $10 presales, $15 at the door.</span></figcaption></figure>
+    <figure class="poster-card rv" style="--d:60ms"><img src="img/openmic.jpg" width="800" height="1200" alt="Open Mic Night poster: every Sunday night from 6.30pm" loading="lazy"><figcaption><b>Open mic, every Sunday</b><span>From 6.30pm. Music, comedy, poetry, storytelling and acoustic sets. All performers welcome.</span></figcaption></figure>
+    <figure class="poster-card rv" style="--d:120ms"><img src="img/poker.jpg" width="800" height="1200" alt="Hilltop Poker poster: Thursday nights from 7pm, $25 to play" loading="lazy"><figcaption><b>Hilltop Poker, Thursdays</b><span>Starts at 7pm, $25 to play. Have a counter meal and a cold drink and try your luck.</span></figcaption></figure>
+    <figure class="poster-card rv" style="--d:180ms"><img src="img/darts.jpg" width="800" height="1200" alt="Darts and Pool poster: pool $3, darts free, from 11.30am till late" loading="lazy"><figcaption><b>Darts &amp; pool, every day</b><span>Darts free and pool $3 from 11.30am till late. Play with an $8 Belgrave Lager schooner.</span></figcaption></figure>
+  </div>
+</section>
+
+<section class="food wrap" id="food" aria-labelledby="food-h">
+  <div class="food-in">
+    <div>
+      <h2 id="food-h" class="rv">A special every night</h2>
+      <p class="lede rv" style="--d:80ms">Hearty pub meals all week, plus a deal for each night. Dine in, book now or walk in.</p>
+      <div class="menu">
+        <div class="row rv"><span class="day">Tuesday</span><span class="what"><b>Parma specials</b><span>Seven parmas, from the traditional to seafood hollandaise, with chips &amp; salad or garlic herb buttered vegetables.</span></span><span class="pr">$25–$32.50</span></div>
+        <div class="row rv"><span class="day">Wednesday</span><span class="what"><b>Nachos</b><span>8 epic nacho flavours, from Bogan and Italian to garlic prawn and Mediterranean. You choose. We load.</span></span><span class="pr">8 kinds</span></div>
+        <div class="row rv"><span class="day">Thursday</span><span class="what"><b>Burger &amp; a pot</b><span>A burger with a pot of soft drink, beer or house wine. Belgrave beef, cheeseburger, southern fried chicken, souvlaki or vegan.</span></span><span class="pr">$25</span></div>
+        <div class="row rv"><span class="day">Friday</span><span class="what"><b>Steak night</b><span>250gm rump steak with thick steak-cut chips &amp; salad and your choice of pepper, mushroom, gravy or garlic herb butter.</span></span><span class="pr">$30</span></div>
+      </div>
+      <div class="pdfs rv">
+        <a class="btn" href="https://img1.wsimg.com/blobby/go/2b000a3c-62bd-4641-bf9d-e306e5407255/Copy%20of%20Belgrave%20Hotel%20Menu%20180626.pdf" target="_blank" rel="noopener"><span class="dot"></span>Full menu (PDF) <span class="ar" aria-hidden="true">→</span></a>
+        <a class="btn paper" href="https://img1.wsimg.com/blobby/go/2b000a3c-62bd-4641-bf9d-e306e5407255/2025%20menu%20page%201.pdf" target="_blank" rel="noopener"><span class="dot"></span>Seniors menu (PDF) <span class="ar" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+    <aside class="rv" style="--d:120ms">
+      <img src="img/parma.jpg" width="800" height="1146" alt="Tuesday Parma Specials poster with all seven parmas and their prices" loading="lazy">
+      <p>Tuesday's parma poster, from the pub.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="drinks wrap" id="drinks" aria-labelledby="drinks-h">
+  <div class="drinks-in">
+    <div>
+      <h2 id="drinks-h" class="rv">Drinks</h2>
+      <p class="lede rv" style="--d:80ms">Beer on tap, a wine list from sparkling to fortified, and cocktails at the bar.</p>
+      <ul class="taps rv" data-ui style="--d:120ms">
+        <li><span>Belgrave Lager</span><span>$8 schooner with pool or darts</span></li>
+        <li><span>Carlton Draught</span><span>On tap</span></li>
+        <li><span>Carlton Dry</span><span>On tap</span></li>
+        <li><span>Great Northern Super Crisp</span><span>On tap</span></li>
+        <li><span>Pirate Life Pale Ale, Balter XPA</span><span>On tap</span></li>
+        <li><span>Pressman Apple Cider, Hard Rated Orange</span><span>On tap</span></li>
+      </ul>
+      <p class="lede rv">Explore the fridges for a selection of craft beers and premixed drinks, or pick a cocktail from the list.</p>
+    </div>
+    <figure class="rv" style="--d:80ms"><a href="img/wine.jpg" target="_blank" rel="noopener"><img src="img/wine.jpg" width="800" height="1134" alt="The Belgrave Hotel wine list: sparkling, white, rosé, red and fortified" loading="lazy"></a><figcaption>Wine list. Tap to open.</figcaption></figure>
+    <figure class="rv" style="--d:140ms"><a href="img/cocktails.jpg" target="_blank" rel="noopener"><img src="img/cocktails.jpg" width="800" height="1132" alt="The Belgrave Hotel cocktail list and beers on tap" loading="lazy"></a><figcaption>Cocktails and taps. Tap to open.</figcaption></figure>
+  </div>
+</section>
+
+<section class="break wrap" aria-label="Our promise">
+  <p class="big rv" id="bigLine">No pokies. No shortcuts.</p>
+  <p class="by rv" style="--d:100ms">A place for locals, visitors and families to relax, connect and enjoy the simple things done right.</p>
+</section>
+
+<section class="fn wrap" id="functions" aria-labelledby="fn-h">
+  <div class="fn-top">
+    <div>
+      <h2 id="fn-h" class="rv">Functions &amp; events</h2>
+      <p class="lede rv" style="--d:80ms">Birthdays, fundraisers, anniversaries, corporate lunches, dinner theatre and album launches. Just a short stroll from Belgrave Station, with three catering packages built around pub classics.</p>
+    </div>
+    <img class="rv" src="img/catering.jpg" width="800" height="1138" alt="Belgrave Catering poster: now available, perfect for any occasion" loading="lazy" style="width:100%;max-width:360px;justify-self:end;aspect-ratio:4/3;object-fit:cover;object-position:50% 20%">
+  </div>
+  <dl class="nums">
+    <div class="rv"><dt><span data-count="4">4</span></dt><dd>Rooms to hire, from the lower pool room to the main lounge.</dd></div>
+    <div class="rv" style="--d:70ms"><dt><span data-count="140">140</span></dt><dd>Guests for a cocktail event in the main lounge, or 80 seated.</dd></div>
+    <div class="rv" style="--d:140ms"><dt><span data-count="7">7</span></dt><dd>Days a week open for private functions, subject to availability.</dd></div>
+  </dl>
+  <div class="rooms">
+    <article class="room rv"><span class="cap">140 / 80</span><h3>Main lounge</h3><p>140 cocktail or 80 seated. Fireplace, two large screens and the front beer garden.</p></article>
+    <article class="room rv" style="--d:60ms"><span class="cap">45 / 30</span><h3>The bistro</h3><p>45 cocktail or 30 seated. Fireplace and split system heating.</p></article>
+    <article class="room rv" style="--d:120ms"><span class="cap">45</span><h3>Upper pool room</h3><p>45 cocktail. Pool table, two dart boards, barrels and bar stools.</p></article>
+    <article class="room rv" style="--d:180ms"><span class="cap">25 / 20</span><h3>Lower pool room</h3><p>25 cocktail or 15–20 seated. Its own entrance, a large screen TV and bar seating.</p></article>
+  </div>
+  <div class="fn-form rv">
+    <div class="l">
+      <h3>Plan an event, or order catering</h3>
+      <p>Belgrave Catering is now available for parties, events, corporate and celebrations, with easy takeaway. Fill this in and your email opens addressed to enquiries@belgravehotel.com.au.</p>
+      <a class="btn paper" style="margin-top:24px" href="https://img1.wsimg.com/blobby/go/2b000a3c-62bd-4641-bf9d-e306e5407255/CFBelgrave%20Hotel%20Function%20Packages_compressed.pdf" target="_blank" rel="noopener"><span class="dot"></span>Function packages (PDF) <span class="ar" aria-hidden="true">→</span></a>
+    </div>
+    <form id="fnForm" novalidate>
+      <label class="vh" for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" placeholder="Your name" required>
+      <div class="two">
+        <div><label class="vh" for="f-phone">Your phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="Your phone"></div>
+        <div><label class="vh" for="f-date">Preferred date</label><input id="f-date" name="date" placeholder="Preferred date"></div>
+      </div>
+      <div class="two">
+        <div><label class="vh" for="f-type">What it is for</label><select id="f-type" name="type"><option value="">What it is for</option><option>Main lounge</option><option>The bistro</option><option>Upper pool room</option><option>Lower pool room</option><option>Catering</option><option>Not sure yet</option></select></div>
+        <div><label class="vh" for="f-num">Number of guests</label><input id="f-num" name="guests" inputmode="numeric" placeholder="Number of guests"></div>
+      </div>
+      <button class="btn teal" type="submit"><span class="dot"></span>Send the enquiry <span class="ar" aria-hidden="true">→</span></button>
+      <p class="done" id="fnDone" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<section class="visit wrap" id="visit" aria-labelledby="visit-h">
+  <div class="visit-in">
+    <div>
+      <h2 id="visit-h" class="rv">Opening hours</h2>
+      <dl class="hours rv" id="hours" style="--d:80ms">
+        <div data-d="1"><dt>Monday</dt><dd>11.30am – 8.30pm</dd></div>
+        <div data-d="2"><dt>Tuesday</dt><dd>11.30am – 8.30pm</dd></div>
+        <div data-d="3"><dt>Wednesday</dt><dd>11.30am – 8.30pm</dd></div>
+        <div data-d="4"><dt>Thursday</dt><dd>11.30am – 1am</dd></div>
+        <div data-d="5"><dt>Friday</dt><dd>11.30am – 1am</dd></div>
+        <div data-d="6"><dt>Saturday</dt><dd>11.30am – 1am</dd></div>
+        <div data-d="0"><dt>Sunday</dt><dd>11.30am – 1am</dd></div>
+      </dl>
+      <p class="note rv">Closed major holidays.</p>
+      <div class="getting rv">
+        <p><b style="color:var(--ink)">Getting here.</b> A short walk from Puffing Billy and a short stroll from Belgrave Station.</p>
+        <p>Front door access with a ramp via Belgrave Arcade, or stairs from Burwood Highway. The rear beer garden is reached from Alexander's car park by the stairs.</p>
+        <p>Free on-street parking for 1 and 2 hours, unlimited from 6pm to midnight.</p>
+      </div>
+    </div>
+    <div class="reach rv" style="--d:120ms">
+      <p class="ad">1645 Burwood Highway, Belgrave VIC 3160</p>
+      <a href="tel:0397542222">03 9754 2222</a>
+      <a href="mailto:enquiries@belgravehotel.com.au">enquiries@belgravehotel.com.au</a>
+      <div class="acts">
+        <a class="btn teal" href="https://bookings.wowapps.com/make-booking/thebelgravehotel?src=web" target="_blank" rel="noopener"><span class="dot"></span>Book a table <span class="ar" aria-hidden="true">→</span></a>
+        <a class="btn paper" href="https://www.google.com/maps/search/?api=1&amp;query=1645+Burwood+Highway+Belgrave+VIC+3160" target="_blank" rel="noopener"><span class="dot"></span>Directions</a>
+      </div>
+      <figure>
+        <img src="img/main-street.jpg" width="1600" height="1068" alt="Belgrave's main street shops on Burwood Highway" loading="lazy">
+        <figcaption>Belgrave's main street on Burwood Highway. Photo: NatoV, CC BY-SA 4.0, via Wikimedia Commons.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="f-in">
+    <div><strong>Belgrave Hotel</strong><br>Bar &amp; bistro. Family-run, 100% independent and pokie-free.<br>1645 Burwood Highway, Belgrave VIC 3160</div>
+    <div><a href="tel:0397542222">03 9754 2222</a><br><a href="mailto:enquiries@belgravehotel.com.au">enquiries@belgravehotel.com.au</a><br>We cultivate an inclusive and welcoming environment where respect, equality and belonging are paramount.</div>
+    <div>© <span data-year>2026</span> Belgrave Hotel. Family photo, posters and menus are from the Belgrave Hotel website.<br><br>Concept design by Swoop Sites, Melbourne.</div>
+  </div>
+  <p class="credits">Hero film also uses: <a href="https://commons.wikimedia.org/w/index.php?curid=47113738" target="_blank" rel="noopener">"Puffing Billy Loco 12A at Belgrave"</a> by Lankyrider, CC BY-SA 4.0; <a href="https://commons.wikimedia.org/wiki/File:2023-05-07_Belgrave_Main_Street.jpg" target="_blank" rel="noopener">"2023-05-07 Belgrave Main Street"</a> by NatoV, CC BY-SA 4.0; <a href="https://commons.wikimedia.org/w/index.php?curid=13338332" target="_blank" rel="noopener" id="forestCredit">"Sherbrooke Forest Dandenong Ranges"</a> by Nick carson at English Wikipedia, CC BY 3.0. All via Wikimedia Commons. The film is shared under CC BY-SA 4.0.</p>
+  <p class="f-word" aria-hidden="true">Belgrave</p>
+</footer>
+
+<div class="mbar" id="mbar">
+  <a class="btn paper" href="tel:0397542222"><span class="dot"></span>Call</a>
+  <a class="btn teal" href="https://bookings.wowapps.com/make-booking/thebelgravehotel?src=web" target="_blank" rel="noopener">Book <span class="ar" aria-hidden="true">→</span></a>
+</div>
+
+<script>
+(function () {
+  var d = document, root = d.documentElement;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var yr = d.querySelector('[data-year]'); if (yr) yr.textContent = new Date().getFullYear();
+
+  var hv = d.getElementById('hero-video');
+  if (hv && !reduce) {
+    var s = d.createElement('source'); s.src = 'img/hero.mp4'; s.type = 'video/mp4'; hv.appendChild(s);
+    hv.load(); var pp = hv.play(); if (pp && pp.catch) pp.catch(function () {});
+    d.addEventListener('visibilitychange', function () { if (d.hidden) hv.pause(); else hv.play().catch(function () {}); });
+  } else if (hv) { hv.remove(); }
+
+  /* kinetic headline */
+  var h1 = d.querySelector('.hero h1');
+  if (h1 && !reduce) {
+    var i = 0, frag = d.createDocumentFragment();
+    h1.textContent.split(/\s+/).forEach(function (p, j) { if (j) frag.appendChild(d.createTextNode(' ')); var sp = d.createElement('span'); sp.className = 'kw'; sp.style.setProperty('--i', i++); sp.textContent = p; frag.appendChild(sp); });
+    h1.textContent = ''; h1.appendChild(frag); h1.classList.add('kin');
+  }
+
+  var top = d.getElementById('top'), hero = d.querySelector('.hero'), mon = d.getElementById('monument');
+  var onScroll = function () {
+    top.classList.toggle('scrolled', window.scrollY > hero.offsetHeight - 120);
+    if (!reduce) { var k = Math.min(1, window.scrollY / hero.offsetHeight); mon.style.transform = 'scale(' + (1 - k * .07).toFixed(4) + ')'; }
+  };
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  /* the blackboard: their hours and nightly specials, in Melbourne time.
+     Hours from their own site: Mon–Wed 11.30am–8.30pm, Thu–Sun 11.30am–1am (25 = 1am the next day). */
+  var DP = ['Darts & pool', 'Darts free and pool $3 from 11.30am till late'];
+  var week = [
+    { k: 1, n: 'Mon', name: 'Monday', open: [11.5, 20.5], slots: [['11.30', 'Open', '11.30am to 8.30pm, bar & bistro'], ['Free', DP[0], DP[1]], ['$8', 'Belgrave Lager schooner', 'With a game of pool or darts']] },
+    { k: 2, n: 'Tue', name: 'Tuesday', open: [11.5, 20.5], slots: [['11.30', 'Open', '11.30am to 8.30pm'], ['$25', 'Parma specials', 'All parmas $25–$32.50, with chips & salad or garlic herb buttered vegetables'], ['Free', DP[0], DP[1]]] },
+    { k: 3, n: 'Wed', name: 'Wednesday', open: [11.5, 20.5], slots: [['11.30', 'Open', '11.30am to 8.30pm'], ['8', 'Nacho flavours', 'Wednesday nachos. You choose. We load.'], ['Free', DP[0], DP[1]]] },
+    { k: 4, n: 'Thu', name: 'Thursday', open: [11.5, 25], slots: [['11.30', 'Open late', '11.30am to 1am'], ['$25', 'Burger & a pot', 'Burger with a pot of soft drink, beer or house wine'], ['7pm', 'Hilltop Poker', 'Only $25 to play. Have a counter meal and try your luck']] },
+    { k: 5, n: 'Fri', name: 'Friday', open: [11.5, 25], slots: [['11.30', 'Open late', '11.30am to 1am'], ['$30', 'Friday steak', '250gm rump, thick steak-cut chips & salad, your choice of sauce'], ['Free', DP[0], DP[1]]] },
+    { k: 6, n: 'Sat', name: 'Saturday', open: [11.5, 25], slots: [['11.30', 'Open late', '11.30am to 1am'], ['Free', DP[0], DP[1]], ['$8', 'Belgrave Lager schooner', 'With a game of pool or darts']] },
+    { k: 0, n: 'Sun', name: 'Sunday', open: [11.5, 25], slots: [['11.30', 'Open late', '11.30am to 1am'], ['6.30', 'Open mic night', 'Music, comedy, poetry, storytelling and acoustic sets. All performers welcome'], ['Free', DP[0], DP[1]]] }
+  ];
+  function melb() {
+    var parts = new Intl.DateTimeFormat('en-AU', { timeZone: 'Australia/Melbourne', weekday: 'short', year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }).formatToParts(new Date());
+    var o = {}; parts.forEach(function (p) { o[p.type] = p.value; });
+    var map = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+    return { day: map[o.weekday], h: +o.hour + (+o.minute) / 60, ymd: (+o.year) * 10000 + (+o.month) * 100 + (+o.day) };
+  }
+  function fmt(h) { h = h % 24; var hr = Math.floor(h), mi = Math.round((h - hr) * 60), ap = hr >= 12 ? 'pm' : 'am', h12 = hr % 12 || 12; return h12 + (mi ? '.' + (mi < 10 ? '0' : '') + mi : '') + ap; }
+  function byK(k) { return week.filter(function (x) { return x.k === k; })[0]; }
+  var now = melb();
+  /* the gig on Sat 14 Nov 2026 joins Saturday until it has happened */
+  if (now.ymd <= 20261114) byK(6).slots.splice(1, 1, ['Sat 14', 'Seedy Jeezus', 'With Two Headed Dog and Death of Nexus. $10 presales, $15 door']);
+  else { var gc = d.getElementById('gigCard'); if (gc) gc.remove(); }
+  if (now.ymd >= 20261106 && now.ymd <= 20261120) d.getElementById('fortnight').hidden = false;
+
+  var daysEl = d.getElementById('days'), slotsEl = d.getElementById('slots'), bday = d.getElementById('bday');
+  week.forEach(function (w) {
+    var b = d.createElement('button'); b.type = 'button'; b.dataset.k = w.k;
+    b.innerHTML = w.n + (w.k === now.day ? '<span class="t">Today</span>' : '');
+    b.setAttribute('aria-label', w.name + (w.k === now.day ? ', today' : ''));
+    b.addEventListener('click', function () { pick(w.k); });
+    daysEl.appendChild(b);
+  });
+  function pick(k) {
+    var w = byK(k);
+    bday.textContent = (k === now.day ? 'Today, ' : '') + w.name;
+    daysEl.querySelectorAll('button').forEach(function (b) { b.setAttribute('aria-pressed', +b.dataset.k === k ? 'true' : 'false'); });
+    slotsEl.innerHTML = '';
+    w.slots.forEach(function (s, j) {
+      var el = d.createElement('div'); el.className = 'slot'; el.style.setProperty('--n', j);
+      var b = d.createElement('b'), sp = d.createElement('span'), em = d.createElement('em');
+      b.textContent = s[0]; sp.textContent = s[1]; em.textContent = s[2]; sp.appendChild(em); el.appendChild(b); el.appendChild(sp);
+      slotsEl.appendChild(el);
+    });
+  }
+  pick(now.day);
+  function statusText() {
+    var w = byK(now.day), y = byK((now.day + 6) % 7);
+    if (y.open[1] > 24 && now.h < y.open[1] - 24) return [true, 'Open now, until ' + fmt(y.open[1])];
+    if (now.h >= w.open[0] && now.h < w.open[1]) return [true, 'Open now, until ' + fmt(w.open[1])];
+    if (now.h < w.open[0]) return [false, 'Closed now, opens today at ' + fmt(w.open[0])];
+    var nw = byK((now.day + 1) % 7); return [false, 'Closed now, opens ' + nw.name + ' at ' + fmt(nw.open[0])];
+  }
+  var st = statusText();
+  ['status', 'chip'].forEach(function (id) { var el = d.getElementById(id); el.classList.toggle('open', st[0]); el.querySelector('span').textContent = st[1]; });
+  var today = d.querySelector('#hours [data-d="' + now.day + '"]'); if (today) today.classList.add('today');
+
+  if ('IntersectionObserver' in window && !reduce) {
+    root.classList.add('js');
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    d.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
+    var countIO = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return; countIO.unobserve(e.target);
+        var el = e.target, to = +el.dataset.count, t0 = null;
+        (function step(ts) { if (!t0) t0 = ts; var k = Math.min(1, (ts - t0) / 1400); el.textContent = Math.round(to * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(step); })(performance.now());
+      });
+    }, { threshold: 0.6 });
+    d.querySelectorAll('[data-count]').forEach(function (el) { countIO.observe(el); });
+    var line = d.getElementById('bigLine');
+    var par = function () { var b = line.getBoundingClientRect(); line.style.transform = 'translateY(' + ((b.top - innerHeight / 2) * -.06).toFixed(1) + 'px)'; };
+    window.addEventListener('scroll', par, { passive: true }); par();
+    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      d.querySelectorAll('.hero .btn').forEach(function (b) {
+        b.addEventListener('pointermove', function (e) { var r = b.getBoundingClientRect(); b.style.transform = 'translate(' + ((e.clientX - r.left - r.width / 2) / r.width * 6).toFixed(1) + 'px,' + ((e.clientY - r.top - r.height / 2) / r.height * 6).toFixed(1) + 'px)'; });
+        b.addEventListener('pointerleave', function () { b.style.transform = ''; });
+      });
+    }
+    setTimeout(function () { d.getElementById('mbar').classList.add('pulse'); }, 3000);
+  }
+  var mbar = d.getElementById('mbar'), foot = d.querySelector('footer');
+  /* the phone bar steps aside for the footer, and while a big heading passes behind it */
+  var heads = d.querySelectorAll('h2, .big, .fn-form h3, .menu .pr, .nums dt, .room .cap'), atFoot = false;
+  var bar = function () {
+    var H = window.innerHeight, under = false;
+    heads.forEach(function (h) { var r = h.getBoundingClientRect(); if (r.bottom > H - 96 && r.top < H) under = true; });
+    mbar.classList.toggle('away', atFoot || under);
+  };
+  if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { atFoot = es[0].isIntersecting; bar(); }).observe(foot);
+  window.addEventListener('scroll', bar, { passive: true }); bar();
+
+  /* function and catering enquiry: opens their email, the line appears only after sending */
+  d.getElementById('fnForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var f = new FormData(e.target);
+    var body = 'Name: ' + (f.get('name') || '') + '\nPhone: ' + (f.get('phone') || '') + '\nPreferred date: ' + (f.get('date') || '') + '\nFor: ' + (f.get('type') || '') + '\nNumber of guests: ' + (f.get('guests') || '');
+    location.href = 'mailto:enquiries@belgravehotel.com.au?subject=' + encodeURIComponent('Function enquiry' + (f.get('type') ? ': ' + f.get('type') : '')) + '&body=' + encodeURIComponent(body);
+    d.getElementById('fnDone').textContent = 'Your email app should open with the enquiry filled in. Send it from there.';
+  });
+})();
+</script>
+</body>
+</html>
