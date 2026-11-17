@@ -74,7 +74,7 @@
   p{margin:0}
   ul,ol{margin:0;padding:0;list-style:none}
   h1,h2,h3,h4{margin:0;font-weight:700;line-height:1.15;letter-spacing:-.01em;color:inherit}
-  h1{font-size:clamp(34px,5.2vw,56px);line-height:1.08}
+  h1{font-size:clamp(40px,6.6vw,78px);line-height:1.04;letter-spacing:-.03em}
   h2{font-size:clamp(28px,3.6vw,40px)}
   h3{font-size:20px}
   .wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
@@ -112,7 +112,8 @@
   .topnav{display:none;gap:24px;font-size:15px}
   .topnav a{color:var(--ink);text-decoration:none}
   .topnav a:hover{text-decoration:underline}
-  .topbar .btn{padding:9px 16px;font-size:15px}
+  .topbar .btn{display:none;padding:9px 16px;font-size:15px;white-space:nowrap}
+  .brand{white-space:nowrap}
   .menu-toggle{display:grid;place-items:center;width:44px;height:44px;background:none;border:1px solid #cfd4da;border-radius:var(--radius);cursor:pointer;color:var(--ink)}
   .menu-toggle svg{width:20px;height:20px}
   .mobile-menu{display:none;border-top:1px solid #e3e6ea;padding:8px 20px 16px;background:var(--ground)}
@@ -152,7 +153,7 @@
 
   .glance{display:grid;gap:28px;grid-template-columns:1fr;margin-top:36px}
   .glance div{border-top:3px solid var(--accent);padding-top:16px}
-  .glance .num{font-size:44px;font-weight:700;letter-spacing:-.02em;line-height:1}
+  .glance .num{font-size:64px;font-weight:700;letter-spacing:-.03em;line-height:1}
   .glance p{margin-top:10px;color:var(--muted);font-size:17px}
   .glance p b{color:var(--ink)}
 
@@ -387,6 +388,7 @@
     section{padding:112px 0}
     .hero{padding:80px 0 104px}
     .topnav{display:flex}
+    .topbar .btn{display:inline-flex}
     .menu-toggle,.mobile-menu{display:none!important}
     .hero-grid{grid-template-columns:1fr 1.05fr;gap:64px}
     .split{grid-template-columns:1fr 1fr;gap:64px}
@@ -448,6 +450,7 @@
         <a class="btn" href="mailto:Kartikp.work@gmail.com?subject=Free%20homepage%20mockup%20request&amp;body=Hi%20Kartik%2C%0A%0ABusiness%20name%3A%20%0ACurrent%20website%20(if%20any)%3A%20%0AWhat%20we%20do%3A%20%0A%0AThanks!"><svg aria-hidden="true"><use href="#mail"/></svg>Get a free mockup</a>
         <a class="btn btn-line" href="#pricing">See pricing</a>
       </div>
+      <p class="note rv d3" style="margin-top:20px;font-size:16px">You get a free design first, and you only pay a deposit once you've seen it and you're happy with it.</p>
       <ul class="hero-points rv d3">
         <li>Fixed prices in AUD</li>
         <li>Live in about 2 weeks</li>
@@ -957,6 +960,7 @@
       <a class="brand" href="#top" aria-label="Swoop Sites, back to top"><svg aria-hidden="true"><use href="#mark"/></svg><span>Swoop Sites</span></a>
       <p style="margin-top:12px">Fast, secure websites and monthly website care for local businesses across south-east Melbourne.</p>
       <p style="margin-top:8px">Prices in AUD. Fixed and agreed in writing before any work starts.</p>
+      <p style="margin-top:8px">Service area: Noble Park, Dandenong, Springvale, Keysborough, Clayton, Mulgrave, Narre Warren, Berwick and Cranbourne.</p>
     </div>
     <div class="fcols">
       <nav aria-label="Footer: explore">
